@@ -3,149 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>अध्याय 18 — सूची</title>
+<title>श्रीमद्भगवद्गीता — अध्ययन सूचकांक</title>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
 <style>
-  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
   *{box-sizing:border-box;}
   body{margin:0;background:radial-gradient(ellipse at 50% -10%, #2e2153 0%, var(--bg-deep) 55%, #100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
-  .wrap{max-width:760px;margin:0 auto;}
-  .hero{text-align:center;background:linear-gradient(160deg, var(--bg-deep-alt), #1b1336);border:1px solid var(--line);border-radius:18px;padding:36px 28px 30px;box-shadow:var(--shadow);margin-bottom:28px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .hero{text-align:center;background:linear-gradient(160deg, var(--bg-deep-alt), #1b1336);border:1px solid var(--line);border-radius:18px;padding:40px 28px 32px;box-shadow:var(--shadow);margin-bottom:30px;}
   .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:8px;}
-  .title{font-family:'Tiro Devanagari Hindi',serif;font-size:26px;color:var(--cream);margin-bottom:8px;}
-  .subtitle{font-size:14.5px;color:var(--cream-dim);margin-bottom:20px;}
+  .title{font-family:'Tiro Devanagari Hindi',serif;font-size:30px;color:var(--cream);margin-bottom:8px;}
+  .subtitle{font-size:14.5px;color:var(--cream-dim);margin-bottom:22px;}
   .progress-row{display:flex;align-items:center;gap:12px;max-width:380px;margin:0 auto;}
   .progress-track{flex:1;height:4px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden;}
-  .progress-fill{height:100%;width:14.1%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
   .progress-label{font-size:12.5px;color:var(--cream-dim);white-space:nowrap;}
-  .note{font-size:13px;color:var(--cream-dim);text-align:center;border:1px dashed var(--line);border-radius:10px;padding:12px 16px;margin-bottom:24px;}
-  .verse-grid{display:flex;flex-direction:column;gap:14px;}
-  .verse-card{display:flex;align-items:center;gap:16px;background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:14px;padding:18px 20px;text-decoration:none;color:var(--cream);transition:transform 0.15s ease, border-color 0.15s ease;}
-  .verse-card:hover{transform:translateY(-2px);border-color:var(--gold);}
-  .verse-num{flex-shrink:0;width:54px;height:54px;border-radius:50%;background:rgba(201,162,39,0.12);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Tiro Devanagari Hindi',serif;font-size:17px;color:var(--gold-light);}
-  .verse-info{flex:1;}
-  .verse-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15.5px;color:var(--cream);margin-bottom:5px;}
-  .verse-gist{font-size:13px;color:var(--cream-dim);}
-  .verse-arrow{flex-shrink:0;font-size:20px;color:var(--gold);}
-  .verse-card.upcoming{opacity:0.45;pointer-events:none;border-style:dashed;}
-  .verse-card.upcoming .verse-num{background:transparent;border-color:var(--line);color:var(--cream-dim);}
+  .chap-grid{display:flex;flex-direction:column;gap:12px;}
+  .chap-card{display:flex;align-items:center;gap:16px;background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:14px;padding:16px 20px;text-decoration:none;color:var(--cream);transition:transform 0.15s ease, border-color 0.15s ease;}
+  .chap-card:hover{transform:translateY(-2px);border-color:var(--gold);}
+  .chap-card.empty{opacity:0.4;pointer-events:none;border-style:dashed;}
+  .chap-num{flex-shrink:0;width:48px;height:48px;border-radius:50%;background:rgba(201,162,39,0.12);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--gold-light);}
+  .chap-card.empty .chap-num{border-color:var(--line);color:var(--cream-dim);background:transparent;}
+  .chap-info{flex:1;min-width:0;}
+  .chap-title{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:4px;}
+  .chap-meta{font-size:12.5px;color:var(--cream-dim);}
+  .chap-bar-track{height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;margin-top:6px;width:140px;max-width:40vw;}
+  .chap-bar-fill{height:100%;background:linear-gradient(90deg,var(--sage),#7fa894);}
+  .chap-arrow{flex-shrink:0;font-size:18px;color:var(--gold);}
+  .chap-card.empty .chap-arrow{color:var(--cream-dim);}
   .footer-note{text-align:center;font-size:13px;color:var(--cream-dim);margin-top:26px;}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="hero">
-    <div class="eyebrow">मध्यदेश · हिन्दी में गीता अध्ययन</div>
-    <div class="title">अध्याय १८ — मोक्षसंन्यासयोग सूचकांक</div>
-    <div class="subtitle">श्लोक-दर-श्लोक — सम्पूर्ण व्याकरण, भावार्थ, उदाहरण, आचार्य दृष्टि, अभ्यास</div>
+    <div class="eyebrow">संपूर्ण अध्ययन परियोजना</div>
+    <div class="title">श्रीमद्भगवद्गीता</div>
+    <div class="subtitle">18 अध्याय · 700 श्लोक · शब्दार्थ, भावार्थ, उदाहरण व अभ्यास सहित</div>
     <div class="progress-row">
-      <span class="progress-label">11 / 78 श्लोक</span>
-      <div class="progress-track"><div class="progress-fill"></div></div>
+      <span class="progress-label" id="overallLabel">… / 700 श्लोक</span>
+      <div class="progress-track"><div class="progress-fill" id="overallFill" style="width:0%"></div></div>
     </div>
   </div>
 
-  <div class="note">सभी श्लोक-पृष्ठ इसी फ़ोल्डर में हैं — पढ़ने हेतु download करके खोलें</div>
+  <div class="chap-grid" id="chapGrid"></div>
 
-  <div class="verse-grid">
-    <a class="verse-card" href="gita_18_1.html">
-      <div class="verse-num">श्लो.१</div>
-      <div class="verse-info">
-        <div class="verse-sa">संन्यास महाबाहो तत्त्वमिच्छामि वेदितुम्...</div>
-        <div class="verse-gist">अर्जुन संन्यास और त्याग का अंतर पूछता है</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_2.html">
-      <div class="verse-num">श्लो.२</div>
-      <div class="verse-info">
-        <div class="verse-sa">काम्यानां कर्मणां न्यासं संन्यासं कवयो विदुः...</div>
-        <div class="verse-gist">कृष्ण संन्यास की पहली परिभाषा देते हैं</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_3.html">
-      <div class="verse-num">श्लो.३</div>
-      <div class="verse-info">
-        <div class="verse-sa">त्याज्यं दोषवदित्येके कर्म प्राहुर्मनीषिणः...</div>
-        <div class="verse-gist">कर्म-त्याग पर विद्वानों के भिन्न मत</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_4.html">
-      <div class="verse-num">श्लो.४</div>
-      <div class="verse-info">
-        <div class="verse-sa">निश्चयं शृणु मे तत्र त्यागे भरतसत्तम...</div>
-        <div class="verse-gist">कृष्ण त्याग का निश्चय सुनाने को कहते हैं</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_5.html">
-      <div class="verse-num">श्लो.५</div>
-      <div class="verse-info">
-        <div class="verse-sa">यज्ञदानतपःकर्म न त्याज्यं कार्यमेव तत्...</div>
-        <div class="verse-gist">कर्तव्य कर्म — त्याज्य नहीं, अवश्य करणीय</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_6.html">
-      <div class="verse-num">श्लो.६</div>
-      <div class="verse-info">
-        <div class="verse-sa">एतान्यपि तु कर्माणि सङ्गं त्यक्त्वा फलानि च...</div>
-        <div class="verse-gist">निश्चित कर्तव्य भी आसक्ति त्यागकर करें</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_7.html">
-      <div class="verse-num">श्लो.७</div>
-      <div class="verse-info">
-        <div class="verse-sa">कार्यस्यैव परित्यागः सन्न्यासस्तु अमत मम...</div>
-        <div class="verse-gist">तामसिक त्याग — मोह से कर्म छोड़ना</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_8.html">
-      <div class="verse-num">श्लो.८</div>
-      <div class="verse-info">
-        <div class="verse-sa">दुःखमित्येव यत्कर्म कायक्लेशभयात्त्यजेत्...</div>
-        <div class="verse-gist">राजसिक त्याग — दुःख-भय से कर्म छोड़ना</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_9.html">
-      <div class="verse-num">श्लो.९</div>
-      <div class="verse-info">
-        <div class="verse-sa">कार्यमित्येव यत्कर्म नियतं क्रियतेऽर्जुन...</div>
-        <div class="verse-gist">सात्त्विक त्याग — कर्तव्य समझकर, आसक्ति-फल त्यागकर</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_10.html">
-      <div class="verse-num">श्लो.१०</div>
-      <div class="verse-info">
-        <div class="verse-sa">न द्वेष्ट्यकुशलं कर्म कुशले नानुषज्जते...</div>
-        <div class="verse-gist">सात्त्विक त्यागी की पहचान — न द्वेष, न आसक्ति</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <a class="verse-card" href="gita_18_11.html">
-      <div class="verse-num">श्लो.११</div>
-      <div class="verse-info">
-        <div class="verse-sa">न हि देहभृता शक्यं त्यक्तुं कर्माण्यशेषतः...</div>
-        <div class="verse-gist">त्यागी की औपचारिक परिभाषा — कर्मफलत्याग</div>
-      </div>
-      <div class="verse-arrow">→</div>
-    </a>
-    <div class="verse-card upcoming">
-      <div class="verse-num">श्लो.१२</div>
-      <div class="verse-info">
-        <div class="verse-sa">— जल्द आ रहा है —</div>
-        <div class="verse-gist">आगे श्लोक अध्ययन आगाड़ी होंगे</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-note">✅ 11 श्लोक दर्ज | आगले श्लोक जल्द आ रहे हैं</div>
+  <div class="footer-note" id="footerNote"></div>
 </div>
+
+<script>
+  fetch('manifest.json')
+    .then(function(r){ return r.json(); })
+    .then(function(manifest){
+      var grid = document.getElementById('chapGrid');
+      var totalPublished = 0;
+      manifest.chapters.forEach(function(ch){
+        totalPublished += ch.published;
+        var pct = Math.round((ch.published / ch.totalVerses) * 100);
+        var el = document.createElement(ch.published > 0 ? 'a' : 'div');
+        el.className = 'chap-card' + (ch.published === 0 ? ' empty' : '');
+        if (ch.published > 0) el.href = ch.folder + '/gita_' + ch.num + '_1.html';
+        el.innerHTML =
+          '<div class="chap-num">' + ch.num + '</div>' +
+          '<div class="chap-info">' +
+            '<div class="chap-title">अध्याय ' + ch.num + ' — ' + ch.title + '</div>' +
+            '<div class="chap-meta">' + ch.published + ' / ' + ch.totalVerses + ' श्लोक प्रकाशित' + (ch.published === 0 ? ' · जल्द आरंभ होगा' : '') + '</div>' +
+            '<div class="chap-bar-track"><div class="chap-bar-fill" style="width:' + pct + '%"></div></div>' +
+          '</div>' +
+          (ch.published > 0 ? '<div class="chap-arrow">→</div>' : '');
+        grid.appendChild(el);
+      });
+      var overallPct = (totalPublished / manifest.totalVerses * 100).toFixed(1);
+      document.getElementById('overallLabel').textContent = totalPublished + ' / ' + manifest.totalVerses + ' श्लोक';
+      document.getElementById('overallFill').style.width = overallPct + '%';
+      document.getElementById('footerNote').textContent = '✅ ' + totalPublished + ' श्लोक दर्ज — शेष श्लोक चरणबद्ध रूप से जोड़े जा रहे हैं';
+    })
+    .catch(function(err){
+      document.getElementById('chapGrid').innerHTML = '<p style="color:var(--cream-dim);text-align:center;">सूची लोड नहीं हो सकी — manifest.json जाँचें</p>';
+    });
+</script>
 <script src="nav.js"></script>
 </body>
 </html>
