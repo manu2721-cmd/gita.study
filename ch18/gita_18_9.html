@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>भगवद्गीता 18.9 — मोक्षसंन्यासयोग</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#180f2e;
+    --bg-deep-alt:#241a42;
+    --gold:#c9a227;
+    --gold-light:#e6c863;
+    --maroon:#8c2c3b;
+    --cream:#f3e9d2;
+    --cream-dim:#cfc3a8;
+    --sage:#5c8374;
+    --line:rgba(201,162,39,0.25);
+    --shadow:0 18px 50px rgba(0,0,0,0.45);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at 50% -10%, #2e2153 0%, var(--bg-deep) 55%, #100a1f 100%);
+    color:var(--cream);
+    font-family:'Mukta',sans-serif;
+    line-height:1.7;
+    padding:32px 16px 56px;
+  }
+  .wrap{max-width:880px;margin:0 auto;}
+
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:11.5%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+
+  .hero{
+    background:linear-gradient(160deg, var(--bg-deep-alt), #1b1336);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:38px 30px 34px;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(201,162,39,0.12), transparent 60%);
+    pointer-events:none;
+  }
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{
+    0%,100%{transform:scale(1) translateY(0);opacity:1;}
+    25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}
+    50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}
+    75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}
+  }
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:560px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;display:flex;align-items:center;gap:8px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+
+  @media (max-width:560px){
+    .panel-shell{padding:22px 18px;}
+    .hero{padding:28px 18px 26px;}
+  }
+
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s ease;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+
+  .mindmap-box{width:100%;height:auto;}
+  .mm-line{stroke:#7a623a;stroke-width:1.4;opacity:0.55;}
+  .mm-center{fill:#5c8374;}
+  .mm-node-circle{fill:rgba(255,255,255,0.04);stroke:#c9a227;stroke-width:1.2;}
+
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.12);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s ease;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-line{font-size:14.5px;color:var(--cream);margin-bottom:10px;text-align:center;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+
+  .flow-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin:22px 0 28px;}
+  .flow-box{background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:16px;padding:18px 16px;text-align:center;min-width:135px;max-width:160px;}
+  .flow-box .ic{font-size:30px;display:block;margin-bottom:10px;}
+  .flow-box .ttl{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;font-size:14.5px;margin-bottom:5px;}
+  .flow-box .sub{font-size:11.5px;color:var(--cream-dim);line-height:1.4;}
+  .flow-arrow{font-size:22px;color:var(--gold);flex-shrink:0;}
+
+  .triway-wrap{display:flex;gap:14px;margin:18px 0;flex-wrap:wrap;}
+  .triway-card{flex:1;min-width:150px;border-radius:14px;padding:20px 16px;text-align:center;border:1px solid var(--line);}
+  .triway-card.sattva{background:linear-gradient(160deg, rgba(92,131,116,0.24), rgba(92,131,116,0.05));}
+  .triway-card.rajas{background:linear-gradient(160deg, rgba(201,162,39,0.24), rgba(201,162,39,0.05));}
+  .triway-card.tamas{background:linear-gradient(160deg, rgba(140,44,59,0.24), rgba(140,44,59,0.05));}
+  .triway-card.active-card{border-color:var(--sage);box-shadow:0 0 16px rgba(92,131,116,0.5);}
+  .triway-card .tw-ic{font-size:28px;display:block;margin-bottom:8px;}
+  .triway-card .tw-ttl{font-family:'Tiro Devanagari Hindi',serif;font-size:17px;margin-bottom:8px;}
+  .triway-card.sattva .tw-ttl{color:#7fa894;}
+  .triway-card.rajas .tw-ttl{color:var(--gold-light);}
+  .triway-card.tamas .tw-ttl{color:#e8a4ad;}
+  .triway-card .tw-sub{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+
+  .split-wrap{position:relative;display:flex;gap:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);margin:18px 0;}
+  .split-half{flex:1;padding:24px 18px;}
+  .split-half.cite{background:linear-gradient(160deg, rgba(140,44,59,0.24), rgba(140,44,59,0.05));}
+  .split-half.decree{background:linear-gradient(160deg, rgba(92,131,116,0.24), rgba(92,131,116,0.05));}
+  .split-icon{font-size:32px;text-align:center;display:block;margin-bottom:10px;}
+  .split-title{font-family:'Tiro Devanagari Hindi',serif;font-size:19px;text-align:center;margin-bottom:14px;}
+  .split-half.cite .split-title{color:#e8a4ad;}
+  .split-half.decree .split-title{color:#7fa894;}
+  .split-list{list-style:none;padding:0;margin:0;font-size:13px;color:var(--cream);}
+  .split-list li{padding:8px 2px;border-top:1px dashed var(--line);text-align:center;}
+  .split-list li:first-child{border-top:none;}
+  .split-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--bg-deep-alt);border:1px solid var(--gold);color:var(--gold-light);width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;z-index:2;font-family:'Tiro Devanagari Hindi',serif;}
+
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+
+  @media (max-width:560px){
+    .split-wrap{flex-direction:column;}
+    .split-badge{top:0;left:50%;transform:translate(-50%,-50%);}
+    .road-track{flex-wrap:wrap;}
+    .triway-wrap{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 9 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">भगवद्गीता</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का योग)</div>
+
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.९</div>
+    </div>
+
+    <div class="shloka">
+      कार्यमित्येव यत्कर्म नियतं क्रियतेऽर्जुन।<br>
+      सङ्गं त्यक्त्वा फलं चैव स त्यागः सात्त्विको मतः॥९॥
+    </div>
+
+    <div class="translit">
+      kāryam ity eva yat karma niyataṁ kriyate 'rjuna,<br>
+      saṅgaṁ tyaktvā phalaṁ chaiva sa tyāgaḥ sāttviko mataḥ
+    </div>
+
+    <div class="gist">
+      हे अर्जुन, जो नियत कर्म <b>"यह करना ही चाहिए" समझकर किया जाता है</b>, आसक्ति और फल दोनों त्यागकर — <b>वही त्याग सात्त्विक माना गया है।</b>
+    </div>
+  </div>
+
+  <!-- MODE SELECTOR -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीज़न</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">🖼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <div class="mode-section active" id="mode-core">
+
+  <!-- TABS -->
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पृष्ठभूमि</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+
+  <div class="panel-shell">
+
+    <!-- 1. CONTEXT -->
+    <div class="panel active" id="t1">
+      <h3>🪔 पृष्ठभूमि एवं मनोदशा</h3>
+      <p>18.7 में तामसिक त्याग (मोह से नियत कर्म छोड़ना) और 18.8 में राजसिक त्याग (शारीरिक कष्ट के भय से छोड़ना) — दोनों ही गलत निकले। अब 18.9 में कृष्ण अंततः सच्चा, **सात्त्विक त्याग** प्रकट करते हैं — और यह चौंकाने वाला है। यह कर्म छोड़ने की बात नहीं — बल्कि कर्म **करते रहने** की बात है!</p>
+      <p>ध्यान दें — 18.7 और 18.8 दोनों में क्रिया थी "त्यजेत्" (छोड़ दे), पर 18.9 में क्रिया है "क्रियते" (किया जाता है) — कर्म जारी रहता है! यही इस श्लोक का चमत्कार है — सच्चा त्याग कर्म की अनुपस्थिति नहीं, बल्कि सही भाव से किया गया कर्म है।</p>
+      <div class="callout"><b>18.6 का सीधा प्रतिबिंब:</b> ध्यान दें — "सङ्गं त्यक्त्वा फलं चैव" यह वही वाक्यांश है जो 18.6 में था ("सङ्गं त्यक्त्वा फलानि च")! यह दिखाता है कि 18.6 में कृष्ण ने जिसे अपना "उत्तम मत" कहा था, वही अब औपचारिक रूप से 'सात्त्विक त्याग' के रूप में परिभाषित हो रहा है — पूरा वृत्त पूर्ण होता है।</div>
+      <p>संबोधन भी सबसे सरल है — सीधे "अर्जुन" — जैसे कृष्ण कह रहे हों, "यह सबसे महत्वपूर्ण बात है, इसे सीधे समझो, बिना किसी अलंकार के।"</p>
+    </div>
+
+    <!-- 2. WORD BY WORD -->
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदच्छेद एवं अन्वय)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कार्यम् इति एव</span><span class="word-tr">kāryam iti eva</span></div>
+          <div class="word-meaning">"यह करना ही चाहिए" ऐसा सोचकर ही</div>
+          <div class="word-eng"><b>EN:</b> thinking "this ought to be done"</div>
+          <div class="word-deep">कार्यम् (करणीय, 18.5 में भी प्रयुक्त) + इति एव — यह 18.8 के "दुःखम् इति एव" का सीधा विपरीत है। वहाँ "यह दुःखदायी है" सोचकर त्यागा गया, यहाँ "यह करणीय है" सोचकर किया जाता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यत् कर्म नियतम्</span><span class="word-tr">yat karma niyatam</span></div>
+          <div class="word-meaning">जो नियत कर्म</div>
+          <div class="word-eng"><b>EN:</b> whatever prescribed/obligatory action</div>
+          <div class="word-deep">18.7 के "नियतस्य... कर्मणः" का सीधा संदर्भ — वही नियत कर्म, जिसे 18.7 में त्यागना अनुचित बताया गया था, यहाँ सही ढंग से किया जा रहा है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">क्रियते</span><span class="word-tr">kriyate</span></div>
+          <div class="word-meaning">किया जाता है</div>
+          <div class="word-eng"><b>EN:</b> is performed</div>
+          <div class="word-deep">कृ धातु, कर्मवाच्य, वर्तमानकाल — यह श्लोक की सबसे महत्वपूर्ण क्रिया है। 18.7-8 के "त्यजेत्" (छोड़ दे) के विपरीत, यहाँ कर्म सक्रिय रूप से जारी है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अर्जुन</span><span class="word-tr">arjuna</span></div>
+          <div class="word-meaning">हे अर्जुन</div>
+          <div class="word-eng"><b>EN:</b> O Arjuna</div>
+          <div class="word-deep">सबसे सीधा, सरल संबोधन — बिना किसी विशेषण के, मानो इस सर्वाधिक महत्वपूर्ण सत्य को सीधे, बिना अलंकार के कहा जा रहा हो।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सङ्गम् त्यक्त्वा</span><span class="word-tr">saṅgaṁ tyaktvā</span></div>
+          <div class="word-meaning">आसक्ति त्यागकर</div>
+          <div class="word-eng"><b>EN:</b> having abandoned attachment</div>
+          <div class="word-deep">18.6 के बिल्कुल समान शब्द — यह श्लोक 18.6 को शब्दशः प्रतिध्वनित करता है, यह स्थापित करते हुए कि वही शिक्षा अब त्रिविध-वर्गीकरण में औपचारिक रूप से 'सात्त्विक' कहलाती है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">फलम् च एव</span><span class="word-tr">phalaṁ cha eva</span></div>
+          <div class="word-meaning">और फल को भी (त्यागकर)</div>
+          <div class="word-eng"><b>EN:</b> and the fruit too</div>
+          <div class="word-deep">18.6 के "फलानि च" का एकवचन रूप — संदर्भ अब विशिष्ट एक कर्म पर है (18.6 में बहुवचन था क्योंकि कई कर्मों की बात थी)।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सः त्यागः</span><span class="word-tr">sa tyāgaḥ</span></div>
+          <div class="word-meaning">वह त्याग</div>
+          <div class="word-eng"><b>EN:</b> that renunciation</div>
+          <div class="word-deep">सर्वनाम 'सः' + त्यागः — पिछले विवरण को संक्षेप में समेटते हुए, 'त्याग' शब्द को परिभाषित करने वाला अंतिम कथन।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सात्त्विकः</span><span class="word-tr">sāttvikaḥ</span></div>
+          <div class="word-meaning">सात्त्विक, सत्त्व-गुण-प्रधान</div>
+          <div class="word-eng"><b>EN:</b> belonging to the mode of goodness</div>
+          <div class="word-deep">सत्त्व (शुद्धता, स्पष्टता, संतुलन) + अण् प्रत्यय — त्रिगुण में सर्वोच्च गुण, त्रिविध त्याग-वर्गीकरण की पराकाष्ठा, 18.7 (तामस) और 18.8 (राजस) के बाद अंतिम और श्रेष्ठ प्रकार।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">मतः</span><span class="word-tr">mataḥ</span></div>
+          <div class="word-meaning">माना गया है, समझा गया है</div>
+          <div class="word-eng"><b>EN:</b> is considered, is regarded</div>
+          <div class="word-deep">मन् धातु, कर्मणि भूतकालिक कृदंत — 18.6 के "मतम् उत्तमम्" से जुड़ा हुआ शब्द-मूल, यहाँ औपचारिक वर्गीकरण की पुष्टि करता है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. BHAVARTHA -->
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं गहन व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        "Whoever performs a prescribed action because it ought to be done, O Arjuna, abandoning attachment and also the fruit—that renunciation is considered sattvika."
+      </div>
+      <p>यह श्लोक 18.4 में दिए गए वादे — "त्याग तीन प्रकार का है" — की पूर्णता है, और साथ ही पूरे अध्याय के सबसे महत्वपूर्ण विरोधाभास को सुलझाता है। यह दिखाता है कि सच्चा त्याग, कर्म का त्याग नहीं, बल्कि <b>कर्म में आसक्ति और फल-इच्छा का त्याग</b> है।</p>
+      <p>तीनों श्लोक (18.7, 18.8, 18.9) मिलकर एक सुंदर पैटर्न बनाते हैं:</p>
+      <p>• <b>तामसिक (18.7):</b> मोह से नियत कर्म छोड़ना — गलत समझ<br>
+      • <b>राजसिक (18.8):</b> कष्ट के भय से नियत कर्म छोड़ना — स्वार्थ-प्रेरित परिहार<br>
+      • <b>सात्त्विक (18.9):</b> नियत कर्म को आसक्ति-फल त्यागकर करते रहना — सच्चा त्याग</p>
+      <div class="callout"><b>संपूर्ण अध्याय से जुड़ाव:</b> यह श्लोक 18.6 की पूर्ण पुनरावृत्ति है, जो अब त्रिगुण-ढाँचे में औपचारिक स्थान पाती है। यह यह भी पुष्ट करता है कि 18.5 (यज्ञ-दान-तप करो) + 18.6 (आसक्ति-फल त्यागकर) = सात्त्विक त्याग का जीवंत उदाहरण है। पूरा अध्याय अब एक सुसंगत संरचना में जुड़ गया है।</div>
+      <p>यह गीता की सबसे गहरी अंतर्दृष्टियों में से एक है — मुक्ति संसार से भागने में नहीं, बल्कि संसार में रहते हुए सही भाव से कर्म करने में है।</p>
+    </div>
+
+    <!-- 4. EXAMPLES -->
+    <div class="panel" id="t4">
+      <h3>🪔 आधुनिक उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — माता-पिता का कर्तव्य:</b> एक माता रात में बीमार बच्चे की देखभाल करती है — थकी हुई, नींद की कमी से जूझती हुई। पर वह इसे "करना ही चाहिए" समझकर करती है, न किसी पुरस्कार की चाह से, न किसी प्रशंसा की इच्छा से। न वह मोहवश भागती है (तामसिक), न कष्ट से डरकर पीछे हटती है (राजसिक) — वह बस अपना कर्तव्य निभाती है, फल की चिंता किए बिना। यही सात्त्विक त्याग है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — ईमानदार डॉक्टर:</b> एक डॉक्टर एक कठिन, थकाऊ केस को संभालता है — न प्रसिद्धि के लिए, न पैसे के लिए, बल्कि क्योंकि यही उसका कर्तव्य है। वह पूरी निष्ठा से काम करता है, पर परिणाम (मरीज़ ठीक हो या न हो) से उसकी आंतरिक शांति नहीं बँधती। यह 18.9 का जीवंत उदाहरण है — कर्म जारी, आसक्ति-फल मुक्त।
+      </div>
+    </div>
+
+    <!-- 5. FAQ -->
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर एवं भ्रांतियाँ</h3>
+
+      <div class="faq">
+        <div class="q">सात्त्विक त्याग में 'त्याग' किस चीज़ का हो रहा है, अगर कर्म जारी ही है?</div>
+        <div class="a">यही इस श्लोक की गहराई है — त्याग कर्म का नहीं, बल्कि सङ्ग (आसक्ति, कर्तापन का अहंकार) और फल (परिणाम की चाह) का है। बाहरी कर्म जारी रहता है, पर आंतरिक बंधन समाप्त हो जाता है।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">क्या 18.9 और 18.6 एक ही बात कह रहे हैं?</div>
+        <div class="a">हाँ, लगभग शब्दशः। 18.6 में कृष्ण ने इसे अपना व्यक्तिगत "उत्तम मत" कहा था। 18.9 में वही शिक्षा त्रिगुण-वर्गीकरण में औपचारिक रूप से 'सात्त्विक त्याग' के रूप में स्थापित होती है — दोनों श्लोक एक ही सत्य के दो प्रस्तुतीकरण हैं।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">तीनों प्रकार के त्याग (18.7-9) में मुख्य भेद क्या है?</div>
+        <div class="a">तामसिक = गलत समझ (मोह) से कर्म छोड़ना। राजसिक = सही समझ होते हुए भी असुविधा के डर से कर्म छोड़ना। सात्त्विक = कर्तव्य-बोध से कर्म जारी रखना, पर आसक्ति-फल त्यागकर। केवल अंतिम प्रकार ही सच्चा त्याग है।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">यह सिद्धांत आगे अध्याय 18 में कैसे विकसित होगा?</div>
+        <div class="a">18.10 से कृष्ण इस सात्त्विक दृष्टिकोण रखने वाले व्यक्ति की विशेषताओं का वर्णन करना शुरू करेंगे — जैसे वह अप्रिय कर्म से द्वेष नहीं करता, प्रिय कर्म में आसक्त नहीं होता। यह त्रिविध त्याग की शिक्षा को व्यावहारिक व्यक्तित्व-वर्णन में बदलेगा।</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div><!-- /mode-core -->
+
+  <!-- ================= MODE: PERSPECTIVES (दृष्टिकोण) ================= -->
+  <div class="mode-section" id="mode-perspectives">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">कहानी शैली</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">भाष्यकार</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- B1 STORY -->
+      <div class="panel active" id="b1">
+        <h3>🪔 कहानी शैली में</h3>
+        <p>अर्जुन की आँखों में अब एक नई स्पष्टता है। उसने 18.7 में मोहजनित त्याग देखा, 18.8 में भय-प्रेरित त्याग देखा — दोनों ही असफल। अब कृष्ण, सीधे और सरलता से, बस "अर्जुन" कहकर पुकारते हुए, अंतिम सत्य प्रकट करते हैं।</p>
+        <p>और यह सत्य चौंकाने वाला है — "अर्जुन, युद्ध छोड़ना त्याग नहीं है। युद्ध करना, पर बिना आसक्ति और फल की चाह के — यही सच्चा त्याग है।" अर्जुन को अचानक समझ आता है — गीता की शुरुआत से ही, कृष्ण उसे यही सिखा रहे थे, बस अब यह त्रिगुण-ढाँचे में स्पष्ट रूप से समझाया गया है।</p>
+        <div class="callout"><b>क्षण का महत्व:</b> यह वह क्षण है जहाँ पूरी गीता की शिक्षा — निष्काम कर्मयोग — अपने सबसे संक्षिप्त, सबसे स्पष्ट रूप में प्रकट होती है। यही श्लोक है जिसे कई लोग गीता का "हृदय" मानते हैं।</div>
+      </div>
+
+      <!-- B2 MINDMAP -->
+      <div class="panel" id="b2">
+        <h3>🪔 विज़ुअल माइंड-मैप</h3>
+        <p class="subnote">सात्त्विक त्याग के घटक — पूरे चक्र का पूर्ण होना।</p>
+        <svg class="mindmap-box" viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg">
+          <line class="mm-line" x1="350" y1="240" x2="350" y2="90"/>
+          <line class="mm-line" x1="350" y1="240" x2="500" y2="190"/>
+          <line class="mm-line" x1="350" y1="240" x2="450" y2="370"/>
+          <line class="mm-line" x1="350" y1="240" x2="250" y2="370"/>
+          <line class="mm-line" x1="350" y1="240" x2="200" y2="190"/>
+
+          <circle cx="350" cy="240" r="62" class="mm-center" opacity="0.9"/>
+          <text x="350" y="234" text-anchor="middle" fill="#f3e9d2" font-size="14" font-family="Tiro Devanagari Hindi, serif">श्लोक १८.९</text>
+          <text x="350" y="254" text-anchor="middle" fill="#f3e9d2" font-size="11">सात्त्विक त्याग</text>
+
+          <g class="mm-node">
+            <circle cx="350" cy="90" r="52" class="mm-node-circle"/>
+            <text x="350" y="84" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">क्रियते</text>
+            <text x="350" y="100" text-anchor="middle" fill="#f3e9d2" font-size="11">कर्म जारी रहता है</text>
+          </g>
+
+          <g class="mm-node">
+            <circle cx="500" cy="190" r="52" class="mm-node-circle"/>
+            <text x="500" y="184" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">सङ्ग-त्याग</text>
+            <text x="500" y="200" text-anchor="middle" fill="#f3e9d2" font-size="11">कर्तापन का त्याग</text>
+          </g>
+
+          <g class="mm-node">
+            <circle cx="450" cy="370" r="52" class="mm-node-circle"/>
+            <text x="450" y="364" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">फल-त्याग</text>
+            <text x="450" y="380" text-anchor="middle" fill="#f3e9d2" font-size="11">परिणाम-आसक्ति का त्याग</text>
+          </g>
+
+          <g class="mm-node">
+            <circle cx="250" cy="370" r="52" class="mm-node-circle"/>
+            <text x="250" y="364" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">18.6 से सेतु</text>
+            <text x="250" y="380" text-anchor="middle" fill="#f3e9d2" font-size="11">वही शिक्षा, औपचारिक रूप</text>
+          </g>
+
+          <g class="mm-node">
+            <circle cx="200" cy="190" r="52" class="mm-node-circle"/>
+            <text x="200" y="184" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">पूर्णता</text>
+            <text x="200" y="200" text-anchor="middle" fill="#f3e9d2" font-size="11">त्रिविध त्याग का समापन</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- B3 COMPARATIVE -->
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — संपूर्ण त्रिविध त्याग एक साथ</h3>
+        <p>तीनों श्लोक (18.7-9) एक साथ पढ़े जाने पर गीता की सबसे स्पष्ट शिक्षाओं में से एक बनाते हैं। यह तालिका तीनों को एक साथ दिखाती है:</p>
+        <table class="cmp-table">
+          <tr><th>प्रकार</th><th>कारण</th><th>परिणाम</th></tr>
+          <tr><td>तामसिक (18.7)</td><td>मोह — नियत कर्म का संन्यास</td><td>अनुचित, असली त्याग नहीं</td></tr>
+          <tr><td>राजसिक (18.8)</td><td>कायक्लेशभय — कष्ट के डर से त्याग</td><td>त्यागफल नहीं मिलता</td></tr>
+          <tr><td>सात्त्विक (18.9)</td><td>कार्यम् इति — कर्तव्य-बोध से कर्म जारी</td><td>सच्चा त्याग, फल प्राप्त होता है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की संपूर्ण शिक्षा:</b> यह त्रिक (18.7-9) गीता के पूरे कर्मयोग-दर्शन को तीन पंक्तियों में समेट देता है — सच्चा त्याग कर्म से भागना नहीं, बल्कि कर्म में आसक्ति-रहित होकर डूब जाना है।</div>
+      </div>
+
+      <!-- B4 SADHANA -->
+      <div class="panel" id="b4">
+        <h3>🪔 व्यावहारिक साधना दृष्टिकोण</h3>
+        <p>इस श्लोक से उभरने वाली साधना है — अपने नियत कर्तव्यों को "कार्यम् इति" (यह करना ही चाहिए) के भाव से करना, आसक्ति और फल-इच्छा को धीरे-धीरे छोड़ते हुए।</p>
+        <div class="callout"><b>आज का अभ्यास:</b> अपना कोई नियमित कर्तव्य चुनें — चाहे काम हो, घर की ज़िम्मेदारी हो, या कोई वचन। उसे करते समय भीतर से दोहराएँ — "यह मेरा कर्तव्य है, मैं इसे करूँगा, पर परिणाम पर मेरी पकड़ नहीं होगी।" दिन के अंत में नोट करें — क्या मन हल्का महसूस हुआ?</div>
+        <p>यह अभ्यास धीरे-धीरे 18.7-9 की पूरी शिक्षा को जीवन में उतारने का रास्ता खोलता है — न पलायन (तामसिक), न परिहार (राजसिक), बल्कि निष्ठापूर्ण, आसक्ति-रहित कर्म (सात्त्विक)।</p>
+      </div>
+
+      <!-- B5 COMMENTATORS -->
+      <div class="panel" id="b5">
+        <h3>🪔 अन्य भाष्यकारों की व्याख्या</h3>
+        <p><b style="color:var(--gold-light)">अद्वैत दृष्टि (शंकराचार्य परंपरा):</b> शंकराचार्य इस श्लोक को गीता के संपूर्ण कर्मयोग-सिद्धांत का सार मानते हैं — कर्म और ज्ञान विरोधी नहीं, बल्कि सात्त्विक भाव से किया गया कर्म ही चित्त-शुद्धि का सर्वोत्तम मार्ग है, जो अंततः आत्मज्ञान तक ले जाता है।</p>
+        <p><b style="color:var(--gold-light)">विशिष्टाद्वैत दृष्टि (रामानुजाचार्य परंपरा):</b> रामानुज के अनुसार यही श्लोक भक्ति-योग की नींव है — भगवत्-प्रीत्यर्थ किया गया कर्म, बिना फल की चाह के, सर्वोच्च भक्ति का रूप है। 'कार्यम् इति' का अर्थ है "यह भगवान के लिए करणीय है।"</p>
+        <p><b style="color:var(--gold-light)">आधुनिक दार्शनिक दृष्टि:</b> कई आधुनिक विचारक इसे "intrinsic motivation" (आंतरिक प्रेरणा) के सिद्धांत से जोड़ते हैं — जब कार्य बाहरी पुरस्कार की चाह से नहीं, बल्कि कार्य के मूल्य की पहचान से किया जाता है, तब वह अधिक स्थायी संतुष्टि और उत्कृष्टता लाता है।</p>
+        <div class="callout"><b>समान सूत्र:</b> सभी दृष्टियाँ सहमत हैं कि यह श्लोक गीता का व्यावहारिक केंद्र-बिंदु है — सिद्धांत नहीं, बल्कि जीवन जीने का प्रत्यक्ष मार्गदर्शन।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-perspectives -->
+
+  <!-- ================= MODE: PRACTICE (अभ्यास व रिवीज़न) ================= -->
+  <div class="mode-section" id="mode-practice">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- C1 FLASHCARDS -->
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड — पलटकर रिवीज़न करें</h3>
+        <p class="flash-instructions">हर कार्ड पर क्लिक करें — सामने शब्द, पीछे अर्थ और मूल।</p>
+        <div class="flashcard-grid">
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कार्यम् इति एव</span></div>
+            <div class="flashcard-face flashcard-back"><b>"करना ही चाहिए" मानकर</b>18.8 के "दुःखम् इति" का सीधा विपरीत</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">क्रियते</span></div>
+            <div class="flashcard-face flashcard-back"><b>किया जाता है</b>कर्म जारी रहता है — 18.7-8 से विपरीत</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सङ्गम् त्यक्त्वा</span></div>
+            <div class="flashcard-face flashcard-back"><b>आसक्ति त्यागकर</b>18.6 का शब्दशः दोहराव</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">फलम् च एव</span></div>
+            <div class="flashcard-face flashcard-back"><b>फल को भी (त्यागकर)</b>18.6 की शिक्षा का पुनरावर्तन</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सात्त्विकः</span></div>
+            <div class="flashcard-face flashcard-back"><b>सात्त्विक</b>त्रिगुण में सर्वोच्च, त्रिविध त्याग का अंतिम प्रकार</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">मतः</span></div>
+            <div class="flashcard-face flashcard-back"><b>माना गया है</b>18.6 के "मतम्" से जुड़ा शब्द</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">नियतम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>नियत कर्म</b>18.7 का वही कर्म, अब सही ढंग से किया जा रहा</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अर्जुन</span></div>
+            <div class="flashcard-face flashcard-back"><b>हे अर्जुन</b>सबसे सरल, सीधा संबोधन</div>
+          </div></div>
+
+        </div>
+      </div>
+
+      <!-- C2 QUIZ -->
+      <div class="panel" id="c2">
+        <h3>🪔 स्वमूल्यांकन क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <!-- C3 GRAMMAR -->
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण गहराई</h3>
+        <p class="subnote">यह श्लोक भी अनुष्टुप् छंद में है — 4 पाद, प्रत्येक में लगभग 8 अक्षर।</p>
+        <table class="gram-table">
+          <tr><th>शब्द</th><th>मूल धातु/शब्द</th><th>प्रत्यय/विभक्ति</th><th>व्याकरणिक प्रकार</th></tr>
+          <tr><td class="sa">कार्यम्</td><td>कृ + ण्यत्</td><td>द्वितीया, एकवचन</td><td>विधि-कृदंत (नपुं.)</td></tr>
+          <tr><td class="sa">नियतम्</td><td>नि+यम् धातु</td><td>द्वितीया, एकवचन</td><td>विशेषण (नपुं.)</td></tr>
+          <tr><td class="sa">क्रियते</td><td>कृ धातु (कर्मवाच्य)</td><td>प्रथम पुरुष, एकवचन</td><td>वर्तमानकालिक क्रिया</td></tr>
+          <tr><td class="sa">सङ्गम्</td><td>सञ्ज् धातु</td><td>द्वितीया, एकवचन</td><td>कर्म कारक (पुं.)</td></tr>
+          <tr><td class="sa">त्यक्त्वा</td><td>त्यज् धातु</td><td>ल्यबन्त (पूर्वकालिक)</td><td>अव्यय कृदंत</td></tr>
+          <tr><td class="sa">फलम्</td><td>फल शब्द</td><td>द्वितीया, एकवचन</td><td>कर्म कारक (नपुं.)</td></tr>
+          <tr><td class="sa">त्यागः</td><td>त्यज् + घञ्</td><td>प्रथमा, एकवचन</td><td>कर्ता कारक (पुं.)</td></tr>
+          <tr><td class="sa">सात्त्विकः</td><td>सत्त्व + अण्</td><td>प्रथमा, एकवचन</td><td>विशेषण (पुं.)</td></tr>
+          <tr><td class="sa">मतः</td><td>मन् धातु</td><td>प्रथमा, एकवचन</td><td>कर्मणि भूतकालिक कृदंत</td></tr>
+        </table>
+      </div>
+
+      <!-- C4 CHEATSHEET -->
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पेज सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">कार्यमित्येव यत्कर्म नियतं क्रियतेऽर्जुन।<br>सङ्गं त्यक्त्वा फलं चैव स त्यागः सात्त्विको मतः॥९॥</div>
+          <div class="cheat-translit">kāryam ity eva yat karma niyataṁ kriyate 'rjuna, saṅgaṁ tyaktvā phalaṁ chaiva sa tyāgaḥ sāttviko mataḥ</div>
+          <div class="cheat-line">नियत कर्म को कर्तव्य समझकर, आसक्ति-फल त्यागकर करना — यही सात्त्विक त्याग है।</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>कार्यम् इति</b> = कर्तव्य-बोध</span>
+            <span class="cheat-chip"><b>क्रियते</b> = कर्म जारी रहता है</span>
+            <span class="cheat-chip"><b>सङ्ग-फल त्याग</b> = 18.6 की पुनरावृत्ति</span>
+            <span class="cheat-chip"><b>सात्त्विकः</b> = त्रिविध त्याग का चरमोत्कर्ष</span>
+          </div>
+          <div class="cheat-takeaway">मुख्य बात: सच्चा त्याग कर्म छोड़ना नहीं — कर्तव्य निभाते हुए आसक्ति और फल-इच्छा त्यागना है। त्रिविध त्याग (18.7-9) अब पूर्ण है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /mode-practice -->
+
+  <!-- ================= MODE: MEDIA (मीडिया अनुभव) ================= -->
+  <div class="mode-section" id="mode-media">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">आवाज़ में सुनें</button>
+      <button class="tab-btn" data-tab="d2">एनिमेटेड वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप अभ्यास</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- D1 TTS -->
+      <div class="panel active" id="d1">
+        <h3>🪔 आवाज़ में सुनें</h3>
+        <p class="subnote">यह सुविधा आपके ब्राउज़र की उपलब्ध आवाज़ पर निर्भर करती है — कुछ डिवाइस में हिंदी आवाज़ उपलब्ध नहीं हो सकती।</p>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('कार्यमित्येव यत्कर्म नियतं क्रियतेऽर्जुन। सङ्गं त्यक्त्वा फलं चैव स त्यागः सात्त्विको मतः।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('कार्यमित्येव यत्कर्म नियतं क्रियतेऽर्जुन। सङ्गं त्यक्त्वा फलं चैव स त्यागः सात्त्विको मतः।', 0.55)">🐢 धीरे सुनें (अभ्यास हेतु)</button>
+          <button class="tts-btn" onclick="speakText('हे अर्जुन, जो नियत कर्म यह करना ही चाहिए समझकर किया जाता है, आसक्ति और फल दोनों त्यागकर, वही त्याग सात्त्विक माना गया है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+
+      <!-- D2 WALKTHROUGH -->
+      <div class="panel" id="d2">
+        <h3>🪔 एनिमेटेड वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">⟵</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">⟶</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+
+      <!-- D3 CHANTING -->
+      <div class="panel" id="d3">
+        <h3>🪔 जप / उच्चारण अभ्यास</h3>
+        <p>यह श्लोक भी <b style="color:var(--gold-light)">अनुष्टुप् छंद</b> में है — 4 पाद, हर पाद में लगभग 8 अक्षर।</p>
+
+        <div class="pada-label">पाद 1</div>
+        <div class="meter-row">
+          <span class="syll">का</span><span class="syll">र्य</span><span class="syll">मि</span><span class="syll">त्ये</span><span class="syll">व</span><span class="syll">य</span><span class="syll">त्क</span><span class="syll">र्म</span>
+        </div>
+
+        <div class="pada-label">पाद 2</div>
+        <div class="meter-row">
+          <span class="syll">नि</span><span class="syll">य</span><span class="syll">तं</span><span class="syll">क्रि</span><span class="syll">य</span><span class="syll">ते</span><span class="syll">र्जु</span><span class="syll">न</span>
+        </div>
+
+        <div class="pada-label">पाद 3</div>
+        <div class="meter-row">
+          <span class="syll">स</span><span class="syll">ङ्गं</span><span class="syll">त्य</span><span class="syll">क्त्वा</span><span class="syll">फ</span><span class="syll">लं</span><span class="syll">चै</span><span class="syll">व</span>
+        </div>
+
+        <div class="pada-label">पाद 4</div>
+        <div class="meter-row">
+          <span class="syll">स</span><span class="syll">त्या</span><span class="syll">गः</span><span class="syll">सा</span><span class="syll">त्त्वि</span><span class="syll">को</span><span class="syll">म</span><span class="syll">तः</span>
+        </div>
+
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('कार्यमित्येव यत्कर्म नियतं क्रियतेऽर्जुन। सङ्गं त्यक्त्वा फलं चैव स त्यागः सात्त्विको मतः।', 0.55)">🐢 लय में सुनें (धीमी गति)</button>
+        </div>
+        <div class="callout"><b>अभ्यास सुझाव:</b> 'क्रियते' शब्द पर विशेष ज़ोर दें — यह श्लोक का सबसे क्रांतिकारी शब्द है, कर्म की निरंतरता को दर्शाता हुआ, त्याग के सामान्य अर्थ को पलट देता हुआ।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-media -->
+
+  <!-- ================= MODE: INFOGRAPHICS (इन्फोग्राफिक्स) ================= -->
+  <div class="mode-section" id="mode-infographics">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">श्लोक की संरचना</button>
+      <button class="tab-btn" data-tab="e2">त्रिविध त्याग — पूर्ण चक्र</button>
+      <button class="tab-btn" data-tab="e3">अध्याय की यात्रा</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- E1 VERSE ANATOMY FLOW -->
+      <div class="panel active" id="e1">
+        <h3>🪔 श्लोक की संरचना — एक नज़र में</h3>
+        <p class="subnote">18.8 और 18.9 की सीधी तुलना — एक शब्द का परिवर्तन, पूरा अर्थ बदल जाता है।</p>
+        <div class="split-wrap">
+          <div class="split-half cite">
+            <span class="split-icon">🚫</span>
+            <div class="split-title">18.8 — राजसिक</div>
+            <ul class="split-list">
+              <li>"दुःखम् इति... त्यजेत्"</li>
+              <li>(कर्म छोड़ देता है)</li>
+            </ul>
+          </div>
+          <div class="split-badge">vs</div>
+          <div class="split-half decree">
+            <span class="split-icon">✨</span>
+            <div class="split-title">18.9 — सात्त्विक</div>
+            <ul class="split-list">
+              <li>"कार्यम् इति... क्रियते"</li>
+              <li>(कर्म जारी रहता है)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout"><b>इस तरह पढ़ें:</b> एक ही कर्म, दो दृष्टिकोण — "यह दुःखदायी है" बनाम "यह करणीय है।" यही भेद राजसिक और सात्त्विक त्याग के बीच की पूरी खाई है।</div>
+      </div>
+
+      <!-- E2 TRIVIDHA COMPLETE -->
+      <div class="panel" id="e2">
+        <h3>🪔 त्रिविध त्याग — पूर्ण चक्र</h3>
+        <p class="subnote">18.4 का वादा अब पूरी तरह पूर्ण — तीनों प्रकार सामने हैं।</p>
+        <div class="triway-wrap">
+          <div class="triway-card tamas">
+            <span class="tw-ic">🌑</span>
+            <div class="tw-ttl">तामसिक (18.7)</div>
+            <div class="tw-sub">मोह से नियत कर्म त्यागना — अनुचित</div>
+          </div>
+          <div class="triway-card rajas">
+            <span class="tw-ic">🔥</span>
+            <div class="tw-ttl">राजसिक (18.8)</div>
+            <div class="tw-sub">कायक्लेशभय से त्यागना — निष्फल</div>
+          </div>
+          <div class="triway-card sattva active-card">
+            <span class="tw-ic">✨</span>
+            <div class="tw-ttl">सात्त्विक (18.9)</div>
+            <div class="tw-sub">कर्तव्य-बोध से, आसक्ति-फल त्यागकर करना — सच्चा त्याग, यही श्लोक</div>
+          </div>
+        </div>
+        <div class="callout"><b>पूर्णता:</b> 18.4 में किया गया वादा — "त्याग तीन प्रकार का है" — अब पूरी तरह पूर्ण हुआ। यह भी 18.5-6 की पुष्टि करता है — यज्ञ-दान-तप को आसक्ति-फल त्यागकर करना ही सात्त्विक त्याग का जीवंत उदाहरण है।</div>
+      </div>
+
+      <!-- E3 CHAPTER ROADMAP -->
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 की यात्रा — यह श्लोक कहाँ खड़ा है</h3>
+        <p class="subnote">त्रिविध त्याग की व्याख्या अब संपूर्ण है।</p>
+        <div class="road-track">
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">१८.१–६<br>प्रश्न, निर्णय, यज्ञ-दान-तप</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">१८.७<br>तामसिक त्याग</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">१८.८<br>राजसिक त्याग</div>
+          </div>
+          <div class="road-stop active">
+            <div class="road-dot"></div>
+            <div class="rlabel">१८.९<br>सात्त्विक त्याग — पूर्णता</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">१८.१०–१२<br>सात्त्विक त्यागी के लक्षण</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">१८.७८<br>मोक्ष</div>
+          </div>
+        </div>
+        <div class="callout"><b>संदर्भ:</b> 18.9 त्रिविध त्याग की पराकाष्ठा है — पूरे 18.3 से शुरू हुई बहस अब पूर्ण उत्तर पा चुकी है। अगले श्लोकों (18.10-12) में कृष्ण इस सात्त्विक त्यागी की पहचान और लक्षण विस्तार से समझाएँगे।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-infographics -->
+
+  <div class="footer-hint">अगले श्लोक (१८.१०) के लिए कहें — कृष्ण सात्त्विक त्यागी के लक्षण बताना शुरू करेंगे।</div>
+
+</div>
+
+<script>
+  /* ---- mode pill switching ---- */
+  document.querySelectorAll('.mode-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      document.querySelectorAll('.mode-section').forEach(s => s.classList.remove('active'));
+      document.getElementById(pill.dataset.mode).classList.add('active');
+    });
+  });
+
+  /* ---- tab switching, scoped per mode-section ---- */
+  document.querySelectorAll('.mode-section').forEach(section => {
+    const tabs = section.querySelectorAll('.tab-btn');
+    const panels = section.querySelectorAll('.panel');
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        section.querySelector('#' + btn.dataset.tab).classList.add('active');
+      });
+    });
+  });
+
+  /* ---- flashcards ---- */
+  document.querySelectorAll('.flashcard').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+  });
+
+  /* ---- text to speech ---- */
+  function speakText(text, rate){
+    if(!('speechSynthesis' in window)){
+      alert('यह ब्राउज़र आवाज़ सुविधा को सपोर्ट नहीं करता।');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'hi-IN';
+    u.rate = rate || 0.9;
+    window.speechSynthesis.speak(u);
+  }
+
+  /* ---- quiz ---- */
+  const quizData = [
+    {q:"18.9 के अनुसार सात्त्विक त्याग में कर्म का क्या होता है?", options:["पूरी तरह छोड़ दिया जाता है","जारी रहता है, आसक्ति-फल रहित होकर","आधा किया जाता है","दूसरों को सौंप दिया जाता है"], correct:1},
+    {q:"18.9 किस पूर्व श्लोक को लगभग शब्दशः दोहराता है?", options:["18.2","18.4","18.6","18.7"], correct:2},
+    {q:"'कार्यम् इति एव' किस श्लोक के 'दुःखम् इति एव' का विपरीत है?", options:["18.5","18.6","18.7","18.8"], correct:3},
+    {q:"त्रिविध त्याग में सात्त्विक त्याग किस क्रम पर है?", options:["पहला","दूसरा","तीसरा","कोई क्रम नहीं"], correct:2},
+    {q:"18.9 में सच्चे त्याग की परिभाषा क्या है?", options:["कर्म से दूर भागना","आसक्ति और फल त्यागकर कर्तव्य निभाना","केवल मंदिर में पूजा करना","धन का त्याग करना"], correct:1}
+  ];
+  let quizIdx = 0, quizScore = 0, quizAnswered = false;
+
+  function renderQuiz(){
+    const area = document.getElementById('quizArea');
+    if(!area) return;
+    if(quizIdx >= quizData.length){
+      area.innerHTML = '<div class="quiz-score">आपका स्कोर: ' + quizScore + ' / ' + quizData.length + '</div>' +
+        '<div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से प्रयास करें</button></div>';
+      return;
+    }
+    const item = quizData[quizIdx];
+    quizAnswered = false;
+    let html = '<div class="quiz-progress">प्रश्न ' + (quizIdx+1) + ' / ' + quizData.length + '</div>';
+    html += '<div class="quiz-question">' + item.q + '</div>';
+    html += '<div class="quiz-options">';
+    item.options.forEach((opt, i) => {
+      html += '<button class="quiz-opt" onclick="checkQuizAnswer(' + i + ')">' + opt + '</button>';
+    });
+    html += '</div>';
+    html += '<div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';
+    area.innerHTML = html;
+  }
+
+  function checkQuizAnswer(i){
+    if(quizAnswered) return;
+    quizAnswered = true;
+    const item = quizData[quizIdx];
+    const opts = document.querySelectorAll('#quizArea .quiz-opt');
+    opts.forEach((o, idx) => {
+      o.classList.add('disabled');
+      if(idx === item.correct) o.classList.add('correct');
+      else if(idx === i) o.classList.add('wrong');
+    });
+    if(i === item.correct) quizScore++;
+    document.getElementById('quizNextBtn').disabled = false;
+  }
+
+  renderQuiz();
+
+  /* ---- animated walkthrough ---- */
+  const walkSlides = [
+    "18.7 में तामसिक (मोह से) और 18.8 में राजसिक (कष्ट-भय से) त्याग — दोनों असफल निकले।",
+    "अब 18.9 में कृष्ण अंततः सच्चा त्याग प्रकट करते हैं — और यह चौंकाने वाला है।",
+    "वे कहते हैं — 'कार्यमित्येव यत्कर्म नियतं क्रियते' — नियत कर्म 'करना ही चाहिए' समझकर किया जाता है।",
+    "ध्यान दें — क्रिया है 'क्रियते' (किया जाता है), 'त्यजेत्' (छोड़ दे) नहीं! कर्म जारी रहता है।",
+    "शर्त है — 'सङ्गं त्यक्त्वा फलं चैव' — आसक्ति और फल दोनों त्यागकर। यह ठीक 18.6 जैसा ही है।",
+    "कृष्ण इसे 'सात्त्विकः मतः' कहते हैं — सात्त्विक त्याग। त्रिविध त्याग अब पूर्ण है — सच्चा त्याग कर्म छोड़ना नहीं, आसक्ति-फल त्यागकर कर्म करना है।"
+  ];
+  let walkIdx = 0, walkPlaying = false, walkTimer = null;
+
+  function renderWalk(){
+    const t = document.getElementById('walkText');
+    if(!t) return;
+    t.textContent = walkSlides[walkIdx];
+    const dotsEl = document.getElementById('walkDots');
+    dotsEl.innerHTML = walkSlides.map((_, i) => '<span class="walk-dot' + (i===walkIdx ? ' active' : '') + '"></span>').join('');
+  }
+  function walkNext(){ walkIdx = (walkIdx+1) % walkSlides.length; renderWalk(); }
+  function walkPrev(){ walkIdx = (walkIdx-1+walkSlides.length) % walkSlides.length; renderWalk(); }
+  function walkToggle(){
+    const btn = document.getElementById('walkPlayBtn');
+    walkPlaying = !walkPlaying;
+    if(walkPlaying){
+      btn.textContent = '⏸';
+      walkTimer = setInterval(walkNext, 3200);
+    } else {
+      btn.textContent = '▶';
+      clearInterval(walkTimer);
+    }
+  }
+  renderWalk();
+</script>
+</body>
+</html>
