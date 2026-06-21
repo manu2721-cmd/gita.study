@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.13 — मोक्षसंन्यासयोग</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#180f2e;
+    --bg-deep-alt:#241a42;
+    --gold:#c9a227;
+    --gold-light:#e6c863;
+    --maroon:#8c2c3b;
+    --cream:#f3e9d2;
+    --cream-dim:#cfc3a8;
+    --sage:#5c8374;
+    --line:rgba(201,162,39,0.25);
+    --shadow:0 18px 50px rgba(0,0,0,0.45);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at 50% -10%, #2e2153 0%, var(--bg-deep) 55%, #100a1f 100%);
+    color:var(--cream);
+    font-family:'Mukta',sans-serif;
+    line-height:1.7;
+    padding:32px 16px 56px;
+  }
+  .wrap{max-width:880px;margin:0 auto;}
+
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:16.7%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+
+  .hero{
+    background:linear-gradient(160deg, var(--bg-deep-alt), #1b1336);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:38px 30px 34px;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(201,162,39,0.12), transparent 60%);
+    pointer-events:none;
+  }
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{
+    0%,100%{transform:scale(1) translateY(0);opacity:1;}
+    25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}
+    50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}
+    75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}
+  }
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:560px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;display:flex;align-items:center;gap:8px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+
+  @media (max-width:560px){
+    .panel-shell{padding:22px 18px;}
+    .hero{padding:28px 18px 26px;}
+  }
+
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s ease;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+
+  .mindmap-box{width:100%;height:auto;}
+  .mm-line{stroke:#7a623a;stroke-width:1.4;opacity:0.55;}
+  .mm-center{fill:#5c8374;}
+  .mm-node-circle{fill:rgba(255,255,255,0.04);stroke:#c9a227;stroke-width:1.2;}
+
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.12);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s ease;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-line{font-size:14.5px;color:var(--cream);margin-bottom:10px;text-align:center;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+
+  .flow-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin:22px 0 28px;}
+  .flow-box{background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:16px;padding:18px 16px;text-align:center;min-width:135px;max-width:160px;}
+  .flow-box .ic{font-size:30px;display:block;margin-bottom:10px;}
+  .flow-box .ttl{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;font-size:14.5px;margin-bottom:5px;}
+  .flow-box .sub{font-size:11.5px;color:var(--cream-dim);line-height:1.4;}
+  .flow-arrow{font-size:22px;color:var(--gold);flex-shrink:0;}
+
+  .duo-wrap{display:flex;gap:14px;margin:18px 0;flex-wrap:wrap;}
+  .duo-card{flex:1;min-width:180px;border-radius:14px;padding:22px 18px;text-align:center;border:1px solid var(--line);}
+  .duo-card.dislike{background:linear-gradient(160deg, rgba(140,44,59,0.24), rgba(140,44,59,0.05));}
+  .duo-card.like{background:linear-gradient(160deg, rgba(201,162,39,0.24), rgba(201,162,39,0.05));}
+  .duo-card .duo-ic{font-size:30px;display:block;margin-bottom:10px;}
+  .duo-card .duo-ttl{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;margin-bottom:8px;}
+  .duo-card.dislike .duo-ttl{color:#e8a4ad;}
+  .duo-card.like .duo-ttl{color:var(--gold-light);}
+  .duo-card .duo-sub{font-size:13px;color:var(--cream-dim);line-height:1.6;}
+
+  .penta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:18px 0;}
+  .penta-card{border:1px solid var(--line);border-radius:12px;padding:14px 10px;text-align:center;background:rgba(255,255,255,0.02);}
+  .penta-card .pn{width:30px;height:30px;border-radius:50%;background:rgba(201,162,39,0.12);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Tiro Devanagari Hindi',serif;font-size:14px;color:var(--gold-light);margin:0 auto 8px;}
+  .penta-card .pt{font-family:'Tiro Devanagari Hindi',serif;font-size:13.5px;color:var(--cream);margin-bottom:4px;}
+  .penta-card .ps{font-size:11px;color:var(--cream-dim);}
+
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+
+  @media (max-width:560px){
+    .road-track{flex-wrap:wrap;}
+    .duo-wrap{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 13 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का योग)</div>
+
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.१३</div>
+    </div>
+
+    <div class="shloka">
+      पञ्चैतानि महाबाहो कारणानि निबोध मे ।<br>
+      सांख्ये कृतान्ते प्रोक्तानि सिद्धये सर्वकर्मणाम् ॥ १३ ॥
+    </div>
+
+    <div class="translit">
+      pañchaitāni mahā-bāho kāraṇāni nibodha me,<br>
+      sāṅkhye kṛtānte proktāni siddhaye sarva-karmaṇām
+    </div>
+
+    <div class="gist">
+      (सारांश) <b>हे महाबाहु अर्जुन! ये पाँच कारण मुझसे जानो</b> — जो <b>सांख्य शास्त्र में सभी कर्मों की सिद्धि (पूर्णता) हेतु कहे गए हैं</b>
+    </div>
+  </div>
+
+  <!-- MODE SELECTOR -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">🖼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <div class="mode-section active" id="mode-core">
+
+  <!-- TABS -->
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्वार्ध-उत्तरार्ध</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+
+  <div class="panel-shell">
+
+    <!-- 1. CONTEXT -->
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्वार्ध-उत्तरार्ध एवं मनोभाव</h3>
+      <p>18.1-12 तक कृष्ण ने त्याग और संन्यास का विश्लेषण किया — त्याग के तीन प्रकार, सच्चे त्यागी की पहचान, और फलासक्ति के परिणाम। अब 18.13 से अध्याय एक नई, गहरी दिशा लेता है: <b>कर्म स्वयं कैसे घटित होता है</b>, इसका विश्लेषण। यह श्लोक एक संक्रमण-बिंदु (transition verse) है — कृष्ण अर्जुन को सूचित करते हैं कि अब वे सांख्य शास्त्र के अनुसार कर्म की सिद्धि के <b>पाँच कारण</b> बताएंगे।</p>
+      <p>"महाबाहो" (हे महाबाहु) संबोधन के साथ कृष्ण विशेष ध्यान आकर्षित करते हैं — यह संकेत है कि आगे आने वाली शिक्षा महत्वपूर्ण और सूक्ष्म है। "निबोध मे" (मुझसे जानो/समझो) एक आदेशात्मक किन्तु स्नेहपूर्ण आमंत्रण है, गहन अध्ययन हेतु।</p>
+      <div class="callout"><b>आगे क्या आएगा:</b> अगले ही श्लोक (18.14) में कृष्ण ये पाँच कारण गिनाएंगे — अधिष्ठान (शरीर), कर्ता, करण (इन्द्रियाँ), चेष्टा (प्रयत्न), और दैव (नियति/ईश्वर-इच्छा)। 18.13 केवल भूमिका है — "सुनो, मैं अब यह सिखाने जा रहा हूँ।"</div>
+      <p>यह विश्लेषणात्मक मोड़ क्यों महत्वपूर्ण है? क्योंकि अगर कर्म वास्तव में पाँच कारणों के समन्वय से घटित होता है, तो "मैं अकेला कर्ता हूँ" का अहंकार मूलतः भ्रामक है — और यही समझ आगे चलकर फलासक्ति (जिसकी चर्चा 18.1-12 में हुई) को स्वाभाविक रूप से कमज़ोर करती है।</p>
+    </div>
+
+    <!-- 2. WORD BY WORD -->
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदच्छेद सहित अन्वय)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">पञ्च एतानि</span><span class="word-tr">pañcha etāni</span></div>
+          <div class="word-meaning">ये पाँच (कारण)</div>
+          <div class="word-eng"><b>EN:</b> these five</div>
+          <div class="word-deep">पञ्च (संख्यावाचक) + एतानि (नपुंसकलिंग, बहुवचन, "ये") — आगे आने वाली सूची की ओर संकेत करने वाला सर्वनाम</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">महाबाहो</span><span class="word-tr">mahā-bāho</span></div>
+          <div class="word-meaning">हे महाबाहु (अर्जुन को संबोधन)</div>
+          <div class="word-eng"><b>EN:</b> O mighty-armed one</div>
+          <div class="word-deep">महत् (महान) + बाहु (भुजा) — संबोधन कारक; गीता में अर्जुन के लिए बारंबार प्रयुक्त सम्मानसूचक विशेषण</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कारणानि निबोध मे</span><span class="word-tr">kāraṇāni nibodha me</span></div>
+          <div class="word-meaning">कारणों को मुझसे जानो/समझो</div>
+          <div class="word-eng"><b>EN:</b> learn/understand these causes from me</div>
+          <div class="word-deep">निबोध — नि+√बुध् (जानना) धातु से लोट् लकार (आज्ञार्थ); "ध्यानपूर्वक समझो" का भाव, सतही सुनने से अधिक गहन</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सांख्ये</span><span class="word-tr">sāṅkhye</span></div>
+          <div class="word-meaning">सांख्य शास्त्र में</div>
+          <div class="word-eng"><b>EN:</b> in the Sankhya teaching/system</div>
+          <div class="word-deep">सांख्य — भारतीय दर्शन की एक प्रमुख शाखा, जो तत्वों के विश्लेषणात्मक वर्गीकरण हेतु प्रसिद्ध; सप्तमी विभक्ति "में" का बोध कराती है</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कृतान्ते</span><span class="word-tr">kṛtānte</span></div>
+          <div class="word-meaning">कर्म-सिद्धांत के निष्कर्ष/ग्रंथ में</div>
+          <div class="word-eng"><b>EN:</b> in the conclusive teaching on action</div>
+          <div class="word-deep">कृत (कर्म) + अन्त (अंत/निष्कर्ष) — कुछ टीकाकार इसे सांख्य के एक विशिष्ट ग्रंथ/सिद्धांत के नाम के रूप में भी व्याख्यायित करते हैं</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">प्रोक्तानि</span><span class="word-tr">proktāni</span></div>
+          <div class="word-meaning">कहे गए हैं, बताए गए हैं</div>
+          <div class="word-eng"><b>EN:</b> have been declared</div>
+          <div class="word-deep">प्र+√वच् (कहना) धातु से भूतकालिक कृदंत — शास्त्रीय प्रामाणिकता दर्शाने की शैली, मानो कृष्ण किसी स्थापित परंपरा का हवाला दे रहे हों</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सिद्धये सर्वकर्मणाम्</span><span class="word-tr">siddhaye sarva-karmaṇām</span></div>
+          <div class="word-meaning">सभी कर्मों की सिद्धि (पूर्णता) हेतु</div>
+          <div class="word-eng"><b>EN:</b> for the accomplishment of all actions</div>
+          <div class="word-deep">सिद्धये (चतुर्थी, "के लिए") + सर्वकर्मणाम् (षष्ठी बहुवचन, "सब कर्मों का") — यह स्पष्ट करता है कि आगे बताए जाने वाले पाँच कारण किसी भी कर्म की पूर्णता के लिए सार्वभौमिक रूप से लागू हैं</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. BHAVARTHA -->
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं गहन व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        O mighty-armed Arjuna, learn from Me these five factors, as declared in the Sankhya teaching, for the accomplishment of all action.
+      </div>
+      <p>18.13 गीता के सबसे विश्लेषणात्मक खंडों में से एक की शुरुआत करता है। अब तक अध्याय 18 ने त्याग की नैतिक और आध्यात्मिक चर्चा की थी; यहाँ से कृष्ण एक अधिक दार्शनिक-विश्लेषणात्मक दृष्टिकोण अपनाते हैं — सांख्य दर्शन की पद्धति का उपयोग करते हुए वे कर्म को उसके घटक तत्वों में विभाजित करेंगे।</p>
+      <p>यह दृष्टिकोण क्यों महत्वपूर्ण है? क्योंकि साधारण मनुष्य मानता है "मैंने यह किया" — यह कर्तृत्व-बोध (sense of agency) ही अहंकार और फलासक्ति का मूल आधार है। आगे के श्लोकों (18.14-17) में कृष्ण दिखाएंगे कि वास्तव में कोई भी कर्म पाँच कारकों के समन्वय से सिद्ध होता है — अकेले "मैं" से नहीं। यह समझ ही 18.1-12 में चर्चित फलत्याग को तार्किक आधार प्रदान करती है।</p>
+      <div class="callout"><b>शास्त्रीय प्रामाणिकता:</b> कृष्ण इसे अपनी निजी राय के रूप में नहीं, बल्कि "सांख्ये... प्रोक्तानि" (सांख्य शास्त्र में कहा गया) के रूप में प्रस्तुत करते हैं — एक स्थापित, सम्मानित दार्शनिक परंपरा का संदर्भ देकर शिक्षा को अतिरिक्त वज़न देते हैं।</div>
+      <p>यह श्लोक स्वयं में कोई नई जानकारी नहीं देता — यह केवल "तैयार हो जाओ, अब मैं विश्लेषण शुरू करूँगा" का संकेत है। पूरा विश्लेषण अगले कुछ श्लोकों में फैला है, और 18.13 उसका द्वार है।</p>
+    </div>
+
+    <!-- 4. EXAMPLES -->
+    <div class="panel" id="t4">
+      <h3>🪔 आधुनिक उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — फ़िल्म निर्माण:</b> जब कोई फ़िल्म सफल होती है, तो लोग अक्सर कहते हैं "निर्देशक ने यह बनाई।" पर वास्तव में सफलता कई कारकों से बनती है — अभिनेता, तकनीशियन, संगीतकार, वितरक, और दर्शकों की प्रतिक्रिया। कृष्ण आगे यही दिखाने वाले हैं — कोई भी "एक कर्ता" पूरे परिणाम का श्रेय अकेले नहीं ले सकता।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — किसी कंपनी की सफलता:</b> एक उद्यमी अक्सर सोचता है "मैंने यह कंपनी बनाई।" पर वास्तविकता में टीम के परिश्रम (कर्ता के सहयोगी अंश), बाज़ार की परिस्थितियाँ (दैव/नियति), उपलब्ध संसाधन (करण), और प्रयासों की निरंतरता (चेष्टा) — सब मिलकर परिणाम बनाते हैं। 18.13 से शुरू होने वाला विश्लेषण इसी बहु-कारक सत्य को व्यवस्थित रूप से समझाएगा।
+      </div>
+    </div>
+
+    <!-- 5. FAQ -->
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर एवं स्पष्टीकरण</h3>
+
+      <div class="faq">
+        <div class="q">18.13 में पाँच कारण कौन-कौन से हैं — यहीं बता दीजिए?</div>
+        <div class="a">18.13 स्वयं केवल भूमिका है — यह कहता है "पाँच कारण हैं, सुनो।" वास्तविक सूची अगले श्लोक (18.14) में आती है: अधिष्ठान (शरीर/आधार), कर्ता (करने वाला), करण (इन्द्रियाँ/उपकरण), विविध चेष्टा (विभिन्न प्रयत्न), और दैव (नियति/दैवी इच्छा)। हम अगले श्लोक में इनका विस्तृत अध्ययन करेंगे।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">"सांख्य" शास्त्र क्या है, और कृष्ण इसका संदर्भ क्यों देते हैं?</div>
+        <div class="a">सांख्य भारतीय दर्शन की एक प्राचीन शाखा है, जो सृष्टि और अनुभव को विश्लेषणात्मक तत्वों (तत्त्वों) में वर्गीकृत करने के लिए प्रसिद्ध है। कृष्ण इसका संदर्भ देकर अपनी शिक्षा को एक स्थापित, सम्मानित बौद्धिक परंपरा से जोड़ते हैं — जिससे तर्क अधिक प्रामाणिक और ठोस लगता है।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">यह विश्लेषण 18.1-12 की त्याग चर्चा से कैसे जुड़ता है?</div>
+        <div class="a">18.1-12 में फलासक्ति त्यागने पर ज़ोर दिया गया। अब 18.13 से शुरू होने वाला विश्लेषण दिखाएगा कि अकेले "मैं" किसी कर्म का पूर्ण कर्ता नहीं हो सकता — कर्म पाँच कारकों के समन्वय से सिद्ध होता है। यह समझ फलासक्ति को तार्किक रूप से और कमज़ोर बनाती है — यदि "मैं" अकेला कर्ता ही नहीं, तो फल पर मेरा अकेला दावा कैसे हो सकता है?</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div><!-- /mode-core -->
+
+  <!-- ================ MODE: PERSPECTIVES (दृष्टिकोण) ================ -->
+  <div class="mode-section" id="mode-perspectives">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">कहानी व सूत्र</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य दृष्टि</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- B1 SIGNIFICANCE -->
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का सूत्रात्मक महत्व</h3>
+        <p>18.13 अध्याय की संरचना में एक महत्वपूर्ण मोड़ है — यह त्याग की नैतिक चर्चा (18.1-12) से कर्म-विश्लेषण की दार्शनिक चर्चा (18.13-18) की ओर द्वार खोलता है। ऐसे "संक्रमण श्लोक" गीता में अक्सर छोटे और सरल दिखते हैं, पर वे अगली शिक्षा की पृष्ठभूमि तैयार करने में महत्वपूर्ण भूमिका निभाते हैं।</p>
+        <p>यह आने वाला पंच-कारण विश्लेषण गीता के सबसे व्यवस्थित, लगभग "वैज्ञानिक" खंडों में गिना जाता है — कृष्ण यहाँ रहस्यवादी भाषा छोड़कर एक तार्किक, विश्लेषणात्मक ढाँचा प्रस्तुत करते हैं, जो कर्तृत्व-भ्रम (मैं ही करता हूँ) को जड़ से चुनौती देगा।</p>
+        <div class="callout"><b>कड़ी का महत्व:</b> 18.1-12 ने "क्या त्यागें" सिखाया; 18.13 से शुरू होने वाला खंड "कर्म वास्तव में कैसे घटित होता है" सिखाएगा — दोनों मिलकर एक संपूर्ण कर्म-दर्शन बनाते हैं।</div>
+      </div>
+
+      <!-- B2 MINDMAP -->
+      <div class="panel" id="b2">
+        <h3>🪔 विज्ञुअल माइंड-मैप</h3>
+        <p class="subnote">श्लोक की केंद्रीय अवधारणा — एक नज़र में</p>
+        <svg class="mindmap-box" viewBox="0 0 700 480" xmlns="http://www.w3.org/2000/svg">
+          <line class="mm-line" x1="350" y1="240" x2="350" y2="90"/>
+          <line class="mm-line" x1="350" y1="240" x2="500" y2="190"/>
+          <line class="mm-line" x1="350" y1="240" x2="450" y2="370"/>
+          <line class="mm-line" x1="350" y1="240" x2="250" y2="370"/>
+          <line class="mm-line" x1="350" y1="240" x2="200" y2="190"/>
+
+          <circle cx="350" cy="240" r="62" class="mm-center" opacity="0.9"/>
+          <text x="350" y="234" text-anchor="middle" fill="#f3e9d2" font-size="14" font-family="Tiro Devanagari Hindi, serif">श्लोक १८.१३</text>
+          <text x="350" y="254" text-anchor="middle" fill="#f3e9d2" font-size="11">पाँच कारणों की भूमिका</text>
+
+          <g class="mm-node">
+            <circle cx="350" cy="90" r="52" class="mm-node-circle"/>
+            <text x="350" y="84" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">सांख्य शास्त्र</text>
+            <text x="350" y="100" text-anchor="middle" fill="#f3e9d2" font-size="11">स्थापित दार्शनिक आधार</text>
+          </g>
+
+          <g class="mm-node">
+            <circle cx="500" cy="190" r="52" class="mm-node-circle"/>
+            <text x="500" y="184" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">पञ्च कारण</text>
+            <text x="500" y="200" text-anchor="middle" fill="#f3e9d2" font-size="11">18.14 में सूची आएगी</text>
+          </g>
+
+          <g class="mm-node">
+            <circle cx="450" cy="370" r="52" class="mm-node-circle"/>
+            <text x="450" y="364" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">सर्वकर्मणाम्</text>
+            <text x="450" y="380" text-anchor="middle" fill="#f3e9d2" font-size="11">सार्वभौमिक नियम</text>
+          </g>
+
+          <g class="mm-node">
+            <circle cx="250" cy="370" r="52" class="mm-node-circle"/>
+            <text x="250" y="364" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">कर्तृत्व-भ्रम</text>
+            <text x="250" y="380" text-anchor="middle" fill="#f3e9d2" font-size="11">"मैं अकेला करता हूँ" का खंडन</text>
+          </g>
+
+          <g class="mm-node">
+            <circle cx="200" cy="190" r="52" class="mm-node-circle"/>
+            <text x="200" y="184" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">18.1-12 से कड़ी</text>
+            <text x="200" y="200" text-anchor="middle" fill="#f3e9d2" font-size="11">फलत्याग को तार्किक आधार</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- B3 COMPARATIVE -->
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — गीता के सम्बंधित श्लोक</h3>
+        <p>18.13 का विश्लेषणात्मक दृष्टिकोण गीता के अन्य कर्तृत्व-संबंधी श्लोकों से गहराई से जुड़ता है।</p>
+        <table class="cmp-table">
+          <tr><th>श्लोक</th><th>विषय</th><th>18.13 से सम्बंध</th></tr>
+          <tr><td>3.27</td><td>प्रकृति के गुण ही कर्म करते हैं, अहंकारी "मैं करता हूँ" सोचता है</td><td>कर्तृत्व-भ्रम पर पहला संकेत, जिसे 18.13-15 विस्तार देगा</td></tr>
+          <tr><td>5.14</td><td>आत्मा न कर्तृत्व रचती है, न कर्म, न फल-संयोग</td><td>कर्ता की भूमिका पर पूर्वगामी दार्शनिक आधार</td></tr>
+          <tr><td>18.13</td><td>पाँच कारणों की घोषणा (भूमिका श्लोक)</td><td>आगे के विश्लेषण की औपचारिक शुरुआत</td></tr>
+          <tr><td>18.16</td><td>जो अकेले आत्मा को कर्ता माने, वह मूढ़बुद्धि है</td><td>18.13 के विश्लेषण का सीधा निष्कर्ष</td></tr>
+        </table>
+        <div class="callout"><b>विकास-क्रम:</b> 3.27 और 5.14 ने संकेत दिए कि कर्तृत्व जटिल है; 18.13-18 अब इसे व्यवस्थित, चरणबद्ध तरीके से सिद्ध करेंगे।</div>
+      </div>
+
+      <!-- B4 SADHANA -->
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में दैनिक प्रयोग</h3>
+        <p>आज किसी भी काम को पूरा करने के बाद, उस सफलता में योगदान देने वाले सभी कारकों की सूची बनाने का प्रयास करें — न केवल अपने प्रयास को, बल्कि परिस्थिति, सहयोग, और अवसर को भी।</p>
+        <div class="callout"><b>आज का अभ्यास:</b> शाम को बैठकर सोचें — आज की किसी एक उपलब्धि में "मैंने अकेले किया" की भावना कितनी प्रबल थी? अब उसमें योगदान देने वाले अन्य तत्वों (परिस्थिति, दूसरों की मदद, संसाधन) को पहचानें। यह अभ्यास 18.13 से शुरू होने वाली शिक्षा की नींव तैयार करता है।</div>
+      </div>
+
+      <!-- B5 COMMENTATORS -->
+      <div class="panel" id="b5">
+        <h3>🪔 अलग-अलग आचार्यों के दृष्टिकोण</h3>
+        <p><b style="color:var(--gold-light)">आदि शंकराचार्य (ज्ञानयोग परंपरा):</b> शंकराचार्य इस श्लोक को आत्मा और प्रकृति के भेद को स्पष्ट करने वाले विश्लेषण की भूमिका मानते हैं — आगे का पंच-कारण विवेचन यह सिद्ध करेगा कि शुद्ध आत्मा कभी कर्ता नहीं होती, कर्तृत्व प्रकृति (देह-इन्द्रिय-मन) का धर्म है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य (भक्तियोग परंपरा):</b> रामानुजाचार्य के अनुसार यह विश्लेषण भक्त को यह समझने में मदद करता है कि सभी कर्म-साधन (शरीर, इन्द्रियाँ, प्रयत्न) अंततः ईश्वर की ही रचना और अधीन हैं — इसलिए सच्चा भक्त इन सबको भी ईश्वर-अर्पित मानता है।</p>
+        <p><b style="color:var(--gold-light)">सांख्य दर्शन परंपरा:</b> स्वयं सांख्य दर्शन में यह विश्लेषण पुरुष (चेतन तत्व) और प्रकृति (जड़ तत्व) के बीच स्पष्ट विभाजन सिखाने हेतु प्रयुक्त होता है — कृष्ण यहाँ उसी पद्धति को कर्मयोग के संदर्भ में अपनाते हैं।</p>
+        <div class="callout"><b>साझा निष्कर्ष:</b> सभी परंपराएं इस बात पर सहमत हैं — आगे का विश्लेषण कर्तृत्व-बोध को नया, अधिक सूक्ष्म आकार देगा, जो फलासक्ति को और कमज़ोर करता है।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-perspectives -->
+
+  <!-- ================ MODE: PRACTICE (अभ्यास व रिवीजन) ================ -->
+  <div class="mode-section" id="mode-practice">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- C1 FLASHCARDS -->
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड — पलटकर रिवीजन करें</h3>
+        <p class="flash-instructions">हर कार्ड पर टैप करें — सामने शब्द, पलटे अर्थ दिखें</p>
+        <div class="flashcard-grid">
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">पञ्च एतानि</span></div>
+            <div class="flashcard-face flashcard-back"><b>ये पाँच</b>आगे आने वाले कारणों की ओर संकेत</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">महाबाहो</span></div>
+            <div class="flashcard-face flashcard-back"><b>हे महाबाहु</b>अर्जुन हेतु सम्मानसूचक संबोधन</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">निबोध मे</span></div>
+            <div class="flashcard-face flashcard-back"><b>मुझसे जानो</b>ध्यानपूर्वक समझने का आदेश</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सांख्ये कृतान्ते</span></div>
+            <div class="flashcard-face flashcard-back"><b>सांख्य शास्त्र में</b>स्थापित दार्शनिक परंपरा का संदर्भ</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">प्रोक्तानि</span></div>
+            <div class="flashcard-face flashcard-back"><b>कहे गए हैं</b>शास्त्रीय प्रामाणिकता</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सिद्धये सर्वकर्मणाम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>सभी कर्मों की सिद्धि हेतु</b>सार्वभौमिक रूप से लागू</div>
+          </div></div>
+
+        </div>
+      </div>
+
+      <!-- C2 QUIZ -->
+      <div class="panel" id="c2">
+        <h3>🪔 स्वमूल्यांकन क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <!-- C3 GRAMMAR -->
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण ग्रंथान्तर</h3>
+        <p class="subnote">इस श्लोक के मुख्य व्याकरणिक रूप</p>
+        <table class="gram-table">
+          <tr><th>शब्द</th><th>मूल धातु/शब्द</th><th>प्रत्यय/विभक्ति</th><th>व्याकरणिक पहचान</th></tr>
+          <tr><td class="sa">महाबाहो</td><td>महत् + बाहु</td><td>संबोधन, एकवचन</td><td>बहुव्रीहि समास</td></tr>
+          <tr><td class="sa">निबोध</td><td>नि + √बुध् (जानना)</td><td>लोट् लकार</td><td>आज्ञार्थक क्रिया</td></tr>
+          <tr><td class="sa">सांख्ये</td><td>सांख्य (शास्त्र नाम)</td><td>सप्तमी, एकवचन</td><td>अधिकरण कारक</td></tr>
+          <tr><td class="sa">प्रोक्तानि</td><td>प्र + √वच् (कहना)</td><td>क्त प्रत्यय</td><td>भूतकालिक कृदंत, बहुवचन</td></tr>
+          <tr><td class="sa">सिद्धये</td><td>√सिध् (सिद्ध होना)</td><td>चतुर्थी, एकवचन</td><td>प्रयोजन कारक (के लिए)</td></tr>
+          <tr><td class="sa">सर्वकर्मणाम्</td><td>सर्व + कर्मन्</td><td>षष्ठी, बहुवचन</td><td>कर्मधारय समास</td></tr>
+        </table>
+      </div>
+
+      <!-- C4 CHEATSHEET -->
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पेज सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">पञ्चैतानि महाबाहो कारणानि निबोध मे ।<br>सांख्ये कृतान्ते प्रोक्तानि सिद्धये सर्वकर्मणाम् ॥</div>
+          <div class="cheat-translit">pañchaitāni mahā-bāho kāraṇāni nibodha me, sāṅkhye kṛtānte proktāni siddhaye sarva-karmaṇām</div>
+          <div class="cheat-line">हे अर्जुन! कर्म-सिद्धि के पाँच कारण मुझसे जानो, जो सांख्य शास्त्र में कहे गए हैं</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>पञ्च कारण</b> = अगले श्लोक में सूची</span>
+            <span class="cheat-chip"><b>सांख्य</b> = दार्शनिक आधार</span>
+            <span class="cheat-chip"><b>सर्वकर्मणाम्</b> = सार्वभौमिक नियम</span>
+            <span class="cheat-chip"><b>संक्रमण श्लोक</b> = त्याग→कर्म-विश्लेषण</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: यह भूमिका श्लोक है — असली पाँच कारणों की सूची अगले श्लोक (18.14) में आएगी</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /mode-practice -->
+
+  <!-- ================ MODE: MEDIA (मीडिया अनुभव) ================ -->
+  <div class="mode-section" id="mode-media">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">आवाज़ में सुनें</button>
+      <button class="tab-btn" data-tab="d2">इनिमेटेड वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अक्षर अभ्यास</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- D1 TTS -->
+      <div class="panel active" id="d1">
+        <h3>🪔 आवाज़ में सुनें</h3>
+        <p class="subnote">यह सुविधा आपके ब्राउज़र की बिल्ट-इन आवाज़ का उपयोग करती है</p>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('पञ्चैतानि महाबाहो कारणानि निबोध मे, सांख्ये कृतान्ते प्रोक्तानि सिद्धये सर्वकर्मणाम्', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('पञ्चैतानि महाबाहो कारणानि निबोध मे, सांख्ये कृतान्ते प्रोक्तानि सिद्धये सर्वकर्मणाम्', 0.55)">🐢 धीरे सुनें (अभ्यास हेतु)</button>
+          <button class="tts-btn" onclick="speakText('हे महाबाहु अर्जुन, कर्म सिद्धि के पाँच कारण मुझसे जानो, जो सांख्य शास्त्र में कहे गए हैं', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+
+      <!-- D2 WALKTHROUGH -->
+      <div class="panel" id="d2">
+        <h3>🪔 इनिमेटेड वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">⟵</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">⟶</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+
+      <!-- D3 CHANTING -->
+      <div class="panel" id="d3">
+        <h3>🪔 जप / उच्चारण अभ्यास</h3>
+        <p>यह श्लोक <b style="color:var(--gold-light)">अनुष्टुप् छंद</b> में है — 4 पाद, हर पाद में 8 अक्षर</p>
+
+        <div class="pada-label">पाद 1</div>
+        <div class="meter-row">
+          <span class="syll">प</span><span class="syll">ञ्चै</span><span class="syll">ता</span><span class="syll">नि</span><span class="syll">म</span><span class="syll">हा</span><span class="syll">बा</span><span class="syll">हो</span>
+        </div>
+
+        <div class="pada-label">पाद 2</div>
+        <div class="meter-row">
+          <span class="syll">का</span><span class="syll">र</span><span class="syll">णा</span><span class="syll">नि</span><span class="syll">नि</span><span class="syll">बो</span><span class="syll">ध</span><span class="syll">मे</span>
+        </div>
+
+        <div class="pada-label">पाद 3</div>
+        <div class="meter-row">
+          <span class="syll">सां</span><span class="syll">ख्ये</span><span class="syll">कृ</span><span class="syll">ता</span><span class="syll">न्ते</span><span class="syll">प्रो</span><span class="syll">क्ता</span><span class="syll">नि</span>
+        </div>
+
+        <div class="pada-label">पाद 4</div>
+        <div class="meter-row">
+          <span class="syll">सि</span><span class="syll">द्ध</span><span class="syll">ये</span><span class="syll">स</span><span class="syll">र्व</span><span class="syll">क</span><span class="syll">र्म</span><span class="syll">णाम्</span>
+        </div>
+
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('पञ्चैतानि महाबाहो कारणानि निबोध मे सांख्ये कृतान्ते प्रोक्तानि सिद्धये सर्वकर्मणाम्', 0.55)">🐢 लय में सुनें (अभ्यास हेतु)</button>
+        </div>
+        <div class="callout"><b>अभ्यास सुझाव:</b> हर पाद को 3 बार दोहराएं, फिर पूरा श्लोक एक साथ</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-media -->
+
+  <!-- ================ MODE: INFOGRAPHICS (इन्फोग्राफिक्स) ================ -->
+  <div class="mode-section" id="mode-infographics">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">श्लोक का सूत्र-प्रवाह</button>
+      <button class="tab-btn" data-tab="e2">आगे आने वाले पाँच कारण</button>
+      <button class="tab-btn" data-tab="e3">अध्याय का मार्ग-चित्र</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- E1 VERSE FLOW -->
+      <div class="panel active" id="e1">
+        <h3>🪔 श्लोकों का सूत्र-प्रवाह</h3>
+        <p class="subnote">18.11 से 18.14 तक — त्याग से कर्म-विश्लेषण की ओर</p>
+        <div class="flow-row">
+          <div class="flow-box">
+            <span class="ic">📜</span>
+            <div class="ttl">18.11-12</div>
+            <div class="sub">त्यागी की परिभाषा व परिणाम</div>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box" style="border-color:var(--sage);background:rgba(92,131,116,0.12);">
+            <span class="ic">🚪</span>
+            <div class="ttl">18.13</div>
+            <div class="sub">पाँच कारणों की घोषणा (द्वार)</div>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box">
+            <span class="ic">🔢</span>
+            <div class="ttl">18.14</div>
+            <div class="sub">पाँच कारणों की सूची</div>
+          </div>
+        </div>
+        <div class="callout"><b>एक धागे में पिरोई शिक्षा:</b> 18.13 केवल भूमिका है — असली विश्लेषण 18.14 से शुरू होगा, जहाँ अधिष्ठान, कर्ता, करण, चेष्टा और दैव — ये पाँचों कारण विस्तार से बताए जाएंगे</div>
+      </div>
+
+      <!-- E2 FIVE CAUSES PREVIEW -->
+      <div class="panel" id="e2">
+        <h3>🪔 आगे आने वाले पाँच कारण — एक झलक</h3>
+        <p class="subnote">18.14 में पूर्ण विवरण आएगा — यहाँ केवल पूर्वावलोकन</p>
+        <div class="penta-grid">
+          <div class="penta-card"><div class="pn">१</div><div class="pt">अधिष्ठान</div><div class="ps">शरीर/आधार</div></div>
+          <div class="penta-card"><div class="pn">२</div><div class="pt">कर्ता</div><div class="ps">करने वाला</div></div>
+          <div class="penta-card"><div class="pn">३</div><div class="pt">करण</div><div class="ps">इन्द्रियाँ</div></div>
+          <div class="penta-card"><div class="pn">४</div><div class="pt">चेष्टा</div><div class="ps">विविध प्रयत्न</div></div>
+          <div class="penta-card"><div class="pn">५</div><div class="pt">दैव</div><div class="ps">नियति/ईश्वर-इच्छा</div></div>
+        </div>
+        <div class="callout"><b>क्यों महत्वपूर्ण:</b> जब कर्म इन पाँचों के समन्वय से सिद्ध होता है, तो "मैं अकेला कर्ता हूँ" की धारणा तार्किक रूप से अधूरी ठहरती है — यही समझ फलासक्ति को और कमज़ोर करती है</div>
+      </div>
+
+      <!-- E3 CHAPTER ROADMAP -->
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 का यात्रा-पथ — अब तक कहाँ हैं</h3>
+        <p class="subnote">सम्पूर्ण अध्याय में वर्तमान स्थिति</p>
+        <div class="road-track">
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो.१-६<br>पारिभाषिक, निश्चय, ज्ञान-त्रिक</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो.७-१२<br>त्याग के प्रकार, परिभाषा व परिणाम</div>
+          </div>
+          <div class="road-stop active">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो.१३<br>पाँच कारणों की भूमिका</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो.१४-१८<br>कर्म-सिद्धि के पाँच कारण व कर्तृत्व-विश्लेषण</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो.१९-७८<br>गुण-त्रिक, मोक्ष</div>
+          </div>
+        </div>
+        <div class="callout"><b>सम्बंध:</b> 18.13 त्याग-विमर्श (18.1-12) और कर्म-संरचना विश्लेषण (18.14-18) के बीच की कड़ी है — एक नया अध्याय-खंड यहीं से आरंभ होता है</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-infographics -->
+
+  <div class="footer-hint">अगला श्लोक (श्लो.१४) के लिए साइड मेनू (☰) इस्तेमाल करें — कृष्ण यहाँ पाँचों कारणों की पूरी सूची बताएंगे</div>
+
+</div>
+
+<script>
+  /* ---- mode pill switching ---- */
+  document.querySelectorAll('.mode-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      document.querySelectorAll('.mode-section').forEach(s => s.classList.remove('active'));
+      document.getElementById(pill.dataset.mode).classList.add('active');
+    });
+  });
+
+  /* ---- tab switching, scoped per mode-section ---- */
+  document.querySelectorAll('.mode-section').forEach(section => {
+    const tabs = section.querySelectorAll('.tab-btn');
+    const panels = section.querySelectorAll('.panel');
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        section.querySelector('#' + btn.dataset.tab).classList.add('active');
+      });
+    });
+  });
+
+  /* ---- flashcards ---- */
+  document.querySelectorAll('.flashcard').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+  });
+
+  /* ---- text to speech ---- */
+  function speakText(text, rate){
+    if(!('speechSynthesis' in window)){
+      alert('यह ब्राउज़र आवाज़ सुविधा को समर्थित नहीं करता है');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'hi-IN';
+    u.rate = rate || 0.9;
+    window.speechSynthesis.speak(u);
+  }
+
+  /* ---- quiz ---- */
+  const quizData = [
+    {q:"18.13 के अनुसार कर्म-सिद्धि के कितने कारण बताए जाने वाले हैं?", options:["तीन", "चार", "पाँच", "सात"], correct:2},
+    {q:"कृष्ण इस विश्लेषण का आधार किस दर्शन को बताते हैं?", options:["योग दर्शन", "सांख्य दर्शन", "न्याय दर्शन", "वैशेषिक दर्शन"], correct:1},
+    {q:"18.13 में 'महाबाहो' किसे संबोधित करता है?", options:["संजय", "धृतराष्ट्र", "अर्जुन", "दुर्योधन"], correct:2},
+    {q:"पाँच कारणों की वास्तविक सूची किस श्लोक में आती है?", options:["18.12", "18.13", "18.14", "18.20"], correct:2},
+    {q:"'सिद्धये सर्वकर्मणाम्' का क्या अर्थ है?", options:["केवल बुरे कर्मों के लिए", "सभी कर्मों की सिद्धि के लिए", "केवल यज्ञ कर्मों के लिए", "केवल युद्ध के लिए"], correct:1}
+  ];
+  let quizIdx = 0, quizScore = 0, quizAnswered = false;
+
+  function renderQuiz(){
+    const area = document.getElementById('quizArea');
+    if(!area) return;
+    if(quizIdx >= quizData.length){
+      area.innerHTML = '<div class="quiz-score">आपका स्कोर: ' + quizScore + ' / ' + quizData.length + '</div>' +
+        '<div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से प्रयास करें</button></div>';
+      return;
+    }
+    const item = quizData[quizIdx];
+    quizAnswered = false;
+    let html = '<div class="quiz-progress">प्रश्न ' + (quizIdx+1) + ' / ' + quizData.length + '</div>';
+    html += '<div class="quiz-question">' + item.q + '</div>';
+    html += '<div class="quiz-options">';
+    item.options.forEach((opt, i) => {
+      html += '<button class="quiz-opt" onclick="checkQuizAnswer(' + i + ')">' + opt + '</button>';
+    });
+    html += '</div>';
+    html += '<div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';
+    area.innerHTML = html;
+  }
+
+  function checkQuizAnswer(i){
+    if(quizAnswered) return;
+    quizAnswered = true;
+    const item = quizData[quizIdx];
+    const opts = document.querySelectorAll('#quizArea .quiz-opt');
+    opts.forEach((o, idx) => {
+      o.classList.add('disabled');
+      if(idx === item.correct) o.classList.add('correct');
+      else if(idx === i) o.classList.add('wrong');
+    });
+    if(i === item.correct) quizScore++;
+    document.getElementById('quizNextBtn').disabled = false;
+  }
+
+  renderQuiz();
+
+  /* ---- animated walkthrough ---- */
+  const walkSlides = [
+    "18.1-12 में त्याग की नैतिक चर्चा पूरी हुई — अब 18.13 से कर्म का गहन विश्लेषण शुरू होता है",
+    "कृष्ण अर्जुन को 'महाबाहो' कहकर संबोधित करते हैं — आगे की शिक्षा पर विशेष ध्यान देने का संकेत",
+    "वे घोषणा करते हैं — 'पञ्चैतानि कारणानि निबोध मे' — ये पाँच कारण मुझसे जानो",
+    "यह ज्ञान सांख्य शास्त्र की स्थापित परंपरा से लिया गया है — 'सांख्ये कृतान्ते प्रोक्तानि'",
+    "ये पाँच कारण किसी भी कर्म की सिद्धि (पूर्णता) के लिए सार्वभौमिक रूप से लागू हैं",
+    "18.13 स्वयं केवल भूमिका है — असली सूची अगले श्लोक 18.14 में आएगी",
+    "यह विश्लेषण आगे चलकर दिखाएगा कि 'मैं अकेला कर्ता हूँ' की धारणा अधूरी है"
+  ];
+  let walkIdx = 0, walkPlaying = false, walkTimer = null;
+
+  function renderWalk(){
+    const t = document.getElementById('walkText');
+    if(!t) return;
+    t.textContent = walkSlides[walkIdx];
+    const dotsEl = document.getElementById('walkDots');
+    dotsEl.innerHTML = walkSlides.map((_, i) => '<span class="walk-dot' + (i===walkIdx ? ' active' : '') + '"></span>').join('');
+  }
+  function walkNext(){ walkIdx = (walkIdx+1) % walkSlides.length; renderWalk(); }
+  function walkPrev(){ walkIdx = (walkIdx-1+walkSlides.length) % walkSlides.length; renderWalk(); }
+  function walkToggle(){
+    const btn = document.getElementById('walkPlayBtn');
+    walkPlaying = !walkPlaying;
+    if(walkPlaying){
+      btn.textContent = '⏸';
+      walkTimer = setInterval(walkNext, 3200);
+    } else {
+      btn.textContent = '▶';
+      clearInterval(walkTimer);
+    }
+  }
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
