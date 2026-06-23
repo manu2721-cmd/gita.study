@@ -206,20 +206,29 @@
   html[data-theme="light"] .nav-header {
     background:rgba(0,0,0,0.04); border-bottom-color:rgba(120,80,0,0.12);
   }
-  .nav-home-link {
-    display:flex; align-items:center; gap:5px;
-    font-family:'Mukta',sans-serif; font-size:13px; font-weight:600;
-    color:rgba(201,162,39,0.75); text-decoration:none;
-    background:rgba(201,162,39,0.1); border:1px solid rgba(201,162,39,0.25);
-    padding:6px 12px; border-radius:20px;
-    transition:all 0.2s; white-space:nowrap; flex-shrink:0;
+  /* ── Home row — full-width, always visible ── */
+  .nav-home-row {
+    display:flex; align-items:center; gap:12px;
+    padding:14px 18px;
+    background:rgba(201,162,39,0.08);
+    border-bottom:1px solid rgba(201,162,39,0.15);
+    text-decoration:none;
+    transition:background 0.2s;
   }
-  html[data-theme="light"] .nav-home-link {
-    color:rgba(120,80,0,0.8); background:rgba(120,80,0,0.08);
-    border-color:rgba(120,80,0,0.22);
+  html[data-theme="light"] .nav-home-row {
+    background:rgba(120,80,0,0.07);
+    border-bottom-color:rgba(120,80,0,0.12);
   }
-  .nav-home-link:hover { color:#e6c863; background:rgba(201,162,39,0.2); border-color:#c9a227; }
-  html[data-theme="light"] .nav-home-link:hover { color:#7a5200; background:rgba(120,80,0,0.15); }
+  .nav-home-row:hover { background:rgba(201,162,39,0.16); }
+  html[data-theme="light"] .nav-home-row:hover { background:rgba(120,80,0,0.13); }
+  .nav-home-icon {
+    font-size:20px; line-height:1;
+  }
+  .nav-home-text {
+    font-family:'Tiro Devanagari Hindi',serif;
+    font-size:15px; color:#e6c863; font-weight:600;
+  }
+  html[data-theme="light"] .nav-home-text { color:#7a5200; }
   .nav-header-title {
     font-family:'Tiro Devanagari Hindi',serif; color:#e6c863;
     font-size:13px; letter-spacing:0.04em; flex:1; text-align:center;
@@ -382,12 +391,17 @@
 
     let h = '';
 
-    /* Header */
+    /* ── Header row: title + close button ── */
     h += `<div class="nav-header">
-      <a href="../index.html" class="nav-home-link">⌂ मुख्य पृष्ठ</a>
       <span class="nav-header-title">🪔 अध्याय ${currentChapter}</span>
-      <button class="nav-close-btn" onclick="document.getElementById('gita-drawer').classList.remove('open');document.getElementById('gita-drawer-overlay').classList.remove('open');document.getElementById('gita-nav-btn').classList.remove('open');">✕</button>
+      <button class="nav-close-btn" onclick="closeDrawer()">✕</button>
     </div>`;
+
+    /* ── Home link — separate row, always visible ── */
+    h += `<a href="../index.html" class="nav-home-row">
+      <span class="nav-home-icon">⌂</span>
+      <span class="nav-home-text">मुख्य पृष्ठ (Home)</span>
+    </a>`;
 
     /* Theme switcher — INSIDE drawer */
     h += `<div class="nav-theme-row">
@@ -413,7 +427,7 @@
       </a>`;
     });
 
-    /* Home link moved to header — no bottom link needed */
+    /* Home link is in nav-home-row above */
 
     drawer.innerHTML = h;
   }
@@ -450,6 +464,7 @@
     drawer.classList.add('open');
     overlay.classList.add('open');
     navBtn.classList.add('open');
+    navBtn.style.display = 'none'; /* hide ☰ while drawer is open */
     setTimeout(() => {
       const a = drawer.querySelector('a.active');
       if (a) a.scrollIntoView({ block: 'center', behavior: 'smooth' });
@@ -459,8 +474,10 @@
     drawer.classList.remove('open');
     overlay.classList.remove('open');
     navBtn.classList.remove('open');
+    navBtn.style.display = ''; /* show ☰ again */
   }
 
+  window.closeDrawer = closeDrawer; /* expose for onclick in HTML */
   navBtn.addEventListener('click', () =>
     drawer.classList.contains('open') ? closeDrawer() : openDrawer()
   );
