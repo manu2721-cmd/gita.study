@@ -198,50 +198,31 @@
   /* ── Drawer header (with home + close btn) ── */
   .nav-header {
     display:flex; align-items:center; justify-content:space-between;
-    gap:8px;
-    padding:14px 16px;
+    gap:10px; padding:14px 16px 14px 58px;
     border-bottom:1px solid rgba(201,162,39,0.15);
     background:rgba(0,0,0,0.15);
   }
   html[data-theme="light"] .nav-header {
     background:rgba(0,0,0,0.04); border-bottom-color:rgba(120,80,0,0.12);
   }
-  /* ── Home row — full-width, always visible ── */
-  .nav-home-row {
-    display:flex; align-items:center; gap:12px;
-    padding:14px 18px;
-    background:rgba(201,162,39,0.08);
-    border-bottom:1px solid rgba(201,162,39,0.15);
-    text-decoration:none;
-    transition:background 0.2s;
+  .nav-home-link {
+    font-family:'Mukta',sans-serif; font-size:13px; font-weight:600;
+    color:rgba(201,162,39,0.8); text-decoration:none;
+    background:rgba(201,162,39,0.12); border:1px solid rgba(201,162,39,0.28);
+    padding:6px 12px; border-radius:20px;
+    transition:all 0.2s; white-space:nowrap;
   }
-  html[data-theme="light"] .nav-home-row {
-    background:rgba(120,80,0,0.07);
-    border-bottom-color:rgba(120,80,0,0.12);
+  html[data-theme="light"] .nav-home-link {
+    color:rgba(120,80,0,0.85); background:rgba(120,80,0,0.1);
+    border-color:rgba(120,80,0,0.25);
   }
-  .nav-home-row:hover { background:rgba(201,162,39,0.16); }
-  html[data-theme="light"] .nav-home-row:hover { background:rgba(120,80,0,0.13); }
-  .nav-home-icon {
-    font-size:20px; line-height:1;
-  }
-  .nav-home-text {
-    font-family:'Tiro Devanagari Hindi',serif;
-    font-size:15px; color:#e6c863; font-weight:600;
-  }
-  html[data-theme="light"] .nav-home-text { color:#7a5200; }
+  .nav-home-link:hover { color:#e6c863; background:rgba(201,162,39,0.22); border-color:#c9a227; }
+  html[data-theme="light"] .nav-home-link:hover { color:#7a5200; background:rgba(120,80,0,0.18); }
   .nav-header-title {
     font-family:'Tiro Devanagari Hindi',serif; color:#e6c863;
-    font-size:13px; letter-spacing:0.04em; flex:1; text-align:center;
+    font-size:13px; letter-spacing:0.04em; flex:1; text-align:right;
   }
   html[data-theme="light"] .nav-header-title { color:#7a5200; }
-  .nav-close-btn {
-    width:30px; height:30px; border-radius:50%; border:1px solid rgba(201,162,39,0.25);
-    background:transparent; color:rgba(201,162,39,0.6); cursor:pointer;
-    font-size:16px; display:flex; align-items:center; justify-content:center;
-    transition:all 0.2s;
-  }
-  html[data-theme="light"] .nav-close-btn { border-color:rgba(120,80,0,0.2); color:rgba(120,80,0,0.6); }
-  .nav-close-btn:hover { background:rgba(201,162,39,0.1); color:#e6c863; }
 
   /* ── Theme switcher row (inside drawer) ── */
   .nav-theme-row {
@@ -391,17 +372,11 @@
 
     let h = '';
 
-    /* ── Header row: title + close button ── */
+    /* ── Header: home link + title (no ✕ — hamburger already closes) ── */
     h += `<div class="nav-header">
+      <a href="../index.html" class="nav-home-link">⌂ मुख्य पृष्ठ</a>
       <span class="nav-header-title">🪔 अध्याय ${currentChapter}</span>
-      <button class="nav-close-btn" onclick="closeDrawer()">✕</button>
     </div>`;
-
-    /* ── Home link — separate row, always visible ── */
-    h += `<a href="../index.html" class="nav-home-row">
-      <span class="nav-home-icon">⌂</span>
-      <span class="nav-home-text">मुख्य पृष्ठ (Home)</span>
-    </a>`;
 
     /* Theme switcher — INSIDE drawer */
     h += `<div class="nav-theme-row">
