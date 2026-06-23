@@ -37,13 +37,20 @@
     background: linear-gradient(160deg,#f5edd8 0%,#faf4e6 50%,#f0e8d0 100%) !important;
   }
 
-  /* ── Fix hardcoded dark colors in hero ── */
-  html[data-theme="light"] .hero {
-    background: linear-gradient(160deg,#f0e4c4,#f5edd8) !important;
+  /* ── Fix hardcoded dark colors in hero (strong overrides) ── */
+  html[data-theme="light"] .hero,
+  html[data-theme="light"] body .hero,
+  html[data-theme="light"] .wrap .hero {
+    background: linear-gradient(160deg,#f0e4c4,#ede0c0) !important;
+    background-color: #f0e4c4 !important;
     border-color: rgba(120,80,0,0.2) !important;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.08) !important;
   }
   html[data-theme="light"] .hero::before {
     background: radial-gradient(circle at 50% 0%,rgba(154,111,0,0.07),transparent 60%) !important;
+  }
+  html[data-theme="light"] .hero::after {
+    display: none !important;
   }
   html[data-theme="light"] .eyebrow       { color:#9a6f00 !important; }
   html[data-theme="light"] .chapter-title { color:#5a3a10 !important; }
@@ -188,19 +195,34 @@
   }
   #gita-drawer-overlay.open { display:block; }
 
-  /* ── Drawer header (with close btn) ── */
+  /* ── Drawer header (with home + close btn) ── */
   .nav-header {
     display:flex; align-items:center; justify-content:space-between;
-    padding:16px 18px 14px;
+    gap:8px;
+    padding:14px 16px;
     border-bottom:1px solid rgba(201,162,39,0.15);
     background:rgba(0,0,0,0.15);
   }
   html[data-theme="light"] .nav-header {
     background:rgba(0,0,0,0.04); border-bottom-color:rgba(120,80,0,0.12);
   }
+  .nav-home-link {
+    display:flex; align-items:center; gap:5px;
+    font-family:'Mukta',sans-serif; font-size:13px; font-weight:600;
+    color:rgba(201,162,39,0.75); text-decoration:none;
+    background:rgba(201,162,39,0.1); border:1px solid rgba(201,162,39,0.25);
+    padding:6px 12px; border-radius:20px;
+    transition:all 0.2s; white-space:nowrap; flex-shrink:0;
+  }
+  html[data-theme="light"] .nav-home-link {
+    color:rgba(120,80,0,0.8); background:rgba(120,80,0,0.08);
+    border-color:rgba(120,80,0,0.22);
+  }
+  .nav-home-link:hover { color:#e6c863; background:rgba(201,162,39,0.2); border-color:#c9a227; }
+  html[data-theme="light"] .nav-home-link:hover { color:#7a5200; background:rgba(120,80,0,0.15); }
   .nav-header-title {
     font-family:'Tiro Devanagari Hindi',serif; color:#e6c863;
-    font-size:14px; letter-spacing:0.06em;
+    font-size:13px; letter-spacing:0.04em; flex:1; text-align:center;
   }
   html[data-theme="light"] .nav-header-title { color:#7a5200; }
   .nav-close-btn {
@@ -362,6 +384,7 @@
 
     /* Header */
     h += `<div class="nav-header">
+      <a href="../index.html" class="nav-home-link">⌂ मुख्य पृष्ठ</a>
       <span class="nav-header-title">🪔 अध्याय ${currentChapter}</span>
       <button class="nav-close-btn" onclick="document.getElementById('gita-drawer').classList.remove('open');document.getElementById('gita-drawer-overlay').classList.remove('open');document.getElementById('gita-nav-btn').classList.remove('open');">✕</button>
     </div>`;
@@ -390,10 +413,7 @@
       </a>`;
     });
 
-    /* Home */
-    h += `<div style="padding:14px 18px 0;border-top:1px solid rgba(201,162,39,0.08);margin-top:8px;">
-      <a href="../index.html" style="font-size:13px;opacity:0.7;">⌂ मुख्य पृष्ठ</a>
-    </div>`;
+    /* Home link moved to header — no bottom link needed */
 
     drawer.innerHTML = h;
   }
