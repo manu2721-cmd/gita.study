@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.21 — राजसिक ज्ञान: भेद-दर्शन</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 21 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.२१</div>
+    </div>
+    <div class="guna-badge">🔥 राजसिक ज्ञान — ज्ञान त्रयी श्लोक २/३</div>
+    <div class="shloka">
+      पृथक्त्वेन तु यज्ज्ञानं नानाभावान्पृथग्विधान्।<br>
+      वेत्ति सर्वेषु भूतेषु तज्ज्ञानं विद्धि राजसम्।।
+    </div>
+    <div class="translit">
+      pṛthaktvena tu yaj jñānaṃ nānā-bhāvān pṛthag-vidhān,<br>
+      vetti sarveṣu bhūteṣu taj jñānaṃ viddhi rājasam
+    </div>
+    <div class="gist">
+      जो ज्ञान <b>पृथक्त्व (अलगाव) की दृष्टि से</b> सब प्राणियों में <b>नाना प्रकार के भिन्न-भिन्न</b> भावों को जानता है — उस ज्ञान को <b>राजसिक</b> जानो।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — 18.20 से contrast</h3>
+      <p>18.20 ने सात्त्विक ज्ञान बताया — "सब में एक अव्यय तत्त्व, अविभक्त विभक्तेषु।" अब 18.21 उसका विपरीत — <b>राजसिक ज्ञान</b> बताता है जो "सब में अनेक, सब अलग-अलग" देखता है।</p>
+      <p>ध्यान दें — "तु" शब्द पहले पाद में। "तु" = किन्तु/परन्तु — यह 18.20 से contrast का संकेत है। जैसे कहा जा रहा हो: "पर जो ज्ञान इससे उलट है — वह राजसिक है।"</p>
+      <div class="contrast-row">
+        <div class="contrast-card sat">
+          <div class="contrast-label">🌿 18.20 — सात्त्विक</div>
+          <div class="contrast-sa">अविभक्तं विभक्तेषु</div>
+          <p>विभाजित में <b>अखंडता</b> देखता है। सब प्राणियों में एक ही तत्त्व।</p>
+        </div>
+        <div class="contrast-card raj">
+          <div class="contrast-label">🔥 18.21 — राजसिक</div>
+          <div class="contrast-sa">पृथक्त्वेन नानाभावान्</div>
+          <p>सब में <b>अलगाव और विभिन्नता</b> देखता है। हर प्राणी पृथक्।</p>
+        </div>
+      </div>
+      <div class="callout-rajas"><b>महत्त्वपूर्ण बात:</b> राजसिक ज्ञान पूरी तरह गलत नहीं है — अनेकता तो है ही। गलती यह है कि वह <b>केवल अनेकता देखता है, उसके पीछे की एकता नहीं।</b> यह "अधूरा सच" है — जो कभी-कभी "पूरे झूठ" से अधिक खतरनाक होता है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">पृथक्त्वेन</span><span class="word-tr">pṛthaktvena</span></div>
+          <div class="word-meaning">पृथक्त्व (अलगाव/पृथकता) के कारण — तृतीया एकवचन</div>
+          <div class="word-eng"><b>EN:</b> by/through separateness / by the sense of division</div>
+          <div class="word-deep">पृथक् = अलग। त्व = abstract suffix (पृथक्त्व = अलगाव-पन)। तृतीया = "के द्वारा/से।" यह पद राजसिक ज्ञान का <b>lens</b> है — वह "अलगाव की आँखों से" देखता है। यह lens ही समस्या है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">तु</span><span class="word-tr">tu</span></div>
+          <div class="word-meaning">किन्तु, परन्तु — contrast का संकेत</div>
+          <div class="word-eng"><b>EN:</b> but / however (contrast particle)</div>
+          <div class="word-deep">"तु" = 18.20 से explicit contrast। गीता यहाँ कह रही है: "जो उस (सात्त्विक) से उलट है।" यह एक छोटा शब्द पूरे श्लोक का संदर्भ बदल देता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">नानाभावान् पृथग्विधान्</span><span class="word-tr">nānā-bhāvān pṛthag-vidhān</span></div>
+          <div class="word-meaning">नाना (अनेक) प्रकार के भाव, पृथक्-पृथक् प्रकार के</div>
+          <div class="word-eng"><b>EN:</b> various entities of different / separate kinds</div>
+          <div class="word-deep">नानाभावान् = नाना (many/varied) + भाव (नatures/entities) + द्वितीया बहु.। पृथग्विधान् = पृथक् (separate) + विध (kind/type) + द्वितीया बहु.। दोनों compound एक ही idea emphasize करते हैं: <b>भिन्नता, विविधता, अलगाव।</b></div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">वेत्ति सर्वेषु भूतेषु</span><span class="word-tr">vetti sarveṣu bhūteṣu</span></div>
+          <div class="word-meaning">सब प्राणियों में जानता है — वर्तमान प्र.पु.</div>
+          <div class="word-eng"><b>EN:</b> knows in all beings</div>
+          <div class="word-deep">वेत्ति = √विद् (जानना) वर्तमान। सर्वेषु भूतेषु = सब प्राणियों में (सप्तमी)। ध्यान दें — "सर्वेषु भूतेषु" 18.20 में भी था! पर 18.20 में एक देखा, 18.21 में अनेक। एक ही field (सब प्राणी), दो अलग visions।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">तत् ज्ञानं विद्धि राजसम्</span><span class="word-tr">taj jñānaṃ viddhi rājasam</span></div>
+          <div class="word-meaning">उस ज्ञान को राजसिक जानो</div>
+          <div class="word-eng"><b>EN:</b> know that knowledge to be rājasa</div>
+          <div class="word-deep">विद्धि = जानो (आज्ञार्थ)। राजसम् = रज-गुण प्रधान। तीन में मध्य — सात्त्विक से नीचे, तामसिक से ऊपर।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        That knowledge by which one knows, through separateness, various entities of different kinds in all beings — know that knowledge to be rājasa.
+      </div>
+      <p>18.21 राजसिक ज्ञान की <b>एक ही विशेषता</b> बताता है — <b>"पृथक्त्वेन"</b> यानी अलगाव की दृष्टि। यह ज्ञान सब में अनेकता, विविधता और भेद देखता है।</p>
+      <p>राजसिक ज्ञान का व्यावहारिक रूप: "यह व्यक्ति मुझसे अलग है। उसके हित और मेरे हित अलग हैं। उसका दुःख मेरा दुःख नहीं।" — यह सोच "पृथक्त्वेन" देखना है।</p>
+      <div class="callout-rajas"><b>"नानाभावान् पृथग्विधान्" — दो compound क्यों?</b> नाना + भाव = अनेक प्रकार के tत्त्व। पृथक् + विध = अलग-अलग किस्म के। गीता ने जानबूझकर दो शब्द रखे — अनेकता और पृथकता दोनों पर जोर। राजसिक ज्ञान इन दोनों को ही "final truth" मानता है।</div>
+      <p>यह ज्ञान <b>पूरी तरह गलत नहीं</b> — अनेकता तो सचमुच है। एक डॉक्टर और एक शिल्पकार अलग हैं। एक पत्थर और एक पेड़ अलग हैं। पर राजसिक ज्ञान यहीं रुक जाता है — <b>विविधता के पीछे की एकता नहीं देखता।</b> यह अधूरापन ही इसे राजसिक बनाता है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — "मैं और तुम" की दुनिया:</b> राजसिक ज्ञान में जीने वाला व्यक्ति हमेशा "मेरा" और "तेरा" में सोचता है। व्यापार में: "मेरा profit, उसका नुकसान।" रिश्तों में: "मेरी जीत, उसकी हार।" यह zero-sum thinking राजसिक ज्ञान का परिणाम है — क्योंकि दूसरे में "अपना" तत्त्व नहीं दिखता।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — विज्ञान की दृष्टि (partially राजसिक):</b> आधुनिक biology हर species को अलग मानती है, हर cell को अलग — यह "पृथक्त्वेन" देखना है। Quantum physics ने जब "entanglement" (अविभक्तता) खोजी — वह सात्त्विक दृष्टि की ओर बढ़ा। दोनों आवश्यक हैं — पर केवल पृथकता देखना राजसिक है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — जाति-वर्ण-धर्म का भेद:</b> "ये ब्राह्मण हैं, ये शूद्र। ये हिंदू, ये मुसलमान।" — सब में अलगाव देखना और उसी को सत्य मानना — यह राजसिक ज्ञान है। सात्त्विक ज्ञान कहेगा: "ये सब अलग-अलग रूप हैं, पर इन सबमें एक ही जीवन-शक्ति है।"
+      </div>
+      <div class="callout"><b>राजसिक vs सात्त्विक — daily life में:</b> जब किसी से झगड़ा हो: राजसिक दृष्टि = "वह गलत है, मैं सही।" सात्त्विक दृष्टि = "उसमें भी वही मैं हूँ, वह अपने अनुभव से सोच रहा है।" दोनों दृष्टियाँ एक साथ अपनाना — यही विवेक है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">राजसिक ज्ञान गलत कैसे है जब अनेकता तो सचमुच होती है?</div>
+        <div class="a">राजसिक ज्ञान "गलत" नहीं, "अपूर्ण" है। अनेकता सत्य है — पर केवल व्यावहारिक स्तर पर। परमार्थ स्तर पर एकता है। जैसे एक नदी में अनेक लहरें हैं — लहरें real हैं, पर जल और भी real है। जो केवल लहरें देखे और जल न देखे — वह राजसिक ज्ञानी है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"तु" शब्द इतना महत्त्वपूर्ण क्यों है?</div>
+        <div class="a">"तु" = contrast particle (किन्तु)। यह संकेत करता है: "इसके विपरीत।" 18.20 में "येन एकं भावम्" था, 18.21 में "पृथक्त्वेन नानाभावान्" — ये exact opposites हैं। "तु" इस opposition को explicit बनाता है। इसके बिना 18.21 अधूरा होगा।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या केवल भेद देखने से व्यक्ति राजसिक हो जाता है? भेद तो जरूरी है।</div>
+        <div class="a">भेद देखना जरूरी है — एक डॉक्टर को रोग और स्वास्थ्य का भेद देखना होगा। पर राजसिक ज्ञान की समस्या यह है कि यह भेद को <b>एकमात्र और अंतिम सत्य</b> मान लेता है। सात्त्विक ज्ञान भेद को देखता है पर जानता है कि भेद के परे एकता है। दोनों एक साथ देखना = complete knowledge।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.21 और 18.22 में क्या फर्क होगा?</div>
+        <div class="a">18.21 = राजसिक — अनेक को अनेक देखता है। यह multiplicity देखता है (कम से कम सही!) 18.22 = तामसिक — एक (छोटे से) को सब कुछ मानता है। यह बिल्कुल उल्टा और पूरी तरह अयुक्तिसंगत। तामसिक सबसे निचले स्तर का है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.21 "middle knowledge" है — न सर्वोच्च (सात्त्विक), न निम्नतम (तामसिक)। यह वह ज्ञान है जिसमें अधिकांश सामान्य मनुष्य रहते हैं।</p>
+        <p>रजोगुण = गति, इच्छा, क्रिया का गुण। राजसिक ज्ञान इसीलिए "अलगाव" देखता है — क्योंकि "अलग मैं" को अलग "इच्छाएँ" और अलग "फल" चाहिए। जहाँ रज है, वहाँ separation है।</p>
+        <div class="callout"><b>18.20 और 18.21 का तुलनात्मक पाठ:</b> दोनों "सर्वेषु भूतेषु" से शुरू होते हैं, दोनों "विद्धि" से समाप्त होते हैं। Field एक, दृष्टि अलग। यही गीता की teaching है: reality एक है, ज्ञान की quality अलग-अलग।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — पृथक्त्व-दृष्टि के परिणाम</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="200" rx="80" ry="46" fill="rgba(140,74,32,0.15)" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <text x="350" y="194" text-anchor="middle" fill="#e0a060" font-size="13" font-family="Tiro Devanagari Hindi, serif">राजसिक ज्ञान</text>
+          <text x="350" y="212" text-anchor="middle" fill="#cfc3a8" font-size="10">पृथक्त्वेन</text>
+
+          <line x1="282" y1="170" x2="160" y2="100" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="118" cy="78" rx="60" ry="32" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="118" y="73" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">नानाभावान्</text>
+          <text x="118" y="88" text-anchor="middle" fill="#cfc3a8" font-size="10">अनेक प्रकार</text>
+
+          <line x1="350" y1="154" x2="350" y2="65" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="350" cy="46" rx="65" ry="30" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="350" y="41" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">पृथग्विधान्</text>
+          <text x="350" y="56" text-anchor="middle" fill="#cfc3a8" font-size="10">भिन्न-भिन्न</text>
+
+          <line x1="418" y1="170" x2="540" y2="100" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="582" cy="78" rx="65" ry="32" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="582" y="73" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">"मैं और तुम"</text>
+          <text x="582" y="88" text-anchor="middle" fill="#cfc3a8" font-size="10">separation</text>
+
+          <!-- Results (dashed) -->
+          <line x1="282" y1="232" x2="148" y2="310" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="350" y1="246" x2="350" y2="318" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="418" y1="232" x2="552" y2="310" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+
+          <rect x="60" y="310" width="170" height="52" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="145" y="331" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">प्रतिस्पर्धा</text>
+          <text x="145" y="350" text-anchor="middle" fill="#cfc3a8" font-size="11">Competition</text>
+
+          <rect x="264" y="318" width="172" height="52" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="350" y="339" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">अहंकार की वृद्धि</text>
+          <text x="350" y="358" text-anchor="middle" fill="#cfc3a8" font-size="11">ego expansion</text>
+
+          <rect x="470" y="310" width="170" height="52" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="555" y="331" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">भेद-भाव</text>
+          <text x="555" y="350" text-anchor="middle" fill="#cfc3a8" font-size="11">discrimination</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — राजसिक ज्ञान अन्य दर्शनों में</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>राजसिक ज्ञान से समानता</th><th>अंतर</th></tr>
+          <tr><td>Western individualism</td><td>"Every man for himself" — separation of interests</td><td>गीता इसे गुण से जोड़ती है, Western philosophy neutral</td></tr>
+          <tr><td>Darwinian evolution</td><td>Survival of fittest — species as separate competitors</td><td>Modern ecology ने cooperation (अविभक्तता) भी देखी</td></tr>
+          <tr><td>Nation-state thinking</td><td>"हमारा देश, उनका देश" — पृथक् हित</td><td>Globalism सात्त्विक दिशा में, nationalism राजसिक</td></tr>
+          <tr><td>Reductionist science</td><td>Parts को अलग-अलग analyze करना</td><td>Systems thinking अब एकता की ओर बढ़ रहा है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की insight:</b> राजसिक ज्ञान आधुनिक दुनिया की default setting है। यही कारण है कि conflict, competition और ego-problems आम हैं। 18.20 की दृष्टि की ओर बढ़ना ही साधना है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>राजसिक ज्ञान की पहचान करें:</b> ये विचार राजसिक ज्ञान के हैं: "यह मेरी समस्या है, उसकी नहीं।" / "वह मुझसे अलग है, मैं उसे नहीं समझ सकता।" / "उसकी सफलता से मुझे क्या?" — जब भी ये विचार आएँ, उन्हें recognize करें।</div>
+        <p><b>अभ्यास — धीरे-धीरे सात्त्विक की ओर:</b> राजसिक से सात्त्विक में सीधे jump नहीं होता। एक step: जब भी "अलग" देखें — एक पल के लिए पूछें "क्या इस अलगाव के पीछे कोई गहरा जोड़ है?" यह प्रश्न ही राजसिक से सात्त्विक की यात्रा शुरू करता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "पृथक्त्वेन" = माया के कारण जो भेद-दर्शन होता है। राजसिक ज्ञानी माया में फँसा है — वह vyāvahārika (व्यावहारिक) सत्य को pāramārthika (परमार्थ) सत्य मान लेता है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> राजसिक ज्ञान वह है जो प्रत्येक जीव को ईश्वर से और एक दूसरे से अलग मानता है। यह ईश्वर की सर्वव्यापकता को नकारता है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> राजसिक ज्ञान practical life में आम है — लोग अपने परिवार के लिए सोचते हैं, पड़ोसी के लिए नहीं। यह useful है पर limited है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> सभी आचार्य सहमत — राजसिक ज्ञान की सीमा यह है कि यह surface reality को final reality मानता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">पृथक्त्वेन</span></div>
+            <div class="flashcard-face flashcard-back"><b>अलगाव की दृष्टि से</b>राजसिक ज्ञान का lens — तृतीया</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">तु</span></div>
+            <div class="flashcard-face flashcard-back"><b>किन्तु / परन्तु</b>18.20 से explicit contrast का संकेत</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">नानाभावान्</span></div>
+            <div class="flashcard-face flashcard-back"><b>अनेक प्रकार के भाव</b>नाना = many. राजसिक अनेकता देखता है</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">पृथग्विधान्</span></div>
+            <div class="flashcard-face flashcard-back"><b>भिन्न-भिन्न प्रकार के</b>पृथक्+विध — separation emphasize</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">वेत्ति</span></div>
+            <div class="flashcard-face flashcard-back"><b>जानता है</b>√विद् वर्तमान — 18.20 के ईक्षते से अलग</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">राजसम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>राजसिक</b>तीन में मध्य — सात्त्विक से नीचे, तामसिक से ऊपर</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">पृथक्त्वेन</td><td>पृथक्+त्व+आ</td><td>तृतीया एकवचन</td><td>पृथकता के द्वारा — करण</td></tr>
+          <tr><td class="sa">तु</td><td>अव्यय</td><td>—</td><td>किन्तु — contrast particle</td></tr>
+          <tr><td class="sa">यत् ज्ञानम्</td><td>यद्+ज्ञान</td><td>नपुंसक प्रथमा</td><td>जो ज्ञान — relative pronoun</td></tr>
+          <tr><td class="sa">नानाभावान्</td><td>नाना+भाव</td><td>द्वितीया बहुवचन</td><td>अनेक प्रकार के भावों को — कर्म</td></tr>
+          <tr><td class="sa">पृथग्विधान्</td><td>पृथक्+विध</td><td>द्वितीया बहुवचन</td><td>भिन्न-भिन्न प्रकार के — विशेषण</td></tr>
+          <tr><td class="sa">वेत्ति</td><td>√विद्</td><td>वर्तमान प्र.पु. एकवचन</td><td>जानता है — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">सर्वेषु भूतेषु</td><td>सर्व+भूत</td><td>सप्तमी बहुवचन</td><td>सब प्राणियों में — अधिकरण</td></tr>
+          <tr><td class="sa">राजसम्</td><td>राजस+अम्</td><td>द्वितीया एकवचन</td><td>राजसिक — विधेय-विशेषण</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">पृथक्त्वेन तु यज्ज्ञानं नानाभावान्पृथग्विधान्।<br>वेत्ति सर्वेषु भूतेषु तज्ज्ञानं विद्धि राजसम्।।</div>
+          <div class="cheat-translit">pṛthaktvena tu yaj jñānaṃ nānā-bhāvān pṛthag-vidhān, vetti sarveṣu bhūteṣu taj jñānaṃ viddhi rājasam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>पृथक्त्वेन</b> अलगाव की दृष्टि से</span>
+            <span class="cheat-chip"><b>तु</b> 18.20 से contrast</span>
+            <span class="cheat-chip"><b>नानाभावान्</b> अनेक प्रकार</span>
+            <span class="cheat-chip"><b>पृथग्विधान्</b> भिन्न-भिन्न</span>
+            <span class="cheat-chip"><b>राजसम्</b> मध्य-स्तर ज्ञान</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: जो ज्ञान सब में केवल अलगाव और अनेकता देखे — एकता न देखे — वह राजसिक है। अधूरा सच। 18.20 (एकता) + 18.21 (अनेकता) = पूर्ण ज्ञान।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('पृथक्त्वेन तु यज्ज्ञानं नानाभावान्पृथग्विधान्। वेत्ति सर्वेषु भूतेषु तज्ज्ञानं विद्धि राजसम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('पृथक्त्वेन तु यज्ज्ञानं नानाभावान्पृथग्विधान्। वेत्ति सर्वेषु भूतेषु तज्ज्ञानं विद्धि राजसम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जो ज्ञान अलगाव की दृष्टि से सब प्राणियों में नाना प्रकार के भिन्न-भिन्न भावों को जाने — उसे राजसिक जानो।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">पृ</span><span class="syll">थक्</span><span class="syll">त्वे</span><span class="syll">न</span><span class="syll">तु</span><span class="syll">यज्</span><span class="syll">ज्ञा</span><span class="syll">नं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">ना</span><span class="syll">ना</span><span class="syll">भा</span><span class="syll">वान्</span><span class="syll">पृ</span><span class="syll">थग्</span><span class="syll">वि</span><span class="syll">धान्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">वे</span><span class="syll">त्ति</span><span class="syll">सर्</span><span class="syll">वे</span><span class="syll">षु</span><span class="syll">भू</span><span class="syll">ते</span><span class="syll">षु</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">त</span><span class="syll">ज्ज्ञा</span><span class="syll">नं</span><span class="syll">वि</span><span class="syll">द्धि</span><span class="syll">रा</span><span class="syll">ज</span><span class="syll">सम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('पृथक्त्वेन तु यज्ज्ञानं नानाभावान्पृथग्विधान् वेत्ति सर्वेषु भूतेषु तज्ज्ञानं विद्धि राजसम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "पृथक्त्वेन" — यह एक शब्द पूरे श्लोक का केंद्र है। जप करते समय इस पर रुकें और पूछें: "क्या मेरा ज्ञान इसी दृष्टि से देखता है?"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">18.20 vs 18.21 तुलना</button>
+      <button class="tab-btn" data-tab="e2">तीन ज्ञान overview</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 18.20 vs 18.21 — एक ही field, दो दृष्टियाँ</h3>
+        <p class="subnote">दोनों "सर्वेषु भूतेषु" देखते हैं — पर क्या देखते हैं?</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 18.20 — सात्त्विक</div>
+            <div class="contrast-sa">अविभक्तं विभक्तेषु</div>
+            <p><b>लहरों में जल देखता है।</b><br>अनेक प्राणी → एक आत्मा।<br>अनेकता + एकता = पूर्ण दर्शन।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 18.21 — राजसिक</div>
+            <div class="contrast-sa">पृथक्त्वेन नानाभावान्</div>
+            <p><b>केवल लहरें देखता है।</b><br>अनेक प्राणी → अनेक अलग।<br>अनेकता केवल = अधूरा दर्शन।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> "सर्वेषु भूतेषु" दोनों में same है — field एक है। पर 18.20 "येनैकं" (एक से) देखता है, 18.21 "पृथक्त्वेन" (अलगाव से)। दृष्टि का अंतर ही ज्ञान का अंतर है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 ज्ञान के तीन प्रकार — अभी तक की स्थिति</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🌿 सात्त्विक (18.20)</div>
+            <div class="guna-sa">सब में एक</div>
+            <div class="guna-char">अविभक्तं विभक्तेषु। एकता का दर्शन। सर्वोच्च।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 राजसिक (18.21) ← यहाँ</div>
+            <div class="guna-sa">सब में अनेक</div>
+            <div class="guna-char">पृथक्त्वेन नानाभावान्। भेद-दर्शन। अधूरा सच।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🌑 तामसिक (18.22)</div>
+            <div class="guna-sa">एक में सब?</div>
+            <div class="guna-char">एक को ही सब कुछ मानना। भ्रामक। अगला श्लोक।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> सात्त्विक = many में one देखना। राजसिक = many में many देखना। तामसिक = one (गलत) में all मानना।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १८-१९<br>Framework + घोषणा</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २०<br>सात्त्विक ज्ञान</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. २१<br>राजसिक ज्ञान ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २२<br>तामसिक ज्ञान</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २३-२५<br>कर्म के तीन प्रकार</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.22):</b> तामसिक ज्ञान — एक छोटे कार्य को ही सब कुछ मानना, युक्तिहीन, अतत्त्वार्थ। तीनों मिलकर ज्ञान की पूरी त्रयी पूर्ण होगी।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.२२) — ☰ नेविगेशन — तामसिक ज्ञान: अंधकार की दृष्टि</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.21 में राजसिक ज्ञान की मुख्य विशेषता क्या है?",options:["सब में एक देखना","पृथक्त्व (अलगाव) की दृष्टि से देखना","कुछ भी न देखना","केवल अपना देखना"],correct:1},
+    {q:"'तु' शब्द का यहाँ क्या काम है?",options:["और/भी का अर्थ","18.20 से contrast दर्शाना","प्रश्न का संकेत","सम्बोधन"],correct:1},
+    {q:"'नानाभावान् पृथग्विधान्' का सामासिक अर्थ क्या है?",options:["एक प्रकार का भाव","अनेक प्रकार के भिन्न-भिन्न भाव","अभाव या शून्यता","नाना का भाव"],correct:1},
+    {q:"राजसिक ज्ञान गलत नहीं पर क्या है?",options:["पूर्णतः सत्य","पूर्णतः असत्य","अधूरा सत्य — एकता न देखना","तामसिक से भी नीचे"],correct:2},
+    {q:"18.20 और 18.21 में क्या common है?",options:["दोनों एकता देखते हैं","दोनों 'सर्वेषु भूतेषु' में देखते हैं","दोनों राजसिक हैं","कुछ भी नहीं"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.20 ने सात्त्विक ज्ञान दिया — सब में एक। 18.21 उसका विपरीत — 'तु' (किन्तु) से शुरू होता है। यह explicit contrast है।",
+    "'पृथक्त्वेन' — अलगाव की दृष्टि से। यह एक शब्द राजसिक ज्ञान का पूरा lens है। जो इस lens से देखे — वह राजसिक ज्ञानी।",
+    "'नानाभावान् पृथग्विधान्' — अनेक प्रकार के भिन्न-भिन्न भाव। गीता ने जानबूझकर दो compound रखे — अनेकता और पृथकता दोनों पर जोर।",
+    "यह ज्ञान पूरी तरह गलत नहीं — अनेकता सचमुच है। पर यह 'अधूरा सच' है जो एकता नहीं देखता। अधूरा सच कभी-कभी पूरे झूठ से खतरनाक होता है।",
+    "18.20 और 18.21 में 'सर्वेषु भूतेषु' common है — field एक। पर 18.20 'येनैकं' से देखता है, 18.21 'पृथक्त्वेन' से। दृष्टि का अंतर ही ज्ञान का अंतर।",
+    "अगला (18.22) तामसिक — एक छोटे को ही सब मानना। तीनों मिलकर ज्ञान की पूरी spectrum: एकता → अनेकता → भ्रम।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

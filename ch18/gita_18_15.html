@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.15 — शरीर-वाक्-मन के कर्मों का सत्य</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#180f2e;
+    --bg-deep-alt:#241a42;
+    --gold:#c9a227;
+    --gold-light:#e6c863;
+    --maroon:#8c2c3b;
+    --cream:#f3e9d2;
+    --cream-dim:#cfc3a8;
+    --sage:#5c8374;
+    --line:rgba(201,162,39,0.25);
+    --shadow:0 18px 50px rgba(0,0,0,0.45);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse at 50% -10%, #2e2153 0%, var(--bg-deep) 55%, #100a1f 100%);
+    color:var(--cream);
+    font-family:'Mukta',sans-serif;
+    line-height:1.7;
+    padding:32px 16px 56px;
+  }
+  .wrap{max-width:880px;margin:0 auto;}
+
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:19.2%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+
+  .hero{
+    background:linear-gradient(160deg, var(--bg-deep-alt), #1b1336);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:38px 30px 34px;
+    box-shadow:var(--shadow);
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 50% 0%, rgba(201,162,39,0.12), transparent 60%);
+    pointer-events:none;
+  }
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{
+    0%,100%{transform:scale(1) translateY(0);opacity:1;}
+    25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}
+    50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}
+    75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}
+  }
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:560px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;display:flex;align-items:center;gap:8px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+
+  @media (max-width:560px){
+    .panel-shell{padding:22px 18px;}
+    .hero{padding:28px 18px 26px;}
+  }
+
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s ease;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+
+  .mindmap-box{width:100%;height:auto;}
+  .mm-line{stroke:#7a623a;stroke-width:1.4;opacity:0.55;}
+  .mm-center{fill:#5c8374;}
+  .mm-node-circle{fill:rgba(255,255,255,0.04);stroke:#c9a227;stroke-width:1.2;}
+
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.12);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s ease;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-line{font-size:14.5px;color:var(--cream);margin-bottom:10px;text-align:center;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+
+  .flow-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin:22px 0 28px;}
+  .flow-box{background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:16px;padding:18px 16px;text-align:center;min-width:135px;max-width:160px;}
+  .flow-box .ic{font-size:30px;display:block;margin-bottom:10px;}
+  .flow-box .ttl{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;font-size:14.5px;margin-bottom:5px;}
+  .flow-box .sub{font-size:11.5px;color:var(--cream-dim);line-height:1.4;}
+  .flow-arrow{font-size:22px;color:var(--gold);flex-shrink:0;}
+
+  .three-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:18px 0;}
+  .three-card{border:1px solid var(--line);border-radius:12px;padding:18px 12px;text-align:center;background:rgba(255,255,255,0.02);}
+  .three-card .ic{font-size:32px;display:block;margin-bottom:10px;}
+  .three-card .ttl{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;font-size:16px;margin-bottom:4px;}
+  .three-card .sub{font-size:12px;color:var(--cream-dim);line-height:1.4;}
+  .three-card .ex{font-size:11.5px;color:var(--sage);margin-top:6px;font-style:italic;}
+
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+
+  @media (max-width:560px){
+    .road-track{flex-wrap:wrap;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 15 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.१५</div>
+    </div>
+
+    <div class="shloka">
+      शरीरवाङ्मनोभिर्यत्कर्म प्रारभते नरः।<br>
+      न्याय्यं वा विपरीतं वा पञ्चैते तस्य हेतवः।।
+    </div>
+
+    <div class="translit">
+      śarīra-vāṅ-manobhir yat karma prārabhate naraḥ,<br>
+      nyāyyaṃ vā viparītaṃ vā pañcaite tasya hetavaḥ
+    </div>
+
+    <div class="gist">
+      मनुष्य <b>शरीर, वाणी और मन</b> से जो भी कर्म आरंभ करता है — <b>न्यायसंगत (न्याय्यं) हो या विपरीत</b> — उन सबके ये पाँच ही कारण हैं। <b>18.14 के पाँच हेतु</b> (अधिष्ठान, कर्ता, करण, चेष्टा, दैव) हर कर्म पर लागू होते हैं।
+    </div>
+  </div>
+
+  <!-- MODE SELECTOR -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <div class="mode-section active" id="mode-core">
+
+  <!-- TABS -->
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+
+  <div class="panel-shell">
+
+    <!-- 1. CONTEXT -->
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ एवं मनोभाव</h3>
+      <p>18.13 में श्रीकृष्ण ने घोषणा की थी — "पाँच कारण हैं जो हर कर्म को निर्मित करते हैं।" 18.14 में उन्होंने वे पाँच कारण गिनाए: <b>अधिष्ठान</b> (शरीर/क्षेत्र), <b>कर्ता</b> (जीव/अहंकार), <b>करण</b> (इन्द्रियाँ), <b>चेष्टा</b> (प्रयत्न/कार्य), <b>दैव</b> (प्रारब्ध/दिव्य संयोग)। अब 18.15 उस सूत्र को <b>सर्वव्यापक</b> घोषित करता है।</p>
+      <p>अर्जुन के मन में प्रश्न उठ सकता था — "क्या ये पाँच कारण केवल युद्ध जैसे बड़े कर्मों के लिए हैं, या सभी कर्मों के लिए?" 18.15 उत्तर देता है: <b>हर कर्म — चाहे शरीर से हो, वाणी से हो या मन से — चाहे धर्म-सम्मत हो या अधर्म का — इन्हीं पाँच कारणों का परिणाम है।</b></p>
+      <div class="callout"><b>18.15 का कोर इनसाइट:</b> यह श्लोक "कर्म की सार्वभौमिकता" की घोषणा है। कोई भी कर्म — शारीरिक, वाचिक, मानसिक — इन पाँच से परे नहीं। यही ज्ञान अहंकार-रहित कर्म का आधार बनता है, जो 18.17 में फलित होगा।</div>
+      <p>अगला श्लोक (18.16) बताएगा कि जो "केवल मुझे ही कर्ता मानता है" वह अज्ञानी है। 18.17 में ज्ञानी को बंधन-मुक्त बताया जाएगा — पर वह समझ इसी 18.15 की नींव पर खड़ी है।</p>
+    </div>
+
+    <!-- 2. WORD BY WORD -->
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः सन्धि-विग्रह सहित)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">शरीरवाङ्मनोभिः</span><span class="word-tr">śarīra-vāṅ-manobhiḥ</span></div>
+          <div class="word-meaning">शरीर + वाक् + मनस् (करण-तृतीया बहुवचन) — तीनों माध्यमों द्वारा</div>
+          <div class="word-eng"><b>EN:</b> by/through body, speech, and mind</div>
+          <div class="word-deep">संधि-विग्रह → शरीर + वाक् + मनस् + भिः। "मनोभिः" में विसर्ग-सन्धि। ये तीन स्तर कर्म के तीन आयाम हैं — कायिक, वाचिक, मानसिक। इनसे बाहर कोई कर्म संभव नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यत् कर्म</span><span class="word-tr">yat karma</span></div>
+          <div class="word-meaning">जो कोई भी कर्म — सापेक्ष सर्वनाम</div>
+          <div class="word-eng"><b>EN:</b> whatever action/deed</div>
+          <div class="word-deep">"यत्" का प्रयोग सभी प्रकार के कर्मों को एक ही वाक्य में समेटता है — यह "सार्वभौम" कथन का व्याकरणिक आधार है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">प्रारभते नरः</span><span class="word-tr">prārabhate naraḥ</span></div>
+          <div class="word-meaning">मनुष्य (नरः) आरंभ करता है (प्रारभते) — वर्तमान आत्मनेपद</div>
+          <div class="word-eng"><b>EN:</b> a person/human undertakes/initiates</div>
+          <div class="word-deep">प्र + आ + रभ् (आरंभ करना) — "प्रारभते" में प्रयत्न का भाव है। नरः = कोई भी मनुष्य, विशेष नहीं। यह 18.14 के "कर्ता" से जुड़ता है पर उससे बड़ा है — "नरः" का हर कर्म इन्हीं पाँच से नियंत्रित है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">न्याय्यं वा विपरीतं वा</span><span class="word-tr">nyāyyaṃ vā viparītaṃ vā</span></div>
+          <div class="word-meaning">न्यायसंगत (धार्मिक) हो या विपरीत (अधार्मिक) — दोनों स्थितियाँ</div>
+          <div class="word-eng"><b>EN:</b> whether righteous or contrary/unrighteous</div>
+          <div class="word-deep">न्याय्यम् → "न्याय" + ष्यञ् प्रत्यय = जो न्याय के अनुकूल हो। विपरीतम् = उल्टा, विरुद्ध। "वा...वा" = या...या (disjunctive). यह द्विभाजन कहता है: अच्छे-बुरे, धर्म-अधर्म — सभी इन पाँच से बनते हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">पञ्चैते तस्य हेतवः</span><span class="word-tr">pañcaite tasya hetavaḥ</span></div>
+          <div class="word-meaning">ये पाँच (18.14 के) उस कर्म के कारण हैं — "पञ्च + एते" (संधि)</div>
+          <div class="word-eng"><b>EN:</b> these five are its causes/reasons</div>
+          <div class="word-deep">पञ्च + एते → पञ्चैते (वृद्धि संधि)। "तस्य" = उस कर्म के। हेतवः = हेतु का बहुवचन। यह वापस 18.14 को इंगित करता है — पाँचों कारण यहाँ फिर से संकेतित हैं।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. BHAVARTA -->
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं जन लब्धि-व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Whatever action a person undertakes with their body, speech, or mind — whether righteous or unrighteous — these five are its causes.
+      </div>
+      <p>यह श्लोक <b>कर्म के तीन स्तरों</b> (शरीर, वाणी, मन) को एक साथ संबोधित करता है। सामान्यतः हम "कर्म" को केवल शारीरिक क्रिया मानते हैं — पर गीता यहाँ स्पष्ट करती है कि विचार करना भी कर्म है, बोलना भी कर्म है।</p>
+      <p><b>1. शारीरिक कर्म (कायिक):</b> चलना, लड़ना, खाना, निर्माण करना — जो शरीर से होता है।</p>
+      <p><b>2. वाचिक कर्म (वाणी से):</b> सत्य बोलना, झूठ बोलना, आशीर्वाद देना, कठोर शब्द कहना — ये सब "कर्म" हैं।</p>
+      <p><b>3. मानसिक कर्म (मन से):</b> संकल्प करना, कामना करना, द्वेष रखना, ध्यान करना — मनोभाव भी कर्म है।</p>
+      <div class="callout"><b>क्रांतिकारी दृष्टि:</b> गीता यहाँ "न्याय्यं वा विपरीतं वा" कहकर एक बड़ी बात कह रही है — <b>धर्म और अधर्म, दोनों इन्हीं पाँच कारणों से उत्पन्न होते हैं।</b> इसका अर्थ यह नहीं कि धर्म-अधर्म में फर्क नहीं — बल्कि यह कि किसी भी एक कारण को "एकमात्र कारण" मानना भूल है। अगला श्लोक (18.16) इसी भूल को "मिथ्या-दृष्टि" कहेगा।</div>
+      <p>यह श्लोक "मैंने यह किया" की अहंकारी धारणा को चुनौती देता है। जब आप कोई अच्छा काम करते हैं — उसमें आपका शरीर है, पर दैव भी है, परिस्थिति भी है, पाँचों इन्द्रियाँ भी हैं। और जब कोई गलती होती है — वह भी इन्हीं पाँच से। इसलिए न अत्यधिक अभिमान, न अत्यधिक पश्चाताप — <b>यह मध्यम-मार्ग की नींव है।</b></p>
+    </div>
+
+    <!-- 4. EXAMPLES -->
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — एक डॉक्टर का ऑपरेशन:</b> डॉक्टर ने (शरीर से) हाथ हिलाए, (वाणी से) टीम को निर्देश दिए, (मन से) एकाग्र रहा। यह न्याय्यं कर्म था। पाँच कारण: अधिष्ठान = ऑपरेशन थिएटर; कर्ता = डॉक्टर; करण = हाथ, आँखें, उपकरण; चेष्टा = सटीक कटाव; दैव = उस दिन की परिस्थितियाँ, बिजली न जाना, मरीज की जीवन-शक्ति। — <b>सफलता भी, असफलता भी इन्हीं पाँच से।</b>
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — एक क्रोधी शब्द (विपरीतं):</b> किसी ने गुस्से में (मन) कठोर शब्द (वाणी) बोले और हाथ पटका (शरीर)। यह "विपरीतं" कर्म था। पाँच कारण: अधिष्ठान = तनावपूर्ण परिस्थिति; कर्ता = थका हुआ, भूखा जीव; करण = मुँह, हाथ; चेष्टा = अनियंत्रित प्रतिक्रिया; दैव = पिछले दिन की नींद न आना, संस्कार। — <b>यह जानकर न वह व्यक्ति दूसरे को "बुरा" ठहराए, न खुद को केवल "बुरा" समझे — सुधार का मार्ग खुलता है।</b>
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — मौन प्रार्थना (मानसिक कर्म):</b> भक्त ने मन में ईश्वर का ध्यान किया — कोई बाहरी क्रिया नहीं, कोई शब्द नहीं। फिर भी यह कर्म है। पाँच कारण लागू: अधिष्ठान = ध्यान-कक्ष/आसन; कर्ता = साधक का मन; करण = चित्त की एकाग्रता; चेष्टा = मानसिक प्रयास; दैव = पिछले जन्मों के संस्कार। — गीता कहती है: <b>मानसिक कर्म भी इन्हीं पाँच से।</b>
+      </div>
+    </div>
+
+    <!-- 5. FAQ -->
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर एवं स्पष्टीकरण</h3>
+
+      <div class="faq">
+        <div class="q">क्या "विपरीतं" (अधर्म) के कर्म भी इन्हीं पाँच कारणों से होते हैं? तो क्या बुराई के लिए कोई जिम्मेदार नहीं?</div>
+        <div class="a">हाँ, विपरीत कर्म भी इन्हीं पाँच से होता है — पर इसका अर्थ "जिम्मेदारी नहीं" नहीं है। गीता यहाँ <b>causality</b> (कारण-कार्य) बता रही है, <b>moral escape</b> नहीं दे रही। जैसे यह जानना कि "आग जलाती है क्योंकि ऑक्सीजन है" — इससे आग का खतरा खत्म नहीं होता। "कर्ता" (18.14) अभी भी एक कारण है — अतः प्रयत्न और संस्कार से उसे बदला जा सकता है। 18.17 में बताया जाएगा कि ज्ञानी कर्ता-भाव को छोड़कर बंधन से मुक्त होता है।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">यदि मन का विचार भी कर्म है, तो क्या हर बुरी सोच भी कर्म-बंधन बनाती है?</div>
+        <div class="a">हाँ, वेदांत और गीता दोनों मानते हैं कि <b>मानसिक कर्म भी संस्कार</b> बनाते हैं। इसीलिए "मनसा, वाचा, कर्मणा" तीनों का शुद्धिकरण साधना में महत्त्वपूर्ण है। पर गीता यह भी कहती है — एक विचार जो "संकल्प" नहीं बना, जो "चेष्टा" में नहीं ढला, वह उतना प्रबल बंधन नहीं बनाता। इसीलिए ध्यान और विवेक से मन को साक्षी-भाव में रखना अभ्यास है।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">18.14 और 18.15 को एक साथ क्यों पढ़ना जरूरी है?</div>
+        <div class="a">18.14 बिना 18.15 के अधूरा है — वह केवल पाँच कारण गिनाता है। 18.15 बिना 18.14 के खाली है — वह केवल "पाँच हैं" कहता है पर कौन से नहीं बताता। दोनों मिलकर एक पूर्ण सूत्र बनाते हैं: <b>हर कर्म (शरीर/वाणी/मन से, न्याय्य या विपरीत) = वे पाँच (अधिष्ठान + कर्ता + करण + चेष्टा + दैव)।</b> यह समझ अगले श्लोकों (18.16-17) का द्वार खोलती है जहाँ कर्ता-भाव और मुक्ति की बात होती है।</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  </div><!-- /mode-core -->
+
+  <!-- =================== MODE: PERSPECTIVES (दृष्टिकोण) =================== -->
+  <div class="mode-section" id="mode-perspectives">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- B1 SIGNIFICANCE -->
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.15 एक "bridge" श्लोक है — यह 18.13-14 (कारण-सूची) को 18.16-17 (ज्ञानी vs अज्ञानी का निर्णय) से जोड़ता है। इसकी महत्ता इसलिए है क्योंकि <b>यह सिद्धांत को सार्वभौम</b> बनाता है। यदि यह श्लोक न होता, तो पाँच कारण केवल "कुछ बड़े कर्मों" तक सीमित लग सकते थे।</p>
+        <p>"शरीर-वाणी-मन" का त्रिकोण गीता के व्यापक नीतिशास्त्र का आधार है। योग में इसे <b>त्रिकरण-शुद्धि</b> कहते हैं — सभी तीनों को साफ रखना ही सात्त्विक जीवन है।</p>
+        <div class="callout"><b>श्रृंखला में स्थान:</b> 18.13 में "घोषणा", 18.14 में "सूची", 18.15 में "सार्वभौमिकता", 18.16 में "अज्ञानी की भूल", 18.17 में "ज्ञानी की मुक्ति" — यह पाँच-श्लोकी श्रृंखला कर्म-दर्शन का एक पूर्ण अध्याय है।</div>
+      </div>
+
+      <!-- B2 MINDMAP -->
+      <div class="panel" id="b2">
+        <h3>🪔 विषय-विस्तार माइंड-मैप</h3>
+        <p class="subnote">पाँच कारणों और तीन स्तरों का संयोग — यह नोटेशन देखें</p>
+        <svg class="mindmap-box" viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+          <!-- Lines from center -->
+          <line class="mm-line" x1="350" y1="250" x2="350" y2="80"/>
+          <line class="mm-line" x1="350" y1="250" x2="560" y2="160"/>
+          <line class="mm-line" x1="350" y1="250" x2="560" y2="340"/>
+          <line class="mm-line" x1="350" y1="250" x2="350" y2="410"/>
+          <line class="mm-line" x1="350" y1="250" x2="140" y2="340"/>
+          <line class="mm-line" x1="350" y1="250" x2="140" y2="160"/>
+
+          <!-- Center -->
+          <circle cx="350" cy="250" r="68" class="mm-center" opacity="0.9"/>
+          <text x="350" y="243" text-anchor="middle" fill="#f3e9d2" font-size="14" font-family="Tiro Devanagari Hindi, serif">श्लोक १८.१५</text>
+          <text x="350" y="263" text-anchor="middle" fill="#f3e9d2" font-size="11">तीन स्तर + पाँच कारण</text>
+
+          <!-- Node: शरीर -->
+          <g class="mm-node">
+            <circle cx="350" cy="80" r="52" class="mm-node-circle"/>
+            <text x="350" y="74" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">शरीर</text>
+            <text x="350" y="90" text-anchor="middle" fill="#f3e9d2" font-size="11">कायिक कर्म</text>
+          </g>
+
+          <!-- Node: वाक् -->
+          <g class="mm-node">
+            <circle cx="560" cy="160" r="52" class="mm-node-circle"/>
+            <text x="560" y="154" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">वाक्</text>
+            <text x="560" y="170" text-anchor="middle" fill="#f3e9d2" font-size="11">वाचिक कर्म</text>
+          </g>
+
+          <!-- Node: मन -->
+          <g class="mm-node">
+            <circle cx="560" cy="340" r="52" class="mm-node-circle"/>
+            <text x="560" y="334" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">मन</text>
+            <text x="560" y="350" text-anchor="middle" fill="#f3e9d2" font-size="11">मानसिक कर्म</text>
+          </g>
+
+          <!-- Node: न्याय्यं -->
+          <g class="mm-node">
+            <circle cx="350" cy="410" r="52" class="mm-node-circle"/>
+            <text x="350" y="404" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">न्याय्यं</text>
+            <text x="350" y="420" text-anchor="middle" fill="#f3e9d2" font-size="11">धर्म-सम्मत</text>
+          </g>
+
+          <!-- Node: विपरीतं -->
+          <g class="mm-node">
+            <circle cx="140" cy="340" r="52" class="mm-node-circle"/>
+            <text x="140" y="334" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">विपरीतं</text>
+            <text x="140" y="350" text-anchor="middle" fill="#f3e9d2" font-size="11">धर्म-विरुद्ध</text>
+          </g>
+
+          <!-- Node: पञ्चैते हेतवः -->
+          <g class="mm-node">
+            <circle cx="140" cy="160" r="52" class="mm-node-circle"/>
+            <text x="140" y="154" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">पञ्चैते</text>
+            <text x="140" y="170" text-anchor="middle" fill="#f3e9d2" font-size="11">18.14 के पाँच हेतु</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- B3 COMPARATIVE -->
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — अन्य ग्रंथों से संबंध</h3>
+        <p>18.15 का "तीन स्तरों पर कर्म" का विचार गीता से आगे भी गूंजता है:</p>
+        <table class="cmp-table">
+          <tr><th>ग्रंथ</th><th>विचार</th><th>18.15 से संबंध</th></tr>
+          <tr><td>मनुस्मृति</td><td>मनसा, वाचा, कर्मणा — तीनों से धर्म-अधर्म बनता है</td><td>18.15 का "शरीर-वाक्-मन" समान है</td></tr>
+          <tr><td>बौद्ध दर्शन</td><td>काया, वाचा, मन के कर्म (कम्म) — तीनों से कर्मफल</td><td>लगभग समान, पर बौद्ध में "दैव" नहीं</td></tr>
+          <tr><td>पतंजलि योगसूत्र</td><td>क्रिया-योग: तप, स्वाध्याय, ईश्वर-प्रणिधान — तीनों स्तर</td><td>18.15 के तीन स्तरों का योग-अनुप्रयोग</td></tr>
+          <tr><td>Stoic दर्शन</td><td>Actions, words, thoughts — all within one's control or not</td><td>18.15 "dichotomy of causes" — कुछ हमारे वश में, कुछ नहीं</td></tr>
+        </table>
+        <div class="callout"><b>विशेषता:</b> गीता का "दैव" (पाँचवाँ कारण) अनोखा है — अन्य दर्शनों में यह तत्त्व या नहीं है या अलग रूप में है। यही गीता के कर्म-दर्शन को "प्रोविडेंस" (दैवी संयोग) का समावेश देता है।</div>
+      </div>
+
+      <!-- B4 SADHANA -->
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <p>18.15 का ज्ञान व्यावहारिक जीवन में कैसे काम करे?</p>
+        <div class="callout"><b>अभ्यास — "त्रिस्तरीय आत्म-निरीक्षण":</b> प्रतिदिन सोने से पहले तीन प्रश्न: (१) आज शरीर से क्या किया — क्या वह न्याय्य था? (२) आज वाणी से क्या कहा — क्या वह न्याय्य था? (३) आज मन में क्या चला — क्या वह न्याय्य था? यह तीन-स्तरीय समीक्षा "दैनिक कर्म-शुद्धि" है।</div>
+        <p>जब कोई गलती हो — 18.15 का स्मरण करें: "यह केवल 'मैंने' नहीं किया — पाँचों कारण थे। किस कारण को मैं बदल सकता हूँ?" यह <b>constructive guilt</b> (रचनात्मक पश्चाताप) का मार्ग है, <b>destructive guilt</b> (विनाशकारी आत्म-निंदा) का नहीं।</p>
+      </div>
+
+      <!-- B5 COMMENTATORS -->
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-आचार्य भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">आदि शंकराचार्य (अद्वैत वेदांत):</b> शंकर के अनुसार "नरः" यहाँ जीव को दर्शाता है जो अविद्यावश खुद को "कर्ता" मानता है। तीन स्तरों का विवरण यह बताता है कि अज्ञान कितना गहरा है — शरीर से मन तक व्यापक है। ज्ञान से यह "कर्ता-भाव" नष्ट होता है, तब बंधन मिटता है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य (विशिष्टाद्वैत):</b> रामानुज के मत में "दैव" यहाँ ईश्वर की प्रेरणा-शक्ति है — जीव कर्म करता है पर ईश्वर अंतर्यामी के रूप में प्रेरित करता है। "न्याय्यं वा विपरीतं" — दोनों में ईश्वर साक्षी है, पर अधर्म जीव के संस्कारों से आता है।</p>
+        <p><b style="color:var(--gold-light)">आधुनिक भाष्य (स्वामी प्रभुपाद):</b> ISKCON-परंपरा में "नरः" कोई भी संसारी जीव है — पाँच कारण "material nature" के नियम हैं। "विपरीतं" कर्म पाप-बंधन बनाता है, "न्याय्यं" पुण्य-बंधन — दोनों से मुक्ति कृष्ण-भक्ति से संभव है।</p>
+        <div class="callout"><b>साझा निष्कर्ष:</b> तीनों आचार्य इस पर सहमत हैं — "अकेला कर्ता-भाव" भूल है। कर्म में बहुत कारण हैं। ज्ञानी वह है जो इसे समझकर अहंकार से मुक्त हो जाता है।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-perspectives -->
+
+  <!-- =================== MODE: PRACTICE (अभ्यास व रिवीजन) =================== -->
+  <div class="mode-section" id="mode-practice">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- C1 FLASHCARDS -->
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड — पदशः रिवीजन करें</h3>
+        <p class="flash-instructions">हर कार्ड पर क्लिक करें → सामने पद दिखेगा, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">शरीरवाङ्मनोभिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>तीन माध्यम</b>शरीर + वाक् + मन से — कर्म के तीन आयाम</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">यत् कर्म</span></div>
+            <div class="flashcard-face flashcard-back"><b>जो भी कर्म</b>"यत्" = सापेक्ष सर्वनाम — सार्वभौमिकता</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">प्रारभते नरः</span></div>
+            <div class="flashcard-face flashcard-back"><b>मनुष्य आरंभ करता है</b>प्र+आ+रभ् — प्रयत्न सहित</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">न्याय्यं</span></div>
+            <div class="flashcard-face flashcard-back"><b>न्यायसंगत</b>न्याय + ष्यञ् — धर्म के अनुकूल</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">विपरीतं</span></div>
+            <div class="flashcard-face flashcard-back"><b>विपरीत / अधार्मिक</b>वि+परीत = उल्टा, विरुद्ध</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">पञ्चैते हेतवः</span></div>
+            <div class="flashcard-face flashcard-back"><b>ये पाँच कारण हैं</b>पञ्च+एते (संधि) — 18.14 के पाँच</div>
+          </div></div>
+
+        </div>
+      </div>
+
+      <!-- C2 QUIZ -->
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <!-- C3 GRAMMAR -->
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <p class="subnote">इस श्लोक के मूल पदों का रूप-विश्लेषण</p>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल/सन्धि</th><th>प्रत्यय/विभक्ति</th><th>व्याकरणिक अर्थ</th></tr>
+          <tr><td class="sa">शरीरवाङ्मनोभिः</td><td>शरीर + वाक् + मनस्</td><td>तृतीया बहुवचन</td><td>तीनों द्वारा/माध्यम से — करण कारक</td></tr>
+          <tr><td class="sa">यत्</td><td>√यद् (सर्वनाम)</td><td>नपुंसक एकवचन</td><td>जो, जो कुछ — सापेक्ष सर्वनाम</td></tr>
+          <tr><td class="sa">कर्म</td><td>√कृ + मन् प्रत्यय</td><td>नपुंसक एकवचन</td><td>क्रिया, कार्य — कर्म कारक</td></tr>
+          <tr><td class="sa">प्रारभते</td><td>प्र+आ+√रभ्</td><td>वर्तमान, आत्मनेपद, प्र.पु.</td><td>आरंभ करता है — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">नरः</td><td>√नर (पुल्लिंग)</td><td>प्रथमा एकवचन</td><td>मनुष्य — कर्ता कारक</td></tr>
+          <tr><td class="sa">न्याय्यं</td><td>न्याय + ष्यञ्</td><td>नपुंसक एकवचन</td><td>न्यायसंगत — विशेषण (कर्म का)</td></tr>
+          <tr><td class="sa">विपरीतं</td><td>वि+परि+√इ</td><td>नपुंसक एकवचन</td><td>विरुद्ध, उल्टा — विशेषण</td></tr>
+          <tr><td class="sa">पञ्चैते</td><td>पञ्च + एते</td><td>वृद्धि संधि, प्रथमा बहुवचन</td><td>ये पाँच — कर्ता कारक</td></tr>
+          <tr><td class="sa">तस्य हेतवः</td><td>तद् + हेतु</td><td>षष्ठी एकवचन + प्रथमा बहुवचन</td><td>उसके कारण हैं — संबंध + विधेय</td></tr>
+        </table>
+      </div>
+
+      <!-- C4 CHEATSHEET -->
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">शरीरवाङ्मनोभिर्यत्कर्म प्रारभते नरः।<br>न्याय्यं वा विपरीतं वा पञ्चैते तस्य हेतवः।।</div>
+          <div class="cheat-translit">śarīra-vāṅ-manobhir yat karma prārabhate naraḥ, nyāyyaṃ vā viparītaṃ vā pañcaite tasya hetavaḥ</div>
+          <div class="cheat-line">मनुष्य शरीर / वाणी / मन से जो भी कर्म करे — धर्म हो या अधर्म — वे पाँच ही कारण हैं</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>शरीर</b> = कायिक कर्म</span>
+            <span class="cheat-chip"><b>वाक्</b> = वाचिक कर्म</span>
+            <span class="cheat-chip"><b>मन</b> = मानसिक कर्म</span>
+            <span class="cheat-chip"><b>न्याय्यं</b> = धर्म-सम्मत</span>
+            <span class="cheat-chip"><b>विपरीतं</b> = धर्म-विरुद्ध</span>
+            <span class="cheat-chip"><b>पञ्चैते</b> = 18.14 के पाँच</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: कोई भी कर्म — चाहे जो भी हो — इन पाँच कारणों के परे नहीं। यही ज्ञान अहंकार-रहित कर्म (18.17) का आधार है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /mode-practice -->
+
+  <!-- =================== MODE: MEDIA (मीडिया अनुभव) =================== -->
+  <div class="mode-section" id="mode-media">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- D1 TTS -->
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड — सुनें</h3>
+        <p class="subnote">यह श्लोक तीन गतियों में सुनें — पूर्ण, धीरे, और भावार्थ सहित</p>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('शरीरवाङ्मनोभिर्यत्कर्म प्रारभते नरः। न्याय्यं वा विपरीतं वा पञ्चैते तस्य हेतवः।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('शरीरवाङ्मनोभिर्यत्कर्म प्रारभते नरः। न्याय्यं वा विपरीतं वा पञ्चैते तस्य हेतवः।', 0.55)">🐢 धीरे सुनें (अभ्यास हेतु)</button>
+          <button class="tts-btn" onclick="speakText('शरीर, वाणी, और मन से जो भी कर्म मनुष्य करे — न्यायसंगत हो या विपरीत — ये पाँच ही उसके कारण हैं।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+
+      <!-- D2 WALKTHROUGH -->
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+
+      <!-- D3 CHANTING -->
+      <div class="panel" id="d3">
+        <h3>🪔 जप / इष्टतम अभ्यास</h3>
+        <p>इस श्लोक को <b style="color:var(--gold-light)">अनुष्टुप् छन्द</b> में गाया जाता है — ४ पाद, प्रत्येक में ८ अक्षर</p>
+
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row">
+          <span class="syll">श</span><span class="syll">री</span><span class="syll">र</span><span class="syll">वाङ्</span><span class="syll">म</span><span class="syll">नो</span><span class="syll">भिर्</span><span class="syll">यत्</span>
+        </div>
+
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row">
+          <span class="syll">कर्</span><span class="syll">म</span><span class="syll">प्रा</span><span class="syll">र</span><span class="syll">भ</span><span class="syll">ते</span><span class="syll">न</span><span class="syll">रः</span>
+        </div>
+
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row">
+          <span class="syll">न्याय्</span><span class="syll">यं</span><span class="syll">वा</span><span class="syll">वि</span><span class="syll">प</span><span class="syll">री</span><span class="syll">तं</span><span class="syll">वा</span>
+        </div>
+
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row">
+          <span class="syll">पञ्</span><span class="syll">चै</span><span class="syll">ते</span><span class="syll">त</span><span class="syll">स्य</span><span class="syll">हे</span><span class="syll">त</span><span class="syll">वः</span>
+        </div>
+
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('शरीरवाङ्मनोभिर्यत्कर्म प्रारभते नरः न्याय्यं वा विपरीतं वा पञ्चैते तस्य हेतवः', 0.55)">🐢 धीरे जप करें (अभ्यास हेतु)</button>
+        </div>
+        <div class="callout"><b>अभ्यास सुझाव:</b> इस श्लोक को पाद-दर-पाद (चार भागों में) सुबह ११ बार दोहराएँ। "शरीर-वाक्-मन" — यह तीन शब्द त्रिकरण-शुद्धि का स्मरण है।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-media -->
+
+  <!-- =================== MODE: INFOGRAPHICS =================== -->
+  <div class="mode-section" id="mode-infographics">
+
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">तीन स्तर — दृश्यरूप</button>
+      <button class="tab-btn" data-tab="e2">पाँच कारण × तीन स्तर</button>
+      <button class="tab-btn" data-tab="e3">अध्याय 18 का रोड-मैप</button>
+    </div>
+
+    <div class="panel-shell">
+
+      <!-- E1 THREE LEVELS -->
+      <div class="panel active" id="e1">
+        <h3>🪔 कर्म के तीन स्तर — दृश्यरूप</h3>
+        <p class="subnote">शरीर-वाक्-मन — कर्म के तीन द्वार</p>
+        <div class="three-grid">
+          <div class="three-card">
+            <span class="ic">🏃</span>
+            <div class="ttl">शरीर (कायिक)</div>
+            <div class="sub">हाथ, पाँव, आँख से होने वाले कर्म</div>
+            <div class="ex">युद्ध, निर्माण, दान, हिंसा</div>
+          </div>
+          <div class="three-card">
+            <span class="ic">🗣️</span>
+            <div class="ttl">वाक् (वाचिक)</div>
+            <div class="sub">बोलकर, लिखकर, संकेत से होने वाले कर्म</div>
+            <div class="ex">सत्य, असत्य, आशीर्वाद, श्राप</div>
+          </div>
+          <div class="three-card">
+            <span class="ic">🧠</span>
+            <div class="ttl">मन (मानसिक)</div>
+            <div class="sub">विचार, संकल्प, ध्यान, कामना</div>
+            <div class="ex">ध्यान, द्वेष, प्रेम, भय</div>
+          </div>
+        </div>
+        <div class="callout"><b>गीता की क्रांति:</b> मानसिक कर्म को भी "कर्म" मानना — यह बौद्धिक क्रांति है। पश्चिमी दर्शन अक्सर "action" को बाहरी मानता है। गीता कहती है: <b>भीतर की सोच भी कर्म है, इसलिए मन की शुद्धि उतनी ही जरूरी है।</b></div>
+      </div>
+
+      <!-- E2 MATRIX -->
+      <div class="panel" id="e2">
+        <h3>🪔 पाँच कारण × तीन स्तर — संयोग-जाल</h3>
+        <p class="subnote">18.14 के पाँचों कारण, 18.15 के तीनों स्तरों पर कैसे काम करते हैं</p>
+        <table class="cmp-table">
+          <tr><th>कारण (18.14)</th><th>शारीरिक कर्म में</th><th>वाचिक कर्म में</th><th>मानसिक कर्म में</th></tr>
+          <tr><td>अधिष्ठान (क्षेत्र)</td><td>शरीर की शक्ति</td><td>कंठ, भाषा-ज्ञान</td><td>चित्त की क्षमता</td></tr>
+          <tr><td>कर्ता (जीव)</td><td>शारीरिक इच्छाशक्ति</td><td>वक्ता का भाव</td><td>विचारक का संकल्प</td></tr>
+          <tr><td>करण (इन्द्रियाँ)</td><td>हाथ, पाँव, आँखें</td><td>जिह्वा, श्रोत्र</td><td>बुद्धि, अहंकार</td></tr>
+          <tr><td>चेष्टा (प्रयत्न)</td><td>शारीरिक गति</td><td>उच्चारण-प्रयास</td><td>मानसिक एकाग्रता</td></tr>
+          <tr><td>दैव (प्रारब्ध)</td><td>शरीर के संस्कार</td><td>वाक्-संस्कार</td><td>मन के पूर्व-संस्कार</td></tr>
+        </table>
+        <div class="callout"><b>निष्कर्ष:</b> हर स्तर पर, हर कर्म में — पाँचों कारण एक साथ सक्रिय हैं। कोई एक "एकमात्र" कारण नहीं। यही 18.16 की "अज्ञानी-दृष्टि" का विपरीत है जो सब कुछ एक कारण में डालती है।</div>
+      </div>
+
+      <!-- E3 CHAPTER ROADMAP -->
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 का तात्कालिक रोड-मैप</h3>
+        <p class="subnote">सम्पूर्ण अध्याय में वर्तमान स्थान</p>
+        <div class="road-track">
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो. १-६<br>संन्यास और त्याग का अंतर</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो. ७-१२<br>त्याग के प्रकार, कर्म-फल का सत्य</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो. १३-१४<br>पाँच कारणों की घोषणा व सूची</div>
+          </div>
+          <div class="road-stop active">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो. १५<br>पाँच कारण सार्वभौम — आप यहाँ हैं</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">श्लो. १६-१७<br>ज्ञानी vs अज्ञानी — कर्ता-बोध की मुक्ति</div>
+          </div>
+        </div>
+        <div class="callout"><b>सारांश:</b> 18.14 ने पाँच कारण गिनाए, 18.15 ने उन्हें सार्वभौम किया। अब 18.16-17 परिणाम बताएगा — जो "मैं ही कर्ता हूँ" मानता है वह अज्ञानी है, और जो इन पाँचों को समझता है वह बंधन-मुक्त है।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-infographics -->
+
+  <div class="footer-hint">अगला श्लोक (श्लो.१६) — ◄ इस पृष्ठ के ऊपर नेविगेशन (☰) इस्तेमाल करें — कुर्म पृष्ठ की शरीर-वाक्-मन-दैव-कर्ता की समझ को आगे ले जाएगा</div>
+
+</div>
+
+<script>
+  /* ---- mode pill switching ---- */
+  document.querySelectorAll('.mode-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      document.querySelectorAll('.mode-section').forEach(s => s.classList.remove('active'));
+      document.getElementById(pill.dataset.mode).classList.add('active');
+    });
+  });
+
+  /* ---- tab switching, scoped per mode-section ---- */
+  document.querySelectorAll('.mode-section').forEach(section => {
+    const tabs = section.querySelectorAll('.tab-btn');
+    const panels = section.querySelectorAll('.panel');
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        section.querySelector('#' + btn.dataset.tab).classList.add('active');
+      });
+    });
+  });
+
+  /* ---- flashcards ---- */
+  document.querySelectorAll('.flashcard').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('flipped'));
+  });
+
+  /* ---- text to speech ---- */
+  function speakText(text, rate){
+    if(!('speechSynthesis' in window)){
+      alert('यह ब्राउज़र आवाज़ समर्थन नहीं करता');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'hi-IN';
+    u.rate = rate || 0.9;
+    window.speechSynthesis.speak(u);
+  }
+
+  /* ---- quiz ---- */
+  const quizData = [
+    {q:"18.15 में कर्म के कितने स्तर बताए गए हैं?", options:["दो", "तीन", "पाँच", "सात"], correct:1},
+    {q:"'न्याय्यं वा विपरीतं वा' का क्या अर्थ है?", options:["अच्छा या बुरा", "धर्म-सम्मत या उसके विपरीत", "तेज़ या धीमा", "सकाम या निष्काम"], correct:1},
+    {q:"'शरीरवाङ्मनोभिः' में कौन से तीन माध्यम हैं?", options:["शरीर, भोजन, नींद", "शरीर, वाणी, मन", "इन्द्रिय, बुद्धि, अहंकार", "कर्म, ज्ञान, भक्ति"], correct:1},
+    {q:"18.15 किस श्लोक का प्रत्यक्ष विस्तार है?", options:["18.10", "18.12", "18.13-14", "18.7"], correct:2},
+    {q:"'पञ्चैते तस्य हेतवः' में 'पञ्चैते' किनकी ओर संकेत करता है?", options:["पाँच ज्ञानेन्द्रियाँ", "पाँच महाभूत", "18.14 के पाँच कारण", "पाँच प्राण"], correct:2}
+  ];
+  let quizIdx = 0, quizScore = 0, quizAnswered = false;
+
+  function renderQuiz(){
+    const area = document.getElementById('quizArea');
+    if(!area) return;
+    if(quizIdx >= quizData.length){
+      area.innerHTML = '<div class="quiz-score">आपका स्कोर: ' + quizScore + ' / ' + quizData.length + '</div>' +
+        '<div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से प्रश्नोत्तर करें</button></div>';
+      return;
+    }
+    const item = quizData[quizIdx];
+    quizAnswered = false;
+    let html = '<div class="quiz-progress">प्रश्न ' + (quizIdx+1) + ' / ' + quizData.length + '</div>';
+    html += '<div class="quiz-question">' + item.q + '</div>';
+    html += '<div class="quiz-options">';
+    item.options.forEach((opt, i) => {
+      html += '<button class="quiz-opt" onclick="checkQuizAnswer(' + i + ')">' + opt + '</button>';
+    });
+    html += '</div>';
+    html += '<div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';
+    area.innerHTML = html;
+  }
+
+  function checkQuizAnswer(i){
+    if(quizAnswered) return;
+    quizAnswered = true;
+    const item = quizData[quizIdx];
+    const opts = document.querySelectorAll('#quizArea .quiz-opt');
+    opts.forEach((o, idx) => {
+      o.classList.add('disabled');
+      if(idx === item.correct) o.classList.add('correct');
+      else if(idx === i) o.classList.add('wrong');
+    });
+    if(i === item.correct) quizScore++;
+    document.getElementById('quizNextBtn').disabled = false;
+  }
+
+  renderQuiz();
+
+  /* ---- animated walkthrough ---- */
+  const walkSlides = [
+    "18.13 ने कहा: पाँच कारण हैं जो हर कर्म को बनाते हैं। 18.14 ने उन्हें गिनाया। अब 18.15 उन पाँचों को सार्वभौम घोषित करता है।",
+    "कर्म के तीन स्तर — शरीर से जो होता है (हाथ-पाँव-आँख), वाणी से जो होता है (बोलना-लिखना), और मन से जो होता है (सोचना-संकल्प)।",
+    "'न्याय्यं वा विपरीतं वा' — यह द्विभाजन कहता है: अच्छे और बुरे, दोनों कर्म इन्हीं पाँच से बनते हैं। कोई बाहर नहीं।",
+    "यह ज्ञान अहंकार को शांत करता है: जब कुछ अच्छा होता है — पाँचों कारण थे। जब गलती होती है — पाँचों कारण थे। न अत्यधिक अभिमान, न अत्यधिक पश्चाताप।",
+    "18.16 इसी नींव पर बताएगा: जो 'केवल मैं ही कर्ता' मानता है, वह अज्ञानी है। और 18.17 बताएगा: जो इन पाँचों को समझता है — वह बंधन-मुक्त है।",
+    "व्यावहारिक सार: हर कर्म के बाद पूछें — 'इस कर्म में शरीर का, वाणी का, मन का — और पाँचों कारणों का क्या योगदान था?' यह समझ मुक्ति का द्वार है।"
+  ];
+  let walkIdx = 0, walkPlaying = false, walkTimer = null;
+
+  function renderWalk(){
+    const t = document.getElementById('walkText');
+    if(!t) return;
+    t.textContent = walkSlides[walkIdx];
+    const dotsEl = document.getElementById('walkDots');
+    dotsEl.innerHTML = walkSlides.map((_,i) => '<span class="walk-dot' + (i===walkIdx ? ' active' : '') + '"></span>').join('');
+  }
+  function walkNext(){ walkIdx = (walkIdx+1) % walkSlides.length; renderWalk(); }
+  function walkPrev(){ walkIdx = (walkIdx-1+walkSlides.length) % walkSlides.length; renderWalk(); }
+  function walkToggle(){
+    const btn = document.getElementById('walkPlayBtn');
+    walkPlaying = !walkPlaying;
+    if(walkPlaying){
+      btn.textContent = '⏸';
+      walkTimer = setInterval(walkNext, 3200);
+    } else {
+      btn.textContent = '▶';
+      clearInterval(walkTimer);
+    }
+  }
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

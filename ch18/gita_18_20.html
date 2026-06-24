@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.20 — सात्त्विक ज्ञान: सब में एक</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:25.6%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.14),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  /* guna badge */
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(42,106,90,0.2);border:1px solid rgba(42,106,90,0.5);color:#6ecfb8;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-sage{border-left:3px solid var(--sage);background:rgba(92,131,116,0.08);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-sage b{color:#8ecfc0;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(42,106,90,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#6ecfb8;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* unity visual */
+  .unity-viz{margin:20px 0;position:relative;}
+  .unity-ring{border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.6);background:rgba(42,106,90,0.1);}
+  .guna-card.raj{border:1px solid rgba(140,74,32,0.6);background:rgba(140,74,32,0.1);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.6);background:rgba(106,61,122,0.1);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .guna-card.sat.highlight{border-width:2px;box-shadow:0 0 20px rgba(42,106,90,0.3);}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 20 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.२०</div>
+    </div>
+    <div class="guna-badge">🌿 सात्त्विक ज्ञान — ज्ञान त्रयी श्लोक १/३</div>
+    <div class="shloka">
+      सर्वभूतेषु येनैकं भावमव्ययमीक्षते।<br>
+      अविभक्तं विभक्तेषु तज्ज्ञानं विद्धि सात्त्विकम्।।
+    </div>
+    <div class="translit">
+      sarva-bhūteṣu yenaikaṃ bhāvam avyayam īkṣate,<br>
+      avibhaktaṃ vibhakteṣu taj jñānaṃ viddhi sāttvikam
+    </div>
+    <div class="gist">
+      जिस ज्ञान से <b>सब प्राणियों में एक अव्यय (अविनाशी) तत्त्व</b> दिखता है — जो <b>विभक्त (अलग-अलग) में अविभक्त (अखंड)</b> देखता है — उस ज्ञान को <b>सात्त्विक</b> जानो।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- =================== CORE =================== -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ</h3>
+      <p>18.18 ने छः तत्त्वों की दो त्रिपुटियाँ दीं। 18.19 ने घोषणा की — ज्ञान, कर्म, कर्ता तीन-तीन गुणों (सत्त्व/रज/तम) में होते हैं। अब 18.20-22 उस घोषणा का पहला विषय — <b>ज्ञान के तीन प्रकार</b> — विस्तार से देता है।</p>
+      <p>18.20 पहला प्रकार है — <b>सात्त्विक ज्ञान</b>। यह ज्ञान-त्रयी में सर्वोच्च है। इसके बाद 18.21 राजसिक और 18.22 तामसिक ज्ञान का वर्णन करेगा।</p>
+      <div class="callout-sage"><b>18.20 की विशेषता:</b> यह श्लोक <b>अद्वैत दर्शन का सार</b> है। "सब में एक देखना" — उपनिषदों का "अहं ब्रह्मास्मि", "तत्त्वमसि", "सर्वं खल्विदं ब्रह्म" — यही सात्त्विक ज्ञान है। गीता का सबसे ऊँचा philosophical statement।</div>
+      <p>"अविभक्तं विभक्तेषु" — <b>विभाजित में अविभाजित देखना</b> — यह केवल बौद्धिक concept नहीं, यह एक <b>दृष्टि</b> है जो साधना से विकसित होती है। जो यह दृष्टि पा लेता है, वह राग-द्वेष से मुक्त हो जाता है — क्योंकि "दूसरा" ही नहीं रहा।</p>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सर्वभूतेषु</span><span class="word-tr">sarva-bhūteṣu</span></div>
+          <div class="word-meaning">सब प्राणियों में — सप्तमी बहुवचन</div>
+          <div class="word-eng"><b>EN:</b> in all beings / in all creatures</div>
+          <div class="word-deep">सर्व = सभी। भूत = जो हुआ, जो अस्तित्व में है = प्राणी। सप्तमी (में) = अधिकरण। "सर्वभूतेषु" = कीट से ब्रह्मा तक, पत्थर से मनुष्य तक — सभी में।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">येन एकं भावम्</span><span class="word-tr">yena ekaṃ bhāvam</span></div>
+          <div class="word-meaning">जिस (ज्ञान) से एक भाव (तत्त्व) — करण तृतीया</div>
+          <div class="word-eng"><b>EN:</b> by which one reality / one existence</div>
+          <div class="word-deep">येन = जिस साधन से (तृतीया)। एकम् = एक, अद्वितीय। भावम् = अस्तित्व, सत्ता, तत्त्व। "एक भाव" = वह एक तत्त्व जो सब में व्याप्त है — ब्रह्म, आत्मा, चेतना।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अव्ययम् ईक्षते</span><span class="word-tr">avyayam īkṣate</span></div>
+          <div class="word-meaning">अव्यय (अविनाशी/अपरिवर्तनीय) को देखता है</div>
+          <div class="word-eng"><b>EN:</b> perceives as imperishable / undecaying</div>
+          <div class="word-deep">अव्यय = न व्यय होने वाला = अविनाशी, नित्य। ईक्षते = √ईक्ष् (देखना, perceive करना) — यह शारीरिक नहीं, ज्ञान-दृष्टि से देखना है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अविभक्तं विभक्तेषु</span><span class="word-tr">avibhaktaṃ vibhakteṣu</span></div>
+          <div class="word-meaning">विभाजित (अनेक) में अविभाजित (एक) को</div>
+          <div class="word-eng"><b>EN:</b> undivided in the divided / undivided among the divided</div>
+          <div class="word-deep">यह श्लोक का हृदय-पद है। विभक्तेषु = जो बाहर से अलग-अलग दिखते हैं (अनेक शरीर, अनेक जीव)। अविभक्तम् = उनमें वह एक तत्त्व जो अखंड है। जैसे एक मिट्टी, अनेक बर्तन — मिट्टी अविभक्त है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">तत् ज्ञानं विद्धि सात्त्विकम्</span><span class="word-tr">taj jñānaṃ viddhi sāttvikam</span></div>
+          <div class="word-meaning">उस ज्ञान को सात्त्विक जानो — श्रीकृष्ण का आदेश</div>
+          <div class="word-eng"><b>EN:</b> know that knowledge to be sāttvika</div>
+          <div class="word-deep">विद्धि = √विद् का आज्ञार्थ = "जानो, समझो"। सात्त्विकम् = सत्त्व-गुण प्रधान। यह तीन ज्ञानों में सर्वश्रेष्ठ है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        That knowledge by which one sees a single imperishable reality in all beings — undivided in the divided — know that knowledge to be sāttvika.
+      </div>
+      <p>18.20 गीता का <b>एकता-दर्शन</b> (Vision of Oneness) का सूत्र है। सात्त्विक ज्ञान की तीन विशेषताएँ हैं:</p>
+      <p><b>१. एकं भावम् — एक तत्त्व:</b> सात्त्विक ज्ञान अनेकता के पीछे एकता देखता है। हर प्राणी में वही एक चेतना, वही एक आत्मा। "मैं" और "तुम" अलग शरीर हैं पर एक ही सत्ता के प्रकाश हैं।</p>
+      <p><b>२. अव्ययम् — अविनाशी:</b> वह एक तत्त्व नाशवान नहीं। शरीर बदलते हैं, पर वह तत्त्व नित्य है। यह 2.20 ("न जायते म्रियते वा") से जुड़ता है।</p>
+      <p><b>३. अविभक्तं विभक्तेषु — विभाजन में अखंडता:</b> यही सबसे गहरी बात है। बाहर से सब अलग-अलग लगते हैं — पर भीतर से वे एक हैं। जैसे एक समुद्र, अनेक लहरें।</p>
+      <div class="callout"><b>व्यावहारिक अर्थ:</b> जो यह ज्ञान पाता है — वह किसी से घृणा नहीं कर सकता, क्योंकि "दूसरे" में वही तत्त्व दिखता है जो "अपने" में है। किसी को नुकसान पहुँचाना = खुद को नुकसान पहुँचाना। यह ज्ञान करुणा, समभाव, और अहिंसा की जड़ है।</div>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — समुद्र और लहरें:</b> एक समुद्र है। उसमें असंख्य लहरें हैं — छोटी, बड़ी, अलग-अलग। पर सब लहरें एक ही जल हैं। सात्त्विक ज्ञान "जल" देखता है, "लहरें" नहीं। जो केवल लहरें देखता है — वह राजसिक या तामसिक ज्ञान में है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — सोना और गहने:</b> एक ही सोने से अनेक गहने बनते हैं — अंगूठी, कड़ा, हार। सब अलग shape, पर सब सोना। सात्त्विक ज्ञानी "सोना" देखता है — <b>गहनों के रूप में अविभक्त सोने का दर्शन</b> = 18.20 का "अविभक्तं विभक्तेषु।"
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — माँ का प्रेम (आधुनिक):</b> एक माँ अपने बच्चे में वही जीवन-शक्ति देखती है जो उसमें है, जो पड़ोसी के बच्चे में है, जो एक अजनबी में है। जब वह किसी भी बच्चे को तकलीफ में देखकर द्रवित होती है — वह सात्त्विक ज्ञान का अनुभव है। <b>"सर्वभूतेषु एकं भावम्।"</b>
+      </div>
+      <div class="callout"><b>डेली life में कैसे अभ्यास करें:</b> जब किसी से झगड़ा हो — एक पल रुकें और सोचें: "इस व्यक्ति में भी वही जीवन-शक्ति है जो मुझमें है।" यह एक विचार ही क्रोध को आधा कर देता है। यही सात्त्विक ज्ञान का practical form है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">"अविभक्तं विभक्तेषु" — क्या यह सच है? बाहर से तो सब अलग-अलग दिखते हैं।</div>
+        <div class="a">गीता कहती है: बाहर का अनेकत्व REAL है — पर वह एकमात्र सत्य नहीं। जैसे एक नाटक में अनेक पात्र होते हैं — पर सब एक ही actor की भूमिकाएँ हैं। शरीर अलग हैं (विभक्त) — पर आत्मा/चेतना एक है (अविभक्त)। सात्त्विक ज्ञान दोनों स्तरों को देखता है — पर गहरे स्तर को प्राथमिक मानता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या "सब में एक देखना" का मतलब है कि सब समान हैं? फिर अच्छे-बुरे का अंतर कैसे?</div>
+        <div class="a">नहीं — सात्त्विक ज्ञान "व्यावहारिक अंतर" को नकारता नहीं। एक डॉक्टर और एक चोर में कर्म का अंतर है — पर उनकी आत्मा में वही एक चेतना है। "जीवन के स्तर पर एकता, कर्म के स्तर पर अंतर" — दोनों साथ में देखना सात्त्विक ज्ञान है। यह अंतर को नकारना नहीं, गहरी एकता को पहचानना है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.20 और उपनिषदों के "तत्त्वमसि" में क्या संबंध है?</div>
+        <div class="a">"तत्त्वमसि" (छांदोग्य उपनिषद्) = "वह तू है" — ब्रह्म और आत्मा एक हैं। 18.20 का "सर्वभूतेषु एकं भावम्" उसी का व्यावहारिक रूप है। उपनिषद् philosophical statement है — 18.20 उसे ज्ञान के गुण-वर्गीकरण में रखता है और कहता है: यह देखना ही सर्वोच्च ज्ञान है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- =================== PERSPECTIVES =================== -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.20 गीता के सबसे profoundly philosophical श्लोकों में से एक है। यह अद्वैत वेदांत का सार एक पंक्ति में देता है — "अविभक्तं विभक्तेषु।"</p>
+        <p>ज्ञान-त्रयी (18.20-22) में यह सर्वोच्च है। इसके बाद 18.21 (राजसिक) और 18.22 (तामसिक) उससे नीचे के स्तर हैं — contrast से सात्त्विक की महत्ता और स्पष्ट होगी।</p>
+        <div class="callout"><b>Unique feature:</b> इस श्लोक में "एक" और "अनेक" का paradox है — <b>viभक्त में अविभक्त</b>। यह paradox ही सात्त्विक ज्ञान की पहचान है। जो इसे समझता है वह "non-dual awareness" में जीता है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — सात्त्विक ज्ञान के तीन आयाम</h3>
+        <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <!-- Center -->
+          <ellipse cx="350" cy="210" rx="80" ry="50" fill="rgba(42,106,90,0.15)" stroke="rgba(42,106,90,0.6)" stroke-width="1.5"/>
+          <text x="350" y="204" text-anchor="middle" fill="#6ecfb8" font-size="13" font-family="Tiro Devanagari Hindi, serif">सात्त्विक</text>
+          <text x="350" y="222" text-anchor="middle" fill="#cfc3a8" font-size="11">ज्ञान (18.20)</text>
+
+          <!-- Node 1: एकं भावम् -->
+          <line x1="280" y1="178" x2="160" y2="100" stroke="rgba(42,106,90,0.5)" stroke-width="1.3"/>
+          <ellipse cx="120" cy="80" rx="65" ry="38" fill="rgba(42,106,90,0.08)" stroke="rgba(42,106,90,0.45)" stroke-width="1.2"/>
+          <text x="120" y="74" text-anchor="middle" fill="#6ecfb8" font-size="12" font-family="Tiro Devanagari Hindi, serif">एकं भावम्</text>
+          <text x="120" y="90" text-anchor="middle" fill="#cfc3a8" font-size="10">एक तत्त्व</text>
+
+          <!-- Node 2: अव्ययम् -->
+          <line x1="350" y1="160" x2="350" y2="68" stroke="rgba(42,106,90,0.5)" stroke-width="1.3"/>
+          <ellipse cx="350" cy="50" rx="65" ry="34" fill="rgba(42,106,90,0.08)" stroke="rgba(42,106,90,0.45)" stroke-width="1.2"/>
+          <text x="350" y="44" text-anchor="middle" fill="#6ecfb8" font-size="12" font-family="Tiro Devanagari Hindi, serif">अव्ययम्</text>
+          <text x="350" y="60" text-anchor="middle" fill="#cfc3a8" font-size="10">अविनाशी</text>
+
+          <!-- Node 3: अविभक्तं विभक्तेषु -->
+          <line x1="420" y1="178" x2="560" y2="100" stroke="rgba(42,106,90,0.5)" stroke-width="1.3"/>
+          <ellipse cx="598" cy="80" rx="72" ry="38" fill="rgba(42,106,90,0.08)" stroke="rgba(42,106,90,0.45)" stroke-width="1.2"/>
+          <text x="598" y="70" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">अविभक्तं</text>
+          <text x="598" y="84" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">विभक्तेषु</text>
+          <text x="598" y="99" text-anchor="middle" fill="#cfc3a8" font-size="10">विभाजन में अखंडता</text>
+
+          <!-- Bottom results -->
+          <line x1="280" y1="240" x2="160" y2="320" stroke="rgba(42,106,90,0.4)" stroke-width="1.2" stroke-dasharray="4,3"/>
+          <line x1="350" y1="260" x2="350" y2="330" stroke="rgba(42,106,90,0.4)" stroke-width="1.2" stroke-dasharray="4,3"/>
+          <line x1="420" y1="240" x2="560" y2="320" stroke="rgba(42,106,90,0.4)" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+          <rect x="60" y="320" width="175" height="54" rx="10" fill="rgba(42,106,90,0.07)" stroke="rgba(42,106,90,0.3)" stroke-width="1"/>
+          <text x="147" y="342" text-anchor="middle" fill="#cfc3a8" font-size="12" font-family="Tiro Devanagari Hindi, serif">राग-द्वेष से मुक्ति</text>
+          <text x="147" y="360" text-anchor="middle" fill="#cfc3a8" font-size="11">"दूसरा" नहीं रहा</text>
+
+          <rect x="266" y="330" width="168" height="54" rx="10" fill="rgba(42,106,90,0.07)" stroke="rgba(42,106,90,0.3)" stroke-width="1"/>
+          <text x="350" y="352" text-anchor="middle" fill="#cfc3a8" font-size="12" font-family="Tiro Devanagari Hindi, serif">करुणा और समभाव</text>
+          <text x="350" y="370" text-anchor="middle" fill="#cfc3a8" font-size="11">सब में आत्मा</text>
+
+          <rect x="468" y="320" width="175" height="54" rx="10" fill="rgba(42,106,90,0.07)" stroke="rgba(42,106,90,0.3)" stroke-width="1"/>
+          <text x="555" y="342" text-anchor="middle" fill="#cfc3a8" font-size="12" font-family="Tiro Devanagari Hindi, serif">अहिंसा का आधार</text>
+          <text x="555" y="360" text-anchor="middle" fill="#cfc3a8" font-size="11">खुद को नुकसान नहीं</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — अन्य परंपराओं में समान दर्शन</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा</th><th>समान विचार</th><th>18.20 से संबंध</th></tr>
+          <tr><td>अद्वैत वेदांत (शंकर)</td><td>"ब्रह्म सत्यं जगन्मिथ्या" — एक ब्रह्म ही सत्य</td><td>18.20 का "एकं भावम्" = ब्रह्म-दर्शन</td></tr>
+          <tr><td>उपनिषद्</td><td>"सर्वं खल्विदं ब्रह्म" (छां.उ.) "अहं ब्रह्मास्मि"</td><td>18.20 उसी का ज्ञान-वर्गीकरण में application</td></tr>
+          <tr><td>बौद्ध (Indra's Net)</td><td>इंद्र का जाल — हर मणि में सब मणियाँ</td><td>अविभक्तं विभक्तेषु = similar interconnection</td></tr>
+          <tr><td>Sufi दर्शन</td><td>"हमा ऊस्त" (Everything is He) — वहदतुल-वुजूद</td><td>एकं भावम् = same vision of Unity</td></tr>
+          <tr><td>Modern Science</td><td>Quantum entanglement — अलग particles एक दूसरे से जुड़े</td><td>अविभक्तं विभक्तेषु = scientific parallel</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशेषता:</b> अन्य परंपराएँ इस एकता को केवल metaphysics मानती हैं। गीता इसे <b>ज्ञान की quality</b> से जोड़ती है — "यदि तुम्हारा ज्ञान यह एकता देखता है तो वह सात्त्विक है।" यह practical classification है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-sage"><b>अभ्यास — "एकत्व-ध्यान":</b> किसी भी व्यक्ति को देखते समय — एक पल के लिए सोचें: "इस व्यक्ति में भी वही जीवन-शक्ति है जो मुझमें है। यही मेरा आत्मा है, दूसरे रूप में।" यह एक विचार ही धीरे-धीरे सात्त्विक ज्ञान की नींव बनाता है।</div>
+        <p><b>व्यावहारिक test:</b> क्या मैं किसी कीड़े को, किसी अजनबी को, किसी दुश्मन को भी उसी चेतना का हिस्सा मान सकता हूँ जो मुझमें है? जितना ज्यादा यह "हाँ" हो — उतना अधिक सात्त्विक ज्ञान।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "एकं भावम्" = ब्रह्म। "अविभक्तं विभक्तेषु" = एक निर्गुण ब्रह्म ही सब जीवों में प्रतिबिंबित है। यह ज्ञान मोक्ष का सीधा मार्ग है। विभक्तता माया है, अविभक्तता परम सत्य।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "एकं भावम्" = ईश्वर जो सब जीवों में अंतर्यामी है। विभक्त = अलग शरीर और जीव। अविभक्त = उनमें व्याप्त परमात्मा। यह ईश्वर की सर्वव्यापकता का ज्ञान है।</p>
+        <p><b style="color:var(--gold-light)">स्वामी विवेकानंद:</b> "सर्वभूतेषु एकं भावम्" — यही practical Vedanta है। जो यह देखे वह किसी से घृणा नहीं कर सकता। "शिव ज्ञान से जीव सेवा" — यह सात्त्विक ज्ञान का social application है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों की agree — यह ज्ञान सर्वोच्च है। अंतर केवल "वह एक तत्त्व क्या है" पर — ब्रह्म, ईश्वर, या चेतना।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =================== PRACTICE =================== -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सर्वभूतेषु</span></div>
+            <div class="flashcard-face flashcard-back"><b>सब प्राणियों में</b>सर्व+भूत+सप्तमी बहुवचन</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">एकं भावम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>एक तत्त्व/सत्ता</b>ब्रह्म, आत्मा, चेतना — जो सब में</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अव्ययम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>अविनाशी / नित्य</b>न व्यय होने वाला — 2.20 से जुड़ता है</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">ईक्षते</span></div>
+            <div class="flashcard-face flashcard-back"><b>देखता है</b>√ईक्ष् — ज्ञान-दृष्टि से perceive करना</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अविभक्तं विभक्तेषु</span></div>
+            <div class="flashcard-face flashcard-back"><b>विभाजित में अविभाजित</b>18.20 का हृदय-पद — Advaita का सार</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">विद्धि सात्त्विकम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>सात्त्विक जानो</b>विद्धि = आज्ञार्थ। तीन ज्ञानों में सर्वोच्च।</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">सर्वभूतेषु</td><td>सर्व+भूत</td><td>सप्तमी बहुवचन</td><td>सब प्राणियों में — अधिकरण</td></tr>
+          <tr><td class="sa">येन</td><td>यद् सर्वनाम</td><td>तृतीया एकवचन</td><td>जिस (ज्ञान) से — करण</td></tr>
+          <tr><td class="sa">एकम् भावम्</td><td>एक+भाव</td><td>द्वितीया एकवचन</td><td>एक तत्त्व को — कर्म</td></tr>
+          <tr><td class="sa">अव्ययम्</td><td>न+व्यय</td><td>द्वितीया एकवचन</td><td>अविनाशी को — विशेषण</td></tr>
+          <tr><td class="sa">ईक्षते</td><td>√ईक्ष्</td><td>वर्तमान आत्मनेपद</td><td>देखता है — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">अविभक्तम्</td><td>न+विभक्त</td><td>द्वितीया एकवचन</td><td>अविभाजित — कर्म</td></tr>
+          <tr><td class="sa">विभक्तेषु</td><td>वि+√भज्+क्त</td><td>सप्तमी बहुवचन</td><td>विभाजितों में — अधिकरण</td></tr>
+          <tr><td class="sa">विद्धि</td><td>√विद्</td><td>आज्ञार्थ म.पु. एकवचन</td><td>जानो — श्रीकृष्ण का निर्देश</td></tr>
+          <tr><td class="sa">सात्त्विकम्</td><td>सत्त्व+इकन्</td><td>द्वितीया एकवचन</td><td>सात्त्विक — विधेय-विशेषण</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">सर्वभूतेषु येनैकं भावमव्ययमीक्षते।<br>अविभक्तं विभक्तेषु तज्ज्ञानं विद्धि सात्त्विकम्।।</div>
+          <div class="cheat-translit">sarva-bhūteṣu yenaikaṃ bhāvam avyayam īkṣate, avibhaktaṃ vibhakteṣu taj jñānaṃ viddhi sāttvikam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>सर्वभूतेषु</b> सब प्राणियों में</span>
+            <span class="cheat-chip"><b>एकं भावम्</b> एक तत्त्व</span>
+            <span class="cheat-chip"><b>अव्ययम्</b> अविनाशी</span>
+            <span class="cheat-chip"><b>अविभक्तं विभक्तेषु</b> विभाजन में अखंडता</span>
+            <span class="cheat-chip"><b>सात्त्विकम्</b> सर्वोच्च ज्ञान</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: सब में एक अविनाशी तत्त्व देखना — विभाजन में अखंडता — यही सात्त्विक ज्ञान है। यह अद्वैत-दर्शन का सार और करुणा का आधार है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =================== MEDIA =================== -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('सर्वभूतेषु येनैकं भावमव्ययमीक्षते। अविभक्तं विभक्तेषु तज्ज्ञानं विद्धि सात्त्विकम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('सर्वभूतेषु येनैकं भावमव्ययमीक्षते। अविभक्तं विभक्तेषु तज्ज्ञानं विद्धि सात्त्विकम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जिस ज्ञान से सब प्राणियों में एक अविनाशी तत्त्व दिखता है — विभाजितों में अविभाजित — उसे सात्त्विक ज्ञान जानो।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">सर्</span><span class="syll">व</span><span class="syll">भू</span><span class="syll">ते</span><span class="syll">षु</span><span class="syll">ये</span><span class="syll">नै</span><span class="syll">कं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">भा</span><span class="syll">व</span><span class="syll">म</span><span class="syll">व्य</span><span class="syll">य</span><span class="syll">मी</span><span class="syll">क्ष</span><span class="syll">ते</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">वि</span><span class="syll">भ</span><span class="syll">क्तं</span><span class="syll">वि</span><span class="syll">भ</span><span class="syll">क्ते</span><span class="syll">षु</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">त</span><span class="syll">ज्ज्ञा</span><span class="syll">नं</span><span class="syll">वि</span><span class="syll">द्धि</span><span class="syll">सा</span><span class="syll">त्त्वि</span><span class="syll">कम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('सर्वभूतेषु येनैकं भावमव्ययमीक्षते अविभक्तं विभक्तेषु तज्ज्ञानं विद्धि सात्त्विकम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-sage"><b>ध्यान-बिंदु:</b> "अविभक्तं विभक्तेषु" — यह पाँच शब्द 18.20 का हृदय हैं। जप करते समय इन पर रुकें और कल्पना करें: अनेक दीप, एक ही प्रकाश।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== INFOGRAPHICS =================== -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">तीन ज्ञान तुलना</button>
+      <button class="tab-btn" data-tab="e2">एकता का दृश्यरूप</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 ज्ञान के तीन प्रकार — Preview</h3>
+        <p class="subnote">18.20-22 में क्या आ रहा है — तुलना में देखें</p>
+        <div class="three-guna-row">
+          <div class="guna-card sat highlight">
+            <div class="guna-label">🌿 सात्त्विक (18.20)</div>
+            <div class="guna-sa">सब में एक</div>
+            <div class="guna-char">सर्वभूतेषु एकं भावम् — विभाजन में अखंडता देखना। एकता का दर्शन।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 राजसिक (18.21)</div>
+            <div class="guna-sa">अलग-अलग देखना</div>
+            <div class="guna-char">प्रत्येक प्राणी को पृथक् मानना। "यह मेरा, यह तेरा।" भेद-दर्शन।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🌑 तामसिक (18.22)</div>
+            <div class="guna-sa">अधूरा, भ्रामक</div>
+            <div class="guna-char">एक छोटे से काम को "सब कुछ" मानना। संकीर्ण, अयुक्तिसंगत।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Contrast से सात्त्विक की महत्ता:</b> जब 18.21 और 18.22 पढ़ेंगे तो 18.20 का greatness और स्पष्ट होगा। एकता से भेद, भेद से अंधकार — यह ज्ञान का पतन-क्रम है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 "अविभक्तं विभक्तेषु" — दृश्यरूप</h3>
+        <p class="subnote">एकता और अनेकता का paradox — तीन उपमाएँ</p>
+        <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <!-- Ocean metaphor -->
+          <rect x="10" y="40" width="200" height="260" rx="12" fill="rgba(42,106,90,0.06)" stroke="rgba(42,106,90,0.3)" stroke-width="1"/>
+          <text x="110" y="62" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Mukta, sans-serif">🌊 समुद्र और लहरें</text>
+          <ellipse cx="110" cy="200" rx="80" ry="35" fill="rgba(42,106,90,0.2)" stroke="rgba(42,106,90,0.5)" stroke-width="1.2"/>
+          <text x="110" y="205" text-anchor="middle" fill="#6ecfb8" font-size="13" font-family="Tiro Devanagari Hindi, serif">जल = एक</text>
+          <ellipse cx="70" cy="148" rx="30" ry="12" fill="rgba(42,106,90,0.15)" stroke="rgba(42,106,90,0.4)" stroke-width="1"/>
+          <text x="70" y="152" text-anchor="middle" fill="#cfc3a8" font-size="10">लहर</text>
+          <ellipse cx="140" cy="140" rx="28" ry="11" fill="rgba(42,106,90,0.15)" stroke="rgba(42,106,90,0.4)" stroke-width="1"/>
+          <text x="140" y="144" text-anchor="middle" fill="#cfc3a8" font-size="10">लहर</text>
+          <ellipse cx="90" cy="110" rx="22" ry="9" fill="rgba(42,106,90,0.1)" stroke="rgba(42,106,90,0.3)" stroke-width="1"/>
+          <text x="90" y="114" text-anchor="middle" fill="#cfc3a8" font-size="9">लहर</text>
+          <text x="110" y="285" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">अनेक लहरें</text>
+          <text x="110" y="300" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">एक जल</text>
+
+          <!-- Gold metaphor -->
+          <rect x="250" y="40" width="200" height="260" rx="12" fill="rgba(201,162,39,0.05)" stroke="rgba(201,162,39,0.25)" stroke-width="1"/>
+          <text x="350" y="62" text-anchor="middle" fill="#e6c863" font-size="11" font-family="Mukta, sans-serif">💍 सोना और गहने</text>
+          <ellipse cx="350" cy="200" rx="70" ry="30" fill="rgba(201,162,39,0.15)" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <text x="350" y="205" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">सोना = एक</text>
+          <rect x="305" y="130" width="38" height="38" rx="19" fill="rgba(201,162,39,0.12)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="324" y="153" text-anchor="middle" fill="#cfc3a8" font-size="9">कड़ा</text>
+          <rect x="352" y="120" width="38" height="38" rx="8" fill="rgba(201,162,39,0.12)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="371" y="143" text-anchor="middle" fill="#cfc3a8" font-size="9">हार</text>
+          <ellipse cx="335" cy="93" rx="25" ry="17" fill="rgba(201,162,39,0.1)" stroke="rgba(201,162,39,0.3)" stroke-width="1"/>
+          <text x="335" y="97" text-anchor="middle" fill="#cfc3a8" font-size="9">अंगूठी</text>
+          <text x="350" y="285" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">अनेक आकार</text>
+          <text x="350" y="300" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">एक सोना</text>
+
+          <!-- Light metaphor -->
+          <rect x="490" y="40" width="200" height="260" rx="12" fill="rgba(92,131,116,0.05)" stroke="rgba(92,131,116,0.25)" stroke-width="1"/>
+          <text x="590" y="62" text-anchor="middle" fill="#8ecfc0" font-size="11" font-family="Mukta, sans-serif">🕯 दीप और प्रकाश</text>
+          <circle cx="590" cy="200" r="55" fill="rgba(92,131,116,0.12)" stroke="rgba(92,131,116,0.35)" stroke-width="1.2"/>
+          <text x="590" y="205" text-anchor="middle" fill="#8ecfc0" font-size="13" font-family="Tiro Devanagari Hindi, serif">प्रकाश = एक</text>
+          <circle cx="555" cy="140" r="16" fill="rgba(230,200,100,0.15)" stroke="rgba(230,200,100,0.4)" stroke-width="1"/>
+          <text x="555" y="144" text-anchor="middle" fill="#cfc3a8" font-size="9">दीप</text>
+          <circle cx="618" cy="132" r="16" fill="rgba(230,200,100,0.15)" stroke="rgba(230,200,100,0.4)" stroke-width="1"/>
+          <text x="618" y="136" text-anchor="middle" fill="#cfc3a8" font-size="9">दीप</text>
+          <circle cx="575" cy="100" r="14" fill="rgba(230,200,100,0.1)" stroke="rgba(230,200,100,0.3)" stroke-width="1"/>
+          <text x="575" y="104" text-anchor="middle" fill="#cfc3a8" font-size="8">दीप</text>
+          <text x="590" y="285" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">अनेक दीप</text>
+          <text x="590" y="300" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">एक प्रकाश</text>
+        </svg>
+        <div class="callout"><b>"अविभक्तं विभक्तेषु"</b> — तीनों उपमाएँ एक ही सत्य दिखाती हैं: अनेकता के पीछे एकता। यही सात्त्विक ज्ञान है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १८-१९<br>छः तत्त्व + घोषणा</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. २०<br>सात्त्विक ज्ञान ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २१<br>राजसिक ज्ञान</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २२<br>तामसिक ज्ञान</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २३-२५<br>कर्म के तीन प्रकार</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.21):</b> राजसिक ज्ञान — जो प्रत्येक प्राणी को पृथक् मानता है। 18.20 के contrast में देखने पर और स्पष्ट होगा।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.२१) — ☰ नेविगेशन — राजसिक ज्ञान: भेद-दर्शन</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window)){return;}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.20 के अनुसार सात्त्विक ज्ञान क्या देखता है?",options:["हर प्राणी को अलग-अलग","सब प्राणियों में एक अविनाशी तत्त्व","केवल अपने आत्मा को","भगवान को सब में"],correct:1},
+    {q:"'अविभक्तं विभक्तेषु' का क्या अर्थ है?",options:["विभाजित तत्त्व अलग हैं","विभाजितों में अविभाजित देखना","सब अलग-अलग हैं","विभाजन सत्य है"],correct:1},
+    {q:"'अव्ययम्' का अर्थ क्या है?",options:["व्यर्थ","परिवर्तनशील","अविनाशी/नित्य","अव्यक्त"],correct:2},
+    {q:"18.20 किस दर्शन का सार है?",options:["द्वैत वेदांत","सांख्य","अद्वैत वेदांत","मीमांसा"],correct:2},
+    {q:"'विद्धि' किस धातु का रूप है और इसका अर्थ क्या है?",options:["√वध् — मारना","√विद् — जानना (आज्ञार्थ)","√विधि — नियम","√वि+द — देना"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div>';html+='<div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.19 ने घोषणा की: ज्ञान तीन प्रकार का होता है। 18.20 पहला — और सर्वोच्च — सात्त्विक ज्ञान बताता है।",
+    "'सर्वभूतेषु येनैकं भावम्' — जिस ज्ञान से सब प्राणियों में एक ही तत्त्व दिखता है। कीट से ब्रह्मा तक — एक चेतना।",
+    "'अव्ययम्' — वह तत्त्व अविनाशी है। शरीर बदलते हैं, पर वह तत्त्व नित्य है। 2.20 ('न जायते म्रियते वा') यहाँ जुड़ता है।",
+    "'अविभक्तं विभक्तेषु' — यही श्लोक का हृदय है। बाहर से अलग-अलग दिखने वाले प्राणियों में वह एक तत्त्व अखंड है। जैसे अनेक लहरें — एक जल।",
+    "यह ज्ञान करुणा का आधार है। जब 'दूसरे' में 'अपना' तत्त्व दिखे — तो द्वेष कैसे होगा? सात्त्विक ज्ञान राग-द्वेष से मुक्ति देता है।",
+    "अगला (18.21) राजसिक ज्ञान — जो प्रत्येक को अलग देखता है। 18.20 के contrast में राजसिक की सीमा स्पष्ट होगी।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

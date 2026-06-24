@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.18 — ज्ञान-ज्ञेय-परिज्ञाता और करण-कर्म-कर्ता की दो त्रिपुटियाँ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:23.1%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s ease;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .mindmap-box{width:100%;height:auto;}
+  .mm-line{stroke:#7a623a;stroke-width:1.4;opacity:0.55;}
+  .mm-node-circle{fill:rgba(255,255,255,0.04);stroke:#c9a227;stroke-width:1.2;}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.12);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s ease;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* दो त्रिपुटी */
+  .triputi-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0;}
+  .triputi-box{border-radius:14px;padding:20px 16px;}
+  .triputi-box.jnana{border:1px solid rgba(201,162,39,0.5);background:rgba(201,162,39,0.06);}
+  .triputi-box.karma{border:1px solid rgba(92,131,116,0.5);background:rgba(92,131,116,0.06);}
+  .triputi-label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
+  .triputi-box.jnana .triputi-label{color:var(--gold-light);}
+  .triputi-box.karma .triputi-label{color:#8ecfc0;}
+  .triputi-items{display:flex;flex-direction:column;gap:8px;}
+  .tri-item{display:flex;align-items:center;gap:10px;}
+  .tri-num{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+  .triputi-box.jnana .tri-num{background:rgba(201,162,39,0.2);color:var(--gold-light);}
+  .triputi-box.karma .tri-num{background:rgba(92,131,116,0.2);color:#8ecfc0;}
+  .tri-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);}
+  .tri-en{font-size:12px;color:var(--cream-dim);}
+  .triputi-name{font-family:'Tiro Devanagari Hindi',serif;font-size:14px;color:var(--cream-dim);margin-top:12px;padding-top:10px;border-top:1px solid var(--line);text-align:center;}
+  @media(max-width:520px){.triputi-row{grid-template-columns:1fr;}}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.road-track{flex-wrap:wrap;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 18 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.१८</div>
+    </div>
+    <div class="shloka">
+      ज्ञानं ज्ञेयं परिज्ञाता त्रिविधा कर्मचोदना।<br>
+      करणं कर्म कर्तेति त्रिविधः कर्मसंग्रहः।।
+    </div>
+    <div class="translit">
+      jñānaṃ jñeyaṃ parijñātā trividhā karma-codanā,<br>
+      karaṇaṃ karma karteti trividhaḥ karma-saṃgrahaḥ
+    </div>
+    <div class="gist">
+      <b>ज्ञान, ज्ञेय, परिज्ञाता</b> — ये तीन <b>कर्मचोदना</b> (कर्म की प्रेरणा) हैं। और <b>करण, कर्म, कर्ता</b> — ये तीन <b>कर्मसंग्रह</b> (कर्म का आधार/संग्रह) हैं। कर्म की जड़ दो त्रिपुटियों में है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- =================== CORE =================== -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — नया अध्याय शुरू</h3>
+      <p>18.13-17 में श्रीकृष्ण ने कर्म के <b>पाँच कारणों</b> की श्रृंखला पूर्ण की — और 18.17 में ज्ञानी की मुक्ति का golden conclusion दिया। अब 18.18 एक <b>बिल्कुल नया topic</b> प्रारंभ करता है।</p>
+      <p>यदि 18.13-17 कर्म का "कारण-विश्लेषण" था — तो 18.18 कर्म का "<b>संरचना-विश्लेषण</b>" है। यहाँ पूछा जा रहा है: कर्म होने के लिए कौन से तत्त्व आवश्यक हैं? कर्म कैसे प्रेरित होता है, और कर्म की संरचना क्या है?</p>
+      <div class="callout"><b>18.18 का योगदान:</b> यह श्लोक दो त्रिपुटियाँ (triads) देता है — एक जो कर्म को <b>प्रेरित</b> करती है (ज्ञान-त्रयी), और एक जो कर्म को <b>संपन्न</b> करती है (कर्म-त्रयी)। ये छः तत्त्व मिलकर हर कर्म का पूरा ब्लूप्रिंट बनाते हैं। 18.19 आगे इन्हें गुणों के अनुसार तीन-तीन प्रकारों में बाँटेगा।</div>
+      <p>यह श्लोक सांख्य-दर्शन की जड़ों से आता है जहाँ "ज्ञाता, ज्ञान, ज्ञेय" और "कर्ता, करण, क्रिया" को कर्म के आवश्यक घटक माना गया है।</p>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">ज्ञानम्</span><span class="word-tr">jñānam</span></div>
+          <div class="word-meaning">ज्ञान — जानने की क्रिया/शक्ति; विषय का बोध</div>
+          <div class="word-eng"><b>EN:</b> knowledge / the act of knowing</div>
+          <div class="word-deep">√ज्ञा (जानना) + ल्युट् प्रत्यय। यहाँ "ज्ञान" = वह माध्यम जिससे विषय जाना जाता है — ज्ञान-शक्ति या ज्ञान-क्रिया। यह कर्म की cognitive motivation का पहला घटक है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">ज्ञेयम्</span><span class="word-tr">jñeyam</span></div>
+          <div class="word-meaning">ज्ञेय — जो जानने योग्य है; कर्म का विषय/लक्ष्य</div>
+          <div class="word-eng"><b>EN:</b> the knowable / object of knowledge / goal</div>
+          <div class="word-deep">√ज्ञा + यत् (कर्मवाच्य-कृत्य) = जो जाना जाना चाहिए। यह "क्या करना है" का ज्ञान है — कर्म का लक्ष्य या विषय। इसके बिना कर्म की दिशा नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">परिज्ञाता</span><span class="word-tr">parijñātā</span></div>
+          <div class="word-meaning">परिज्ञाता — पूर्णतः जानने वाला; ज्ञाता; कर्म का प्रेरक-चेतना</div>
+          <div class="word-eng"><b>EN:</b> the knower / conscious agent who knows</div>
+          <div class="word-deep">परि (पूर्णतः) + √ज्ञा + तृ (कर्ता-प्रत्यय) = भली-भाँति जानने वाला। यह जीवात्मा/चेतना है जो ज्ञान का प्रयोग करके कर्म करती है। "पूर्ण ज्ञाता" — अर्थात् वह जो सम्पूर्ण जानकारी से सम्पन्न है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">त्रिविधा कर्मचोदना</span><span class="word-tr">trividhā karma-codanā</span></div>
+          <div class="word-meaning">कर्म की तीन प्रकार की प्रेरणा — पहली त्रिपुटी का नाम</div>
+          <div class="word-eng"><b>EN:</b> the threefold impulse/motivation to action</div>
+          <div class="word-deep">त्रिविधा = तीन प्रकार की। चोदना = √चुद् (प्रेरित करना) + ल्युट् = प्रेरणा, impulse। ये तीनों (ज्ञान, ज्ञेय, परिज्ञाता) मिलकर कर्म होने की <b>भीतरी प्रेरणा</b> बनाते हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">करणम्</span><span class="word-tr">karaṇam</span></div>
+          <div class="word-meaning">करण — यंत्र/साधन; जिससे कर्म किया जाता है (इन्द्रियाँ, शरीर, मन)</div>
+          <div class="word-eng"><b>EN:</b> the instrument / means of action</div>
+          <div class="word-deep">√कृ + ल्युट् = करने का साधन। यह 18.14 के "करणम्" से जुड़ता है — इन्द्रियाँ, हाथ, वाणी, मन। पर यहाँ कर्म की <b>संरचना</b> में भूमिका बता रहा है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कर्म</span><span class="word-tr">karma</span></div>
+          <div class="word-meaning">कर्म — क्रिया स्वयं; जो किया जाता है</div>
+          <div class="word-eng"><b>EN:</b> the action itself / the deed</div>
+          <div class="word-deep">यहाँ "कर्म" = क्रिया (action itself) — साधन नहीं, फल नहीं, बल्कि वह घटना जो हो रही है। यह तीन में से एक घटक है जो कर्म को पूर्ण करता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कर्ता — त्रिविधः कर्मसंग्रहः</span><span class="word-tr">kartā — trividhaḥ karma-saṃgrahaḥ</span></div>
+          <div class="word-meaning">कर्ता (करने वाला) — ये तीन मिलकर "कर्मसंग्रह" (कर्म का संग्रह/आधार) हैं</div>
+          <div class="word-eng"><b>EN:</b> the doer — these three constitute the basis of action</div>
+          <div class="word-deep">कर्मसंग्रह = कर्म + संग्रह (सम्+√ग्रह् = एकत्र करना)। कर्म का संग्रह = कर्म के सभी घटकों का समावेश। कर्ता + करण + क्रिया = कर्म की पूरी operative structure।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Knowledge, the object of knowledge, and the knower — these three constitute the threefold impulse to action. The instrument, the action itself, and the doer — these three form the threefold basis of action.
+      </div>
+
+      <p>यह श्लोक कर्म को दो कोणों से देखता है:</p>
+
+      <div class="triputi-row">
+        <div class="triputi-box jnana">
+          <div class="triputi-label">⬆ कर्मचोदना — प्रेरणा-त्रयी</div>
+          <div class="triputi-items">
+            <div class="tri-item"><span class="tri-num">१</span><div><div class="tri-sa">ज्ञानम्</div><div class="tri-en">Knowledge — जानने की शक्ति</div></div></div>
+            <div class="tri-item"><span class="tri-num">२</span><div><div class="tri-sa">ज्ञेयम्</div><div class="tri-en">Object — क्या करना है</div></div></div>
+            <div class="tri-item"><span class="tri-num">३</span><div><div class="tri-sa">परिज्ञाता</div><div class="tri-en">Knower — जानने वाला</div></div></div>
+          </div>
+          <div class="triputi-name">भीतरी प्रेरणा — कर्म से पहले</div>
+        </div>
+        <div class="triputi-box karma">
+          <div class="triputi-label">⚙ कर्मसंग्रह — क्रिया-त्रयी</div>
+          <div class="triputi-items">
+            <div class="tri-item"><span class="tri-num">१</span><div><div class="tri-sa">करणम्</div><div class="tri-en">Instrument — साधन/इन्द्रियाँ</div></div></div>
+            <div class="tri-item"><span class="tri-num">२</span><div><div class="tri-sa">कर्म</div><div class="tri-en">Action — क्रिया स्वयं</div></div></div>
+            <div class="tri-item"><span class="tri-num">३</span><div><div class="tri-sa">कर्ता</div><div class="tri-en">Doer — करने वाला</div></div></div>
+          </div>
+          <div class="triputi-name">बाहरी संरचना — कर्म के दौरान</div>
+        </div>
+      </div>
+
+      <p><b>दोनों त्रिपुटियों का संबंध:</b> पहली त्रिपुटी (कर्मचोदना) = "WHY and WHAT" — ज्ञान से प्रेरणा मिलती है, ज्ञेय लक्ष्य देता है, परिज्ञाता चेतना देता है। दूसरी त्रिपुटी (कर्मसंग्रह) = "HOW" — करण साधन है, कर्म क्रिया है, कर्ता उसका संचालक।</p>
+      <div class="callout"><b>18.13-17 से फर्क:</b> 18.14 में पाँच कारण थे जो "क्यों कर्म होता है" बताते थे। 18.18 में छः घटक हैं जो "कर्म की पूरी संरचना" बताते हैं। दोनों अलग frameworks हैं — एक causation का, दूसरा structure का। 18.19-28 इन छः में से हर एक को सात्त्विक, राजसिक, तामसिक — तीन प्रकारों में बाँटेगा।</div>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — एक डॉक्टर का निदान और उपचार:</b><br>
+        <b>कर्मचोदना (प्रेरणा):</b> ज्ञान = चिकित्सा विज्ञान का बोध; ज्ञेय = रोगी की बीमारी (क्या ठीक करना है); परिज्ञाता = डॉक्टर की चेतना जो सब जानती है।<br>
+        <b>कर्मसंग्रह (क्रिया):</b> करण = हाथ, उपकरण, दवाइयाँ; कर्म = उपचार-क्रिया; कर्ता = डॉक्टर।<br>
+        छहों तत्त्व मिलकर पूर्ण कर्म बनाते हैं।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — एक संगीतकार का प्रदर्शन:</b><br>
+        <b>कर्मचोदना:</b> ज्ञान = संगीत का ज्ञान (राग, ताल); ज्ञेय = जो राग बजाना है (लक्ष्य); परिज्ञाता = संगीतकार की अंतर-चेतना।<br>
+        <b>कर्मसंग्रह:</b> करण = सितार/वाद्य-यंत्र, उंगलियाँ; कर्म = वादन-क्रिया; कर्ता = संगीतकार।<br>
+        <b>यदि कोई भी एक तत्त्व अनुपस्थित हो — कर्म अधूरा रहेगा।</b>
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — रोज़ सुबह चाय बनाना (साधारण कर्म):</b><br>
+        <b>कर्मचोदना:</b> ज्ञान = चाय बनाने की विधि; ज्ञेय = चाय (क्या बनाना है); परिज्ञाता = आप — जो इसे जानते हैं।<br>
+        <b>कर्मसंग्रह:</b> करण = हाथ, केतली, गैस; कर्म = चाय बनाना; कर्ता = आप।<br>
+        छह में से एक भी हटाएँ — कर्म नहीं होगा।
+      </div>
+      <div class="callout"><b>महत्त्वपूर्ण अंतर्दृष्टि:</b> 18.18 यह बताता है कि कर्म कोई "अचानक" नहीं होता — उसमें एक पूरी cognitive and operative structure होती है। जब हम किसी कर्म को बेहतर बनाना चाहते हैं — इन छः में से किस को सुधारें? यही व्यावहारिक प्रश्न 18.18 का जवाब है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">18.14 में भी "करण" और "कर्ता" थे — 18.18 में फिर क्यों?</div>
+        <div class="a">18.14 = कर्म के <b>कारण</b> (causation) — क्यों कर्म होता है, उसके पाँच हेतु। 18.18 = कर्म की <b>संरचना</b> (structure) — कर्म में कौन-कौन से घटक हैं। "करण" और "कर्ता" दोनों frameworks में हैं, पर दृष्टिकोण अलग है। जैसे किसी दुर्घटना के "कारण" और दुर्घटना की "संरचना" — दोनों अलग विश्लेषण हैं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"कर्मचोदना" और "कर्मसंग्रह" में sequence क्या है?</div>
+        <div class="a">कर्मचोदना पहले — यह भीतर की प्रेरणा है (motivation → before action)। कर्मसंग्रह बाद में — यह बाहरी क्रिया की संरचना है (execution → during action)। जैसे: पहले ज्ञान से लक्ष्य दिखता है, फिर करण से क्रिया होती है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"परिज्ञाता" और "कर्ता" — दोनों "करने वाले" नहीं हैं? क्या अंतर है?</div>
+        <div class="a">परिज्ञाता = <b>cognitive agent</b> — जो जानता है, जिसमें ज्ञान और ज्ञेय का बोध है। यह भीतरी चेतना है। कर्ता = <b>operative agent</b> — जो करता है, जो करण से कर्म करता है। यह बाहरी क्रिया-संचालक है। एक ही व्यक्ति दोनों होता है — पर दो अलग भूमिकाओं में।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.18 के बाद 18.19-28 क्या करेगा?</div>
+        <div class="a">18.19-28 इन छः में से प्रत्येक (ज्ञान, कर्म, कर्ता, करण, बुद्धि, धृति) को तीन गुणों (सात्त्विक, राजसिक, तामसिक) में बाँटेगा। 18.18 framework देता है, 18.19-28 उसे classify करता है। इसीलिए 18.18 इस पूरे section का "header" है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div><!-- /mode-core -->
+
+  <!-- =================== PERSPECTIVES =================== -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.18 एक "<b>hinge verse</b>" है — यह 18.13-17 के कारण-विश्लेषण को बंद करता है और 18.19-28 के गुण-वर्गीकरण का द्वार खोलता है।</p>
+        <p>इस श्लोक की दो त्रिपुटियाँ (छः तत्त्व) <b>18.19-28 के दस श्लोकों का ढाँचा</b> तैयार करती हैं — हर तत्त्व को सात्त्विक, राजसिक, तामसिक रूप में समझाया जाएगा। अतः 18.18 के बिना 18.19-28 की नींव नहीं बनती।</p>
+        <div class="callout"><b>गीता की रचना-कुशलता:</b> श्रीकृष्ण पहले framework देते हैं (18.18), फिर उसे classify करते हैं (18.19-28)। यह top-down teaching method है — पहले structure, फिर detail।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — दो त्रिपुटियाँ और उनका प्रवाह</h3>
+        <p class="subnote">कर्मचोदना (प्रेरणा) → कर्म → कर्मसंग्रह (क्रिया)</p>
+        <svg class="mindmap-box" viewBox="0 0 700 440" xmlns="http://www.w3.org/2000/svg">
+          <!-- Left: Codana -->
+          <rect x="20" y="60" width="200" height="200" rx="14" fill="rgba(201,162,39,0.06)" stroke="rgba(201,162,39,0.4)" stroke-width="1.3"/>
+          <text x="120" y="86" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi, serif">कर्मचोदना</text>
+          <text x="120" y="102" text-anchor="middle" fill="#cfc3a8" font-size="10">(प्रेरणा-त्रयी)</text>
+
+          <circle cx="120" cy="140" r="28" fill="rgba(201,162,39,0.1)" stroke="#c9a227" stroke-width="1"/>
+          <text x="120" y="136" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">ज्ञानम्</text>
+          <text x="120" y="151" text-anchor="middle" fill="#cfc3a8" font-size="10">ज्ञान</text>
+
+          <circle cx="60" cy="210" r="28" fill="rgba(201,162,39,0.1)" stroke="#c9a227" stroke-width="1"/>
+          <text x="60" y="206" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">ज्ञेयम्</text>
+          <text x="60" y="221" text-anchor="middle" fill="#cfc3a8" font-size="10">विषय</text>
+
+          <circle cx="178" cy="210" r="28" fill="rgba(201,162,39,0.1)" stroke="#c9a227" stroke-width="1"/>
+          <text x="178" y="204" text-anchor="middle" fill="#e6c863" font-size="10" font-family="Tiro Devanagari Hindi, serif">परिज्ञाता</text>
+          <text x="178" y="220" text-anchor="middle" fill="#cfc3a8" font-size="10">ज्ञाता</text>
+
+          <!-- Arrow -->
+          <text x="348" y="180" text-anchor="middle" fill="#c9a227" font-size="30">→</text>
+          <text x="348" y="210" text-anchor="middle" fill="#cfc3a8" font-size="10">कर्म</text>
+          <text x="348" y="224" text-anchor="middle" fill="#cfc3a8" font-size="10">होता है</text>
+
+          <!-- Center: Karma itself -->
+          <circle cx="350" cy="150" r="36" fill="rgba(140,44,59,0.12)" stroke="#8c2c3b" stroke-width="1.5"/>
+          <text x="350" y="145" text-anchor="middle" fill="#e8a4ad" font-size="14" font-family="Tiro Devanagari Hindi, serif">कर्म</text>
+          <text x="350" y="162" text-anchor="middle" fill="#cfc3a8" font-size="10">क्रिया</text>
+
+          <!-- Right: Sangrah -->
+          <rect x="480" y="60" width="200" height="200" rx="14" fill="rgba(92,131,116,0.06)" stroke="rgba(92,131,116,0.4)" stroke-width="1.3"/>
+          <text x="580" y="86" text-anchor="middle" fill="#8ecfc0" font-size="13" font-family="Tiro Devanagari Hindi, serif">कर्मसंग्रह</text>
+          <text x="580" y="102" text-anchor="middle" fill="#cfc3a8" font-size="10">(क्रिया-त्रयी)</text>
+
+          <circle cx="580" cy="140" r="28" fill="rgba(92,131,116,0.12)" stroke="#5c8374" stroke-width="1"/>
+          <text x="580" y="136" text-anchor="middle" fill="#8ecfc0" font-size="12" font-family="Tiro Devanagari Hindi, serif">करणम्</text>
+          <text x="580" y="151" text-anchor="middle" fill="#cfc3a8" font-size="10">साधन</text>
+
+          <circle cx="520" cy="210" r="28" fill="rgba(92,131,116,0.12)" stroke="#5c8374" stroke-width="1"/>
+          <text x="520" y="206" text-anchor="middle" fill="#8ecfc0" font-size="12" font-family="Tiro Devanagari Hindi, serif">कर्म</text>
+          <text x="520" y="221" text-anchor="middle" fill="#cfc3a8" font-size="10">क्रिया</text>
+
+          <circle cx="638" cy="210" r="28" fill="rgba(92,131,116,0.12)" stroke="#5c8374" stroke-width="1"/>
+          <text x="638" y="206" text-anchor="middle" fill="#8ecfc0" font-size="12" font-family="Tiro Devanagari Hindi, serif">कर्ता</text>
+          <text x="638" y="221" text-anchor="middle" fill="#cfc3a8" font-size="10">करने वाला</text>
+
+          <!-- Bottom label -->
+          <text x="120" y="300" text-anchor="middle" fill="#cfc3a8" font-size="12">WHY + WHAT</text>
+          <text x="120" y="316" text-anchor="middle" fill="#c9a227" font-size="11">भीतरी प्रेरणा</text>
+
+          <text x="580" y="300" text-anchor="middle" fill="#cfc3a8" font-size="12">HOW</text>
+          <text x="580" y="316" text-anchor="middle" fill="#5c8374" font-size="11">बाहरी संरचना</text>
+
+          <!-- 18.19+ -->
+          <rect x="180" y="360" width="340" height="48" rx="10" fill="rgba(201,162,39,0.05)" stroke="var(--line)" stroke-width="1"/>
+          <text x="350" y="382" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">18.19-28 → इनमें से हर एक</text>
+          <text x="350" y="398" text-anchor="middle" fill="#cfc3a8" font-size="11">सात्त्विक / राजसिक / तामसिक होगा</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — अन्य परंपराओं में समान विचार</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा</th><th>समान त्रिपुटी</th><th>18.18 से संबंध</th></tr>
+          <tr><td>सांख्य दर्शन</td><td>ज्ञाता + ज्ञान + ज्ञेय — Triputi of Epistemology</td><td>18.18 की कर्मचोदना सांख्य की ज्ञान-त्रयी है</td></tr>
+          <tr><td>न्याय दर्शन</td><td>प्रमाता + प्रमाण + प्रमेय (Knower + Means + Object)</td><td>लगभग समान cognitive triad</td></tr>
+          <tr><td>पाश्चात्य epistemology</td><td>Subject + Knowledge + Object</td><td>18.18 का परिज्ञाता-ज्ञान-ज्ञेय इसी का Sanskrit रूप</td></tr>
+          <tr><td>Aristotle का action theory</td><td>Agent + Means + End (कर्ता + साधन + उद्देश्य)</td><td>कर्मसंग्रह (कर्ता + करण + कर्म) से मिलता है</td></tr>
+          <tr><td>बौद्ध अभिधर्म</td><td>चेतस् + चैत्त + आलंबन (Mind + Mental factors + Object)</td><td>18.18 की कर्मचोदना से आंशिक समानता</td></tr>
+        </table>
+        <div class="callout"><b>गीता की अनूठी बात:</b> गीता इन दार्शनिक categories को मात्र academic नहीं मानती — वह इन्हें गुण-वर्गीकरण से जोड़ती है (18.19-28)। यह philosophy को ethics और spirituality से जोड़ने की गीता की विशेषता है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <p>18.18 का ज्ञान कर्म-शुद्धि में कैसे काम करे?</p>
+        <div class="callout"><b>अभ्यास — "छः-तत्त्व परीक्षण":</b> किसी भी कर्म से पहले या बाद में यह जाँचें:<br>
+          ① <b>ज्ञान:</b> मैं इस कर्म के बारे में पर्याप्त जानता हूँ?<br>
+          ② <b>ज्ञेय:</b> मेरा लक्ष्य/उद्देश्य स्पष्ट है?<br>
+          ③ <b>परिज्ञाता:</b> मेरी चेतना जागृत और सचेत है?<br>
+          ④ <b>करण:</b> मेरे साधन/उपकरण उचित हैं?<br>
+          ⑤ <b>कर्म:</b> क्रिया सही है?<br>
+          ⑥ <b>कर्ता:</b> मेरी मनोदशा/भाव उचित है?<br>
+          कोई भी कमज़ोर हो — वहाँ ध्यान दें।</div>
+        <p>यह framework किसी भी कर्म की "quality audit" के लिए उपयोगी है — कार्यस्थल से लेकर साधना तक।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">आदि शंकराचार्य:</b> "ज्ञान, ज्ञेय, परिज्ञाता" — ये तीन ज्ञान की त्रिपुटी हैं जो कर्म को उत्पन्न करती हैं। "करण, कर्म, कर्ता" — ये तीन कर्म के अनिवार्य घटक हैं। शंकर के अनुसार ये सभी व्यावहारिक (vyāvahārika) सत्य हैं — परमार्थतः केवल ब्रह्म है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> छहों तत्त्व ईश्वर-अधीन हैं। परिज्ञाता = जीव, जो ईश्वर की शक्ति से जानता है। कर्ता = जीव, जो ईश्वर की प्रेरणा से करता है। यह ईश्वर-जीव-प्रकृति के त्रितत्त्व से जुड़ता है।</p>
+        <p><b style="color:var(--gold-light)">आधुनिक भाष्य (स्वामी चिन्मयानंद):</b> यह श्लोक action का "Anatomy" है। कोई भी meaningful action इन छः के बिना संभव नहीं। 18.19-28 इनके "quality levels" बताएगा।</p>
+        <div class="callout"><b>साझा बिंदु:</b> सभी आचार्य सहमत — 18.18 एक <b>classification framework</b> है जिसे आगे गुणों के आधार पर समझाया जाएगा।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-perspectives -->
+
+  <!-- =================== PRACTICE =================== -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड — छः तत्त्वों का रिवीजन</h3>
+        <p class="flash-instructions">कार्ड पर क्लिक करें → पद, पीछे अर्थ और त्रिपुटी</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">ज्ञानम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>ज्ञान</b>जानने की शक्ति/बोध<br><small>कर्मचोदना — घटक १</small></div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">ज्ञेयम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>ज्ञेय</b>जो जानने योग्य है / लक्ष्य<br><small>कर्मचोदना — घटक २</small></div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">परिज्ञाता</span></div>
+            <div class="flashcard-face flashcard-back"><b>परिज्ञाता</b>पूर्णतः जानने वाला<br><small>कर्मचोदना — घटक ३</small></div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">करणम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>करण</b>यंत्र / साधन / इन्द्रियाँ<br><small>कर्मसंग्रह — घटक १</small></div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कर्म (संग्रह में)</span></div>
+            <div class="flashcard-face flashcard-back"><b>कर्म</b>क्रिया स्वयं<br><small>कर्मसंग्रह — घटक २</small></div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कर्ता</span></div>
+            <div class="flashcard-face flashcard-back"><b>कर्ता</b>करने वाला — operative agent<br><small>कर्मसंग्रह — घटक ३</small></div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <p class="subnote">दो compound terms — कर्मचोदना और कर्मसंग्रह</p>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल/विग्रह</th><th>प्रत्यय/विभक्ति</th><th>अर्थ</th></tr>
+          <tr><td class="sa">ज्ञानम्</td><td>√ज्ञा + ल्युट्</td><td>नपुंसक प्रथमा</td><td>जानने की क्रिया/ज्ञान</td></tr>
+          <tr><td class="sa">ज्ञेयम्</td><td>√ज्ञा + यत् (कर्मवाच्य)</td><td>नपुंसक प्रथमा</td><td>जो जानने योग्य है</td></tr>
+          <tr><td class="sa">परिज्ञाता</td><td>परि + √ज्ञा + तृ</td><td>पुल्लिंग प्रथमा</td><td>पूर्णतः जानने वाला</td></tr>
+          <tr><td class="sa">त्रिविधा</td><td>त्रि + विध + टाप्</td><td>स्त्री. प्रथमा</td><td>तीन प्रकार की</td></tr>
+          <tr><td class="sa">कर्मचोदना</td><td>कर्म + √चुद् + ल्युट् + टाप्</td><td>स्त्री. प्रथमा</td><td>कर्म की प्रेरणा</td></tr>
+          <tr><td class="sa">करणम्</td><td>√कृ + ल्युट्</td><td>नपुंसक प्रथमा</td><td>यंत्र, साधन</td></tr>
+          <tr><td class="sa">कर्मसंग्रहः</td><td>कर्म + सम् + √ग्रह् + घञ्</td><td>पुल्लिंग प्रथमा</td><td>कर्म का संग्रह/आधार</td></tr>
+          <tr><td class="sa">त्रिविधः</td><td>त्रि + विध</td><td>पुल्लिंग प्रथमा</td><td>तीन प्रकार का</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">ज्ञानं ज्ञेयं परिज्ञाता त्रिविधा कर्मचोदना।<br>करणं कर्म कर्तेति त्रिविधः कर्मसंग्रहः।।</div>
+          <div class="cheat-translit">jñānaṃ jñeyaṃ parijñātā trividhā karma-codanā, karaṇaṃ karma karteti trividhaḥ karma-saṃgrahaḥ</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip" style="border-color:rgba(201,162,39,0.4)"><b>ज्ञान</b> प्रेरणा-१</span>
+            <span class="cheat-chip" style="border-color:rgba(201,162,39,0.4)"><b>ज्ञेय</b> प्रेरणा-२</span>
+            <span class="cheat-chip" style="border-color:rgba(201,162,39,0.4)"><b>परिज्ञाता</b> प्रेरणा-३</span>
+            <span class="cheat-chip" style="border-color:rgba(92,131,116,0.4)"><b>करण</b> क्रिया-१</span>
+            <span class="cheat-chip" style="border-color:rgba(92,131,116,0.4)"><b>कर्म</b> क्रिया-२</span>
+            <span class="cheat-chip" style="border-color:rgba(92,131,116,0.4)"><b>कर्ता</b> क्रिया-३</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: हर कर्म में छः तत्त्व हैं — तीन भीतरी प्रेरणा (WHY+WHAT+WHO knows) और तीन बाहरी संरचना (HOW+WHAT action+WHO does)। 18.19-28 इन्हें गुणों से classify करेगा।</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /mode-practice -->
+
+  <!-- =================== MEDIA =================== -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('ज्ञानं ज्ञेयं परिज्ञाता त्रिविधा कर्मचोदना। करणं कर्म कर्तेति त्रिविधः कर्मसंग्रहः।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('ज्ञानं ज्ञेयं परिज्ञाता त्रिविधा कर्मचोदना। करणं कर्म कर्तेति त्रिविधः कर्मसंग्रहः।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('ज्ञान, ज्ञेय और परिज्ञाता — ये तीन कर्म की प्रेरणा हैं। करण, कर्म और कर्ता — ये तीन कर्म का संग्रह हैं।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">ज्ञा</span><span class="syll">नं</span><span class="syll">ज्ञे</span><span class="syll">यं</span><span class="syll">प</span><span class="syll">रि</span><span class="syll">ज्ञा</span><span class="syll">ता</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">त्रि</span><span class="syll">वि</span><span class="syll">धा</span><span class="syll">कर्</span><span class="syll">म</span><span class="syll">चो</span><span class="syll">द</span><span class="syll">ना</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">क</span><span class="syll">र</span><span class="syll">णं</span><span class="syll">कर्</span><span class="syll">म</span><span class="syll">कर्</span><span class="syll">ते</span><span class="syll">ति</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">त्रि</span><span class="syll">वि</span><span class="syll">धः</span><span class="syll">कर्</span><span class="syll">म</span><span class="syll">सं</span><span class="syll">ग्र</span><span class="syll">हः</span></div>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('ज्ञानं ज्ञेयं परिज्ञाता त्रिविधा कर्मचोदना करणं कर्म कर्तेति त्रिविधः कर्मसंग्रहः', 0.55)">🐢 धीरे जप करें</button>
+        </div>
+        <div class="callout"><b>स्मरण-युक्ति:</b> "ज्ञान-ज्ञेय-ज्ञाता" = तीन ज-वाले शब्द (प्रेरणा)। "करण-कर्म-कर्ता" = तीन क-वाले शब्द (संरचना)। तीन ज और तीन क — यह pattern याद रखना आसान है।</div>
+      </div>
+    </div>
+  </div><!-- /mode-media -->
+
+  <!-- =================== INFOGRAPHICS =================== -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">दो त्रिपुटी — विजुअल</button>
+      <button class="tab-btn" data-tab="e2">18.19-28 से जोड़</button>
+      <button class="tab-btn" data-tab="e3">अध्याय 18 रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 दो त्रिपुटियाँ — दृश्यरूप</h3>
+        <p class="subnote">कर्म की पूरी anatomy — प्रेरणा से क्रिया तक</p>
+        <div class="triputi-row">
+          <div class="triputi-box jnana">
+            <div class="triputi-label">⬆ कर्मचोदना</div>
+            <div class="triputi-items">
+              <div class="tri-item"><span class="tri-num">१</span><div><div class="tri-sa">ज्ञानम्</div><div class="tri-en">Knowledge — जानने की शक्ति</div></div></div>
+              <div class="tri-item"><span class="tri-num">२</span><div><div class="tri-sa">ज्ञेयम्</div><div class="tri-en">Object — लक्ष्य/विषय</div></div></div>
+              <div class="tri-item"><span class="tri-num">३</span><div><div class="tri-sa">परिज्ञाता</div><div class="tri-en">Knower — जानने वाला</div></div></div>
+            </div>
+            <div class="triputi-name">भीतरी प्रेरणा<br>WHY + WHAT + WHO knows</div>
+          </div>
+          <div class="triputi-box karma">
+            <div class="triputi-label">⚙ कर्मसंग्रह</div>
+            <div class="triputi-items">
+              <div class="tri-item"><span class="tri-num">१</span><div><div class="tri-sa">करणम्</div><div class="tri-en">Instrument — साधन</div></div></div>
+              <div class="tri-item"><span class="tri-num">२</span><div><div class="tri-sa">कर्म</div><div class="tri-en">Action — क्रिया</div></div></div>
+              <div class="tri-item"><span class="tri-num">३</span><div><div class="tri-sa">कर्ता</div><div class="tri-en">Doer — करने वाला</div></div></div>
+            </div>
+            <div class="triputi-name">बाहरी संरचना<br>HOW + WHAT action + WHO does</div>
+          </div>
+        </div>
+        <div class="callout"><b>स्मरण-सूत्र:</b> तीन ज (ज्ञान-ज्ञेय-ज्ञाता) = प्रेरणा। तीन क (करण-कर्म-कर्ता) = क्रिया। कर्म = ज + क।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 18.18 → 18.19-28 का रोड-मैप</h3>
+        <p class="subnote">18.18 framework है — 18.19-28 उसका गुण-वर्गीकरण</p>
+        <table class="cmp-table">
+          <tr><th>तत्त्व (18.18)</th><th>सात्त्विक (श्लोक)</th><th>राजसिक (श्लोक)</th><th>तामसिक (श्लोक)</th></tr>
+          <tr><td>ज्ञान</td><td>18.20</td><td>18.21</td><td>18.22</td></tr>
+          <tr><td>कर्म</td><td>18.23</td><td>18.24</td><td>18.25</td></tr>
+          <tr><td>कर्ता</td><td>18.26</td><td>18.27</td><td>18.28</td></tr>
+          <tr><td>बुद्धि</td><td>18.30</td><td>18.31</td><td>18.32</td></tr>
+          <tr><td>धृति</td><td>18.33</td><td>18.34</td><td>18.35</td></tr>
+        </table>
+        <div class="callout"><b>18.18 का महत्त्व:</b> यह श्लोक 18.19-35 के पूरे section का <b>"Table of Contents"</b> है। बिना 18.18 के, 18.19-28 का framework समझ नहीं आता।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 का रोड-मैप</h3>
+        <p class="subnote">नए section की शुरुआत</p>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १३-१७<br>पाँच कारण + ज्ञानी/अज्ञानी</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. १८<br>दो त्रिपुटियाँ ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १९-२५<br>ज्ञान-कर्म-कर्ता का गुण-वर्गीकरण</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २६-२८<br>कर्ता के तीन प्रकार</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २९-३५<br>बुद्धि-धृति का त्रिगुण</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.19):</b> "ज्ञान" के तीन प्रकार — सात्त्विक ज्ञान क्या है, राजसिक क्या, तामसिक क्या। 18.18 की "ज्ञान" पद से शुरुआत होगी।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-infographics -->
+
+  <div class="footer-hint">अगला श्लोक (श्लो.१९) — ☰ नेविगेशन से जाएँ — सात्त्विक ज्ञान का स्वरूप</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window)){alert('आवाज़ समर्थन नहीं');return;}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"'कर्मचोदना' किन तीन तत्त्वों से बनती है?",options:["करण, कर्म, कर्ता","ज्ञान, ज्ञेय, परिज्ञाता","सत्त्व, रज, तम","अधिष्ठान, चेष्टा, दैव"],correct:1},
+    {q:"'कर्मसंग्रह' किन तीन तत्त्वों से बनता है?",options:["ज्ञान, ज्ञेय, परिज्ञाता","करण, कर्म, कर्ता","बुद्धि, धृति, सुख","अहंकार, मन, बुद्धि"],correct:1},
+    {q:"'कर्मचोदना' और 'कर्मसंग्रह' में क्या अंतर है?",options:["कोई अंतर नहीं","कर्मचोदना = भीतरी प्रेरणा, कर्मसंग्रह = बाहरी संरचना","कर्मचोदना = पाप, कर्मसंग्रह = पुण्य","कर्मचोदना = ज्ञानी का, कर्मसंग्रह = अज्ञानी का"],correct:1},
+    {q:"'परिज्ञाता' और 'कर्ता' में क्या अंतर है?",options:["दोनों एक ही हैं","परिज्ञाता = cognitive agent (जानने वाला), कर्ता = operative agent (करने वाला)","परिज्ञाता = भगवान, कर्ता = मनुष्य","परिज्ञाता = 18.14 में है, कर्ता = 18.18 में"],correct:1},
+    {q:"18.18 के बाद 18.19-28 में क्या होगा?",options:["पाँच कारणों की पुनरावृत्ति","इन छः तत्त्वों को सात्त्विक, राजसिक, तामसिक में वर्गीकृत किया जाएगा","युद्ध का वर्णन","ज्ञानी की महिमा"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div>';html+='<div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.17 ने पाँच-श्लोकी श्रृंखला का golden conclusion दिया। अब 18.18 एक बिल्कुल नया topic — कर्म की anatomy। यह श्लोक 18.19-28 का framework तैयार करता है।",
+    "पहली त्रिपुटी — 'कर्मचोदना' (कर्म की प्रेरणा): ज्ञान + ज्ञेय + परिज्ञाता। ये तीन भीतरी प्रेरणा हैं — ज्ञान से motivation, ज्ञेय से लक्ष्य, परिज्ञाता से चेतना।",
+    "दूसरी त्रिपुटी — 'कर्मसंग्रह' (कर्म का संग्रह): करण + कर्म + कर्ता। ये तीन बाहरी संरचना हैं — साधन, क्रिया, कर्ता। बिना किसी एक के कर्म अधूरा।",
+    "दोनों का अंतर: कर्मचोदना = WHY और WHAT — पहले होती है, भीतर से। कर्मसंग्रह = HOW — कर्म के दौरान, बाहर से।",
+    "याद रखने का trick: तीन ज (ज्ञान-ज्ञेय-ज्ञाता) = प्रेरणा। तीन क (करण-कर्म-कर्ता) = क्रिया। 'ज' से जागृति, 'क' से क्रिया।",
+    "18.19-28 इन छः में से ज्ञान, कर्म, कर्ता को तीन-तीन गुणों में बाँटेगा। 18.18 उस पूरे section का 'Table of Contents' है।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

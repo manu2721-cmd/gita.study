@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.17 — न हन्ति न निबध्यते — ज्ञानी की परम मुक्ति</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:21.8%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.15),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:560px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-sage{border-left:3px solid var(--sage);background:rgba(92,131,116,0.08);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-sage b{color:#8ecfc0;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s ease;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .mindmap-box{width:100%;height:auto;}
+  .mm-line{stroke:#7a623a;stroke-width:1.4;opacity:0.55;}
+  .mm-center{fill:#5c8374;}
+  .mm-node-circle{fill:rgba(255,255,255,0.04);stroke:#c9a227;stroke-width:1.2;}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(92,131,116,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s ease;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-line{font-size:14.5px;color:var(--cream);margin-bottom:10px;text-align:center;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* दो-शर्त card */
+  .two-cond{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+  .cond-card{border:1px solid var(--sage);background:rgba(92,131,116,0.08);border-radius:12px;padding:18px 14px;text-align:center;}
+  .cond-num{font-size:28px;color:var(--gold);margin-bottom:6px;}
+  .cond-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:17px;color:var(--gold-light);margin-bottom:6px;}
+  .cond-meaning{font-size:13px;color:var(--cream-dim);}
+  @media(max-width:480px){.two-cond{grid-template-columns:1fr;}}
+  /* result box */
+  .result-box{border:2px solid var(--gold);border-radius:14px;padding:22px;text-align:center;margin:18px 0;background:rgba(201,162,39,0.05);}
+  .result-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:22px;color:var(--gold-light);margin-bottom:10px;}
+  .result-meaning{font-size:15px;color:var(--cream);}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.road-track{flex-wrap:wrap;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 17 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.१७</div>
+    </div>
+    <div class="shloka">
+      यस्य नाहंकृतो भावो बुद्धिर्यस्य न लिप्यते।<br>
+      हत्वापि स इमाँल्लोकान्न हन्ति न निबध्यते।।
+    </div>
+    <div class="translit">
+      yasya nāhaṃkṛto bhāvo buddhir yasya na lipyate,<br>
+      hatvāpi sa imāṃl lokān na hanti na nibadhyate
+    </div>
+    <div class="gist">
+      जिसके भाव में <b>अहंकृत-बोध नहीं</b> (मैं कर्ता हूँ — यह भाव नहीं), और जिसकी <b>बुद्धि लिप्त नहीं होती</b> — वह इन सब लोकों को मारकर भी <b>न हत्या करता है, न बंधन पाता है।</b>
+    </div>
+  </div>
+
+  <!-- MODE SELECTOR -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- =================== MODE: CORE =================== -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <!-- T1 CONTEXT -->
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — पाँच-श्लोकी श्रृंखला का समापन</h3>
+      <p>18.13 से 18.17 तक की यात्रा:</p>
+      <p><b>18.13</b> — पाँच कारण हैं (घोषणा) → <b>18.14</b> — वे पाँच क्या हैं (सूची) → <b>18.15</b> — वे सार्वभौम हैं (विस्तार) → <b>18.16</b> — जो "केवल मैं" मानता है वह अज्ञानी है (negative) → <b>18.17</b> — जो इस सत्य को जानता है वह मुक्त है <b>(positive — आज का श्लोक)</b></p>
+      <p>18.16 ने "अज्ञानी" की पहचान दी — दुर्मति, अकृतबुद्धि। अब 18.17 उसका विपरीत देता है: <b>ज्ञानी की पहचान क्या है?</b> और उसका फल क्या?</p>
+      <div class="callout-sage"><b>यह श्लोक क्यों विशेष है:</b> गीता का सबसे साहसी कथन — "हत्वापि... न हन्ति न निबध्यते।" यहाँ गीता का दार्शनिक साहस चरम पर है। यह "हत्या की अनुमति" नहीं है — यह <b>कर्ता-भाव की परम मुक्ति</b> का सिद्धांत है। जो व्यक्ति अहंकार-रहित होकर कर्म करता है, वह कर्म के फल से बंधता नहीं।</div>
+      <p>यह अर्जुन के लिए सीधा उत्तर था — "तुम युद्ध करो, पर 'मैं मारता हूँ' का भाव मत रखो। तब न तुम हत्यारे हो, न तुम बंधन पाओगे।"</p>
+    </div>
+
+    <!-- T2 WORD BY WORD -->
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यस्य नाहंकृतो भावः</span><span class="word-tr">yasya nāhaṃkṛto bhāvaḥ</span></div>
+          <div class="word-meaning">जिसके (यस्य) भाव में "अहंकृत" (मैंने किया) — यह भाव नहीं (न)</div>
+          <div class="word-eng"><b>EN:</b> whose disposition is free from the sense of "I am the doer"</div>
+          <div class="word-deep">नाहंकृतः = न + अहंकृत (अहम् + कृत = "मैंने किया" + भाव)। भावः = आंतरिक अनुभूति, मनोभाव। यह "अहंकार न होना" नहीं — बल्कि "मैं कर्ता हूँ" की <b>अनुभूति</b> न होना। सूक्ष्म किन्तु महत्त्वपूर्ण अंतर।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">बुद्धिः यस्य न लिप्यते</span><span class="word-tr">buddhir yasya na lipyate</span></div>
+          <div class="word-meaning">जिसकी बुद्धि लिप्त (stained/attached) नहीं होती</div>
+          <div class="word-eng"><b>EN:</b> whose intellect is not smeared/tainted (by results)</div>
+          <div class="word-deep">√लिप् (लेपन करना, चिपकना) → लिप्यते। बुद्धि = विवेक-शक्ति। "लिप्यते" = फल या परिणाम से चिपकना। अलिप्त बुद्धि = जो कर्म करते हुए फल से न जुड़े — "फल मेरा नहीं" की दृष्टि।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">हत्वापि स इमाँल्लोकान्</span><span class="word-tr">hatvāpi sa imāṃl lokān</span></div>
+          <div class="word-meaning">इन सब लोकों को मारकर भी वह (स)</div>
+          <div class="word-eng"><b>EN:</b> even having slain these worlds / all beings here</div>
+          <div class="word-deep">हत्वा = √हन् (मारना) + क्त्वा (gerund = कार्य पूर्ण होने पर)। "इमान् लोकान्" = इन लोगों/संसारों को — extreme example लेकर सिद्धांत बताया गया। "हत्वापि" में "अपि" = even though (extreme concession)।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">न हन्ति न निबध्यते</span><span class="word-tr">na hanti na nibadhyate</span></div>
+          <div class="word-meaning">न मारता है, न बंधन पाता है</div>
+          <div class="word-eng"><b>EN:</b> neither kills nor is bound</div>
+          <div class="word-deep">हन्ति = √हन् वर्तमान ("हत्यारा" नहीं बनता)। निबध्यते = नि + √बन्ध् — "न बंधन पाता" = कर्म-बंधन नहीं। दो "न" — दो स्तरों की मुक्ति: (१) नैतिक मुक्ति (हत्यारा नहीं), (२) कर्म-मुक्ति (बंधन नहीं)।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- T3 BHAVARTA -->
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        One whose disposition is free from ego-doership, and whose intellect is not tainted — even having slain these worlds, he neither kills nor is bound.
+      </div>
+
+      <p>यह श्लोक गीता के सबसे क्रांतिकारी सिद्धांतों में से एक है। इसे समझने के लिए दो शर्तें और उनका परिणाम स्पष्ट करना होगा:</p>
+
+      <div class="two-cond">
+        <div class="cond-card">
+          <div class="cond-num">१</div>
+          <div class="cond-sa">नाहंकृतो भावः</div>
+          <div class="cond-meaning">मन में "मैंने किया" का भाव नहीं — अहंकार-मुक्त भाव</div>
+        </div>
+        <div class="cond-card">
+          <div class="cond-num">२</div>
+          <div class="cond-sa">बुद्धिः न लिप्यते</div>
+          <div class="cond-meaning">बुद्धि फल से लिप्त नहीं — परिणाम-निरपेक्ष बुद्धि</div>
+        </div>
+      </div>
+
+      <div class="result-box">
+        <div class="result-sa">हत्वापि... न हन्ति न निबध्यते</div>
+        <div class="result-meaning">मारकर भी — न हत्यारा, न बंधन</div>
+      </div>
+
+      <p><b>"हत्वापि" — यह extreme example क्यों?</b> गीता सबसे बड़े कर्म का उदाहरण लेती है — हत्या। क्योंकि अर्जुन के सामने यही प्रश्न था। यदि सबसे भारी कर्म (हत्या) में भी अहंकार-मुक्त व्यक्ति बंधन नहीं पाता — तो साधारण कर्मों की बात ही क्या।</p>
+      <div class="callout"><b>सबसे महत्त्वपूर्ण प्रश्न — क्या यह "हत्या की अनुमति" है?</b> नहीं। गीता यहाँ कर्म की नैतिकता नहीं, <b>कर्ता-भाव की प्रकृति</b> बता रही है। "न हन्ति" का अर्थ है — जो व्यक्ति अहंकार-रहित होकर धर्म-युद्ध करता है, वह "हत्यारे" की मनोदशा में नहीं है। वह एक यंत्र की भाँति निमित्त है। यह "license to kill" नहीं — यह <b>निमित्त-भाव की परम अवस्था</b> है। यदि कोई इस श्लोक से "मैं मार सकता हूँ क्योंकि अहंकार नहीं" का तर्क निकाले — तो पहले 18.13-16 की सम्पूर्ण शर्तें पूरी करे।</div>
+      <p>दो "न" (न हन्ति, न निबध्यते) दो स्तरों पर मुक्ति देते हैं: <b>नैतिक मुक्ति</b> (कर्ता-भाव नहीं → हत्यारा नहीं) और <b>कर्म-मुक्ति</b> (बुद्धि लिप्त नहीं → बंधन नहीं)।</p>
+    </div>
+
+    <!-- T4 EXAMPLES -->
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — सर्जन (Surgeon) का उदाहरण:</b> एक सर्जन ऑपरेशन में रोगी का ऊतक काटता है — "हत्या" जैसा कार्य, पर वह "हत्यारा" नहीं। क्यों? क्योंकि उसमें न "मैं मार रहा हूँ" का भाव है, न फल से लगाव। वह एक कुशल निमित्त है। यही 18.17 का सार — <b>भाव और बुद्धि की अवस्था कर्ता को परिभाषित करती है।</b>
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — अर्जुन का युद्ध:</b> अर्जुन यदि अहंकार-रहित होकर लड़े ("मैं नहीं, ईश्वर की व्यवस्था से लड़ रहा हूँ") और फल से निर्लिप्त रहे — तो वह युद्ध करके भी बंधन नहीं पाएगा। यही 18.17 अर्जुन को बता रहा है। 18.16 में "दुर्मति" था जो "मैं मारूँगा" सोचकर अहंकार में डूब जाता — 18.17 में ज्ञानी है जो निमित्त-भाव से लड़ता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — माता-पिता की कड़ी सजा:</b> एक माता-पिता बच्चे को कठोर अनुशासन देते हैं — "बच्चे को दुःख देना" जैसा कार्य। पर यदि उनमें "मैं इसे दंड दे रहा हूँ" का अहंकार नहीं, और "इससे मुझे संतोष मिलेगा" का फल-लोभ नहीं — केवल बच्चे का हित — तो वे बंधन नहीं पाते। <b>भाव ही कर्म का नैतिक आयाम तय करता है।</b>
+      </div>
+      <div class="callout"><b>रोज़मर्रा का प्रयोग:</b> जब कोई कठिन निर्णय करना हो — नौकरी से हटाना, रिश्ता छोड़ना, न कहना — 18.17 पूछता है: क्या तुम्हारे भाव में "मैं यह कर रहा हूँ, इससे मुझे लाभ होगा" है? या "यह उचित है, मैं निमित्त हूँ"? पहला बंधन है, दूसरा मुक्ति।</div>
+    </div>
+
+    <!-- T5 FAQ -->
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर — सबसे कठिन प्रश्न</h3>
+
+      <div class="faq">
+        <div class="q">क्या यह श्लोक सच में कह रहा है कि हत्या करके भी कोई पाप नहीं? यह तो बहुत खतरनाक सिद्धांत है।</div>
+        <div class="a">यह गीता का सबसे अधिक misread श्लोक है। गीता "हत्या करो" नहीं कह रही — वह <b>कर्ता-भाव की परम शुद्धता</b> बता रही है। शर्त है: "नाहंकृतो भावः" (अहंकार-मुक्त) AND "बुद्धिः न लिप्यते" (फल-निर्लिप्त)। जो व्यक्ति हत्या को "मेरे लाभ के लिए" या "मेरे अहंकार से" करे — वह इस शर्त में नहीं आता। 18.13-16 का पूरा ज्ञान पहले आवश्यक है।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">"नाहंकृतो भावः" और "बुद्धिर्न लिप्यते" में क्या अंतर है? दोनों एक ही बात नहीं लगती?</div>
+        <div class="a">सूक्ष्म अंतर है। "नाहंकृतो भावः" = कर्म करते समय "मैं कर रहा हूँ" का <b>भाव</b> (feeling, मनोदशा) नहीं। "बुद्धिर्न लिप्यते" = कर्म के <b>परिणाम</b> से बुद्धि नहीं चिपकती (फल की आसक्ति नहीं)। पहला = कर्म के दौरान अहंकार-मुक्त। दूसरा = फल के प्रति निर्लिप्त बुद्धि। दोनों अलग-अलग स्तर की मुक्ति हैं।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">18.16 (दुर्मति) और 18.17 (ज्ञानी) में practical फर्क क्या है जब दोनों एक ही कर्म (जैसे युद्ध) कर रहे हों?</div>
+        <div class="a">बाहर से दोनों एक जैसे दिखते हैं — दोनों लड़ रहे हैं। फर्क अंदर है: दुर्मति सोचता है "मैं जीतूँगा/हारूँगा, मैंने मारा/बचाया।" ज्ञानी सोचता है "यह मेरा कर्तव्य है, फल ईश्वर के हाथ।" दुर्मति का हर कर्म <b>बंधन</b> बनाता है। ज्ञानी का हर कर्म <b>यज्ञ</b> बन जाता है। यही 2.47 का "कर्म करो, फल मत माँगो" का practical रूप है।</div>
+      </div>
+
+      <div class="faq">
+        <div class="q">क्या इस अवस्था को achieve करना सामान्य व्यक्ति के लिए संभव है?</div>
+        <div class="a">गीता इसे साधना से प्राप्त अवस्था मानती है — तत्काल नहीं। यही पूरी गीता का लक्ष्य है। पर 18.17 का value यह है कि यह <b>दिशा</b> देता है। हर कर्म में थोड़ा-थोड़ा "भावः अहंकृत नहीं" और "बुद्धि लिप्त नहीं" की दिशा में बढ़ना — यही कर्मयोग की साधना है।</div>
+      </div>
+
+    </div>
+  </div>
+  </div><!-- /mode-core -->
+
+  <!-- =================== MODE: PERSPECTIVES =================== -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.17 पाँच-श्लोकी श्रृंखला (18.13-17) का <b>golden conclusion</b> है। यह गीता के तीन महान सिद्धांतों का संगम है:</p>
+        <p><b>कर्मयोग</b> (फल की आसक्ति छोड़ो) + <b>ज्ञानयोग</b> (अहंकार की भूल देखो) + <b>भक्तियोग</b> (निमित्त-भाव से कर्म करो) = <b>18.17 का ज्ञानी।</b></p>
+        <div class="callout-sage"><b>गीता की संरचना में स्थान:</b> 18.17 के बाद गीता 18.18 में "ज्ञान, ज्ञेय, ज्ञाता" का नया विषय शुरू करती है। इसलिए 18.17 एक पूर्ण chapter-within-chapter का समापन बिंदु है।</div>
+        <p>यह श्लोक 2.19-20 ("न जायते म्रियते वा..." — आत्मा न मरती है) का <b>व्यावहारिक पूरक</b> है। वहाँ तात्त्विक सत्य था, यहाँ व्यावहारिक सत्य है।</p>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — दो शर्तें और एक परिणाम</h3>
+        <p class="subnote">18.17 का logical structure — IF...AND...THEN</p>
+        <svg class="mindmap-box" viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shrt 1 -->
+          <circle cx="170" cy="100" r="62" fill="rgba(92,131,116,0.15)" stroke="#5c8374" stroke-width="1.5"/>
+          <text x="170" y="88" text-anchor="middle" fill="#8ecfc0" font-size="12" font-family="Tiro Devanagari Hindi, serif">नाहंकृतो भावः</text>
+          <text x="170" y="106" text-anchor="middle" fill="#cfc3a8" font-size="11">कर्ता-भाव नहीं</text>
+          <text x="170" y="120" text-anchor="middle" fill="#8ecfc0" font-size="10">शर्त १</text>
+
+          <!-- Shrt 2 -->
+          <circle cx="530" cy="100" r="62" fill="rgba(92,131,116,0.15)" stroke="#5c8374" stroke-width="1.5"/>
+          <text x="530" y="88" text-anchor="middle" fill="#8ecfc0" font-size="12" font-family="Tiro Devanagari Hindi, serif">बुद्धिः न लिप्यते</text>
+          <text x="530" y="106" text-anchor="middle" fill="#cfc3a8" font-size="11">फल-निर्लिप्त बुद्धि</text>
+          <text x="530" y="120" text-anchor="middle" fill="#8ecfc0" font-size="10">शर्त २</text>
+
+          <!-- AND -->
+          <text x="350" y="108" text-anchor="middle" fill="var(--gold-light)" font-size="22" font-family="EB Garamond, serif">+</text>
+
+          <!-- Lines to center -->
+          <line x1="232" y1="140" x2="290" y2="220" stroke="#5c8374" stroke-width="1.4" opacity="0.7"/>
+          <line x1="468" y1="140" x2="410" y2="220" stroke="#5c8374" stroke-width="1.4" opacity="0.7"/>
+
+          <!-- Extreme karm -->
+          <rect x="240" y="210" width="220" height="60" rx="12" fill="rgba(140,44,59,0.12)" stroke="#8c2c3b" stroke-width="1.2"/>
+          <text x="350" y="236" text-anchor="middle" fill="#e8a4ad" font-size="13" font-family="Tiro Devanagari Hindi, serif">हत्वापि इमाँल्लोकान्</text>
+          <text x="350" y="254" text-anchor="middle" fill="#cfc3a8" font-size="11">इन सब लोकों को मारकर भी</text>
+
+          <!-- Line to result -->
+          <line x1="350" y1="270" x2="350" y2="330" stroke="#c9a227" stroke-width="2" opacity="0.8"/>
+          <text x="350" y="320" text-anchor="middle" fill="#e6c863" font-size="18">↓</text>
+
+          <!-- Result -->
+          <rect x="140" y="340" width="420" height="80" rx="14" fill="rgba(201,162,39,0.08)" stroke="#c9a227" stroke-width="2"/>
+          <text x="350" y="368" text-anchor="middle" fill="#e6c863" font-size="17" font-family="Tiro Devanagari Hindi, serif">न हन्ति</text>
+          <text x="350" y="390" text-anchor="middle" fill="#e6c863" font-size="17" font-family="Tiro Devanagari Hindi, serif">न निबध्यते</text>
+          <text x="240" y="408" text-anchor="middle" fill="#cfc3a8" font-size="10">नैतिक मुक्ति</text>
+          <text x="460" y="408" text-anchor="middle" fill="#cfc3a8" font-size="10">कर्म-बंधन मुक्ति</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — अन्य परंपराओं से</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा</th><th>18.17 से समान विचार</th><th>अंतर</th></tr>
+          <tr><td>बौद्ध धर्म</td><td>अनत्ता (no-self) — कर्ता-भाव न होना। सम्यक् कर्म बिना आसक्ति।</td><td>बौद्ध में "कर्म के पाँच कारण" नहीं; गीता में निमित्त-भाव structured है।</td></tr>
+          <tr><td>Zen Buddhism</td><td>"Chop wood, carry water" — कर्म करो, विचार मत करो</td><td>Zen में अधिक action-focus; गीता में philosophical foundation भी</td></tr>
+          <tr><td>Stoic दर्शन</td><td>Epictetus: फल हमारे वश में नहीं — केवल हमारी प्रतिक्रिया</td><td>Stoics बुद्धि-केंद्रित; गीता भाव+बुद्धि दोनों को शर्त मानती है</td></tr>
+          <tr><td>ईसाई रहस्यवाद</td><td>"Not my will, but Thy will" — ईश्वर निमित्त मानकर कर्म</td><td>गीता में ईश्वर-समर्पण optional; दार्शनिक शर्त sufficient है</td></tr>
+          <tr><td>2.47 गीता</td><td>"कर्मण्येवाधिकारस्ते मा फलेषु कदाचन"</td><td>2.47 = instruction; 18.17 = उस instruction का परिणाम क्या होता है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की अनूठी बात:</b> 18.17 न केवल "फल मत चाहो" कहता है — वह दो specific शर्तें देता है (भाव + बुद्धि) और उनका फल बताता है। यह philosophy + psychology + spirituality का त्रिवेणी-संगम है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <p>18.17 का ज्ञान दैनिक जीवन में कैसे उतरे?</p>
+        <div class="callout-sage"><b>अभ्यास — "भाव परीक्षण":</b> हर बड़े कर्म से पहले दो प्रश्न पूछें:<br>① "क्या मेरे मन में 'मैं यह कर रहा हूँ' का गर्व/भार है?"<br>② "क्या मेरी बुद्धि किसी फल से चिपकी है?"<br>यदि हाँ — रुकें, सांस लें, "मैं निमित्त हूँ" कहें। यह एक पल का अभ्यास धीरे-धीरे 18.17 की अवस्था बनाता है।</div>
+        <p><b>गलती के बाद:</b> जब गलती हो — 18.17 को उल्टा पढ़ें: "क्या मेरी बुद्धि इस गलती से 'लिप्त' हो रही है (guilt में डूब रही है)?" यदि हाँ — "मैं एक कारण था, पाँचों कारण थे" — धीरे-धीरे बुद्धि को लिप्त होने से बचाएँ।</p>
+        <p><b>सफलता के बाद:</b> "क्या मेरे भाव में 'मैंने किया' का गर्व आ रहा है?" यदि हाँ — "पाँचों कारण थे, मैं एक निमित्त था" — अहंकार-मुक्त रहें।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">आदि शंकराचार्य:</b> "नाहंकृतो भावः" = अहंकार-तादात्म्य (identification with ego) का अभाव। "बुद्धिः न लिप्यते" = विषय-संपर्क में भी बुद्धि निर्लिप्त रहती है। "न हन्ति" = कर्मफल का उदय नहीं होता क्योंकि कर्ता ही नहीं। यह ज्ञानी की <b>जीवन्मुक्त अवस्था</b> है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "भावः" = ईश्वर-अर्पण-बुद्धि से कर्म। "लिप्यते" = आसक्ति। जो ईश्वर को कर्ता मानकर, फल ईश्वर को अर्पित करता है — वह "न हन्ति।" यह <b>भक्ति-कर्म की परिणति</b> है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक (आधुनिक):</b> "न हन्ति न निबध्यते" कर्म से पलायन नहीं, कर्म में मुक्ति है। अर्जुन को लड़ना ही है — पर अहंकार-रहित होकर। यह <b>कर्मयोग का चरम</b> है।</p>
+        <div class="callout"><b>साझा सत्य:</b> तीनों आचार्य सहमत — भाव (inner state) कर्म के परिणाम से अधिक महत्त्वपूर्ण है। बाहरी कर्म नहीं, अंतर-स्थिति कर्म को बंधन या मुक्ति बनाती है।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-perspectives -->
+
+  <!-- =================== MODE: PRACTICE =================== -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड — पदशः रिवीजन</h3>
+        <p class="flash-instructions">कार्ड पर क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">नाहंकृतो भावः</span></div>
+            <div class="flashcard-face flashcard-back"><b>अहंकृत-भाव नहीं</b>"मैंने किया" की अनुभूति का अभाव — शर्त १</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">बुद्धिः न लिप्यते</span></div>
+            <div class="flashcard-face flashcard-back"><b>बुद्धि लिप्त नहीं</b>√लिप् = चिपकना। फल से बुद्धि नहीं चिपकती — शर्त २</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">हत्वापि</span></div>
+            <div class="flashcard-face flashcard-back"><b>मारकर भी</b>हत्वा + अपि = extreme concession। सबसे भारी कर्म का उदाहरण।</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">न हन्ति</span></div>
+            <div class="flashcard-face flashcard-back"><b>हत्यारा नहीं</b>नैतिक मुक्ति — कर्ता-भाव नहीं = पाप नहीं</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">न निबध्यते</span></div>
+            <div class="flashcard-face flashcard-back"><b>बंधन नहीं</b>नि+√बन्ध् = कर्म-बंधन नहीं। कर्म-मुक्ति।</div>
+          </div></div>
+
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">यस्य... यस्य</span></div>
+            <div class="flashcard-face flashcard-back"><b>जिसके... जिसकी</b>दो "यस्य" = दो शर्तें। एक ही व्यक्ति में दोनों होनी चाहिए।</div>
+          </div></div>
+
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <p class="subnote">"हत्वापि" — क्त्वा-प्रत्यय का विशेष प्रयोग</p>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल/सन्धि</th><th>विभक्ति/प्रत्यय</th><th>व्याकरणिक अर्थ</th></tr>
+          <tr><td class="sa">यस्य</td><td>यद् सर्वनाम</td><td>षष्ठी एकवचन (पुल्लिंग)</td><td>जिसके — संबंध-षष्ठी</td></tr>
+          <tr><td class="sa">नाहंकृतः</td><td>न + अहम् + √कृ + त</td><td>नाहंकृत + भाव विशेषण</td><td>"मैंने किया" भाव-रहित</td></tr>
+          <tr><td class="sa">भावः</td><td>√भू + घञ् प्रत्यय</td><td>प्रथमा एकवचन</td><td>भाव, मनोदशा — कर्ता</td></tr>
+          <tr><td class="sa">बुद्धिः</td><td>√बुध् + इ प्रत्यय</td><td>प्रथमा एकवचन (स्त्री.)</td><td>विवेक-शक्ति — कर्ता</td></tr>
+          <tr><td class="sa">न लिप्यते</td><td>√लिप् कर्मणि वाच्य</td><td>वर्तमान कर्मणि</td><td>लिप्त नहीं होती — passive</td></tr>
+          <tr><td class="sa">हत्वापि</td><td>√हन् + क्त्वा + अपि</td><td>क्त्वा = gerund (पूर्वकालिक)</td><td>मारकर भी — "even having slain"</td></tr>
+          <tr><td class="sa">इमान् लोकान्</td><td>इदम् + लोक</td><td>द्वितीया बहुवचन</td><td>इन लोगों/संसारों को — कर्म</td></tr>
+          <tr><td class="sa">न हन्ति</td><td>√हन् परस्मैपद</td><td>वर्तमान प्र.पु. एकवचन</td><td>मारता नहीं — कर्तृवाच्य</td></tr>
+          <tr><td class="sa">न निबध्यते</td><td>नि + √बन्ध् कर्मणि</td><td>वर्तमान कर्मणि प्र.पु.</td><td>बंधन नहीं पाता — passive</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">यस्य नाहंकृतो भावो बुद्धिर्यस्य न लिप्यते।<br>हत्वापि स इमाँल्लोकान्न हन्ति न निबध्यते।।</div>
+          <div class="cheat-translit">yasya nāhaṃkṛto bhāvo buddhir yasya na lipyate, hatvāpi sa imāṃl lokān na hanti na nibadhyate</div>
+          <div class="cheat-line">IF (अहंकृत-भाव नहीं) AND (बुद्धि लिप्त नहीं) → THEN (मारकर भी — न हत्यारा, न बंधन)</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>नाहंकृतो भावः</b> = कर्ता-भाव अनुपस्थित</span>
+            <span class="cheat-chip"><b>बुद्धिः न लिप्यते</b> = फल-निर्लिप्त बुद्धि</span>
+            <span class="cheat-chip"><b>हत्वापि</b> = extreme example</span>
+            <span class="cheat-chip"><b>न हन्ति</b> = नैतिक मुक्ति</span>
+            <span class="cheat-chip"><b>न निबध्यते</b> = कर्म-मुक्ति</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: कर्म का बंधन भाव से होता है, कर्म से नहीं। अहंकार-रहित + फल-निर्लिप्त = मुक्त कर्म। यही 18.13-17 की पूरी श्रृंखला का फल है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /mode-practice -->
+
+  <!-- =================== MODE: MEDIA =================== -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('यस्य नाहंकृतो भावो बुद्धिर्यस्य न लिप्यते। हत्वापि स इमाँल्लोकान्न हन्ति न निबध्यते।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('यस्य नाहंकृतो भावो बुद्धिर्यस्य न लिप्यते। हत्वापि स इमाँल्लोकान्न हन्ति न निबध्यते।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जिसके भाव में अहंकार नहीं और जिसकी बुद्धि लिप्त नहीं — वह इन सब लोकों को मारकर भी न मारता है, न बंधन पाता है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">य</span><span class="syll">स्य</span><span class="syll">ना</span><span class="syll">हं</span><span class="syll">कृ</span><span class="syll">तो</span><span class="syll">भा</span><span class="syll">वो</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">बुद्</span><span class="syll">धिर्</span><span class="syll">य</span><span class="syll">स्य</span><span class="syll">न</span><span class="syll">लि</span><span class="syll">प्य</span><span class="syll">ते</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">ह</span><span class="syll">त्वा</span><span class="syll">पि</span><span class="syll">स</span><span class="syll">इ</span><span class="syll">माँ</span><span class="syll">ल्लो</span><span class="syll">कान्</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">न</span><span class="syll">हं</span><span class="syll">ति</span><span class="syll">न</span><span class="syll">नि</span><span class="syll">ब</span><span class="syll">ध्य</span><span class="syll">ते</span></div>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('यस्य नाहंकृतो भावो बुद्धिर्यस्य न लिप्यते हत्वापि स इमाँल्लोकान्न हन्ति न निबध्यते', 0.55)">🐢 धीरे जप करें</button>
+        </div>
+        <div class="callout-sage"><b>ध्यान-बिंदु:</b> "न हन्ति न निबध्यते" — यह चार शब्द मुक्ति का सार हैं। जप करते समय इन चार शब्दों पर विशेष ध्यान दें — यह 18.13-17 की पूरी श्रृंखला का फल है।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-media -->
+
+  <!-- =================== MODE: INFOGRAPHICS =================== -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">IF→AND→THEN फ्लो</button>
+      <button class="tab-btn" data-tab="e2">18.13-17 श्रृंखला-सार</button>
+      <button class="tab-btn" data-tab="e3">अध्याय 18 रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 18.17 का Logical Structure</h3>
+        <p class="subnote">दो शर्तें → एक extreme test → दो परिणाम</p>
+        <div class="two-cond">
+          <div class="cond-card">
+            <div class="cond-num">IF</div>
+            <div class="cond-sa">नाहंकृतो भावः</div>
+            <div class="cond-meaning">"मैंने किया" का भाव नहीं<br>अहंकार से निर्मुक्त मन</div>
+          </div>
+          <div class="cond-card">
+            <div class="cond-num">AND</div>
+            <div class="cond-sa">बुद्धिः न लिप्यते</div>
+            <div class="cond-meaning">बुद्धि फल से लिप्त नहीं<br>परिणाम-निरपेक्ष विवेक</div>
+          </div>
+        </div>
+        <div style="text-align:center;font-size:24px;color:var(--gold);margin:10px 0;">↓ extreme test ↓</div>
+        <div class="result-box">
+          <div class="result-sa">हत्वापि इमाँल्लोकान्</div>
+          <div class="result-meaning">इन सब लोकों को मारकर भी</div>
+        </div>
+        <div style="text-align:center;font-size:24px;color:var(--gold);margin:10px 0;">↓ THEN ↓</div>
+        <div class="two-cond">
+          <div class="cond-card">
+            <div class="cond-num">न हन्ति</div>
+            <div class="cond-sa">नैतिक मुक्ति</div>
+            <div class="cond-meaning">हत्यारा नहीं बनता<br>कर्ता-भाव नहीं = पाप नहीं</div>
+          </div>
+          <div class="cond-card">
+            <div class="cond-num">न निबध्यते</div>
+            <div class="cond-sa">कर्म-मुक्ति</div>
+            <div class="cond-meaning">बंधन नहीं पाता<br>फल-लिप्तता नहीं = बंधन नहीं</div>
+          </div>
+        </div>
+        <div class="callout"><b>सूत्र:</b> बंधन कर्म से नहीं, <b>भाव और बुद्धि की स्थिति</b> से होता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 पाँच-श्लोकी श्रृंखला (18.13-17) का सम्पूर्ण सार</h3>
+        <table class="cmp-table">
+          <tr><th>श्लोक</th><th>विषय</th><th>मुख्य शब्द</th><th>18.17 से संबंध</th></tr>
+          <tr><td>18.13</td><td>पाँच कारणों की घोषणा</td><td>पञ्च हेतवः</td><td>नींव — कारण-ज्ञान</td></tr>
+          <tr><td>18.14</td><td>पाँच कारणों की सूची</td><td>अधिष्ठान, कर्ता, करण, चेष्टा, दैव</td><td>विवरण — क्या-क्या</td></tr>
+          <tr><td>18.15</td><td>पाँच कारण सार्वभौम</td><td>न्याय्यं वा विपरीतं वा</td><td>विस्तार — हर कर्म में</td></tr>
+          <tr><td>18.16</td><td>अज्ञानी — "केवल मैं" (negative)</td><td>अकृतबुद्धि, दुर्मति</td><td>चेतावनी — क्या न करें</td></tr>
+          <tr><td>18.17</td><td>ज्ञानी — मुक्त कर्म (positive)</td><td>न हन्ति, न निबध्यते</td><td>परिणाम — मुक्ति</td></tr>
+        </table>
+        <div class="callout-sage"><b>श्रृंखला का तर्क:</b> 18.13-15 = Theory (सिद्धांत) → 18.16 = Wrong Practice (गलत अभ्यास) → 18.17 = Right Practice का परिणाम (मुक्ति)। एक पूर्ण दार्शनिक unit।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 का रोड-मैप</h3>
+        <p class="subnote">पाँच-श्लोकी श्रृंखला का समापन</p>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १३<br>पाँच की घोषणा</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १४<br>पाँच की सूची</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १५<br>सार्वभौम</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १६<br>अज्ञानी (negative)</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. १७<br>ज्ञानी — मुक्ति ← यहाँ</div></div>
+        </div>
+        <div class="callout-sage"><b>अगला (18.18):</b> "ज्ञान, ज्ञेय, ज्ञाता" — कर्म की त्रिपुटी का नया विषय शुरू होगा। 18.17 इस unit का golden conclusion है और 18.18 एक नए topic की शुरुआत।</div>
+      </div>
+
+    </div>
+  </div><!-- /mode-infographics -->
+
+  <div class="footer-hint">अगला श्लोक (श्लो.१८) — ☰ नेविगेशन से जाएँ — ज्ञान, ज्ञेय, ज्ञाता की त्रिपुटी</div>
+
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window)){alert('आवाज़ समर्थन नहीं');return;}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.17 में ज्ञानी की पहली शर्त क्या है?",options:["बुद्धि लिप्त नहीं","नाहंकृतो भावः — कर्ता-भाव का अभाव","हत्या न करना","पाँच कारण जानना"],correct:1},
+    {q:"'बुद्धिः न लिप्यते' का क्या अर्थ है?",options:["बुद्धि सोचती नहीं","बुद्धि फल/परिणाम से चिपकती नहीं","बुद्धि काम नहीं करती","बुद्धि शांत है"],correct:1},
+    {q:"'हत्वापि' में 'अपि' शब्द क्यों है?",options:["सम्मान के लिए","Extreme concession — मारकर भी (extreme case)","अनुमति के लिए","प्रश्न के लिए"],correct:1},
+    {q:"'न हन्ति न निबध्यते' — दो 'न' किन दो मुक्तियों को दर्शाते हैं?",options:["शारीरिक और मानसिक मुक्ति","नैतिक मुक्ति (हत्यारा नहीं) और कर्म-मुक्ति (बंधन नहीं)","इस जन्म और अगले जन्म की मुक्ति","मन और बुद्धि की मुक्ति"],correct:1},
+    {q:"18.16 और 18.17 का सम्बन्ध क्या है?",options:["दोनों एक ही विषय हैं","18.16 = अज्ञानी (negative), 18.17 = ज्ञानी (positive) — एक pair","18.17 18.16 को नकारता है","दोनों अलग-अलग विषय हैं"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div>';html+='<div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.13-17 की पाँच-श्लोकी यात्रा का आज समापन। 18.16 ने अज्ञानी की पहचान दी (negative)। 18.17 देता है ज्ञानी का परिणाम (positive)।",
+    "'यस्य नाहंकृतो भावः' — जिसके भाव में अहंकृत-बोध नहीं। 'मैंने किया' — यह अनुभूति जिसके मन में नहीं उठती। यह शर्त १ है।",
+    "'बुद्धिर्यस्य न लिप्यते' — जिसकी बुद्धि फल से लिप्त नहीं। √लिप् = चिपकना। परिणाम से बुद्धि नहीं चिपकती। यह शर्त २ है।",
+    "'हत्वापि स इमाँल्लोकान्' — इन सब लोकों को मारकर भी। 'हत्वापि' में 'अपि' = even though। गीता ने सबसे extreme example लिया — युद्धभूमि का।",
+    "'न हन्ति' = हत्यारा नहीं बनता (नैतिक मुक्ति)। 'न निबध्यते' = बंधन नहीं पाता (कर्म-मुक्ति)। दो 'न' — दो स्तरों की मुक्ति।",
+    "सार: कर्म का बंधन कर्म से नहीं, भाव और बुद्धि की स्थिति से होता है। यही 18.13-17 की पूरी श्रृंखला का golden conclusion है।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
