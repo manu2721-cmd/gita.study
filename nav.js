@@ -337,7 +337,7 @@
   fetch('../manifest.json')
     .then(r => r.json())
     .then(manifest => {
-      const ch = manifest.chapters[String(currentChapter)];
+      const ch = manifest.chapters.find(c => c.num === currentChapter);
       if (ch) for (let i = 1; i <= ch.published; i++) publishedVerses.push(i);
       buildDrawer(); buildArrows();
     })
