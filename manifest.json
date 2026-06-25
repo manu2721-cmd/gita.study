@@ -1,28 +1,132 @@
 {
-  "title": "Bhagavad Gita Interactive Study",
-  "description": "Hindi interactive Gita study platform — gita.study",
-  "chapters": {
-    "18": {
-      "title": "मोक्षसंन्यास योग",
-      "total_shlokas": 78,
+  "totalVerses": 700,
+  "chapters": [
+    {
+      "num": 1,
+      "title": "अर्जुनविषादयोग",
+      "folder": "ch1",
+      "totalVerses": 47,
+      "published": 0
+    },
+    {
+      "num": 2,
+      "title": "सांख्ययोग",
+      "folder": "ch2",
+      "totalVerses": 72,
+      "published": 0
+    },
+    {
+      "num": 3,
+      "title": "कर्मयोग",
+      "folder": "ch3",
+      "totalVerses": 43,
+      "published": 0
+    },
+    {
+      "num": 4,
+      "title": "ज्ञानकर्मसंन्यासयोग",
+      "folder": "ch4",
+      "totalVerses": 42,
+      "published": 0
+    },
+    {
+      "num": 5,
+      "title": "कर्मसंन्यासयोग",
+      "folder": "ch5",
+      "totalVerses": 29,
+      "published": 0
+    },
+    {
+      "num": 6,
+      "title": "आत्मसंयमयोग",
+      "folder": "ch6",
+      "totalVerses": 47,
+      "published": 0
+    },
+    {
+      "num": 7,
+      "title": "ज्ञानविज्ञानयोग",
+      "folder": "ch7",
+      "totalVerses": 30,
+      "published": 0
+    },
+    {
+      "num": 8,
+      "title": "अक्षरब्रह्मयोग",
+      "folder": "ch8",
+      "totalVerses": 28,
+      "published": 0
+    },
+    {
+      "num": 9,
+      "title": "राजविद्याराजगुह्ययोग",
+      "folder": "ch9",
+      "totalVerses": 34,
+      "published": 0
+    },
+    {
+      "num": 10,
+      "title": "विभूतियोग",
+      "folder": "ch10",
+      "totalVerses": 42,
+      "published": 0
+    },
+    {
+      "num": 11,
+      "title": "विश्वरूपदर्शनयोग",
+      "folder": "ch11",
+      "totalVerses": 55,
+      "published": 0
+    },
+    {
+      "num": 12,
+      "title": "भक्तियोग",
+      "folder": "ch12",
+      "totalVerses": 20,
+      "published": 0
+    },
+    {
+      "num": 13,
+      "title": "क्षेत्रक्षेत्रज्ञविभागयोग",
+      "folder": "ch13",
+      "totalVerses": 35,
+      "published": 0
+    },
+    {
+      "num": 14,
+      "title": "गुणत्रयविभागयोग",
+      "folder": "ch14",
+      "totalVerses": 27,
+      "published": 0
+    },
+    {
+      "num": 15,
+      "title": "पुरुषोत्तमयोग",
+      "folder": "ch15",
+      "totalVerses": 20,
+      "published": 0
+    },
+    {
+      "num": 16,
+      "title": "दैवासुरसम्पद्विभागयोग",
+      "folder": "ch16",
+      "totalVerses": 24,
+      "published": 0
+    },
+    {
+      "num": 17,
+      "title": "श्रद्धात्रयविभागयोग",
+      "folder": "ch17",
+      "totalVerses": 28,
+      "published": 0
+    },
+    {
+      "num": 18,
+      "title": "मोक्षसंन्यासयोग",
+      "folder": "ch18",
+      "totalVerses": 78,
       "published": 25,
-      "last_published": "18.25",
-      "shlokas": {
-        "13": { "title": "पाँच कारण — सांख्य सिद्धान्त", "file": "ch18/gita_18_13.html" },
-        "14": { "title": "पाँच कारणों का विवरण", "file": "ch18/gita_18_14.html" },
-        "15": { "title": "कर्म का मूल — पाँच कारण", "file": "ch18/gita_18_15.html" },
-        "16": { "title": "सांख्य-विरुद्ध कर्ता-बुद्धि", "file": "ch18/gita_18_16.html" },
-        "17": { "title": "अहंकाररहित कर्ता — सात्त्विक", "file": "ch18/gita_18_17.html" },
-        "18": { "title": "ज्ञान-कर्म-कर्ता — कर्म का त्रिक", "file": "ch18/gita_18_18.html" },
-        "19": { "title": "त्रिगुण विभाजन की भूमिका", "file": "ch18/gita_18_19.html" },
-        "20": { "title": "सात्त्विक ज्ञान — एकता-दर्शन", "file": "ch18/gita_18_20.html" },
-        "21": { "title": "राजसिक ज्ञान — पृथक्त्वेन भेद-दर्शन", "file": "ch18/gita_18_21.html" },
-        "22": { "title": "तामसिक ज्ञान — एकांगी, असत्य, संकीर्ण", "file": "ch18/gita_18_22.html" },
-        "23": { "title": "सात्त्विक कर्म — नियत, सङ्गरहित, निष्काम", "file": "ch18/gita_18_23.html" },
-        "24": { "title": "राजसिक कर्म — सकाम, अहंकार, बहुलायास", "file": "ch18/gita_18_24.html" },
-        "25": { "title": "तामसिक कर्म — मोह, हिंसा, अनवेक्षण", "file": "ch18/gita_18_25.html" }
-      }
+      "last_published": "18.25"
     }
-  },
-  "updated": "2026-06-25"
+  ]
 }
