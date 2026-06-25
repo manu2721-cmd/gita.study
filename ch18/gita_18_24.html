@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.24 — राजसिक कर्म: सकाम और अहंकारपूर्ण</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:30.8%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 24 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.२४</div>
+    </div>
+    <div class="guna-badge">🔥 राजसिक कर्म — कर्म त्रयी श्लोक २/३</div>
+    <div class="shloka">
+      यत्तु कामेप्सुना कर्म साहङ्कारेण वा पुनः।<br>
+      क्रियते बहुलायासं तद्राजसमुदाहृतम्।।
+    </div>
+    <div class="translit">
+      yat tu kāmepsunā karma sāhaṅkāreṇa vā punaḥ,<br>
+      kriyate bahulāyāsaṃ tad rājasam udāhṛtam
+    </div>
+    <div class="gist">
+      जो कर्म <b>कामना करने वाले</b> (कामेप्सु) द्वारा, या <b>अहंकार के साथ</b> (साहङ्कार), और <b>बहुत अधिक परिश्रम/क्लेश</b> (बहुलायास) से किया जाए — वह <b>राजसिक</b> कहा गया है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="t3">भावार्थ</button>
+      <button class="tab-btn" data-tab="t4">उदाहरण</button>
+      <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="t1">
+        <h3>🪔 पूर्ववर्ती-संदर्भ — 18.23 से contrast</h3>
+        <p>18.23 में सात्त्विक कर्म था — नियत, सङ्गरहित, अरागद्वेष, अफलप्रेप्सु। अब 18.24 में उसका विपरीत — <b>राजसिक कर्म</b>। यहाँ फिर <b>"तु"</b> है — 18.23 से explicit contrast।</p>
+        <p>18.23 में कर्ता "अफलप्रेप्सु" था — फल नहीं चाहता। 18.24 में कर्ता "कामेप्सु" है — कामना करने वाला। यह exact opposition है।</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 18.23 — सात्त्विक</div>
+            <div class="contrast-sa">अफलप्रेप्सुना</div>
+            <p>फल की इच्छा नहीं। सङ्गरहित। अरागद्वेष। नियत। चार शुद्धताएँ।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 18.24 — राजसिक</div>
+            <div class="contrast-sa">कामेप्सुना + साहङ्कारेण</div>
+            <p>फल की कामना। अहंकार। बहुत क्लेश। तीन दोष एक साथ।</p>
+          </div>
+        </div>
+        <div class="callout-rajas"><b>महत्त्वपूर्ण:</b> राजसिक कर्म "गलत" कर्म नहीं है — वही कर्म हो सकता है जो सात्त्विक करता है। फर्क कर्ता की भीतरी अवस्था में है: कामना + अहंकार + अत्यधिक क्लेश। यह बाहर से श्रमशील दिखता है, पर भीतर से बंधनकारी है।</div>
+      </div>
+
+      <div class="panel" id="t2">
+        <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+        <div class="word-grid">
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">यत् तु</span><span class="word-tr">yat tu</span></div>
+            <div class="word-meaning">जो (कर्म) — किन्तु (contrast)</div>
+            <div class="word-eng"><b>EN:</b> but that which — contrast</div>
+            <div class="word-deep">"तु" = 18.23 से contrast। तीनों कर्म-श्लोकों (23, 24, 25) में "यत्" से शुरू होकर परिभाषा दी जाती है — यह structural pattern गीता की व्यवस्थित teaching-style है।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">कामेप्सुना</span><span class="word-tr">kāmepsunā</span></div>
+            <div class="word-meaning">कामना करने वाले द्वारा — फल की इच्छा रखने वाला कर्ता</div>
+            <div class="word-eng"><b>EN:</b> by one who seeks/desires results</div>
+            <div class="word-deep">काम + √इप्स् (चाहना) + उ = कामेप्सु। तृतीया = "के द्वारा।" 18.23 में "अफलप्रेप्सु" था — यह exact opposite। काम = desire, इच्छा। राजसिक कर्म का root-cause है काम — फल की चाह।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">साहङ्कारेण वा पुनः</span><span class="word-tr">sāhaṅkāreṇa vā punaḥ</span></div>
+            <div class="word-meaning">या अहंकार के साथ — "मैंने किया" के भाव से</div>
+            <div class="word-eng"><b>EN:</b> or with ego / with the sense of "I am the doer"</div>
+            <div class="word-deep">स + अहंकार + तृतीया। <b>"वा पुनः" = "या फिर"</b> — कामेप्सु OR साहङ्कार, या दोनों। अहंकार = "अहम् करोमि" = "मैं करता हूँ" का भाव। 18.23 में "सङ्गरहित" था — यह उसका विपरीत।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">क्रियते</span><span class="word-tr">kriyate</span></div>
+            <div class="word-meaning">किया जाता है — passive वर्तमान</div>
+            <div class="word-eng"><b>EN:</b> is performed / is done</div>
+            <div class="word-deep">√कृ + passive = क्रियते। 18.23 में "कृतम्" (भूतकृदन्त) था। यहाँ "क्रियते" — ongoing process। राजसिक कर्म की process-emphasis: यह चलता रहता है, थकाता रहता है।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">बहुलायासम्</span><span class="word-tr">bahulāyāsam</span></div>
+            <div class="word-meaning">बहुत अधिक परिश्रम/क्लेश से युक्त</div>
+            <div class="word-eng"><b>EN:</b> with much strain / involving great effort and stress</div>
+            <div class="word-deep">बहुल (बहुत, अत्यधिक) + आयास (परिश्रम, क्लेश)। यह परिश्रम कर्म का natural हिस्सा नहीं — काम और अहंकार के कारण उत्पन्न अतिरिक्त tension। "बहुल" = excessive, disproportionate stress।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">तद् राजसम् उदाहृतम्</span><span class="word-tr">tad rājasam udāhṛtam</span></div>
+            <div class="word-meaning">वह राजसिक कहा गया है — घोषित</div>
+            <div class="word-eng"><b>EN:</b> that is declared to be rājasa</div>
+            <div class="word-deep">उदाहृतम् = घोषित, declared। 18.22 (तामसिक ज्ञान) में भी "उदाहृतम्" था। 18.23 में "उच्यते" था — यह variation गीता के careful composition को दर्शाता है।</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="panel" id="t3">
+        <h3>🪔 भावार्थ एवं व्याख्या</h3>
+        <div class="eng-box">
+          <span>English Translation</span>
+          But that action which is performed with great strain, by one who seeks results, or again with ego — that is declared to be rājasa.
+        </div>
+        <p>18.24 राजसिक कर्म की <b>तीन विशेषताएँ</b> देता है — और ये तीनों 18.23 के पदों के opposites हैं:</p>
+        <p><b>कामेप्सु</b> (vs अफलप्रेप्सु): फल की कामना। यही रजोगुण का मूल है — इच्छा, प्राप्ति की आकांक्षा। "मुझे यह मिले, मुझे वह मिले।"</p>
+        <p><b>साहङ्कार</b> (vs सङ्गरहित): अहंकार के साथ। "मैंने किया, मेरी वजह से हुआ।" यह कर्तृत्व-बुद्धि राजसिक का दूसरा लक्षण है।</p>
+        <p><b>बहुलायास</b>: बहुत क्लेश और tension। काम और अहंकार के कारण कर्म stress से भरा होता है। जो कर्म प्रेम और duty से हो वह light होता है; जो fear या greed से हो वह heavy।</p>
+        <div class="callout-rajas"><b>Key insight — "वा पुनः":</b> "कामेप्सुना <b>वा</b> पुनः साहङ्कारेण" — "या" (OR) है। इसका अर्थ: कामना OR अहंकार — दोनों में से किसी एक से भी राजसिक हो जाता है। दोनों हों तो और भी। 18.23 में चारों AND आवश्यक थे; यहाँ एक भी OR काफी है।</div>
+        <p>गीता यह नहीं कहती कि राजसिक कर्म "बुरा" है। यह कर्म दुनिया चलाता है। पर यह मुक्ति का मार्ग नहीं। "बहुलायास" का कर्म थका देता है, पर मुक्त नहीं करता।</p>
+      </div>
+
+      <div class="panel" id="t4">
+        <h3>🪔 जीवनी उदाहरण</h3>
+        <div class="example">
+          <b>उदाहरण 1 — Corporate ambition:</b> जो व्यक्ति रात-दिन काम करता है — पर केवल promotion, salary और recognition के लिए (कामेप्सु)। हर meeting में "मेरी idea थी, मैंने किया" (साहङ्कार)। हमेशा stressed, anxious (बहुलायास)। यह राजसिक कर्म का आधुनिक चेहरा है।
+        </div>
+        <div class="example">
+          <b>उदाहरण 2 — सकाम पूजा:</b> "यह पूजा करूँगा तो धन मिलेगा / रोग ठीक होगा।" — कामेप्सु भक्ति। यह बुरी नहीं पर राजसिक है। गीता 7.20 में भी — जो अन्य देवताओं को कामना से पूजते हैं वे राजसिक हैं।
+        </div>
+        <div class="example">
+          <b>उदाहरण 3 — "मैंने बनाया" का अहंकार:</b> एक कलाकार जो हर कृति में सोचे "यह मेरी महारत है, मुझे प्रशंसा मिलेगी" — साहङ्कार। बनाने की process में anxiety और comparison (बहुलायास)। सात्त्विक कलाकार वही जो भूल जाए कि "मैं" हूँ — बस सृजन हो।
+        </div>
+        <div class="callout"><b>एक ही कार्य — तीन दृष्टियाँ:</b> एक teacher का पढ़ाना: सात्त्विक = कर्तव्य से, फल की इच्छा नहीं। राजसिक = best teacher का award चाहिए, "मेरे students सबसे brilliant हैं" — कामेप्सु + साहङ्कार। तामसिक = बिना तैयारी के, students की परवाह नहीं।</div>
+      </div>
+
+      <div class="panel" id="t5">
+        <h3>🪔 प्रश्नोत्तर</h3>
+        <div class="faq">
+          <div class="q">"बहुलायास" क्या hard work को बुरा बताता है? क्या परिश्रम राजसिक है?</div>
+          <div class="a">नहीं — "बहुलायास" का मतलब परिश्रम की मात्रा नहीं, उसकी quality है। सात्त्विक कर्म में भी कठिन परिश्रम हो सकता है — पर वह light होता है, flow में। राजसिक में "बहुलायास" = excessive strain, tension, anxiety — जो काम और अहंकार के कारण आता है। यह परिश्रम थका देता है, जलाता है।</div>
+        </div>
+        <div class="faq">
+          <div class="q">"कामेप्सुना वा पुनः साहङ्कारेण" — "वा" (OR) का क्या अर्थ है?</div>
+          <div class="a">"वा" = या। इसका अर्थ: दोनों में से एक भी हो — तो कर्म राजसिक है। कामेप्सु OR साहङ्कार — अकेले भी राजसिक बना देते हैं। दोनों हों तो निश्चित राजसिक। यह OR logic 18.23 के AND logic से अलग है — सात्त्विक के लिए चारों होने चाहिए।</div>
+        </div>
+        <div class="faq">
+          <div class="q">क्या सभी successful लोग राजसिक कर्म करते हैं? क्या सफलता राजसिक है?</div>
+          <div class="a">नहीं — सफलता और राजसिकता अलग हैं। सफलता external result है; राजसिकता internal state। एक व्यक्ति सात्त्विक कर्म करते हुए भी successful हो सकता है — और हो जाए तो सहज स्वीकार करे। राजसिक में सफलता ही लक्ष्य है; सात्त्विक में कर्म ही लक्ष्य है।</div>
+        </div>
+        <div class="faq">
+          <div class="q">18.24 में "उदाहृतम्" है, 18.23 में "उच्यते" था — यह intentional है?</div>
+          <div class="a">हाँ — गीता के composer की सूक्ष्म दृष्टि। 18.23 में "उच्यते" = "कहा जाता है" — universal, present tense। 18.24 में "उदाहृतम्" = "घोषित किया गया है" — declared, more forceful। यह एक प्रकार की warning है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.24 आधुनिक जीवन का सबसे प्रासंगिक श्लोक है। हमारी पूरी economy राजसिक कर्म पर चलती है — ambition, competition, achievement। यह बुरा नहीं, पर यह अंतिम नहीं।</p>
+        <p>रजोगुण = गति, इच्छा, क्रिया। राजसिक कर्म में ऊर्जा है, effort है — पर दिशा गलत है। ऊर्जा बाहर की ओर (फल की ओर) बह रही है; सात्त्विक में वही ऊर्जा कर्म में ही समा जाती है।</p>
+        <div class="callout-rajas"><b>Burnout और राजसिक कर्म:</b> आधुनिक "Burnout" राजसिक कर्म का परिणाम है। बहुलायास + कामेप्सु = जब फल नहीं मिलता, disappointment। जब मिलता है, तब और चाहिए। यह cycle कभी खत्म नहीं होती। 18.23 का "अफलप्रेप्सु" ही burnout से मुक्ति है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — राजसिक कर्म के तीन स्तंभ और परिणाम</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="190" rx="80" ry="46" fill="rgba(140,74,32,0.15)" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <text x="350" y="184" text-anchor="middle" fill="#e0a060" font-size="13" font-family="Tiro Devanagari Hindi,serif">राजसिक कर्म</text>
+          <text x="350" y="202" text-anchor="middle" fill="#cfc3a8" font-size="10">सकाम + अहंकार</text>
+          <line x1="282" y1="160" x2="148" y2="82" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="100" cy="62" rx="68" ry="30" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="100" y="57" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">कामेप्सुना</text>
+          <text x="100" y="73" text-anchor="middle" fill="#cfc3a8" font-size="10">फल की कामना</text>
+          <line x1="350" y1="144" x2="350" y2="60" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="350" cy="42" rx="74" ry="30" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="350" y="37" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">साहङ्कारेण</text>
+          <text x="350" y="53" text-anchor="middle" fill="#cfc3a8" font-size="10">अहंकार — "मैंने किया"</text>
+          <line x1="418" y1="160" x2="552" y2="82" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="600" cy="62" rx="72" ry="30" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="600" y="57" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">बहुलायासम्</text>
+          <text x="600" y="73" text-anchor="middle" fill="#cfc3a8" font-size="10">अत्यधिक क्लेश</text>
+          <line x1="280" y1="225" x2="148" y2="310" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="350" y1="236" x2="350" y2="312" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="420" y1="225" x2="552" y2="310" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <rect x="55" y="312" width="175" height="52" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="142" y="332" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi,serif">संसार-बंधन</text>
+          <text x="142" y="350" text-anchor="middle" fill="#cfc3a8" font-size="11">cycle of desire</text>
+          <rect x="262" y="312" width="175" height="52" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="350" y="332" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi,serif">अहम्-वृद्धि</text>
+          <text x="350" y="350" text-anchor="middle" fill="#cfc3a8" font-size="11">ego inflation</text>
+          <rect x="468" y="312" width="175" height="52" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="555" y="332" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi,serif">Burnout / थकान</text>
+          <text x="555" y="350" text-anchor="middle" fill="#cfc3a8" font-size="11">exhaustion</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — कर्म-त्रयी एक साथ</h3>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>सात्त्विक (18.23)</th><th>राजसिक (18.24)</th><th>तामसिक (18.25)</th></tr>
+          <tr><td>कर्ता की इच्छा</td><td>अफलप्रेप्सु — नहीं</td><td>कामेप्सु — हाँ, बहुत</td><td>परवाह नहीं</td></tr>
+          <tr><td>अहंकार</td><td>सङ्गरहित — नहीं</td><td>साहङ्कार — हाँ</td><td>मूढ़ता — अज्ञान</td></tr>
+          <tr><td>परिश्रम की nature</td><td>Light — स्वाभाविक flow</td><td>बहुलायास — stressful</td><td>अनवेक्षित — careless</td></tr>
+          <tr><td>प्रेरणा</td><td>कर्तव्य</td><td>इच्छा, प्रशंसा</td><td>मोह, अज्ञान</td></tr>
+          <tr><td>परिणाम</td><td>मुक्ति की ओर</td><td>संसार-बंधन</td><td>अधः पतन</td></tr>
+        </table>
+        <div class="callout"><b>Gita's wisdom:</b> राजसिक कर्म दुनिया चलाता है पर व्यक्ति को नहीं चलाता — व्यक्ति थक जाता है। "बहुलायास" = कर्म में तनाव का sign — इसे देखकर पूछें: कहाँ कामना है, कहाँ अहंकार है?</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>राजसिक कर्म की पहचान — अपने में देखें:</b> काम करते हुए क्या "यह मुझे मिलना चाहिए" का भाव है? (कामेप्सु) क्या "मैंने किया" का pride है? (साहङ्कार) क्या tension, anxiety, strain है? (बहुलायास) — अगर हाँ, तो आप राजसिक कर्म में हैं।</div>
+        <p><b>राजसिक से सात्त्विक की ओर — प्रयोग:</b> कोई एक कार्य करें और जानबूझकर "मैंने नहीं किया, यह हुआ" — कर्ता-बुद्धि हटाएँ। शुरू में कठिन लगेगा — पर धीरे-धीरे "बहुलायास" कम होगा।</p>
+        <p><b>फल-समर्पण का अभ्यास:</b> हर कार्य के अंत में फल ईश्वर को समर्पित करें — "यत् करोमि तत् सर्वं त्वदर्थं।" यह practice राजसिक को धीरे-धीरे सात्त्विक में बदलती है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "कामेप्सुना" = काम-प्रेरित। राजसिक कर्म अविद्या और काम से उत्पन्न। "साहङ्कार" = अहंकार जो मिथ्या "मैं" से आता है — माया का प्रभाव।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> राजसिक कर्म ईश्वर से disconnected है। जो ईश्वर-अर्पण से नहीं करता, जो फल के लिए करता है — वह राजसिक। भक्ति के बिना कर्म राजसिक रहता है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> "बहुलायास" राजसिक का सबसे practical sign है। जो कर्म stress देता है, थका देता है — वह राजसिक। सात्त्विक कर्म में एक प्रकार की ease होती है — फल की anxiety नहीं।</p>
+        <div class="callout"><b>तीनों का सार:</b> राजसिक कर्म का root = काम + अहंकार। दोनों हटें — कर्ता सात्त्विक बने। साधना का मार्ग यही है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कामेप्सुना</span></div>
+            <div class="flashcard-face flashcard-back"><b>फल की कामना से</b>काम+इप्स् — 18.23 के अफलप्रेप्सु का opposite</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">साहङ्कारेण</span></div>
+            <div class="flashcard-face flashcard-back"><b>अहंकार के साथ</b>"मैंने किया" — 18.23 के सङ्गरहित का opposite</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">वा पुनः</span></div>
+            <div class="flashcard-face flashcard-back"><b>या फिर (OR)</b>एक भी हो तो राजसिक — 18.23 के AND से अलग</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">बहुलायासम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>अत्यधिक क्लेश</b>बहुल+आयास — stress, tension, burnout</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">क्रियते</span></div>
+            <div class="flashcard-face flashcard-back"><b>किया जाता है</b>Passive ongoing — 18.23 के कृतम् से अलग</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">राजसम् उदाहृतम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>राजसिक घोषित</b>declared — कर्म-त्रयी का मध्य</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea24"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">यत् तु</td><td>यद् + अव्यय</td><td>नपुंसक प्रथमा</td><td>जो (कर्म) — किन्तु contrast</td></tr>
+          <tr><td class="sa">कामेप्सुना</td><td>काम+√इप्स्+उ</td><td>तृतीया एकवचन</td><td>कामना करने वाले द्वारा — करण</td></tr>
+          <tr><td class="sa">साहङ्कारेण</td><td>स+अहंकार</td><td>तृतीया एकवचन</td><td>अहंकार के साथ — करण</td></tr>
+          <tr><td class="sa">वा पुनः</td><td>अव्यय</td><td>—</td><td>या फिर — OR particle</td></tr>
+          <tr><td class="sa">क्रियते</td><td>√कृ</td><td>Passive वर्तमान प्र.पु.</td><td>किया जाता है — ongoing</td></tr>
+          <tr><td class="sa">बहुलायासम्</td><td>बहुल+आयास</td><td>द्वितीया एकवचन</td><td>बहुत क्लेशयुक्त — विशेषण/क्रियाविशेषण</td></tr>
+          <tr><td class="sa">राजसम् उदाहृतम्</td><td>राजस+उद्+आ+√हृ</td><td>प्रथमा / भूतकृदन्त</td><td>राजसिक घोषित — passive</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">यत्तु कामेप्सुना कर्म साहङ्कारेण वा पुनः।<br>क्रियते बहुलायासं तद्राजसमुदाहृतम्।।</div>
+          <div class="cheat-translit">yat tu kāmepsunā karma sāhaṅkāreṇa vā punaḥ, kriyate bahulāyāsaṃ tad rājasam udāhṛtam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>कामेप्सुना</b> फल की कामना</span>
+            <span class="cheat-chip"><b>वा</b> OR — एक भी काफी</span>
+            <span class="cheat-chip"><b>साहङ्कारेण</b> अहंकार सहित</span>
+            <span class="cheat-chip"><b>बहुलायासम्</b> अत्यधिक क्लेश</span>
+            <span class="cheat-chip"><b>उदाहृतम्</b> घोषित — declared</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: राजसिक कर्म = कामेप्सु OR साहङ्कार + बहुलायास। 18.23 के चारों AND का विपरीत। काम और अहंकार — इन दोनों का त्याग ही सात्त्विक की ओर यात्रा है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('यत्तु कामेप्सुना कर्म साहङ्कारेण वा पुनः। क्रियते बहुलायासं तद्राजसमुदाहृतम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('यत्तु कामेप्सुना कर्म साहङ्कारेण वा पुनः। क्रियते बहुलायासं तद्राजसमुदाहृतम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जो कर्म कामना करने वाले द्वारा, या अहंकार के साथ, और बहुत अधिक परिश्रम से किया जाए — वह राजसिक कहा गया है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText24"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev24()">◃</button>
+          <button onclick="walkToggle24()" id="walkPlayBtn24">▶</button>
+          <button onclick="walkNext24()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots24"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">यत्</span><span class="syll">तु</span><span class="syll">का</span><span class="syll">मे</span><span class="syll">प्सु</span><span class="syll">ना</span><span class="syll">कर्</span><span class="syll">म</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">सा</span><span class="syll">हङ्</span><span class="syll">का</span><span class="syll">रे</span><span class="syll">ण</span><span class="syll">वा</span><span class="syll">पु</span><span class="syll">नः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">क्रि</span><span class="syll">य</span><span class="syll">ते</span><span class="syll">ब</span><span class="syll">हु</span><span class="syll">ला</span><span class="syll">या</span><span class="syll">सं</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">तद्</span><span class="syll">रा</span><span class="syll">ज</span><span class="syll">स</span><span class="syll">मु</span><span class="syll">दा</span><span class="syll">हृ</span><span class="syll">तम्</span></div>
+        <div class="tts-row" style="margin-top:14px;"><button class="tts-btn" onclick="speakText('यत् तु कामेप्सुना कर्म साहङ्कारेण वा पुनः क्रियते बहुलायासं तत् राजसम् उदाहृतम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "बहुलायासम्" — जप करते समय रुकें। क्या अभी मेरे जीवन में कोई कर्म है जो बहुत stress दे रहा है? क्या उसके पीछे कामना या अहंकार है? यह प्रश्न ही राजसिक से मुक्ति का पहला कदम है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">18.23 vs 18.24 तुलना</button>
+      <button class="tab-btn" data-tab="e2">कर्म-त्रयी overview</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 18.23 vs 18.24 — AND vs OR logic</h3>
+        <p class="subnote">सात्त्विक में चारों AND आवश्यक; राजसिक में एक भी OR काफी</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 18.23 — सात्त्विक (AND)</div>
+            <div class="contrast-sa">नियत + सङ्गरहित + अरागद्वेष + अफलप्रेप्सु</div>
+            <p>चारों एक साथ होने चाहिए। एक भी कम हो तो सात्त्विक नहीं।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 18.24 — राजसिक (OR)</div>
+            <div class="contrast-sa">कामेप्सु वा साहङ्कार + बहुलायास</div>
+            <p>"वा" = OR। कामना OR अहंकार — एक भी हो तो राजसिक।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> 18.23 में AND — सात्त्विक बनना कठिन है, सब शर्तें पूरी करनी हैं। 18.24 में OR — राजसिक बनना आसान है, एक दोष काफी। यही गीता की honest teaching है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 कर्म-त्रयी — अभी तक की स्थिति</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🌿 सात्त्विक (18.23)</div>
+            <div class="guna-sa">नियत + निष्काम</div>
+            <div class="guna-char">चार AND। आत्मशुद्धि। मोक्ष-साधन।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 राजसिक (18.24) ← यहाँ</div>
+            <div class="guna-sa">सकाम + अहंकार</div>
+            <div class="guna-char">एक OR काफी। बहुलायास। संसार-बंधन।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🌑 तामसिक (18.25)</div>
+            <div class="guna-sa">मोह + हिंसा</div>
+            <div class="guna-char">अनवेक्षित। हानिकर। अगला श्लोक।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> ज्ञान-त्रयी की तरह कर्म-त्रयी भी सात्त्विक → राजसिक → तामसिक। श्रीकृष्ण हमेशा सर्वोत्तम से शुरू करते हैं।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २०-२२<br>ज्ञान-त्रयी</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २३<br>सात्त्विक कर्म</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. २४<br>राजसिक कर्म ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २५<br>तामसिक कर्म</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २६-२८<br>कर्ता-त्रयी</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.25):</b> तामसिक कर्म — मोह, हिंसा, अनवेक्षण। कर्म-त्रयी का निम्नतम।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.२५) — ☰ नेविगेशन — तामसिक कर्म: मोह और हानिकर</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData24=[
+    {q:"18.24 में राजसिक कर्म के कितने लक्षण हैं?",options:["एक — केवल बहुलायास","दो — कामेप्सु और साहङ्कार","तीन — कामेप्सु, साहङ्कार, बहुलायास","चार — 18.23 की तरह"],correct:2},
+    {q:"'वा पुनः' का अर्थ क्या है और इसका महत्त्व?",options:["और फिर — दोनों जरूरी","या फिर — OR; एक भी हो तो राजसिक","इसके बाद — sequence","साथ में — AND"],correct:1},
+    {q:"'बहुलायास' का अर्थ क्या है?",options:["बहुत लाभ वाला","अत्यधिक परिश्रम/क्लेश/stress","बड़े आयास से बना","बहुत आलस्य"],correct:1},
+    {q:"18.23 में 'कृतम्' था, 18.24 में 'क्रियते' — क्या अंतर है?",options:["दोनों एक ही हैं","कृतम् = भूतकृदन्त (हो चुका); क्रियते = ongoing passive process","क्रियते अधिक महत्त्वपूर्ण","कोई अंतर नहीं"],correct:1},
+    {q:"18.23 में AND logic था, 18.24 में OR — इसका क्या अर्थ है?",options:["सात्त्विक और राजसिक समान हैं","सात्त्विक बनने के लिए चारों चाहिए; राजसिक के लिए एक दोष काफी","राजसिक बनना कठिन है","सात्त्विक बनना आसान है"],correct:1}
+  ];
+  let qi=0,qs=0,qa=false;
+  function renderQuiz(){const area=document.getElementById('quizArea24');if(!area)return;if(qi>=quizData24.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+qs+' / '+quizData24.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="qi=0;qs=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData24[qi];qa=false;let html='<div class="quiz-progress">प्रश्न '+(qi+1)+' / '+quizData24.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQ('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="qnb" disabled onclick="qi++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQ(i){if(qa)return;qa=true;const item=quizData24[qi];document.querySelectorAll('#quizArea24 .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)qs++;document.getElementById('qnb').disabled=false;}
+  renderQuiz();
+
+  const walkSlides24=["18.23 में सात्त्विक कर्म था — नियत, सङ्गरहित, अरागद्वेष, अफलप्रेप्सु। अब 18.24 में 'तु' — 18.23 से contrast। राजसिक कर्म शुरू होता है।","'कामेप्सुना' — फल की कामना रखने वाले द्वारा। 18.23 में 'अफलप्रेप्सु' था — exact opposite। यही राजसिक का root-cause है।","'वा पुनः साहङ्कारेण' — या फिर अहंकार के साथ। 'वा' = OR। कामना OR अहंकार — दोनों में से एक भी राजसिक बना देता है।","'बहुलायासम्' — अत्यधिक क्लेश और stress। काम और अहंकार के कारण कर्म heavy हो जाता है। सात्त्विक कर्म light होता है; राजसिक में 'बहुलायास।'","18.23 में AND था — चारों चाहिए। 18.24 में OR है — एक दोष काफी। इसीलिए राजसिक में रहना आसान और सात्त्विक बनना साधना की जरूरत।","'उदाहृतम्' — घोषित। 18.23 में 'उच्यते' था। यह variation गीता का careful composition दर्शाता है। आगला 18.25 — तामसिक कर्म।"];
+  let wi=0,wp=false,wt=null;
+  function renderWalk24(){const t=document.getElementById('walkText24');if(!t)return;t.textContent=walkSlides24[wi];document.getElementById('walkDots24').innerHTML=walkSlides24.map((_,i)=>'<span class="walk-dot'+(i===wi?' active':'')+'"></span>').join('');}
+  function walkNext24(){wi=(wi+1)%walkSlides24.length;renderWalk24();}
+  function walkPrev24(){wi=(wi-1+walkSlides24.length)%walkSlides24.length;renderWalk24();}
+  function walkToggle24(){const btn=document.getElementById('walkPlayBtn24');wp=!wp;if(wp){btn.textContent='⏸';wt=setInterval(walkNext24,3200);}else{btn.textContent='▶';clearInterval(wt);}}
+  renderWalk24();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
