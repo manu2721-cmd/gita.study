@@ -337,12 +337,12 @@
   fetch('../manifest.json')
     .then(r => r.json())
     .then(manifest => {
-      const ch = manifest.chapters.find(c => c.num === currentChapter);
+      const ch = manifest.chapters[String(currentChapter)];
       if (ch) for (let i = 1; i <= ch.published; i++) publishedVerses.push(i);
       buildDrawer(); buildArrows();
     })
     .catch(() => {
-      for (let i = 1; i <= 19; i++) publishedVerses.push(i);
+      for (let i = 1; i <= 25; i++) publishedVerses.push(i);
       buildDrawer(); buildArrows();
     });
 
