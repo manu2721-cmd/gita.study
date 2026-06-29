@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.25 — तामसिक कर्म: मोह, हिंसा और अनवेक्षण</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:32.1%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(60,30,90,0.3);border:1px solid rgba(120,80,160,0.5);color:#c0a0d8;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-tam{border-left:3px solid rgba(120,80,160,0.8);background:rgba(60,30,90,0.15);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-tam b{color:#c0a0d8;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(60,30,90,0.25);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#c0a0d8;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .guna-card.tam{border:2px solid rgba(120,80,160,0.7);background:rgba(60,30,90,0.15);box-shadow:0 0 16px rgba(100,60,140,0.2);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  .tri-contrast{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:16px 0;}
+  .tri-card{border-radius:10px;padding:14px 10px;text-align:center;}
+  .tri-card.sat{border:1px solid rgba(42,106,90,0.4);background:rgba(42,106,90,0.06);}
+  .tri-card.raj{border:1px solid rgba(140,74,32,0.4);background:rgba(140,74,32,0.06);}
+  .tri-card.tam{border:2px solid rgba(120,80,160,0.6);background:rgba(60,30,90,0.12);}
+  .tri-label{font-size:10px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:6px;}
+  .tri-card.sat .tri-label{color:#6ecfb8;}
+  .tri-card.raj .tri-label{color:#e0a060;}
+  .tri-card.tam .tri-label{color:#c0a0d8;}
+  .tri-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:13.5px;color:var(--cream);margin-bottom:4px;line-height:1.5;}
+  .tri-desc{font-size:11.5px;color:var(--cream-dim);line-height:1.4;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}.tri-contrast{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 25 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.२५</div>
+    </div>
+    <div class="guna-badge">🌑 तामसिक कर्म — कर्म त्रयी श्लोक ३/३</div>
+    <div class="shloka">
+      अनुबन्धं क्षयं हिंसामनवेक्ष्य च पौरुषम्।<br>
+      मोहादारभ्यते कर्म यत्तत्तामसमुच्यते।।
+    </div>
+    <div class="translit">
+      anubandhaṃ kṣayaṃ hiṃsām anavekṣya ca pauruṣam,<br>
+      mohād ārabhyate karma yat tat tāmasam ucyate
+    </div>
+    <div class="gist">
+      जो कर्म <b>परिणाम</b> (अनुबन्ध), <b>हानि</b> (क्षय), <b>हिंसा</b> (हिंसा) और <b>अपनी सामर्थ्य</b> (पौरुष) पर <b>विचार किए बिना</b> (अनवेक्ष्य) — केवल <b>मोह</b> के कारण आरम्भ किया जाए — वह <b>तामसिक</b> कहा जाता है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="t3">भावार्थ</button>
+      <button class="tab-btn" data-tab="t4">उदाहरण</button>
+      <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="t1">
+        <h3>🪔 पूर्ववर्ती-संदर्भ — कर्म-त्रयी का समापन</h3>
+        <p>18.23 (सात्त्विक) → 18.24 (राजसिक) → 18.25 (तामसिक) — यह कर्म की त्रयी है। 18.25 इसका अंतिम और निम्नतम श्लोक है। ज्ञान-त्रयी की तरह कर्म-त्रयी भी यहाँ पूर्ण होती है।</p>
+        <div class="tri-contrast">
+          <div class="tri-card sat">
+            <div class="tri-label">🌿 18.23 सात्त्विक</div>
+            <div class="tri-sa">नियत + सङ्गरहित + अफलप्रेप्सु</div>
+            <div class="tri-desc">विचारपूर्ण। चार AND। मुक्ति-साधन।</div>
+          </div>
+          <div class="tri-card raj">
+            <div class="tri-label">🔥 18.24 राजसिक</div>
+            <div class="tri-sa">कामेप्सु वा साहङ्कार</div>
+            <div class="tri-desc">फल की चाह। एक OR काफी। बंधन।</div>
+          </div>
+          <div class="tri-card tam">
+            <div class="tri-label">🌑 18.25 तामसिक ← यहाँ</div>
+            <div class="tri-sa">मोहात् + अनवेक्ष्य</div>
+            <div class="tri-desc">मोह से। बिना सोचे। हिंसा-हानि। निम्नतम।</div>
+          </div>
+        </div>
+        <div class="callout-tam"><b>महत्त्वपूर्ण अंतर:</b> 18.25 में "यत्" के बाद "तु" नहीं है — जो 18.21, 18.22, 18.24 में था। यहाँ सीधे "यत् तत् तामसम् उच्यते" है। तामसिक कर्म इतना स्पष्ट है कि contrast की भी जरूरत नहीं — यह अपने आप में परिभाषित है।</div>
+      </div>
+
+      <div class="panel" id="t2">
+        <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+        <div class="word-grid">
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अनुबन्धम्</span><span class="word-tr">anubandham</span></div>
+            <div class="word-meaning">परिणाम, भावी परिणति, कर्म का अनुगामी फल</div>
+            <div class="word-eng"><b>EN:</b> consequence / future result / what follows from the action</div>
+            <div class="word-deep">अनु + बन्ध = पीछे बँधना, जो कर्म के बाद आता है। तामसिक कर्ता यह नहीं सोचता — "इस कर्म का परिणाम क्या होगा?" भविष्य की दृष्टि का पूर्ण अभाव।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">क्षयम्</span><span class="word-tr">kṣayam</span></div>
+            <div class="word-meaning">हानि, नाश, क्षति — स्वयं की या दूसरों की</div>
+            <div class="word-eng"><b>EN:</b> loss / destruction / damage</div>
+            <div class="word-deep">√क्षि = नष्ट होना। क्षय = हानि। तामसिक कर्ता इस बात की भी परवाह नहीं करता कि इस कर्म से कितनी हानि होगी — स्वयं को, दूसरों को, सम्पत्ति को।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">हिंसाम्</span><span class="word-tr">hiṃsām</span></div>
+            <div class="word-meaning">हिंसा — दूसरों को चोट या कष्ट पहुँचाना</div>
+            <div class="word-eng"><b>EN:</b> harm / injury / violence to others</div>
+            <div class="word-deep">√हिंस् = चोट पहुँचाना। यह तीन में सबसे गंभीर है। तामसिक कर्ता हिंसा की परवाह नहीं करता — न शारीरिक, न मानसिक। यह मोह-जनित अंधापन है।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अनवेक्ष्य च पौरुषम्</span><span class="word-tr">anavekṣya ca pauruṣam</span></div>
+            <div class="word-meaning">और अपनी सामर्थ्य/शक्ति पर भी विचार किए बिना</div>
+            <div class="word-eng"><b>EN:</b> and without considering one's own ability / capacity</div>
+            <div class="word-deep">अन + अवेक्ष्य = बिना देखे, बिना विचारे। पौरुष = पुरुष-शक्ति, सामर्थ्य, क्षमता। "मैं यह कर सकता हूँ या नहीं" — यह भी नहीं सोचा। अहंकार में आकर या मोह में आकर जो सामर्थ्य से परे कर्म हो वह तामसिक।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">मोहात् आरभ्यते</span><span class="word-tr">mohād ārabhyate</span></div>
+            <div class="word-meaning">मोह के कारण आरम्भ किया जाता है</div>
+            <div class="word-eng"><b>EN:</b> is commenced out of delusion / is begun from ignorance</div>
+            <div class="word-deep">मोह = भ्रम, delusion, अज्ञान-जनित आकर्षण। आरभ्यते = √रभ् passive = आरम्भ होता है। "मोहात्" — पञ्चमी (कारण-कारक)। मोह ही root-cause है। राजसिक में काम था; तामसिक में मोह — और गहरा अंधकार।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">यत् तत् तामसम् उच्यते</span><span class="word-tr">yat tat tāmasam ucyate</span></div>
+            <div class="word-meaning">जो (वह कर्म) — तामसिक कहा जाता है</div>
+            <div class="word-eng"><b>EN:</b> that is called tāmasa</div>
+            <div class="word-deep">उच्यते = "कहा जाता है" — 18.23 में भी "उच्यते" था। 18.22, 18.24 में "उदाहृतम्" था। तामसिक कर्म और सात्त्विक कर्म दोनों "उच्यते" — universal statement। यह गीता का subtle pattern है।</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="panel" id="t3">
+        <h3>🪔 भावार्थ एवं व्याख्या</h3>
+        <div class="eng-box">
+          <span>English Translation</span>
+          That action which is commenced out of delusion, without considering the consequence, loss, harm to others, and one's own ability — that is called tāmasa.
+        </div>
+        <p>18.25 तामसिक कर्म की परिभाषा देता है — इसमें <b>चार अनवेक्षण</b> (बिना सोचे) और <b>एक मूल कारण</b> (मोह) है:</p>
+        <p><b>चार जो नहीं सोचा:</b></p>
+        <p>१. <b>अनुबन्धम्</b> — परिणाम क्या होगा? (भविष्य-दृष्टि का अभाव)</p>
+        <p>२. <b>क्षयम्</b> — कितनी हानि होगी? (विवेक का अभाव)</p>
+        <p>३. <b>हिंसाम्</b> — किसे चोट पहुँचेगी? (करुणा का अभाव)</p>
+        <p>४. <b>पौरुषम्</b> — क्या मैं यह कर सकता हूँ? (आत्म-ज्ञान का अभाव)</p>
+        <div class="callout-tam"><b>मोहात् — root-cause:</b> तामसिक कर्म का एकमात्र कारण मोह है। राजसिक में "काम" (इच्छा) था — वह कम से कम कुछ चाहता था। तामसिक में "मोह" (delusion) — यह तो सही-गलत का भान ही नहीं रखता। मोह = अज्ञान का सक्रिय रूप।</div>
+        <p>"अनवेक्ष्य" — यह gerund (बिना देखे) चारों पदों पर apply होता है। चारों बातें देखे बिना — यह तामसिक कर्म की defining quality है। तमस = आवरण — जो देखने की शक्ति ढक देता है।</p>
+      </div>
+
+      <div class="panel" id="t4">
+        <h3>🪔 जीवनी उदाहरण</h3>
+        <div class="example">
+          <b>उदाहरण 1 — क्रोध में लिया गया निर्णय:</b> क्रोध में आकर किसी रिश्ते को तोड़ना, नौकरी छोड़ना, या कोई बड़ा निर्णय लेना — बिना परिणाम (अनुबन्ध) सोचे, बिना हानि (क्षय) सोचे, बिना सामर्थ्य (पौरुष) जाँचे। यह मोहजनित तामसिक कर्म है।
+        </div>
+        <div class="example">
+          <b>उदाहरण 2 — नशे की लत:</b> मोह में आकर वह कर्म जो स्वयं को और परिवार को हानि पहुँचाए — अनुबन्ध, क्षय, हिंसा — तीनों अनवेक्षित। "बस एक बार" — यह मोह का भ्रम है। यह तामसिक कर्म का clinical उदाहरण है।
+        </div>
+        <div class="example">
+          <b>उदाहरण 3 — अंधा अनुसरण:</b> भीड़ में बह जाना — न सोचना "यह कर्म सही है?", न देखना "इससे किसे चोट लगेगी?" (हिंसाम्), न जाँचना "मैं यह कर सकता हूँ?" (पौरुषम्)। भीड़-मनोविज्ञान (mob mentality) तामसिक कर्म का आधुनिक रूप है।
+        </div>
+        <div class="callout"><b>तीनों कर्मों की तुलना — एक निर्णय:</b> नया व्यवसाय शुरू करना: सात्त्विक = विवेक से, duty से, फल की चिंता नहीं। राजसिक = धन/प्रसिद्धि के लिए, अहंकार से। तामसिक = मोह में, बिना सोचे — न market देखी, न पौरुष जाँचा, न हानि सोची।</div>
+      </div>
+
+      <div class="panel" id="t5">
+        <h3>🪔 प्रश्नोत्तर</h3>
+        <div class="faq">
+          <div class="q">18.25 में "तु" नहीं है — जबकि 18.21, 18.24 में था। क्यों?</div>
+          <div class="a">बहुत सूक्ष्म observation! "तु" = contrast particle। 18.21 में 18.20 से contrast था; 18.24 में 18.23 से। पर 18.25 में contrast की जरूरत नहीं — तामसिक कर्म इतना स्पष्ट है कि वह अपने आप define होता है। "मोहात् आरभ्यते" — मोह से जो शुरू होे, वह तामसिक। कोई comparison नहीं चाहिए।</div>
+        </div>
+        <div class="faq">
+          <div class="q">"मोह" और "काम" में क्या अंतर है? दोनों तो अज्ञान के ही रूप हैं।</div>
+          <div class="a">काम = इच्छा, desire — वह कुछ चाहता है (राजसिक)। मोह = भ्रम, delusion — वह सही-गलत का भान ही नहीं रखता (तामसिक)। काम में एक लक्ष्य है, भले वह गलत हो। मोह में लक्ष्य भी स्पष्ट नहीं — बस भटकाव। इसीलिए तामसिक राजसिक से भी नीचे है।</div>
+        </div>
+        <div class="faq">
+          <div class="q">"पौरुषम्" — यह केवल शारीरिक शक्ति है या कुछ और?</div>
+          <div class="a">पौरुष = पुरुष-शक्ति — इसमें शारीरिक, मानसिक, आर्थिक, सामाजिक — सभी प्रकार की सामर्थ्य आती है। "क्या मैं यह कर सकता हूँ?" — यह comprehensive self-assessment है। तामसिक कर्ता यह नहीं जाँचता — मोह में अपनी सीमाएँ भी नहीं दिखतीं।</div>
+        </div>
+        <div class="faq">
+          <div class="q">कर्म-त्रयी पूर्ण होने के बाद क्या आता है?</div>
+          <div class="a">18.26-28 में कर्ता की त्रयी — सात्त्विक, राजसिक, तामसिक कर्ता। फिर 18.29-32 में बुद्धि की त्रयी, 18.33-35 में धृति की त्रयी, 18.36-39 में सुख की त्रयी। गीता का त्रिगुण framework यहाँ भी जारी रहता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.25 कर्म-त्रयी का समापन करता है। यह श्लोक विशेष है — यहाँ चार चीज़ें "नहीं सोची गईं" (अनवेक्ष्य) और एक कारण (मोह) बताया गया। यह structure पहले के श्लोकों से अलग है।</p>
+        <p>तामसिक कर्म की सबसे बड़ी विशेषता: यह reactive है, not proactive। मोह में आकर, भावनावश, बिना सोचे-समझे — यह तमस का स्वभाव है।</p>
+        <div class="callout-tam"><b>कर्म-त्रयी का सार:</b> 18.23 = क्या करना है, कैसे करना है — सोचकर (सात्त्विक)। 18.24 = फल और अहंकार से — इच्छापूर्वक (राजसिक)। 18.25 = बिना सोचे — मोह से (तामसिक)। तीनों मिलकर कर्म की पूरी spectrum बनाते हैं।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — तामसिक कर्म के चार अनवेक्षण और परिणाम</h3>
+        <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="195" rx="72" ry="42" fill="rgba(60,30,90,0.3)" stroke="rgba(120,80,160,0.6)" stroke-width="1.5"/>
+          <text x="350" y="188" text-anchor="middle" fill="#c0a0d8" font-size="12" font-family="Tiro Devanagari Hindi,serif">तामसिक कर्म</text>
+          <text x="350" y="205" text-anchor="middle" fill="#cfc3a8" font-size="10">मोहात् आरभ्यते</text>
+
+          <line x1="296" y1="162" x2="160" y2="90" stroke="rgba(120,80,160,0.4)" stroke-width="1.2"/>
+          <ellipse cx="112" cy="72" rx="72" ry="30" fill="rgba(60,30,90,0.12)" stroke="rgba(120,80,160,0.35)" stroke-width="1"/>
+          <text x="112" y="67" text-anchor="middle" fill="#c0a0d8" font-size="11" font-family="Tiro Devanagari Hindi,serif">अनुबन्धम्</text>
+          <text x="112" y="83" text-anchor="middle" fill="#cfc3a8" font-size="10">परिणाम नहीं सोचा</text>
+
+          <line x1="340" y1="153" x2="280" y2="68" stroke="rgba(120,80,160,0.4)" stroke-width="1.2"/>
+          <ellipse cx="260" cy="50" rx="68" ry="28" fill="rgba(60,30,90,0.12)" stroke="rgba(120,80,160,0.35)" stroke-width="1"/>
+          <text x="260" y="45" text-anchor="middle" fill="#c0a0d8" font-size="11" font-family="Tiro Devanagari Hindi,serif">क्षयम्</text>
+          <text x="260" y="61" text-anchor="middle" fill="#cfc3a8" font-size="10">हानि नहीं सोची</text>
+
+          <line x1="360" y1="153" x2="440" y2="68" stroke="rgba(120,80,160,0.4)" stroke-width="1.2"/>
+          <ellipse cx="460" cy="50" rx="68" ry="28" fill="rgba(60,30,90,0.12)" stroke="rgba(120,80,160,0.35)" stroke-width="1"/>
+          <text x="460" y="45" text-anchor="middle" fill="#c0a0d8" font-size="11" font-family="Tiro Devanagari Hindi,serif">हिंसाम्</text>
+          <text x="460" y="61" text-anchor="middle" fill="#cfc3a8" font-size="10">चोट नहीं सोची</text>
+
+          <line x1="404" y1="162" x2="540" y2="90" stroke="rgba(120,80,160,0.4)" stroke-width="1.2"/>
+          <ellipse cx="588" cy="72" rx="74" ry="30" fill="rgba(60,30,90,0.12)" stroke="rgba(120,80,160,0.35)" stroke-width="1"/>
+          <text x="588" y="67" text-anchor="middle" fill="#c0a0d8" font-size="11" font-family="Tiro Devanagari Hindi,serif">पौरुषम्</text>
+          <text x="588" y="83" text-anchor="middle" fill="#cfc3a8" font-size="10">सामर्थ्य नहीं जाँची</text>
+
+          <line x1="296" y1="228" x2="160" y2="308" stroke="rgba(120,80,160,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="350" y1="237" x2="350" y2="308" stroke="rgba(120,80,160,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="404" y1="228" x2="540" y2="308" stroke="rgba(120,80,160,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+
+          <rect x="55" y="308" width="190" height="52" rx="8" fill="rgba(60,30,90,0.1)" stroke="rgba(120,80,160,0.25)" stroke-width="1"/>
+          <text x="150" y="328" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi,serif">स्वयं की हानि</text>
+          <text x="150" y="346" text-anchor="middle" fill="#cfc3a8" font-size="11">self-destruction</text>
+
+          <rect x="265" y="308" width="170" height="52" rx="8" fill="rgba(60,30,90,0.1)" stroke="rgba(120,80,160,0.25)" stroke-width="1"/>
+          <text x="350" y="328" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi,serif">दूसरों की हानि</text>
+          <text x="350" y="346" text-anchor="middle" fill="#cfc3a8" font-size="11">harm to others</text>
+
+          <rect x="455" y="308" width="190" height="52" rx="8" fill="rgba(60,30,90,0.1)" stroke="rgba(120,80,160,0.25)" stroke-width="1"/>
+          <text x="550" y="328" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi,serif">अधः पतन</text>
+          <text x="550" y="346" text-anchor="middle" fill="#cfc3a8" font-size="11">total downfall</text>
+
+          <!-- मोह label at bottom center -->
+          <text x="350" y="390" text-anchor="middle" fill="#c0a0d8" font-size="12" font-family="Tiro Devanagari Hindi,serif" font-weight="bold">मूल कारण: मोह (delusion)</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — कर्म-त्रयी पूर्ण</h3>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>सात्त्विक (18.23)</th><th>राजसिक (18.24)</th><th>तामसिक (18.25)</th></tr>
+          <tr><td>मूल कारण</td><td>कर्तव्य-बोध</td><td>काम (इच्छा)</td><td>मोह (delusion)</td></tr>
+          <tr><td>विचार-प्रक्रिया</td><td>पूर्ण विचारपूर्वक</td><td>फल सोचकर</td><td>अनवेक्ष्य — बिना सोचे</td></tr>
+          <tr><td>परिणाम की दृष्टि</td><td>फल की परवाह नहीं पर जानता है</td><td>फल चाहता है</td><td>परिणाम ही नहीं सोचा</td></tr>
+          <tr><td>दूसरों पर प्रभाव</td><td>लोकसंग्रह — सबका भला</td><td>स्व-हित प्रधान</td><td>हिंसा — दूसरों को चोट</td></tr>
+          <tr><td>self-awareness</td><td>पूर्ण — पौरुष जाना है</td><td>आंशिक — अहंकार है</td><td>शून्य — पौरुष नहीं जाँचा</td></tr>
+          <tr><td>परिणाम</td><td>मुक्ति</td><td>संसार-बंधन</td><td>अधः पतन</td></tr>
+        </table>
+        <div class="callout"><b>Aristotle की Akrasia से तुलना:</b> Akrasia = बेहतर जानते हुए भी गलत करना। तामसिक कर्म इससे भी नीचे है — "जानता भी नहीं कि गलत है।" यह total moral blindness है — मोह का पूर्ण आवरण।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-tam"><b>तामसिक कर्म की पहचान — चार प्रश्न पूछें:</b> कोई कर्म आरम्भ करने से पहले: (1) इसका अनुबन्ध (परिणाम) क्या है? (2) इससे क्या क्षय (हानि) होगी? (3) इससे किसी को हिंसा (चोट) तो नहीं? (4) क्या मेरा पौरुष (सामर्थ्य) इसके लिए पर्याप्त है? — अगर ये चारों अनवेक्षित हों, तो सचेत हों।</div>
+        <p><b>मोह से बाहर निकलने का अभ्यास:</b> जब भी कोई impulsive निर्णय लेने की इच्छा हो — रुकें। एक पल। "मोह तो नहीं?" यह एक प्रश्न तमस को तोड़ता है। तमस = जड़ता; उसे तोड़ने के लिए थोड़ी-सी रजस (गति) चाहिए — और फिर रजस को सत्त्व की ओर ले जाएँ।</p>
+        <p><b>गीता का उपाय:</b> 18.23 की चार कसौटियाँ — नियत, सङ्गरहित, अरागद्वेष, अफलप्रेप्सु — यही तामसिक कर्म का antidote हैं। विचारपूर्ण, detached, balanced, निष्काम।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "मोहात्" = अज्ञान-जनित भ्रम से। "अनवेक्ष्य" = विवेक का पूर्ण अभाव। तामसिक कर्म माया के घने आवरण में किया जाता है — न कर्ता को पता, न भोक्ता को।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "हिंसाम् अनवेक्ष्य" — जो ईश्वर की सृष्टि को चोट पहुँचाए, वह ईश्वर-विमुख कर्म है। तामसिक कर्म भक्ति का पूर्ण विपरीत है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> "पौरुषम् अनवेक्ष्य" — जो अपनी सामर्थ्य से परे कर्म करे, वह भी तामसिक हो सकता है। अति-महत्त्वाकांक्षा जब मोह से आती है — वह भी 18.25 में आती है।</p>
+        <div class="callout"><b>तीनों का सार:</b> तामसिक कर्म का antidote = विवेक (सही-गलत जानना) + करुणा (दूसरों की चिंता) + आत्म-ज्ञान (अपनी सीमाएँ जानना)। ये तीनों तमस के घने आवरण को हटाते हैं।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अनुबन्धम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>परिणाम / भावी फल</b>जो कर्म के बाद आता है — अनवेक्षित</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">क्षयम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>हानि / नाश</b>स्वयं या दूसरों की क्षति — अनवेक्षित</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">हिंसाम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>हिंसा / चोट</b>दूसरों को पहुँचाई जाने वाली पीड़ा — अनवेक्षित</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">पौरुषम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>अपनी सामर्थ्य</b>"मैं यह कर सकता हूँ?" — यह भी नहीं जाँचा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अनवेक्ष्य</span></div>
+            <div class="flashcard-face flashcard-back"><b>बिना देखे / विचारे</b>Gerund — चारों पर apply</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">मोहात्</span></div>
+            <div class="flashcard-face flashcard-back"><b>मोह के कारण</b>पञ्चमी — root-cause। राजसिक में काम था, यहाँ मोह</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea25"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">अनुबन्धम्</td><td>अनु+√बन्ध</td><td>द्वितीया एकवचन</td><td>परिणाम को — कर्म-कारक</td></tr>
+          <tr><td class="sa">क्षयम्</td><td>√क्षि+अ</td><td>द्वितीया एकवचन</td><td>हानि को — कर्म-कारक</td></tr>
+          <tr><td class="sa">हिंसाम्</td><td>√हिंस्+आ</td><td>द्वितीया एकवचन</td><td>हिंसा को — कर्म-कारक</td></tr>
+          <tr><td class="sa">अनवेक्ष्य</td><td>अन+अव+√ईक्ष्+ल्यप्</td><td>Gerund (अव्यय)</td><td>बिना देखे — चारों पर apply</td></tr>
+          <tr><td class="sa">पौरुषम्</td><td>पुरुष+अण्</td><td>द्वितीया एकवचन</td><td>सामर्थ्य को — कर्म-कारक</td></tr>
+          <tr><td class="sa">मोहात्</td><td>√मुह्+घञ्</td><td>पञ्चमी एकवचन</td><td>मोह से — कारण-कारक (अपादान)</td></tr>
+          <tr><td class="sa">आरभ्यते</td><td>आ+√रभ्</td><td>Passive वर्तमान प्र.पु.</td><td>आरम्भ होता है — ongoing passive</td></tr>
+          <tr><td class="sa">तामसम् उच्यते</td><td>तामस+√वच्</td><td>passive वर्तमान</td><td>तामसिक कहा जाता है</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">अनुबन्धं क्षयं हिंसामनवेक्ष्य च पौरुषम्।<br>मोहादारभ्यते कर्म यत्तत्तामसमुच्यते।।</div>
+          <div class="cheat-translit">anubandhaṃ kṣayaṃ hiṃsām anavekṣya ca pauruṣam, mohād ārabhyate karma yat tat tāmasam ucyate</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अनुबन्धम्</b> परिणाम — नहीं सोचा</span>
+            <span class="cheat-chip"><b>क्षयम्</b> हानि — नहीं सोची</span>
+            <span class="cheat-chip"><b>हिंसाम्</b> चोट — नहीं सोची</span>
+            <span class="cheat-chip"><b>पौरुषम्</b> सामर्थ्य — नहीं जाँची</span>
+            <span class="cheat-chip"><b>अनवेक्ष्य</b> बिना देखे</span>
+            <span class="cheat-chip"><b>मोहात्</b> मोह से — root-cause</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: तामसिक कर्म = मोह से, बिना सोचे — परिणाम, हानि, हिंसा, सामर्थ्य — सब अनवेक्षित। कर्म-त्रयी का निम्नतम। इससे ऊपर उठना साधना है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('अनुबन्धं क्षयं हिंसामनवेक्ष्य च पौरुषम्। मोहादारभ्यते कर्म यत्तत्तामसमुच्यते।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('अनुबन्धं क्षयं हिंसामनवेक्ष्य च पौरुषम्। मोहादारभ्यते कर्म यत्तत्तामसमुच्यते।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जो कर्म परिणाम, हानि, हिंसा और अपनी सामर्थ्य पर विचार किए बिना, केवल मोह के कारण आरम्भ किया जाए — वह तामसिक कहा जाता है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText25"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev25()">◃</button>
+          <button onclick="walkToggle25()" id="walkPlayBtn25">▶</button>
+          <button onclick="walkNext25()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots25"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">नु</span><span class="syll">बन्</span><span class="syll">धं</span><span class="syll">क्ष</span><span class="syll">यं</span><span class="syll">हिं</span><span class="syll">साम्</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">न</span><span class="syll">वे</span><span class="syll">क्ष्य</span><span class="syll">च</span><span class="syll">पौ</span><span class="syll">रु</span><span class="syll">षम्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">मो</span><span class="syll">हा</span><span class="syll">दा</span><span class="syll">र</span><span class="syll">भ्य</span><span class="syll">ते</span><span class="syll">कर्</span><span class="syll">म</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">यत्</span><span class="syll">तत्</span><span class="syll">ता</span><span class="syll">म</span><span class="syll">स</span><span class="syll">मु</span><span class="syll">च्य</span><span class="syll">ते</span></div>
+        <div class="tts-row" style="margin-top:14px;"><button class="tts-btn" onclick="speakText('अनुबन्धं क्षयं हिंसाम् अनवेक्ष्य च पौरुषम् मोहात् आरभ्यते कर्म यत् तत् तामसम् उच्यते', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-tam"><b>ध्यान-बिंदु:</b> "अनवेक्ष्य" — जप करते समय रुकें। क्या आज मैंने कोई कर्म बिना सोचे किया? क्या उसके पीछे मोह था? यह awareness ही तामसिक कर्म से बाहर निकलने का पहला कदम है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">कर्म-त्रयी तुलना</button>
+      <button class="tab-btn" data-tab="e2">कर्म-त्रयी overview</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 कर्म-त्रयी — तीनों एक साथ</h3>
+        <p class="subnote">18.23 → 18.24 → 18.25 — एक ही कर्म-field, तीन अलग मनोदशाएँ</p>
+        <div class="tri-contrast">
+          <div class="tri-card sat">
+            <div class="tri-label">🌿 18.23 सात्त्विक</div>
+            <div class="tri-sa">नियत + सङ्गरहित + अफलप्रेप्सु</div>
+            <div class="tri-desc">विचारपूर्ण। duty से। फल की इच्छा नहीं। मुक्ति।</div>
+          </div>
+          <div class="tri-card raj">
+            <div class="tri-label">🔥 18.24 राजसिक</div>
+            <div class="tri-sa">कामेप्सु वा साहङ्कार</div>
+            <div class="tri-desc">फल के लिए। अहंकार से। stress। बंधन।</div>
+          </div>
+          <div class="tri-card tam">
+            <div class="tri-label">🌑 18.25 तामसिक ← यहाँ</div>
+            <div class="tri-sa">मोहात् + अनवेक्ष्य</div>
+            <div class="tri-desc">मोह से। बिना सोचे। हानि-हिंसा। पतन।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Three levels of awareness:</b> सात्त्विक = पूर्ण awareness (क्या, कैसे, किस भाव से, फल?)। राजसिक = partial awareness (फल दिखता है, duty नहीं)। तामसिक = zero awareness (मोह में — कुछ नहीं दिखता)।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 कर्म-त्रयी — complete overview</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🌿 सात्त्विक (18.23)</div>
+            <div class="guna-sa">नियत + निष्काम</div>
+            <div class="guna-char">चार AND। आत्मशुद्धि। मुक्ति।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 राजसिक (18.24)</div>
+            <div class="guna-sa">सकाम + अहंकार</div>
+            <div class="guna-char">एक OR काफी। बहुलायास। बंधन।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🌑 तामसिक (18.25) ← यहाँ</div>
+            <div class="guna-sa">मोह + अनवेक्षण</div>
+            <div class="guna-char">चार अनवेक्षित। हिंसा। पतन।</div>
+          </div>
+        </div>
+        <div class="callout"><b>कर्म-त्रयी पूर्ण।</b> अगले श्लोकों (18.26-28) में कर्ता की त्रयी। गीता का त्रिगुण framework जारी है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २०-२२<br>ज्ञान-त्रयी</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २३<br>सात्त्विक कर्म</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २४<br>राजसिक कर्म</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. २५<br>तामसिक कर्म ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २६-२८<br>कर्ता-त्रयी</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.26):</b> सात्त्विक कर्ता — मुक्त, अनहंकार, धृतिमान। कर्ता-त्रयी का सर्वोत्तम।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.२६) — ☰ नेविगेशन — सात्त्विक कर्ता: मुक्त और अनहंकार</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData25=[
+    {q:"18.25 में तामसिक कर्म का मूल कारण क्या है?",options:["काम — फल की इच्छा","अहंकार — 'मैंने किया'","मोह — delusion, भ्रम","क्रोध — anger"],correct:2},
+    {q:"'अनवेक्ष्य' किन चीज़ों पर apply होता है?",options:["केवल हिंसा पर","केवल परिणाम पर","अनुबन्ध, क्षय, हिंसा और पौरुष — चारों पर","केवल पौरुष पर"],correct:2},
+    {q:"'पौरुषम् अनवेक्ष्य' का अर्थ क्या है?",options:["पुरुषों की परवाह नहीं","अपनी सामर्थ्य/क्षमता पर विचार किए बिना","पौरुष दिखाकर","पुरुषार्थ को छोड़कर"],correct:1},
+    {q:"18.25 में 'तु' नहीं है, जबकि 18.24 में था — क्यों?",options:["यह typo है","तामसिक कर्म स्वयंसिद्ध है, contrast की जरूरत नहीं","'तु' optional है","कोई अंतर नहीं"],correct:1},
+    {q:"राजसिक (18.24) में 'काम' था, तामसिक (18.25) में 'मोह' — क्या अंतर?",options:["दोनों एक ही हैं","काम = इच्छा (कुछ चाहता है); मोह = भ्रम (सही-गलत का भान नहीं)","मोह बेहतर है","काम अधिक खतरनाक है"],correct:1}
+  ];
+  let qi=0,qs=0,qa=false;
+  function renderQuiz(){const area=document.getElementById('quizArea25');if(!area)return;if(qi>=quizData25.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+qs+' / '+quizData25.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="qi=0;qs=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData25[qi];qa=false;let html='<div class="quiz-progress">प्रश्न '+(qi+1)+' / '+quizData25.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQ('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="qnb" disabled onclick="qi++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQ(i){if(qa)return;qa=true;const item=quizData25[qi];document.querySelectorAll('#quizArea25 .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)qs++;document.getElementById('qnb').disabled=false;}
+  renderQuiz();
+
+  const walkSlides25=["18.23 (सात्त्विक) → 18.24 (राजसिक) → 18.25 (तामसिक) — कर्म-त्रयी का समापन। 18.25 में 'तु' नहीं है — contrast की जरूरत नहीं। तामसिक स्वयंसिद्ध है।","'अनुबन्धम् क्षयम् हिंसाम् अनवेक्ष्य च पौरुषम्' — चार चीज़ें बिना सोचे। परिणाम, हानि, हिंसा और अपनी सामर्थ्य — सब अनवेक्षित।","'अनवेक्ष्य' = Gerund — बिना देखे। यह एक शब्द चारों पदों पर apply होता है। तमस का आवरण इतना घना है कि कुछ दिखता ही नहीं।","'मोहात् आरभ्यते' — मोह के कारण आरम्भ। 18.24 में काम था; यहाँ मोह — और गहरा अंधकार। काम कुछ चाहता था; मोह में भान भी नहीं।","कर्म-त्रयी का pattern: सात्त्विक = पूर्ण awareness। राजसिक = partial (फल दिखता है)। तामसिक = zero (मोह में — कुछ नहीं दिखता)।","कर्म-त्रयी पूर्ण। अगला 18.26 — सात्त्विक कर्ता। गीता का त्रिगुण framework आगे बढ़ता है।"];
+  let wi=0,wp=false,wt=null;
+  function renderWalk25(){const t=document.getElementById('walkText25');if(!t)return;t.textContent=walkSlides25[wi];document.getElementById('walkDots25').innerHTML=walkSlides25.map((_,i)=>'<span class="walk-dot'+(i===wi?' active':'')+'"></span>').join('');}
+  function walkNext25(){wi=(wi+1)%walkSlides25.length;renderWalk25();}
+  function walkPrev25(){wi=(wi-1+walkSlides25.length)%walkSlides25.length;renderWalk25();}
+  function walkToggle25(){const btn=document.getElementById('walkPlayBtn25');wp=!wp;if(wp){btn.textContent='⏸';wt=setInterval(walkNext25,3200);}else{btn.textContent='▶';clearInterval(wt);}}
+  renderWalk25();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

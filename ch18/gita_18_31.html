@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.31 — राजसिकी बुद्धि: अयथावत् प्रज्ञा</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:39.7%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .callout-sat{border-left:3px solid rgba(42,106,90,0.8);background:rgba(42,106,90,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-sat b{color:#6ecfb8;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  /* skew-meter — राजसिक visual */
+  .skew-meter{position:relative;height:60px;border-radius:10px;background:linear-gradient(90deg,rgba(42,106,90,0.3) 0%,rgba(140,74,32,0.5) 55%,rgba(60,30,90,0.4) 100%);overflow:hidden;margin:16px 0;}
+  .skew-needle{position:absolute;top:50%;left:55%;transform:translate(-50%,-50%);width:4px;height:48px;background:var(--gold);border-radius:2px;box-shadow:0 0 10px var(--gold);}
+  .skew-labels{display:flex;justify-content:space-between;font-size:11.5px;padding:4px 10px 0;}
+  .skew-label-sat{color:#6ecfb8;}
+  .skew-label-raj{color:#e0a060;font-weight:700;}
+  .skew-label-tam{color:#c0a0d8;}
+  /* contrast buddhi row */
+  .buddhi-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .buddhi-card{border-radius:12px;padding:18px 14px;}
+  .buddhi-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .buddhi-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 14px rgba(140,74,32,0.18);}
+  .buddhi-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .buddhi-card.sat .buddhi-label{color:#6ecfb8;}
+  .buddhi-card.raj .buddhi-label{color:#e0a060;}
+  .buddhi-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:6px;}
+  .buddhi-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.buddhi-row{grid-template-columns:1fr;}.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 31 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.३१</div>
+    </div>
+    <div class="guna-badge">🔥 राजसिकी बुद्धि — बुद्धि त्रयी श्लोक २/३</div>
+    <div class="shloka">
+      यया धर्ममधर्मं च कार्यं चाकार्यमेव च।<br>
+      अयथावत्प्रजानाति बुद्धिः सा पार्थ राजसी।।
+    </div>
+    <div class="translit">
+      yayā dharmam adharmaṃ ca kāryaṃ cākāryam eva ca,<br>
+      ayathāvat prajānāti buddhiḥ sā pārtha rājasī
+    </div>
+    <div class="gist">
+      हे पार्थ! जो बुद्धि धर्म-अधर्म और कार्य-अकार्य को <b>अयथावत्</b> — यानी <b>विकृत / आंशिक / तिरछे ढंग से</b> जानती है — वह बुद्धि <b>राजसी</b> है।
+    </div>
+  </div>
+
+  <!-- MODE PILLS -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- ═══ MODE: CORE ═══ -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="ctx">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="shabda">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="bhavarth">भावार्थ</button>
+      <button class="tab-btn" data-tab="udaharan">उदाहरण</button>
+      <button class="tab-btn" data-tab="qa">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <!-- पूर्ववर्ती-संदर्भ -->
+      <div class="panel active" id="ctx">
+        <h3>पूर्ववर्ती संदर्भ — बुद्धि त्रयी में स्थान</h3>
+        <p>श्लोक <b>18.29</b> में कृष्ण ने घोषणा की — "अब मैं बुद्धि और धृति के त्रिगुण भेद सुनाता हूँ।" श्लोक <b>18.30</b> में <b>सात्त्विकी बुद्धि</b> का लक्षण दिया: जो बुद्धि प्रवृत्ति-निवृत्ति, कार्य-अकार्य, भय-अभय, और बंध-मोक्ष को <em>यथावत्</em> (ठीक-ठीक) जानती है — वह सात्त्विकी है।</p>
+        <p>अब <b>18.31</b> में उसकी विपरीत धरातल पर बसी <b>राजसिकी बुद्धि</b> प्रस्तुत होती है। यह बुद्धि वही चार ज्ञेय-युगल जानती तो है — पर <b>अयथावत्</b> (distorted रूप में)। न पूरा उल्टा, न पूरा सही।</p>
+        <div class="callout-rajas">
+          <b>तुलनात्मक कुंजी:</b> सात्त्विकी बुद्धि = यथावत् प्रजानाति (18.30) · राजसिकी बुद्धि = <b>अयथावत्</b> प्रजानाति (18.31) · तामसिकी बुद्धि = अधर्मं धर्म मन्यते (18.32)
+        </div>
+        <p>तीनों में <b>ज्ञेय वस्तु एक ही है</b> — धर्म/अधर्म, कार्य/अकार्य — किंतु बुद्धि की गुण-प्रकृति उसे भिन्न-भिन्न रूप में देखती है। यही गीता का त्रिगुण विश्लेषण की विशेषता है।</p>
+      </div>
+
+      <!-- शब्दार्थ -->
+      <div class="panel" id="shabda">
+        <h3>शब्दार्थ — पद-विश्लेषण</h3>
+        <div class="eng-box"><span>English Rendering</span>That intellect by which dharma and adharma, what should be done and what should not, are known in a distorted (skewed/partial) way — that intellect, O Pārtha, is rājasic.</div>
+        <div class="word-grid">
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">यया</span><span class="word-tr">yayā</span></div>
+            <div class="word-meaning">जिसके द्वारा / which (सर्वनाम, स्त्री., तृतीया एक.)</div>
+            <div class="word-eng"><b>yā</b> (सर्वनाम) का तृतीया एकवचन — बुद्धि के लिए विशेषण-भूमिका</div>
+            <div class="word-deep">बुद्धि (स्त्री.) का ही अनुसरण करता है — "जिस बुद्धि के द्वारा..."</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">धर्मम्</span><span class="word-tr">dharmam</span></div>
+            <div class="word-meaning">धर्म को — शास्त्र-विहित, नैतिक कर्तव्य</div>
+            <div class="word-eng"><b>dharma</b> (नपुं./पुं.) द्वितीया एकवचन</div>
+            <div class="word-deep">यहाँ 'धर्म' = नियत कर्तव्य, शास्त्रीय विधि; 18.30 के 'प्रवृत्ति' पक्ष से जुड़ा</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अधर्मम्</span><span class="word-tr">adharmam</span></div>
+            <div class="word-meaning">अधर्म को — निषिद्ध आचरण, कर्तव्य-विरुद्ध</div>
+            <div class="word-eng"><b>a-dharma</b> — उपसर्ग 'a' = अभाव/विरोध</div>
+            <div class="word-deep">सात्त्विकी बुद्धि इन दोनों का स्पष्ट भेद जानती है; राजसिकी में यह भेद धुंधला हो जाता है</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">कार्यम्</span><span class="word-tr">kāryam</span></div>
+            <div class="word-meaning">करने योग्य कर्म — विधेय, करणीय</div>
+            <div class="word-eng"><b>kārya</b> = what ought to be done (कर्तव्य)</div>
+            <div class="word-deep">18.30 में 'कार्य' = अनुष्ठेय कर्म; इच्छा-पूर्ति से ऊपर शास्त्र-निर्देश</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अकार्यम्</span><span class="word-tr">akāryam</span></div>
+            <div class="word-meaning">न करने योग्य — निषिद्ध कर्म</div>
+            <div class="word-eng"><b>a-kārya</b> — जो नहीं करना चाहिए</div>
+            <div class="word-deep">राजसिकी बुद्धि अकार्य को 'थोड़ा ठीक है' या 'परिस्थिति-विशेष में जायज़' मानकर औचित्य दे देती है</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अयथावत्</span><span class="word-tr">ayathāvat</span></div>
+            <div class="word-meaning">यथावत् नहीं — विकृत रूप में, आंशिक रूप में, तिरछे ढंग से</div>
+            <div class="word-eng"><b>a + yathā + vat</b> — यथा = जैसा है; वत् = उस प्रकार; a = नहीं → "जैसा है वैसा नहीं"</div>
+            <div class="word-deep">यह श्लोक का सर्वाधिक महत्त्वपूर्ण पद है। तामसी = उल्टा जानना; राजसी = <b>तिरछा जानना (skewed perception)</b>। दोनों में अंतर: भ्रम की मात्रा और दिशा में।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">प्रजानाति</span><span class="word-tr">prajānāti</span></div>
+            <div class="word-meaning">जानती है / समझती है</div>
+            <div class="word-eng"><b>pra-√jñā</b> — 'pra' उपसर्ग से तीव्रता: अच्छी तरह जानना (पर यहाँ विकृत रूप में)</div>
+            <div class="word-deep">क्रिया ज्ञान-कार्य की है, पर गुण ने उसे विकृत कर दिया — यही राजस का प्रभाव है</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">राजसी</span><span class="word-tr">rājasī</span></div>
+            <div class="word-meaning">राजसिक / रजोगुण-प्रधान</div>
+            <div class="word-eng"><b>rājasa</b> (विशेषण) स्त्री. → बुद्धि (स्त्री.) के साथ संगत</div>
+            <div class="word-deep">रजोगुण = क्रियाशीलता, कामना, आसक्ति — इसीलिए बुद्धि 'अपने पक्ष में' धर्म-अधर्म को ढाल लेती है</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- भावार्थ -->
+      <div class="panel" id="bhavarth">
+        <h3>भावार्थ — गहन विश्लेषण</h3>
+        <p><b>राजसिकी बुद्धि की मूल विशेषता</b> है — <em>अयथावत् प्रज्ञा</em>, अर्थात् सत्य का आंशिक, पक्षपातपूर्ण, या कामना-रंजित अनुभव। यह बुद्धि <em>जानती</em> तो है — पर अपने रागद्वेष के रंग से देखती है।</p>
+
+        <div class="callout-rajas">
+          <b>मूल भेद — तीनों बुद्धियों में:</b><br>
+          सात्त्विकी: धर्म-अधर्म को <em>यथावत्</em> (Clear Vision) देखती है।<br>
+          <b>राजसिकी: उन्हीं को <em>अयथावत्</em> (Distorted Vision) देखती है।</b><br>
+          तामसिकी: अधर्म को ही धर्म मान लेती है (Inverted Vision)।
+        </div>
+
+        <p><b>अयथावत् का तात्पर्य</b> — यह <em>पूर्ण उलट नहीं</em> है (वह तामसी होता), बल्कि <em>विकृत/तिरछा/partial</em> है। राजसिकी बुद्धि को ठीक-ठीक पता होता है कि हत्या पाप है — लेकिन रजोगुण की आसक्ति उसे "इस परिस्थिति में तो ठीक है" जैसे तर्क बनाने पर मजबूर कर देती है।</p>
+
+        <p><b>यह rationalization की बुद्धि है।</b> रजोगुण क्रियाशीलता, कामना, स्वार्थ, और प्रतिस्पर्धा का गुण है — इसलिए राजसिकी बुद्धि हमेशा अपने हित, अपनी इच्छा, अपने लक्ष्य को केंद्र में रखकर धर्म-अधर्म का निर्णय करती है।</p>
+
+        <div class="callout">
+          <b>श्रीमद्भागवत में समानांतर:</b> "आत्मा वै जायते पुत्रः" जैसे वचनों का दुरुपयोग कर कुछ लोग "पुत्र न हो तो मोक्ष नहीं" जैसा अयथावत् अर्थ निकालते हैं — यह राजसिकी बुद्धि का स्पष्ट उदाहरण है।
+        </div>
+
+        <p><b>कार्य-अकार्य का विकृतिकरण:</b> राजसिकी बुद्धि को पता है कि झूठ अकार्य है — पर वह तुरंत rationalize करती है: "यह झूठ तो किसी की रक्षा के लिए है।" धर्म की जगह <em>उद्देश्य</em> निर्णायक बन जाता है।</p>
+
+        <p><b>आचार्य शंकर</b> कहते हैं: इस बुद्धि में <em>ज्ञान की क्षमता</em> है, पर रजोगुण उसे <em>विषय-आसक्ति के चश्मे से</em> देखने पर विवश करता है। इसलिए अयथावत् = "as it is" नहीं, बल्कि "as I want it to be"।</p>
+
+        <div class="callout-rajas">
+          <b>व्यावहारिक दृष्टि:</b> जब हम कहते हैं — "मैं जानता हूँ यह गलत है, पर इस बार तो ठीक है" — यही राजसिकी बुद्धि बोल रही होती है।
+        </div>
+      </div>
+
+      <!-- उदाहरण -->
+      <div class="panel" id="udaharan">
+        <h3>उदाहरण — जीवन में राजसिकी बुद्धि</h3>
+
+        <div class="example">
+          <p><b>📊 व्यापारी का उदाहरण:</b> एक व्यापारी जानता है कि मिलावट अधर्म है। पर जब बाज़ार में प्रतियोगिता बढ़ती है, तो उसकी बुद्धि rationalize करती है — "सब करते हैं, मैं न करूँ तो दिवालिया हो जाऊँगा। थोड़ी-सी मिलावट से कोई मरता नहीं।" — यह अयथावत् ज्ञान है। धर्म-अधर्म पता है, पर कामना ने उसे तिरछा कर दिया।</p>
+        </div>
+
+        <div class="example">
+          <p><b>⚖️ राजनेता का उदाहरण:</b> एक नेता जानता है कि झूठे वादे करना अधर्म है। पर चुनाव के समय उसकी राजसिकी बुद्धि कहती है — "अभी जीतना ज़रूरी है, बाद में काम तो करूँगा ही।" वह स्वयं को convince कर लेता है कि 'लोगों की भलाई के लिए' यह झूठ कार्य (करणीय) है।</p>
+        </div>
+
+        <div class="example">
+          <p><b>👨‍👩‍👦 परिवार में पक्षपात:</b> एक न्यायाधीश जानता है कि रिश्वत अकार्य है। पर जब उसका अपना पुत्र फँसता है, तब बुद्धि कहती है — "एक बार तो ठीक है, बेटे की ज़िंदगी बचानी है।" — रागजनित राजसी विकृति।</p>
+        </div>
+
+        <div class="example">
+          <p><b>📿 धार्मिक संदर्भ में:</b> साधक पूजा-पाठ करता है — पर मन में भाव है "भगवान मेरी इच्छा पूरी करें।" धर्म (भक्ति) का कार्य तो हो रहा है, पर <em>दृष्टि</em> सात्त्विक नहीं — राजसिकी है। भक्ति को वह 'सौदा' (transaction) समझ रहा है।</p>
+        </div>
+
+        <div class="example">
+          <p><b>🧠 आधुनिक जीवन — confirmation bias:</b> हम वही समाचार पढ़ते हैं जो हमारी राय को confirm करें। जो विरुद्ध हो उसे "fake news" कह देते हैं। यह राजसिकी बुद्धि का आधुनिक रूप है — अयथावत् प्रज्ञा, जो अपने पूर्वाग्रह को ही सत्य मान लेती है।</p>
+        </div>
+      </div>
+
+      <!-- प्रश्नोत्तर -->
+      <div class="panel" id="qa">
+        <h3>प्रश्नोत्तर</h3>
+
+        <div class="faq">
+          <div class="q">प्र. 'अयथावत्' और 'उल्टा जानना' में क्या अंतर है?</div>
+          <div class="a">अयथावत् = तिरछा / partial / skewed जानना — सत्य की झलक है, पर रजोगुण ने उसे विकृत कर दिया। तामसी बुद्धि (18.32) अधर्म को ही धर्म मान लेती है — वह पूर्ण उलटाव है। राजसी में भ्रम है; तामसी में अज्ञान का पूर्ण अंधकार है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 18.30 में 'यथावत्' और 18.31 में 'अयथावत्' — क्या यह सीधी pair है?</div>
+          <div class="a">हाँ, यही कृष्ण की शैली है। सात्त्विकी = यथावत् प्रजानाति; राजसी = अयथावत् प्रजानाति; तामसी = अधर्मं धर्मं मन्यते। तीनों श्लोकों में <em>ज्ञेय वस्तु एक ही है</em> — धर्म-अधर्म, कार्य-अकार्य — पर दृष्टिकोण त्रिस्तरीय है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. क्या राजसिकी बुद्धि वाला व्यक्ति स्वयं जानता है कि वह गलत कर रहा है?</div>
+          <div class="a">यही इसकी खासियत है — वह कुछ हद तक जानता है, पर रजोगुण की शक्ति इतनी है कि वह झट rationalization कर लेता है। इसीलिए यह सात्त्विकी से कम है — क्योंकि बुद्धि होते हुए भी वह सत्य को यथावत् देख नहीं पाती।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. इस बुद्धि से कैसे बाहर निकलें?</div>
+          <div class="a">गीता का उत्तर है: सत्त्व-गुण की वृद्धि। 14.17 में कहा — सत्त्व से ज्ञान उत्पन्न होता है। रजोगुण कम करने के लिए: निष्काम कर्म (3.19), आसक्ति-त्याग (18.9), और निरंतर विवेक-अभ्यास। "मेरी बुद्धि कामना से रंगी है या यथार्थ देख रही है?" — यह आत्म-परीक्षण राजसिकी बुद्धि की दवा है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 'पार्थ' संबोधन यहाँ क्यों?</div>
+          <div class="a">इस संबोधन में कृष्ण कह रहे हैं — "हे पृथा-पुत्र!" पृथा (कुंती) का पुत्र होने से अर्जुन में क्षात्र-धर्म और सात्त्विकता की संभावना है। यह संबोधन उसे याद दिलाता है — "तू इस राजसिकी बुद्धि से ऊपर है।" साथ ही राजसिकी बुद्धि का संदर्भ क्षत्रिय-जीवन से विशेष रूप से जुड़ा है (कर्म, युद्ध, निर्णय)।</div>
+        </div>
+      </div>
+
+    </div><!-- panel-shell -->
+  </div><!-- mode-core -->
+
+  <!-- ═══ MODE: PERSPECTIVES ═══ -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="mahattva">महत्त्व</button>
+      <button class="tab-btn" data-tab="mindmap">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="tulna">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="sadhana">साधना</button>
+      <button class="tab-btn" data-tab="acharya">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="mahattva">
+        <h3>महत्त्व — इस श्लोक की विशिष्टता</h3>
+        <p>यह श्लोक <b>नैतिक मनोविज्ञान</b> (moral psychology) की दृष्टि से अत्यंत सूक्ष्म और आधुनिक है। कृष्ण यहाँ बताते हैं कि पाप का सबसे सामान्य रूप <em>पूर्ण अज्ञान नहीं</em>, बल्कि <b>आंशिक ज्ञान के साथ आत्म-औचित्य</b> (self-justification) है।</p>
+        <div class="callout">
+          <b>Psychological insight:</b> आधुनिक शोध (Cognitive Dissonance Theory — Leon Festinger, 1957) बताता है कि मनुष्य अपने कार्यों को सही ठहराने के लिए विश्वासों को बदल लेता है। यही गीता का 'अयथावत् प्रजानाति' है — 2500 वर्ष पहले।
+        </div>
+        <p>इस श्लोक का महत्त्व यह है कि यह हमें <b>सबसे आम प्रकार की बौद्धिक त्रुटि</b> का नाम देता है। तामसी बुद्धि तो स्पष्ट दिखती है; राजसिकी बुद्धि छुपी रहती है — वह हमेशा तर्क का चोला पहने रहती है।</p>
+        <p>बुद्धि-त्रयी में यह मध्य श्लोक है — ठीक वैसे जैसे रजोगुण सत्त्व और तमस के बीच है। न ऊपर, न नीचे — पर इसीलिए सबसे खतरनाक, क्योंकि इसे पहचानना सबसे कठिन है।</p>
+      </div>
+
+      <div class="panel" id="mindmap">
+        <h3>माइंड-मैप — राजसिकी बुद्धि की संरचना</h3>
+        <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:rgba(0,0,0,0.2);">
+          <defs>
+            <radialGradient id="centGrad31" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(140,74,32,0.5)"/>
+              <stop offset="100%" stop-color="rgba(140,74,32,0.15)"/>
+            </radialGradient>
+          </defs>
+          <!-- Center node -->
+          <ellipse cx="380" cy="210" rx="90" ry="42" fill="url(#centGrad31)" stroke="rgba(140,74,32,0.8)" stroke-width="2"/>
+          <text x="380" y="204" font-family="Tiro Devanagari Hindi,serif" font-size="16" fill="#e0a060" text-anchor="middle">राजसिकी बुद्धि</text>
+          <text x="380" y="226" font-family="EB Garamond,serif" font-style="italic" font-size="12" fill="#cfc3a8" text-anchor="middle">अयथावत् प्रजानाति</text>
+
+          <!-- Branch: अयथावत् -->
+          <line x1="295" y1="190" x2="168" y2="130" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <ellipse cx="120" cy="120" rx="72" ry="28" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.5)" stroke-width="1.2"/>
+          <text x="120" y="115" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#f3e9d2" text-anchor="middle">अयथावत्</text>
+          <text x="120" y="131" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">तिरछा/skewed ज्ञान</text>
+
+          <!-- Branch: धर्म-अधर्म -->
+          <line x1="380" y1="168" x2="380" y2="80" stroke="rgba(201,162,39,0.4)" stroke-width="1.5"/>
+          <ellipse cx="380" cy="58" rx="78" ry="26" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <text x="380" y="53" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e6c863" text-anchor="middle">धर्म-अधर्म</text>
+          <text x="380" y="69" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">पता है, पर विकृत</text>
+
+          <!-- Branch: कार्य-अकार्य -->
+          <line x1="465" y1="190" x2="600" y2="130" stroke="rgba(201,162,39,0.4)" stroke-width="1.5"/>
+          <ellipse cx="645" cy="120" rx="78" ry="28" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <text x="645" y="115" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e6c863" text-anchor="middle">कार्य-अकार्य</text>
+          <text x="645" y="131" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">औचित्य बना लेती है</text>
+
+          <!-- Branch: रजोगुण कारण -->
+          <line x1="370" y1="252" x2="250" y2="330" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <ellipse cx="198" cy="344" rx="80" ry="28" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.5)" stroke-width="1.2"/>
+          <text x="198" y="339" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e0a060" text-anchor="middle">रजोगुण</text>
+          <text x="198" y="355" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">कामना + आसक्ति</text>
+
+          <!-- Branch: Rationalization -->
+          <line x1="420" y1="248" x2="530" y2="330" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <ellipse cx="590" cy="344" rx="88" ry="28" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.5)" stroke-width="1.2"/>
+          <text x="590" y="339" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e0a060" text-anchor="middle">आत्म-औचित्य</text>
+          <text x="590" y="355" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">Rationalization</text>
+
+          <!-- Sub-note bottom -->
+          <text x="380" y="400" font-family="EB Garamond,serif" font-style="italic" font-size="12.5" fill="rgba(201,162,39,0.6)" text-anchor="middle">न पूर्ण ज्ञान · न पूर्ण अज्ञान — बीच का खतरनाक क्षेत्र</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="tulna">
+        <h3>तुलनात्मक — बुद्धि त्रयी (18.30–32)</h3>
+        <p class="subnote">तीनों बुद्धियों की ज्ञेय-वस्तु एक ही है; भेद केवल दृष्टि-गुण में है।</p>
+        <div class="buddhi-row">
+          <div class="buddhi-card sat">
+            <div class="buddhi-label">✅ सात्त्विकी — 18.30</div>
+            <div class="buddhi-sa">यथावत् प्रजानाति</div>
+            <p>धर्म-अधर्म, कार्य-अकार्य, भय-अभय, बंध-मोक्ष को <b>ठीक-ठीक</b> जानती है। स्पष्ट, निर्मल, निष्पक्ष दृष्टि।</p>
+          </div>
+          <div class="buddhi-card raj">
+            <div class="buddhi-label">🔥 राजसिकी — 18.31 (अभी)</div>
+            <div class="buddhi-sa">अयथावत् प्रजानाति</div>
+            <p>वही ज्ञेय पदार्थों को <b>तिरछे/विकृत</b> ढंग से जानती है। रागजनित पक्षपात — rationalization।</p>
+          </div>
+        </div>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>सात्त्विकी (18.30)</th><th>राजसिकी (18.31)</th><th>तामसिकी (18.32)</th></tr>
+          <tr><td>दृष्टि</td><td>यथावत् (सत्य)</td><td>अयथावत् (विकृत)</td><td>विपरीत (उल्टा)</td></tr>
+          <tr><td>भ्रम की मात्रा</td><td>शून्य</td><td>आंशिक</td><td>पूर्ण</td></tr>
+          <tr><td>पहचान कठिनाई</td><td>आसान</td><td>कठिन (तर्क से छुपी)</td><td>मध्यम</td></tr>
+          <tr><td>मुख्य दोष</td><td>—</td><td>Rationalization</td><td>Inversion / अज्ञान</td></tr>
+          <tr><td>कारण</td><td>सत्त्वगुण</td><td>रजोगुण</td><td>तमोगुण</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="sadhana">
+        <h3>साधना — राजसिकी बुद्धि से मुक्ति</h3>
+        <p>राजसिकी बुद्धि को पहचानना ही पहला साधन-चरण है — क्योंकि वह हमेशा तर्क-वेष में छुपी रहती है।</p>
+        <div class="callout">
+          <b>आत्म-परीक्षण प्रश्न (Self-Inquiry):</b><br>
+          "क्या मैं यह निर्णय इसलिए कर रहा हूँ क्योंकि यह धर्मसम्मत है — या इसलिए क्योंकि मुझे यह चाहिए?"<br>
+          "मेरी बुद्धि तर्क दे रही है या सत्य देख रही है?"
+        </div>
+        <p><b>निष्काम कर्म (3.19):</b> जब हम परिणाम की चाहत छोड़ते हैं, तब रजोगुण कमज़ोर होता है और बुद्धि का विकृतिकरण घटता है। धर्म-अधर्म का निर्णय तब परिणाम-निरपेक्ष होता है।</p>
+        <p><b>सत्संग और शास्त्र-श्रवण:</b> अयथावत् दृष्टि का उपाय है — बाहरी प्रमाण। जब हम अकेले सोचते हैं, रजोगुण आसानी से बुद्धि को रंग लेता है। शास्त्र और सद्गुरु का वचन बाहरी दर्पण है।</p>
+        <div class="callout-sat">
+          <b>गीता 18.30 से जोड़ें:</b> सात्त्विकी बुद्धि बनाने का मार्ग है — भय-अभय को यथावत् देखना। रजोगुण का मूल है 'लोभ और भय' — जब इन्हें यथावत् देखा जाए, तो राजसिकी बुद्धि स्वयं सात्त्विकी की ओर बढ़ती है।
+        </div>
+      </div>
+
+      <div class="panel" id="acharya">
+        <h3>आचार्य-मत — व्याख्याएँ</h3>
+        <div class="callout">
+          <b>शंकराचार्य:</b> 'अयथावत्' का अर्थ — "न यथावत्तया" — अर्थात् यथार्थ ज्ञान के विपरीत नहीं, पर अयथार्थ रूप में। रजोगुण बुद्धि को एकांगी (one-sided) बना देता है — वह अपने पक्ष को धर्म और विपक्ष को अधर्म मान लेती है।
+        </div>
+        <div class="callout-rajas">
+          <b>रामानुजाचार्य:</b> इस बुद्धि में 'अज्ञान' नहीं, बल्कि 'विकृत ज्ञान' है। राग-द्वेष के कारण व्यक्ति धर्म को वहाँ देखता है जहाँ उसका स्वार्थ हो। यह तामसी से कम हानिकारक है, पर उद्धार के लिए पर्याप्त नहीं।
+        </div>
+        <div class="callout">
+          <b>स्वामी विवेकानंद (परोक्ष रूप में):</b> "जब तक स्वार्थ है, तब तक ज्ञान विकृत रहेगा।" — राजसिकी बुद्धि स्वार्थ-रंजित ज्ञान है। इसीलिए कर्म-योग का मूल निष्काम कर्म है — ताकि बुद्धि पर रजोगुण का रंग न चढ़े।
+        </div>
+        <div class="callout-rajas">
+          <b>श्रील प्रभुपाद (ISKCON):</b> राजसिकी बुद्धि वाला व्यक्ति धर्म और अधर्म दोनों को मानता है, पर अपनी सुविधा के अनुसार चुनता है। वह religion को "personal convenience" बना लेता है — यही आधुनिक युग का सबसे प्रचलित बौद्धिक भ्रम है।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PRACTICE ═══ -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="flash">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="quiz">क्विज़</button>
+      <button class="tab-btn" data-tab="gram">व्याकरण</button>
+      <button class="tab-btn" data-tab="sutra">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="flash">
+        <h3>फ्लैशकार्ड — पद-स्मरण</h3>
+        <p class="flash-instructions">कार्ड पर क्लिक करें — अर्थ पलटेगा।</p>
+        <div class="flashcard-grid">
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">अयथावत्</span>
+                <span style="font-size:12px;color:#cfc3a8;">इसका अर्थ?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>यथावत् नहीं</b> — तिरछे/विकृत ढंग से। न पूरा सत्य, न पूरा मिथ्या — आंशिक/skewed।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">यया</span>
+                <span style="font-size:12px;color:#cfc3a8;">व्याकरण?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>सर्वनाम (यद्)</b> — स्त्री., तृतीया एक. — "जिसके द्वारा"। बुद्धि (स्त्री.) का अनुसरण।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">प्रजानाति</span>
+                <span style="font-size:12px;color:#cfc3a8;">धातु?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>pra + √jñā</b> (जानना) — प्र = उपसर्ग (तीव्रता)। लट् लकार, प्र.पु.एक. — "जानती है।"</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">कार्यं चाकार्यम्</span>
+                <span style="font-size:12px;color:#cfc3a8;">अर्थ?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>करने योग्य और न करने योग्य।</b> च + अकार्यम् = चाकार्यम् (संधि)। 18.30 से समान युगल।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">राजसी</span>
+                <span style="font-size:12px;color:#cfc3a8;">व्युत्पत्ति?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>राजस (रजोगुण से संबंधित)</b> → स्त्रीलिंग रूप: राजसी। बुद्धि (स्त्री.) का विशेषण।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">पार्थ</span>
+                <span style="font-size:12px;color:#cfc3a8;">अर्थ?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>पृथा-पुत्र</b> = कुंती-पुत्र अर्जुन। यहाँ संबोधन — "तू इस राजसिकी से ऊपर है।"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="quiz">
+        <h3>क्विज़ — 18.31 परीक्षण</h3>
+        <div id="quiz31-container"></div>
+      </div>
+
+      <div class="panel" id="gram">
+        <h3>व्याकरण — पद-विभाजन</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति / लकार</th><th>भूमिका</th></tr>
+          <tr><td class="sa">यया</td><td>यद् (सर्वनाम)</td><td>स्त्री., तृ. एक.</td><td>बुद्धि का परामर्श-वाचक</td></tr>
+          <tr><td class="sa">धर्मम्</td><td>धर्म (पुं.)</td><td>द्वि. एक.</td><td>कर्मकारक</td></tr>
+          <tr><td class="sa">अधर्मम्</td><td>अधर्म (पुं.)</td><td>द्वि. एक.</td><td>कर्मकारक</td></tr>
+          <tr><td class="sa">कार्यम्</td><td>कार्य (नपुं.)</td><td>द्वि. एक.</td><td>कर्मकारक</td></tr>
+          <tr><td class="sa">अकार्यम्</td><td>अकार्य (नपुं.)</td><td>द्वि. एक.</td><td>कर्मकारक</td></tr>
+          <tr><td class="sa">अयथावत्</td><td>अ + यथा + वत्</td><td>अव्यय</td><td>क्रिया-विशेषण (विधि)</td></tr>
+          <tr><td class="sa">प्रजानाति</td><td>प्र + √ज्ञा</td><td>लट्, प्र.पु.एक.</td><td>मुख्य क्रिया</td></tr>
+          <tr><td class="sa">बुद्धिः</td><td>बुद्धि (स्त्री.)</td><td>प्र. एक.</td><td>कर्ता</td></tr>
+          <tr><td class="sa">सा</td><td>तद् (सर्व.)</td><td>स्त्री., प्र.एक.</td><td>बुद्धि का निर्देश</td></tr>
+          <tr><td class="sa">पार्थ</td><td>पृथा + अण्</td><td>सं. एक.</td><td>संबोधन — अर्जुन</td></tr>
+          <tr><td class="sa">राजसी</td><td>राजस (विशे.)</td><td>स्त्री., प्र.एक.</td><td>बुद्धि का विशेषण (विधेय)</td></tr>
+        </table>
+        <div class="callout" style="margin-top:18px;">
+          <b>संधि:</b> कार्यं + च + अकार्यम् = <b>कार्यं चाकार्यमेव च</b> (आ + अ = आ, दीर्घ संधि)। धर्मम् + अधर्मम् = पद-क्रम में च से जोड़े गए।
+        </div>
+      </div>
+
+      <div class="panel" id="sutra">
+        <h3>सारांश-सूत्र — त्वरित स्मरण</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">
+            यया धर्ममधर्मं च कार्यं चाकार्यमेव च।<br>
+            अयथावत्प्रजानाति बुद्धिः सा पार्थ राजसी।।
+          </div>
+          <div class="cheat-translit">yayā dharmam adharmaṃ ca · kāryaṃ cākāryam eva ca · ayathāvat prajānāti · buddhiḥ sā pārtha rājasī</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>यया</b> = जिस बुद्धि द्वारा</span>
+            <span class="cheat-chip"><b>धर्म-अधर्म</b> = ज्ञेय युगल १</span>
+            <span class="cheat-chip"><b>कार्य-अकार्य</b> = ज्ञेय युगल २</span>
+            <span class="cheat-chip"><b>अयथावत्</b> = विकृत / skewed</span>
+            <span class="cheat-chip"><b>प्रजानाति</b> = जानती है</span>
+            <span class="cheat-chip"><b>राजसी</b> = राजसिक बुद्धि</span>
+          </div>
+          <div class="cheat-takeaway">
+            🔑 सूत्र: <b>राजसिकी बुद्धि = ज्ञान है, पर अयथावत् — कामना का रंग लगा है</b><br>
+            न पूरा अज्ञान · न पूरा ज्ञान · सबसे छुपा हुआ भ्रम
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: MEDIA ═══ -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="shravan">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="walkthru">वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="jap">जप/अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="shravan">
+        <h3>श्रवण मोड — TTS</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('यया धर्ममधर्मं च कार्यं चाकार्यमेव च। अयथावत्प्रजानाति बुद्धिः सा पार्थ राजसी।')">▶ श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('हे पार्थ! जो बुद्धि धर्म और अधर्म को, कार्य और अकार्य को अयथावत् — यानी विकृत या तिरछे ढंग से जानती है — वह बुद्धि राजसी है।')">▶ भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+        <div class="callout">
+          <b>श्रवण-संकेत:</b> 'अयथावत्' पर विशेष बल दें — यह श्लोक का हृदय-पद है। 'प्र-जानाति' में 'प्र' उपसर्ग की तीव्रता नोट करें — बुद्धि जानती तो है, पर 'अयथावत्'।
+        </div>
+      </div>
+
+      <div class="panel" id="walkthru">
+        <h3>वॉकथ्रू — चरण-दर-चरण</h3>
+        <div id="walk31-stage" class="walk-stage"><p id="walk31-text">▶ Start पर क्लिक करें।</p></div>
+        <div class="walk-controls">
+          <button onclick="walk31(-1)">◀</button>
+          <button onclick="walk31Start()">▶ Start</button>
+          <button onclick="walk31(1)">▶</button>
+        </div>
+        <div class="walk-progress-row" id="walk31-dots"></div>
+      </div>
+
+      <div class="panel" id="jap">
+        <h3>जप / अभ्यास — पाद-विभाजन</h3>
+        <p class="subnote">अनुष्टुप् छंद — प्रत्येक पाद ८ अक्षर। क्लिक करके सुनें।</p>
+        <div style="margin-bottom:18px;">
+          <div class="pada-label">पाद १</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('यया')">यया</span>
+            <span class="syll" onclick="speakSyl('धर्मम्')">धर्मम्</span>
+            <span class="syll" onclick="speakSyl('अधर्मं')">अधर्मं</span>
+            <span class="syll" onclick="speakSyl('च')">च</span>
+          </div>
+          <div class="pada-label">पाद २</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('कार्यं')">कार्यं</span>
+            <span class="syll" onclick="speakSyl('च')">च</span>
+            <span class="syll" onclick="speakSyl('अकार्यम्')">अकार्यम्</span>
+            <span class="syll" onclick="speakSyl('एव च')">एव च</span>
+          </div>
+          <div class="pada-label">पाद ३</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('अयथावत्')">अयथावत्</span>
+            <span class="syll" onclick="speakSyl('प्रजानाति')">प्रजानाति</span>
+          </div>
+          <div class="pada-label">पाद ४</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('बुद्धिः')">बुद्धिः</span>
+            <span class="syll" onclick="speakSyl('सा')">सा</span>
+            <span class="syll" onclick="speakSyl('पार्थ')">पार्थ</span>
+            <span class="syll" onclick="speakSyl('राजसी')">राजसी</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: INFOGRAPHICS ═══ -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="skewmap">विकृति-मानचित्र</button>
+      <button class="tab-btn" data-tab="trayayi">त्रयी प्रगति</button>
+      <button class="tab-btn" data-tab="roadmap">अध्याय रोडमैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="skewmap">
+        <h3>विकृति-मानचित्र — अयथावत् दृष्टि</h3>
+        <p class="subnote">राजसिकी बुद्धि सत्य और असत्य के बीच 'तिरछी' होती है — न पूरी गलत, न पूरी सही।</p>
+        <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:rgba(0,0,0,0.2);">
+          <!-- Spectrum bar -->
+          <defs>
+            <linearGradient id="specGrad31" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="rgba(42,106,90,0.7)"/>
+              <stop offset="45%" stop-color="rgba(140,74,32,0.6)"/>
+              <stop offset="100%" stop-color="rgba(60,30,90,0.7)"/>
+            </linearGradient>
+          </defs>
+          <rect x="60" y="60" width="580" height="40" rx="10" fill="url(#specGrad31)"/>
+          <!-- Labels on spectrum -->
+          <text x="100" y="50" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#6ecfb8" text-anchor="middle">सात्त्विकी</text>
+          <text x="100" y="118" font-family="Mukta,sans-serif" font-size="11" fill="#6ecfb8" text-anchor="middle">यथावत्</text>
+          <text x="350" y="50" font-family="Tiro Devanagari Hindi,serif" font-size="14" fill="#e0a060" text-anchor="middle" font-weight="700">राजसिकी</text>
+          <text x="350" y="118" font-family="Mukta,sans-serif" font-size="11" fill="#e0a060" text-anchor="middle" font-weight="700">अयथावत् ◀ यहाँ</text>
+          <text x="610" y="50" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">तामसिकी</text>
+          <text x="610" y="118" font-family="Mukta,sans-serif" font-size="11" fill="#c0a0d8" text-anchor="middle">विपरीत</text>
+          <!-- Needle at ~55% -->
+          <line x1="370" y1="50" x2="370" y2="110" stroke="#e0a060" stroke-width="3"/>
+          <polygon points="370,50 362,66 378,66" fill="#e0a060"/>
+
+          <!-- Three vision boxes below -->
+          <rect x="30" y="150" width="190" height="100" rx="10" fill="rgba(42,106,90,0.1)" stroke="rgba(42,106,90,0.4)" stroke-width="1"/>
+          <text x="125" y="174" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#6ecfb8" text-anchor="middle">सात्त्विकी दृष्टि</text>
+          <text x="125" y="198" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">धर्म = धर्म</text>
+          <text x="125" y="216" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">अधर्म = अधर्म</text>
+          <text x="125" y="234" font-family="Mukta,sans-serif" font-size="10" fill="#6ecfb8" text-anchor="middle">Clear Vision ✓</text>
+
+          <rect x="255" y="150" width="190" height="100" rx="10" fill="rgba(140,74,32,0.15)" stroke="rgba(140,74,32,0.6)" stroke-width="2"/>
+          <text x="350" y="174" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e0a060" text-anchor="middle">राजसिकी दृष्टि</text>
+          <text x="350" y="198" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">धर्म = "मेरा धर्म"</text>
+          <text x="350" y="216" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">अधर्म = "तर्क से ठीक"</text>
+          <text x="350" y="234" font-family="Mukta,sans-serif" font-size="10" fill="#e0a060" text-anchor="middle">Skewed Vision ⚠</text>
+
+          <rect x="480" y="150" width="190" height="100" rx="10" fill="rgba(60,30,90,0.12)" stroke="rgba(106,61,122,0.5)" stroke-width="1"/>
+          <text x="575" y="174" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">तामसिकी दृष्टि</text>
+          <text x="575" y="198" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">अधर्म = धर्म</text>
+          <text x="575" y="216" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">अकार्य = कार्य</text>
+          <text x="575" y="234" font-family="Mukta,sans-serif" font-size="10" fill="#c0a0d8" text-anchor="middle">Inverted Vision ✗</text>
+
+          <text x="350" y="295" font-family="EB Garamond,serif" font-style="italic" font-size="13" fill="rgba(201,162,39,0.6)" text-anchor="middle">18.30 · 18.31 (अभी) · 18.32</text>
+          <text x="350" y="315" font-family="Mukta,sans-serif" font-size="11" fill="rgba(201,162,39,0.4)" text-anchor="middle">बुद्धि त्रयी — एक ही ज्ञेय, तीन भिन्न दृष्टियाँ</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="trayayi">
+        <h3>त्रयी प्रगति — बुद्धि, धृति, सुख</h3>
+        <p class="subnote">अध्याय 18.29 में घोषित त्रिस्तरीय विश्लेषण — बुद्धि त्रयी में हम अभी हैं।</p>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">✅ सात्त्विकी — 18.30</div>
+            <div class="guna-sa">यथावत्</div>
+            <div class="guna-char">स्पष्ट दृष्टि — पूर्ण</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 राजसिकी — 18.31</div>
+            <div class="guna-sa">अयथावत् ← अभी</div>
+            <div class="guna-char">विकृत दृष्टि — तिरछी</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">⬛ तामसिकी — 18.32</div>
+            <div class="guna-sa">विपरीत (आगे)</div>
+            <div class="guna-char">उल्टी दृष्टि — अगला</div>
+          </div>
+        </div>
+        <table class="cmp-table" style="margin-top:18px;">
+          <tr><th>श्रेणी</th><th>सात्त्विक</th><th>राजसिक</th><th>तामसिक</th></tr>
+          <tr><td>बुद्धि (29–32)</td><td>18.30 ✅</td><td>18.31 🔥 (अभी)</td><td>18.32 →</td></tr>
+          <tr><td>धृति (33–35)</td><td>18.33 →→</td><td>18.34 →→</td><td>18.35 →→</td></tr>
+          <tr><td>सुख (36–39)</td><td>18.36–37 →→</td><td>18.38 →→</td><td>18.39 →→</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="roadmap">
+        <h3>अध्याय 18 रोडमैप</h3>
+        <p class="subnote">त्रयी ढाँचे में वर्तमान स्थान — बुद्धि त्रयी, श्लोक 2/3</p>
+        <div class="road-track">
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">ज्ञान त्रयी<br>20–22</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्म त्रयी<br>23–25</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्ता त्रयी<br>26–28</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">घोषणा<br>29</div>
+          </div>
+          <div class="road-stop active">
+            <div class="road-dot"></div>
+            <div class="rlabel">बुद्धि त्रयी<br>30–32 (31 अभी)</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">धृति त्रयी<br>33–35</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">सुख त्रयी<br>36–39</div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:24px;">
+          <b>आगे क्या?</b> 18.32 — तामसिकी बुद्धि: जो अधर्म को ही धर्म मान लेती है। बुद्धि त्रयी का अंतिम और सबसे गहरा भ्रम।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">← <a href="gita_18_30.html" style="color:var(--gold-light);text-decoration:none;">18.30 सात्त्विकी बुद्धि</a> &nbsp;|&nbsp; <a href="gita_18_32.html" style="color:var(--gold-light);text-decoration:none;">18.32 तामसिकी बुद्धि →</a></div>
+
+</div><!-- .wrap -->
+
+<script>
+// ── Mode Pills ──
+document.querySelectorAll('.mode-pill').forEach(pill=>{
+  pill.addEventListener('click',()=>{
+    document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));
+    pill.classList.add('active');
+    document.getElementById(pill.dataset.mode).classList.add('active');
+    // activate first tab in new mode
+    const firstTab=document.querySelector('#'+pill.dataset.mode+' .tab-btn');
+    if(firstTab) firstTab.click();
+  });
+});
+
+// ── Tab Bars ──
+document.querySelectorAll('.tabbar').forEach(bar=>{
+  bar.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const shell=bar.closest('.mode-section')||bar.parentElement;
+      shell.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      shell.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      const target=btn.dataset.tab;
+      shell.querySelectorAll('.panel').forEach(p=>{if(p.id===target)p.classList.add('active');});
+    });
+  });
+});
+
+// ── TTS ──
+function speakText(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.82;window.speechSynthesis.speak(u);}
+function speakSyl(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.7;window.speechSynthesis.speak(u);}
+
+// ── Walkthrough ──
+const walk31Steps=[
+  "श्लोक 18.31 का विषय:<br>राजसिकी बुद्धि — जो धर्म-अधर्म को <b>अयथावत्</b> जानती है।",
+  "पहला पाद:<br><b>यया धर्ममधर्मं च</b><br>जिस बुद्धि द्वारा धर्म और अधर्म को...",
+  "दूसरा पाद:<br><b>कार्यं चाकार्यमेव च</b><br>...और कार्य तथा अकार्य को भी...",
+  "तीसरा पाद:<br><b>अयथावत् प्रजानाति</b><br>...अयथावत् (तिरछे/विकृत ढंग से) जाना जाता है...",
+  "चौथा पाद:<br><b>बुद्धिः सा पार्थ राजसी</b><br>...वह बुद्धि, हे पार्थ! राजसी है।",
+  "मूल अंतर:<br>सात्त्विकी = <b>यथावत्</b> (सत्य ज्ञान)<br>राजसिकी = <b>अयथावत्</b> (विकृत ज्ञान)<br>तामसिकी = <b>विपरीत</b> (उल्टा ज्ञान)",
+  "साधना-सूत्र:<br>जब मन कहे 'इस बार तो ठीक है'<br>— रुकें! यह राजसिकी बुद्धि बोल रही है।<br>विवेक से पूछें: यथावत् क्या है?"
+];
+let walk31Idx=0;
+function walk31Start(){walk31Idx=0;walk31Show();}
+function walk31(d){walk31Idx=Math.max(0,Math.min(walk31Steps.length-1,walk31Idx+d));walk31Show();}
+function walk31Show(){
+  document.getElementById('walk31-text').innerHTML=walk31Steps[walk31Idx];
+  const dots=document.getElementById('walk31-dots');
+  dots.innerHTML='';
+  walk31Steps.forEach((_,i)=>{const d=document.createElement('div');d.className='walk-dot'+(i===walk31Idx?' active':'');dots.appendChild(d);});
+}
+
+// ── Quiz ──
+const quiz31Q=[
+  {q:"18.31 में राजसिकी बुद्धि का मुख्य लक्षण क्या है?",o:["यथावत् प्रजानाति","अयथावत् प्रजानाति","अधर्मं धर्म मन्यते","सर्वभूतेषु एकं पश्यति"],a:1},
+  {q:"'अयथावत्' का सही अर्थ कौन-सा है?",o:["पूर्णतः उल्टा जानना","बिल्कुल नहीं जानना","तिरछे / विकृत / आंशिक रूप से जानना","यथार्थ रूप से जानना"],a:2},
+  {q:"सात्त्विकी और राजसिकी बुद्धि का मुख्य अंतर क्या है?",o:["ज्ञेय वस्तु में","क्रिया (प्रजानाति) में","दृष्टि की शुद्धता में (यथावत् vs अयथावत्)","गुण में नहीं"],a:2},
+  {q:"राजसिकी बुद्धि का कारण कौन-सा गुण है?",o:["सत्त्वगुण","तमोगुण","रजोगुण","इनमें से कोई नहीं"],a:2},
+  {q:"18.31 में 'पार्थ' संबोधन किसे है?",o:["कृष्ण को","संजय को","अर्जुन को","धृतराष्ट्र को"],a:2}
+];
+let q31i=0,q31score=0,q31done=false;
+function renderQuiz31(){
+  const c=document.getElementById('quiz31-container');
+  if(q31i>=quiz31Q.length){c.innerHTML=`<div class="quiz-score">✅ आपका स्कोर: ${q31score} / ${quiz31Q.length}</div><button class="quiz-btn" onclick="q31i=0;q31score=0;q31done=false;renderQuiz31()">पुनः प्रयास</button>`;return;}
+  const q=quiz31Q[q31i];
+  c.innerHTML=`<div class="quiz-progress">प्रश्न ${q31i+1} / ${quiz31Q.length}</div><div class="quiz-question">${q.q}</div><div class="quiz-options">${q.o.map((o,i)=>`<button class="quiz-opt" onclick="checkQ31(${i})">${o}</button>`).join('')}</div><div class="quiz-nav"><button class="quiz-btn" id="q31-next" onclick="q31i++;renderQuiz31()" disabled>अगला ▶</button></div>`;
+}
+function checkQ31(i){if(q31done)return;q31done=true;const opts=document.querySelectorAll('.quiz-opt');opts.forEach((o,idx)=>{o.classList.add('disabled');if(idx===quiz31Q[q31i].a)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===quiz31Q[q31i].a)q31score++;document.getElementById('q31-next').disabled=false;q31done=false;}
+document.addEventListener('DOMContentLoaded',renderQuiz31);
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.29 — बुद्धि-धृति त्रयी: श्रीकृष्ण का नया वर्गीकरण</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:37.2%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.4);color:var(--gold-light);}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-gold{border-left:3px solid var(--gold);background:rgba(201,162,39,0.1);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-gold b{color:var(--gold-light);}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.1);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .framework-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .framework-card{border-radius:12px;padding:14px 10px;text-align:center;border:1px solid var(--line);background:rgba(255,255,255,0.02);}
+  .framework-card.done{border-color:rgba(42,106,90,0.4);background:rgba(42,106,90,0.05);}
+  .framework-card.current{border:2px solid var(--gold);background:rgba(201,162,39,0.08);box-shadow:0 0 12px rgba(201,162,39,0.2);}
+  .framework-card.next{border-color:var(--line);opacity:0.6;}
+  .fw-num{font-family:'Mukta',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5px;color:var(--cream-dim);}
+  .fw-title{font-family:'Tiro Devanagari Hindi',serif;font-size:14px;color:var(--cream);margin-bottom:3px;}
+  .fw-sloka{font-family:'Mukta',sans-serif;font-size:11px;color:var(--text-muted);color:rgba(203,195,168,0.7);}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop.done .road-dot{background:var(--sage);border-color:var(--sage);}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  .road-stop.done .rlabel{color:var(--sage);}
+  .buddhi-dhrti-box{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+  .bd-card{border-radius:12px;padding:18px 14px;border:1px solid var(--gold);background:rgba(201,162,39,0.06);}
+  .bd-label{font-family:'Mukta',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .bd-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:17px;color:var(--cream);margin-bottom:6px;}
+  .bd-desc{font-size:13.5px;color:var(--cream-dim);line-height:1.55;}
+  @media(max-width:560px){.framework-grid{grid-template-columns:1fr;}.buddhi-dhrti-box{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 29 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.२९</div>
+    </div>
+    <div class="guna-badge">✦ बुद्धि-धृति त्रयी — प्रवेश श्लोक</div>
+    <div class="shloka">
+      बुद्धेर्भेदं धृतेश्चैव गुणतस्त्रिविधं शृणु।<br>
+      प्रोच्यमानमशेषेण पृथक्त्वेन धनञ्जय।।
+    </div>
+    <div class="translit">
+      buddher bhedaṃ dhṛteś caiva guṇatas tri-vidhaṃ śṛṇu,<br>
+      procyamānam aśeṣeṇa pṛthaktvena dhanañjaya
+    </div>
+    <div class="gist">
+      हे <b>धनञ्जय</b> (अर्जुन)! <b>बुद्धि</b> और <b>धृति</b> के <b>गुणों के अनुसार तीन-तीन प्रकार के भेद</b> — जो मैं <b>सम्पूर्ण</b> (अशेष) और <b>पृथक्-पृथक्</b> (पृथक्त्वेन) रूप से कह रहा हूँ — वह <b>सुनो</b>।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="t3">भावार्थ</button>
+      <button class="tab-btn" data-tab="t4">बुद्धि vs धृति</button>
+      <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="t1">
+        <h3>🪔 पूर्ववर्ती-संदर्भ — कर्ता-त्रयी से बुद्धि-त्रयी</h3>
+        <p>18.26-28 में कर्ता-त्रयी पूर्ण हुई। 18.29 एक <b>transition श्लोक</b> है — यह अगले विषय की घोषणा करता है। श्रीकृष्ण यहाँ अर्जुन को बताते हैं: "अब बुद्धि और धृति के त्रिगुण-भेद सुनो।"</p>
+        <p>यह श्लोक विशेष है क्योंकि यह <b>दो त्रयियों</b> की एक साथ घोषणा करता है — बुद्धि-त्रयी (29-32) और धृति-त्रयी (33-35)। एक श्लोक में दोनों announce होती हैं।</p>
+        <div class="callout-gold"><b>गीता का क्रम — 18वें अध्याय में:</b> ज्ञान-त्रयी (20-22) → कर्म-त्रयी (23-25) → कर्ता-त्रयी (26-28) → <b>बुद्धि+धृति की घोषणा (29)</b> → बुद्धि-त्रयी (30-32) → धृति-त्रयी (33-35) → सुख-त्रयी (36-39)। यह 18.29 उस पूरे sequence का pivot point है।</div>
+        <p>गीता में ऐसे introductory श्लोक कम होते हैं। 18.19 में भी ऐसा था — "ज्ञान, कर्म और कर्ता तीन प्रकार के हैं।" 18.29 उसी style में है।</p>
+      </div>
+
+      <div class="panel" id="t2">
+        <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+        <div class="word-grid">
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">बुद्धेः भेदम्</span><span class="word-tr">buddheḥ bhedam</span></div>
+            <div class="word-meaning">बुद्धि का भेद — बुद्धि के प्रकारों को</div>
+            <div class="word-eng"><b>EN:</b> the distinction of intellect / the kinds of buddhi</div>
+            <div class="word-deep">बुद्धि (षष्ठी) + भेद (द्वितीया) = बुद्धि के भेद को। बुद्धि = निर्णय-शक्ति, discriminative faculty, intellect। "भेद" = distinction, division। बुद्धि वह faculty है जो सही-गलत, कर्तव्य-अकर्तव्य में distinguish करती है।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">धृतेः च एव</span><span class="word-tr">dhṛteḥ ca eva</span></div>
+            <div class="word-meaning">और धृति का भी — धैर्य के प्रकारों को भी</div>
+            <div class="word-eng"><b>EN:</b> and also the distinction of steadiness / dhṛti</div>
+            <div class="word-deep">धृति = धैर्य, steadiness, perseverance — जो बुद्धि के निर्णय को कार्यान्वित रखती है। "च एव" = "और भी।" बुद्धि जानती है, धृति उस ज्ञान को संकट में भी थामे रखती है। दोनों एक दूसरे के पूरक।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">गुणतः त्रिविधम्</span><span class="word-tr">guṇataḥ tri-vidham</span></div>
+            <div class="word-meaning">गुणों के अनुसार तीन प्रकार का</div>
+            <div class="word-eng"><b>EN:</b> threefold according to the guṇas</div>
+            <div class="word-deep">गुणतः = गुणों के अनुसार (पञ्चमी)। त्रिविध = तीन प्रकार का। यह पूरे अध्याय का refrain है — हर विषय गुणों की कसौटी पर तीन भागों में विभाजित। बुद्धि और धृति — दोनों त्रिविध।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">शृणु</span><span class="word-tr">śṛṇu</span></div>
+            <div class="word-meaning">सुनो — आज्ञार्थ (imperative)</div>
+            <div class="word-eng"><b>EN:</b> hear / listen (command)</div>
+            <div class="word-deep">√श्रु = सुनना। शृणु = आज्ञार्थ एकवचन — "सुनो!" यह श्रीकृष्ण का आह्वान है। गीता में बार-बार "शृणु" — हर बार एक नया गहरा विषय आता है। यहाँ बुद्धि-धृति की त्रयी आने वाली है।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">प्रोच्यमानम् अशेषेण</span><span class="word-tr">procyamānam aśeṣeṇa</span></div>
+            <div class="word-meaning">सम्पूर्ण रूप से कहे जाते हुए — बिना कुछ छोड़े</div>
+            <div class="word-eng"><b>EN:</b> being stated completely / without omission</div>
+            <div class="word-deep">प्र + √वच् + शानच् = कहे जाते हुए (present participle passive)। अशेष = अ + शेष = बिना किसी अवशेष के, सम्पूर्ण। यह वादा है — श्रीकृष्ण कहेंगे कि पूरा बताएँगे, कुछ नहीं छोड़ेंगे।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">पृथक्त्वेन धनञ्जय</span><span class="word-tr">pṛthaktvena dhanañjaya</span></div>
+            <div class="word-meaning">पृथक्-पृथक् रूप से — हे धनञ्जय (अर्जुन)!</div>
+            <div class="word-eng"><b>EN:</b> separately / distinctly — O Dhanañjaya (Arjuna)!</div>
+            <div class="word-deep">पृथक्त्वेन = पृथक्त्व + तृतीया = अलग-अलग करके। धनञ्जय = धन + अञ्ज् = धन को जीतने वाला — अर्जुन का विशेषण। यह नाम यहाँ उचित है — गीता का शिष्य अब सूक्ष्म भेद सुनने के लिए तैयार है।</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="panel" id="t3">
+        <h3>🪔 भावार्थ एवं व्याख्या</h3>
+        <div class="eng-box">
+          <span>English Translation</span>
+          Hear, O Dhanañjaya, the threefold division of intellect and steadiness according to the guṇas — proclaimed completely and separately.
+        </div>
+        <p>18.29 एक <b>transition श्लोक</b> है — न इसमें कोई नई definition है, न कोई दोष या गुण। यह श्रीकृष्ण का formal announcement है: "अब बुद्धि और धृति की त्रयी सुनो।"</p>
+        <p>इस श्लोक की तीन विशेषताएँ:</p>
+        <p><b>"अशेषेण"</b> — सम्पूर्ण रूप से। श्रीकृष्ण का वादा है कि बुद्धि और धृति के तीनों-तीनों भेद पूरी तरह explain किए जाएंगे — कुछ नहीं छोड़ा जाएगा।</p>
+        <p><b>"पृथक्त्वेन"</b> — अलग-अलग करके। बुद्धि के तीन भेद अलग से (30-32), धृति के तीन भेद अलग से (33-35) — clear separation।</p>
+        <p><b>"धनञ्जय"</b> — अर्जुन का यह विशेष नाम यहाँ प्रयुक्त। "धन जीतने वाला" — जो धन जीत सकता है वह बुद्धि और धृति के भेद भी समझ सकता है।</p>
+        <div class="callout-gold"><b>18.29 क्यों अलग से एक श्लोक?</b> क्योंकि बुद्धि और धृति — दोनों के तीन-तीन प्रकार अगले सात श्लोकों (30-35) में आएंगे। एक introductory श्लोक से listener/reader को तैयार किया जाता है। यह pedagogical technique है — पहले outline, फिर detail।</div>
+      </div>
+
+      <div class="panel" id="t4">
+        <h3>🪔 बुद्धि और धृति — क्या हैं? क्या अंतर?</h3>
+        <div class="buddhi-dhrti-box">
+          <div class="bd-card">
+            <div class="bd-label">बुद्धि — Intellect</div>
+            <div class="bd-sa">बुद्धिः</div>
+            <div class="bd-desc">सही-गलत, कर्तव्य-अकर्तव्य, बंधन-मोक्ष में भेद करने की शक्ति। <b>"क्या करना है"</b> — यह बुद्धि जानती है। यह निर्णय-शक्ति है, discriminative faculty है। 18.30-32 में इसके तीन प्रकार।</div>
+          </div>
+          <div class="bd-card">
+            <div class="bd-label">धृति — Steadiness</div>
+            <div class="bd-sa">धृतिः</div>
+            <div class="bd-desc">बुद्धि के निर्णय को संकट में भी थामे रखने की शक्ति। <b>"जो जाना, उस पर टिके रहना"</b> — यह धृति करती है। इसे willpower, fortitude भी कह सकते हैं। 18.33-35 में इसके तीन प्रकार।</div>
+          </div>
+        </div>
+        <div class="callout"><b>बुद्धि + धृति = complete faculty:</b> बुद्धि बिना धृति = जानता है पर टिकता नहीं। धृति बिना बुद्धि = टिका है पर गलत दिशा में। दोनों एक साथ = 18.26 का "मुक्तसङ्ग + निर्विकार।" यही कारण है कि दोनों एक साथ announce किए जाते हैं।</div>
+        <p>18.26 में "धृत्युत्साहसमन्वित" था — सात्त्विक कर्ता में धृति थी। अब 18.29-35 में उसी धृति को तीन प्रकारों में विभाजित किया जाएगा।</p>
+      </div>
+
+      <div class="panel" id="t5">
+        <h3>🪔 प्रश्नोत्तर</h3>
+        <div class="faq">
+          <div class="q">18.29 में कोई definition नहीं है — फिर इसका क्या महत्त्व?</div>
+          <div class="a">18.29 एक pedagogical श्लोक है — "outline before detail" की technique। जैसे एक अच्छा teacher पहले कहता है "अब हम X और Y सीखेंगे, इस क्रम में" — वैसे ही श्रीकृष्ण पहले announce करते हैं। यह listener को mentally prepare करता है। 18.19 भी ऐसा ही था।</div>
+        </div>
+        <div class="faq">
+          <div class="q">"अशेषेण" (सम्पूर्ण) और "पृथक्त्वेन" (अलग-अलग) — दोनों साथ क्यों?</div>
+          <div class="a">दोनों complementary हैं। "अशेषेण" = कुछ नहीं छूटेगा (completeness)। "पृथक्त्वेन" = हर भेद अलग-अलग स्पष्ट होगा (clarity)। दोनों मिलकर कहते हैं: "पूरा और स्पष्ट बताएंगे।" यह academic rigor है — गीता का उपदेश systematic है।</div>
+        </div>
+        <div class="faq">
+          <div class="q">बुद्धि और धृति को एक साथ क्यों announce किया? अलग-अलग क्यों नहीं?</div>
+          <div class="a">क्योंकि दोनों गहराई से जुड़े हैं। बुद्धि = ज्ञान-faculty। धृति = उस ज्ञान को धारण करने की शक्ति। एक के बिना दूसरा अधूरा है। उन्हें एक साथ announce करना उनके अंतर-संबंध को दर्शाता है।</div>
+        </div>
+        <div class="faq">
+          <div class="q">18.29 के बाद बुद्धि-त्रयी कब तक और धृति-त्रयी कब?</div>
+          <div class="a">बुद्धि-त्रयी = 18.30 (सात्त्विक), 18.31 (राजसिक), 18.32 (तामसिक)। धृति-त्रयी = 18.33 (सात्त्विक), 18.34 (राजसिक), 18.35 (तामसिक)। उसके बाद 18.36-39 में सुख-त्रयी आएगी।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.29 गीता के 18वें अध्याय में एक structural milestone है। यह ज्ञान-कर्म-कर्ता की त्रयियों के बाद आता है और बुद्धि-धृति-सुख की त्रयियों से पहले।</p>
+        <p>"बुद्धि" — यह वही faculty है जो 2.39 में "बुद्धियोग" के रूप में introduce हुई थी। अब 18.30-32 में उसे त्रिगुण की कसौटी पर परखा जाएगा।</p>
+        <div class="callout-gold"><b>18.29 का unique feature — दो त्रयियाँ एक में:</b> अन्य सभी transition श्लोकों में एक त्रयी announce होती है। यहाँ दो — बुद्धि और धृति — एक साथ। क्यों? क्योंकि बुद्धि (knowing) और धृति (holding) — ये अलग नहीं हो सकते। जो बुद्धि से जाना, उसे धृति थामती है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — 18.29 का framework में स्थान</h3>
+        <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <!-- Central node -->
+          <ellipse cx="350" cy="190" rx="75" ry="42" fill="rgba(201,162,39,0.15)" stroke="rgba(201,162,39,0.6)" stroke-width="2"/>
+          <text x="350" y="184" text-anchor="middle" fill="#e6c863" font-size="13" font-family="Tiro Devanagari Hindi,serif">18.29</text>
+          <text x="350" y="200" text-anchor="middle" fill="#cfc3a8" font-size="10">घोषणा श्लोक</text>
+          <text x="350" y="215" text-anchor="middle" fill="#cfc3a8" font-size="9">बुद्धि + धृति त्रयी</text>
+
+          <!-- Left — what came before -->
+          <line x1="272" y1="175" x2="140" y2="110" stroke="rgba(92,131,116,0.5)" stroke-width="1.2"/>
+          <ellipse cx="95" cy="90" rx="78" ry="35" fill="rgba(42,106,90,0.08)" stroke="rgba(42,106,90,0.4)" stroke-width="1"/>
+          <text x="95" y="83" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi,serif">पूर्व — पूर्ण</text>
+          <text x="95" y="99" text-anchor="middle" fill="#cfc3a8" font-size="10">ज्ञान·कर्म·कर्ता त्रयी</text>
+          <text x="95" y="112" text-anchor="middle" fill="#cfc3a8" font-size="9">18.20-28</text>
+
+          <!-- Top-left — Buddhi -->
+          <line x1="308" y1="153" x2="200" y2="55" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <ellipse cx="165" cy="38" rx="80" ry="28" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <text x="165" y="32" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi,serif">बुद्धि-त्रयी</text>
+          <text x="165" y="48" text-anchor="middle" fill="#cfc3a8" font-size="10">18.30 · 31 · 32</text>
+
+          <!-- Top-right — Dhrti -->
+          <line x1="392" y1="153" x2="500" y2="55" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <ellipse cx="535" cy="38" rx="80" ry="28" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <text x="535" y="32" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi,serif">धृति-त्रयी</text>
+          <text x="535" y="48" text-anchor="middle" fill="#cfc3a8" font-size="10">18.33 · 34 · 35</text>
+
+          <!-- Right — what comes after -->
+          <line x1="428" y1="175" x2="560" y2="110" stroke="rgba(201,162,39,0.3)" stroke-width="1.2" stroke-dasharray="4,3"/>
+          <ellipse cx="605" cy="90" rx="78" ry="35" fill="rgba(201,162,39,0.04)" stroke="rgba(201,162,39,0.25)" stroke-width="1"/>
+          <text x="605" y="83" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi,serif">आगे — सुख-त्रयी</text>
+          <text x="605" y="99" text-anchor="middle" fill="#cfc3a8" font-size="10">18.36-38-39</text>
+
+          <!-- Bottom — keywords -->
+          <line x1="350" y1="232" x2="350" y2="295" stroke="rgba(201,162,39,0.3)" stroke-width="1"/>
+          <rect x="200" y="295" width="300" height="60" rx="10" fill="rgba(201,162,39,0.06)" stroke="rgba(201,162,39,0.3)" stroke-width="1"/>
+          <text x="350" y="317" text-anchor="middle" fill="#e6c863" font-size="11" font-family="Tiro Devanagari Hindi,serif">अशेषेण + पृथक्त्वेन</text>
+          <text x="350" y="335" text-anchor="middle" fill="#cfc3a8" font-size="10">सम्पूर्ण और पृथक्-पृथक् रूप से</text>
+          <text x="350" y="349" text-anchor="middle" fill="#cfc3a8" font-size="9">Completeness + Clarity</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — 18.29 अन्य transition श्लोकों से</h3>
+        <table class="cmp-table">
+          <tr><th>श्लोक</th><th>क्या announce करता है</th><th>आगे क्या आता है</th></tr>
+          <tr><td>18.19</td><td>ज्ञान, कर्म, कर्ता — तीन प्रकार के हैं</td><td>18.20-22 (ज्ञान), 18.23-25 (कर्म), 18.26-28 (कर्ता)</td></tr>
+          <tr><td>18.29 ← यहाँ</td><td>बुद्धि और धृति — दोनों के तीन-तीन प्रकार</td><td>18.30-32 (बुद्धि), 18.33-35 (धृति)</td></tr>
+          <tr><td>(18.36 implicit)</td><td>सुख के तीन प्रकार (implicit)</td><td>18.36-39 (सुख-त्रयी)</td></tr>
+        </table>
+        <div class="callout"><b>Pattern:</b> गीता में हर नई त्रयी-series से पहले एक announce होती है। 18.29 दो त्रयियाँ एक साथ announce करता है — यह unique है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-gold"><b>बुद्धि और धृति की साधना का आरम्भ:</b> 18.29 हमें याद दिलाता है कि केवल ज्ञान काफी नहीं — बुद्धि (knowing) + धृति (holding) दोनों चाहिए। यह साधक के लिए self-examination का निमंत्रण है: क्या मेरी बुद्धि सात्त्विक है? क्या मेरी धृति सात्त्विक है?</div>
+        <p><b>"अशेषेण" का महत्त्व साधना में:</b> श्रीकृष्ण का "अशेषेण" = पूरा सुनो, partial मत सुनो। साधना में भी — आधा सुनकर, आधा छोड़कर जो निर्णय लेते हैं वे बुद्धि के अपूर्ण प्रयोग का उदाहरण हैं।</p>
+        <p><b>"पृथक्त्वेन" का व्यावहारिक अर्थ:</b> बुद्धि और धृति को अलग-अलग समझना जरूरी है। जो व्यक्ति जानता है कि "यह गलत है" (बुद्धि) पर फिर भी करता है — उसकी धृति कमजोर है। जो टिका रहता है पर गलत दिशा में — उसकी बुद्धि कमजोर है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "बुद्धेः भेदम्" — बुद्धि का भेद सुनो जो ज्ञान-अज्ञान का discriminator है। "धृतेः च" — धृति वह है जो मन और प्राणों को स्थिर रखती है। दोनों के गुण-भेद जानना आत्मज्ञान के लिए आवश्यक है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> बुद्धि = ईश्वर को जानने की शक्ति। धृति = उस ज्ञान में स्थिर रहने की शक्ति। "अशेषेण" = भक्त को पूरी तरह जानना चाहिए — आधे ज्ञान से भक्ति पूर्ण नहीं होती।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> बुद्धि = strategic intelligence। धृति = determination। दोनों राष्ट्र-नायक के लिए अनिवार्य गुण हैं। 18.29 इन दोनों की व्यापक study का आरम्भ है।</p>
+        <div class="callout"><b>तीनों का सार:</b> 18.29 एक formal invitation है — "अब गहरी सुनो।" बुद्धि और धृति — ये दो वे faculty हैं जो साधक को मुक्ति की ओर ले जाती हैं।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">बुद्धिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>निर्णय-शक्ति / Intellect</b>सही-गलत में distinguish करने की faculty</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">धृतिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>धैर्य / Steadiness</b>बुद्धि के निर्णय को थामे रखने की शक्ति</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">त्रिविधम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>तीन प्रकार का</b>गुणों के अनुसार — हर विषय तीन भागों में</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अशेषेण</span></div>
+            <div class="flashcard-face flashcard-back"><b>सम्पूर्ण रूप से</b>अ+शेष = कुछ भी न छोड़कर</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">पृथक्त्वेन</span></div>
+            <div class="flashcard-face flashcard-back"><b>पृथक्-पृथक् रूप से</b>अलग-अलग, clearly separated</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">धनञ्जय</span></div>
+            <div class="flashcard-face flashcard-back"><b>धन जीतने वाला</b>अर्जुन का विशेषण — सूक्ष्म ज्ञान के लिए तैयार</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea29"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">बुद्धेः</td><td>√बुध्+क्तिन्</td><td>षष्ठी एकवचन</td><td>बुद्धि का — सम्बन्ध</td></tr>
+          <tr><td class="sa">भेदम्</td><td>√भिद्+घञ्</td><td>द्वितीया एकवचन</td><td>भेद को — कर्म</td></tr>
+          <tr><td class="sa">धृतेः</td><td>√धृ+क्तिन्</td><td>षष्ठी एकवचन</td><td>धृति का — सम्बन्ध</td></tr>
+          <tr><td class="sa">गुणतः</td><td>गुण+तस्</td><td>पञ्चमी/अव्यय</td><td>गुणों के अनुसार</td></tr>
+          <tr><td class="sa">त्रिविधम्</td><td>त्रि+विध</td><td>द्वितीया एकवचन</td><td>तीन प्रकार का</td></tr>
+          <tr><td class="sa">शृणु</td><td>√श्रु</td><td>आज्ञार्थ एकवचन</td><td>सुनो — imperative</td></tr>
+          <tr><td class="sa">प्रोच्यमानम्</td><td>प्र+√वच्+शानच्</td><td>Passive present participle</td><td>कहे जाते हुए</td></tr>
+          <tr><td class="sa">अशेषेण</td><td>अ+शेष</td><td>तृतीया एकवचन</td><td>सम्पूर्ण रूप से — करण</td></tr>
+          <tr><td class="sa">पृथक्त्वेन</td><td>पृथक्+त्व</td><td>तृतीया एकवचन</td><td>अलग-अलग करके — करण</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">बुद्धेर्भेदं धृतेश्चैव गुणतस्त्रिविधं शृणु।<br>प्रोच्यमानमशेषेण पृथक्त्वेन धनञ्जय।।</div>
+          <div class="cheat-translit">buddher bhedaṃ dhṛteś caiva guṇatas tri-vidhaṃ śṛṇu, procyamānam aśeṣeṇa pṛthaktvena dhanañjaya</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>बुद्धेः भेदम्</b> बुद्धि के प्रकार</span>
+            <span class="cheat-chip"><b>धृतेः</b> धृति के प्रकार</span>
+            <span class="cheat-chip"><b>त्रिविधम्</b> तीन-तीन प्रकार</span>
+            <span class="cheat-chip"><b>अशेषेण</b> सम्पूर्ण रूप से</span>
+            <span class="cheat-chip"><b>पृथक्त्वेन</b> अलग-अलग</span>
+            <span class="cheat-chip"><b>शृणु</b> सुनो — आज्ञा</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: 18.29 = transition श्लोक। बुद्धि-त्रयी (30-32) और धृति-त्रयी (33-35) की एक साथ घोषणा। "सम्पूर्ण और स्पष्ट" — श्रीकृष्ण का वादा।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('बुद्धेर्भेदं धृतेश्चैव गुणतस्त्रिविधं शृणु। प्रोच्यमानमशेषेण पृथक्त्वेन धनञ्जय।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('बुद्धेर्भेदं धृतेश्चैव गुणतस्त्रिविधं शृणु। प्रोच्यमानमशेषेण पृथक्त्वेन धनञ्जय।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('हे धनञ्जय! बुद्धि और धृति के गुणों के अनुसार तीन-तीन प्रकार के भेद — सम्पूर्ण और पृथक् रूप से — सुनो।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText29"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev29()">◃</button>
+          <button onclick="walkToggle29()" id="walkPlayBtn29">▶</button>
+          <button onclick="walkNext29()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots29"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">बु</span><span class="syll">द्धेर्</span><span class="syll">भे</span><span class="syll">दं</span><span class="syll">धृ</span><span class="syll">ते</span><span class="syll">श्चै</span><span class="syll">व</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">गु</span><span class="syll">ण</span><span class="syll">तस्</span><span class="syll">त्रि</span><span class="syll">वि</span><span class="syll">धं</span><span class="syll">शृ</span><span class="syll">णु</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">प्रो</span><span class="syll">च्य</span><span class="syll">मा</span><span class="syll">न</span><span class="syll">म</span><span class="syll">शे</span><span class="syll">षे</span><span class="syll">ण</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">पृ</span><span class="syll">थक्</span><span class="syll">त्वेन</span><span class="syll">ध</span><span class="syll">नञ्</span><span class="syll">ज</span><span class="syll">य</span></div>
+        <div class="tts-row" style="margin-top:14px;"><button class="tts-btn" onclick="speakText('बुद्धेः भेदं धृतेः च एव गुणतः त्रिविधं शृणु प्रोच्यमानम् अशेषेण पृथक्त्वेन धनञ्जय', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-gold"><b>ध्यान-बिंदु:</b> "शृणु" — सुनो। जप करते समय रुकें। क्या मैं सचमुच सुन रहा हूँ? बुद्धि से — या केवल कान से? "अशेषेण" — सम्पूर्ण सुनना, selective नहीं।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">18वें अध्याय का Framework</button>
+      <button class="tab-btn" data-tab="e2">बुद्धि vs धृति</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 अध्याय 18 — त्रयी-Framework (18.20-39)</h3>
+        <p class="subnote">हर विषय को त्रिगुण की कसौटी पर परखा गया</p>
+        <div class="framework-grid">
+          <div class="framework-card done">
+            <div class="fw-num">✓ पूर्ण</div>
+            <div class="fw-title">ज्ञान-त्रयी</div>
+            <div class="fw-sloka">18.20 · 21 · 22</div>
+          </div>
+          <div class="framework-card done">
+            <div class="fw-num">✓ पूर्ण</div>
+            <div class="fw-title">कर्म-त्रयी</div>
+            <div class="fw-sloka">18.23 · 24 · 25</div>
+          </div>
+          <div class="framework-card done">
+            <div class="fw-num">✓ पूर्ण</div>
+            <div class="fw-title">कर्ता-त्रयी</div>
+            <div class="fw-sloka">18.26 · 27 · 28</div>
+          </div>
+          <div class="framework-card current">
+            <div class="fw-num">✦ अभी — 18.29</div>
+            <div class="fw-title">घोषणा श्लोक</div>
+            <div class="fw-sloka">बुद्धि + धृति</div>
+          </div>
+          <div class="framework-card next">
+            <div class="fw-num">अगला</div>
+            <div class="fw-title">बुद्धि-त्रयी</div>
+            <div class="fw-sloka">18.30 · 31 · 32</div>
+          </div>
+          <div class="framework-card next">
+            <div class="fw-num">आगे</div>
+            <div class="fw-title">धृति-त्रयी</div>
+            <div class="fw-sloka">18.33 · 34 · 35</div>
+          </div>
+          <div class="framework-card next">
+            <div class="fw-num">आगे</div>
+            <div class="fw-title">सुख-त्रयी</div>
+            <div class="fw-sloka">18.36 · 37 · 38-39</div>
+          </div>
+        </div>
+        <div class="callout-gold"><b>Pattern:</b> हर त्रयी में सात्त्विक → राजसिक → तामसिक। 18.29 इस framework में pivot point है — पहली तीन त्रयियाँ पूर्ण, अगली तीन की घोषणा।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 बुद्धि और धृति — दोनों का सम्बन्ध</h3>
+        <div class="buddhi-dhrti-box">
+          <div class="bd-card">
+            <div class="bd-label">बुद्धि — जानना</div>
+            <div class="bd-sa">बुद्धिः</div>
+            <div class="bd-desc"><b>Faculty:</b> Discriminative intellect<br><b>Function:</b> सही-गलत, मोक्ष-बंधन में भेद<br><b>Question:</b> "क्या करना है?"<br><b>अगले श्लोक:</b> 18.30 (सात्त्विक), 18.31 (राजसिक), 18.32 (तामसिक)</div>
+          </div>
+          <div class="bd-card">
+            <div class="bd-label">धृति — थामना</div>
+            <div class="bd-sa">धृतिः</div>
+            <div class="bd-desc"><b>Faculty:</b> Steadiness, fortitude<br><b>Function:</b> बुद्धि के निर्णय को संकट में थामे रखना<br><b>Question:</b> "जो जाना, उस पर टिके रहना"<br><b>अगले श्लोक:</b> 18.33 (सात्त्विक), 18.34 (राजसिक), 18.35 (तामसिक)</div>
+          </div>
+        </div>
+        <div class="callout"><b>Analogy:</b> बुद्धि = Map (दिशा जानना)। धृति = Compass (रास्ते में टिके रहना)। दोनों के बिना यात्रा अधूरी।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop done"><div class="road-dot"></div><div class="rlabel">श्लो. २०-२८<br>ज्ञान·कर्म·कर्ता</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. २९<br>घोषणा ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३०-३२<br>बुद्धि-त्रयी</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३३-३५<br>धृति-त्रयी</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३६-३९<br>सुख-त्रयी</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.30):</b> सात्त्विक बुद्धि — जो प्रवृत्ति-निवृत्ति, भय-अभय, बंधन-मोक्ष को जानती है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.३०) — ☰ नेविगेशन — सात्त्विक बुद्धि: मोक्ष-बंधन का विवेक</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData29=[
+    {q:"18.29 में श्रीकृष्ण किन दो चीजों के त्रिविध भेद announce करते हैं?",options:["ज्ञान और कर्म","कर्म और कर्ता","बुद्धि और धृति","सुख और दुःख"],correct:2},
+    {q:"'अशेषेण' का अर्थ क्या है?",options:["अतिरिक्त रूप से","सम्पूर्ण रूप से — कुछ भी न छोड़कर","अत्यधिक विस्तार से","अनावश्यक रूप से"],correct:1},
+    {q:"बुद्धि और धृति में क्या अंतर है?",options:["दोनों एक ही हैं","बुद्धि = knowing (सही-गलत जानना); धृति = holding (उस ज्ञान को थामे रखना)","धृति जानती है, बुद्धि थामती है","बुद्धि केवल memory है"],correct:1},
+    {q:"18.29 के बाद बुद्धि-त्रयी किन श्लोकों में आती है?",options:["18.30-32","18.33-35","18.36-38","18.26-28"],correct:0},
+    {q:"'शृणु' किस लकार में है?",options:["लट् (वर्तमान)","लृट् (भविष्य)","लोट् (आज्ञार्थ) — imperative","लङ् (भूतकाल)"],correct:2}
+  ];
+  let qi=0,qs=0,qa=false;
+  function renderQuiz(){const area=document.getElementById('quizArea29');if(!area)return;if(qi>=quizData29.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+qs+' / '+quizData29.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="qi=0;qs=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData29[qi];qa=false;let html='<div class="quiz-progress">प्रश्न '+(qi+1)+' / '+quizData29.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQ('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="qnb" disabled onclick="qi++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQ(i){if(qa)return;qa=true;const item=quizData29[qi];document.querySelectorAll('#quizArea29 .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)qs++;document.getElementById('qnb').disabled=false;}
+  renderQuiz();
+
+  const walkSlides29=["18.26-28 में कर्ता-त्रयी पूर्ण हुई। 18.29 एक transition श्लोक है — new series की घोषणा।","श्रीकृष्ण announce करते हैं: 'बुद्धि और धृति — दोनों के तीन-तीन प्रकार।' यह unique है — एक श्लोक में दो त्रयियाँ।","बुद्धि = knowing — 'क्या करना है' जानना। धृति = holding — 'जो जाना, उस पर टिके रहना।' Map और Compass की जोड़ी।","'अशेषेण' = सम्पूर्ण। 'पृथक्त्वेन' = अलग-अलग। श्रीकृष्ण का वादा: पूरा और स्पष्ट बताऊँगा।","'शृणु' = सुनो। हर बार जब गीता में 'शृणु' आता है — कुछ गहरा आने वाला है। यहाँ बुद्धि-धृति का सूक्ष्म विषय।","अगला 18.30 — सात्त्विक बुद्धि। जो प्रवृत्ति-निवृत्ति, भय-अभय, बंधन-मोक्ष जानती है।"];
+  let wi=0,wp=false,wt=null;
+  function renderWalk29(){const t=document.getElementById('walkText29');if(!t)return;t.textContent=walkSlides29[wi];document.getElementById('walkDots29').innerHTML=walkSlides29.map((_,i)=>'<span class="walk-dot'+(i===wi?' active':'')+'"></span>').join('');}
+  function walkNext29(){wi=(wi+1)%walkSlides29.length;renderWalk29();}
+  function walkPrev29(){wi=(wi-1+walkSlides29.length)%walkSlides29.length;renderWalk29();}
+  function walkToggle29(){const btn=document.getElementById('walkPlayBtn29');wp=!wp;if(wp){btn.textContent='⏸';wt=setInterval(walkNext29,3200);}else{btn.textContent='▶';clearInterval(wt);}}
+  renderWalk29();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

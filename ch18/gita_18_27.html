@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.27 — राजसिक कर्ता: लुब्ध और हर्षशोकान्वित</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:34.6%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 27 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.२७</div>
+    </div>
+    <div class="guna-badge">🔥 राजसिक कर्ता — कर्ता त्रयी श्लोक २/३</div>
+    <div class="shloka">
+      रागी कर्मफलप्रेप्सुर्लुब्धो हिंसात्मकोऽशुचिः।<br>
+      हर्षशोकान्वितः कर्ता राजसः परिकीर्तितः।।
+    </div>
+    <div class="translit">
+      rāgī karma-phala-prepsur lubdho hiṃsātmako 'śuciḥ,<br>
+      harṣa-śokānvitaḥ kartā rājasaḥ parikīrtitaḥ
+    </div>
+    <div class="gist">
+      जो कर्ता <b>रागी</b> (आसक्त), <b>कर्मफल की इच्छा रखने वाला</b> (कर्मफलप्रेप्सु), <b>लोभी</b> (लुब्ध), <b>हिंसात्मक स्वभाव</b> (हिंसात्मक), <b>अपवित्र</b> (अशुचि) और <b>हर्ष-शोक से भरा</b> (हर्षशोकान्वित) हो — वह कर्ता <b>राजसिक</b> कहा गया है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="t3">भावार्थ</button>
+      <button class="tab-btn" data-tab="t4">उदाहरण</button>
+      <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="t1">
+        <h3>🪔 पूर्ववर्ती-संदर्भ — 18.26 से contrast</h3>
+        <p>18.26 में सात्त्विक कर्ता था — मुक्तसङ्ग, अनहंवादी, धृत्युत्साह, निर्विकार। अब 18.27 में उसका विपरीत — <b>राजसिक कर्ता</b> — छह दोषों के साथ।</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 18.26 — सात्त्विक</div>
+            <div class="contrast-sa">मुक्तसङ्ग + निर्विकार</div>
+            <p>आसक्तिमुक्त। अहं-रहित। सफलता-असफलता में समभाव।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 18.27 — राजसिक</div>
+            <div class="contrast-sa">रागी + हर्षशोकान्वित</div>
+            <p>आसक्त। लोभी। हिंसात्मक। सफलता में हर्ष, असफलता में शोक।</p>
+          </div>
+        </div>
+        <div class="callout-rajas"><b>छह दोष एक साथ:</b> 18.26 में छह गुण थे — यहाँ छह दोष। यह symmetry जानबूझकर है। गीता दर्पण की तरह दोनों को सामने रखती है। सात्त्विक के हर गुण का राजसिक में एक विपरीत दोष है।</div>
+      </div>
+
+      <div class="panel" id="t2">
+        <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+        <div class="word-grid">
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">रागी</span><span class="word-tr">rāgī</span></div>
+            <div class="word-meaning">राग से भरा — अत्यधिक आसक्त, लिप्त</div>
+            <div class="word-eng"><b>EN:</b> passionate / deeply attached</div>
+            <div class="word-deep">राग + इन् = राग से युक्त। 18.26 में "मुक्तसङ्ग" था — exact opposite। राग = प्रिय वस्तु में अत्यधिक आकर्षण। रागी = वह जो सदा राग में डूबा हो।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">कर्मफलप्रेप्सुः</span><span class="word-tr">karma-phala-prepsur</span></div>
+            <div class="word-meaning">कर्म के फल की इच्छा रखने वाला</div>
+            <div class="word-eng"><b>EN:</b> one who seeks the fruits of action</div>
+            <div class="word-deep">कर्म + फल + प्र + √आप् + उ = कर्मफल चाहने वाला। 18.26 में "मुक्तसङ्ग" था; 18.23 में "अफलप्रेप्सु" था — यह उसका विपरीत। राजसिक कर्ता का मूल प्रेरक — फल की चाह।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">लुब्धः</span><span class="word-tr">lubdhaḥ</span></div>
+            <div class="word-meaning">लोभी — लालची, लोभ से ग्रस्त</div>
+            <div class="word-eng"><b>EN:</b> greedy / covetous</div>
+            <div class="word-deep">√लुभ् = लोभ करना। लुब्ध = लोभी। राग = जो है उससे आसक्ति। लोभ = जो नहीं है उसकी चाह। दोनों एक साथ — राजसिक कर्ता को न वर्तमान में शांति, न भविष्य से संतोष।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">हिंसात्मकः</span><span class="word-tr">hiṃsātmakaḥ</span></div>
+            <div class="word-meaning">हिंसात्मक स्वभाव का — हिंसा प्रकृति वाला</div>
+            <div class="word-eng"><b>EN:</b> of a harmful / violent nature</div>
+            <div class="word-deep">हिंसा + आत्मक = हिंसा-स्वभाव वाला। यह शारीरिक हिंसा ही नहीं — वाणी से, मन से, दूसरों को नुकसान पहुँचाने की प्रवृत्ति। राजसिक कर्ता अपने लाभ के लिए दूसरों को कष्ट देने से नहीं हिचकता।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अशुचिः</span><span class="word-tr">aśuciḥ</span></div>
+            <div class="word-meaning">अपवित्र — शरीर, मन या आचरण में अशुद्ध</div>
+            <div class="word-eng"><b>EN:</b> impure / unclean</div>
+            <div class="word-deep">अ + शुचि = अशुद्ध। यह बाहरी अशुद्धि नहीं — मन की अशुद्धि। राजसिक कर्ता के मन में ईर्ष्या, कपट, स्वार्थ — ये सब "अशुचि" हैं। 18.26 में "धृत्युत्साह" था — यहाँ उसके स्थान पर "अशुचि।"</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">हर्षशोकान्वितः</span><span class="word-tr">harṣa-śokānvitaḥ</span></div>
+            <div class="word-meaning">हर्ष (खुशी) और शोक (दुःख) से भरा — भावनात्मक रूप से अस्थिर</div>
+            <div class="word-eng"><b>EN:</b> subject to joy and grief / emotionally unstable</div>
+            <div class="word-deep">हर्ष + शोक + अन्वित = दोनों से भरा। 18.26 में "निर्विकार" था — exact opposite। सफलता में उन्माद, असफलता में निराशा। यह emotional roller-coaster राजसिक कर्ता की पहचान है।</div>
+          </div>
+
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">राजसः परिकीर्तितः</span><span class="word-tr">rājasaḥ parikīrtitaḥ</span></div>
+            <div class="word-meaning">राजसिक कहा गया है — विशेष रूप से घोषित</div>
+            <div class="word-eng"><b>EN:</b> is proclaimed to be rājasa</div>
+            <div class="word-deep">परिकीर्तित = परि + कीर्तित = विशेष रूप से, चारों ओर से कहा/प्रसिद्ध किया गया। 18.26 में "उच्यते" था; यहाँ "परिकीर्तितः" — stronger word। राजसिक कर्ता की विशेषताएँ इतनी स्पष्ट हैं कि उन्हें विशेष रूप से घोषित करना पड़ता है।</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="panel" id="t3">
+        <h3>🪔 भावार्थ एवं व्याख्या</h3>
+        <div class="eng-box">
+          <span>English Translation</span>
+          The doer who is passionate, seeking the fruits of action, greedy, harmful by nature, impure, and subject to joy and grief — that doer is proclaimed to be rājasa.
+        </div>
+        <p>18.27 राजसिक कर्ता के <b>छह दोष</b> देता है — और ये छहों 18.26 के छह गुणों के opposites हैं:</p>
+        <p><b>रागी</b> (vs मुक्तसङ्ग) — आसक्त। <b>कर्मफलप्रेप्सु</b> (vs अफलप्रेप्सु 18.23) — फल चाहता है। <b>लुब्ध</b> — लोभी। <b>हिंसात्मक</b> — दूसरों को नुकसान। <b>अशुचि</b> — मन से अपवित्र। <b>हर्षशोकान्वित</b> (vs निर्विकार) — भावनात्मक रूप से अस्थिर।</p>
+        <div class="callout-rajas"><b>सबसे महत्त्वपूर्ण pair:</b> "हर्षशोकान्वित" vs "निर्विकार।" राजसिक कर्ता परिणाम से बंधा है — इसलिए सफलता में हर्ष, असफलता में शोक। सात्त्विक कर्ता परिणाम से मुक्त है — इसलिए निर्विकार। यही बंधन और मुक्ति का अंतर है।</div>
+        <p>"परिकीर्तितः" — "उच्यते" से stronger। यह विशेष घोषणा इसलिए है क्योंकि राजसिक कर्ता आधुनिक जीवन में सबसे common है — गीता उसे clearly identify करती है।</p>
+      </div>
+
+      <div class="panel" id="t4">
+        <h3>🪔 जीवनी उदाहरण</h3>
+        <div class="example">
+          <b>उदाहरण 1 — Ambitious Corporate कर्ता:</b> जो व्यक्ति सफलता के लिए हर काम करे — रागी (सफलता में आसक्त), कर्मफलप्रेप्सु (bonus, promotion चाहिए), लुब्ध (और चाहिए, कभी संतुष्ट नहीं), हिंसात्मक (competitors को नुकसान, office politics), अशुचि (कपट, झूठ), हर्षशोकान्वित (जीत पर उत्साह, हार पर depression)।
+        </div>
+        <div class="example">
+          <b>उदाहरण 2 — सकाम भक्त:</b> जो पूजा-पाठ करे पर फल की कामना से — कर्मफलप्रेप्सु। मनोकामना पूरी हो तो हर्ष, न हो तो शोक — हर्षशोकान्वित। यह भक्ति है पर राजसिक — सात्त्विक भक्ति में फल की इच्छा नहीं।
+        </div>
+        <div class="example">
+          <b>उदाहरण 3 — "मेरा हक़" वाली मानसिकता:</b> जो हमेशा सोचे "मुझे मिलना चाहिए था" (लुब्ध), दूसरों की सफलता से जलन (हिंसात्मक मन से), अपने स्वार्थ के लिए झूठ (अशुचि), मिले तो खुशी न मिले तो दुःख (हर्षशोकान्वित)।
+        </div>
+        <div class="callout"><b>तुलना — एक project में success और failure:</b> सात्त्विक = दोनों में "ठीक है, अगला।" राजसिक = success में celebrate, failure में blame game। तामसिक = दोनों में उदासीन या depressed।</div>
+      </div>
+
+      <div class="panel" id="t5">
+        <h3>🪔 प्रश्नोत्तर</h3>
+        <div class="faq">
+          <div class="q">"परिकीर्तितः" और "उच्यते" में क्या अंतर है?</div>
+          <div class="a">उच्यते = "कहा जाता है" — simple passive, universal। परिकीर्तितः = "परि + कीर्तित" — "विशेष रूप से, चारों ओर से घोषित।" यह stronger word है। 18.26 (सात्त्विक) में "उच्यते" था; 18.27 (राजसिक) में "परिकीर्तितः।" राजसिक को special emphasis देना — क्योंकि यह सबसे common type है।</div>
+        </div>
+        <div class="faq">
+          <div class="q">"हिंसात्मक" — क्या यह केवल शारीरिक हिंसा है?</div>
+          <div class="a">नहीं — "हिंसात्मक" = हिंसा-स्वभाव वाला। यह शारीरिक हिंसा + वाणी की हिंसा + मानसिक हिंसा सब शामिल है। दूसरों की निंदा, कटु वचन, ईर्ष्या से जलाना, competitively नुकसान पहुँचाना — सब "हिंसात्मक" है। यह प्रकृति (nature) है, एक-दो घटना नहीं।</div>
+        </div>
+        <div class="faq">
+          <div class="q">18.26 में 6 गुण थे, 18.27 में भी 6 दोष हैं — यह symmetry जानबूझकर है?</div>
+          <div class="a">बिल्कुल! गीता की composition अत्यंत careful है। सात्त्विक के 6 गुण: मुक्तसङ्ग, अनहंवादी, धृति, उत्साह, सिद्धौ निर्विकार, असिद्धौ निर्विकार। राजसिक के 6 दोष: रागी, कर्मफलप्रेप्सु, लुब्ध, हिंसात्मक, अशुचि, हर्षशोकान्वित। यह दर्पण-संरचना है — एक दूसरे का exact opposite।</div>
+        </div>
+        <div class="faq">
+          <div class="q">क्या राजसिक कर्ता बुरा इंसान है? क्या हर ambitious व्यक्ति राजसिक है?</div>
+          <div class="a">राजसिक होना "बुरा" नहीं — यह एक अवस्था है। Ambition राजसिक है पर समाज को चलाने के लिए जरूरी भी है। गीता यह नहीं कहती कि राजसिक पाप है — पर यह मुक्ति का मार्ग नहीं। राजसिक कर्ता से सात्त्विक की ओर बढ़ना साधना है। "हर्षशोकान्वित" होना बंधन का sign है — इसे देखना पहला कदम है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.27 आधुनिक दुनिया का सबसे प्रचलित कर्ता-type है। Corporate life, politics, social media — सर्वत्र राजसिक कर्ता दिखता है।</p>
+        <p>"हर्षशोकान्वित" — यह phrase आधुनिक psychology के "emotional dysregulation" के समान है। जो परिणाम से बंधा है, वह हमेशा इस roller-coaster पर रहेगा।</p>
+        <div class="callout-rajas"><b>गीता की diagnosis:</b> राजसिक कर्ता को पहचानना कठिन नहीं — बस यह देखें: "क्या मैं सफलता पर ज्यादा खुश होता हूँ? असफलता पर ज्यादा दुःखी?" अगर हाँ — "हर्षशोकान्वित" — तो राजसिक कर्ता हूँ। यह self-diagnosis ही साधना का पहला कदम है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — राजसिक कर्ता के छह दोष</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="200" rx="72" ry="42" fill="rgba(140,74,32,0.2)" stroke="rgba(140,74,32,0.6)" stroke-width="1.5"/>
+          <text x="350" y="194" text-anchor="middle" fill="#e0a060" font-size="13" font-family="Tiro Devanagari Hindi,serif">राजसिक कर्ता</text>
+          <text x="350" y="211" text-anchor="middle" fill="#cfc3a8" font-size="10">18.27</text>
+
+          <line x1="295" y1="168" x2="155" y2="88" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="108" cy="68" rx="72" ry="30" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="108" y="63" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">रागी</text>
+          <text x="108" y="79" text-anchor="middle" fill="#cfc3a8" font-size="10">अत्यधिक आसक्त</text>
+
+          <line x1="325" y1="158" x2="262" y2="62" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="245" cy="44" rx="74" ry="28" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="245" y="39" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">कर्मफलप्रेप्सु</text>
+          <text x="245" y="55" text-anchor="middle" fill="#cfc3a8" font-size="10">फल की इच्छा</text>
+
+          <line x1="375" y1="158" x2="438" y2="62" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="455" cy="44" rx="68" ry="28" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="455" y="39" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">लुब्धः</text>
+          <text x="455" y="55" text-anchor="middle" fill="#cfc3a8" font-size="10">लोभी</text>
+
+          <line x1="405" y1="168" x2="545" y2="88" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="592" cy="68" rx="76" ry="30" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="592" y="63" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">हिंसात्मक</text>
+          <text x="592" y="79" text-anchor="middle" fill="#cfc3a8" font-size="10">हानिकर स्वभाव</text>
+
+          <line x1="295" y1="232" x2="148" y2="318" stroke="rgba(140,74,32,0.35)" stroke-width="1.2"/>
+          <ellipse cx="110" cy="338" rx="76" ry="30" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="110" y="333" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">अशुचिः</text>
+          <text x="110" y="349" text-anchor="middle" fill="#cfc3a8" font-size="10">मन से अपवित्र</text>
+
+          <line x1="405" y1="232" x2="552" y2="318" stroke="rgba(140,74,32,0.35)" stroke-width="1.2"/>
+          <ellipse cx="592" cy="338" rx="82" ry="30" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="592" y="333" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi,serif">हर्षशोकान्वित</text>
+          <text x="592" y="349" text-anchor="middle" fill="#cfc3a8" font-size="10">भावनात्मक अस्थिरता</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — 18.26 vs 18.27 (दर्पण-संरचना)</h3>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>सात्त्विक (18.26)</th><th>राजसिक (18.27)</th><th>तामसिक (18.28)</th></tr>
+          <tr><td>आसक्ति</td><td>मुक्तसङ्ग — नहीं</td><td>रागी — अत्यधिक</td><td>अयुक्त — मूढ़</td></tr>
+          <tr><td>फल</td><td>अफलप्रेप्सु — नहीं</td><td>कर्मफलप्रेप्सु — हाँ</td><td>परवाह नहीं</td></tr>
+          <tr><td>लोभ</td><td>संतुष्ट</td><td>लुब्ध — लोभी</td><td>दीर्घसूत्री — आलसी</td></tr>
+          <tr><td>दूसरों पर</td><td>लोकसंग्रह</td><td>हिंसात्मक</td><td>नैष्कृतिक</td></tr>
+          <tr><td>पवित्रता</td><td>शुचि</td><td>अशुचि</td><td>अलस — मैला</td></tr>
+          <tr><td>परिणाम में</td><td>निर्विकार</td><td>हर्षशोकान्वित</td><td>विषादी</td></tr>
+        </table>
+        <div class="callout"><b>Psychology से तुलना:</b> "हर्षशोकान्वित" = "Hedonic treadmill" — जो सफलता पर खुश होता है वह और चाहता है, जो असफल होता है depressed हो जाता है। यह cycle कभी खत्म नहीं होती। गीता का "निर्विकार" = psychological equanimity।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>राजसिक कर्ता की self-diagnosis — छह प्रश्न:</b> (1) क्या मैं किसी चीज़ से अत्यधिक आसक्त हूँ? (रागी) (2) क्या मैं हमेशा फल की इच्छा रखता हूँ? (कर्मफलप्रेप्सु) (3) क्या कभी संतुष्ट होता हूँ? (लुब्ध) (4) क्या मैं दूसरों को नुकसान पहुँचाने से नहीं हिचकता? (हिंसात्मक) (5) क्या मेरे मन में कपट, ईर्ष्या है? (अशुचि) (6) क्या सफलता पर उन्माद और असफलता पर depression होता है? (हर्षशोकान्वित)</div>
+        <p><b>राजसिक से सात्त्विक की ओर — एक अभ्यास:</b> अगली बार जब कोई परिणाम आए — अच्छा या बुरा — एक पल के लिए "हर्षशोकान्वित" को देखें। न दबाएं, न बढ़ाएं — बस देखें। यह साक्षी-भाव ही "निर्विकार" की ओर पहला कदम है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "रागी" = काम से प्रेरित। "हिंसात्मक" = दूसरों के अहित में प्रवृत्त। "अशुचि" = बाह्य और आंतरिक दोनों अशुद्धि। राजसिक कर्ता संसार-बंधन का prototype है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "कर्मफलप्रेप्सु" = ईश्वर को नहीं, फल को देखता है। भक्ति-रहित कर्म राजसिक होता है। "हर्षशोकान्वित" = ईश्वर की इच्छा में समर्पण का अभाव।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> "लुब्ध + हिंसात्मक" — यह combination समाज के लिए हानिकारक है। स्वार्थी और हिंसक कर्ता समाज को तोड़ता है। सात्त्विक कर्ता जोड़ता है।</p>
+        <div class="callout"><b>तीनों का सार:</b> राजसिक कर्ता की जड़ = काम + लोभ। इससे बाकी पाँच दोष उत्पन्न होते हैं। काम और लोभ हटें — राजसिक सात्त्विक बने।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">रागी</span></div>
+            <div class="flashcard-face flashcard-back"><b>अत्यधिक आसक्त</b>18.26 के मुक्तसङ्ग का opposite</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कर्मफलप्रेप्सुः</span></div>
+            <div class="flashcard-face flashcard-back"><b>फल की इच्छा रखने वाला</b>18.23 के अफलप्रेप्सु का opposite</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">लुब्धः</span></div>
+            <div class="flashcard-face flashcard-back"><b>लोभी / greedy</b>√लुभ् — कभी संतुष्ट नहीं</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">हिंसात्मकः</span></div>
+            <div class="flashcard-face flashcard-back"><b>हिंसात्मक स्वभाव</b>प्रकृति से हानिकर — केवल action नहीं</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अशुचिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>अपवित्र</b>मन की अशुद्धि — ईर्ष्या, कपट, स्वार्थ</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">हर्षशोकान्वितः</span></div>
+            <div class="flashcard-face flashcard-back"><b>हर्ष-शोक से भरा</b>18.26 के निर्विकार का opposite</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea27"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">रागी</td><td>राग+इन्</td><td>प्रथमा एकवचन</td><td>राग से युक्त — तद्धित</td></tr>
+          <tr><td class="sa">कर्मफलप्रेप्सुः</td><td>कर्म+फल+प्र+√आप्+उ</td><td>प्रथमा एकवचन</td><td>कर्मफल चाहने वाला</td></tr>
+          <tr><td class="sa">लुब्धः</td><td>√लुभ्+क्त</td><td>प्रथमा एकवचन</td><td>लोभी — भूतकृदन्त</td></tr>
+          <tr><td class="sa">हिंसात्मकः</td><td>हिंसा+आत्मक</td><td>प्रथमा एकवचन</td><td>हिंसा-स्वभाव वाला</td></tr>
+          <tr><td class="sa">अशुचिः</td><td>अ+शुचि</td><td>प्रथमा एकवचन</td><td>अपवित्र — नञ् तत्पुरुष</td></tr>
+          <tr><td class="sa">हर्षशोकान्वितः</td><td>हर्ष+शोक+अन्वित</td><td>प्रथमा एकवचन</td><td>हर्ष-शोक से युक्त — बहुव्रीहि</td></tr>
+          <tr><td class="sa">राजसः परिकीर्तितः</td><td>राजस+परि+√कीर्त्</td><td>प्रथमा / भूतकृदन्त</td><td>राजसिक विशेष रूप से घोषित</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">रागी कर्मफलप्रेप्सुर्लुब्धो हिंसात्मकोऽशुचिः।<br>हर्षशोकान्वितः कर्ता राजसः परिकीर्तितः।।</div>
+          <div class="cheat-translit">rāgī karma-phala-prepsur lubdho hiṃsātmako 'śuciḥ, harṣa-śokānvitaḥ kartā rājasaḥ parikīrtitaḥ</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>रागी</b> अत्यधिक आसक्त</span>
+            <span class="cheat-chip"><b>कर्मफलप्रेप्सु</b> फल की इच्छा</span>
+            <span class="cheat-chip"><b>लुब्ध</b> लोभी</span>
+            <span class="cheat-chip"><b>हिंसात्मक</b> हानिकर</span>
+            <span class="cheat-chip"><b>अशुचि</b> अपवित्र</span>
+            <span class="cheat-chip"><b>हर्षशोकान्वित</b> भावनात्मक अस्थिर</span>
+            <span class="cheat-chip"><b>परिकीर्तितः</b> विशेष घोषित</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: राजसिक कर्ता = रागी + फलाकांक्षी + लोभी + हिंसात्मक + अपवित्र + हर्षशोकान्वित। 18.26 के छह गुणों का दर्पण-विपरीत। कर्ता-त्रयी का मध्य।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('रागी कर्मफलप्रेप्सुर्लुब्धो हिंसात्मकोऽशुचिः। हर्षशोकान्वितः कर्ता राजसः परिकीर्तितः।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('रागी कर्मफलप्रेप्सुर्लुब्धो हिंसात्मकोऽशुचिः। हर्षशोकान्वितः कर्ता राजसः परिकीर्तितः।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जो कर्ता रागी हो, कर्मफल की इच्छा रखे, लोभी हो, हिंसात्मक हो, अपवित्र हो, और हर्ष-शोक से भरा हो — वह राजसिक कहा गया है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText27"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev27()">◃</button>
+          <button onclick="walkToggle27()" id="walkPlayBtn27">▶</button>
+          <button onclick="walkNext27()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots27"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">रा</span><span class="syll">गी</span><span class="syll">कर्म</span><span class="syll">फल</span><span class="syll">प्रेप्</span><span class="syll">सुर्</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">लु</span><span class="syll">ब्धो</span><span class="syll">हिं</span><span class="syll">सा</span><span class="syll">त्म</span><span class="syll">को</span><span class="syll">ऽशु</span><span class="syll">चिः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">हर्ष</span><span class="syll">शो</span><span class="syll">कान्</span><span class="syll">वि</span><span class="syll">तः</span><span class="syll">कर्</span><span class="syll">ता</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">रा</span><span class="syll">ज</span><span class="syll">सः</span><span class="syll">प</span><span class="syll">रि</span><span class="syll">कीर्</span><span class="syll">ति</span><span class="syll">तः</span></div>
+        <div class="tts-row" style="margin-top:14px;"><button class="tts-btn" onclick="speakText('रागी कर्मफलप्रेप्सुः लुब्धः हिंसात्मकः अशुचिः हर्षशोकान्वितः कर्ता राजसः परिकीर्तितः', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "हर्षशोकान्वितः" — जप करते समय रुकें। क्या आज कोई परिणाम ने आपको अत्यधिक हर्षित या शोकित किया? यह राजसिक का sign है — इसे देखना ही साधना का पहला कदम है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">18.26 vs 18.27 दर्पण</button>
+      <button class="tab-btn" data-tab="e2">कर्ता-त्रयी overview</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 18.26 vs 18.27 — दर्पण-संरचना</h3>
+        <p class="subnote">सात्त्विक के हर गुण का राजसिक में exact विपरीत</p>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>🌿 सात्त्विक (18.26)</th><th>🔥 राजसिक (18.27)</th></tr>
+          <tr><td>आसक्ति</td><td>मुक्तसङ्गः — मुक्त</td><td>रागी — आसक्त</td></tr>
+          <tr><td>फल</td><td>अफलप्रेप्सु (18.23)</td><td>कर्मफलप्रेप्सु — चाहता है</td></tr>
+          <tr><td>इच्छा</td><td>संतुष्ट</td><td>लुब्धः — लोभी</td></tr>
+          <tr><td>दूसरों पर</td><td>लोकसंग्रह</td><td>हिंसात्मकः — हानिकर</td></tr>
+          <tr><td>मन की शुद्धि</td><td>शुचि (implied)</td><td>अशुचिः — अपवित्र</td></tr>
+          <tr><td>परिणाम में</td><td>निर्विकारः</td><td>हर्षशोकान्वितः</td></tr>
+          <tr><td>घोषणा</td><td>उच्यते</td><td>परिकीर्तितः (stronger)</td></tr>
+        </table>
+        <div class="callout"><b>Perfect mirror:</b> 18.26 और 18.27 एक-दूसरे के exact opposites हैं। गीता की यह symmetry जानबूझकर है — ताकि पाठक तुलना करके खुद पहचान सके।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 कर्ता-त्रयी — अभी तक की स्थिति</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🌿 सात्त्विक (18.26)</div>
+            <div class="guna-sa">मुक्तसङ्ग + निर्विकार</div>
+            <div class="guna-char">छह गुण। detached + equanimous। मुक्ति।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 राजसिक (18.27) ← यहाँ</div>
+            <div class="guna-sa">रागी + हर्षशोकान्वित</div>
+            <div class="guna-char">छह दोष। attached + unstable। बंधन।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🌑 तामसिक (18.28)</div>
+            <div class="guna-sa">अयुक्त + विषादी</div>
+            <div class="guna-char">आलसी। निराश। अगला श्लोक।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> सात्त्विक में 6 गुण, राजसिक में 6 दोष, तामसिक में और अधिक दोष। यह descending scale है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २३-२५<br>कर्म-त्रयी</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २६<br>सात्त्विक कर्ता</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. २७<br>राजसिक कर्ता ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २८<br>तामसिक कर्ता</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २९-३२<br>बुद्धि-त्रयी</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.28):</b> तामसिक कर्ता — अयुक्त, प्राकृत, स्तब्ध, नैष्कृतिक, विषादी, दीर्घसूत्री।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.२८) — ☰ नेविगेशन — तामसिक कर्ता: आलसी और विषादी</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData27=[
+    {q:"18.27 में राजसिक कर्ता के कितने दोष हैं?",options:["चार","पाँच","छह — रागी, कर्मफलप्रेप्सु, लुब्ध, हिंसात्मक, अशुचि, हर्षशोकान्वित","तीन"],correct:2},
+    {q:"'हर्षशोकान्वितः' 18.26 के किस गुण का विपरीत है?",options:["मुक्तसङ्ग","अनहंवादी","धृत्युत्साह","निर्विकारः"],correct:3},
+    {q:"'परिकीर्तितः' और 'उच्यते' में क्या अंतर है?",options:["दोनों एक ही हैं","परिकीर्तितः stronger — विशेष रूप से, चारों ओर से घोषित","उच्यते stronger है","कोई अंतर नहीं"],correct:1},
+    {q:"'लुब्धः' का मूल धातु क्या है?",options:["√लभ् (पाना)","√लुभ् (लोभ करना)","√लुप् (छूटना)","√लू (काटना)"],correct:1},
+    {q:"18.26 में छह गुण और 18.27 में छह दोष — यह क्या दर्शाता है?",options:["संयोग","गीता की दर्पण-संरचना — सात्त्विक और राजसिक exact opposites","कवि की सुविधा","संख्या का मेल"],correct:1}
+  ];
+  let qi=0,qs=0,qa=false;
+  function renderQuiz(){const area=document.getElementById('quizArea27');if(!area)return;if(qi>=quizData27.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+qs+' / '+quizData27.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="qi=0;qs=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData27[qi];qa=false;let html='<div class="quiz-progress">प्रश्न '+(qi+1)+' / '+quizData27.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQ('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="qnb" disabled onclick="qi++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQ(i){if(qa)return;qa=true;const item=quizData27[qi];document.querySelectorAll('#quizArea27 .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)qs++;document.getElementById('qnb').disabled=false;}
+  renderQuiz();
+
+  const walkSlides27=["18.26 में सात्त्विक कर्ता था — छह गुण। अब 18.27 में राजसिक कर्ता — छह दोष। यह perfect दर्पण-संरचना है।","'रागी' — 18.26 के 'मुक्तसङ्ग' का opposite। 'कर्मफलप्रेप्सु' — 18.23 के 'अफलप्रेप्सु' का opposite। मूल दोष: आसक्ति और फल की चाह।","'लुब्धः' — लोभी। राग = जो है उससे आसक्ति। लोभ = जो नहीं है उसकी चाह। दोनों एक साथ — कभी संतोष नहीं।","'हिंसात्मकः + अशुचिः' — स्वार्थ के लिए दूसरों को नुकसान, मन में कपट-ईर्ष्या। यह राजसिक कर्ता की आंतरिक अवस्था है।","'हर्षशोकान्वितः' — 18.26 के 'निर्विकार' का exact opposite। सफलता में उन्माद, असफलता में depression। यही emotional roller-coaster राजसिक कर्ता की पहचान है।","'परिकीर्तितः' — 18.26 में 'उच्यते' था; यहाँ stronger word। राजसिक सबसे common type — इसलिए विशेष घोषणा। अगला 18.28 — तामसिक कर्ता।"];
+  let wi=0,wp=false,wt=null;
+  function renderWalk27(){const t=document.getElementById('walkText27');if(!t)return;t.textContent=walkSlides27[wi];document.getElementById('walkDots27').innerHTML=walkSlides27.map((_,i)=>'<span class="walk-dot'+(i===wi?' active':'')+'"></span>').join('');}
+  function walkNext27(){wi=(wi+1)%walkSlides27.length;renderWalk27();}
+  function walkPrev27(){wi=(wi-1+walkSlides27.length)%walkSlides27.length;renderWalk27();}
+  function walkToggle27(){const btn=document.getElementById('walkPlayBtn27');wp=!wp;if(wp){btn.textContent='⏸';wt=setInterval(walkNext27,3200);}else{btn.textContent='▶';clearInterval(wt);}}
+  renderWalk27();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
