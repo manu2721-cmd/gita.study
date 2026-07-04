@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.35 — तामसिकी धृति: मोह-जड़-धारण-शक्ति</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:44.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,#1a1030,#120920);border:1px solid rgba(106,61,122,0.4);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(60,30,90,0.22),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid rgba(106,61,122,0.5);padding:5px 18px;border-radius:30px;background:rgba(60,30,90,0.2);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid rgba(106,61,122,0.3);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(60,30,90,0.35);border:1px solid rgba(106,61,122,0.6);color:#c0a0d8;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-tamas{border-left:3px solid rgba(106,61,122,0.8);background:rgba(60,30,90,0.15);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-tamas b{color:#c0a0d8;}
+  .callout-sat{border-left:3px solid rgba(42,106,90,0.8);background:rgba(42,106,90,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-sat b{color:#6ecfb8;}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(60,30,90,0.25);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#c0a0d8;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(42,106,90,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);cursor:pointer;}
+  .syll:hover{border-color:var(--gold);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* panchak — five tamas elements */
+  .panchak-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:20px 0;}
+  .pk-card{border-radius:12px;padding:14px 8px;text-align:center;border:1px solid rgba(106,61,122,0.4);background:rgba(60,30,90,0.14);}
+  .pk-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:#c0a0d8;margin-bottom:4px;}
+  .pk-tr{font-family:'EB Garamond',serif;font-style:italic;font-size:11px;color:var(--sage);margin-bottom:4px;}
+  .pk-meaning{font-size:11px;color:var(--cream-dim);line-height:1.4;}
+  /* dhrti compare */
+  .dhrti-complete{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:18px 0;}
+  .dc-card{border-radius:12px;padding:14px 10px;text-align:center;}
+  .dc-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .dc-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .dc-card.tam{border:2px solid rgba(106,61,122,0.7);background:rgba(60,30,90,0.2);box-shadow:0 0 14px rgba(60,30,90,0.35);}
+  .dc-label{font-size:10px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:6px;}
+  .dc-card.sat .dc-label{color:#6ecfb8;}
+  .dc-card.raj .dc-label{color:#e0a060;}
+  .dc-card.tam .dc-label{color:#c0a0d8;}
+  .dc-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:var(--cream);margin-bottom:4px;}
+  .dc-char{font-size:11.5px;color:var(--cream-dim);line-height:1.5;}
+  /* road track */
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  /* completion banner */
+  .completion-banner{border:1px solid rgba(201,162,39,0.4);border-radius:14px;padding:20px 22px;background:rgba(201,162,39,0.06);text-align:center;margin:20px 0;}
+  .completion-banner .cb-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--gold-light);margin-bottom:8px;}
+  .completion-banner p{font-size:14px;color:var(--cream-dim);margin:0;}
+  @media(max-width:560px){.panchak-grid{grid-template-columns:repeat(2,1fr);}.dhrti-complete{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 35 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#2a1540"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#4a2a6a"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#7050a0"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#b090d8" opacity="0.8"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.३५</div>
+    </div>
+    <div class="guna-badge">⬛ तामसिकी धृति — धृति त्रयी श्लोक ३/३ · समापन</div>
+    <div class="shloka">
+      यया स्वप्नं भयं शोकं विषादं मदमेव च।<br>
+      न विमुञ्चति दुर्मेधा धृतिः सा पार्थ तामसी।।
+    </div>
+    <div class="translit">
+      yayā svapnaṃ bhayaṃ śokaṃ viṣādaṃ madam eva ca,<br>
+      na vimuñcati durmedhā dhṛtiḥ sā pārtha tāmasī
+    </div>
+    <div class="gist">
+      हे पार्थ! जिस धृति से <b>दुर्मेधा</b> (मलिन बुद्धि वाला) व्यक्ति <b>निद्रा, भय, शोक, विषाद और मद</b> को <b>नहीं छोड़ता</b> — वह धृति <b>तामसी</b> है।
+    </div>
+  </div>
+
+  <!-- MODE PILLS -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- ═══ MODE: CORE ═══ -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="ctx">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="shabda">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="bhavarth">भावार्थ</button>
+      <button class="tab-btn" data-tab="udaharan">उदाहरण</button>
+      <button class="tab-btn" data-tab="qa">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="ctx">
+        <h3>पूर्ववर्ती संदर्भ — धृति त्रयी का समापन</h3>
+        <p><b>18.33</b> में सात्त्विकी धृति आई — जो योग-साधना से मन-प्राण-इन्द्रियों को अव्यभिचारी ढंग से धारण करती है। <b>18.34</b> में राजसिकी धृति — जो आसक्ति और फल-कामना से धर्म-अर्थ-काम को थामती है।</p>
+        <p>अब <b>18.35</b> में तामसिकी धृति — त्रयी का अंतिम और सबसे गहरा स्तर। यहाँ "धारण" का अर्थ ही उलट जाता है — यह धृति सत्गुणों को नहीं, बल्कि <b>दुर्गुणों को थामती है</b>। और वह भी 'न विमुञ्चति' — छोड़ती ही नहीं।</p>
+        <div class="callout-tamas">
+          <b>तीनों धृतियों का उलटाव-क्रम:</b><br>
+          18.33: मन-प्राण-इन्द्रिय (सत्गुण) → योग द्वारा धारण ✅<br>
+          18.34: धर्म-अर्थ-काम (मिश्रित) → आसक्ति से धारण 🔥<br>
+          18.35: स्वप्न-भय-शोक-विषाद-मद (दुर्गुण) → नहीं छोड़ती ⬛
+        </div>
+        <p>तीनों में 'धृति' शब्द एक ही है, पर इसका अर्थ-संसार बिल्कुल भिन्न है। सात्त्विकी = अच्छे को थामना; राजसिकी = सांसारिक को थामना; तामसिकी = बुरे को न छोड़ना। यही तमोगुण का स्वभाव है — जो हानिकारक है उसे भी जड़ता से पकड़े रहना।</p>
+      </div>
+
+      <div class="panel" id="shabda">
+        <h3>शब्दार्थ — पद-विश्लेषण</h3>
+        <div class="eng-box"><span>English Rendering</span>That steadfastness by which a person of corrupted intellect (durmedhā) does not release (na vimuñcati) sleep, fear, grief, despair, and arrogance — that steadfastness, O Pārtha, is tāmasic.</div>
+        <div class="word-grid">
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">यया</span><span class="word-tr">yayā</span></div>
+            <div class="word-meaning">जिस (धृति) के द्वारा — तृतीया एकवचन</div>
+            <div class="word-eng">Same pronoun pattern as 18.33–34 — structural consistency</div>
+            <div class="word-deep">तीनों धृति-श्लोकों में 'यया' से आरंभ — यह गीता की श्रृंखला-शैली है। पर यहाँ 'धारयते' (18.33–34) नहीं, बल्कि 'न विमुञ्चति' आता है — यही भेद का केंद्र है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">स्वप्नम्</span><span class="word-tr">svapnam</span></div>
+            <div class="word-meaning">निद्रा / नींद / स्वप्न-अवस्था</div>
+            <div class="word-eng"><b>svapna</b> = sleep/dream. Here: excessive sleep, lethargy, unconsciousness</div>
+            <div class="word-deep">तमोगुण का प्रथम लक्षण (14.8 — 'निद्रालस्यप्रमादोत्थ')। यह केवल रात्रि-निद्रा नहीं — जीवन के प्रति चेतना-शून्यता, प्रमाद भी है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">भयम्</span><span class="word-tr">bhayam</span></div>
+            <div class="word-meaning">भय / डर / fear</div>
+            <div class="word-eng"><b>√bhī</b> (to fear) → bhaya. Here: irrational, chronic fear</div>
+            <div class="word-deep">सात्त्विकी बुद्धि (18.30) 'भय-अभय' को यथावत् जानती थी। तामसिकी धृति भय को पकड़े रखती है — इसे छोड़ नहीं पाती, क्योंकि तमस् ने ज्ञान को ढक दिया है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">शोकम्</span><span class="word-tr">śokam</span></div>
+            <div class="word-meaning">शोक / दुःख / grief</div>
+            <div class="word-eng"><b>√śuc</b> (to grieve) → śoka. Prolonged, unresolved grief</div>
+            <div class="word-deep">गीता के आरंभ में (1.28) अर्जुन के शोक से यात्रा शुरू हुई थी। वह राजसी था; यहाँ का शोक तामसिक है — छोड़ा ही न जाए, chronic depression की तरह।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">विषादम्</span><span class="word-tr">viṣādam</span></div>
+            <div class="word-meaning">विषाद / निराशा / despondency, dejection</div>
+            <div class="word-eng"><b>vi + √sad</b> (to sink down) → "sinking down" — despair, hopelessness</div>
+            <div class="word-deep">शोक और विषाद में भेद: शोक = किसी हानि पर दुःख; विषाद = सामान्य निराशा, उत्साह-हीनता, जीवन में रस न रहना। अर्जुनविषादयोग (अध्याय 1) इसी का नाम था।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">मदम्</span><span class="word-tr">madam</span></div>
+            <div class="word-meaning">मद / घमंड / अहंकार / नशा / intoxication, conceit</div>
+            <div class="word-eng"><b>√mad</b> (to be intoxicated, exhilarated) → mada. Arrogance, pride, intoxication</div>
+            <div class="word-deep">यह पाँचवाँ और अनोखा पद है — अन्य चार नकारात्मक-दुर्बलताएँ थीं; मद है नकारात्मक-अहंकार। दोनों extreme में तमस् है: निराशा में भी और घमंड में भी — दोनों चेतना को ढकते हैं।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">न विमुञ्चति</span><span class="word-tr">na vimuñcati</span></div>
+            <div class="word-meaning">नहीं छोड़ता / नहीं त्यागता</div>
+            <div class="word-eng"><b>na + vi + √muc</b> (to release, free) — "does not let go"</div>
+            <div class="word-deep">यह इस श्लोक की सर्वाधिक महत्त्वपूर्ण क्रिया है। 18.33 में 'धारयते' (धारण करता है — सकारात्मक); यहाँ 'न विमुञ्चति' (नहीं छोड़ता — नकारात्मक जड़ता)। तामसिकी धृति = जड़ता से बुरे को पकड़े रहना।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">दुर्मेधा</span><span class="word-tr">durmedhā</span></div>
+            <div class="word-meaning">दुर्मेधा — मलिन/भ्रष्ट बुद्धि वाला व्यक्ति</div>
+            <div class="word-eng"><b>dur + medhā</b> (dull intellect) — "one of corrupt/dull intelligence"</div>
+            <div class="word-deep">यह श्लोक का एकमात्र कर्ता-विशेषण है — और यह <em>व्यक्ति</em> पर लगाया गया, धृति पर नहीं। 18.33–34 में कर्ता अव्यक्त था; यहाँ स्पष्ट है — ऐसी धृति रखने वाला 'दुर्मेधा' है। तमस् = बुद्धि का मालिन्य।</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="bhavarth">
+        <h3>भावार्थ — गहन विश्लेषण</h3>
+
+        <p><b>तामसिकी धृति की मूल विशेषता</b> — यह 'अच्छे को थामना' नहीं, बल्कि <em>'बुरे को न छोड़ना'</em> है। और इसका कर्ता 'दुर्मेधा' — जिसकी बुद्धि तमस् से मलिन है।</p>
+
+        <div class="callout-tamas">
+          <b>क्रिया का उलटाव — तीनों धृतियों में:</b><br>
+          18.33: <b>धारयते</b> — सत्गुण को धारण करता है ✅<br>
+          18.34: <b>धारयते</b> — सांसारिक को धारण करता है (आसक्ति से) 🔥<br>
+          18.35: <b>न विमुञ्चति</b> — दुर्गुण को <em>छोड़ता ही नहीं</em> ⬛
+        </div>
+
+        <p><b>पाँच तामसिक पकड़ें:</b></p>
+        <div class="panchak-grid">
+          <div class="pk-card">
+            <div class="pk-sa">स्वप्न</div>
+            <div class="pk-tr">svapna</div>
+            <div class="pk-meaning">अत्यधिक निद्रा, प्रमाद, जड़ता, चेतना-शून्यता</div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-sa">भय</div>
+            <div class="pk-tr">bhaya</div>
+            <div class="pk-meaning">अकारण दीर्घकालिक भय, anxiety, कायरता</div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-sa">शोक</div>
+            <div class="pk-tr">śoka</div>
+            <div class="pk-meaning">अनंत दुःख, grief जो कभी न जाए, depression</div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-sa">विषाद</div>
+            <div class="pk-tr">viṣāda</div>
+            <div class="pk-meaning">निराशा, उत्साह-हीनता, जीवन में रस न रहना</div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-sa">मद</div>
+            <div class="pk-tr">mada</div>
+            <div class="pk-meaning">अहंकार, घमंड, नशा — दोनों extremes में तमस्</div>
+          </div>
+        </div>
+
+        <p><b>'दुर्मेधा' — इस श्लोक का अनोखा पद:</b> 18.33–34 में कर्ता अव्यक्त था; यहाँ कृष्ण ने कर्ता को नाम दिया — <em>दुर्मेधा</em>। यह निंदा नहीं, निदान है — जो इन पाँचों को नहीं छोड़ पाता, उसकी बुद्धि तमस् से मलिन हो चुकी है।</p>
+
+        <div class="callout">
+          <b>शोक और विषाद का भेद:</b> गीता के पहले अध्याय का नाम 'अर्जुनविषादयोग' था। वहाँ अर्जुन का विषाद राजसिक था — स्थिति की उलझन से उत्पन्न। यहाँ तामसिक विषाद वह है जो बिना कारण हो, या कारण समाप्त होने पर भी न जाए — chronic, structural hopelessness।
+        </div>
+
+        <p><b>मद का विशेष विश्लेषण:</b> मद (arrogance/intoxication) का अन्य चार के साथ आना महत्त्वपूर्ण है। दोनों extreme तमस् के रूप हैं — निराशा में भी और अहंकार में भी चेतना आवृत रहती है। Manic depression का एक छोर depression है, दूसरा mania (मद) — दोनों तामसिक अवस्थाएँ हैं।</p>
+
+        <div class="callout-tamas">
+          <b>तामसिकी धृति की पहचान:</b> "मुझे पता है यह छोड़ना चाहिए, पर छूटता ही नहीं।" — यही तामसिक पकड़ है। जड़ता और मोह इतने गहरे हो जाते हैं कि परिवर्तन असंभव लगने लगता है।
+        </div>
+      </div>
+
+      <div class="panel" id="udaharan">
+        <h3>उदाहरण — तामसिकी धृति जीवन में</h3>
+
+        <div class="example">
+          <p><b>🌑 स्वप्न (अत्यधिक निद्रा):</b> एक व्यक्ति दिन में बारह-चौदह घंटे सोता है — न काम करने की इच्छा, न जीवन में रुचि। उसे पता है यह हानिकारक है, पर वह इस निद्रा-जड़ता को छोड़ नहीं पाता। तामसिकी धृति = इस नींद को पकड़े रखना।</p>
+        </div>
+
+        <div class="example">
+          <p><b>😰 भय (chronic fear):</b> कोई व्यक्ति वर्षों से किसी अकारण भय से ग्रस्त है — घर से नहीं निकलता, नए काम नहीं करता। उसे पता है भय निराधार है, पर 'न विमुञ्चति' — भय उसे नहीं छोड़ता, या वह भय को नहीं छोड़ता। यही तामसिक भय-धारण है।</p>
+        </div>
+
+        <div class="example">
+          <p><b>😔 शोक (unresolved grief):</b> किसी प्रिय की मृत्यु के दस वर्ष बाद भी व्यक्ति उसी शोक में जीता है — जीवन आगे नहीं बढ़ा पाता, रिश्ते नहीं बना पाता। शोक स्वाभाविक है, पर उसे दशकों तक न छोड़ पाना — यह तामसिक धृति है।</p>
+        </div>
+
+        <div class="example">
+          <p><b>😞 विषाद (existential despair):</b> कोई व्यक्ति कहता है — "मेरे जीवन में कुछ बदल नहीं सकता, कोशिश करना बेकार है।" यह learned helplessness — सीखी हुई निराशा — तामसिक विषाद है। कोई वास्तविक बाधा नहीं है, पर तमस् ने बुद्धि को ऐसा ढक दिया है कि संभावना दिखती ही नहीं।</p>
+        </div>
+
+        <div class="example">
+          <p><b>😤 मद (अहंकार/नशा):</b> एक व्यक्ति अपनी ग़लतियाँ कभी नहीं मानता — "मैं हमेशा सही हूँ।" यह मद/अहंकार भी तामसिक धृति का रूप है। या शराब-नशे की लत — जिसे वह छोड़ना चाहता है, पर 'न विमुञ्चति' — नहीं छूटता।</p>
+        </div>
+      </div>
+
+      <div class="panel" id="qa">
+        <h3>प्रश्नोत्तर</h3>
+
+        <div class="faq">
+          <div class="q">प्र. 18.33–34 में 'धारयते' था, 18.35 में 'न विमुञ्चति' क्यों?</div>
+          <div class="a">यह इस श्लोक की सबसे महत्त्वपूर्ण बात है। 'धारयते' = सक्रिय रूप से धारण करना। 'न विमुञ्चति' = जड़ता से न छोड़ना — यह passive है, पर उतना ही शक्तिशाली। तामसिकी धृति सत्गुण नहीं धारण करती — वह दुर्गुण को छोड़ती नहीं। यही तमोगुण का विशेष लक्षण है — जड़ता, आवरण, प्रमाद।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 'दुर्मेधा' पद 18.33–34 में नहीं था, यहाँ क्यों?</div>
+          <div class="a">क्योंकि तामसिकी धृति बुद्धि की मलिनता का प्रत्यक्ष परिणाम है। 'दुर्मेधा' = मलिन/दुर्बल मेधा वाला। शंकराचार्य कहते हैं — तमस् से बुद्धि इतनी ढक जाती है कि व्यक्ति इन दुर्गुणों को सहन करता रहता है, छोड़ता नहीं। इसीलिए कर्ता को यहाँ नाम मिला।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 'मद' इस सूची में क्यों है — वह तो एक अलग प्रकार का दुर्गुण है?</div>
+          <div class="a">बहुत सूक्ष्म प्रश्न! स्वप्न-भय-शोक-विषाद = निम्नता के दुर्गुण; मद = अहंकार/उत्थान का दुर्गुण। दोनों extremes तमस् के विभिन्न रूप हैं। Depression और Mania — दोनों चेतना को ढकते हैं। तमोगुण का आवरण निम्नता में भी होता है (शोक-विषाद) और उच्चता के भ्रम में भी (मद)।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. क्या तामसिकी धृति से मुक्ति संभव है?</div>
+          <div class="a">हाँ — पर यह सबसे कठिन है। गीता 14.26 में भक्ति का मार्ग दिखाया। व्यावहारिक रूप से: सत्संग (बाहरी प्रकाश), आहार-शुद्धि (14.10), नियमित दिनचर्या — ये सत्त्वगुण बढ़ाते हैं जो तमस् का प्राकृतिक प्रतिकार है। अकेले 'छोड़ने की इच्छाशक्ति' से तामसिक धृति नहीं टूटती — बाहरी सहयोग चाहिए।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. धृति त्रयी (18.33–35) पूर्ण हुई — अगला विषय क्या है?</div>
+          <div class="a">अगला है <b>सुख त्रयी (18.36–39)</b> — सात्त्विक, राजसिक, और तामसिक सुख के तीन प्रकार। गीता पूछेगी — जो सुख आरंभ में विष जैसा और अंत में अमृत जैसा हो (सात्त्विक), जो आरंभ में अमृत और अंत में विष (राजसिक), और जो आदि-अंत-मध्य सब में मोह-युक्त (तामसिक)।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PERSPECTIVES ═══ -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="mahattva">महत्त्व</button>
+      <button class="tab-btn" data-tab="mindmap">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="tulna">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="sadhana">साधना</button>
+      <button class="tab-btn" data-tab="acharya">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="mahattva">
+        <h3>महत्त्व — इस श्लोक की विशिष्टता</h3>
+        <p>18.35 धृति त्रयी का समापन है — और यह गीता के सबसे मनोवैज्ञानिक श्लोकों में से एक है। पाँच पदों में पाँच मानसिक अवस्थाओं का वर्णन है जो तमोगुण की छत्रछाया में रहती हैं।</p>
+        <div class="callout-tamas">
+          <b>आधुनिक मनोविज्ञान से समानता:</b><br>
+          स्वप्न = Hypersomnia / lethargy (depression का लक्षण)<br>
+          भय = Chronic Anxiety Disorder<br>
+          शोक = Prolonged Grief Disorder<br>
+          विषाद = Major Depressive Disorder / learned helplessness<br>
+          मद = Narcissistic traits / substance addiction
+        </div>
+        <p>गीता ने 2500 वर्ष पहले यह कहा — ये पाँचों मानसिक अवस्थाएँ तमोगुण से उत्पन्न होती हैं और जड़ता से टिकी रहती हैं। आधुनिक psychiatry इसे अब 'neurotransmitter imbalance' कहती है — दोनों में अंतर methodology का है, insight का नहीं।</p>
+        <p>'दुर्मेधा' शब्द विशेष है — यह कर्ता को पहचान देता है, निंदा नहीं। बुद्धि का मालिन्य ठीक किया जा सकता है — तामसिकी धृति स्थायी नहीं है।</p>
+      </div>
+
+      <div class="panel" id="mindmap">
+        <h3>माइंड-मैप — तामसिकी धृति की पाँच पकड़ें</h3>
+        <svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:rgba(0,0,0,0.25);">
+          <defs>
+            <radialGradient id="centGrad35" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(60,30,90,0.7)"/>
+              <stop offset="100%" stop-color="rgba(60,30,90,0.2)"/>
+            </radialGradient>
+          </defs>
+          <!-- Center -->
+          <ellipse cx="380" cy="215" rx="96" ry="44" fill="url(#centGrad35)" stroke="rgba(106,61,122,0.8)" stroke-width="2"/>
+          <text x="380" y="207" font-family="Tiro Devanagari Hindi,serif" font-size="14" fill="#c0a0d8" text-anchor="middle">तामसिकी धृति</text>
+          <text x="380" y="225" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">न विमुञ्चति · दुर्मेधा</text>
+
+          <!-- स्वप्न (top-left) -->
+          <line x1="305" y1="193" x2="158" y2="108" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="108" cy="94" rx="70" ry="26" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="108" y="89" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">स्वप्न</text>
+          <text x="108" y="105" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">निद्रा · जड़ता</text>
+
+          <!-- भय (top) -->
+          <line x1="346" y1="172" x2="280" y2="72" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="248" cy="57" rx="70" ry="26" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="248" y="52" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">भय</text>
+          <text x="248" y="68" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">Chronic Fear</text>
+
+          <!-- मद (top-right) -->
+          <line x1="455" y1="192" x2="602" y2="108" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="650" cy="94" rx="70" ry="26" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="650" y="89" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">मद</text>
+          <text x="650" y="105" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">अहंकार · नशा</text>
+
+          <!-- शोक (bottom-left) -->
+          <line x1="332" y1="258" x2="196" y2="344" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="148" cy="358" rx="70" ry="26" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="148" y="353" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">शोक</text>
+          <text x="148" y="369" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">Unresolved Grief</text>
+
+          <!-- विषाद (bottom-right) -->
+          <line x1="428" y1="258" x2="564" y2="344" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="612" cy="358" rx="78" ry="26" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="612" y="353" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">विषाद</text>
+          <text x="612" y="369" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">Despair · Hopelessness</text>
+
+          <!-- शोक-4th -->
+          <line x1="414" y1="172" x2="490" y2="68" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="522" cy="54" rx="74" ry="26" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="522" y="49" font-family="Tiro Devanagari Hindi,serif" font-size="12" fill="#c0a0d8" text-anchor="middle">न विमुञ्चति</text>
+          <text x="522" y="65" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">नहीं छोड़ता — जड़ता</text>
+
+          <text x="380" y="410" font-family="EB Garamond,serif" font-style="italic" font-size="12" fill="rgba(106,61,122,0.6)" text-anchor="middle">दुर्मेधा — तमस्-आवृत बुद्धि · पाँचों को पकड़े रखती है</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="tulna">
+        <h3>तुलनात्मक — धृति त्रयी पूर्ण (18.33–35)</h3>
+        <p class="subnote">तीनों धृतियाँ पूर्ण — एक साथ देखें।</p>
+        <div class="dhrti-complete">
+          <div class="dc-card sat">
+            <div class="dc-label">✅ सात्त्विकी — 18.33</div>
+            <div class="dc-sa">योगेन अव्यभिचारिण्या</div>
+            <div class="dc-char">मन+प्राण+इन्द्रिय · धारयते · साधना-जनित</div>
+          </div>
+          <div class="dc-card raj">
+            <div class="dc-label">🔥 राजसिकी — 18.34</div>
+            <div class="dc-sa">प्रसङ्गेन फलाकाङ्क्षी</div>
+            <div class="dc-char">धर्म+अर्थ+काम · धारयते · आसक्ति-जनित</div>
+          </div>
+          <div class="dc-card tam">
+            <div class="dc-label">⬛ तामसिकी — 18.35 (अभी)</div>
+            <div class="dc-sa">न विमुञ्चति · दुर्मेधा</div>
+            <div class="dc-char">स्वप्न+भय+शोक+विषाद+मद · नहीं छोड़ता</div>
+          </div>
+        </div>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>सात्त्विकी</th><th>राजसिकी</th><th>तामसिकी</th></tr>
+          <tr><td>क्रिया</td><td>धारयते ✅</td><td>धारयते 🔥</td><td>न विमुञ्चति ⬛</td></tr>
+          <tr><td>विषय</td><td>सत्गुण</td><td>सांसारिक पुरुषार्थ</td><td>दुर्गुण (पंचक)</td></tr>
+          <tr><td>आधार</td><td>योग-साधना</td><td>आसक्ति</td><td>मोह-जड़ता</td></tr>
+          <tr><td>कर्ता-विशेषण</td><td>—</td><td>—</td><td>दुर्मेधा ✱</td></tr>
+          <tr><td>दिशा</td><td>मोक्ष की ओर</td><td>त्रिवर्ग तक</td><td>पतन की ओर</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="sadhana">
+        <h3>साधना — तामसिकी धृति से मुक्ति</h3>
+        <p>तामसिकी धृति का उपचार — जैसे तामसिकी बुद्धि में था — बाहरी प्रकाश से होता है, क्योंकि आंतरिक बुद्धि आवृत है।</p>
+        <div class="callout-tamas">
+          <b>पहचान का चरण:</b> "मुझे यह छोड़ना है, पर छूटता नहीं" — यह स्वीकृति ही पहला कदम है। दुर्मेधा वह नहीं जो इन्हें जानता है; दुर्मेधा वह है जो इन्हें जानते हुए भी न छोड़े।
+        </div>
+        <div class="callout-sat">
+          <b>१. सत्संग:</b> तमस् का प्रतिकार सत्त्व है। जो लोग सात्त्विक हैं, उनका संग — उनकी ऊर्जा, उनकी बातें, उनका उत्साह — तामसिकी पकड़ को धीरे-धीरे शिथिल करता है।
+        </div>
+        <div class="callout-sat">
+          <b>२. आहार-दिनचर्या:</b> गीता 17.8–10 में सात्त्विक, राजसिक, तामसिक आहार का वर्णन है। तामसिक आहार (बासी, दुर्गंधित) छोड़ना; सात्त्विक आहार अपनाना — यह शरीर और मन दोनों को प्रभावित करता है।
+        </div>
+        <div class="callout-sat">
+          <b>३. क्रमिक कर्म:</b> एक बार में सब नहीं — एक छोटा कदम। भय है तो एक छोटा साहसी काम। विषाद है तो एक छोटा सेवा-कर्म। 'न विमुञ्चति' को तोड़ने के लिए छोटी-छोटी क्रियाएँ सबसे प्रभावशाली हैं।
+        </div>
+        <div class="callout">
+          <b>गीता 6.25 से:</b> "शनैः शनैरुपरमेत" — धीरे-धीरे उपराम हो। तमस् से एकदम नहीं उठा जाता — क्रमिक अभ्यास, निरंतर प्रयास, और करुणा-पूर्ण धैर्य ही मार्ग है।
+        </div>
+      </div>
+
+      <div class="panel" id="acharya">
+        <h3>आचार्य-मत — व्याख्याएँ</h3>
+        <div class="callout-tamas">
+          <b>शंकराचार्य:</b> 'दुर्मेधा' = जिसकी मेधा (बुद्धि) तमोगुण से दूषित है। 'न विमुञ्चति' = ये पाँच दुर्गुण जो व्यक्ति का स्वभाव बन गए हैं और वह उन्हें त्यागने में असमर्थ है। तामसिकी धृति में कोई सकारात्मक धारण नहीं — केवल नकारात्मक जड़ता।
+        </div>
+        <div class="callout-rajas">
+          <b>रामानुजाचार्य:</b> यह धृति अधोगति का मार्ग है। स्वप्न-भय-शोक-विषाद-मद — पाँचों आत्मा को संसार में बाँधे रखते हैं। इन्हें न छोड़ पाना ही तामसिक बंधन है। भक्ति-मार्ग ही इस जड़ता को तोड़ सकता है।
+        </div>
+        <div class="callout-tamas">
+          <b>स्वामी चिन्मयानंद:</b> 'मद' का इस सूची में होना गहरा है — यह दिखाता है कि तमस् केवल depression में नहीं, mania में भी है। जो व्यक्ति अपनी 'श्रेष्ठता' के नशे में डूबा है, वह उतना ही तमस-ग्रस्त है जितना शोक-विषाद में डूबा हुआ।
+        </div>
+        <div class="callout">
+          <b>श्रील प्रभुपाद:</b> तामसिकी धृति वह है जो अज्ञान और आसक्ति को मजबूत बनाती है। इससे मुक्ति का एकमात्र मार्ग भगवत्-कृपा है — जब कृष्ण की भक्ति का प्रकाश आता है, तब तमस् का आवरण स्वयं हट जाता है।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PRACTICE ═══ -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="flash">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="quiz">क्विज़</button>
+      <button class="tab-btn" data-tab="gram">व्याकरण</button>
+      <button class="tab-btn" data-tab="sutra">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="flash">
+        <h3>फ्लैशकार्ड — पद-स्मरण</h3>
+        <p style="font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;">कार्ड पर क्लिक करें — अर्थ पलटेगा।</p>
+        <div class="flashcard-grid">
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#c0a0d8;">न विमुञ्चति</span>
+                <span style="font-size:12px;color:#cfc3a8;">18.33 से भेद?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>नहीं छोड़ता</b> — 18.33 में 'धारयते' (सत्गुण धारण); यहाँ 'न विमुञ्चति' (दुर्गुण न छोड़ना)। क्रिया विपरीत है।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#c0a0d8;">दुर्मेधा</span>
+                <span style="font-size:12px;color:#cfc3a8;">अर्थ?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>दुर् + मेधा</b> = मलिन/दुर्बल बुद्धि वाला। केवल 18.35 में कर्ता-विशेषण — 18.33–34 में नहीं।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#c0a0d8;">विषाद</span>
+                <span style="font-size:12px;color:#cfc3a8;">शोक से भेद?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>शोक</b> = किसी हानि पर दुःख · <b>विषाद</b> = vi+√sad — निराशा, उत्साह-हीनता, सामान्य hopelessness।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#c0a0d8;">मद</span>
+                <span style="font-size:12px;color:#cfc3a8;">यहाँ क्यों?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>अहंकार/नशा</b> — तमस् दोनों extremes में: निराशा (depression) और घमंड (mania) दोनों चेतना को ढकते हैं।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#c0a0d8;">स्वप्नम्</span>
+                <span style="font-size:12px;color:#cfc3a8;">केवल नींद?</span>
+              </div>
+              <div class="flashcard-face flashcard-back">नहीं — <b>अत्यधिक निद्रा + प्रमाद + जड़ता</b>। तमोगुण (14.8) का प्रथम लक्षण। जीवन के प्रति चेतना-शून्यता भी।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#c0a0d8;">तामसी</span>
+                <span style="font-size:12px;color:#cfc3a8;">धृति त्रयी समापन?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>18.35 — तीसरी और अंतिम</b><br>अब सुख त्रयी (18.36–39) आरंभ होगी।</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="quiz">
+        <h3>क्विज़ — 18.35 परीक्षण</h3>
+        <div id="quiz35-container"></div>
+      </div>
+
+      <div class="panel" id="gram">
+        <h3>व्याकरण — पद-विभाजन</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति / लकार</th><th>भूमिका</th></tr>
+          <tr><td class="sa">यया</td><td>यद् (सर्व.)</td><td>स्त्री., तृ. एक.</td><td>सम्बन्ध-वाचक (धृति के लिए)</td></tr>
+          <tr><td class="sa">स्वप्नम्</td><td>स्वप्न (पुं.)</td><td>द्वि. एक.</td><td>कर्म १ — नहीं छोड़ी जाने वाली वस्तु</td></tr>
+          <tr><td class="sa">भयम्</td><td>भय (नपुं.)</td><td>द्वि. एक.</td><td>कर्म २</td></tr>
+          <tr><td class="sa">शोकम्</td><td>शोक (पुं.)</td><td>द्वि. एक.</td><td>कर्म ३</td></tr>
+          <tr><td class="sa">विषादम्</td><td>वि+√सद् (भाव.)</td><td>द्वि. एक.</td><td>कर्म ४</td></tr>
+          <tr><td class="sa">मदम्</td><td>√मद् (भाव.)</td><td>द्वि. एक.</td><td>कर्म ५</td></tr>
+          <tr><td class="sa">एव च</td><td>एव + च (अव्यय)</td><td>—</td><td>निश्चयार्थक + समुच्चय</td></tr>
+          <tr><td class="sa">न विमुञ्चति</td><td>न + वि+√मुच्</td><td>लट्, प.प., प्र.पु.एक.</td><td>मुख्य क्रिया — "नहीं छोड़ता"</td></tr>
+          <tr><td class="sa">दुर्मेधा</td><td>दुर् + मेधा</td><td>पुं./स्त्री., प्र.एक.</td><td>कर्ता-विशेषण</td></tr>
+          <tr><td class="sa">धृतिः</td><td>धृति (स्त्री.)</td><td>प्र. एक.</td><td>कर्ता (subject)</td></tr>
+          <tr><td class="sa">सा</td><td>तद् (सर्व.)</td><td>स्त्री., प्र.एक.</td><td>निर्देश</td></tr>
+          <tr><td class="sa">पार्थ</td><td>पृथा + अण्</td><td>सं. एक.</td><td>संबोधन</td></tr>
+          <tr><td class="sa">तामसी</td><td>तामस (विशे.)</td><td>स्त्री., प्र.एक.</td><td>विधेय विशेषण</td></tr>
+        </table>
+        <div class="callout" style="margin-top:18px;">
+          <b>पंच-कर्म:</b> स्वप्न + भय + शोक + विषाद + मद — पाँचों द्वितीया एकवचन में। 'एव च' के प्रयोग से 'मद' की विशेषता पर बल।<br>
+          <b>संधि:</b> मदम् + एव = मदमेव (पूर्वरूप संधि: म् + ए = मे)।
+        </div>
+      </div>
+
+      <div class="panel" id="sutra">
+        <h3>सारांश-सूत्र — त्वरित स्मरण</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">
+            यया स्वप्नं भयं शोकं विषादं मदमेव च।<br>
+            न विमुञ्चति दुर्मेधा धृतिः सा पार्थ तामसी।।
+          </div>
+          <div class="cheat-translit">yayā svapnaṃ bhayaṃ śokaṃ viṣādaṃ madam eva ca · na vimuñcati durmedhā · dhṛtiḥ sā pārtha tāmasī</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>स्वप्न</b> = निद्रा-जड़ता</span>
+            <span class="cheat-chip"><b>भय</b> = chronic fear</span>
+            <span class="cheat-chip"><b>शोक</b> = grief</span>
+            <span class="cheat-chip"><b>विषाद</b> = despair</span>
+            <span class="cheat-chip"><b>मद</b> = अहंकार/नशा</span>
+            <span class="cheat-chip"><b>न विमुञ्चति</b> = नहीं छोड़ता</span>
+            <span class="cheat-chip"><b>दुर्मेधा</b> = मलिन बुद्धि</span>
+          </div>
+          <div class="cheat-takeaway">
+            🔑 सूत्र: <b>तामसिकी धृति = जड़ता से दुर्गुण पकड़े रखना — छोड़ने की क्षमता ही नहीं</b><br>
+            स्वप्न-भय-शोक-विषाद-मद — पाँच तामसिक पकड़ें · दुर्मेधा इन्हें न विमुञ्चति
+          </div>
+        </div>
+
+        <div class="completion-banner" style="margin-top:24px;">
+          <div class="cb-title">✅ धृति त्रयी पूर्ण! (18.33–35)</div>
+          <p>सात्त्विकी · राजसिकी · तामसिकी — तीनों धृतियाँ सम्पन्न। अगला विषय: <b>सुख त्रयी (18.36–39)</b></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: MEDIA ═══ -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="shravan">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="walkthru">वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="jap">जप/अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="shravan">
+        <h3>श्रवण मोड — TTS</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('यया स्वप्नं भयं शोकं विषादं मदमेव च। न विमुञ्चति दुर्मेधा धृतिः सा पार्थ तामसी।')">▶ श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('हे पार्थ! जिस धृति से दुर्मेधा व्यक्ति निद्रा, भय, शोक, विषाद और मद को नहीं छोड़ता — वह धृति तामसी है।')">▶ भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+        <div class="callout-tamas">
+          <b>श्रवण-संकेत:</b> 'न विमुञ्चति' पर ठहरें — यह 'धारयते' का विपरीत है। पाँचों पद (स्वप्न-भय-शोक-विषाद-मद) को एक श्वास में सुनें — ये एक ही परिवार के दुर्गुण हैं। 'दुर्मेधा' में 'दुर्' पर बल।
+        </div>
+      </div>
+
+      <div class="panel" id="walkthru">
+        <h3>वॉकथ्रू — चरण-दर-चरण</h3>
+        <div id="walk35-stage" class="walk-stage"><p id="walk35-text">▶ Start पर क्लिक करें।</p></div>
+        <div class="walk-controls">
+          <button onclick="walk35(-1)">◀</button>
+          <button onclick="walk35Start()">▶ Start</button>
+          <button onclick="walk35(1)">▶</button>
+        </div>
+        <div class="walk-progress-row" id="walk35-dots"></div>
+      </div>
+
+      <div class="panel" id="jap">
+        <h3>जप / अभ्यास — पाद-विभाजन</h3>
+        <p style="font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;">अनुष्टुप् छंद — प्रत्येक पाद ८ अक्षर। शब्द पर क्लिक करके सुनें।</p>
+        <div>
+          <div class="pada-label">पाद १</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('यया')">यया</span>
+            <span class="syll" onclick="speakSyl('स्वप्नं')">स्वप्नं</span>
+            <span class="syll" onclick="speakSyl('भयं')">भयं</span>
+            <span class="syll" onclick="speakSyl('शोकं')">शोकं</span>
+          </div>
+          <div class="pada-label">पाद २</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('विषादं')">विषादं</span>
+            <span class="syll" onclick="speakSyl('मदम्')">मदम्</span>
+            <span class="syll" onclick="speakSyl('एव च')">एव च</span>
+          </div>
+          <div class="pada-label">पाद ३</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('न विमुञ्चति')">न विमुञ्चति</span>
+            <span class="syll" onclick="speakSyl('दुर्मेधा')">दुर्मेधा</span>
+          </div>
+          <div class="pada-label">पाद ४</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('धृतिः')">धृतिः</span>
+            <span class="syll" onclick="speakSyl('सा')">सा</span>
+            <span class="syll" onclick="speakSyl('पार्थ')">पार्थ</span>
+            <span class="syll" onclick="speakSyl('तामसी')">तामसी</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: INFOGRAPHICS ═══ -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="panchak">पंचक-विश्लेषण</button>
+      <button class="tab-btn" data-tab="trayayi">धृति त्रयी पूर्ण</button>
+      <button class="tab-btn" data-tab="roadmap">अध्याय रोडमैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="panchak">
+        <h3>तामसिक पंचक — पाँच दुर्गुणों का विश्लेषण</h3>
+        <p class="subnote">ये पाँचों तमोगुण की अभिव्यक्तियाँ हैं — और सब एक-दूसरे को बल देते हैं।</p>
+        <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:rgba(0,0,0,0.2);">
+          <!-- Connecting circle -->
+          <circle cx="350" cy="150" r="100" fill="none" stroke="rgba(106,61,122,0.2)" stroke-width="1" stroke-dasharray="6,4"/>
+          <!-- स्वप्न -->
+          <ellipse cx="350" cy="46" rx="64" ry="26" fill="rgba(60,30,90,0.25)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="350" y="41" font-family="Tiro Devanagari Hindi,serif" font-size="14" fill="#c0a0d8" text-anchor="middle">स्वप्न</text>
+          <text x="350" y="57" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">जड़ता · निद्रा</text>
+          <!-- भय -->
+          <ellipse cx="160" cy="116" rx="64" ry="26" fill="rgba(60,30,90,0.25)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="160" y="111" font-family="Tiro Devanagari Hindi,serif" font-size="14" fill="#c0a0d8" text-anchor="middle">भय</text>
+          <text x="160" y="127" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">Fear · Anxiety</text>
+          <!-- मद -->
+          <ellipse cx="540" cy="116" rx="64" ry="26" fill="rgba(60,30,90,0.25)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="540" y="111" font-family="Tiro Devanagari Hindi,serif" font-size="14" fill="#c0a0d8" text-anchor="middle">मद</text>
+          <text x="540" y="127" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">Arrogance · नशा</text>
+          <!-- शोक -->
+          <ellipse cx="218" cy="234" rx="64" ry="26" fill="rgba(60,30,90,0.25)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="218" y="229" font-family="Tiro Devanagari Hindi,serif" font-size="14" fill="#c0a0d8" text-anchor="middle">शोक</text>
+          <text x="218" y="245" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">Grief · दुःख</text>
+          <!-- विषाद -->
+          <ellipse cx="482" cy="234" rx="64" ry="26" fill="rgba(60,30,90,0.25)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="482" y="229" font-family="Tiro Devanagari Hindi,serif" font-size="14" fill="#c0a0d8" text-anchor="middle">विषाद</text>
+          <text x="482" y="245" font-family="Mukta,sans-serif" font-size="10" fill="#cfc3a8" text-anchor="middle">Despair · निराशा</text>
+          <!-- Center -->
+          <circle cx="350" cy="150" r="34" fill="rgba(60,30,90,0.4)" stroke="rgba(106,61,122,0.7)" stroke-width="1.5"/>
+          <text x="350" y="145" font-family="Tiro Devanagari Hindi,serif" font-size="12" fill="#c0a0d8" text-anchor="middle">न</text>
+          <text x="350" y="161" font-family="Tiro Devanagari Hindi,serif" font-size="12" fill="#c0a0d8" text-anchor="middle">विमुञ्चति</text>
+          <!-- connecting lines -->
+          <line x1="350" y1="72" x2="350" y2="116" stroke="rgba(106,61,122,0.3)" stroke-width="1"/>
+          <line x1="220" y1="124" x2="316" y2="140" stroke="rgba(106,61,122,0.3)" stroke-width="1"/>
+          <line x1="480" y1="124" x2="384" y2="140" stroke="rgba(106,61,122,0.3)" stroke-width="1"/>
+          <line x1="268" y1="220" x2="324" y2="170" stroke="rgba(106,61,122,0.3)" stroke-width="1"/>
+          <line x1="432" y1="220" x2="376" y2="170" stroke="rgba(106,61,122,0.3)" stroke-width="1"/>
+        </svg>
+        <div class="callout-tamas" style="margin-top:14px;">
+          <b>पंचक का चक्र:</b> ये पाँचों एक-दूसरे को बढ़ाते हैं — भय से शोक, शोक से विषाद, विषाद से जड़ता (स्वप्न), और मद इन सबको ढककर रखता है। 'न विमुञ्चति' = इस चक्र से बाहर न निकल पाना।
+        </div>
+      </div>
+
+      <div class="panel" id="trayayi">
+        <h3>धृति त्रयी — पूर्ण (18.33–35)</h3>
+        <p class="subnote">तीनों धृतियाँ पूर्ण — अब सुख त्रयी की ओर।</p>
+        <div class="dhrti-complete">
+          <div class="dc-card sat">
+            <div class="dc-label">✅ सात्त्विकी — 18.33</div>
+            <div class="dc-sa">योगेन अव्यभिचारिण्या</div>
+            <div class="dc-char">मन+प्राण+इन्द्रिय · धारयते · साधना</div>
+          </div>
+          <div class="dc-card raj">
+            <div class="dc-label">🔥 राजसिकी — 18.34</div>
+            <div class="dc-sa">प्रसङ्गेन फलाकाङ्क्षी</div>
+            <div class="dc-char">धर्म+अर्थ+काम · धारयते · आसक्ति</div>
+          </div>
+          <div class="dc-card tam">
+            <div class="dc-label">⬛ तामसिकी — 18.35 (अभी)</div>
+            <div class="dc-sa">न विमुञ्चति · दुर्मेधा</div>
+            <div class="dc-char">स्वप्न+भय+शोक+विषाद+मद · जड़ता</div>
+          </div>
+        </div>
+        <table class="cmp-table" style="margin-top:16px;">
+          <tr><th>श्लोक</th><th>धृति</th><th>क्रिया</th><th>विषय</th><th>आधार</th></tr>
+          <tr><td>18.33</td><td>सात्त्विकी ✅</td><td>धारयते</td><td>मन-प्राण-इन्द्रिय</td><td>योग</td></tr>
+          <tr><td>18.34</td><td>राजसिकी 🔥</td><td>धारयते</td><td>धर्म-अर्थ-काम</td><td>आसक्ति</td></tr>
+          <tr><td>18.35</td><td>तामसिकी ⬛</td><td>न विमुञ्चति</td><td>स्वप्न-भय-शोक-विषाद-मद</td><td>जड़ता</td></tr>
+        </table>
+        <div class="completion-banner" style="margin-top:18px;">
+          <div class="cb-title">🎉 धृति त्रयी पूर्ण!</div>
+          <p>अब <b>सुख त्रयी (18.36–39)</b> — सात्त्विक सुख (आरंभ विष, अंत अमृत), राजसिक सुख (आरंभ अमृत, अंत विष), तामसिक सुख (आदि-अंत-मध्य मोह)।</p>
+        </div>
+      </div>
+
+      <div class="panel" id="roadmap">
+        <h3>अध्याय 18 रोडमैप</h3>
+        <p class="subnote">धृति त्रयी पूर्ण — सुख त्रयी की ओर प्रस्थान</p>
+        <div class="road-track">
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">ज्ञान<br>20–22</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्म<br>23–25</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्ता<br>26–28</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">बुद्धि<br>30–32 ✅</div>
+          </div>
+          <div class="road-stop active">
+            <div class="road-dot"></div>
+            <div class="rlabel">धृति<br>33–35 ✅</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">सुख<br>36–39 →</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">निष्कर्ष<br>40+</div>
+          </div>
+        </div>
+        <div class="callout-tamas" style="margin-top:24px;">
+          <b>आगे क्या?</b> 18.36 — सात्त्विक सुख: "यत्तदग्रे विषमिव..." — जो आरंभ में विष जैसा और अंत में अमृत जैसा है — वह सात्त्विक सुख है।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">← <a href="gita_18_34.html" style="color:var(--gold-light);text-decoration:none;">18.34 राजसिकी धृति</a> &nbsp;|&nbsp; <a href="gita_18_36.html" style="color:var(--gold-light);text-decoration:none;">18.36 सात्त्विक सुख →</a></div>
+
+</div>
+<script>
+document.querySelectorAll('.mode-pill').forEach(pill=>{
+  pill.addEventListener('click',()=>{
+    document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));
+    pill.classList.add('active');
+    document.getElementById(pill.dataset.mode).classList.add('active');
+    const ft=document.querySelector('#'+pill.dataset.mode+' .tab-btn');
+    if(ft)ft.click();
+  });
+});
+document.querySelectorAll('.tabbar').forEach(bar=>{
+  bar.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const shell=bar.closest('.mode-section')||bar.parentElement;
+      shell.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      shell.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      shell.querySelectorAll('.panel').forEach(p=>{if(p.id===btn.dataset.tab)p.classList.add('active');});
+    });
+  });
+});
+function speakText(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.82;window.speechSynthesis.speak(u);}
+function speakSyl(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.7;window.speechSynthesis.speak(u);}
+const walk35Steps=[
+  "धृति त्रयी का अंतिम श्लोक — <b>18.35 तामसिकी धृति</b>।<br>18.33 में धारयते (अच्छा धारण); यहाँ '<b>न विमुञ्चति</b>' — बुरे को नहीं छोड़ता।",
+  "पहला-दूसरा पाद:<br><b>यया स्वप्नं भयं शोकं विषादं मदमेव च</b><br>जिस धृति से निद्रा, भय, शोक, विषाद, और मद...",
+  "पाँचों दुर्गुण:<br><b>स्वप्न</b> (जड़ता) · <b>भय</b> (anxiety) · <b>शोक</b> (grief) · <b>विषाद</b> (despair) · <b>मद</b> (अहंकार/नशा)",
+  "तीसरा पाद:<br><b>न विमुञ्चति दुर्मेधा</b><br>...दुर्मेधा (मलिन बुद्धि वाला) <em>नहीं छोड़ता।</em>",
+  "चौथा पाद:<br><b>धृतिः सा पार्थ तामसी</b><br>वह धृति, हे पार्थ! तामसी है।",
+  "तीनों धृतियों की क्रिया:<br>18.33: <b>धारयते</b> (सत्गुण धारण) ✅<br>18.34: <b>धारयते</b> (सांसारिक धारण) 🔥<br>18.35: <b>न विमुञ्चति</b> (दुर्गुण न छोड़ना) ⬛",
+  "🎉 धृति त्रयी पूर्ण!<br>अब आगे: <b>सुख त्रयी (18.36–39)</b><br>तीन प्रकार के सुख — सात्त्विक, राजसिक, तामसिक।"
+];
+let walk35Idx=0;
+function walk35Start(){walk35Idx=0;walk35Show();}
+function walk35(d){walk35Idx=Math.max(0,Math.min(walk35Steps.length-1,walk35Idx+d));walk35Show();}
+function walk35Show(){
+  document.getElementById('walk35-text').innerHTML=walk35Steps[walk35Idx];
+  const dots=document.getElementById('walk35-dots');
+  dots.innerHTML='';
+  walk35Steps.forEach((_,i)=>{const d=document.createElement('div');d.className='walk-dot'+(i===walk35Idx?' active':'');dots.appendChild(d);});
+}
+const quiz35Q=[
+  {q:"18.35 में तामसिकी धृति की मुख्य क्रिया क्या है?",o:["धारयते","न विमुञ्चति","प्रजानाति","मन्यते"],a:1},
+  {q:"'दुर्मेधा' पद 18.33–34 में नहीं था, 18.35 में क्यों?",o:["छंद-आवश्यकता","यहाँ कर्ता की बुद्धि-मलिनता का स्पष्ट उल्लेख जरूरी है","यह शब्द केवल सुंदरता के लिए है","अर्जुन को सीधे सम्बोधित करने के लिए"],a:1},
+  {q:"'मद' इस पंचक में क्यों है?",o:["यह सूची का पाँचवाँ होने से","मद भी तमस् का रूप है — अहंकार/नशा में भी चेतना आवृत रहती है","मद केवल शराब पीने को कहते हैं","मद और विषाद एक ही हैं"],a:1},
+  {q:"'विषाद' और 'शोक' में क्या अंतर है?",o:["दोनों एक ही हैं","शोक = किसी हानि पर दुःख; विषाद = सामान्य निराशा/hopelessness","विषाद = खुशी; शोक = दुःख","शोक तामसिक; विषाद राजसिक है"],a:1},
+  {q:"धृति त्रयी में किस श्लोक की क्रिया 'धारयते' नहीं है?",o:["18.33","18.34","18.35","सभी में 'धारयते' है"],a:2}
+];
+let q35i=0,q35score=0,q35done=false;
+function renderQuiz35(){
+  const c=document.getElementById('quiz35-container');
+  if(q35i>=quiz35Q.length){c.innerHTML=`<div class="quiz-score">✅ आपका स्कोर: ${q35score} / ${quiz35Q.length}</div><button class="quiz-btn" onclick="q35i=0;q35score=0;q35done=false;renderQuiz35()">पुनः प्रयास</button>`;return;}
+  const q=quiz35Q[q35i];
+  c.innerHTML=`<div class="quiz-progress">प्रश्न ${q35i+1} / ${quiz35Q.length}</div><div class="quiz-question">${q.q}</div><div class="quiz-options">${q.o.map((o,i)=>`<button class="quiz-opt" onclick="checkQ35(${i})">${o}</button>`).join('')}</div><div class="quiz-nav"><button class="quiz-btn" id="q35-next" onclick="q35i++;renderQuiz35()" disabled>अगला ▶</button></div>`;
+}
+function checkQ35(i){if(q35done)return;q35done=true;const opts=document.querySelectorAll('.quiz-opt');opts.forEach((o,idx)=>{o.classList.add('disabled');if(idx===quiz35Q[q35i].a)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===quiz35Q[q35i].a)q35score++;document.getElementById('q35-next').disabled=false;q35done=false;}
+document.addEventListener('DOMContentLoaded',renderQuiz35);
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

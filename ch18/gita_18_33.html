@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.33 — सात्त्विकी धृति: अव्यभिचारिणी धारण-शक्ति</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:42.3%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(42,106,90,0.14),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(42,106,90,0.1);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(42,106,90,0.2);border:1px solid rgba(42,106,90,0.5);color:#6ecfb8;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-sat{border-left:3px solid rgba(42,106,90,0.8);background:rgba(42,106,90,0.08);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-sat b{color:#6ecfb8;}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(42,106,90,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#6ecfb8;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(42,106,90,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);cursor:pointer;}
+  .syll:hover{border-color:var(--gold);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* tri-dharana visual */
+  .tri-dharana{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:20px 0;}
+  .td-card{border-radius:12px;padding:18px 12px;text-align:center;}
+  .td-card.manas{border:1px solid rgba(201,162,39,0.4);background:rgba(201,162,39,0.06);}
+  .td-card.prana{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .td-card.indriya{border:1px solid rgba(92,131,116,0.5);background:rgba(92,131,116,0.07);}
+  .td-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .td-card.manas .td-label{color:var(--gold-light);}
+  .td-card.prana .td-label{color:#6ecfb8;}
+  .td-card.indriya .td-label{color:#8ecfc0;}
+  .td-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:5px;}
+  .td-card p{font-size:12.5px;color:var(--cream-dim);margin:0;}
+  /* dhṛti-trayī compare */
+  .dhrti-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:18px 0;}
+  .dc-card{border-radius:12px;padding:14px 10px;text-align:center;}
+  .dc-card.sat{border:2px solid rgba(42,106,90,0.7);background:rgba(42,106,90,0.12);box-shadow:0 0 14px rgba(42,106,90,0.2);}
+  .dc-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.07);}
+  .dc-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.07);}
+  .dc-label{font-size:10px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:6px;}
+  .dc-card.sat .dc-label{color:#6ecfb8;}
+  .dc-card.raj .dc-label{color:#e0a060;}
+  .dc-card.tam .dc-label{color:#c0a0d8;}
+  .dc-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:var(--cream);margin-bottom:4px;}
+  .dc-char{font-size:11.5px;color:var(--cream-dim);line-height:1.5;}
+  /* road track */
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  /* avyabhicharini banner */
+  .avya-banner{border:1px solid rgba(42,106,90,0.5);border-radius:14px;padding:20px 22px;background:rgba(42,106,90,0.06);margin:20px 0;text-align:center;}
+  .avya-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:26px;color:#6ecfb8;margin-bottom:8px;}
+  .avya-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:14px;margin-bottom:10px;}
+  .avya-meaning{font-size:14px;color:var(--cream-dim);}
+  @media(max-width:480px){.tri-dharana,.dhrti-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 33 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.३३</div>
+    </div>
+    <div class="guna-badge">✅ सात्त्विकी धृति — धृति त्रयी श्लोक १/३</div>
+    <div class="shloka">
+      धृत्या यया धारयते मनःप्राणेन्द्रियक्रियाः।<br>
+      योगेनाव्यभिचारिण्या धृतिः सा पार्थ सात्त्विकी।।
+    </div>
+    <div class="translit">
+      dhṛtyā yayā dhārayate manaḥ-prāṇendriya-kriyāḥ,<br>
+      yogenāvyabhicāriṇyā dhṛtiḥ sā pārtha sāttvikī
+    </div>
+    <div class="gist">
+      हे पार्थ! जिस <b>धृति</b> (धारण-शक्ति) से, <b>अव्यभिचारिणी योग</b> के द्वारा, मन, प्राण और इन्द्रियों की क्रियाओं को <b>धारण</b> किया जाता है — वह धृति <b>सात्त्विकी</b> है।
+    </div>
+  </div>
+
+  <!-- MODE PILLS -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- ═══ MODE: CORE ═══ -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="ctx">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="shabda">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="bhavarth">भावार्थ</button>
+      <button class="tab-btn" data-tab="udaharan">उदाहरण</button>
+      <button class="tab-btn" data-tab="qa">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="ctx">
+        <h3>पूर्ववर्ती संदर्भ — धृति त्रयी का प्रारंभ</h3>
+        <p>श्लोक <b>18.29</b> में कृष्ण ने बुद्धि और <em>धृति</em> दोनों के त्रिगुण भेद सुनाने की घोषणा की थी। श्लोक <b>18.30–32</b> में बुद्धि की तीनों अवस्थाएँ (सात्त्विकी · राजसिकी · तामसिकी) पूर्ण हुईं।</p>
+        <p>अब <b>18.33</b> से <b>धृति त्रयी</b> आरंभ होती है। धृति = धारण-शक्ति। यह बुद्धि की सहयोगिनी है — बुद्धि जो सत्य जानती है, धृति उसे थामे रखती है जब मन और इन्द्रियाँ भटकाती हैं।</p>
+        <div class="callout-sat">
+          <b>धृति क्या है?</b> बुद्धि निर्णय करती है — "यह सही है।" फिर भय, लोभ, या काम आकर उस निर्णय को डिगाने की कोशिश करते हैं। जो शक्ति उस निर्णय को <em>थामे रखती है</em> — वह धृति है। यह will-power नहीं, बल्कि <b>योग-जनित स्थिरता</b> है।
+        </div>
+        <p>बुद्धि-धृति का संबंध: <b>बुद्धि = दिशा-ज्ञान</b>, <b>धृति = दिशा में बने रहने की शक्ति</b>। दोनों मिलकर सात्त्विक जीवन की रीढ़ बनाते हैं।</p>
+      </div>
+
+      <div class="panel" id="shabda">
+        <h3>शब्दार्थ — पद-विश्लेषण</h3>
+        <div class="eng-box"><span>English Rendering</span>That steadfastness (dhṛti) by which, through unwavering yoga, one holds/sustains the functions of the mind, vital breath, and the senses — that dhṛti, O Pārtha, is sāttvic.</div>
+        <div class="word-grid">
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">धृत्या</span><span class="word-tr">dhṛtyā</span></div>
+            <div class="word-meaning">धृति द्वारा / जिस धृति से — तृतीया एकवचन</div>
+            <div class="word-eng"><b>dhṛti</b> (√dhṛ = धारण करना) — steadfastness, resolute will</div>
+            <div class="word-deep">√धृ से धृति — "जो धारण करे।" यह शब्द 18.29 में घोषित था। तृतीया = करण-वाचक ("इस शक्ति के द्वारा")। यह पूरे श्लोक का विषय है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">यया</span><span class="word-tr">yayā</span></div>
+            <div class="word-meaning">जिस (धृति) के द्वारा — सर्वनाम, स्त्री., तृ. एक.</div>
+            <div class="word-eng"><b>yad</b> pronoun → feminine to match dhṛti</div>
+            <div class="word-deep">18.30 (यया), 18.31 (यया) से एक ही pattern। 'यया' = "जिस धृति के द्वारा" — श्लोक का connective structure।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">धारयते</span><span class="word-tr">dhārayate</span></div>
+            <div class="word-meaning">धारण किया जाता है / थामा जाता है</div>
+            <div class="word-eng"><b>√dhṛ</b> (causative) → धारयति — आत्मनेपद, कर्मवाच्य</div>
+            <div class="word-deep">√धृ से दो शब्द: धृति (noun) और धारयते (verb) — एक ही धातु से। "धारण करना" = hold in place, sustain, keep from straying।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">मनःप्राणेन्द्रियक्रियाः</span><span class="word-tr">manaḥ-prāṇa-indriya-kriyāḥ</span></div>
+            <div class="word-meaning">मन, प्राण और इन्द्रियों की क्रियाएँ — द्वितीया बहुवचन</div>
+            <div class="word-eng">Compound: <b>manas</b> (mind) + <b>prāṇa</b> (vital breath/life force) + <b>indriya</b> (senses) + <b>kriyā</b> (activities)</div>
+            <div class="word-deep">यह त्रिक महत्त्वपूर्ण है — <b>मन</b> (संकल्प-विकल्प), <b>प्राण</b> (जीवनी-शक्ति, श्वास), <b>इन्द्रियाँ</b> (देखना-सुनना आदि)। तीनों भटकाव के स्रोत हैं — धृति इन तीनों को थामती है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">योगेन</span><span class="word-tr">yogena</span></div>
+            <div class="word-meaning">योग के द्वारा — तृतीया एकवचन</div>
+            <div class="word-eng"><b>yoga</b> — here: sustained practice of meditation/discipline</div>
+            <div class="word-deep">यहाँ 'योग' = नियमित अभ्यास, ध्यान, समाधि — वह साधना जिससे धृति बनती है। यह 'योग' केवल आसन नहीं — आत्म-अनुशासन की सम्पूर्ण प्रक्रिया।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अव्यभिचारिण्या</span><span class="word-tr">avyabhicāriṇyā</span></div>
+            <div class="word-meaning">अव्यभिचारिणी (योग) के द्वारा — विचलित न होने वाले</div>
+            <div class="word-eng"><b>a + vi + abhi + √car</b> → "not going astray in any direction"</div>
+            <div class="word-deep">यह श्लोक का सर्वाधिक महत्त्वपूर्ण पद है। <b>व्यभिचार</b> = इधर-उधर जाना, विचलन, भटकाव। <b>अव्यभिचारिणी</b> = जो कभी न भटके, एकनिष्ठ, अडिग। यही भक्ति-मार्ग में "अव्यभिचारिणी भक्ति" (9.14) से जुड़ता है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">सात्त्विकी</span><span class="word-tr">sāttvikī</span></div>
+            <div class="word-meaning">सात्त्विक / सत्त्वगुण-प्रधान धृति</div>
+            <div class="word-eng"><b>sāttvika</b> → feminine sāttvikī (agrees with dhṛti, feminine)</div>
+            <div class="word-deep">सत्त्वगुण = प्रकाश, स्थिरता, ज्ञान। इसीलिए सात्त्विकी धृति सबसे ऊँची है — यह योग से बनती है, रागद्वेष से नहीं।</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="bhavarth">
+        <h3>भावार्थ — गहन विश्लेषण</h3>
+
+        <div class="avya-banner">
+          <div class="avya-sa">अव्यभिचारिण्या</div>
+          <div class="avya-tr">avyabhicāriṇyā — unwavering, never straying</div>
+          <div class="avya-meaning">यह श्लोक का हृदय-पद है — "जो कभी इधर-उधर न भटके" — यही सात्त्विकी धृति का मूल लक्षण है</div>
+        </div>
+
+        <p><b>धृति का स्वभाव:</b> धृति = मन-प्राण-इन्द्रियों की क्रियाओं को अपने स्थान पर धारण करने की शक्ति। जब भय आए, तो भागे नहीं। जब लोभ आए, तो डिगे नहीं। जब काम आए, तो बहे नहीं — यही धृति का कार्य है।</p>
+
+        <p><b>तीन धारण-क्षेत्र:</b></p>
+        <div class="tri-dharana">
+          <div class="td-card manas">
+            <div class="td-label">🧠 मन</div>
+            <div class="td-sa">मनः</div>
+            <p>संकल्प-विकल्प की धारणा। मन इधर-उधर न भटके — स्थिर संकल्प।</p>
+          </div>
+          <div class="td-card prana">
+            <div class="td-label">🌬 प्राण</div>
+            <div class="td-sa">प्राण</div>
+            <p>जीवनी-शक्ति और श्वास का नियमन। प्रण-धारण = प्राणायाम की गहराई।</p>
+          </div>
+          <div class="td-card indriya">
+            <div class="td-label">👁 इन्द्रियाँ</div>
+            <div class="td-sa">इन्द्रिय</div>
+            <p>दृष्टि, श्रवण, स्पर्श आदि को विषयों से हटाकर अंतर्मुखी करना।</p>
+          </div>
+        </div>
+
+        <p><b>'योगेन' का महत्त्व:</b> यह धृति अपने आप नहीं आती — यह <em>योग के अभ्यास से</em> उत्पन्न होती है। नियमित साधना, ध्यान, प्राणायाम, और आत्म-अनुशासन से जो स्थिरता आती है — वही सात्त्विकी धृति है।</p>
+
+        <div class="callout-sat">
+          <b>गीता 9.14 से जोड़:</b> "सततं कीर्तयन्तो मां यतन्तश्च दृढव्रताः। नमस्यन्तश्च मां भक्त्या नित्ययुक्ता उपासते।" — यहाँ "दृढव्रत" और "नित्ययुक्त" ठीक वही है जो 18.33 में "अव्यभिचारिणी योग" है। अव्यभिचारिणी भक्ति (9.14, 9.22) और अव्यभिचारिणी धृति (18.33) एक ही मूल से आते हैं।
+        </div>
+
+        <p><b>बुद्धि और धृति का संगम:</b> सात्त्विकी बुद्धि (18.30) जानती है — "यह सही मार्ग है।" सात्त्विकी धृति (18.33) उस मार्ग पर <em>अडिग रखती है।</em> ज्ञान + स्थिरता = मुक्ति का आधार।</p>
+
+        <div class="callout">
+          <b>आचार्य शंकर:</b> 'योगेन' = समाधि-अभ्यास के द्वारा। 'अव्यभिचारिण्या' = किसी भी परिस्थिति में विचलित न होने वाले योग से। यह वह धृति है जो न सुख में हर्षित होती है, न दुःख में टूटती है।
+        </div>
+      </div>
+
+      <div class="panel" id="udaharan">
+        <h3>उदाहरण — सात्त्विकी धृति जीवन में</h3>
+
+        <div class="example">
+          <p><b>🏔 अर्जुन का उदाहरण (महाभारत):</b> युद्धक्षेत्र में अर्जुन के मन ने कहा — "मैं नहीं लड़ूँगा।" यह मन की विचलता थी। कृष्ण का उपदेश सुनकर उसने जो स्थिरता पाई — "करिष्ये वचनं तव" (18.73) — यही सात्त्विकी धृति है। मन, प्राण, इन्द्रियाँ — तीनों को धर्म-मार्ग पर थामा।</p>
+        </div>
+
+        <div class="example">
+          <p><b>🧘 ध्यान-साधक का उदाहरण:</b> साधक बैठता है ध्यान में — मन भटकता है (विचार आते हैं), प्राण अशांत होता है (श्वास तेज होती है), इन्द्रियाँ खिंचती हैं (कहीं शोर, कहीं खुजली)। जो उन्हें बार-बार वापस ध्यान-बिंदु पर लाने की शक्ति है — वही धृति है। अव्यभिचारिणी = यह लाने की प्रक्रिया कभी न रुके।</p>
+        </div>
+
+        <div class="example">
+          <p><b>🏋 एक एथलीट का उदाहरण:</b> Olympic champion वर्षों तक एक ही routine का पालन करता है — जब थकान हो, तब भी। जब मन कहे "आज छोड़ दो," तब भी। यह "yogena avyabhicāriṇyā" — अव्यभिचारी योग से मन-प्राण-इन्द्रियों की क्रियाओं को धारण करना — यही सात्त्विकी धृति का सांसारिक उदाहरण है।</p>
+        </div>
+
+        <div class="example">
+          <p><b>📚 विद्यार्थी जीवन:</b> परीक्षा के दिन विद्यार्थी का मन भय से भरता है। प्राण अशांत होते हैं। इन्द्रियाँ मोबाइल की ओर खिंचती हैं। जो विद्यार्थी इन तीनों को अपनी पढ़ाई-क्रिया में धारण रखे — जब तक काम पूरा न हो — वह धृति का अभ्यास कर रहा है। जब यह नियमित साधना बन जाए — वह अव्यभिचारिणी।</p>
+        </div>
+
+        <div class="example">
+          <p><b>💔 संकट में स्थिरता:</b> किसी प्रिय की मृत्यु पर मन टूटता है, प्राण रोता है, इन्द्रियाँ जड़ हो जाती हैं। जो व्यक्ति उस वक्त भी अपने कर्तव्य-मार्ग को नहीं छोड़ता — जो योग की शक्ति से उस दुःख में भी स्थिर रहता है — वह सात्त्विकी धृति का जीवंत उदाहरण है।</p>
+        </div>
+      </div>
+
+      <div class="panel" id="qa">
+        <h3>प्रश्नोत्तर</h3>
+
+        <div class="faq">
+          <div class="q">प्र. धृति और बुद्धि में क्या अंतर है?</div>
+          <div class="a">बुद्धि = निर्णय-शक्ति (जानना कि क्या करना है)। धृति = धारण-शक्ति (उस निर्णय पर टिके रहना)। उदाहरण: बुद्धि कहती है "सुबह 5 बजे उठना है।" रात 4:30 पर जब नींद में मन कहे "और सो जाओ" — तब जो उठाती है वह धृति है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 'अव्यभिचारिणी' यहाँ 'योग' का विशेषण है या 'धृति' का?</div>
+          <div class="a">योग का विशेषण — "अव्यभिचारिणी योग के द्वारा।" अर्थात् वह अभ्यास जो कभी न रुके, न भटके — उस निरंतर, एकनिष्ठ साधना से जो धृति उत्पन्न होती है, वह सात्त्विकी है। यही भक्ति-मार्ग की "अव्यभिचारिणी भक्ति" से जुड़ता है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. मन-प्राण-इन्द्रिय ही क्यों? बुद्धि क्यों नहीं?</div>
+          <div class="a">बुद्धि पहले से सात्त्विकी (18.30) है — वह तो ठीक जानती है। समस्या मन, प्राण और इन्द्रियों में है — ये तीनों भटकाव के स्रोत हैं। धृति का काम इन्हीं को साधना है। बुद्धि का काम है दिशा देना; धृति का काम है उस दिशा में इन तीनों को बनाए रखना।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. क्या यह धृति बल से आती है या साधना से?</div>
+          <div class="a">साधना से — इसीलिए 'योगेन' कहा। बल (force) राजसिकी धृति है। सात्त्विकी धृति योग-अभ्यास से स्वाभाविक रूप से उत्पन्न होती है — जैसे नियमित व्यायाम से शक्ति आती है, वैसे नियमित साधना से मानसिक-प्राणिक-इन्द्रिय-स्थिरता आती है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 'धृत्या यया' और 'धृतिः सा' — दोनों धृति शब्द क्यों?</div>
+          <div class="a">सुंदर गीता-शैली है। पहले 'धृत्या यया' = "जिस धृति के द्वारा (कार्य होता है)" — करण-वाचक। अंत में 'धृतिः सा' = "वह धृति" — कर्ता-वाचक, निर्देश। एक ही श्लोक में धृति का करण (साधन) और कर्ता (विषय) दोनों रूप — यह गीता की सघन रचना-शैली है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PERSPECTIVES ═══ -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="mahattva">महत्त्व</button>
+      <button class="tab-btn" data-tab="mindmap">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="tulna">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="sadhana">साधना</button>
+      <button class="tab-btn" data-tab="acharya">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="mahattva">
+        <h3>महत्त्व — इस श्लोक की विशिष्टता</h3>
+        <p>18.33 धृति त्रयी का <b>सर्वोच्च पड़ाव</b> है — और गीता में धृति की सबसे व्यापक और व्यावहारिक परिभाषा देता है। यहाँ तीन बातें एकसाथ हैं:</p>
+        <div class="callout-sat">
+          <b>तीन अनूठे तत्त्व:</b><br>
+          १. <b>त्रिस्तरीय धारण</b> — मन, प्राण, इन्द्रिय — पूरे व्यक्तित्व को धारण करती है यह धृति।<br>
+          २. <b>योगेन</b> — साधना-जनित, force नहीं — यही सात्त्विक और राजसिक धृति का भेद बताती है।<br>
+          ३. <b>अव्यभिचारिणी</b> — एकनिष्ठ, कभी न भटकने वाली — यह केवल सात्त्विकी धृति का विशेषण है।
+        </div>
+        <p>आधुनिक मनोविज्ञान में इसे <b>Self-Regulation</b> और <b>Inhibitory Control</b> कहते हैं — prefrontal cortex की वह शक्ति जो impulses को रोकती है। गीता ने इसे 2500 वर्ष पहले तीन स्तरों में — और साधना-माध्यम से — समझाया था।</p>
+      </div>
+
+      <div class="panel" id="mindmap">
+        <h3>माइंड-मैप — सात्त्विकी धृति की संरचना</h3>
+        <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:rgba(0,0,0,0.2);">
+          <defs>
+            <radialGradient id="centGrad33" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(42,106,90,0.5)"/>
+              <stop offset="100%" stop-color="rgba(42,106,90,0.1)"/>
+            </radialGradient>
+          </defs>
+          <!-- Center -->
+          <ellipse cx="380" cy="210" rx="98" ry="44" fill="url(#centGrad33)" stroke="rgba(42,106,90,0.8)" stroke-width="2"/>
+          <text x="380" y="203" font-family="Tiro Devanagari Hindi,serif" font-size="16" fill="#6ecfb8" text-anchor="middle">सात्त्विकी धृति</text>
+          <text x="380" y="224" font-family="EB Garamond,serif" font-style="italic" font-size="12" fill="#cfc3a8" text-anchor="middle">अव्यभिचारिणी धारण-शक्ति</text>
+
+          <!-- Branch: योगेन -->
+          <line x1="290" y1="192" x2="155" y2="130" stroke="rgba(42,106,90,0.5)" stroke-width="1.5"/>
+          <ellipse cx="103" cy="118" rx="72" ry="28" fill="rgba(42,106,90,0.1)" stroke="rgba(42,106,90,0.5)" stroke-width="1.2"/>
+          <text x="103" y="113" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#6ecfb8" text-anchor="middle">योगेन</text>
+          <text x="103" y="129" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">साधना से उत्पन्न</text>
+
+          <!-- Branch: अव्यभिचारिणी -->
+          <line x1="380" y1="166" x2="380" y2="76" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <ellipse cx="380" cy="55" rx="95" ry="26" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <text x="380" y="50" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e6c863" text-anchor="middle">अव्यभिचारिणी</text>
+          <text x="380" y="66" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">कभी न भटकने वाली</text>
+
+          <!-- Branch: मनः -->
+          <line x1="470" y1="192" x2="590" y2="130" stroke="rgba(201,162,39,0.4)" stroke-width="1.5"/>
+          <ellipse cx="642" cy="118" rx="72" ry="28" fill="rgba(201,162,39,0.07)" stroke="rgba(201,162,39,0.35)" stroke-width="1.2"/>
+          <text x="642" y="113" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e6c863" text-anchor="middle">मनः</text>
+          <text x="642" y="129" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">संकल्प की धारणा</text>
+
+          <!-- Branch: प्राण -->
+          <line x1="360" y1="254" x2="220" y2="336" stroke="rgba(42,106,90,0.5)" stroke-width="1.5"/>
+          <ellipse cx="170" cy="350" rx="72" ry="28" fill="rgba(42,106,90,0.1)" stroke="rgba(42,106,90,0.5)" stroke-width="1.2"/>
+          <text x="170" y="345" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#6ecfb8" text-anchor="middle">प्राण</text>
+          <text x="170" y="361" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">जीवनी-शक्ति का नियमन</text>
+
+          <!-- Branch: इन्द्रियाँ -->
+          <line x1="415" y1="252" x2="548" y2="336" stroke="rgba(92,131,116,0.5)" stroke-width="1.5"/>
+          <ellipse cx="604" cy="350" rx="82" ry="28" fill="rgba(92,131,116,0.1)" stroke="rgba(92,131,116,0.5)" stroke-width="1.2"/>
+          <text x="604" y="345" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#8ecfc0" text-anchor="middle">इन्द्रियाँ</text>
+          <text x="604" y="361" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">विषयों से विरति</text>
+
+          <text x="380" y="402" font-family="EB Garamond,serif" font-style="italic" font-size="12.5" fill="rgba(42,106,90,0.6)" text-anchor="middle">धारयते — तीनों को एकसाथ थामती है यह सात्त्विकी धृति</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="tulna">
+        <h3>तुलनात्मक — धृति त्रयी (18.33–35)</h3>
+        <p class="subnote">अभी 18.33 पर हैं — 18.34 और 18.35 आगे बनेंगे।</p>
+        <div class="dhrti-row">
+          <div class="dc-card sat">
+            <div class="dc-label">✅ सात्त्विकी — 18.33 (अभी)</div>
+            <div class="dc-sa">योगेन अव्यभिचारिण्या</div>
+            <div class="dc-char">योग-जनित · अडिग · मन-प्राण-इन्द्रिय तीनों को धारण</div>
+          </div>
+          <div class="dc-card raj">
+            <div class="dc-label">🔥 राजसिकी — 18.34</div>
+            <div class="dc-sa">धर्म-काम-अर्थ से</div>
+            <div class="dc-char">फल की इच्छा से धारण · आसक्ति-युक्त (आगे)</div>
+          </div>
+          <div class="dc-card tam">
+            <div class="dc-label">⬛ तामसिकी — 18.35</div>
+            <div class="dc-sa">भय-शोक-विषाद में</div>
+            <div class="dc-char">दुर्गुण धारण · न छोड़ने की जड़ता (आगे)</div>
+          </div>
+        </div>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>सात्त्विकी (18.33)</th><th>राजसिकी (18.34)</th><th>तामसिकी (18.35)</th></tr>
+          <tr><td>आधार</td><td>योग-साधना</td><td>कामना-फल</td><td>भय-जड़ता</td></tr>
+          <tr><td>धारण-क्षेत्र</td><td>मन+प्राण+इन्द्रिय</td><td>धर्म+अर्थ+काम</td><td>निद्रा+भय+शोक</td></tr>
+          <tr><td>स्वभाव</td><td>अव्यभिचारिणी</td><td>फलाकांक्षी</td><td>दुर्गुण-ग्राहिणी</td></tr>
+          <tr><td>उत्पत्ति</td><td>सत्त्वगुण</td><td>रजोगुण</td><td>तमोगुण</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="sadhana">
+        <h3>साधना — सात्त्विकी धृति कैसे विकसित करें</h3>
+        <p>यह धृति 'yogena' से आती है — अर्थात् नियमित अभ्यास से। तीन स्तरों पर साधना:</p>
+        <div class="callout-sat">
+          <b>मन के लिए:</b> प्रतिदिन ध्यान। जब मन भटके, उसे बार-बार वापस लाना — यही 'अव्यभिचारिणी' योग है। 5 मिनट से शुरू करें, पर <em>कभी न चूकें</em>।
+        </div>
+        <div class="callout-sat">
+          <b>प्राण के लिए:</b> नियमित प्राणायाम — अनुलोम-विलोम, नाड़ी-शोधन। प्राण को नियमित करने से मन और इन्द्रियाँ स्वतः शांत होती हैं। "पवन जितो मन जितो" — हठयोग की दृष्टि।
+        </div>
+        <div class="callout-sat">
+          <b>इन्द्रियों के लिए:</b> प्रत्याहार — इन्द्रियों को विषयों से खींचकर अंतर्मुखी करना। रात्रि में स्क्रीन बंद करना, मितभाषण, मिताहार — ये सब इन्द्रिय-धारण के व्यावहारिक रूप हैं।
+        </div>
+        <div class="callout">
+          <b>प्रमुख परीक्षण:</b> "जब कोई बड़ा प्रलोभन या बड़ा भय आए — तब मैं कितना टिका रह सकता हूँ?" — यही सात्त्विकी धृति की कसौटी है। और यह कसौटी नियमित साधना के बिना pass नहीं होती।
+        </div>
+      </div>
+
+      <div class="panel" id="acharya">
+        <h3>आचार्य-मत — व्याख्याएँ</h3>
+        <div class="callout-sat">
+          <b>शंकराचार्य:</b> 'योगेन' = समाधि-अभ्यास के द्वारा। 'अव्यभिचारिण्या' = जो किसी भी काल में विचलित न हो। यह धृति मन, प्राण, और इन्द्रियों की क्रियाओं को उनके यथोचित क्षेत्र में धारण करती है — इसीलिए सात्त्विकी।
+        </div>
+        <div class="callout-rajas">
+          <b>रामानुजाचार्य:</b> धृति का कार्य है — मन को आत्म-विषयक ज्ञान में, प्राण को शरीर-धारण में, और इन्द्रियों को अपने-अपने कर्तव्य में धारण करना। 'अव्यभिचारिणी' = अनन्य — जो केवल ईश्वर की ओर ही उन्मुख रहे।
+        </div>
+        <div class="callout">
+          <b>स्वामी विवेकानंद (परोक्ष):</b> "Strength is life, weakness is death." — सात्त्विकी धृति ही वह शक्ति है जो व्यक्ति को जीवन के हर संकट में खड़ा रखती है। यह willpower नहीं, बल्कि yoga-जनित inner stability है।
+        </div>
+        <div class="callout-sat">
+          <b>श्रील प्रभुपाद:</b> अव्यभिचारिणी धृति वह है जो भक्त को सभी परिस्थितियों में भगवान की सेवा में लगाए रखती है। यही 9.14 की "दृढव्रत" भक्ति का आधार है — मन-प्राण-इन्द्रिय तीनों कृष्ण के लिए।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PRACTICE ═══ -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="flash">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="quiz">क्विज़</button>
+      <button class="tab-btn" data-tab="gram">व्याकरण</button>
+      <button class="tab-btn" data-tab="sutra">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="flash">
+        <h3>फ्लैशकार्ड — पद-स्मरण</h3>
+        <p style="font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;">कार्ड पर क्लिक करें — अर्थ पलटेगा।</p>
+        <div class="flashcard-grid">
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#6ecfb8;">धृति</span>
+                <span style="font-size:12px;color:#cfc3a8;">मूल और अर्थ?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>√धृ = धारण करना</b><br>Steadfastness — मन-प्राण-इन्द्रियों को थामने की शक्ति।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#6ecfb8;">अव्यभिचारिण्या</span>
+                <span style="font-size:12px;color:#cfc3a8;">व्युत्पत्ति?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>a + vi + abhi + √car</b><br>"जो कभी इधर-उधर न भटके" — एकनिष्ठ, अडिग। 'योग' का विशेषण।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#6ecfb8;">मनःप्राणेन्द्रियक्रियाः</span>
+                <span style="font-size:12px;color:#cfc3a8;">तीन घटक?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>मन</b> (संकल्प) + <b>प्राण</b> (जीवनी-शक्ति) + <b>इन्द्रिय</b> (ज्ञानेन्द्रिय) — तीनों की क्रियाओं को धारण।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#6ecfb8;">योगेन</span>
+                <span style="font-size:12px;color:#cfc3a8;">यहाँ 'योग' = ?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>साधना-अभ्यास</b> — ध्यान, प्राणायाम, नियमित अनुशासन। Force नहीं, practice से उत्पन्न स्थिरता।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#6ecfb8;">धारयते</span>
+                <span style="font-size:12px;color:#cfc3a8;">धातु?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>√धृ</b> (causative) — धारण करना/थामना। धृति और धारयते — एक ही धातु से दो रूप इसी श्लोक में।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#6ecfb8;">सात्त्विकी</span>
+                <span style="font-size:12px;color:#cfc3a8;">धृति त्रयी में स्थान?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>18.33 — प्रथम</b><br>सर्वोच्च धृति। राजसिकी (18.34) और तामसिकी (18.35) आगे।</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="quiz">
+        <h3>क्विज़ — 18.33 परीक्षण</h3>
+        <div id="quiz33-container"></div>
+      </div>
+
+      <div class="panel" id="gram">
+        <h3>व्याकरण — पद-विभाजन</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति / लकार</th><th>भूमिका</th></tr>
+          <tr><td class="sa">धृत्या</td><td>धृति (स्त्री.)</td><td>तृ. एक.</td><td>करण-वाचक — "धृति द्वारा"</td></tr>
+          <tr><td class="sa">यया</td><td>यद् (सर्व.)</td><td>स्त्री., तृ. एक.</td><td>सम्बन्ध-वाचक (धृति के लिए)</td></tr>
+          <tr><td class="sa">धारयते</td><td>√धृ (Causative)</td><td>लट्, कर्म., प्र.पु.एक.</td><td>मुख्य क्रिया — "धारण किया जाता है"</td></tr>
+          <tr><td class="sa">मनःप्राणेन्द्रियक्रियाः</td><td>मनस्+प्राण+इन्द्रिय+क्रिया</td><td>द्वि. बहु.</td><td>कर्म — जो धारण किया जाता है</td></tr>
+          <tr><td class="sa">योगेन</td><td>योग (पुं.)</td><td>तृ. एक.</td><td>करण — "योग के द्वारा"</td></tr>
+          <tr><td class="sa">अव्यभिचारिण्या</td><td>अव्यभिचारिण् (विशे.)</td><td>स्त्री., तृ. एक.</td><td>योग का विशेषण</td></tr>
+          <tr><td class="sa">धृतिः</td><td>धृति (स्त्री.)</td><td>प्र. एक.</td><td>कर्ता (subject)</td></tr>
+          <tr><td class="sa">सा</td><td>तद् (सर्व.)</td><td>स्त्री., प्र. एक.</td><td>धृति का निर्देश</td></tr>
+          <tr><td class="sa">पार्थ</td><td>पृथा + अण्</td><td>सं. एक.</td><td>संबोधन — अर्जुन</td></tr>
+          <tr><td class="sa">सात्त्विकी</td><td>सात्त्विक (विशे.)</td><td>स्त्री., प्र. एक.</td><td>विधेय विशेषण — "सात्त्विकी है"</td></tr>
+        </table>
+        <div class="callout" style="margin-top:18px;">
+          <b>Compound sandhi:</b> मनस् + प्राण + इन्द्रिय + क्रियाः = मनःप्राणेन्द्रियक्रियाः (विसर्ग-संधि + समास)। योगेन + अव्यभिचारिण्या = दोनों तृतीया, योग को qualify करती है अव्यभिचारिण्या।
+        </div>
+      </div>
+
+      <div class="panel" id="sutra">
+        <h3>सारांश-सूत्र — त्वरित स्मरण</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">
+            धृत्या यया धारयते मनःप्राणेन्द्रियक्रियाः।<br>
+            योगेनाव्यभिचारिण्या धृतिः सा पार्थ सात्त्विकी।।
+          </div>
+          <div class="cheat-translit">dhṛtyā yayā dhārayate manaḥ-prāṇendriya-kriyāḥ · yogenāvyabhicāriṇyā · dhṛtiḥ sā pārtha sāttvikī</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>धृत्या</b> = धारण-शक्ति से</span>
+            <span class="cheat-chip"><b>मनः</b> = संकल्प</span>
+            <span class="cheat-chip"><b>प्राण</b> = जीवनी-शक्ति</span>
+            <span class="cheat-chip"><b>इन्द्रिय</b> = ज्ञानेन्द्रियाँ</span>
+            <span class="cheat-chip"><b>योगेन</b> = साधना से</span>
+            <span class="cheat-chip"><b>अव्यभिचारिण्या</b> = अडिग</span>
+            <span class="cheat-chip"><b>सात्त्विकी</b> = सर्वोच्च धृति</span>
+          </div>
+          <div class="cheat-takeaway">
+            🔑 सूत्र: <b>सात्त्विकी धृति = योग से बनी अव्यभिचारिणी शक्ति जो मन-प्राण-इन्द्रिय तीनों को थामती है</b><br>
+            न force, न भय, न लोभ — केवल साधना-जनित अडिग स्थिरता
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: MEDIA ═══ -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="shravan">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="walkthru">वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="jap">जप/अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="shravan">
+        <h3>श्रवण मोड — TTS</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('धृत्या यया धारयते मनःप्राणेन्द्रियक्रियाः। योगेनाव्यभिचारिण्या धृतिः सा पार्थ सात्त्विकी।')">▶ श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('हे पार्थ! जिस धृति से, अव्यभिचारिणी योग के द्वारा, मन, प्राण और इन्द्रियों की क्रियाओं को धारण किया जाता है — वह धृति सात्त्विकी है।')">▶ भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+        <div class="callout-sat">
+          <b>श्रवण-संकेत:</b> 'अव्यभिचारिण्या' पर विशेष बल दें — यह पूरे श्लोक का हृदय-पद है। 'योगेन' में 'न' पर ध्यान — यह separate word नहीं, 'योगेन + अव्यभिचारिण्या' जुड़े हैं। 'धृत्या...धारयते...धृतिः' — एक ही धातु से तीन रूप सुनें।
+        </div>
+      </div>
+
+      <div class="panel" id="walkthru">
+        <h3>वॉकथ्रू — चरण-दर-चरण</h3>
+        <div id="walk33-stage" class="walk-stage"><p id="walk33-text">▶ Start पर क्लिक करें।</p></div>
+        <div class="walk-controls">
+          <button onclick="walk33(-1)">◀</button>
+          <button onclick="walk33Start()">▶ Start</button>
+          <button onclick="walk33(1)">▶</button>
+        </div>
+        <div class="walk-progress-row" id="walk33-dots"></div>
+      </div>
+
+      <div class="panel" id="jap">
+        <h3>जप / अभ्यास — पाद-विभाजन</h3>
+        <p style="font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;">अनुष्टुप् छंद — प्रत्येक पाद ८ अक्षर। शब्द पर क्लिक करके सुनें।</p>
+        <div>
+          <div class="pada-label">पाद १</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('धृत्या')">धृत्या</span>
+            <span class="syll" onclick="speakSyl('यया')">यया</span>
+            <span class="syll" onclick="speakSyl('धारयते')">धारयते</span>
+          </div>
+          <div class="pada-label">पाद २</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('मनः')">मनः</span>
+            <span class="syll" onclick="speakSyl('प्राण')">प्राण</span>
+            <span class="syll" onclick="speakSyl('इन्द्रिय')">इन्द्रिय</span>
+            <span class="syll" onclick="speakSyl('क्रियाः')">क्रियाः</span>
+          </div>
+          <div class="pada-label">पाद ३</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('योगेन')">योगेन</span>
+            <span class="syll" onclick="speakSyl('अव्यभिचारिण्या')">अव्यभिचारिण्या</span>
+          </div>
+          <div class="pada-label">पाद ४</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('धृतिः')">धृतिः</span>
+            <span class="syll" onclick="speakSyl('सा')">सा</span>
+            <span class="syll" onclick="speakSyl('पार्थ')">पार्थ</span>
+            <span class="syll" onclick="speakSyl('सात्त्विकी')">सात्त्विकी</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: INFOGRAPHICS ═══ -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="dhrti-map">धृति का त्रिकोण</button>
+      <button class="tab-btn" data-tab="trayee">धृति त्रयी</button>
+      <button class="tab-btn" data-tab="roadmap">अध्याय रोडमैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="dhrti-map">
+        <h3>धृति का त्रिकोण — तीन धारण-क्षेत्र</h3>
+        <p class="subnote">सात्त्विकी धृति एकसाथ तीनों स्तरों पर काम करती है।</p>
+        <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:rgba(0,0,0,0.2);">
+          <!-- Triangle -->
+          <polygon points="350,40 120,310 580,310" fill="rgba(42,106,90,0.04)" stroke="rgba(42,106,90,0.3)" stroke-width="1.5"/>
+          <!-- Center label -->
+          <ellipse cx="350" cy="200" rx="80" ry="34" fill="rgba(42,106,90,0.15)" stroke="rgba(42,106,90,0.6)" stroke-width="1.5"/>
+          <text x="350" y="196" font-family="Tiro Devanagari Hindi,serif" font-size="14" fill="#6ecfb8" text-anchor="middle">धृति</text>
+          <text x="350" y="214" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">धारण-शक्ति</text>
+
+          <!-- Vertex: मन (top) -->
+          <ellipse cx="350" cy="55" rx="74" ry="28" fill="rgba(201,162,39,0.1)" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <text x="350" y="50" font-family="Tiro Devanagari Hindi,serif" font-size="15" fill="#e6c863" text-anchor="middle">मन</text>
+          <text x="350" y="68" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">संकल्प · विकल्प · भावना</text>
+          <line x1="350" y1="83" x2="350" y2="166" stroke="rgba(201,162,39,0.4)" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+          <!-- Vertex: प्राण (bottom-left) -->
+          <ellipse cx="145" cy="316" rx="74" ry="28" fill="rgba(42,106,90,0.12)" stroke="rgba(42,106,90,0.5)" stroke-width="1.5"/>
+          <text x="145" y="311" font-family="Tiro Devanagari Hindi,serif" font-size="15" fill="#6ecfb8" text-anchor="middle">प्राण</text>
+          <text x="145" y="329" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">श्वास · जीवनी-शक्ति</text>
+          <line x1="200" y1="300" x2="296" y2="224" stroke="rgba(42,106,90,0.4)" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+          <!-- Vertex: इन्द्रिय (bottom-right) -->
+          <ellipse cx="556" cy="316" rx="82" ry="28" fill="rgba(92,131,116,0.1)" stroke="rgba(92,131,116,0.5)" stroke-width="1.5"/>
+          <text x="556" y="311" font-family="Tiro Devanagari Hindi,serif" font-size="15" fill="#8ecfc0" text-anchor="middle">इन्द्रियाँ</text>
+          <text x="556" y="329" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">दृष्टि · श्रवण · स्पर्श आदि</text>
+          <line x1="500" y1="300" x2="410" y2="224" stroke="rgba(92,131,116,0.4)" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+          <!-- Yoga label at center-bottom -->
+          <text x="350" y="248" font-family="EB Garamond,serif" font-style="italic" font-size="13" fill="rgba(42,106,90,0.7)" text-anchor="middle">योगेन अव्यभिचारिण्या</text>
+          <text x="350" y="264" font-family="Mukta,sans-serif" font-size="11" fill="rgba(42,106,90,0.5)" text-anchor="middle">साधना से बनी अडिग शक्ति</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="trayee">
+        <h3>धृति त्रयी — 18.33–35</h3>
+        <p class="subnote">अभी 18.33 पर — तीनों का framework एक साथ।</p>
+        <div class="dhrti-row">
+          <div class="dc-card sat">
+            <div class="dc-label">✅ सात्त्विकी — 18.33 (अभी)</div>
+            <div class="dc-sa">योगेन अव्यभिचारिण्या</div>
+            <div class="dc-char">मन+प्राण+इन्द्रिय — तीनों धारण · योग-जनित · अडिग</div>
+          </div>
+          <div class="dc-card raj">
+            <div class="dc-label">🔥 राजसिकी — 18.34 →</div>
+            <div class="dc-sa">धर्म-अर्थ-काम-फल से</div>
+            <div class="dc-char">आसक्ति-युक्त धारण · फल की इच्छा · अगला श्लोक</div>
+          </div>
+          <div class="dc-card tam">
+            <div class="dc-label">⬛ तामसिकी — 18.35 →→</div>
+            <div class="dc-sa">शोक-भय-विषाद</div>
+            <div class="dc-char">दुर्गुणों को थामना · नशा-निद्रा · जड़-धारण</div>
+          </div>
+        </div>
+        <table class="cmp-table" style="margin-top:16px;">
+          <tr><th>श्लोक</th><th>धृति-प्रकार</th><th>आधार</th><th>लक्षण</th></tr>
+          <tr><td>18.33</td><td>सात्त्विकी ✅</td><td>योग-साधना</td><td>अव्यभिचारिणी</td></tr>
+          <tr><td>18.34</td><td>राजसिकी →</td><td>धर्म-अर्थ-काम</td><td>फलाकांक्षी</td></tr>
+          <tr><td>18.35</td><td>तामसिकी →→</td><td>मोह-भय-शोक</td><td>दुर्गुण-धारिणी</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="roadmap">
+        <h3>अध्याय 18 रोडमैप</h3>
+        <p class="subnote">बुद्धि त्रयी पूर्ण → अब धृति त्रयी आरंभ</p>
+        <div class="road-track">
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">ज्ञान त्रयी<br>20–22</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्म त्रयी<br>23–25</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्ता त्रयी<br>26–28</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">बुद्धि त्रयी<br>30–32 ✅</div>
+          </div>
+          <div class="road-stop active">
+            <div class="road-dot"></div>
+            <div class="rlabel">धृति त्रयी<br>33–35 (33 अभी)</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">सुख त्रयी<br>36–39</div>
+          </div>
+        </div>
+        <div class="callout-sat" style="margin-top:24px;">
+          <b>आगे क्या?</b> 18.34 — राजसिकी धृति: जो धर्म-अर्थ-काम-फल की इच्छा से मन-इन्द्रियों को धारण करती है — आसक्ति-सहित।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">← <a href="gita_18_32.html" style="color:var(--gold-light);text-decoration:none;">18.32 तामसिकी बुद्धि</a> &nbsp;|&nbsp; <a href="gita_18_34.html" style="color:var(--gold-light);text-decoration:none;">18.34 राजसिकी धृति →</a></div>
+
+</div>
+<script>
+// Mode Pills
+document.querySelectorAll('.mode-pill').forEach(pill=>{
+  pill.addEventListener('click',()=>{
+    document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));
+    pill.classList.add('active');
+    document.getElementById(pill.dataset.mode).classList.add('active');
+    const firstTab=document.querySelector('#'+pill.dataset.mode+' .tab-btn');
+    if(firstTab)firstTab.click();
+  });
+});
+// Tab Bars
+document.querySelectorAll('.tabbar').forEach(bar=>{
+  bar.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const shell=bar.closest('.mode-section')||bar.parentElement;
+      shell.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      shell.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      shell.querySelectorAll('.panel').forEach(p=>{if(p.id===btn.dataset.tab)p.classList.add('active');});
+    });
+  });
+});
+// TTS
+function speakText(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.82;window.speechSynthesis.speak(u);}
+function speakSyl(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.7;window.speechSynthesis.speak(u);}
+// Walkthrough
+const walk33Steps=[
+  "बुद्धि त्रयी (18.30–32) पूर्ण हुई। अब 18.33 से <b>धृति त्रयी</b> आरंभ। धृति = धारण-शक्ति — बुद्धि जो जाने, धृति उसे थामे रखे।",
+  "पहला पाद:<br><b>धृत्या यया धारयते</b><br>जिस धृति द्वारा धारण किया जाता है...",
+  "दूसरा पाद:<br><b>मनःप्राणेन्द्रियक्रियाः</b><br>...मन, प्राण और इन्द्रियों की क्रियाओं को...",
+  "तीसरा पाद:<br><b>योगेनाव्यभिचारिण्या</b><br>...अव्यभिचारिणी योग के द्वारा — कभी न भटकने वाले साधना से...",
+  "चौथा पाद:<br><b>धृतिः सा पार्थ सात्त्विकी</b><br>...वह धृति, हे पार्थ! सात्त्विकी है।",
+  "मूल भेद:<br><b>बुद्धि</b> = दिशा जानती है (18.30)<br><b>धृति</b> = उस दिशा में <em>टिके रहती है</em> (18.33)<br>दोनों मिलकर सात्त्विक जीवन की रीढ़।",
+  "साधना-सूत्र:<br>जब मन कहे 'आज छोड़ दो'<br>— वहाँ जो टिकाती है, वह है <b>अव्यभिचारिणी धृति</b>।<br>यही योग का फल है।"
+];
+let walk33Idx=0;
+function walk33Start(){walk33Idx=0;walk33Show();}
+function walk33(d){walk33Idx=Math.max(0,Math.min(walk33Steps.length-1,walk33Idx+d));walk33Show();}
+function walk33Show(){
+  document.getElementById('walk33-text').innerHTML=walk33Steps[walk33Idx];
+  const dots=document.getElementById('walk33-dots');
+  dots.innerHTML='';
+  walk33Steps.forEach((_,i)=>{const d=document.createElement('div');d.className='walk-dot'+(i===walk33Idx?' active':'');dots.appendChild(d);});
+}
+// Quiz
+const quiz33Q=[
+  {q:"सात्त्विकी धृति किसके द्वारा उत्पन्न होती है?",o:["भय के द्वारा","अव्यभिचारिणी योग के द्वारा","धन के लोभ से","शक्ति-प्रयोग से"],a:1},
+  {q:"18.33 में धृति किन-किन को धारण करती है?",o:["केवल मन को","धर्म-अर्थ-काम को","मन, प्राण और इन्द्रियों की क्रियाओं को","शरीर और आत्मा को"],a:2},
+  {q:"'अव्यभिचारिणी' का अर्थ क्या है?",o:["जो कभी न भटके — एकनिष्ठ, अडिग","जो बहुत तेज हो","जो धन कमाए","जो इन्द्रियों को भोग दे"],a:0},
+  {q:"'धृत्या' और 'धारयते' — दोनों किस धातु से हैं?",o:["√दृश् (देखना)","√धा (धरना)","√धृ (धारण करना)","√धाव् (दौड़ना)"],a:2},
+  {q:"धृति और बुद्धि में मूल अंतर क्या है?",o:["कोई अंतर नहीं","बुद्धि = दिशा-ज्ञान; धृति = उस दिशा में बने रहने की शक्ति","बुद्धि = शरीर की; धृति = मन की","बुद्धि सात्त्विक; धृति राजसिक होती है"],a:1}
+];
+let q33i=0,q33score=0,q33done=false;
+function renderQuiz33(){
+  const c=document.getElementById('quiz33-container');
+  if(q33i>=quiz33Q.length){c.innerHTML=`<div class="quiz-score">✅ आपका स्कोर: ${q33score} / ${quiz33Q.length}</div><button class="quiz-btn" onclick="q33i=0;q33score=0;q33done=false;renderQuiz33()">पुनः प्रयास</button>`;return;}
+  const q=quiz33Q[q33i];
+  c.innerHTML=`<div class="quiz-progress">प्रश्न ${q33i+1} / ${quiz33Q.length}</div><div class="quiz-question">${q.q}</div><div class="quiz-options">${q.o.map((o,i)=>`<button class="quiz-opt" onclick="checkQ33(${i})">${o}</button>`).join('')}</div><div class="quiz-nav"><button class="quiz-btn" id="q33-next" onclick="q33i++;renderQuiz33()" disabled>अगला ▶</button></div>`;
+}
+function checkQ33(i){if(q33done)return;q33done=true;const opts=document.querySelectorAll('.quiz-opt');opts.forEach((o,idx)=>{o.classList.add('disabled');if(idx===quiz33Q[q33i].a)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===quiz33Q[q33i].a)q33score++;document.getElementById('q33-next').disabled=false;q33done=false;}
+document.addEventListener('DOMContentLoaded',renderQuiz33);
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

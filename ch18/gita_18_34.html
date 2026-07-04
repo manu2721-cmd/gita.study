@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.34 — राजसिकी धृति: फलाकांक्षी धारण-शक्ति</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:43.6%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,#241a30,#1b1322);border:1px solid rgba(140,74,32,0.4);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(140,74,32,0.16),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid rgba(140,74,32,0.5);padding:5px 18px;border-radius:30px;background:rgba(140,74,32,0.12);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid rgba(140,74,32,0.3);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .callout-sat{border-left:3px solid rgba(42,106,90,0.8);background:rgba(42,106,90,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-sat b{color:#6ecfb8;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(42,106,90,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);cursor:pointer;}
+  .syll:hover{border-color:var(--gold);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* purushartha grid */
+  .purushartha-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:20px 0;}
+  .pa-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .pa-card.dharma{border:1px solid rgba(201,162,39,0.4);background:rgba(201,162,39,0.06);}
+  .pa-card.artha{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .pa-card.kama{border:1px solid rgba(140,44,59,0.5);background:rgba(140,44,59,0.07);}
+  .pa-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .pa-card.dharma .pa-label{color:var(--gold-light);}
+  .pa-card.artha .pa-label{color:#e0a060;}
+  .pa-card.kama .pa-label{color:#e8a4ad;}
+  .pa-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:5px;}
+  .pa-card p{font-size:12px;color:var(--cream-dim);margin:0;}
+  /* dhrti compare row */
+  .dhrti-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:18px 0;}
+  .dc-card{border-radius:12px;padding:14px 10px;text-align:center;}
+  .dc-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .dc-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.12);box-shadow:0 0 14px rgba(140,74,32,0.2);}
+  .dc-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.07);}
+  .dc-label{font-size:10px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:6px;}
+  .dc-card.sat .dc-label{color:#6ecfb8;}
+  .dc-card.raj .dc-label{color:#e0a060;}
+  .dc-card.tam .dc-label{color:#c0a0d8;}
+  .dc-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:var(--cream);margin-bottom:4px;}
+  .dc-char{font-size:11.5px;color:var(--cream-dim);line-height:1.5;}
+  /* road track */
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  /* attachment-meter */
+  .attach-meter{position:relative;height:56px;border-radius:10px;background:linear-gradient(90deg,rgba(42,106,90,0.25) 0%,rgba(140,74,32,0.55) 55%,rgba(106,61,122,0.3) 100%);overflow:hidden;margin:16px 0;}
+  .attach-needle{position:absolute;top:50%;left:58%;transform:translate(-50%,-50%);width:4px;height:44px;background:var(--gold);border-radius:2px;box-shadow:0 0 10px var(--gold);}
+  @media(max-width:480px){.purushartha-row,.dhrti-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 34 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#5c3318"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#8c5a28"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#d99a4a"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f0c896" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.३४</div>
+    </div>
+    <div class="guna-badge">🔥 राजसिकी धृति — धृति त्रयी श्लोक २/३</div>
+    <div class="shloka">
+      यया तु धर्मकामार्थान् धृत्या धारयतेऽर्जुन।<br>
+      प्रसङ्गेन फलाकाङ्क्षी धृतिः सा पार्थ राजसी।।
+    </div>
+    <div class="translit">
+      yayā tu dharma-kāmārthān dhṛtyā dhārayate 'rjuna,<br>
+      prasaṅgena phalākāṅkṣī dhṛtiḥ sā pārtha rājasī
+    </div>
+    <div class="gist">
+      हे अर्जुन! जिस धृति से, <b>आसक्ति-सहित</b> और <b>फल की कामना से युक्त</b> होकर, मनुष्य <b>धर्म, अर्थ, और काम</b> को धारण करता है — वह धृति, हे पार्थ, <b>राजसी</b> है।
+    </div>
+  </div>
+
+  <!-- MODE PILLS -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- ═══ MODE: CORE ═══ -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="ctx">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="shabda">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="bhavarth">भावार्थ</button>
+      <button class="tab-btn" data-tab="udaharan">उदाहरण</button>
+      <button class="tab-btn" data-tab="qa">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="ctx">
+        <h3>पूर्ववर्ती संदर्भ — धृति त्रयी में स्थान</h3>
+        <p>श्लोक <b>18.33</b> में सात्त्विकी धृति का लक्षण आया — जो योग की अव्यभिचारिणी साधना से मन, प्राण, और इन्द्रियों को धारण करती है। वह धृति किसी फल की कामना से नहीं, बल्कि शुद्ध साधना से उत्पन्न होती थी।</p>
+        <p>अब <b>18.34</b> में उसकी ठीक नीचे की अवस्था — <b>राजसिकी धृति</b> — आती है। यहाँ धारण-क्षेत्र बदल जाता है: सात्त्विकी धृति "मन-प्राण-इन्द्रिय" को धारण करती थी; राजसिकी धृति <b>"धर्म-अर्थ-काम"</b> को धारण करती है — पर आसक्ति और फल की इच्छा के साथ।</p>
+        <div class="callout-rajas">
+          <b>मुख्य भेद — सात्त्विकी बनाम राजसिकी:</b><br>
+          18.33 — योग से, अव्यभिचारिणी, मन-प्राण-इन्द्रिय धारण<br>
+          18.34 — <b>प्रसङ्गेन</b> (आसक्ति से), <b>फलाकांक्षी</b> (फल की चाह से), धर्म-अर्थ-काम धारण
+        </div>
+        <p>यह वही पुरुषार्थ-त्रय है — धर्म, अर्थ, काम — जिन्हें मनुष्य सामान्यतः जीवन-लक्ष्य मानता है। पर जब इन्हें <em>फल की आसक्ति</em> से थामा जाए — तब वह धृति राजसी हो जाती है।</p>
+      </div>
+
+      <div class="panel" id="shabda">
+        <h3>शब्दार्थ — पद-विश्लेषण</h3>
+        <div class="eng-box"><span>English Rendering</span>But that steadfastness, O Arjuna, by which one holds onto dharma, artha (wealth), and kāma (desire) — through attachment, and craving the fruits — that steadfastness, O Pārtha, is rājasic.</div>
+        <div class="word-grid">
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">यया तु</span><span class="word-tr">yayā tu</span></div>
+            <div class="word-meaning">जिस धृति से, परंतु — 'तु' विरोधाभास-सूचक</div>
+            <div class="word-eng"><b>tu</b> = "but, however" — marks contrast with 18.33</div>
+            <div class="word-deep">'तु' शब्द जानबूझकर रखा गया है — 18.33 की सात्त्विकी धृति के तुरंत बाद यह "लेकिन" इस अवस्था को contrast में रखता है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">धर्मकामार्थान्</span><span class="word-tr">dharma-kāma-arthān</span></div>
+            <div class="word-meaning">धर्म, काम, और अर्थ को — द्वितीया बहुवचन (compound)</div>
+            <div class="word-eng">Triad: <b>dharma</b> (duty/righteousness) + <b>kāma</b> (desire/pleasure) + <b>artha</b> (wealth/prosperity)</div>
+            <div class="word-deep">यह पुरुषार्थ-त्रय का प्रसिद्ध समूह है (मोक्ष इसमें नहीं — क्योंकि राजसिकी धृति का लक्ष्य मोक्ष नहीं, सांसारिक सफलता है)। ध्यान दें: यहाँ धर्म पहले है — अर्थ काम के सामान्य क्रम (धर्म-अर्थ-काम) से थोड़ा अलग, छंद-समायोजन हेतु।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">धृत्या धारयते</span><span class="word-tr">dhṛtyā dhārayate</span></div>
+            <div class="word-meaning">धृति से धारण करता है — 18.33 जैसा pattern</div>
+            <div class="word-eng">Same root √dhṛ, same construction as 18.33</div>
+            <div class="word-deep">शब्द-रचना 18.33 जैसी है — पर विषय और गुण बदल गए हैं। यही गीता की कुशलता है — समान grammar में भिन्न आत्मा।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अर्जुन</span><span class="word-tr">arjuna</span></div>
+            <div class="word-meaning">संबोधन — अर्जुन को सीधे पुकारना</div>
+            <div class="word-eng">Direct address, mid-verse</div>
+            <div class="word-deep">18.33 में 'पार्थ' अंत में था; यहाँ 'अर्जुन' मध्य में आता है, और अंत में फिर 'पार्थ' भी आता है — दोहरा संबोधन इस श्लोक की विशेषता है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">प्रसङ्गेन</span><span class="word-tr">prasaṅgena</span></div>
+            <div class="word-meaning">आसक्ति से, संग से, जुड़ाव के कारण</div>
+            <div class="word-eng"><b>pra + sañj</b> (to cling, attach) → "through attachment"</div>
+            <div class="word-deep">यह शब्द 18.33 की 'अव्यभिचारिणी' का विपरीत है। 'प्रसङ्ग' = फल और वस्तुओं से चिपकाव। राजसिकी धृति वस्तु-आसक्ति से बनी होती है — शुद्ध साधना से नहीं।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">फलाकाङ्क्षी</span><span class="word-tr">phalākāṅkṣī</span></div>
+            <div class="word-meaning">फल की कामना/इच्छा रखने वाला</div>
+            <div class="word-eng"><b>phala</b> (fruit/result) + <b>ākāṅkṣā</b> (desire) → "fruit-desiring"</div>
+            <div class="word-deep">यह गीता का प्रसिद्ध concept है — फलाकांक्षा (2.47 की "मा फलेषु कदाचन" के विपरीत)। राजसिकी धृति का मूल चरित्र ही फल की चाह है — कर्म-स्वातंत्र्य नहीं।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">राजसी</span><span class="word-tr">rājasī</span></div>
+            <div class="word-meaning">राजसिक / रजोगुण-प्रधान धृति</div>
+            <div class="word-eng"><b>rājasa</b> → feminine rājasī agreeing with dhṛti</div>
+            <div class="word-deep">रजोगुण = क्रियाशीलता, इच्छा, संग्रह की वृत्ति — इसीलिए धर्म-अर्थ-काम को धारण करना यहाँ "मेरा सब कुछ बना रहे" की प्रवृत्ति से जुड़ा है।</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="bhavarth">
+        <h3>भावार्थ — गहन विश्लेषण</h3>
+
+        <p><b>राजसिकी धृति की मूल विशेषता</b> है — धर्म, अर्थ, और काम — तीनों पुरुषार्थों को थामे रखने की दृढ़ता, पर वह दृढ़ता <em>फल की कामना और आसक्ति</em> से जन्मती है, शुद्ध साधना से नहीं।</p>
+
+        <div class="callout-rajas">
+          <b>18.33 vs 18.34 — मूल अंतर:</b><br>
+          सात्त्विकी धृति: <b>योगेन अव्यभिचारिण्या</b> — साधना-जनित, अडिग, निष्काम।<br>
+          राजसिकी धृति: <b>प्रसङ्गेन फलाकाङ्क्षी</b> — आसक्ति-जनित, फल-लालसा-युक्त।
+        </div>
+
+        <p><b>क्या राजसिकी धृति बुरी है?</b> नहीं — यह तामसी से बेहतर है, क्योंकि यह व्यक्ति को धर्म, अर्थ, और काम — तीनों के प्रति समर्पित रखती है, अराजकता या जड़ता में नहीं डूबने देती। पर इसका दोष यह है कि <em>आसक्ति</em> इसका आधार है — इसलिए जब फल न मिले, यह टूट सकती है।</p>
+
+        <div class="purushartha-row">
+          <div class="pa-card dharma">
+            <div class="pa-label">धर्म</div>
+            <div class="pa-sa">कर्तव्य</div>
+            <p>पुण्य-संचय की इच्छा से धर्म का पालन — स्वर्ग/यश के लिए</p>
+          </div>
+          <div class="pa-card artha">
+            <div class="pa-label">अर्थ</div>
+            <div class="pa-sa">धन</div>
+            <p>संपत्ति-संग्रह में दृढ़ता — सुरक्षा और प्रतिष्ठा के लिए</p>
+          </div>
+          <div class="pa-card kama">
+            <div class="pa-label">काम</div>
+            <div class="pa-sa">इच्छा-पूर्ति</div>
+            <p>भोग-सुख की प्राप्ति में लगन — व्यक्तिगत आनंद हेतु</p>
+          </div>
+        </div>
+
+        <p><b>'प्रसङ्गेन' का गहरा अर्थ:</b> यह केवल "आसक्ति से" नहीं — बल्कि "वस्तु से जुड़ाव/संग के कारण" भी है। राजसिकी धृति वाला व्यक्ति वस्तुओं, पदों, संबंधों से इतना जुड़ जाता है कि उन्हें छोड़ना असंभव लगने लगता है। यह धृति वस्तु पर निर्भर है — आत्मा पर नहीं।</p>
+
+        <div class="callout">
+          <b>गीता 2.47 से तुलना:</b> "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन" — कृष्ण का मूल उपदेश था फल-त्याग। 18.34 ठीक उसका विपरीत वर्णन है — फलाकांक्षी धृति — यह दिखाता है कि अधिकांश लोगों की प्रेरणा-शक्ति इसी राजसी स्तर पर टिकी होती है।
+        </div>
+
+        <p><b>व्यावहारिक पहचान:</b> "क्या मैं इस लक्ष्य पर इसलिए टिका हूँ क्योंकि यह सही है (सात्त्विक), या इसलिए क्योंकि मुझे फल चाहिए (राजसिक)?" — यह आत्म-परीक्षण राजसिकी धृति को पहचानने का सूत्र है।</p>
+
+        <div class="callout-rajas">
+          <b>आचार्य शंकर:</b> 'प्रसङ्गेन' = विषय-आसक्ति के निमित्त। यह धृति धर्म-अर्थ-काम को धारण तो करती है, पर मोक्ष की ओर नहीं ले जाती — क्योंकि इसका मूल फल-इच्छा है, आत्म-ज्ञान नहीं।
+        </div>
+      </div>
+
+      <div class="panel" id="udaharan">
+        <h3>उदाहरण — राजसिकी धृति जीवन में</h3>
+
+        <div class="example">
+          <p><b>💼 व्यापारी का उदाहरण:</b> एक व्यापारी प्रतिदिन कठिन परिश्रम करता है — दिन-रात व्यापार में लगा रहता है, धन (अर्थ) बढ़ाने की दृढ़ता रखता है। यह धृति है — पर वह आसक्ति और मुनाफे की इच्छा से जुड़ी है। मंदी आने पर वह टूट सकता है, क्योंकि उसकी धृति फल पर निर्भर थी।</p>
+        </div>
+
+        <div class="example">
+          <p><b>🎓 परीक्षार्थी का उदाहरण:</b> एक छात्र IIT रैंक के लिए दिन-रात पढ़ता है — दृढ़ संकल्प से (धृति)। पर यह संकल्प "अच्छे रैंक" (फल) की कामना से प्रेरित है। अगर रैंक न आए, तो उसकी धृति टूट जाती है — क्योंकि वह यथार्थ-आधारित नहीं, फल-आधारित थी।</p>
+        </div>
+
+        <div class="example">
+          <p><b>🕉 धार्मिक व्रत का उदाहरण:</b> कोई व्यक्ति कठिन व्रत रखता है — पर मन में भाव है "इससे मुझे संतान प्राप्ति होगी" या "पद-प्रतिष्ठा बढ़ेगी।" व्रत (धर्म) में दृढ़ता है, पर वह फलाकांक्षा से जुड़ी है — यह सात्त्विक नहीं, राजसिक धृति है।</p>
+        </div>
+
+        <div class="example">
+          <p><b>💑 संबंध में आसक्ति:</b> एक व्यक्ति किसी रिश्ते को इसलिए दृढ़ता से थामे रखता है क्योंकि वह "सुख और सुरक्षा" (काम) देता है — प्रेम से नहीं, आवश्यकता से। यह 'प्रसङ्गेन' धारण का उदाहरण है — रिश्ता वस्तु बन जाता है, संबंध नहीं।</p>
+        </div>
+
+        <div class="example">
+          <p><b>🏆 खिलाड़ी का उदाहरण:</b> एक एथलीट जीत के लिए वर्षों कठोर अभ्यास करता है — यह दृढ़ता दिखती तो सात्त्विकी (18.33) जैसी है, पर अगर उसकी प्रेरणा सिर्फ पदक, नाम, और पैसा है — तो यह राजसिकी धृति है। अंतर अभ्यास में नहीं, मूल प्रेरणा में है।</p>
+        </div>
+      </div>
+
+      <div class="panel" id="qa">
+        <h3>प्रश्नोत्तर</h3>
+
+        <div class="faq">
+          <div class="q">प्र. राजसिकी धृति और सात्त्विकी धृति में दृढ़ता का स्तर अलग होता है क्या?</div>
+          <div class="a">नहीं, दोनों में दृढ़ता हो सकती है — बल्कि राजसिकी धृति बाहरी रूप से बहुत मजबूत दिख सकती है। अंतर <em>स्रोत</em> में है — सात्त्विकी धृति योग-साधना से, अव्यभिचारिणी; राजसिकी धृति आसक्ति और फल-कामना से, प्रसङ्गेन-फलाकांक्षी।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. क्या धर्म-अर्थ-काम का पीछा करना ही गलत है?</div>
+          <div class="a">नहीं — गीता धर्म-अर्थ-काम को अस्वीकार नहीं करती (ये सम्मानित पुरुषार्थ हैं)। समस्या यह नहीं कि क्या किया जाए, बल्कि <em>किस भाव से</em> किया जाए। निष्काम भाव से किए गए धर्म-अर्थ-काम सात्त्विक मार्ग के अनुकूल हो सकते हैं; आसक्ति-सहित किए गए राजसिक बन जाते हैं।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 18.34 में मोक्ष की चर्चा क्यों नहीं?</div>
+          <div class="a">यह सूक्ष्म संकेत है — राजसिकी धृति का दायरा केवल त्रिवर्ग (धर्म-अर्थ-काम) तक सीमित है, मोक्ष तक नहीं पहुँचता। सात्त्विकी धृति (18.33) मन-प्राण-इन्द्रिय को साधकर मोक्ष की दिशा में ले जाती है; राजसिकी धृति सांसारिक त्रिवर्ग में ही उलझी रहती है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. राजसिकी धृति से सात्त्विकी की ओर कैसे बढ़ें?</div>
+          <div class="a">मुख्य उपाय है फल-आसक्ति का त्याग — कर्म तो वही रहे, पर भाव बदले। 2.47 का सिद्धांत यहाँ लागू होता है — "कर्म करो, फल की चिंता मत करो।" जब धर्म-अर्थ-काम का पालन कर्तव्य-भाव से हो, आसक्ति-भाव से नहीं — तब धृति स्वतः सात्त्विकता की ओर बढ़ती है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 'तु' और 'अर्जुन' का मध्य-श्लोक प्रयोग क्या दर्शाता है?</div>
+          <div class="a">'तु' (परंतु) सीधा 18.33 की सात्त्विकी धृति से contrast बनाता है — "वह तो ऐसी थी, पर यह..." 'अर्जुन' का मध्य-संबोधन कृष्ण की शैली में personal touch जोड़ता है — जैसे विशेष ध्यान दिलाना: "अर्जुन, इसे ध्यान से सुनो — यह तुम्हारी अपनी प्रवृत्ति हो सकती है।"</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PERSPECTIVES ═══ -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="mahattva">महत्त्व</button>
+      <button class="tab-btn" data-tab="mindmap">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="tulna">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="sadhana">साधना</button>
+      <button class="tab-btn" data-tab="acharya">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="mahattva">
+        <h3>महत्त्व — इस श्लोक की विशिष्टता</h3>
+        <p>18.34 अधिकांश सांसारिक मनुष्यों की <b>वास्तविक प्रेरणा-स्थिति</b> का दर्पण है। संसार में अधिकांश दृढ़ता — सफल व्यापारी, मेहनती छात्र, समर्पित खिलाड़ी — इसी राजसिकी धृति से संचालित होती है।</p>
+        <div class="callout-rajas">
+          <b>क्यों महत्त्वपूर्ण:</b> यह श्लोक यह स्पष्ट करता है कि <em>दृढ़ता (will-power) अपने आप में पुण्य नहीं है</em> — उसका मूल्य उसकी प्रेरणा पर निर्भर करता है। आधुनिक "grit" और "perseverance" की प्रशंसा संस्कृति में यह श्लोक एक गहरा सवाल खड़ा करता है: किस लिए दृढ़ हैं हम?
+        </div>
+        <p>धर्म-अर्थ-काम — पुरुषार्थ-चतुष्टय में से तीन — यहाँ साथ आते हैं, जो यह दिखाता है कि राजसिकी धृति <em>सम्पूर्ण सांसारिक जीवन</em> को आसक्ति-सहित थामने की वृत्ति है — सिर्फ धन या सिर्फ भोग की नहीं।</p>
+      </div>
+
+      <div class="panel" id="mindmap">
+        <h3>माइंड-मैप — राजसिकी धृति की संरचना</h3>
+        <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:rgba(0,0,0,0.2);">
+          <defs>
+            <radialGradient id="centGrad34" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(140,74,32,0.5)"/>
+              <stop offset="100%" stop-color="rgba(140,74,32,0.15)"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="380" cy="210" rx="95" ry="44" fill="url(#centGrad34)" stroke="rgba(140,74,32,0.8)" stroke-width="2"/>
+          <text x="380" y="203" font-family="Tiro Devanagari Hindi,serif" font-size="16" fill="#e0a060" text-anchor="middle">राजसिकी धृति</text>
+          <text x="380" y="224" font-family="EB Garamond,serif" font-style="italic" font-size="12" fill="#cfc3a8" text-anchor="middle">प्रसङ्गेन फलाकाङ्क्षी</text>
+
+          <!-- धर्म -->
+          <line x1="285" y1="192" x2="148" y2="130" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <ellipse cx="100" cy="118" rx="68" ry="28" fill="rgba(201,162,39,0.07)" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <text x="100" y="113" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e6c863" text-anchor="middle">धर्म</text>
+          <text x="100" y="129" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">पुण्य-संचय हेतु</text>
+
+          <!-- अर्थ -->
+          <line x1="380" y1="166" x2="380" y2="76" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <ellipse cx="380" cy="55" rx="74" ry="26" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.5)" stroke-width="1.2"/>
+          <text x="380" y="50" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e0a060" text-anchor="middle">अर्थ</text>
+          <text x="380" y="66" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">धन-संग्रह हेतु</text>
+
+          <!-- काम -->
+          <line x1="475" y1="192" x2="612" y2="130" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <ellipse cx="660" cy="118" rx="68" ry="28" fill="rgba(140,44,59,0.08)" stroke="rgba(140,44,59,0.4)" stroke-width="1.2"/>
+          <text x="660" y="113" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e8a4ad" text-anchor="middle">काम</text>
+          <text x="660" y="129" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">भोग-सुख हेतु</text>
+
+          <!-- प्रसङ्गेन -->
+          <line x1="362" y1="254" x2="222" y2="336" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <ellipse cx="172" cy="350" rx="78" ry="28" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.5)" stroke-width="1.2"/>
+          <text x="172" y="345" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e0a060" text-anchor="middle">प्रसङ्गेन</text>
+          <text x="172" y="361" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">वस्तु-आसक्ति से</text>
+
+          <!-- फलाकांक्षी -->
+          <line x1="415" y1="252" x2="558" y2="336" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <ellipse cx="612" cy="350" rx="86" ry="28" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.5)" stroke-width="1.2"/>
+          <text x="612" y="345" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#e0a060" text-anchor="middle">फलाकांक्षी</text>
+          <text x="612" y="361" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">फल की कामना</text>
+
+          <text x="380" y="402" font-family="EB Garamond,serif" font-style="italic" font-size="12.5" fill="rgba(140,74,32,0.6)" text-anchor="middle">मोक्ष की ओर नहीं — सांसारिक त्रिवर्ग में सीमित</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="tulna">
+        <h3>तुलनात्मक — धृति त्रयी (18.33–35)</h3>
+        <p class="subnote">अभी 18.34 पर — सात्त्विकी पूर्ण, तामसिकी आगे।</p>
+        <div class="dhrti-row">
+          <div class="dc-card sat">
+            <div class="dc-label">✅ सात्त्विकी — 18.33</div>
+            <div class="dc-sa">योगेन अव्यभिचारिण्या</div>
+            <div class="dc-char">मन-प्राण-इन्द्रिय · साधना-जनित · निष्काम</div>
+          </div>
+          <div class="dc-card raj">
+            <div class="dc-label">🔥 राजसिकी — 18.34 (अभी)</div>
+            <div class="dc-sa">प्रसङ्गेन फलाकाङ्क्षी</div>
+            <div class="dc-char">धर्म-अर्थ-काम · आसक्ति-जनित · फल-इच्छुक</div>
+          </div>
+          <div class="dc-card tam">
+            <div class="dc-label">⬛ तामसिकी — 18.35 →</div>
+            <div class="dc-sa">स्वप्न-भय-शोक</div>
+            <div class="dc-char">दुर्गुण-धारण · जड़ता-जनित (आगे)</div>
+          </div>
+        </div>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>सात्त्विकी (18.33)</th><th>राजसिकी (18.34)</th><th>तामसिकी (18.35)</th></tr>
+          <tr><td>धारण-विषय</td><td>मन+प्राण+इन्द्रिय</td><td>धर्म+अर्थ+काम</td><td>निद्रा+भय+शोक (आगे)</td></tr>
+          <tr><td>मूल आधार</td><td>योग-साधना</td><td>आसक्ति (प्रसङ्ग)</td><td>मोह-जड़ता (आगे)</td></tr>
+          <tr><td>प्रेरणा</td><td>निष्काम</td><td>फलाकांक्षा</td><td>अज्ञान (आगे)</td></tr>
+          <tr><td>दिशा</td><td>मोक्ष की ओर</td><td>त्रिवर्ग तक सीमित</td><td>पतन की ओर (आगे)</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="sadhana">
+        <h3>साधना — राजसिकी धृति को सात्त्विक बनाना</h3>
+        <p>राजसिकी धृति सात्त्विकी से भिन्न इसलिए नहीं कि उसमें दृढ़ता कम है, बल्कि इसलिए कि उसका <em>मूल</em> भिन्न है। साधना का लक्ष्य है — दृढ़ता बनाए रखना, पर उसका स्रोत बदलना।</p>
+        <div class="callout-rajas">
+          <b>आत्म-परीक्षण:</b> "मैं इस धर्म-अर्थ-काम को इसलिए थामे हूँ क्योंकि यह सही है, या इसलिए कि मुझे इसका फल चाहिए?" — यह प्रश्न रोज पूछें। उत्तर ही बताएगा कि आपकी धृति किस गुण में है।
+        </div>
+        <p><b>निष्काम कर्म का अभ्यास (2.47, 3.19):</b> कर्म वही रहे — धर्म का पालन, अर्थ का अर्जन, काम की पूर्ति — पर फल की आसक्ति त्याग दें। यही राजसिकी से सात्त्विकी की ओर एकमात्र पुल है।</p>
+        <div class="callout-sat">
+          <b>व्यावहारिक अभ्यास:</b> जब कोई बड़ा प्रयास करें (परीक्षा, व्यापार, कार्य), उसमें पूरी ऊर्जा दें — पर परिणाम जानने से पहले मन को इस सत्य से जोड़ें: "मेरा कर्तव्य पूरा हुआ; फल प्रकृति के हाथ में है।" यह अभ्यास धीरे-धीरे प्रसङ्ग और फलाकांक्षा को घटाता है।
+        </div>
+      </div>
+
+      <div class="panel" id="acharya">
+        <h3>आचार्य-मत — व्याख्याएँ</h3>
+        <div class="callout-rajas">
+          <b>शंकराचार्य:</b> 'प्रसङ्गेन' = सांसारिक विषयों में आसक्ति के कारण। यह धृति धर्म-अर्थ-काम का त्याग नहीं करने देती, क्योंकि व्यक्ति का अहंकार इनसे जुड़ा है। फल की कामना ही इस धृति की जड़ है।
+        </div>
+        <div class="callout">
+          <b>रामानुजाचार्य:</b> यह धृति निंदनीय नहीं, पर अपूर्ण है। धर्म-अर्थ-काम का पालन स्वयं अच्छा है, पर जब तक फल की इच्छा शेष है, तब तक वह भगवदर्पण नहीं बन पाता — और इसीलिए मुक्तिदायक नहीं।
+        </div>
+        <div class="callout-rajas">
+          <b>स्वामी चिन्मयानंद:</b> राजसिकी धृति सांसारिक सफलता की रीढ़ है — व्यापारी, राजनेता, खिलाड़ी सभी इसी से प्रेरित होते हैं। यह बुरी नहीं, पर सीमित है — क्योंकि यह "मैं" और "मेरा" के दायरे में बंधी रहती है।
+        </div>
+        <div class="callout">
+          <b>श्रील प्रभुपाद:</b> जब धर्म, अर्थ, काम भौतिक लाभ के लिए साधे जाएँ — आध्यात्मिक उन्नति के लिए नहीं — वह राजसिक है। भक्ति-योग इस सीमा को पार कराता है, क्योंकि वहाँ धारण-शक्ति का लक्ष्य भगवान होते हैं, फल नहीं।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PRACTICE ═══ -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="flash">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="quiz">क्विज़</button>
+      <button class="tab-btn" data-tab="gram">व्याकरण</button>
+      <button class="tab-btn" data-tab="sutra">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="flash">
+        <h3>फ्लैशकार्ड — पद-स्मरण</h3>
+        <p style="font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;">कार्ड पर क्लिक करें — अर्थ पलटेगा।</p>
+        <div class="flashcard-grid">
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#e0a060;">प्रसङ्गेन</span>
+                <span style="font-size:12px;color:#cfc3a8;">अर्थ?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>आसक्ति से, संग से</b> — वस्तुओं/फल से चिपकाव। 18.33 की 'अव्यभिचारिणी' का विपरीत।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#e0a060;">फलाकाङ्क्षी</span>
+                <span style="font-size:12px;color:#cfc3a8;">व्युत्पत्ति?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>फल + आकांक्षा</b> = फल की इच्छा रखने वाला। 2.47 के "मा फलेषु" के विपरीत वृत्ति।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:#e0a060;">धर्मकामार्थान्</span>
+                <span style="font-size:12px;color:#cfc3a8;">कौन-से तीन?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>धर्म</b> (कर्तव्य) + <b>काम</b> (इच्छा) + <b>अर्थ</b> (धन) — पुरुषार्थ-त्रय (मोक्ष इसमें नहीं)।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">तु</span>
+                <span style="font-size:12px;color:#cfc3a8;">यहाँ क्या काम?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>"परंतु"</b> — 18.33 की सात्त्विकी धृति से सीधा विरोधाभास दर्शाता है।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">अर्जुन</span>
+                <span style="font-size:12px;color:#cfc3a8;">श्लोक में स्थान?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>मध्य-संबोधन</b> — असामान्य। आम तौर पर अंत में 'पार्थ' आता है; यहाँ दोनों संबोधन।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#e0a060;">राजसी</span>
+                <span style="font-size:12px;color:#cfc3a8;">धृति त्रयी में स्थान?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>18.34 — मध्य</b><br>सात्त्विकी (18.33) से नीचे, तामसिकी (18.35) से ऊपर।</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="quiz">
+        <h3>क्विज़ — 18.34 परीक्षण</h3>
+        <div id="quiz34-container"></div>
+      </div>
+
+      <div class="panel" id="gram">
+        <h3>व्याकरण — पद-विभाजन</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति / लकार</th><th>भूमिका</th></tr>
+          <tr><td class="sa">यया तु</td><td>यद् + तु</td><td>स्त्री., तृ. एक.</td><td>सम्बन्ध + विरोधाभास-सूचक</td></tr>
+          <tr><td class="sa">धर्मकामार्थान्</td><td>धर्म+काम+अर्थ</td><td>द्वि. बहु.</td><td>कर्म — धारण किया जाने वाला</td></tr>
+          <tr><td class="sa">धृत्या</td><td>धृति (स्त्री.)</td><td>तृ. एक.</td><td>करण-वाचक</td></tr>
+          <tr><td class="sa">धारयते</td><td>√धृ (causative)</td><td>लट्, आ.प., प्र.पु.एक.</td><td>मुख्य क्रिया</td></tr>
+          <tr><td class="sa">अर्जुन</td><td>अर्जुन (पुं.)</td><td>सं. एक.</td><td>संबोधन (मध्य-श्लोक)</td></tr>
+          <tr><td class="sa">प्रसङ्गेन</td><td>प्र+सञ्ज् (भाव.)</td><td>तृ. एक.</td><td>करण — "आसक्ति के द्वारा"</td></tr>
+          <tr><td class="sa">फलाकाङ्क्षी</td><td>फल+आकाङ्क्षा+इन्</td><td>पुं., प्र.एक.</td><td>विशेषण (कर्ता को)</td></tr>
+          <tr><td class="sa">धृतिः</td><td>धृति (स्त्री.)</td><td>प्र. एक.</td><td>कर्ता</td></tr>
+          <tr><td class="sa">सा</td><td>तद् (सर्व.)</td><td>स्त्री., प्र.एक.</td><td>धृति का निर्देश</td></tr>
+          <tr><td class="sa">पार्थ</td><td>पृथा+अण्</td><td>सं. एक.</td><td>संबोधन — अंत में</td></tr>
+          <tr><td class="sa">राजसी</td><td>राजस (विशे.)</td><td>स्त्री., प्र.एक.</td><td>विधेय विशेषण</td></tr>
+        </table>
+        <div class="callout" style="margin-top:18px;">
+          <b>संधि:</b> धर्म+काम+अर्थान् = धर्मकामार्थान् (स्वर-संधि, समास)। धारयते+अर्जुन = धारयतेऽर्जुन (अवग्रह — ए+अ=ए, अ लुप्त)।
+        </div>
+      </div>
+
+      <div class="panel" id="sutra">
+        <h3>सारांश-सूत्र — त्वरित स्मरण</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">
+            यया तु धर्मकामार्थान् धृत्या धारयतेऽर्जुन।<br>
+            प्रसङ्गेन फलाकाङ्क्षी धृतिः सा पार्थ राजसी।।
+          </div>
+          <div class="cheat-translit">yayā tu dharma-kāmārthān dhṛtyā dhārayate 'rjuna · prasaṅgena phalākāṅkṣī · dhṛtiḥ sā pārtha rājasī</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>धर्म-काम-अर्थ</b> = पुरुषार्थ-त्रय</span>
+            <span class="cheat-chip"><b>प्रसङ्गेन</b> = आसक्ति से</span>
+            <span class="cheat-chip"><b>फलाकाङ्क्षी</b> = फल-इच्छुक</span>
+            <span class="cheat-chip"><b>राजसी</b> = राजसिक धृति</span>
+          </div>
+          <div class="cheat-takeaway">
+            🔑 सूत्र: <b>राजसिकी धृति = आसक्ति और फल-कामना से धर्म-अर्थ-काम को थामना</b><br>
+            दृढ़ता तो है, पर स्रोत आसक्ति है — मोक्ष की ओर नहीं, सांसारिक त्रिवर्ग तक सीमित
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: MEDIA ═══ -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="shravan">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="walkthru">वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="jap">जप/अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="shravan">
+        <h3>श्रवण मोड — TTS</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('यया तु धर्मकामार्थान् धृत्या धारयतेऽर्जुन। प्रसङ्गेन फलाकाङ्क्षी धृतिः सा पार्थ राजसी।')">▶ श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('हे अर्जुन! जिस धृति से, आसक्ति से और फल की कामना से युक्त होकर, मनुष्य धर्म, अर्थ, और काम को धारण करता है — वह धृति राजसी है।')">▶ भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+        <div class="callout-rajas">
+          <b>श्रवण-संकेत:</b> 'तु' पर हल्का ठहराव दें — यह 18.33 से contrast दिखाता है। 'प्रसङ्गेन फलाकाङ्क्षी' दोनों शब्दों को साथ में महसूस करें — आसक्ति और फल-इच्छा एक ही जड़ से।
+        </div>
+      </div>
+
+      <div class="panel" id="walkthru">
+        <h3>वॉकथ्रू — चरण-दर-चरण</h3>
+        <div id="walk34-stage" class="walk-stage"><p id="walk34-text">▶ Start पर क्लिक करें।</p></div>
+        <div class="walk-controls">
+          <button onclick="walk34(-1)">◀</button>
+          <button onclick="walk34Start()">▶ Start</button>
+          <button onclick="walk34(1)">▶</button>
+        </div>
+        <div class="walk-progress-row" id="walk34-dots"></div>
+      </div>
+
+      <div class="panel" id="jap">
+        <h3>जप / अभ्यास — पाद-विभाजन</h3>
+        <p style="font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;">अनुष्टुप् छंद — प्रत्येक पाद ८ अक्षर। शब्द पर क्लिक करके सुनें।</p>
+        <div>
+          <div class="pada-label">पाद १</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('यया')">यया</span>
+            <span class="syll" onclick="speakSyl('तु')">तु</span>
+            <span class="syll" onclick="speakSyl('धर्म')">धर्म</span>
+            <span class="syll" onclick="speakSyl('काम')">काम</span>
+            <span class="syll" onclick="speakSyl('अर्थान्')">अर्थान्</span>
+          </div>
+          <div class="pada-label">पाद २</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('धृत्या')">धृत्या</span>
+            <span class="syll" onclick="speakSyl('धारयते')">धारयते</span>
+            <span class="syll" onclick="speakSyl('अर्जुन')">अर्जुन</span>
+          </div>
+          <div class="pada-label">पाद ३</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('प्रसङ्गेन')">प्रसङ्गेन</span>
+            <span class="syll" onclick="speakSyl('फलाकाङ्क्षी')">फलाकाङ्क्षी</span>
+          </div>
+          <div class="pada-label">पाद ४</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('धृतिः')">धृतिः</span>
+            <span class="syll" onclick="speakSyl('सा')">सा</span>
+            <span class="syll" onclick="speakSyl('पार्थ')">पार्थ</span>
+            <span class="syll" onclick="speakSyl('राजसी')">राजसी</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: INFOGRAPHICS ═══ -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="attachment">आसक्ति-मानचित्र</button>
+      <button class="tab-btn" data-tab="trayee">धृति त्रयी</button>
+      <button class="tab-btn" data-tab="roadmap">अध्याय रोडमैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="attachment">
+        <h3>आसक्ति-मानचित्र — सात्त्विक से राजसिक की ओर</h3>
+        <p class="subnote">धृति का स्रोत स्पेक्ट्रम — साधना से आसक्ति की ओर खिसकाव।</p>
+        <div class="attach-meter"></div>
+        <table class="cmp-table">
+          <tr><th>पक्ष</th><th>सात्त्विकी (बायाँ)</th><th>राजसिकी (केंद्र-दायाँ, अभी)</th></tr>
+          <tr><td>आधार</td><td>योग-साधना</td><td>आसक्ति (प्रसङ्ग)</td></tr>
+          <tr><td>लक्ष्य</td><td>स्थिरता स्वयं में</td><td>फल की प्राप्ति</td></tr>
+          <tr><td>धारण-विषय</td><td>मन-प्राण-इन्द्रिय</td><td>धर्म-अर्थ-काम</td></tr>
+          <tr><td>टूटने का खतरा</td><td>कम (निष्काम)</td><td>अधिक (फल न मिले तो टूटे)</td></tr>
+        </table>
+        <div class="callout-rajas" style="margin-top:14px;">
+          <b>महत्त्वपूर्ण:</b> राजसिकी धृति तामसिकी से कहीं ऊपर है — यह व्यक्ति को संसार में टिकाए रखती है। पर मोक्ष-मार्ग के लिए, इसे सात्त्विकी में बदलना आवश्यक है — फल-त्याग द्वारा।
+        </div>
+      </div>
+
+      <div class="panel" id="trayee">
+        <h3>धृति त्रयी — 18.33–35</h3>
+        <p class="subnote">अभी 18.34 पर — सात्त्विकी पूर्ण, तामसिकी आगे।</p>
+        <div class="dhrti-row">
+          <div class="dc-card sat">
+            <div class="dc-label">✅ सात्त्विकी — 18.33</div>
+            <div class="dc-sa">योगेन अव्यभिचारिण्या</div>
+            <div class="dc-char">मन+प्राण+इन्द्रिय · साधना-जनित</div>
+          </div>
+          <div class="dc-card raj">
+            <div class="dc-label">🔥 राजसिकी — 18.34 (अभी)</div>
+            <div class="dc-sa">प्रसङ्गेन फलाकाङ्क्षी</div>
+            <div class="dc-char">धर्म+अर्थ+काम · आसक्ति-जनित</div>
+          </div>
+          <div class="dc-card tam">
+            <div class="dc-label">⬛ तामसिकी — 18.35 →</div>
+            <div class="dc-sa">स्वप्न-भय-शोक</div>
+            <div class="dc-char">दुर्गुण-धारिणी (आगे)</div>
+          </div>
+        </div>
+        <table class="cmp-table" style="margin-top:16px;">
+          <tr><th>श्लोक</th><th>धृति-प्रकार</th><th>आधार</th><th>लक्षण</th></tr>
+          <tr><td>18.33</td><td>सात्त्विकी ✅</td><td>योग</td><td>अव्यभिचारिणी</td></tr>
+          <tr><td>18.34</td><td>राजसिकी 🔥</td><td>आसक्ति</td><td>फलाकांक्षी</td></tr>
+          <tr><td>18.35</td><td>तामसिकी →</td><td>मोह-जड़ता</td><td>दुर्गुण-धारिणी</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="roadmap">
+        <h3>अध्याय 18 रोडमैप</h3>
+        <p class="subnote">धृति त्रयी का द्वितीय श्लोक — तामसिकी अगला</p>
+        <div class="road-track">
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">ज्ञान त्रयी<br>20–22</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्म त्रयी<br>23–25</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्ता त्रयी<br>26–28</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">बुद्धि त्रयी<br>30–32 ✅</div>
+          </div>
+          <div class="road-stop active">
+            <div class="road-dot"></div>
+            <div class="rlabel">धृति त्रयी<br>33–35 (34 अभी)</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">सुख त्रयी<br>36–39</div>
+          </div>
+        </div>
+        <div class="callout-rajas" style="margin-top:24px;">
+          <b>आगे क्या?</b> 18.35 — तामसिकी धृति: जो दुर्बुद्धि निद्रा, भय, शोक, विषाद, और मद को नहीं छोड़ती — मोह-ग्रस्त, जड़-धारिणी।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">← <a href="gita_18_33.html" style="color:var(--gold-light);text-decoration:none;">18.33 सात्त्विकी धृति</a> &nbsp;|&nbsp; <a href="gita_18_35.html" style="color:var(--gold-light);text-decoration:none;">18.35 तामसिकी धृति →</a></div>
+
+</div>
+<script>
+document.querySelectorAll('.mode-pill').forEach(pill=>{
+  pill.addEventListener('click',()=>{
+    document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));
+    pill.classList.add('active');
+    document.getElementById(pill.dataset.mode).classList.add('active');
+    const firstTab=document.querySelector('#'+pill.dataset.mode+' .tab-btn');
+    if(firstTab)firstTab.click();
+  });
+});
+document.querySelectorAll('.tabbar').forEach(bar=>{
+  bar.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const shell=bar.closest('.mode-section')||bar.parentElement;
+      shell.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      shell.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      shell.querySelectorAll('.panel').forEach(p=>{if(p.id===btn.dataset.tab)p.classList.add('active');});
+    });
+  });
+});
+function speakText(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.82;window.speechSynthesis.speak(u);}
+function speakSyl(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.7;window.speechSynthesis.speak(u);}
+const walk34Steps=[
+  "18.33 (सात्त्विकी धृति) के बाद अब 18.34 — <b>राजसिकी धृति</b>। 'तु' शब्द सीधा contrast दर्शाता है।",
+  "पहला पाद:<br><b>यया तु धर्मकामार्थान्</b><br>परंतु जिस धृति से धर्म, काम, अर्थ को...",
+  "दूसरा पाद:<br><b>धृत्या धारयते अर्जुन</b><br>...धारण किया जाता है, हे अर्जुन...",
+  "तीसरा पाद:<br><b>प्रसङ्गेन फलाकाङ्क्षी</b><br>...आसक्ति से, फल की कामना सहित...",
+  "चौथा पाद:<br><b>धृतिः सा पार्थ राजसी</b><br>...वह धृति, हे पार्थ! राजसी है।",
+  "मूल भेद:<br>18.33: <b>योगेन अव्यभिचारिण्या</b> — साधना, निष्काम<br>18.34: <b>प्रसङ्गेन फलाकाङ्क्षी</b> — आसक्ति, फल-इच्छा",
+  "साधना-सूत्र:<br>कर्म वही रहे — धर्म-अर्थ-काम का पालन<br>पर फल का त्याग करें<br>यही राजसिकी से सात्त्विकी का पुल है।"
+];
+let walk34Idx=0;
+function walk34Start(){walk34Idx=0;walk34Show();}
+function walk34(d){walk34Idx=Math.max(0,Math.min(walk34Steps.length-1,walk34Idx+d));walk34Show();}
+function walk34Show(){
+  document.getElementById('walk34-text').innerHTML=walk34Steps[walk34Idx];
+  const dots=document.getElementById('walk34-dots');
+  dots.innerHTML='';
+  walk34Steps.forEach((_,i)=>{const d=document.createElement('div');d.className='walk-dot'+(i===walk34Idx?' active':'');dots.appendChild(d);});
+}
+const quiz34Q=[
+  {q:"18.34 में राजसिकी धृति किन तीन को धारण करती है?",o:["मन, प्राण, इन्द्रिय","धर्म, अर्थ, काम","सत्त्व, रज, तम","भय, शोक, मोह"],a:1},
+  {q:"'प्रसङ्गेन' का अर्थ क्या है?",o:["साधना से","आसक्ति/संग से","ज्ञान से","भय से"],a:1},
+  {q:"'फलाकाङ्क्षी' का सीधा विपरीत गीता के किस सिद्धांत में है?",o:["सर्वधर्मान् परित्यज्य (18.66)","मा फलेषु कदाचन (2.47)","नैनं छिन्दन्ति शस्त्राणि (2.23)","योगः कर्मसु कौशलम् (2.50)"],a:1},
+  {q:"राजसिकी धृति और सात्त्विकी धृति में दृढ़ता का स्तर कैसा होता है?",o:["राजसिकी में दृढ़ता बिलकुल नहीं होती","दोनों में दृढ़ता हो सकती है, स्रोत अलग होता है","सात्त्विकी में दृढ़ता कमज़ोर होती है","राजसिकी हमेशा तामसिकी जैसी होती है"],a:1},
+  {q:"18.34 में मोक्ष की चर्चा क्यों नहीं है?",o:["भूल से छूट गया","राजसिकी धृति का दायरा त्रिवर्ग तक सीमित है, मोक्ष तक नहीं","मोक्ष का कोई महत्व नहीं","यह श्लोक केवल अर्थ पर केंद्रित है"],a:1}
+];
+let q34i=0,q34score=0,q34done=false;
+function renderQuiz34(){
+  const c=document.getElementById('quiz34-container');
+  if(q34i>=quiz34Q.length){c.innerHTML=`<div class="quiz-score">✅ आपका स्कोर: ${q34score} / ${quiz34Q.length}</div><button class="quiz-btn" onclick="q34i=0;q34score=0;q34done=false;renderQuiz34()">पुनः प्रयास</button>`;return;}
+  const q=quiz34Q[q34i];
+  c.innerHTML=`<div class="quiz-progress">प्रश्न ${q34i+1} / ${quiz34Q.length}</div><div class="quiz-question">${q.q}</div><div class="quiz-options">${q.o.map((o,i)=>`<button class="quiz-opt" onclick="checkQ34(${i})">${o}</button>`).join('')}</div><div class="quiz-nav"><button class="quiz-btn" id="q34-next" onclick="q34i++;renderQuiz34()" disabled>अगला ▶</button></div>`;
+}
+function checkQ34(i){if(q34done)return;q34done=true;const opts=document.querySelectorAll('.quiz-opt');opts.forEach((o,idx)=>{o.classList.add('disabled');if(idx===quiz34Q[q34i].a)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===quiz34Q[q34i].a)q34score++;document.getElementById('q34-next').disabled=false;q34done=false;}
+document.addEventListener('DOMContentLoaded',renderQuiz34);
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

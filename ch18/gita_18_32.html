@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.32 — तामसिकी बुद्धि: विपरीत प्रज्ञा</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:41.0%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,#1f1035,#130926);border:1px solid rgba(106,61,122,0.4);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(106,61,122,0.18),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid rgba(106,61,122,0.5);padding:5px 18px;border-radius:30px;background:rgba(60,30,90,0.2);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid rgba(106,61,122,0.3);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(60,30,90,0.35);border:1px solid rgba(106,61,122,0.6);color:#c0a0d8;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-tamas{border-left:3px solid rgba(106,61,122,0.8);background:rgba(60,30,90,0.15);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-tamas b{color:#c0a0d8;}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .callout-sat{border-left:3px solid rgba(42,106,90,0.8);background:rgba(42,106,90,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-sat b{color:#6ecfb8;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(60,30,90,0.25);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#c0a0d8;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* three-guna row */
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .guna-card.tam{border:2px solid rgba(106,61,122,0.7);background:rgba(60,30,90,0.18);box-shadow:0 0 16px rgba(60,30,90,0.35);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  /* road track */
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  /* inversion visual */
+  .inversion-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;margin:20px 0;}
+  .inv-box{border-radius:12px;padding:16px 14px;text-align:center;}
+  .inv-box.truth{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .inv-box.error{border:1px solid rgba(106,61,122,0.6);background:rgba(60,30,90,0.2);}
+  .inv-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .inv-box.truth .inv-label{color:#6ecfb8;}
+  .inv-box.error .inv-label{color:#c0a0d8;}
+  .inv-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:4px;}
+  .inv-box p{font-size:13px;color:var(--cream-dim);margin:0;}
+  .inv-arrow{font-size:28px;color:rgba(106,61,122,0.7);text-align:center;}
+  /* buddhi complete row */
+  .buddhi-complete{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:18px 0;}
+  .bc-card{border-radius:12px;padding:14px 10px;text-align:center;}
+  .bc-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .bc-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .bc-card.tam{border:2px solid rgba(106,61,122,0.7);background:rgba(60,30,90,0.18);box-shadow:0 0 12px rgba(60,30,90,0.3);}
+  .bc-label{font-size:10px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:6px;}
+  .bc-card.sat .bc-label{color:#6ecfb8;}
+  .bc-card.raj .bc-label{color:#e0a060;}
+  .bc-card.tam .bc-label{color:#c0a0d8;}
+  .bc-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:13px;color:var(--cream);margin-bottom:4px;}
+  .bc-char{font-size:11.5px;color:var(--cream-dim);line-height:1.5;}
+  @media(max-width:560px){.three-guna-row,.buddhi-complete{grid-template-columns:1fr;}.inversion-grid{grid-template-columns:1fr;}.inv-arrow{transform:rotate(90deg);}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 32 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#3d1f5a"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#6a3d7a"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#9060b0"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#c0a0d8" opacity="0.8"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.३२</div>
+    </div>
+    <div class="guna-badge">⬛ तामसिकी बुद्धि — बुद्धि त्रयी श्लोक ३/३</div>
+    <div class="shloka">
+      अधर्मं धर्ममिति या मन्यते तमसावृता।<br>
+      सर्वार्थान्विपरीतांश्च बुद्धिः सा पार्थ तामसी।।
+    </div>
+    <div class="translit">
+      adharmaṃ dharmam iti yā manyate tamasāvṛtā,<br>
+      sarvārthān viparītāṃś ca buddhiḥ sā pārtha tāmasī
+    </div>
+    <div class="gist">
+      हे पार्थ! जो बुद्धि <b>तमस से आवृत</b> होकर <b>अधर्म को धर्म मानती है</b> और <b>सर्व अर्थों को विपरीत</b> (उल्टा) देखती है — वह बुद्धि <b>तामसी</b> है।
+    </div>
+  </div>
+
+  <!-- MODE PILLS -->
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- ═══ MODE: CORE ═══ -->
+  <div class="mode-section active" id="mode-core">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="ctx">पूर्ववर्ती-संदर्भ</button>
+      <button class="tab-btn" data-tab="shabda">शब्दार्थ</button>
+      <button class="tab-btn" data-tab="bhavarth">भावार्थ</button>
+      <button class="tab-btn" data-tab="udaharan">उदाहरण</button>
+      <button class="tab-btn" data-tab="qa">प्रश्नोत्तर</button>
+    </div>
+    <div class="panel-shell">
+
+      <!-- पूर्ववर्ती-संदर्भ -->
+      <div class="panel active" id="ctx">
+        <h3>पूर्ववर्ती संदर्भ — बुद्धि त्रयी का समापन</h3>
+        <p>श्लोक <b>18.29</b> में कृष्ण ने घोषणा की — बुद्धि और धृति के त्रिगुण भेद सुनाने की। इसके बाद त्रयी क्रमशः आई: <b>18.30</b> — सात्त्विकी बुद्धि (यथावत् दृष्टि) और <b>18.31</b> — राजसिकी बुद्धि (अयथावत् / विकृत दृष्टि)।</p>
+        <p>अब <b>18.32</b> में तामसिकी बुद्धि — बुद्धि त्रयी का अंतिम और सर्वाधिक गहन पड़ाव। यहाँ भ्रम केवल 'विकृत' नहीं, बल्कि <b>पूर्ण विपरीत (inverted)</b> है।</p>
+        <div class="callout-tamas">
+          <b>त्रयी का क्रम:</b><br>
+          18.30 → यथावत् प्रजानाति (Clear Vision — सत्त्व)<br>
+          18.31 → अयथावत् प्रजानाति (Skewed Vision — रजस्)<br>
+          <b>18.32 → विपरीतां प्रजानाति (Inverted Vision — तमस्)</b>
+        </div>
+        <p>इस श्लोक में दो महत्त्वपूर्ण बिंदु हैं: पहला — <b>तमसावृता</b> (तमस् से ढकी हुई) — बुद्धि की इस दशा का <em>कारण</em> स्पष्ट किया। दूसरा — <b>सर्वार्थान् विपरीतान्</b> — सब अर्थों में, हर विषय में, उलट-दृष्टि। यह एकांगी नहीं, सर्वव्यापी विपर्यय है।</p>
+        <p>बुद्धि त्रयी पूर्ण होते ही गीता अगले विषय — <b>धृति त्रयी (18.33–35)</b> — की ओर बढ़ेगी।</p>
+      </div>
+
+      <!-- शब्दार्थ -->
+      <div class="panel" id="shabda">
+        <h3>शब्दार्थ — पद-विश्लेषण</h3>
+        <div class="eng-box"><span>English Rendering</span>That intellect which, enveloped by tamas, regards adharma as dharma and sees all things in an inverted (contrary) way — that intellect, O Pārtha, is tāmasic.</div>
+        <div class="word-grid">
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">अधर्मम्</span><span class="word-tr">adharmam</span></div>
+            <div class="word-meaning">अधर्म को — निषिद्ध, कर्तव्य-विरुद्ध आचरण</div>
+            <div class="word-eng"><b>a-dharma</b> — यहाँ कर्म-कारक (object of मन्यते)</div>
+            <div class="word-deep">ध्यान दें: यह श्लोक अधर्म से <em>आरंभ</em> होता है — जो कि तामसी बुद्धि की विषय-वस्तु है। 18.30–31 में धर्म पहले आता था।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">धर्ममिति</span><span class="word-tr">dharmam iti</span></div>
+            <div class="word-meaning">धर्म है — ऐसा मानना</div>
+            <div class="word-eng"><b>dharmam + iti</b> — 'iti' = उद्धरण-चिह्न जैसा (quotative particle) — "यह धर्म है" ऐसा</div>
+            <div class="word-deep">'iti' का प्रयोग मन की आंतरिक घोषणा को दर्शाता है — बुद्धि स्वयं से कहती है "यह धर्म है।"</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">या मन्यते</span><span class="word-tr">yā manyate</span></div>
+            <div class="word-meaning">जो (बुद्धि) मानती है / समझती है</div>
+            <div class="word-eng"><b>√man</b> (मानना, सोचना) — आत्मनेपद, प्र.पु.एक. लट्</div>
+            <div class="word-deep">18.30–31 में 'प्रजानाति' (ज्ञान) था; यहाँ 'मन्यते' (मानना/विश्वास) — तमस् में ज्ञान नहीं, केवल भ्रम-विश्वास है</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">तमसावृता</span><span class="word-tr">tamasā āvṛtā</span></div>
+            <div class="word-meaning">तमस् से आवृत (ढकी हुई)</div>
+            <div class="word-eng"><b>tamas + āvṛta</b> — āvṛta = √vṛ (ढकना) + आ उपसर्ग। स्त्री. (बुद्धि के लिए)</div>
+            <div class="word-deep">यह इस श्लोक का <em>कारण-पद</em> है। बुद्धि विपरीत क्यों देखती है? — क्योंकि <b>तमस् ने उसे ढक दिया</b> है। जैसे धुएँ से ढका दीपक प्रकाश नहीं दे सकता।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">सर्वार्थान्</span><span class="word-tr">sarvārthān</span></div>
+            <div class="word-meaning">सभी अर्थों को / सभी विषयों को</div>
+            <div class="word-eng"><b>sarva + artha</b> — द्वि. बहु. — "all things / purposes / meanings"</div>
+            <div class="word-deep">यह 'सर्व' शब्द महत्त्वपूर्ण है — राजसी में कुछ विषयों में विकृति थी, तामसी में <b>सभी विषयों में</b> विपर्यय है। यह सर्वव्यापी अज्ञान है।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">विपरीतान्</span><span class="word-tr">viparītān</span></div>
+            <div class="word-meaning">विपरीत / उल्टे / contrary</div>
+            <div class="word-eng"><b>vi + parī + √i</b> — "turned the other way around"। द्वि. बहु.</div>
+            <div class="word-deep">राजसी = अयथावत् (skewed/partial) · तामसी = <b>विपरीत</b> (completely inverted/reversed). गुणात्मक अंतर: एक में दिशा तिरछी है, दूसरे में दिशा पूर्णतः विरुद्ध।</div>
+          </div>
+          <div class="word-card">
+            <div class="word-top"><span class="word-sa">तामसी</span><span class="word-tr">tāmasī</span></div>
+            <div class="word-meaning">तामसिक / तमोगुण-प्रधान</div>
+            <div class="word-eng"><b>tāmasa</b> (विशे.) → स्त्री.: तामसी (बुद्धि के साथ)</div>
+            <div class="word-deep">तमोगुण = जड़ता, आवरण, मोह, प्रमाद — इसीलिए बुद्धि को 'आवृत' कहा गया: तमस् ने उसे चारों ओर से ढक दिया</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- भावार्थ -->
+      <div class="panel" id="bhavarth">
+        <h3>भावार्थ — गहन विश्लेषण</h3>
+        <p><b>तामसिकी बुद्धि की दो परिभाषाएँ</b> इस एक श्लोक में दी गई हैं — और दोनों परस्पर-पूरक हैं:</p>
+
+        <p><b>१. अधर्मं धर्ममिति मन्यते</b> — अधर्म को धर्म मानना। यह केवल 'गलत काम करना' नहीं है; यह उस गलत काम को <em>धर्म-सम्मत</em> मान लेना है। इसमें न कोई संशय है, न कोई guilt — क्योंकि बुद्धि पूरी तरह तमस् में डूबी है।</p>
+
+        <div class="callout-tamas">
+          <b>तीन स्तरों का विपर्यय:</b><br>
+          · अधर्म = धर्म (नैतिक उलटाव)<br>
+          · अकार्य = कार्य (कर्म-उलटाव)<br>
+          · बंध = मोक्ष · भय = अभय (ये सब 'सर्वार्थान् विपरीतान्' में समाहित हैं)
+        </div>
+
+        <p><b>२. सर्वार्थान् विपरीतान्</b> — यह दूसरी परिभाषा और भी व्यापक है। केवल धर्म-अधर्म नहीं — <em>सभी अर्थों में</em> विपर्यय। अर्थ = meaning/purpose/value — अर्थात् इस बुद्धि के लिए हर मूल्य उल्टा है।</p>
+
+        <p><b>तमसावृता — कारण का स्पष्टीकरण:</b> यह श्लोक बुद्धि की इस दशा का <em>कारण</em> भी देता है — तमस् से आवरण। तमोगुण का स्वभाव है — <em>आवरण (covering)</em> और <em>प्रमाद (delusion)</em>। जैसे घने बादल सूर्य को ढक लेते हैं, वैसे ही तमस् बुद्धि की प्रकाश-शक्ति को ढक लेता है।</p>
+
+        <div class="callout">
+          <b>गीता 14.8 से:</b> तमोगुण के तीन लक्षण — प्रमाद (negligence), आलस्य (laziness), निद्रा (sleep) — ये बुद्धि को जड़ और मोहित बना देते हैं।
+        </div>
+
+        <p><b>'मन्यते' बनाम 'प्रजानाति':</b> 18.30–31 में क्रिया 'प्रजानाति' (ज्ञान-प्रक्रिया) थी। 18.32 में 'मन्यते' (मानना/believing) है। यह अंतर गहन है — तामसी बुद्धि <em>जानती नहीं</em>, बल्कि <em>मान लेती है</em>। ज्ञान की क्षमता ही आवृत है।</p>
+
+        <div class="callout-tamas">
+          <b>सबसे कठिन पहचान:</b> तामसिकी बुद्धि वाले व्यक्ति को न संशय होता है, न पश्चाताप। वह अपने विपर्यय को ही सत्य मानता है — इसीलिए इसे सुधारना सबसे कठिन है। राजसी में संदेह की झलक रहती है; तामसी में वह भी नहीं।
+        </div>
+      </div>
+
+      <!-- उदाहरण -->
+      <div class="panel" id="udaharan">
+        <h3>उदाहरण — जीवन में तामसिकी बुद्धि</h3>
+
+        <div class="example">
+          <p><b>🏛️ इतिहास में धर्म के नाम पर अत्याचार:</b> अनेक ऐतिहासिक काल में हत्या, दमन, और अन्याय को 'ईश्वर की आज्ञा' या 'धर्म-रक्षा' कहकर किया गया। वहाँ बुद्धि को सच में लग रहा था — "यह धर्म है।" यही तामसिकी बुद्धि है — अधर्मं धर्ममिति मन्यते।</p>
+        </div>
+
+        <div class="example">
+          <p><b>🎭 आत्म-विनाश को 'स्वतंत्रता' मानना:</b> व्यसन (addiction) में व्यक्ति मानता है — "यह मेरी choice है, मैं स्वतंत्र हूँ।" बंधन को स्वतंत्रता मानना, विनाश को सुख मानना — यह सर्वार्थान् विपरीतान् है।</p>
+        </div>
+
+        <div class="example">
+          <p><b>👿 हिंसा को वीरता समझना:</b> तमस-ग्रस्त व्यक्ति निर्दोष की हत्या में 'साहस' देखता है, कायरता में 'शांति' देखता है। मूल्यों का पूर्ण उलटाव — यह राजसी की तरह rationalization नहीं, बल्कि genuine विपर्यय है।</p>
+        </div>
+
+        <div class="example">
+          <p><b>📖 आध्यात्मिक संदर्भ — मोक्ष को बंधन और बंधन को मोक्ष मानना:</b> कुछ मत मानते हैं — "इंद्रिय-सुख ही जीवन का लक्ष्य है; वैराग्य तो पलायन है।" 18.30 की सात्त्विकी बुद्धि जो 'बंध-मोक्ष' को यथावत् देखती है, उसके ठीक विपरीत — मोक्ष को बंधन और संसार को ही मुक्ति मानना।</p>
+        </div>
+
+        <div class="example">
+          <p><b>🌑 व्यक्तिगत जीवन — क्रोध को 'न्याय' मानना:</b> तमस-ग्रस्त व्यक्ति अपने अनियंत्रित क्रोध को 'न्याय का आक्रोश' कहता है, अहंकार को 'आत्मसम्मान' कहता है, और क्षमा को 'कमज़ोरी' मानता है। सभी मूल्य उलटे — यही सर्वार्थान् विपरीतान् है।</p>
+        </div>
+      </div>
+
+      <!-- प्रश्नोत्तर -->
+      <div class="panel" id="qa">
+        <h3>प्रश्नोत्तर</h3>
+
+        <div class="faq">
+          <div class="q">प्र. 'अयथावत्' (18.31) और 'विपरीत' (18.32) में क्या मौलिक अंतर है?</div>
+          <div class="a">अयथावत् = सत्य से विचलित, तिरछा — सत्य की झलक है पर रागजनित विकृति है। विपरीत = सत्य के ठीक विरुद्ध — जैसे दर्पण में उलटी छवि। राजसी में धर्म-अधर्म की पहचान है पर कामना ने उसे मोड़ा है; तामसी में धर्म ही अधर्म लगता है — पहचान ही गलत है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 18.30 में 'प्रजानाति' और 18.32 में 'मन्यते' — यह बदलाव क्यों?</div>
+          <div class="a">यह कृष्ण की सूक्ष्म शैली है। 'प्रजानाति' = ज्ञान-क्रिया, 'मन्यते' = विश्वास/मानना। सात्त्विकी और राजसी बुद्धि में ज्ञान-प्रक्रिया चल रही है (सही या गलत दिशा में); तामसी में ज्ञान की क्षमता ही तमस् से आवृत है — वह 'जानती' नहीं, 'मान लेती' है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 'तमसावृता' — क्या यह कर्मफल है या स्वभाव?</div>
+          <div class="a">गीता के अनुसार दोनों। तमोगुण पिछले संस्कारों, आहार, संगति, और कर्मों से बढ़ता है (14.17)। लेकिन यह अटल नहीं — सत्त्व बढ़ाने से तमस् घटता है। 'आवृत' शब्द से संकेत है कि यह बुद्धि का स्वभाव नहीं, बल्कि एक आवरण (covering) है — जो हटाया जा सकता है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. क्या तामसिकी बुद्धि वाला व्यक्ति कभी सुधर सकता है?</div>
+          <div class="a">गीता निराशावादी नहीं है। 14.26 में कहा — भक्ति से गुणातीत हुआ जा सकता है। लेकिन तामसी बुद्धि का उपचार कठिन है क्योंकि उसे लगता ही नहीं कि कुछ गलत है। इसलिए सद्गुरु और शास्त्र-संपर्क ही मार्ग है — बाहरी प्रकाश, क्योंकि आंतरिक प्रकाश तमस् ने ढक दिया है।</div>
+        </div>
+
+        <div class="faq">
+          <div class="q">प्र. 'सर्वार्थान् विपरीतान्' में 'अर्थ' का क्या अर्थ है?</div>
+          <div class="a">'अर्थ' यहाँ बहुअर्थी है — (१) अर्थ = meaning (अर्थ/मतलब), (२) अर्थ = purpose (प्रयोजन), (३) अर्थ = value (मूल्य)। शंकराचार्य के अनुसार 'सर्वार्थान्' = धर्म, अर्थ, काम, मोक्ष — अर्थात् जीवन के चारों पुरुषार्थ भी इस बुद्धि को विपरीत दिखते हैं।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PERSPECTIVES ═══ -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="mahattva">महत्त्व</button>
+      <button class="tab-btn" data-tab="mindmap">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="tulna">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="sadhana">साधना</button>
+      <button class="tab-btn" data-tab="acharya">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="mahattva">
+        <h3>महत्त्व — इस श्लोक की विशिष्टता</h3>
+        <p>यह श्लोक <b>बुद्धि त्रयी का चरमोत्कर्ष और समापन</b> दोनों है। तीन श्लोकों (18.30–32) में कृष्ण ने मानव-बुद्धि के तीन स्तर दिखाए — और 18.32 सबसे अंधेरा स्तर है।</p>
+        <div class="callout-tamas">
+          <b>विशेष भाषाई संकेत:</b> 18.30 में सात्त्विकी बुद्धि के लिए कृष्ण ने <em>सबसे अधिक शब्द</em> दिए (4 द्वंद्व युगल)। 18.31 में 2 युगल। 18.32 में संक्षेप — लेकिन 'सर्वार्थान् विपरीतान्' से सब समाहित। <b>जितना अंधकार, उतनी कम विस्तार की जरूरत।</b>
+        </div>
+        <p>इस श्लोक में <b>दो नई बातें</b> पिछले दो श्लोकों से भिन्न हैं: (१) <em>तमसावृता</em> — कारण का उल्लेख (पहले दो श्लोकों में नहीं था), और (२) <em>मन्यते</em> बनाम <em>प्रजानाति</em> — ज्ञान-क्रिया का प्रकार बदला।</p>
+        <p>इस श्लोक का आधुनिक महत्त्व: <b>ideological extremism, cult thinking, और moral inversion</b> — जहाँ हत्या को पुण्य, और करुणा को कायरता कहा जाता है — ये सब तामसिकी बुद्धि के आधुनिक रूप हैं।</p>
+      </div>
+
+      <div class="panel" id="mindmap">
+        <h3>माइंड-मैप — तामसिकी बुद्धि की संरचना</h3>
+        <svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;background:rgba(0,0,0,0.25);">
+          <defs>
+            <radialGradient id="centGrad32" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(60,30,90,0.7)"/>
+              <stop offset="100%" stop-color="rgba(60,30,90,0.2)"/>
+            </radialGradient>
+          </defs>
+          <!-- Center -->
+          <ellipse cx="380" cy="215" rx="96" ry="44" fill="url(#centGrad32)" stroke="rgba(106,61,122,0.8)" stroke-width="2"/>
+          <text x="380" y="208" font-family="Tiro Devanagari Hindi,serif" font-size="15" fill="#c0a0d8" text-anchor="middle">तामसिकी बुद्धि</text>
+          <text x="380" y="228" font-family="EB Garamond,serif" font-style="italic" font-size="12" fill="#cfc3a8" text-anchor="middle">तमसावृता · विपरीतान्</text>
+
+          <!-- Branch: तमसावृता (cause) -->
+          <line x1="290" y1="198" x2="148" y2="130" stroke="rgba(106,61,122,0.5)" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <ellipse cx="98" cy="118" rx="70" ry="28" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="98" y="113" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">तमसावृता</text>
+          <text x="98" y="129" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">कारण: तमस् का आवरण</text>
+
+          <!-- Branch: अधर्म = धर्म -->
+          <line x1="380" y1="171" x2="380" y2="76" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="380" cy="55" rx="90" ry="26" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="380" y="50" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">अधर्मं = धर्म</text>
+          <text x="380" y="66" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">नैतिक उलटाव</text>
+
+          <!-- Branch: सर्वार्थान् विपरीतान् -->
+          <line x1="468" y1="196" x2="612" y2="130" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="660" cy="118" rx="80" ry="28" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="660" y="113" font-family="Tiro Devanagari Hindi,serif" font-size="12" fill="#c0a0d8" text-anchor="middle">सर्वार्थान् विपरीतान्</text>
+          <text x="660" y="129" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">सर्व-विषय उलटाव</text>
+
+          <!-- Branch: मन्यते (not प्रजानाति) -->
+          <line x1="368" y1="259" x2="230" y2="340" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="178" cy="354" rx="80" ry="28" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="178" y="349" font-family="Tiro Devanagari Hindi,serif" font-size="13" fill="#c0a0d8" text-anchor="middle">मन्यते</text>
+          <text x="178" y="365" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">ज्ञान नहीं — भ्रम-विश्वास</text>
+
+          <!-- Branch: Inversion examples -->
+          <line x1="418" y1="256" x2="542" y2="340" stroke="rgba(106,61,122,0.5)" stroke-width="1.5"/>
+          <ellipse cx="600" cy="354" rx="88" ry="28" fill="rgba(60,30,90,0.2)" stroke="rgba(106,61,122,0.5)" stroke-width="1.2"/>
+          <text x="600" y="349" font-family="Tiro Devanagari Hindi,serif" font-size="12" fill="#c0a0d8" text-anchor="middle">बंध = मोक्ष</text>
+          <text x="600" y="365" font-family="Mukta,sans-serif" font-size="11" fill="#cfc3a8" text-anchor="middle">भय = अभय · अकार्य = कार्य</text>
+
+          <text x="380" y="408" font-family="EB Garamond,serif" font-style="italic" font-size="12.5" fill="rgba(106,61,122,0.6)" text-anchor="middle">न संशय · न guilt · पूर्ण भ्रम-विश्वास — बुद्धि त्रयी की अंतिम अवस्था</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="tulna">
+        <h3>तुलनात्मक — बुद्धि त्रयी पूर्ण (18.30–32)</h3>
+        <p class="subnote">तीनों श्लोक अब पूर्ण हुए — एक साथ देखें।</p>
+        <div class="buddhi-complete">
+          <div class="bc-card sat">
+            <div class="bc-label">✅ सात्त्विकी · 18.30</div>
+            <div class="bc-sa">यथावत् प्रजानाति</div>
+            <div class="bc-char">स्पष्ट · निर्मल · निष्पक्ष<br>ज्ञान की पूर्ण क्षमता</div>
+          </div>
+          <div class="bc-card raj">
+            <div class="bc-label">🔥 राजसिकी · 18.31</div>
+            <div class="bc-sa">अयथावत् प्रजानाति</div>
+            <div class="bc-char">विकृत · कामना-रंजित<br>ज्ञान है, पर तिरछा</div>
+          </div>
+          <div class="bc-card tam">
+            <div class="bc-label">⬛ तामसिकी · 18.32</div>
+            <div class="bc-sa">विपरीतान् मन्यते</div>
+            <div class="bc-char">उल्टा · तमस्-आवृत<br>ज्ञान नहीं, भ्रम</div>
+          </div>
+        </div>
+        <table class="cmp-table">
+          <tr><th>पहलू</th><th>सात्त्विकी (18.30)</th><th>राजसिकी (18.31)</th><th>तामसिकी (18.32)</th></tr>
+          <tr><td>क्रिया</td><td>प्रजानाति</td><td>प्रजानाति</td><td>मन्यते</td></tr>
+          <tr><td>दृष्टि</td><td>यथावत्</td><td>अयथावत्</td><td>विपरीत</td></tr>
+          <tr><td>कारण-उल्लेख</td><td>नहीं</td><td>नहीं</td><td>तमसावृता ✓</td></tr>
+          <tr><td>भ्रम की प्रकृति</td><td>शून्य</td><td>Skewed (partial)</td><td>Inverted (complete)</td></tr>
+          <tr><td>Guilt / संशय</td><td>—</td><td>हाँ (कुछ)</td><td>नहीं (पूर्ण विश्वास)</td></tr>
+          <tr><td>पुरुषार्थ-प्रभाव</td><td>चारों सम्यक्</td><td>कुछ विकृत</td><td>सर्वार्थान् विपरीत</td></tr>
+          <tr><td>सुधार की कठिनाई</td><td>—</td><td>मध्यम</td><td>सर्वाधिक कठिन</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="sadhana">
+        <h3>साधना — तमस् से मुक्ति का मार्ग</h3>
+        <p>तामसिकी बुद्धि का उपचार कठिनतम है क्योंकि वह स्वयं को गलत नहीं मानती। इसलिए <em>बाहरी प्रकाश</em> चाहिए — सद्गुरु, शास्त्र, और सत्संग।</p>
+        <div class="callout-tamas">
+          <b>गीता 14.16 से:</b> तमोगुण से उत्पन्न होता है — मोह, प्रमाद, अज्ञान। और 14.17: "सत्त्व से ज्ञान जन्मता है।" इसलिए तमस् का उपाय है — सत्त्व की वृद्धि।
+        </div>
+        <p><b>व्यावहारिक उपाय:</b></p>
+        <div class="callout">
+          <b>१. आहार-शुद्धि:</b> गीता 17.10 — तामसिक आहार (बासी, दुर्गंधयुक्त, अपवित्र) तमोगुण बढ़ाता है। आहार-परिवर्तन से बुद्धि पर पहला प्रभाव पड़ता है।
+        </div>
+        <div class="callout">
+          <b>२. दिनचर्या-नियमन:</b> तमोगुण = निद्रा और प्रमाद। ब्रह्ममुहूर्त में जागना, नियमित अध्यात्म-अभ्यास — ये तमस् को सीधे कम करते हैं।
+        </div>
+        <div class="callout-sat">
+          <b>३. सत्संग और शास्त्र-श्रवण:</b> तमस् में 'स्वतः' का उपाय नहीं — बाहरी प्रकाश चाहिए। जब बुद्धि स्वयं आवृत है, तब गुरु और शास्त्र ही उसे प्रकाश देते हैं। (गीता 4.34 — ज्ञानियों के पास जाकर प्रश्न पूछो।)
+        </div>
+        <p><b>पहचान की साधना:</b> "क्या मेरा यह विश्वास शास्त्र-सम्मत है? क्या यह मेरे गुरु कहेंगे?" — यह प्रश्न तामसिकी बुद्धि को बाहरी दर्पण देता है।</p>
+      </div>
+
+      <div class="panel" id="acharya">
+        <h3>आचार्य-मत — व्याख्याएँ</h3>
+        <div class="callout-tamas">
+          <b>शंकराचार्य:</b> 'तमसावृता' — तमोगुण ने बुद्धि को आच्छादित कर दिया है, जैसे धुएँ से अग्नि ढक जाती है। इस दशा में बुद्धि न केवल गलत निर्णय करती है, बल्कि उसमें सुधार की इच्छा भी नहीं रहती — क्योंकि वह गलत को ही सही समझती है।
+        </div>
+        <div class="callout-rajas">
+          <b>रामानुजाचार्य:</b> 'सर्वार्थान् विपरीतान्' — चारों पुरुषार्थ (धर्म, अर्थ, काम, मोक्ष) तामसी बुद्धि को विपरीत दिखते हैं। वह मोक्ष को बंधन, बंधन को स्वतंत्रता मानती है। इसीलिए यह सबसे खतरनाक दशा है।
+        </div>
+        <div class="callout">
+          <b>स्वामी चिन्मयानंद:</b> 'मन्यते' और 'प्रजानाति' का अंतर — तामसी में ज्ञान-प्रक्रिया ही नहीं होती; केवल belief होती है। ऐसे व्यक्ति तर्क-वितर्क में नहीं आते — उनका मत अंधा विश्वास है।
+        </div>
+        <div class="callout-tamas">
+          <b>श्रील प्रभुपाद (ISKCON):</b> तामसिकी बुद्धि वाला व्यक्ति हर चीज़ को उलटा देखता है — धर्म में अधर्म, सेवा में बंधन। इसीलिए भक्ति-योग सबसे प्रभावशाली उपाय है — यह सीधे तमोगुण को काटता है।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: PRACTICE ═══ -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="flash">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="quiz">क्विज़</button>
+      <button class="tab-btn" data-tab="gram">व्याकरण</button>
+      <button class="tab-btn" data-tab="sutra">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="flash">
+        <h3>फ्लैशकार्ड — पद-स्मरण</h3>
+        <p class="flash-instructions">कार्ड पर क्लिक करें — अर्थ पलटेगा।</p>
+        <div class="flashcard-grid">
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#c0a0d8;">तमसावृता</span>
+                <span style="font-size:12px;color:#cfc3a8;">अर्थ और महत्त्व?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>तमस् से आवृत</b> — ढकी हुई। इस श्लोक में बुद्धि की विपरीत दृष्टि का <b>कारण</b> दिया गया।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#c0a0d8;">मन्यते</span>
+                <span style="font-size:12px;color:#cfc3a8;">18.30 से अंतर?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>मानना/believing</b> — 18.30–31 में 'प्रजानाति' (ज्ञान) था। यहाँ 'मन्यते' = ज्ञान-क्षमता ही आवृत; केवल भ्रम-विश्वास।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#c0a0d8;">सर्वार्थान्</span>
+                <span style="font-size:12px;color:#cfc3a8;">व्याकरण?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>सर्व + अर्थ</b> → द्वि. बहु. — "सभी अर्थों/विषयों को।" राजसी में कुछ विकृत था; यहाँ <b>सब</b> विपरीत।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#c0a0d8;">विपरीतान्</span>
+                <span style="font-size:12px;color:#cfc3a8;">अयथावत् से भेद?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>पूर्णतः उल्टा</b> — अयथावत् = तिरछा (skewed); विपरीत = ठीक विरुद्ध (inverted)। गुणात्मक, मात्रात्मक नहीं।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#c0a0d8;">धर्ममिति</span>
+                <span style="font-size:12px;color:#cfc3a8;">'इति' का क्या काम?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>Quotative particle</b> — "धर्म है, ऐसा।" बुद्धि की आंतरिक घोषणा। 'इति' = mental speech marker।</div>
+            </div>
+          </div>
+          <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span style="font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:#c0a0d8;">तामसी</span>
+                <span style="font-size:12px;color:#cfc3a8;">क्रिया का मुख्य गुण?</span>
+              </div>
+              <div class="flashcard-face flashcard-back"><b>तमोगुण</b> = आवरण, जड़ता, प्रमाद। बुद्धि का 'आवृत' होना — प्रकाश ढका, इसलिए सब विपरीत दिखता है।</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="quiz">
+        <h3>क्विज़ — 18.32 परीक्षण</h3>
+        <div id="quiz32-container"></div>
+      </div>
+
+      <div class="panel" id="gram">
+        <h3>व्याकरण — पद-विभाजन</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति / लकार</th><th>भूमिका</th></tr>
+          <tr><td class="sa">अधर्मम्</td><td>अधर्म (पुं.)</td><td>द्वि. एक.</td><td>मन्यते का कर्म</td></tr>
+          <tr><td class="sa">धर्मम्</td><td>धर्म (पुं.)</td><td>द्वि. एक.</td><td>predicate (ऐसा मानी जाने वाली वस्तु)</td></tr>
+          <tr><td class="sa">इति</td><td>इति (अव्यय)</td><td>—</td><td>Quotative — "ऐसा" (mental speech marker)</td></tr>
+          <tr><td class="sa">या</td><td>यद् (सर्व.)</td><td>स्त्री., प्र.एक.</td><td>बुद्धि का सम्बन्ध-वाचक</td></tr>
+          <tr><td class="sa">मन्यते</td><td>√मन्</td><td>आ.लट्, प्र.पु.एक.</td><td>मुख्य क्रिया — "मानती है"</td></tr>
+          <tr><td class="sa">तमसावृता</td><td>तमस् + आवृत</td><td>स्त्री., प्र.एक.</td><td>बुद्धि का विशेषण (कारण-सूचक)</td></tr>
+          <tr><td class="sa">सर्वार्थान्</td><td>सर्व + अर्थ</td><td>द्वि. बहु.</td><td>द्वितीय कर्म — "सभी अर्थों को"</td></tr>
+          <tr><td class="sa">विपरीतान्</td><td>वि + परि + √इ</td><td>द्वि. बहु.</td><td>विशेषण (सर्वार्थान् के लिए)</td></tr>
+          <tr><td class="sa">च</td><td>च (अव्यय)</td><td>—</td><td>समुच्चयबोधक — "और भी"</td></tr>
+          <tr><td class="sa">बुद्धिः</td><td>बुद्धि (स्त्री.)</td><td>प्र. एक.</td><td>कर्ता (subject)</td></tr>
+          <tr><td class="sa">सा</td><td>तद् (सर्व.)</td><td>स्त्री., प्र.एक.</td><td>बुद्धि का निर्देश</td></tr>
+          <tr><td class="sa">पार्थ</td><td>पृथा + अण्</td><td>सं. एक.</td><td>संबोधन — अर्जुन</td></tr>
+          <tr><td class="sa">तामसी</td><td>तामस (विशे.)</td><td>स्त्री., प्र.एक.</td><td>विधेय विशेषण — "तामसी है"</td></tr>
+        </table>
+        <div class="callout" style="margin-top:18px;">
+          <b>संधि:</b> अधर्मम् + धर्मम् + इति = अधर्मं धर्ममिति (अनुस्वार + दीर्घ संधि)। तमसा + आवृता = तमसावृता (आ + आ = आ, दीर्घ संधि)।
+        </div>
+      </div>
+
+      <div class="panel" id="sutra">
+        <h3>सारांश-सूत्र — त्वरित स्मरण</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">
+            अधर्मं धर्ममिति या मन्यते तमसावृता।<br>
+            सर्वार्थान्विपरीतांश्च बुद्धिः सा पार्थ तामसी।।
+          </div>
+          <div class="cheat-translit">adharmaṃ dharmam iti yā manyate tamasāvṛtā · sarvārthān viparītāṃś ca · buddhiḥ sā pārtha tāmasī</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अधर्मं धर्मम्</b> = उलट-पहचान</span>
+            <span class="cheat-chip"><b>इति</b> = मन की घोषणा</span>
+            <span class="cheat-chip"><b>मन्यते</b> = भ्रम-विश्वास</span>
+            <span class="cheat-chip"><b>तमसावृता</b> = कारण — तमस् का आवरण</span>
+            <span class="cheat-chip"><b>सर्वार्थान्</b> = सभी विषयों में</span>
+            <span class="cheat-chip"><b>विपरीतान्</b> = पूर्ण उलटाव</span>
+            <span class="cheat-chip"><b>तामसी</b> = तमोगुण-प्रधान बुद्धि</span>
+          </div>
+          <div class="cheat-takeaway">
+            🔑 सूत्र: <b>तामसिकी बुद्धि = तमस् से आवृत — अधर्म को धर्म मानती है, सब विपरीत देखती है</b><br>
+            न संशय · न guilt · पूर्ण भ्रम-विश्वास — बुद्धि त्रयी की अंतिम और सबसे गहरी अवस्था
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: MEDIA ═══ -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="shravan">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="walkthru">वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="jap">जप/अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="shravan">
+        <h3>श्रवण मोड — TTS</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('अधर्मं धर्ममिति या मन्यते तमसावृता। सर्वार्थान्विपरीतांश्च बुद्धिः सा पार्थ तामसी।')">▶ श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('हे पार्थ! जो बुद्धि तमस से आवृत होकर अधर्म को धर्म मानती है और सभी अर्थों को विपरीत देखती है — वह बुद्धि तामसी है।')">▶ भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+        <div class="callout-tamas">
+          <b>श्रवण-संकेत:</b> 'तमसावृता' पर विशेष ध्यान दें — यह कारण-पद है। 'मन्यते' में 'प्रजानाति' से भेद महसूस करें — ज्ञान नहीं, भ्रम। 'सर्वार्थान् विपरीतान्' — 'सर्व' पर बल दें — कोई अपवाद नहीं।
+        </div>
+      </div>
+
+      <div class="panel" id="walkthru">
+        <h3>वॉकथ्रू — चरण-दर-चरण</h3>
+        <div id="walk32-stage" class="walk-stage"><p id="walk32-text">▶ Start पर क्लिक करें।</p></div>
+        <div class="walk-controls">
+          <button onclick="walk32(-1)">◀</button>
+          <button onclick="walk32Start()">▶ Start</button>
+          <button onclick="walk32(1)">▶</button>
+        </div>
+        <div class="walk-progress-row" id="walk32-dots"></div>
+      </div>
+
+      <div class="panel" id="jap">
+        <h3>जप / अभ्यास — पाद-विभाजन</h3>
+        <p class="subnote">अनुष्टुप् छंद — प्रत्येक पाद ८ अक्षर। क्लिक करके सुनें।</p>
+        <div style="margin-bottom:18px;">
+          <div class="pada-label">पाद १</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('अधर्मं')">अधर्मं</span>
+            <span class="syll" onclick="speakSyl('धर्मम्')">धर्मम्</span>
+            <span class="syll" onclick="speakSyl('इति')">इति</span>
+            <span class="syll" onclick="speakSyl('या')">या</span>
+          </div>
+          <div class="pada-label">पाद २</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('मन्यते')">मन्यते</span>
+            <span class="syll" onclick="speakSyl('तमसा')">तमसा</span>
+            <span class="syll" onclick="speakSyl('आवृता')">आवृता</span>
+          </div>
+          <div class="pada-label">पाद ३</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('सर्वार्थान्')">सर्वार्थान्</span>
+            <span class="syll" onclick="speakSyl('विपरीतान्')">विपरीतान्</span>
+            <span class="syll" onclick="speakSyl('च')">च</span>
+          </div>
+          <div class="pada-label">पाद ४</div>
+          <div class="meter-row">
+            <span class="syll" onclick="speakSyl('बुद्धिः')">बुद्धिः</span>
+            <span class="syll" onclick="speakSyl('सा')">सा</span>
+            <span class="syll" onclick="speakSyl('पार्थ')">पार्थ</span>
+            <span class="syll" onclick="speakSyl('तामसी')">तामसी</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ MODE: INFOGRAPHICS ═══ -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="inversion">विपर्यय-दर्पण</button>
+      <button class="tab-btn" data-tab="trayayi">बुद्धि त्रयी पूर्ण</button>
+      <button class="tab-btn" data-tab="roadmap">अध्याय रोडमैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="inversion">
+        <h3>विपर्यय-दर्पण — तामसिकी बुद्धि में क्या उल्टा होता है</h3>
+        <p class="subnote">सात्त्विकी बुद्धि यथावत् देखती है; तामसिकी ठीक उल्टा।</p>
+        <div class="inversion-grid">
+          <div class="inv-box truth">
+            <div class="inv-label">✅ यथार्थ (सत्त्व)</div>
+            <div class="inv-sa">धर्म = धर्म</div>
+            <p>कर्तव्य-पालन</p>
+          </div>
+          <div class="inv-arrow">⇄</div>
+          <div class="inv-box error">
+            <div class="inv-label">⬛ तामसी विपर्यय</div>
+            <div class="inv-sa">अधर्म = धर्म</div>
+            <p>पाप को पुण्य मानना</p>
+          </div>
+        </div>
+        <div class="inversion-grid">
+          <div class="inv-box truth">
+            <div class="inv-label">✅ यथार्थ</div>
+            <div class="inv-sa">अकार्य = अकार्य</div>
+            <p>वर्जित कर्म वर्जित है</p>
+          </div>
+          <div class="inv-arrow">⇄</div>
+          <div class="inv-box error">
+            <div class="inv-label">⬛ तामसी विपर्यय</div>
+            <div class="inv-sa">अकार्य = कार्य</div>
+            <p>निषिद्ध को करणीय मानना</p>
+          </div>
+        </div>
+        <div class="inversion-grid">
+          <div class="inv-box truth">
+            <div class="inv-label">✅ यथार्थ</div>
+            <div class="inv-sa">मोक्ष = मोक्ष</div>
+            <p>मुक्ति ही लक्ष्य</p>
+          </div>
+          <div class="inv-arrow">⇄</div>
+          <div class="inv-box error">
+            <div class="inv-label">⬛ तामसी विपर्यय</div>
+            <div class="inv-sa">बंध = मोक्ष</div>
+            <p>संसार को ही मुक्ति मानना</p>
+          </div>
+        </div>
+        <div class="callout-tamas" style="margin-top:6px;">
+          <b>सर्वार्थान् विपरीतान् च</b> — यह "च" महत्त्वपूर्ण है। ऊपर के तीन उदाहरण केवल उदाहरण हैं — <em>सभी</em> विषयों में विपर्यय है।
+        </div>
+      </div>
+
+      <div class="panel" id="trayayi">
+        <h3>बुद्धि त्रयी — पूर्ण (18.30–32)</h3>
+        <p class="subnote">तीनों श्लोक पूर्ण हुए — अब धृति त्रयी की ओर।</p>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">✅ 18.30 — सात्त्विकी</div>
+            <div class="guna-sa">यथावत् प्रजानाति</div>
+            <div class="guna-char">प्रवृत्ति-निवृत्ति<br>कार्य-अकार्य<br>भय-अभय<br>बंध-मोक्ष</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 18.31 — राजसिकी</div>
+            <div class="guna-sa">अयथावत् प्रजानाति</div>
+            <div class="guna-char">धर्म-अधर्म<br>कार्य-अकार्य<br>— तिरछी दृष्टि</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">⬛ 18.32 — तामसिकी (अभी)</div>
+            <div class="guna-sa">विपरीतान् मन्यते</div>
+            <div class="guna-char">अधर्म = धर्म<br>सर्वार्थान् विपरीत<br>— पूर्ण उलटाव</div>
+          </div>
+        </div>
+        <table class="cmp-table" style="margin-top:16px;">
+          <tr><th>क्रम</th><th>श्लोक</th><th>बुद्धि</th><th>क्रिया</th><th>दृष्टि</th></tr>
+          <tr><td>१</td><td>18.30</td><td>सात्त्विकी</td><td>प्रजानाति</td><td>यथावत् ✅</td></tr>
+          <tr><td>२</td><td>18.31</td><td>राजसिकी</td><td>प्रजानाति</td><td>अयथावत् ⚠</td></tr>
+          <tr><td>३</td><td>18.32</td><td>तामसिकी</td><td>मन्यते</td><td>विपरीत ✗</td></tr>
+        </table>
+        <div class="callout" style="margin-top:18px;">
+          <b>बुद्धि त्रयी पूर्ण!</b> अगला विषय — <b>धृति त्रयी (18.33–35)</b>: सात्त्विकी, राजसिकी, तामसिकी धृति (धारण-शक्ति) का त्रिगुण विश्लेषण।
+        </div>
+      </div>
+
+      <div class="panel" id="roadmap">
+        <h3>अध्याय 18 रोडमैप</h3>
+        <p class="subnote">बुद्धि त्रयी पूर्ण — अब धृति त्रयी की ओर प्रस्थान</p>
+        <div class="road-track">
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">ज्ञान त्रयी<br>20–22</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्म त्रयी<br>23–25</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">कर्ता त्रयी<br>26–28</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">घोषणा<br>29</div>
+          </div>
+          <div class="road-stop active">
+            <div class="road-dot"></div>
+            <div class="rlabel">बुद्धि त्रयी<br>30–32 ✅ पूर्ण</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">धृति त्रयी<br>33–35 →</div>
+          </div>
+          <div class="road-stop">
+            <div class="road-dot"></div>
+            <div class="rlabel">सुख त्रयी<br>36–39</div>
+          </div>
+        </div>
+        <div class="callout-tamas" style="margin-top:24px;">
+          <b>आगे क्या?</b> धृति त्रयी — 18.33 सात्त्विकी धृति: जो मन, प्राण, और इंद्रियों को अव्यभिचारी योग से धारण करती है।
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">← <a href="gita_18_31.html" style="color:var(--gold-light);text-decoration:none;">18.31 राजसिकी बुद्धि</a> &nbsp;|&nbsp; <a href="gita_18_33.html" style="color:var(--gold-light);text-decoration:none;">18.33 सात्त्विकी धृति →</a></div>
+
+</div><!-- .wrap -->
+
+<script>
+// ── Mode Pills ──
+document.querySelectorAll('.mode-pill').forEach(pill=>{
+  pill.addEventListener('click',()=>{
+    document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));
+    document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));
+    pill.classList.add('active');
+    document.getElementById(pill.dataset.mode).classList.add('active');
+    const firstTab=document.querySelector('#'+pill.dataset.mode+' .tab-btn');
+    if(firstTab) firstTab.click();
+  });
+});
+
+// ── Tab Bars ──
+document.querySelectorAll('.tabbar').forEach(bar=>{
+  bar.querySelectorAll('.tab-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const shell=bar.closest('.mode-section')||bar.parentElement;
+      shell.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+      shell.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      const target=btn.dataset.tab;
+      shell.querySelectorAll('.panel').forEach(p=>{if(p.id===target)p.classList.add('active');});
+    });
+  });
+});
+
+// ── TTS ──
+function speakText(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.82;window.speechSynthesis.speak(u);}
+function speakSyl(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';u.rate=0.7;window.speechSynthesis.speak(u);}
+
+// ── Walkthrough ──
+const walk32Steps=[
+  "श्लोक 18.32 का विषय:<br>तामसिकी बुद्धि — बुद्धि त्रयी का तीसरा और अंतिम पड़ाव।",
+  "पहला पाद:<br><b>अधर्मं धर्ममिति या</b><br>जो (बुद्धि) अधर्म को 'यह धर्म है' ऐसा मानती है...",
+  "दूसरा पाद:<br><b>मन्यते तमसावृता</b><br>...तमस् से आवृत होकर ऐसा मानती है। <b>कारण: तमस् का आवरण।</b>",
+  "तीसरा पाद:<br><b>सर्वार्थान् विपरीतान् च</b><br>...और सभी अर्थों/विषयों को भी विपरीत (उल्टा) देखती है...",
+  "चौथा पाद:<br><b>बुद्धिः सा पार्थ तामसी</b><br>...वह बुद्धि, हे पार्थ! तामसी है।",
+  "त्रयी का सार:<br>18.30: यथावत् (Clear) · 18.31: अयथावत् (Skewed) · <b>18.32: विपरीत (Inverted)</b><br>तमस् = आवरण → भ्रम-विश्वास",
+  "बुद्धि त्रयी पूर्ण! ✅<br>अगला विषय: <b>धृति त्रयी (18.33–35)</b><br>— मन, प्राण, इंद्रियों की धारण-शक्ति का त्रिगुण विश्लेषण।"
+];
+let walk32Idx=0;
+function walk32Start(){walk32Idx=0;walk32Show();}
+function walk32(d){walk32Idx=Math.max(0,Math.min(walk32Steps.length-1,walk32Idx+d));walk32Show();}
+function walk32Show(){
+  document.getElementById('walk32-text').innerHTML=walk32Steps[walk32Idx];
+  const dots=document.getElementById('walk32-dots');
+  dots.innerHTML='';
+  walk32Steps.forEach((_,i)=>{const d=document.createElement('div');d.className='walk-dot'+(i===walk32Idx?' active':'');dots.appendChild(d);});
+}
+
+// ── Quiz ──
+const quiz32Q=[
+  {q:"18.32 में तामसिकी बुद्धि का पहला लक्षण क्या है?",o:["अयथावत् प्रजानाति","अधर्मं धर्ममिति मन्यते","सर्वार्थान् यथावत् जानना","धर्मं धर्मं मन्यते"],a:1},
+  {q:"'तमसावृता' का क्या अर्थ है?",o:["तमस् से मुक्त","तमस् से उत्पन्न","तमस् से आवृत (ढकी)","तमस् को जानने वाली"],a:2},
+  {q:"18.30–31 में 'प्रजानाति' था; 18.32 में 'मन्यते' क्यों?",o:["दोनों का एक ही अर्थ है","तामसी में ज्ञान-क्षमता आवृत — केवल भ्रम-विश्वास","मन्यते अधिक शक्तिशाली ज्ञान है","यह केवल छंद-समायोजन है"],a:1},
+  {q:"'सर्वार्थान् विपरीतान्' में 'सर्व' का महत्त्व क्या है?",o:["केवल धर्म में विपर्यय","केवल आर्थिक विषयों में","सभी विषयों और मूल्यों में विपर्यय — कोई अपवाद नहीं","केवल मोक्ष में विपर्यय"],a:2},
+  {q:"राजसिकी (18.31) और तामसिकी (18.32) बुद्धि में मूल अंतर?",o:["दोनों एक ही हैं","राजसी = पूरा उल्टा; तामसी = तिरछा","राजसी = तिरछा (अयथावत्); तामसी = पूर्ण उल्टा (विपरीत)","राजसी बुरी; तामसी ठीक है"],a:2}
+];
+let q32i=0,q32score=0,q32done=false;
+function renderQuiz32(){
+  const c=document.getElementById('quiz32-container');
+  if(q32i>=quiz32Q.length){c.innerHTML=`<div class="quiz-score">✅ आपका स्कोर: ${q32score} / ${quiz32Q.length}</div><button class="quiz-btn" onclick="q32i=0;q32score=0;q32done=false;renderQuiz32()">पुनः प्रयास</button>`;return;}
+  const q=quiz32Q[q32i];
+  c.innerHTML=`<div class="quiz-progress">प्रश्न ${q32i+1} / ${quiz32Q.length}</div><div class="quiz-question">${q.q}</div><div class="quiz-options">${q.o.map((o,i)=>`<button class="quiz-opt" onclick="checkQ32(${i})">${o}</button>`).join('')}</div><div class="quiz-nav"><button class="quiz-btn" id="q32-next" onclick="q32i++;renderQuiz32()" disabled>अगला ▶</button></div>`;
+}
+function checkQ32(i){if(q32done)return;q32done=true;const opts=document.querySelectorAll('.quiz-opt');opts.forEach((o,idx)=>{o.classList.add('disabled');if(idx===quiz32Q[q32i].a)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===quiz32Q[q32i].a)q32score++;document.getElementById('q32-next').disabled=false;q32done=false;}
+document.addEventListener('DOMContentLoaded',renderQuiz32);
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

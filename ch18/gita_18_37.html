@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.37 — सात्त्विक सुख: विष जैसा आरंभ, अमृत जैसा अंत</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:47.4%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(42,106,90,0.2);border:1px solid rgba(42,106,90,0.5);color:#6ecfb8;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-sat{border-left:3px solid rgba(42,106,90,0.8);background:rgba(42,106,90,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-sat b{color:#6ecfb8;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(42,106,90,0.18);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#6ecfb8;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:2px solid rgba(42,106,90,0.7);background:rgba(42,106,90,0.1);box-shadow:0 0 16px rgba(42,106,90,0.2);}
+  .guna-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 37 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.३७</div>
+    </div>
+    <div class="guna-badge">🌿 सात्त्विक सुख — सुख त्रयी श्लोक १/३</div>
+    <div class="shloka">
+      यत्तदग्रे विषमिव परिणामेऽमृतोपमम्।<br>
+      तत्सुखं सात्त्विकं प्रोक्तमात्मबुद्धिप्रसादजम्।।
+    </div>
+    <div class="translit">
+      yat tad agre viṣam iva pariṇāme'mṛtopamam,<br>
+      tat sukhaṃ sāttvikaṃ proktam ātma-buddhi-prasāda-jam
+    </div>
+    <div class="gist">
+      जो सुख <b>आरंभ में विष के समान</b> (कठिन) और <b>परिणाम में अमृत के समान</b> (मधुर) होता है, तथा जो <b>आत्मा-विषयक बुद्धि की प्रसन्नता</b> से उत्पन्न होता है — वह सुख <b>सात्त्विक</b> कहा गया है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — 18.36 की घोषणा से</h3>
+      <p>18.36 ने घोषणा की — सुख तीन प्रकार का है, और उसमें भी वह सुख जिसमें साधक <b>अभ्यास से रमता है और दुःख का अंत पाता है</b>, विशेष है। अब 18.37 उस पहले, सर्वोच्च प्रकार — <b>सात्त्विक सुख</b> — का विस्तार करता है।</p>
+      <p>18.36 ने केवल यह कहा था कि अभ्यास से सुख मिलता है। 18.37 अब बताता है <b>कैसा</b> होता है वह सुख — इसकी सबसे बड़ी पहचान है इसका "टाइम-प्रोफाइल": शुरुआत कठिन, अंत मधुर।</p>
+      <div class="callout-sat"><b>कड़ी:</b> "अभ्यासाद्रमते" (18.36) और "अग्रे विषमिव" (18.37) एक ही सत्य के दो पहलू हैं — अभ्यास स्वयं ही वह "विष जैसा आरंभ" है, और उससे उत्पन्न रमणीयता ही "अमृत जैसा परिणाम" है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यत्तत् अग्रे</span><span class="word-tr">yat tad agre</span></div>
+          <div class="word-meaning">जो (सुख) — आरंभ में, प्रारंभिक अवस्था में</div>
+          <div class="word-eng"><b>EN:</b> that which — at first / in the beginning</div>
+          <div class="word-deep">यत्...तत् = सम्बन्ध-सूचक (relative-correlative) रचना — "जो सुख...वह सुख।" अग्रे = सप्तमी, "शुरुआत में"। यह पद पूरे श्लोक की timeline खोलता है — सात्त्विक सुख को समय के साथ बदलते हुए देखा जाना है, स्थिर वस्तु की तरह नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">विषमिव</span><span class="word-tr">viṣam iva</span></div>
+          <div class="word-meaning">विष के समान — उपमा (कठिन, कड़वा, अरुचिकर)</div>
+          <div class="word-eng"><b>EN:</b> like poison</div>
+          <div class="word-deep">विषम् + इव (उपमावाचक अव्यय)। ध्यान दें — यह "विष है" नहीं कह रहा, "विष जैसा" कह रहा है। साधना, संयम, अनुशासन — शुरुआत में शरीर-मन को कड़वे, अरुचिकर लगते हैं, वास्तव में विषैले नहीं होते।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">परिणामे</span><span class="word-tr">pariṇāme</span></div>
+          <div class="word-meaning">परिणाम में, फल में, अंत में — सप्तमी एकवचन</div>
+          <div class="word-eng"><b>EN:</b> in the end / as a consequence</div>
+          <div class="word-deep">परि + णाम (परिवर्तन/फल)। "अग्रे" का प्रत्यक्ष प्रतिपद — गीता जानबूझकर समय के दो छोर (आरंभ vs परिणाम) एक ही श्लोक में रखती है, ताकि विरोधाभास स्पष्ट दिखे।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अमृतोपमम्</span><span class="word-tr">amṛtopamam</span></div>
+          <div class="word-meaning">अमृत के समान — उपमा (मधुर, जीवनदायी, तृप्तिकारक)</div>
+          <div class="word-eng"><b>EN:</b> like nectar / like ambrosia</div>
+          <div class="word-deep">अमृत (नाशरहित, जीवन देने वाला) + उपम (समान)। विष और अमृत — दोनों classical Indian imagery में परस्पर विरोधी प्रतीक हैं। यह जोड़ी श्लोक को याद रखने योग्य (memorable) बनाती है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">तत्सुखं सात्त्विकं प्रोक्तम्</span><span class="word-tr">tat sukhaṃ sāttvikaṃ proktam</span></div>
+          <div class="word-meaning">वह सुख सात्त्विक कहा गया है — कर्मवाच्य भूतकृदन्त</div>
+          <div class="word-eng"><b>EN:</b> that happiness is declared to be sāttvika</div>
+          <div class="word-deep">प्रोक्तम् = प्र+वच् का भूतकृदन्त — "कहा गया है" (शास्त्र द्वारा घोषित)। यह श्लोक का निष्कर्ष-पद है, ठीक वैसे ही जैसे 18.20-35 में हर त्रयी के अंत में "विद्धि/उच्यते/प्रोक्तम्" आता रहा है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">आत्मबुद्धिप्रसादजम्</span><span class="word-tr">ātma-buddhi-prasāda-jam</span></div>
+          <div class="word-meaning">आत्मा-विषयक बुद्धि की प्रसन्नता/निर्मलता से उत्पन्न</div>
+          <div class="word-eng"><b>EN:</b> born of the clarity/tranquility of the intellect regarding the Self</div>
+          <div class="word-deep">आत्म + बुद्धि + प्रसाद (निर्मलता, प्रसन्नता) + ज (से उत्पन्न)। यह पद केवल "क्या" नहीं बताता (विष→अमृत), बल्कि "क्यों" भी बताता है — इसका स्रोत बाहरी वस्तु नहीं, आत्मा को जानने वाली बुद्धि की स्थिरता है। यह 18.30-32 की बुद्धि-त्रयी से सीधा जुड़ाव है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        That happiness which is like poison at first and like nectar in the end — born of the clarity of one's own understanding of the Self — that is said to be sāttvika happiness.
+      </div>
+      <p>18.37 सात्त्विक सुख की <b>दो पहचान</b> देता है। पहली — इसका <b>समय-आकार</b> (time-shape): शुरुआत कठिन, अंत मधुर, ठीक विपरीत उस सुख के जो पहले मीठा और बाद में कड़वा हो (जिसका वर्णन अगले श्लोक 18.38 में राजसिक सुख के रूप में आएगा)।</p>
+      <p>दूसरी पहचान — इसका <b>स्रोत</b>: "आत्मबुद्धिप्रसादजम्।" यह सुख किसी बाहरी वस्तु, विषय, या घटना से नहीं आता — यह तब उपजता है जब बुद्धि आत्मा के स्वरूप में स्थिर, निर्मल और प्रसन्न होती है। यही कारण है कि यह सुख टिकाऊ है — क्योंकि इसका आधार बाहरी परिस्थिति नहीं, आंतरिक स्पष्टता है।</p>
+      <div class="callout-sat"><b>"विष" शब्द क्यों चुना — कड़वा शब्द ही क्यों?</b> गीता कोमल शब्द ("कठिन", "श्रमसाध्य") का उपयोग नहीं करती — सीधे "विष" कहती है। यह अतिश्योक्ति जानबूझकर है: ध्यान, संयम, तप — आरंभ में सचमुच उतने ही अरुचिकर लगते हैं जितना विष पीना। गीता इस कठिनाई को छुपाती नहीं, स्वीकार करती है — और फिर भी कहती है: आगे बढ़ो, परिणाम अमृत है।</div>
+      <p>यह श्लोक 18.36 के "अभ्यासाद्रमते यत्र दुःखान्तं च निगच्छति" का प्रत्यक्ष विस्तार है — वहाँ अभ्यास और रमणीयता की बात हुई थी, यहाँ उसी प्रक्रिया को विष-अमृत के रूपक में ढाला गया है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — ध्यान-साधना का प्रारंभ:</b> सुबह जल्दी उठकर मौन बैठना, मन को इधर-उधर भटकने से रोकना — शुरुआती दिनों में यह उबाऊ, कष्टकर, लगभग असहनीय लगता है। महीनों बाद वही समय दिन का सबसे प्रिय, शांतिदायक क्षण बन जाता है। "विषमिव" से "अमृतोपमम्" की यही यात्रा है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — शारीरिक अनुशासन:</b> नियमित व्यायाम या कठोर आहार-नियम के पहले सप्ताह में शरीर दर्द करता है, मन विद्रोह करता है — "छोड़ दूँ?" जो टिका रहता है, महीनों बाद ऊर्जा, हल्कापन और आत्म-नियंत्रण का सुख पाता है, जो आरंभिक कष्ट से कहीं अधिक मूल्यवान होता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — कठिन विद्या का अध्ययन:</b> संस्कृत व्याकरण, गणित, या कोई भी गहन विषय पहले दिन दुर्बोध और थकाऊ लगता है। जो विद्यार्थी इस प्रारंभिक कठिनाई को पार कर लेता है, उसे विषय में वह गहराई और आनंद मिलता है जो सतही, तुरंत-सुखद विषयों में कभी नहीं मिलता।
+      </div>
+      <div class="callout"><b>साझा पैटर्न:</b> तीनों उदाहरणों में सुख की गुणवत्ता उस अनुशासन पर निर्भर है जो शुरुआत में अप्रिय लगता है। यही "आत्मबुद्धिप्रसादजम्" का व्यावहारिक अर्थ है — भीतर की स्पष्टता के लिए बाहर के आराम को अस्थायी रूप से छोड़ना पड़ता है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">सात्त्विक सुख में "विष जैसा आरंभ" क्यों आवश्यक है? क्या सुख सीधे सुख से नहीं मिल सकता?</div>
+        <div class="a">जो तुरंत मीठा लगे, वह प्रायः इन्द्रिय-विषय-संयोग से आता है (रजोगुण) — और उसका फल स्थायी नहीं होता (18.38 में स्पष्ट होगा)। सात्त्विक सुख का मार्ग तप, संयम, अभ्यास से होकर जाता है — क्योंकि यह मन-बुद्धि को गहराई से बदलता है, केवल इन्द्रियों को क्षणिक तृप्ति नहीं देता। गहरा परिवर्तन सरलता से नहीं आता।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"आत्मबुद्धिप्रसादजम्" का ठीक-ठीक अर्थ क्या है — यह अन्य सुखों के स्रोत से कैसे अलग है?</div>
+        <div class="a">राजसिक और तामसिक सुख का स्रोत बाहरी है — इन्द्रिय-विषय-संयोग (राजस) या निद्रा-आलस्य-प्रमाद (तामस)। सात्त्विक सुख का स्रोत आंतरिक है — बुद्धि की वह अवस्था जब वह आत्मा के स्वरूप में स्थिर और निर्मल (प्रसन्न) होती है। बाहरी वस्तु न होने पर भी यह सुख बना रहता है — यही इसकी स्थिरता का रहस्य है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.36 और 18.37 में क्या संबंध है — क्या 18.37 अलग बात कह रहा है?</div>
+        <div class="a">नहीं, 18.37, 18.36 की व्याख्या है। 18.36 ने कहा — साधक अभ्यास में रमकर दुःख का अंत पाता है। 18.37 उसी प्रक्रिया को नया रूपक देता है — वह "अभ्यास" ही विष जैसा आरंभ है, और वह "दुःखान्त/रमणीयता" ही अमृत जैसा परिणाम है। दोनों श्लोक मिलकर सात्त्विक सुख का सम्पूर्ण चित्र बनाते हैं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या हर कठिन काम सात्त्विक सुख देता है? केवल कठिनाई ही पर्याप्त शर्त है क्या?</div>
+        <div class="a">नहीं। केवल कठिनाई पर्याप्त नहीं — दिशा भी महत्वपूर्ण है। कठिनाई जो "आत्मबुद्धिप्रसाद" की ओर ले जाए (आत्म-ज्ञान, आंतरिक स्पष्टता, स्थिरता) वही सात्त्विक है। कठिनाई जो अहंकार बढ़ाए या केवल भौतिक लाभ के लिए हो, वह भिन्न श्रेणी में आ सकती है। दिशा और स्रोत दोनों मिलकर ही श्लोक की पूरी शर्त बनाते हैं।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.37 गीता की उस बड़ी शिक्षा का सर्वोत्तम उदाहरण है — <b>तात्कालिक आराम और स्थायी कल्याण भिन्न वस्तुएँ हैं</b>। यह श्लोक 2.14 ("मात्रास्पर्शास्तु कौन्तेय...") की भावना को आगे बढ़ाता है, जहाँ सुख-दुःख को अस्थायी बताया गया था — अब यहाँ बताया जा रहा है कि कौन-सा सुख अस्थायी नहीं है।</p>
+        <p>सत्त्वगुण = प्रकाश, स्पष्टता, संतुलन। सात्त्विक सुख इसीलिए "अंत में अमृत" है — क्योंकि सत्त्व स्वभाव से ही स्थिरता और शुद्धि की ओर ले जाता है, भले ही मार्ग में प्रारंभिक अंधकार (तप का कष्ट) पार करना पड़े।</p>
+        <div class="callout-sat"><b>बुद्धि-त्रयी (18.30-32) से जुड़ाव:</b> 18.30 में सात्त्विक बुद्धि को "प्रवृत्तिं च निवृत्तिं च... वेत्ति" कहा गया था — कर्तव्य-अकर्तव्य का सही ज्ञान। वही स्पष्ट बुद्धि यहाँ "आत्मबुद्धिप्रसाद" का सुख देती है। बुद्धि की गुणवत्ता सीधे सुख की गुणवत्ता तय करती है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — सात्त्विक सुख की संरचना</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="200" rx="85" ry="46" fill="rgba(42,106,90,0.15)" stroke="rgba(42,106,90,0.55)" stroke-width="1.5"/>
+          <text x="350" y="194" text-anchor="middle" fill="#6ecfb8" font-size="13" font-family="Tiro Devanagari Hindi, serif">सात्त्विक सुख</text>
+          <text x="350" y="212" text-anchor="middle" fill="#cfc3a8" font-size="10">आत्मबुद्धिप्रसादजम्</text>
+
+          <line x1="278" y1="172" x2="150" y2="95" stroke="rgba(140,74,32,0.45)" stroke-width="1.2"/>
+          <ellipse cx="112" cy="74" rx="70" ry="34" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.4)" stroke-width="1"/>
+          <text x="112" y="69" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">अग्रे — विषमिव</text>
+          <text x="112" y="86" text-anchor="middle" fill="#cfc3a8" font-size="10">आरंभ: कठिन, कड़वा</text>
+
+          <line x1="350" y1="154" x2="350" y2="65" stroke="rgba(42,106,90,0.45)" stroke-width="1.2"/>
+          <ellipse cx="350" cy="46" rx="70" ry="30" fill="rgba(42,106,90,0.1)" stroke="rgba(42,106,90,0.4)" stroke-width="1"/>
+          <text x="350" y="41" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">परिणामे — अमृतोपमम्</text>
+          <text x="350" y="56" text-anchor="middle" fill="#cfc3a8" font-size="10">अंत: मधुर, तृप्तिकर</text>
+
+          <line x1="422" y1="172" x2="565" y2="95" stroke="rgba(42,106,90,0.45)" stroke-width="1.2"/>
+          <ellipse cx="600" cy="74" rx="80" ry="34" fill="rgba(42,106,90,0.1)" stroke="rgba(42,106,90,0.4)" stroke-width="1"/>
+          <text x="600" y="69" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">स्रोत — आत्मबुद्धिप्रसाद</text>
+          <text x="600" y="86" text-anchor="middle" fill="#cfc3a8" font-size="10">आंतरिक स्पष्टता</text>
+
+          <line x1="300" y1="240" x2="180" y2="315" stroke="rgba(42,106,90,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="350" y1="246" x2="350" y2="318" stroke="rgba(42,106,90,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="400" y1="240" x2="530" y2="315" stroke="rgba(42,106,90,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+
+          <rect x="90" y="310" width="180" height="52" rx="8" fill="rgba(42,106,90,0.07)" stroke="rgba(42,106,90,0.3)" stroke-width="1"/>
+          <text x="180" y="331" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">अभ्यास व तप</text>
+          <text x="180" y="350" text-anchor="middle" fill="#cfc3a8" font-size="11">discipline</text>
+
+          <rect x="264" y="318" width="172" height="52" rx="8" fill="rgba(42,106,90,0.07)" stroke="rgba(42,106,90,0.3)" stroke-width="1"/>
+          <text x="350" y="339" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">स्थायी शांति</text>
+          <text x="350" y="358" text-anchor="middle" fill="#cfc3a8" font-size="11">lasting peace</text>
+
+          <rect x="440" y="310" width="180" height="52" rx="8" fill="rgba(42,106,90,0.07)" stroke="rgba(42,106,90,0.3)" stroke-width="1"/>
+          <text x="530" y="331" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">आत्म-निर्भरता</text>
+          <text x="530" y="350" text-anchor="middle" fill="#cfc3a8" font-size="11">self-reliance</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — आधुनिक विचारों में समान संकल्पना</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>सात्त्विक सुख से समानता</th><th>अंतर</th></tr>
+          <tr><td>Delayed Gratification (Marshmallow Test)</td><td>तुरंत सुख टालना, बड़े फल की प्रतीक्षा</td><td>गीता का ज़ोर आंतरिक स्पष्टता पर है, केवल इच्छा-शक्ति पर नहीं</td></tr>
+          <tr><td>Growth Mindset (Carol Dweck)</td><td>कठिनाई को विकास का अवसर मानना</td><td>गीता इसे गुण-सिद्धांत से जोड़ती है, मनोविज्ञान से आगे तत्त्व-दर्शन तक ले जाती है</td></tr>
+          <tr><td>Aristotle — Eudaimonia vs Hedonia</td><td>गहरे कल्याण (eudaimonia) को क्षणिक सुख (hedonia) से श्रेष्ठ मानना</td><td>अरस्तू तर्क-बुद्धि पर आधारित है, गीता आत्म-ज्ञान (आत्मबुद्धिप्रसाद) पर</td></tr>
+          <tr><td>Stoic Philosophy — "The obstacle is the way"</td><td>कठिनाई ही मार्ग है, इससे बचना नहीं</td><td>स्टोइक्स तर्क व सदाचार पर बल देते हैं, गीता गुण व आत्म-स्वरूप पर</td></tr>
+        </table>
+        <div class="callout-sat"><b>गीता की विशिष्टता:</b> ये सभी आधुनिक विचार "टालना/सहना" सिखाते हैं। गीता एक कदम आगे जाती है — यह बताती है <b>क्यों</b> यह सुख टिकाऊ है: क्योंकि इसका आधार बाहरी परिस्थिति नहीं, बुद्धि की आत्म-स्थिरता है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-sat"><b>"विष के क्षण" को पहचानें:</b> जब भी कोई अच्छा अभ्यास (ध्यान, अनुशासन, अध्ययन) कठिन, उबाऊ या अरुचिकर लगे — यह विफलता का संकेत नहीं, गीता के अनुसार यह सामान्य और अपेक्षित है। "अग्रे विषमिव" — यही तो कहा गया है।</div>
+        <p><b>अभ्यास — तीन प्रश्न, जब कठिनाई आए:</b> 1) क्या यह कठिनाई मुझे आत्म-ज्ञान/स्पष्टता की ओर ले जा रही है? 2) क्या मैं इसे केवल तात्कालिक असुविधा के कारण छोड़ रहा हूँ? 3) क्या मैंने इसे पर्याप्त समय दिया है कि "परिणाम" देख सकूँ? ये तीन प्रश्न "विष" के क्षण में स्थिरता देते हैं।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "आत्मबुद्धिप्रसादजम्" का अर्थ है — आत्मा में स्थित बुद्धि की निर्मलता से उत्पन्न सुख। यह विषयजन्य सुख से भिन्न है, क्योंकि इसका आधार बाह्य वस्तु नहीं, आत्म-स्वरूप का साक्षात्कार है। शंकर इसे मोक्ष-मार्ग का प्रत्यक्ष संकेत मानते हैं।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> सात्त्विक सुख को भगवद्-भक्ति और आत्म-अनुशासन के अभ्यास से जोड़ते हैं। प्रारंभिक कठिनाई भक्त की परीक्षा है — जो टिका रहता है, उसे भगवत्-कृपा से स्थायी आनंद मिलता है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को कर्मयोग के व्यावहारिक सत्य से जोड़ते हैं — कोई भी सार्थक कर्म (चाहे स्वाधीनता-संग्राम हो या आत्म-साधना) आरंभ में कष्टप्रद लगता है। तिलक इसे "राष्ट्र-निर्माण" के संदर्भ में भी उद्धृत करते हैं — त्याग पहले कठिन, फल बाद में मधुर।</p>
+        <div class="callout-sat"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं — इस श्लोक की कुंजी "आत्मबुद्धिप्रसाद" है। सुख का स्तर वस्तु में नहीं, बुद्धि की अवस्था में निहित है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अग्रे</span></div>
+            <div class="flashcard-face flashcard-back"><b>आरंभ में</b>सप्तमी — प्रारंभिक अवस्था का संकेत</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">विषमिव</span></div>
+            <div class="flashcard-face flashcard-back"><b>विष के समान</b>कठिन, कड़वा — तप की प्रारंभिक अनुभूति</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">परिणामे</span></div>
+            <div class="flashcard-face flashcard-back"><b>परिणाम/अंत में</b>"अग्रे" का प्रतिपद — विपरीत छोर</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अमृतोपमम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>अमृत के समान</b>मधुर, स्थायी, जीवनदायी परिणाम</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">आत्मबुद्धिप्रसादजम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>आत्म-बुद्धि की प्रसन्नता से जन्मा</b>सात्त्विक सुख का वास्तविक स्रोत</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सात्त्विकं प्रोक्तम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>सात्त्विक कहा गया</b>शास्त्र-सम्मत निष्कर्ष-पद</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">यत् तत्</td><td>यद्+तद्</td><td>प्रथमा नपुंसक (सम्बन्धवाचक)</td><td>जो...वह — सापेक्ष रचना</td></tr>
+          <tr><td class="sa">अग्रे</td><td>अग्र</td><td>सप्तमी एकवचन</td><td>आरंभ में — अधिकरण</td></tr>
+          <tr><td class="sa">विषमिव</td><td>विष+इव</td><td>प्रथमा + उपमावाचक अव्यय</td><td>विष के समान — उपमा</td></tr>
+          <tr><td class="sa">परिणामे</td><td>परि+णाम</td><td>सप्तमी एकवचन</td><td>परिणाम/अंत में — अधिकरण</td></tr>
+          <tr><td class="sa">अमृतोपमम्</td><td>अमृत+उपम</td><td>प्रथमा नपुंसक एकवचन</td><td>अमृत के समान — विशेषण</td></tr>
+          <tr><td class="sa">प्रोक्तम्</td><td>प्र+वच्</td><td>भूतकृदन्त, कर्मवाच्य</td><td>कहा गया है</td></tr>
+          <tr><td class="sa">आत्मबुद्धिप्रसादजम्</td><td>आत्मन्+बुद्धि+प्रसाद+ज</td><td>तत्पुरुष समास, प्रथमा</td><td>आत्म-बुद्धि की प्रसन्नता से उत्पन्न</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">यत्तदग्रे विषमिव परिणामेऽमृतोपमम्।<br>तत्सुखं सात्त्विकं प्रोक्तमात्मबुद्धिप्रसादजम्।।</div>
+          <div class="cheat-translit">yat tad agre viṣam iva pariṇāme'mṛtopamam, tat sukhaṃ sāttvikaṃ proktam ātma-buddhi-prasāda-jam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अग्रे विषमिव</b> आरंभ कठिन</span>
+            <span class="cheat-chip"><b>परिणामे अमृतोपमम्</b> अंत मधुर</span>
+            <span class="cheat-chip"><b>आत्मबुद्धिप्रसादजम्</b> आंतरिक स्रोत</span>
+            <span class="cheat-chip"><b>सात्त्विकं</b> सर्वोच्च सुख</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: जो सुख आरंभ में कठिन, अंत में मधुर हो, और आत्म-ज्ञान से उपजे — वह सात्त्विक है। यही अभ्यास (18.36) का सुखद फल है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('यत्तदग्रे विषमिव परिणामेऽमृतोपमम्। तत्सुखं सात्त्विकं प्रोक्तमात्मबुद्धिप्रसादजम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('यत्तदग्रे विषमिव परिणामेऽमृतोपमम्। तत्सुखं सात्त्विकं प्रोक्तमात्मबुद्धिप्रसादजम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जो सुख आरंभ में विष के समान और परिणाम में अमृत के समान हो, तथा आत्मा की बुद्धि की प्रसन्नता से उत्पन्न हो — उसे सात्त्विक जानो।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">यत्</span><span class="syll">त</span><span class="syll">द</span><span class="syll">ग्रे</span><span class="syll">वि</span><span class="syll">ष</span><span class="syll">मि</span><span class="syll">व</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">प</span><span class="syll">रि</span><span class="syll">णा</span><span class="syll">मे</span><span class="syll">ऽमृ</span><span class="syll">तो</span><span class="syll">प</span><span class="syll">मम्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">तत्</span><span class="syll">सु</span><span class="syll">खं</span><span class="syll">सा</span><span class="syll">त्त्वि</span><span class="syll">कं</span><span class="syll">प्रो</span><span class="syll">क्तम्</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">आ</span><span class="syll">त्म</span><span class="syll">बु</span><span class="syll">द्धि</span><span class="syll">प्र</span><span class="syll">सा</span><span class="syll">द</span><span class="syll">जम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('यत्तदग्रे विषमिव परिणामेऽमृतोपमम् तत्सुखं सात्त्विकं प्रोक्तमात्मबुद्धिप्रसादजम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-sat"><b>ध्यान-बिंदु:</b> "विषमिव...अमृतोपमम्" — इन दो शब्दों पर विशेष रूप से रुकें। जप करते समय याद करें: जो अभी कठिन लग रहा है, वही आगे अमृत बनेगा।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">आरंभ vs परिणाम</button>
+      <button class="tab-btn" data-tab="e2">तीन सुख overview</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 आरंभ vs परिणाम — एक ही सुख के दो छोर</h3>
+        <p class="subnote">सात्त्विक सुख को समय के साथ देखें — शुरुआत में क्या, अंत में क्या?</p>
+        <div class="contrast-row">
+          <div class="contrast-card raj">
+            <div class="contrast-label">🌑 अग्रे — विषमिव</div>
+            <div class="contrast-sa">आरंभ की अवस्था</div>
+            <p><b>कठिन, अरुचिकर, कड़वा लगता है।</b><br>तप, संयम, अभ्यास का प्रारंभिक श्रम।<br>मन विद्रोह करता है, छोड़ने का मन करता है।</p>
+          </div>
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 परिणामे — अमृतोपमम्</div>
+            <div class="contrast-sa">परिणाम की अवस्था</div>
+            <p><b>मधुर, स्थायी, तृप्तिकर बनता है।</b><br>आत्मबुद्धिप्रसाद — भीतर की स्पष्टता।<br>बाहरी सहारे के बिना भी सुख टिकता है।</p>
+          </div>
+        </div>
+        <div class="callout-sat"><b>Key insight:</b> यह विरोधाभास ही सात्त्विक सुख की पहचान है। जो सुख इसके विपरीत हो — पहले मीठा, बाद में कड़वा — वह राजसिक होगा (18.38 में आगे)।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 सुख के तीन प्रकार — अभी तक की स्थिति</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🌿 सात्त्विक (18.37) ← यहाँ</div>
+            <div class="guna-sa">विष → अमृत</div>
+            <div class="guna-char">आरंभ कठिन, अंत मधुर। आत्मबुद्धिप्रसादजम्। स्थायी सुख।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 राजसिक (18.38)</div>
+            <div class="guna-sa">अमृत → विष?</div>
+            <div class="guna-char">इन्द्रिय-विषय-संयोग से आरंभ में मधुर। परिणाम में विपरीत। अगला श्लोक।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🌑 तामसिक (18.39)</div>
+            <div class="guna-sa">आदि से अंत तक मोहन</div>
+            <div class="guna-char">निद्रा-आलस्य-प्रमाद से उत्पन्न। शुरू से अंत तक आत्म-मोहन। आगामी श्लोक।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> सात्त्विक = कठिन आरंभ, मधुर अंत। राजसिक = मधुर आरंभ, कठिन अंत (संभावित)। तामसिक = आदि-अंत दोनों मोहजनित।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३३-३५<br>धृति त्रयी</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३६<br>सुख घोषणा</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ३७<br>सात्त्विक सुख ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३८<br>राजसिक सुख</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३९<br>तामसिक सुख</div></div>
+        </div>
+        <div class="callout-sat"><b>अगला (18.38):</b> राजसिक सुख — इन्द्रिय-विषय-संयोग से आरंभ में अमृत जैसा, परिणाम में विषवत्। सात्त्विक सुख के ठीक विपरीत time-profile। तीनों मिलकर सुख-त्रयी पूर्ण होगी।</div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.३८) — ☰ नेविगेशन — राजसिक सुख: आरंभ में अमृत, अंत में विष</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.37 के अनुसार सात्त्विक सुख आरंभ में कैसा लगता है?",options:["अमृत जैसा","विष जैसा","न मीठा न कड़वा","भयावह"],correct:1},
+    {q:"सात्त्विक सुख का स्रोत क्या बताया गया है?",options:["इन्द्रिय-विषय-संयोग","आत्मबुद्धिप्रसाद","निद्रा और आलस्य","बाहरी धन-संपत्ति"],correct:1},
+    {q:"'परिणामे' शब्द का अर्थ क्या है?",options:["आरंभ में","मध्य में","अंत/फल में","सदैव"],correct:2},
+    {q:"18.36 और 18.37 में क्या संबंध है?",options:["कोई संबंध नहीं","18.37, 18.36 की घोषणा का विस्तार है","दोनों अलग विषय हैं","18.37 पहले आया"],correct:1},
+    {q:"सात्त्विक सुख टिकाऊ क्यों माना गया है?",options:["क्योंकि यह महंगा है","क्योंकि इसका आधार बाहरी वस्तु नहीं, आंतरिक स्पष्टता है","क्योंकि यह जल्दी मिलता है","क्योंकि यह इन्द्रियों से आता है"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.36 ने घोषणा की — सुख तीन प्रकार का होता है, और अभ्यास से रमणीयता व दुःखान्त मिलता है। 18.37 अब पहले, सर्वोच्च प्रकार — सात्त्विक सुख — का विस्तार करता है।",
+    "'अग्रे विषमिव' — आरंभ में विष के समान। ध्यान, संयम, तप — शुरुआत में सचमुच कड़वे, अरुचिकर लगते हैं। गीता इस कठिनाई को छुपाती नहीं, सीधे स्वीकार करती है।",
+    "'परिणामे अमृतोपमम्' — परिणाम में अमृत के समान। यही सात्त्विक सुख की पहचान है — समय के साथ यह मीठा होता जाता है, ठीक विपरीत उस सुख के जो पहले मीठा, बाद में कड़वा हो।",
+    "'आत्मबुद्धिप्रसादजम्' — यह सुख आत्मा-विषयक बुद्धि की प्रसन्नता से उपजता है। बाहरी वस्तु से नहीं, भीतर की स्पष्टता से। यही इसकी स्थिरता का रहस्य है।",
+    "18.30-32 की बुद्धि-त्रयी याद करें — सात्त्विक बुद्धि कर्तव्य-अकर्तव्य को सही जानती थी। वही स्पष्ट बुद्धि अब यहाँ सुख का स्रोत बनती है। बुद्धि की गुणवत्ता ही सुख की गुणवत्ता तय करती है।",
+    "अगला (18.38) राजसिक सुख — इन्द्रिय-विषय-संयोग से आरंभ में अमृत जैसा, अंत में विषवत्। सात्त्विक सुख के ठीक विपरीत समय-आकार। तीनों मिलकर सुख की पूरी स्पेक्ट्रम दिखाएँगे।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
