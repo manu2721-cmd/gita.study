@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.43 — क्षत्रिय-स्वभाव: शौर्य व नेतृत्व के सात गुण</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:55.1%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0;}
+  .quality-card{border-radius:10px;padding:12px 14px;border:1px solid rgba(140,74,32,0.4);background:rgba(140,74,32,0.07);}
+  .quality-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:#e0a060;margin-bottom:4px;}
+  .quality-desc{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  @media(max-width:560px){.quality-grid{grid-template-columns:1fr;}}
+  .varna-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin:18px 0;}
+  .varna-card{border-radius:12px;padding:14px 8px;text-align:center;border:1px solid var(--line);background:rgba(255,255,255,0.02);}
+  .varna-card.active{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .varna-card.done{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .varna-label{font-family:'Tiro Devanagari Hindi',serif;font-size:14px;color:var(--gold-light);margin-bottom:6px;}
+  .varna-guna{font-size:10.5px;color:var(--sage);margin-bottom:6px;font-style:italic;}
+  .varna-desc{font-size:11px;color:var(--cream-dim);line-height:1.5;}
+  @media(max-width:560px){.varna-row{grid-template-columns:1fr 1fr;}}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 43 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.४३</div>
+    </div>
+    <div class="guna-badge">🔥 क्षत्रिय-स्वभाव — चार वर्णों में द्वितीय (राजस-सात्त्विक)</div>
+    <div class="shloka">
+      शौर्यं तेजो धृतिर्दाक्ष्यं युद्धे चाप्यपलायनम्।<br>
+      दानमीश्वरभावश्च क्षात्रं कर्म स्वभावजम्।।
+    </div>
+    <div class="translit">
+      śauryaṃ tejo dhṛtir dākṣyaṃ yuddhe cāpy apalāyanam,<br>
+      dānam īśvara-bhāvaś ca kṣātraṃ karma svabhāva-jam
+    </div>
+    <div class="gist">
+      <b>शौर्य</b> (वीरता), <b>तेज</b> (ओज), <b>धृति</b> (दृढ़ता), <b>दाक्ष्य</b> (कुशलता), <b>युद्ध में न भागना</b>, <b>दान</b> (उदारता), और <b>ईश्वरभाव</b> (नेतृत्व-भाव) — ये सात क्षत्रिय के स्वभावज कर्म (स्वाभाविक गुण) हैं।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — दूसरा वर्ण, और अर्जुन का अपना स्वभाव</h3>
+      <p>18.42 ने ब्राह्मण-स्वभाव के नौ सात्त्विक गुण बताए। अब 18.43 दूसरे वर्ण — <b>क्षत्रिय</b> — के सात गुणों का वर्णन करता है, जो <b>राजस-सात्त्विक मिश्रण</b> के हैं — शौर्य व तेज जैसे रजोगुण-प्रधान लक्षण, साथ ही धृति व दान जैसे सात्त्विक गुण भी।</p>
+      <p>यह श्लोक विशेष रूप से महत्वपूर्ण है क्योंकि <b>अर्जुन स्वयं एक क्षत्रिय हैं</b> — 18.41 का "परन्तप" संबोधन अब यहाँ सार्थक होता है। यह श्लोक सीधे अर्जुन के अपने स्वभाव का वर्णन है, और गीता के आरंभिक द्वंद्व (अध्याय 1-2, युद्ध से विमुख होने की इच्छा) से सीधा जुड़ता है।</p>
+      <div class="callout-rajas"><b>कड़ी:</b> "युद्धे चाप्यपलायनम्" (युद्ध में न भागना) — यह पद गीता के पहले अध्याय की सीधी प्रतिध्वनि है, जहाँ अर्जुन युद्ध-भूमि से विमुख होना चाहते थे। अध्याय 18 के अंत में गीता इस मूल समस्या को फिर से, अब गुण-सिद्धांत की भाषा में, संबोधित करती है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण — सात गुण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">शौर्यं, तेजः</span><span class="word-tr">śauryaṃ, tejaḥ</span></div>
+          <div class="word-meaning">वीरता (शौर्य) और ओज/प्रभावशाली उपस्थिति (तेज)</div>
+          <div class="word-eng"><b>EN:</b> heroism (śaurya), vigor/radiant energy (tejas)</div>
+          <div class="word-deep">शूर (वीर) से शौर्य — भय का अभाव, साहसपूर्ण कार्य करने की क्षमता। तेज = आंतरिक ओज जो बाहर व्यक्तित्व में चमकता है — नेता की स्वाभाविक प्रभावशाली उपस्थिति। दोनों मिलकर बाहरी साहस और आंतरिक प्रभाव-शक्ति दर्शाते हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">धृतिः</span><span class="word-tr">dhṛtiḥ</span></div>
+          <div class="word-meaning">धृति, दृढ़ता, स्थिरता, संकल्प-शक्ति</div>
+          <div class="word-eng"><b>EN:</b> steadfastness, fortitude, resolve</div>
+          <div class="word-deep">यही "धृति" शब्द 18.33-35 (धृति-त्रयी) में विस्तार से चर्चित हुआ था — वहाँ योग-अभ्यास द्वारा मन-प्राण-इन्द्रियों को धारण करने वाली सात्त्विक धृति की बात थी। यहाँ वही गुण क्षत्रिय-स्वभाव के संदर्भ में — कठिन परिस्थितियों में दृढ़ रहने की क्षमता — पुनः प्रकट होता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">दाक्ष्यम्</span><span class="word-tr">dākṣyam</span></div>
+          <div class="word-meaning">दक्षता, कुशलता, कार्य-निपुणता</div>
+          <div class="word-eng"><b>EN:</b> resourcefulness, skillful efficiency</div>
+          <div class="word-deep">दक्ष (कुशल, निपुण) से व्युत्पन्न। यह गुण व्यावहारिक बुद्धिमत्ता को दर्शाता है — परिस्थिति के अनुरूप शीघ्र व प्रभावी निर्णय लेने और कार्य करने की क्षमता, विशेषकर संकट के क्षणों में।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">युद्धे चाप्यपलायनम्</span><span class="word-tr">yuddhe cāpi apalāyanam</span></div>
+          <div class="word-meaning">युद्ध में भी न भागना (पलायन न करना)</div>
+          <div class="word-eng"><b>EN:</b> not fleeing, even in battle</div>
+          <div class="word-deep">अ (नहीं) + पलायन (भागना) — नकारात्मक रचना विशेष बल देती है। यह पद सीधे अर्जुन की स्थिति को संबोधित करता है — प्रत्यक्ष कठिनाई/संघर्ष से न भागना क्षत्रिय-स्वभाव का केंद्रीय लक्षण है। यहाँ "युद्ध" प्रतीकात्मक रूप से किसी भी बड़े संघर्ष/चुनौती का भी सूचक हो सकता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">दानम्</span><span class="word-tr">dānam</span></div>
+          <div class="word-meaning">दान, उदारता, संसाधनों का निःस्वार्थ वितरण</div>
+          <div class="word-eng"><b>EN:</b> generosity, charitable giving</div>
+          <div class="word-deep">दा (देना) धातु से। ध्यान देने योग्य है कि दान यहाँ शक्ति/नेतृत्व के साथ जुड़ा है — पारंपरिक रूप से राजा/शासक वर्ग से समाज-कल्याण हेतु उदार वितरण अपेक्षित होता था। यह गुण "शक्ति के साथ उत्तरदायित्व" के सिद्धांत को दर्शाता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">ईश्वरभावः च</span><span class="word-tr">īśvara-bhāvaḥ ca</span></div>
+          <div class="word-meaning">स्वामित्व-भाव, नेतृत्व करने की स्वाभाविक प्रवृत्ति</div>
+          <div class="word-eng"><b>EN:</b> a natural sense of lordship/leadership</div>
+          <div class="word-deep">ईश्वर (यहाँ "स्वामी/नेता" के अर्थ में, परमेश्वर के अर्थ में नहीं) + भाव (प्रवृत्ति)। यह आत्म-विश्वास से भरा नेतृत्व-भाव है — उत्तरदायित्व लेने, निर्णय करने, और दूसरों का मार्गदर्शन करने में सहज अनुभव करने की प्रकृति।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">क्षात्रं कर्म स्वभावजम्</span><span class="word-tr">kṣātraṃ karma svabhāva-jam</span></div>
+          <div class="word-meaning">क्षत्रिय का स्वाभाविक कर्म (गुण-समूह)</div>
+          <div class="word-eng"><b>EN:</b> the natural duty of a Kṣatriya, born of his own nature</div>
+          <div class="word-deep">क्षत्र (क्षत्रिय) + कर्म + स्वभावज (18.41-42 से दोहराया शब्द)। यह पद पूरी सूची को समेटता है — यह संरचना ठीक 18.42 के "ब्रह्मकर्म स्वभावजम्" के समानांतर है, इस बात पर बल देते हुए कि प्रत्येक वर्ण का कर्म समान रूप से स्वभाव-आधारित है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Heroism, vigor, steadfastness, resourcefulness, not fleeing even in battle, generosity, and a natural sense of leadership — these are the natural duties of a Kṣatriya, born of his own nature.
+      </div>
+      <p>18.43 के सात गुण क्षत्रिय-स्वभाव का एक संतुलित चित्र प्रस्तुत करते हैं — यह केवल शारीरिक बल या आक्रामकता की बात नहीं करता, बल्कि <b>साहस (शौर्य-तेज), दृढ़ता (धृति-दाक्ष्य), साहसिक कर्तव्य-पालन (अपलायन), और उदार नेतृत्व (दान-ईश्वरभाव)</b> का समन्वित चित्रण है। ब्राह्मण-स्वभाव (18.42) की तुलना में यहाँ रजोगुण की स्पष्ट उपस्थिति है — गति, साहस, कर्म-प्रधानता — पर सात्त्विक तत्त्व (धृति, दान) भी संतुलन बनाए रखते हैं।</p>
+      <p>इस श्लोक का सबसे मार्मिक पद है <b>"युद्धे चाप्यपलायनम्"</b> — यह सीधे अध्याय 1-2 में अर्जुन की मनःस्थिति को संबोधित करता है, जहाँ वे युद्ध-भूमि से विमुख होना चाहते थे। गीता का यह अंतिम अध्याय, एक चक्र पूर्ण करते हुए, कृष्ण के मूल तर्क को दोहराता है — अर्जुन के अपने स्वभाव में "पलायन न करना" स्वाभाविक रूप से निहित है, इसलिए युद्ध से भागना उनके स्वधर्म के विरुद्ध होगा।</p>
+      <div class="callout-rajas"><b>धृति की पुनरावृत्ति — एक सूक्ष्म संकेत:</b> ध्यान दें कि "धृति" शब्द यहाँ पुनः प्रकट होता है, जो 18.33-35 में विस्तार से चर्चित हो चुका है। वहाँ सात्त्विक धृति को योग-साधना से मन-प्राण-इन्द्रियों को धारण करने वाली शक्ति बताया गया था। यहाँ वही आंतरिक शक्ति क्षत्रिय-स्वभाव के संदर्भ में प्रकट होती है — यह दिखाता है कि आंतरिक साधना (धृति) और बाह्य कर्तव्य (क्षात्र-कर्म) परस्पर जुड़े हैं।</div>
+      <p>यह श्लोक व्यापक अर्थ में भी लागू होता है — आधुनिक जीवन में "युद्ध" का अर्थ किसी भी बड़ी चुनौती, संकट, या ज़िम्मेदारी से हो सकता है, जिससे भागना नहीं, डटकर सामना करना क्षत्रिय-स्वभाव की मूल भावना है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — संकट में नेतृत्व:</b> कोई नेता (चाहे संस्था प्रमुख हो या टीम कप्तान) जो कठिन परिस्थिति में पीछे नहीं हटता, निर्णय लेने की ज़िम्मेदारी उठाता है, और अपनी टीम को साहस के साथ आगे ले जाता है — यह शौर्य, तेज, और ईश्वरभाव का जीवंत उदाहरण है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — संकटकालीन सेवा:</b> आपातकालीन सेवाओं में कार्यरत लोग (अग्निशामक, चिकित्सक, बचाव-दल) जो खतरे के क्षण में भी पीछे नहीं हटते, तुरंत कुशलता से (दाक्ष्य) कार्य करते हैं, और स्थिति में दृढ़ बने रहते हैं (धृति) — यह क्षत्रिय-स्वभाव का प्रत्यक्ष आधुनिक उदाहरण है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — उदार व ज़िम्मेदार नेतृत्व:</b> कोई सफल उद्यमी या प्रशासक जो अपनी सफलता से समाज को भी लाभान्वित करता है (दान), और नेतृत्व की ज़िम्मेदारी सहजता से निभाता है (ईश्वरभाव) — यह दिखाता है कि शक्ति के साथ उदारता भी क्षत्रिय-स्वभाव का अभिन्न अंग है।
+      </div>
+      <div class="callout"><b>साझा पैटर्न:</b> तीनों उदाहरण दिखाते हैं कि क्षत्रिय-स्वभाव केवल युद्ध-क्षेत्र तक सीमित नहीं — यह किसी भी क्षेत्र में साहसपूर्ण, ज़िम्मेदार नेतृत्व की प्रकृति है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">क्या "युद्धे चाप्यपलायनम्" का अर्थ आज केवल शाब्दिक युद्ध से है, या व्यापक अर्थ भी है?</div>
+        <div class="a">पारंपरिक संदर्भ में यह शाब्दिक युद्ध-भूमि से संबंधित था। पर व्यापक अर्थ में, यह किसी भी बड़ी ज़िम्मेदारी, संकट, या नैतिक चुनौती से न भागने की प्रवृत्ति को भी दर्शाता है — कठिन बातचीत, कठिन निर्णय, या न्यायपूर्ण संघर्ष से पीछे न हटना।</div>
+      </div>
+      <div class="faq">
+        <div class="q">शौर्य और तेज में क्या अंतर है?</div>
+        <div class="a">शौर्य सक्रिय साहस है — कठिन/खतरनाक कार्य करने की क्षमता। तेज एक अधिक सूक्ष्म गुण है — व्यक्तित्व की वह चमक/प्रभावशीलता जो दूसरों को प्रेरित व प्रभावित करती है, भले ही कोई सक्रिय कार्य न भी हो रहा हो। शौर्य कर्म में प्रकट होता है, तेज उपस्थिति में।</div>
+      </div>
+      <div class="faq">
+        <div class="q">दान को क्षत्रिय-गुण के रूप में क्यों शामिल किया गया, यह तो सामान्यतः धार्मिक/परोपकारी गुण माना जाता है?</div>
+        <div class="a">पारंपरिक भारतीय राजतंत्र में, राजा/शासक वर्ग से समाज-कल्याण के लिए संसाधनों का उदार वितरण एक मौलिक कर्तव्य माना जाता था। दान यहाँ "शक्ति के साथ जिम्मेदारी" के सिद्धांत को दर्शाता है — जिसके पास संसाधन व शक्ति है, उसका कर्तव्य है कि वह समाज को वापस दे। यह क्षत्रिय-स्वभाव को केवल आक्रामक शक्ति से बचाकर संतुलित बनाता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">यह श्लोक अर्जुन की व्यक्तिगत स्थिति से कैसे जुड़ता है?</div>
+        <div class="a">अर्जुन स्वयं एक क्षत्रिय हैं, और गीता की मूल कथा उनके युद्ध-भूमि से विमुख होने के द्वंद्व से शुरू हुई थी (अध्याय 1-2)। 18.43 गीता के अंत में इस मूल समस्या को गुण-सिद्धांत की भाषा में पुनः प्रस्तुत करता है — "पलायन न करना" उनके अपने स्वभाव का अभिन्न अंग है, इसलिए युद्ध से भागना उनके वास्तविक स्वरूप के विरुद्ध होगा। यह गीता के तर्क को एक पूर्ण वृत्त (full circle) में लाता है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.43 गीता के संपूर्ण आख्यान का एक भावनात्मक शिखर-बिंदु है — यह श्लोक अध्याय 2.31-33 (जहाँ कृष्ण ने पहली बार अर्जुन को क्षत्रिय-धर्म की याद दिलाई थी: "स्वधर्मे निधनं श्रेयः") को गुण-सिद्धांत की भाषा में पुनः प्रस्तुत करता है। यह गीता की शिक्षा-यात्रा का समापन-चक्र है।</p>
+        <p>18.42 (ब्राह्मण) की तुलना में यहाँ स्पष्ट रूप से रजोगुण की छाया है — गति, साहस, कर्म-प्रधानता — जबकि सात्त्विक तत्त्व (धृति, दान) भी बना रहता है। यह क्षत्रिय-स्वभाव के "राजस-सात्त्विक" मिश्रण को व्याकरण और शब्द-चयन दोनों स्तर पर प्रतिबिंबित करता है।</p>
+        <div class="callout-rajas"><b>धृति-त्रयी से जुड़ाव:</b> 18.33 में सात्त्विक धृति को योगाभ्यास से मन-प्राण-इन्द्रिय-धारण की शक्ति कहा गया था। यहाँ 18.43 में वही धृति क्षत्रिय-स्वभाव के व्यावहारिक संदर्भ में प्रकट होती है — यह दिखाता है कि गीता के गुण-सिद्धांत अलग-अलग खंडों में बिखरे नहीं, बल्कि परस्पर गहराई से जुड़े हैं।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — सात गुणों की संरचना</h3>
+        <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="190" rx="85" ry="42" fill="rgba(140,74,32,0.15)" stroke="rgba(140,74,32,0.55)" stroke-width="1.4"/>
+          <text x="350" y="185" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">क्षत्रिय-स्वभाव</text>
+          <text x="350" y="202" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">सात राजस-सात्त्विक गुण</text>
+
+          <line x1="290" y1="162" x2="180" y2="90" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <ellipse cx="140" cy="70" rx="80" ry="32" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="140" y="65" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">शारीरिक साहस</text>
+          <text x="140" y="82" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">शौर्य, तेज, अपलायन</text>
+
+          <line x1="330" y1="148" x2="290" y2="60" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <ellipse cx="290" cy="42" rx="75" ry="28" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="290" y="37" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">आंतरिक दृढ़ता</text>
+          <text x="290" y="54" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">धृति, दाक्ष्य</text>
+
+          <line x1="420" y1="162" x2="560" y2="90" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <ellipse cx="590" cy="70" rx="85" ry="32" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="590" y="65" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">उदार नेतृत्व</text>
+          <text x="590" y="82" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">दान, ईश्वरभाव</text>
+
+          <line x1="350" y1="232" x2="350" y2="310" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <ellipse cx="350" cy="335" rx="120" ry="30" fill="rgba(255,255,255,0.03)" stroke="rgba(140,74,32,0.4)" stroke-width="1"/>
+          <text x="350" y="330" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">अर्जुन का अपना स्वधर्म</text>
+          <text x="350" y="347" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">गीता का मूल विषय, अध्याय 1-2</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — विश्व की योद्धा-आचार-संहिताएँ</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>18.43 से समानता</th><th>अंतर</th></tr>
+          <tr><td>जापानी बुशिदो (Bushido — समुराई कोड)</td><td>साहस, कर्तव्य-निष्ठा, सम्मान समान रूप से महत्वपूर्ण</td><td>बुशिदो मृत्यु के प्रति विशेष दृष्टिकोण रखता है, गीता कर्तव्य पर बल देती है</td></tr>
+          <tr><td>यूरोपीय शौर्य-संहिता (Chivalry)</td><td>साहस के साथ दान/उदारता का संयोजन समान</td><td>शौर्य-संहिता धार्मिक-सामंती संदर्भ में है, गीता आध्यात्मिक-गुण संदर्भ में</td></tr>
+          <tr><td>Servant Leadership (आधुनिक नेतृत्व-सिद्धांत)</td><td>ईश्वरभाव (नेतृत्व) को सेवा व उदारता से जोड़ना समान</td><td>आधुनिक सिद्धांत व्यावसायिक है, गीता आध्यात्मिक-सामाजिक कर्तव्य पर आधारित</td></tr>
+        </table>
+        <div class="callout-rajas"><b>गीता की विशिष्टता:</b> जहाँ अधिकांश योद्धा-संहिताएँ साहस और सम्मान पर केंद्रित होती हैं, गीता स्पष्ट रूप से <b>उदारता (दान)</b> को भी अनिवार्य गुण के रूप में शामिल करती है — शक्ति को समाज-कल्याण से जोड़ना इस सूची की विशेष पहचान है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>"पलायन न करने" का दैनिक अभ्यास:</b> हर दिन जब कोई कठिन बातचीत, निर्णय, या ज़िम्मेदारी सामने आए, स्वयं से पूछें: "क्या मैं इससे भाग रहा हूँ, या डटकर सामना कर रहा हूँ?" यह छोटा प्रश्न धीरे-धीरे क्षत्रिय-स्वभाव के "अपलायनम्" गुण को विकसित करता है।</div>
+        <p><b>अभ्यास — शक्ति व उदारता का संतुलन:</b> जैसे-जैसे आप अपने क्षेत्र में सक्षमता (दाक्ष्य) और प्रभाव (तेज) बढ़ाते हैं, साथ-साथ यह भी अभ्यास करें कि उस बढ़ती क्षमता का कुछ अंश दूसरों के कल्याण में लगे (दान) — यह क्षत्रिय-स्वभाव को संतुलित व स्थायी बनाता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> क्षत्रिय-गुणों को समाज-रक्षा के लिए आवश्यक शक्ति-संतुलन के रूप में देखते हैं — साहस बिना धृति के अस्थिर होता है, इसलिए दोनों साथ आवश्यक हैं। शंकर इसे कर्मयोग के व्यावहारिक प्रदर्शन के रूप में व्याख्यायित करते हैं।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "ईश्वरभाव" को भगवद्-प्रतिनिधि के रूप में शासन करने के भाव से जोड़ते हैं — सच्चा क्षत्रिय-नेतृत्व अहंकार से नहीं, बल्कि ईश्वर-अर्पित उत्तरदायित्व की भावना से प्रेरित होना चाहिए।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को सक्रिय कर्मयोग और स्वाधीनता-संग्राम के संदर्भ में विशेष रूप से महत्वपूर्ण मानते हैं — "युद्धे चाप्यपलायनम्" को उन्होंने राष्ट्रीय कर्तव्य से न भागने की शिक्षा के रूप में उद्धृत किया। तिलक के लिए यह श्लोक निष्क्रियता के विरुद्ध सक्रिय प्रतिरोध का प्रतीक था।</p>
+        <div class="callout-rajas"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं — क्षत्रिय-स्वभाव का सार है ज़िम्मेदारी से न भागना, चाहे वह व्यक्तिगत हो, सामाजिक हो, या राष्ट्रीय।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">शौर्य</span></div>
+            <div class="flashcard-face flashcard-back"><b>वीरता</b>साहसपूर्ण कार्य की क्षमता</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">तेज</span></div>
+            <div class="flashcard-face flashcard-back"><b>ओज</b>प्रभावशाली उपस्थिति</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">धृति</span></div>
+            <div class="flashcard-face flashcard-back"><b>दृढ़ता</b>18.33-35 से जुड़ी संकल्प-शक्ति</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">दाक्ष्य</span></div>
+            <div class="flashcard-face flashcard-back"><b>कुशलता</b>संकट में शीघ्र, प्रभावी निर्णय</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अपलायनम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>न भागना</b>अर्जुन की स्थिति से सीधा जुड़ाव</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">दान</span></div>
+            <div class="flashcard-face flashcard-back"><b>उदारता</b>शक्ति के साथ ज़िम्मेदारी</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">ईश्वरभाव</span></div>
+            <div class="flashcard-face flashcard-back"><b>नेतृत्व-भाव</b>स्वाभाविक स्वामित्व-प्रवृत्ति</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल धातु/शब्द</th><th>रूप</th><th>अर्थ</th></tr>
+          <tr><td class="sa">शौर्यम्</td><td>शूर (वीर)</td><td>प्रथमा नपुंसक एकवचन</td><td>वीरता</td></tr>
+          <tr><td class="sa">तेजः</td><td>तिज् (तेज़ होना)</td><td>प्रथमा नपुंसक एकवचन</td><td>ओज, प्रभाव</td></tr>
+          <tr><td class="sa">धृतिः</td><td>धृ (धारण करना)</td><td>प्रथमा स्त्रीलिंग एकवचन</td><td>दृढ़ता</td></tr>
+          <tr><td class="sa">दाक्ष्यम्</td><td>दक्ष (कुशल)</td><td>प्रथमा नपुंसक एकवचन</td><td>कुशलता</td></tr>
+          <tr><td class="sa">अपलायनम्</td><td>अ+पलायन (भागना)</td><td>प्रथमा नपुंसक एकवचन</td><td>न भागना</td></tr>
+          <tr><td class="sa">दानम्</td><td>दा (देना)</td><td>प्रथमा नपुंसक एकवचन</td><td>उदारता</td></tr>
+          <tr><td class="sa">ईश्वरभावः</td><td>ईश्वर+भाव</td><td>प्रथमा पुल्लिंग एकवचन</td><td>नेतृत्व-भाव</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">शौर्यं तेजो धृतिर्दाक्ष्यं युद्धे चाप्यपलायनम्।<br>दानमीश्वरभावश्च क्षात्रं कर्म स्वभावजम्।।</div>
+          <div class="cheat-translit">śauryaṃ tejo dhṛtir dākṣyaṃ yuddhe cāpy apalāyanam, dānam īśvara-bhāvaś ca kṣātraṃ karma svabhāva-jam</div>
+          <div class="quality-grid">
+            <div class="quality-card"><div class="quality-sa">शौर्य-तेज-अपलायन</div><div class="quality-desc">शारीरिक साहस</div></div>
+            <div class="quality-card"><div class="quality-sa">धृति-दाक्ष्य</div><div class="quality-desc">आंतरिक दृढ़ता</div></div>
+            <div class="quality-card"><div class="quality-sa">दान-ईश्वरभाव</div><div class="quality-desc">उदार नेतृत्व</div></div>
+            <div class="quality-card"><div class="quality-sa">अर्जुन से जुड़ाव</div><div class="quality-desc">गीता का मूल विषय</div></div>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: सात राजस-सात्त्विक गुण मिलकर क्षत्रिय का स्वभावज कर्म बनाते हैं — साहस, दृढ़ता, और उदार नेतृत्व का समन्वय, सीधे अर्जुन के अपने स्वधर्म से जुड़ा।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('शौर्यं तेजो धृतिर्दाक्ष्यं युद्धे चाप्यपलायनम्। दानमीश्वरभावश्च क्षात्रं कर्म स्वभावजम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('शौर्यं तेजो धृतिर्दाक्ष्यं युद्धे चाप्यपलायनम्। दानमीश्वरभावश्च क्षात्रं कर्म स्वभावजम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('वीरता, ओज, दृढ़ता, कुशलता, युद्ध में न भागना, दान और नेतृत्व-भाव — ये सात क्षत्रिय के स्वभावज गुण हैं।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">शौ</span><span class="syll">र्यं</span><span class="syll">ते</span><span class="syll">जो</span><span class="syll">धृ</span><span class="syll">ति</span><span class="syll">र्दाक्</span><span class="syll">ष्यं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">यु</span><span class="syll">द्धे</span><span class="syll">चा</span><span class="syll">प्य</span><span class="syll">प</span><span class="syll">ला</span><span class="syll">य</span><span class="syll">नम्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">दा</span><span class="syll">न</span><span class="syll">मी</span><span class="syll">श्व</span><span class="syll">र</span><span class="syll">भा</span><span class="syll">व</span><span class="syll">श्च</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">क्षा</span><span class="syll">त्रं</span><span class="syll">क</span><span class="syll">र्म</span><span class="syll">स्व</span><span class="syll">भा</span><span class="syll">व</span><span class="syll">जम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('शौर्यं तेजो धृतिर्दाक्ष्यं युद्धे चाप्यपलायनम् दानमीश्वरभावश्च क्षात्रं कर्म स्वभावजम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "युद्धे चाप्यपलायनम्" पर विशेष रूप से रुकें। जप करते समय याद करें: यह पद अर्जुन की अपनी परिस्थिति से सीधा जुड़ा है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">सात गुण — तीन समूह</button>
+      <button class="tab-btn" data-tab="e2">चार वर्ण अद्यतन</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 सात गुण — तीन तार्किक समूहों में</h3>
+        <p class="subnote">बाह्य साहस से आंतरिक दृढ़ता तक, फिर उदार नेतृत्व तक</p>
+        <div class="quality-grid">
+          <div class="quality-card"><div class="quality-sa">1-3. शौर्य, तेज, अपलायन</div><div class="quality-desc">शारीरिक साहस — कर्म व उपस्थिति दोनों में</div></div>
+          <div class="quality-card"><div class="quality-sa">4-5. धृति, दाक्ष्य</div><div class="quality-desc">आंतरिक दृढ़ता — संकल्प व व्यावहारिक कुशलता</div></div>
+          <div class="quality-card"><div class="quality-sa">6-7. दान, ईश्वरभाव</div><div class="quality-desc">उदार नेतृत्व — शक्ति के साथ उत्तरदायित्व</div></div>
+        </div>
+        <div class="callout-rajas"><b>Key insight:</b> यह क्रम भी संयोग नहीं — बाह्य साहस से भीतरी दृढ़ता तक, और अंत में उदार नेतृत्व तक — एक सम्पूर्ण योद्धा-नेता का चित्र उभरता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 चार वर्ण — अद्यतन स्थिति</h3>
+        <div class="varna-row">
+          <div class="varna-card done">
+            <div class="varna-label">ब्राह्मण ✓</div>
+            <div class="varna-guna">सात्त्विक-प्रधान</div>
+            <div class="varna-desc">नौ गुण — 18.42 में पूर्ण</div>
+          </div>
+          <div class="varna-card active">
+            <div class="varna-label">क्षत्रिय ← यहाँ</div>
+            <div class="varna-guna">राजस-सात्त्विक</div>
+            <div class="varna-desc">सात गुण — 18.43 में पूर्ण</div>
+          </div>
+          <div class="varna-card">
+            <div class="varna-label">वैश्य</div>
+            <div class="varna-guna">राजस-प्रधान</div>
+            <div class="varna-desc">विस्तार 18.44 में</div>
+          </div>
+          <div class="varna-card">
+            <div class="varna-label">शूद्र</div>
+            <div class="varna-guna">तामस-सम्मिश्रित</div>
+            <div class="varna-desc">विस्तार 18.44 में</div>
+          </div>
+        </div>
+        <div class="callout"><b>प्रगति:</b> दो वर्ण (ब्राह्मण, क्षत्रिय) पूर्ण विस्तार से वर्णित हो चुके हैं। शेष दो वर्ण (वैश्य, शूद्र) अगले श्लोक (18.44) में एक साथ वर्णित होंगे।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४१<br>वर्ण-धर्म प्रारंभ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४२<br>ब्राह्मण</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ४३<br>क्षत्रिय ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४४<br>वैश्य-शूद्र</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४५-४८<br>स्वधर्म व सिद्धि</div></div>
+        </div>
+        <div class="callout-rajas"><b>अगला (18.44):</b> वैश्य-स्वभाव — कृषि, गोरक्ष्य, वाणिज्य (राजस-प्रधान), और शूद्र-स्वभाव — परिचर्यात्मक कर्म (तामस-सम्मिश्रित)। दोनों वर्ण एक ही श्लोक में वर्णित होंगे, चारों वर्णों का विवरण पूर्ण करते हुए।</div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.४४) — ☰ नेविगेशन — वैश्य-शूद्र स्वभाव</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.43 में बताए गए सात गुण किस वर्ण के स्वभावज कर्म हैं?",options:["ब्राह्मण","क्षत्रिय","वैश्य","शूद्र"],correct:1},
+    {q:"'युद्धे चाप्यपलायनम्' का क्या अर्थ है?",options:["युद्ध में भाग जाना","युद्ध में भी न भागना","युद्ध से बचना","युद्ध रोकना"],correct:1},
+    {q:"'धृति' शब्द इससे पहले किस त्रयी में विस्तार से चर्चित हुआ था?",options:["ज्ञान त्रयी (18.20-22)","कर्म त्रयी (18.23-25)","धृति त्रयी (18.33-35)","सुख त्रयी (18.37-39)"],correct:2},
+    {q:"क्षत्रिय-स्वभाव किस गुण-मिश्रण का है?",options:["शुद्ध सात्त्विक","राजस-सात्त्विक","शुद्ध तामसिक","राजस-तामस"],correct:1},
+    {q:"18.43 का कौन-सा पद सीधे अर्जुन की स्थिति (अध्याय 1-2) से जुड़ता है?",options:["शौर्यं तेजः","युद्धे चाप्यपलायनम्","दानम्","ईश्वरभावः"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.42 ने ब्राह्मण-स्वभाव के नौ गुण बताए। अब 18.43 दूसरे वर्ण — क्षत्रिय — के सात गुणों का वर्णन करता है, जो राजस-सात्त्विक मिश्रण के हैं।",
+    "'शौर्यं तेजः' — वीरता और ओज। यह शारीरिक साहस और प्रभावशाली उपस्थिति दोनों को दर्शाता है।",
+    "'धृतिः' — यही शब्द 18.33-35 (धृति-त्रयी) में विस्तार से चर्चित हो चुका है। अब वही आंतरिक शक्ति क्षत्रिय-स्वभाव में प्रकट होती है।",
+    "'युद्धे चाप्यपलायनम्' — युद्ध में भी न भागना। यह सीधे अध्याय 1-2 में अर्जुन की मनःस्थिति को संबोधित करता है।",
+    "'दानम् ईश्वरभावः च' — उदारता और नेतृत्व-भाव। शक्ति के साथ उत्तरदायित्व का सिद्धांत यहाँ स्पष्ट होता है।",
+    "यह श्लोक गीता के मूल आख्यान को एक पूर्ण वृत्त में लाता है — अर्जुन का अपना स्वभाव ही उन्हें युद्ध से भागने के विरुद्ध, अपने स्वधर्म की ओर इंगित करता है।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.44 — वैश्य व शूद्र स्वभाव: चार वर्णों का समापन</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:56.4%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(201,162,39,0.18);border:1px solid rgba(201,162,39,0.5);color:var(--gold-light);}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .callout-tamas{border-left:3px solid rgba(106,61,122,0.8);background:rgba(106,61,122,0.08);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-tamas b{color:#c0a0d8;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .varna-row{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin:18px 0;}
+  .varna-card{border-radius:12px;padding:14px 8px;text-align:center;border:1px solid var(--line);background:rgba(255,255,255,0.02);}
+  .varna-card.active{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .varna-card.active2{border:2px solid rgba(106,61,122,0.7);background:rgba(106,61,122,0.1);box-shadow:0 0 16px rgba(106,61,122,0.2);}
+  .varna-card.done{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .varna-card.done2{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .varna-label{font-family:'Tiro Devanagari Hindi',serif;font-size:14px;color:var(--gold-light);margin-bottom:6px;}
+  .varna-guna{font-size:10.5px;color:var(--sage);margin-bottom:6px;font-style:italic;}
+  .varna-desc{font-size:11px;color:var(--cream-dim);line-height:1.5;}
+  @media(max-width:560px){.varna-row{grid-template-columns:1fr 1fr;}}
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-card.tam .contrast-label{color:#c0a0d8;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 44 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.४४</div>
+    </div>
+    <div class="guna-badge">⚙️ वैश्य व शूद्र स्वभाव — चार वर्णों का समापन</div>
+    <div class="shloka">
+      कृषिगौरक्ष्यवाणिज्यं वैश्यकर्म स्वभावजम्।<br>
+      परिचर्यात्मकं कर्म शूद्रस्यापि स्वभावजम्।।
+    </div>
+    <div class="translit">
+      kṛṣi-gaurakṣya-vāṇijyaṃ vaiśya-karma svabhāva-jam,<br>
+      paricaryātmakaṃ karma śūdrasyāpi svabhāva-jam
+    </div>
+    <div class="gist">
+      <b>कृषि</b> (खेती), <b>गोरक्षा</b> (पशुपालन), और <b>वाणिज्य</b> (व्यापार) — ये वैश्य के स्वभावज कर्म हैं। <b>परिचर्यात्मक</b> (सेवा-रूप) कर्म शूद्र का <b>भी</b> स्वभावज कर्म है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — चार वर्णों का समापन एक साथ</h3>
+      <p>18.42 ने ब्राह्मण के नौ गुण, 18.43 ने क्षत्रिय के सात गुण विस्तार से बताए। अब 18.44 शेष दो वर्णों — <b>वैश्य और शूद्र</b> — को एक ही श्लोक में, अपेक्षाकृत संक्षेप में वर्णित करता है। इस तरह चार वर्णों का पूरा विवरण (18.42-44) यहाँ पूर्ण होता है।</p>
+      <p>ध्यान देने योग्य है कि वैश्य के लिए तीन विशिष्ट गतिविधियाँ (कृषि, गोरक्ष्य, वाणिज्य) गिनाई गई हैं, जबकि शूद्र के लिए एक ही व्यापक शब्द — "परिचर्यात्मक कर्म" (सेवा-रूप कर्म) — प्रयुक्त हुआ है।</p>
+      <div class="callout-rajas"><b>कड़ी:</b> वैश्य-कर्म राजस-प्रधान है (सक्रिय आर्थिक गतिविधि — उत्पादन, पालन, विनिमय), जबकि शूद्र-कर्म तामस-सम्मिश्रित माना गया है (सेवा व सहयोग, कम स्वतंत्र निर्णय-भार के साथ)। यह अंतर 18.40 के "त्रिगुण-सार्वभौमिकता" सिद्धांत का व्यावहारिक विस्तार है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कृषिः</span><span class="word-tr">kṛṣiḥ</span></div>
+          <div class="word-meaning">कृषि, खेती</div>
+          <div class="word-eng"><b>EN:</b> agriculture</div>
+          <div class="word-deep">कृष् (जोतना, खींचना) धातु से। भूमि पर श्रम कर अन्न उत्पन्न करना — समाज के भरण-पोषण का मूल आधार।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">गौरक्ष्यम्</span><span class="word-tr">gaurakṣyam</span></div>
+          <div class="word-meaning">गोरक्षा, पशुपालन</div>
+          <div class="word-eng"><b>EN:</b> cattle-rearing, animal husbandry</div>
+          <div class="word-deep">गो (गाय/पशु) + रक्ष्य (रक्षा करने योग्य)। प्राचीन भारतीय अर्थव्यवस्था में पशुधन दूध, कृषि-सहायता, और संसाधन का प्रमुख स्रोत था — इसकी देखभाल एक विशिष्ट कौशल-आधारित कार्य माना गया।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">वाणिज्यम्</span><span class="word-tr">vāṇijyam</span></div>
+          <div class="word-meaning">व्यापार, वाणिज्य</div>
+          <div class="word-eng"><b>EN:</b> trade, commerce</div>
+          <div class="word-deep">वणिज् (व्यापारी) से व्युत्पन्न। वस्तुओं व सेवाओं के आदान-प्रदान द्वारा संसाधनों का प्रबंधन व संवर्धन — आर्थिक तंत्र की रीढ़।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">वैश्यकर्म स्वभावजम्</span><span class="word-tr">vaiśya-karma svabhāva-jam</span></div>
+          <div class="word-meaning">वैश्य का स्वाभाविक कर्म</div>
+          <div class="word-eng"><b>EN:</b> the natural duty of a Vaiśya</div>
+          <div class="word-deep">कृषि+गोरक्ष्य+वाणिज्य — ये तीनों मिलकर "वैश्यकर्म" कहलाते हैं। ध्यान दें कि तीनों गतिविधियाँ संसाधन-सृजन व प्रबंधन से जुड़ी हैं — भूमि, पशु, और वस्तु — समाज की भौतिक आवश्यकताओं की पूर्ति।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">परिचर्यात्मकं कर्म</span><span class="word-tr">paricaryātmakaṃ karma</span></div>
+          <div class="word-meaning">सेवा-रूप कर्म, परिचर्या-प्रधान कार्य</div>
+          <div class="word-eng"><b>EN:</b> service-oriented action</div>
+          <div class="word-deep">परि+चर् (चारों ओर घूमना, सेवा करना) + आत्मक (जिसका स्वरूप हो)। यह एक व्यापक शब्द है, जो किसी विशिष्ट व्यवसाय के बजाय सेवा-भाव-प्रधान समस्त कार्यों को समाहित करता है — कुशल श्रम, सहयोग, और सहायता।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">शूद्रस्य अपि स्वभावजम्</span><span class="word-tr">śūdrasya api svabhāva-jam</span></div>
+          <div class="word-meaning">शूद्र का भी स्वाभाविक (कर्म)</div>
+          <div class="word-eng"><b>EN:</b> is also, for the Śūdra, born of his own nature</div>
+          <div class="word-deep">ध्यान देने योग्य है "अपि" (भी/even) शब्द — यह बल देकर कहता है कि शूद्र का कर्म भी, अन्य तीन वर्णों की भाँति, समान रूप से "स्वभावजम्" है — किसी निम्न या बाध्य स्रोत से नहीं। यह श्लोक की संरचना में एक सूक्ष्म पर महत्वपूर्ण संतुलन-बिंदु है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Agriculture, cattle-rearing, and trade are the natural duties of a Vaiśya, born of his own nature. Service-oriented action is likewise the natural duty of a Śūdra, born of his own nature.
+      </div>
+      <p>18.44 चार वर्णों की सूची पूर्ण करता है। <b>वैश्य-कर्म</b> तीन विशिष्ट गतिविधियों में वर्णित है — कृषि (भूमि से उत्पादन), गोरक्ष्य (पशु-प्रबंधन), और वाणिज्य (विनिमय-व्यवस्था)। ये तीनों राजस-गुण-प्रधान हैं — सक्रिय प्रयास, जोखिम, और संसाधन-वृद्धि से जुड़े।</p>
+      <p><b>शूद्र-कर्म</b> को अधिक संक्षेप में, एक व्यापक शब्द "परिचर्यात्मकं कर्म" से वर्णित किया गया है। परंपरागत व्याख्याओं में इसे कुशल सेवा-कार्य, सहयोग, और सहायता-प्रधान भूमिकाओं से जोड़ा गया है — जो किसी भी समाज या संगठन की कार्यप्रणाली के लिए उतना ही आवश्यक है जितना उत्पादन या नेतृत्व।</p>
+      <div class="callout-tamas"><b>संक्षिप्तता पर एक ईमानदार टिप्पणी:</b> यह उल्लेखनीय है कि ब्राह्मण (नौ गुण) और क्षत्रिय (सात गुण) का वर्णन विस्तृत चारित्रिक सूचियों में हुआ, जबकि वैश्य (तीन गतिविधियाँ) और विशेषतः शूद्र (एक शब्द) का वर्णन अत्यंत संक्षिप्त है। यह असमानता ऐतिहासिक रूप से समाज-सुधारकों और विद्वानों के बीच एक सार्थक चर्चा का विषय रही है — क्या यह केवल काव्य-संक्षेप है, या सामाजिक पदानुक्रम की झलक? श्लोक स्वयं "अपि स्वभावजम्" कहकर शूद्र-कर्म को समान स्वाभाविकता देता है, जो इस बात का संकेत है कि मूल आशय समानता का है, भले ही ऐतिहासिक व्यवहार में असमानता विकसित हुई हो।</div>
+      <p>18.41 से 18.44 तक — चार वर्णों का यह सम्पूर्ण विवरण अब 18.45-48 में अपने व्यावहारिक निष्कर्ष की ओर बढ़ेगा: अपने-अपने स्वभावज कर्म में निष्ठा से लगे रहना ही सिद्धि (आध्यात्मिक पूर्णता) का मार्ग है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — वैश्य-स्वभाव: कृषक व पशुपालक:</b> एक किसान जो भूमि की देखभाल में कुशल है, मौसम व फसल-चक्र को समझता है, और पशुधन का प्रबंधन करता है — यह कृषि व गोरक्ष्य दोनों गुणों का सजीव उदाहरण है, समाज के भरण-पोषण का आधार।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — वैश्य-स्वभाव: व्यापारी व उद्यमी:</b> कोई व्यक्ति जो स्वाभाविक रूप से व्यापार, निवेश, या व्यवसाय-निर्माण में कुशल है — जोखिम का सही आकलन करना, संसाधनों को बढ़ाना, बाज़ार को समझना — यह वाणिज्य-स्वभाव का आधुनिक उदाहरण है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — शूद्र-स्वभाव: कुशल सेवा व सहायता:</b> कोई कुशल शिल्पकार, तकनीशियन, स्वास्थ्य-सेवा कार्यकर्ता, या सहायता-प्रदाता जो अपने कौशल से दूसरों की सेवा में समर्पित है — बिना उनके योगदान के कोई भी संगठन या समाज कार्य नहीं कर सकता। यह परिचर्यात्मक-स्वभाव की गरिमा को दर्शाता है।
+      </div>
+      <div class="callout"><b>साझा सूत्र:</b> तीनों उदाहरण दिखाते हैं कि हर स्वभाव समाज के लिए अपरिहार्य है — उत्पादन, विनिमय, और सेवा तीनों के बिना कोई भी समाज सुचारू रूप से कार्य नहीं कर सकता। कोई भी भूमिका "निम्न" नहीं, प्रत्येक आवश्यक है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">वैश्य व शूद्र को एक ही श्लोक में, इतने संक्षेप में क्यों वर्णित किया गया?</div>
+        <div class="a">इसका कोई निश्चित शास्त्रीय स्पष्टीकरण नहीं है। कुछ भाष्यकार इसे काव्य-संक्षेप (metrical economy) मानते हैं — वैश्य व शूद्र के कर्म गतिविधि-आधारित हैं (क्या करना है), जबकि ब्राह्मण-क्षत्रिय के कर्म चरित्र-आधारित हैं (कैसा होना है) — इसलिए विवरण की प्रकृति भी अलग है। यह विषय आधुनिक विद्वानों के बीच चर्चा का विषय भी रहा है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">'परिचर्यात्मक कर्म' का सटीक अर्थ क्या है — क्या यह किसी विशेष पेशे तक सीमित है?</div>
+        <div class="a">परिचर्यात्मक का शाब्दिक अर्थ "सेवा-स्वरूप" है — यह किसी एक पेशे तक सीमित नहीं, बल्कि व्यापक रूप से कुशल सहयोग, सहायता, और सेवा-प्रधान कार्यों को समाहित करता है। आधुनिक संदर्भ में यह कई क्षेत्रों में लागू हो सकता है — तकनीकी सहायता से लेकर स्वास्थ्य-सेवा तक।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या यह श्लोक शूद्र-वर्ग को अन्य वर्णों से निम्न दर्शाता है?</div>
+        <div class="a">श्लोक स्वयं "शूद्रस्यापि स्वभावजम्" कहकर स्पष्ट करता है कि शूद्र का कर्म भी अन्य तीन वर्णों की तरह समान रूप से स्वभाव-जनित है — किसी हीन स्रोत से नहीं। हालाँकि, ऐतिहासिक रूप से समाज में शूद्र-वर्ग के साथ गंभीर भेदभाव व अन्याय हुआ, जिसकी डॉ. आंबेडकर सहित अनेक समाज-सुधारकों ने गहरी और न्यायसंगत आलोचना की। श्लोक का मूल आशय (समान स्वाभाविकता) और ऐतिहासिक व्यवहार (असमानता) के बीच के इस अंतर को ईमानदारी से स्वीकार करना महत्वपूर्ण है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.42-44 के बाद अब आगे (18.45-48) में क्या वर्णित होगा?</div>
+        <div class="a">अगले श्लोक अपने-अपने स्वभावज कर्म में निष्ठा-पूर्वक लगे रहने के फल पर केंद्रित होंगे — 18.45 (स्व-कर्म से सिद्धि), 18.46 (ईश्वर-आराधना के रूप में कर्म), 18.47 (स्वधर्म बनाम परधर्म), 18.48 (सह-जन्य कर्म का त्याग न करना)। यह चातुर्वर्ण्य-विवरण का व्यावहारिक निष्कर्ष होगा।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.44 चार वर्णों के विवरण को पूर्ण करता है, जो 18.41 में शुरू हुआ था। यह श्लोक समाज की एक सम्पूर्ण, परस्पर-निर्भर संरचना प्रस्तुत करता है — ज्ञान (ब्राह्मण), सुरक्षा-नेतृत्व (क्षत्रिय), संसाधन-निर्माण (वैश्य), और सेवा-सहयोग (शूद्र) — चारों मिलकर एक सुचारू समाज बनाते हैं, कोई भी अकेला पर्याप्त नहीं।</p>
+        <p>यह श्लोक 3.35 और आगे 18.47-48 की तैयारी भी है — जहाँ गीता स्पष्ट करेगी कि अपने स्वाभाविक कर्तव्य में दोष होते हुए भी उसे त्यागना उचित नहीं, क्योंकि हर कर्म-प्रकार (चाहे वह उच्च प्रतिष्ठा का हो या सेवा-प्रधान) समान रूप से आवश्यक और मूल्यवान है।</p>
+        <div class="callout"><b>सामाजिक पूर्णता का सिद्धांत:</b> जैसे शरीर के विभिन्न अंग (सिर, हाथ, जांघ, पैर — पुरुषसूक्त की उपमा) मिलकर एक शरीर बनाते हैं, वैसे ही चार वर्ण मिलकर एक समाज बनाते हैं। किसी एक अंग को दूसरे से श्रेष्ठ या निम्न कहना शरीर की एकता को नकारना है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — चार वर्णों की पूर्ण संरचना</h3>
+        <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="190" rx="80" ry="40" fill="rgba(201,162,39,0.13)" stroke="rgba(201,162,39,0.5)" stroke-width="1.3"/>
+          <text x="350" y="185" text-anchor="middle" fill="var(--gold-light)" font-size="12" font-family="Tiro Devanagari Hindi, serif">समाज</text>
+          <text x="350" y="202" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">चार परस्पर-निर्भर स्तंभ</text>
+
+          <line x1="290" y1="165" x2="180" y2="90" stroke="rgba(42,106,90,0.4)" stroke-width="1.1"/>
+          <ellipse cx="140" cy="70" rx="70" ry="30" fill="rgba(42,106,90,0.1)" stroke="rgba(42,106,90,0.4)" stroke-width="1"/>
+          <text x="140" y="65" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">ब्राह्मण</text>
+          <text x="140" y="82" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">ज्ञान (18.42)</text>
+
+          <line x1="330" y1="152" x2="290" y2="65" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <ellipse cx="290" cy="47" rx="70" ry="28" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.4)" stroke-width="1"/>
+          <text x="290" y="42" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">क्षत्रिय</text>
+          <text x="290" y="59" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">नेतृत्व (18.43)</text>
+
+          <line x1="410" y1="165" x2="520" y2="90" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <ellipse cx="560" cy="70" rx="70" ry="30" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.4)" stroke-width="1"/>
+          <text x="560" y="65" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">वैश्य</text>
+          <text x="560" y="82" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">संसाधन (18.44)</text>
+
+          <line x1="350" y1="230" x2="350" y2="310" stroke="rgba(106,61,122,0.4)" stroke-width="1.1"/>
+          <ellipse cx="350" cy="335" rx="80" ry="30" fill="rgba(106,61,122,0.1)" stroke="rgba(106,61,122,0.4)" stroke-width="1"/>
+          <text x="350" y="330" text-anchor="middle" fill="#c0a0d8" font-size="11" font-family="Tiro Devanagari Hindi, serif">शूद्र</text>
+          <text x="350" y="347" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">सेवा (18.44)</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — सामाजिक-आर्थिक भूमिका-विभाजन</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>18.44 से समानता</th><th>अंतर</th></tr>
+          <tr><td>आधुनिक अर्थशास्त्र — Primary/Secondary/Tertiary Sectors</td><td>कृषि (Primary), वाणिज्य (Secondary/Tertiary) का विभाजन समान</td><td>आधुनिक वर्गीकरण तटस्थ आर्थिक है, गीता आध्यात्मिक-सामाजिक ढाँचे में है</td></tr>
+          <tr><td>प्लेटो का "उत्पादक वर्ग" (Producer Class)</td><td>कृषक व व्यापारी वर्ग की सामाजिक आवश्यकता समान रूप से स्वीकृत</td><td>प्लेटो का ढाँचा राजनैतिक-दार्शनिक है, गीता गुण-स्वभाव आधारित</td></tr>
+          <tr><td>"Essential Workers" (आधुनिक — विशेषकर महामारी के बाद)</td><td>सेवा-प्रधान कार्यों की अपरिहार्यता को स्वीकार करना समान</td><td>आधुनिक विचार समता-आधारित है, ऐतिहासिक वर्ण-व्यवस्था पदानुक्रमित बन गई</td></tr>
+        </table>
+        <div class="callout"><b>साझा सिद्धांत:</b> हर समाज को उत्पादन, विनिमय, और सेवा — तीनों कार्यों की आवश्यकता होती है। आधुनिक और प्राचीन दोनों दृष्टिकोण इस मूल सत्य को स्वीकार करते हैं, भले ही सामाजिक क्रियान्वयन में भिन्नता रही हो।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout"><b>अपने योगदान की गरिमा पहचानें:</b> चाहे आपका स्वाभाविक झुकाव संसाधन-निर्माण (वैश्य-स्वभाव) की ओर हो या कुशल सेवा-सहयोग (शूद्र-स्वभाव) की ओर — दोनों समान रूप से समाज के लिए अपरिहार्य हैं। अपने कार्य को "छोटा" या "बड़ा" मानने की बजाय, उसकी अनिवार्यता को पहचानना ही सच्ची आत्म-स्वीकृति है।</div>
+        <p><b>अभ्यास — योगदान-चिंतन:</b> सप्ताह में एक बार विचार करें: "मेरा कार्य, चाहे वह उत्पादन का हो, विनिमय का हो, या सेवा का, किस तरह बड़े सामाजिक ताने-बाने का अभिन्न अंग है?" यह चिंतन कार्य में गरिमा और अर्थ दोनों जोड़ता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> चारों वर्णों को समाज-शरीर के अंगों की तरह परस्पर-पूरक मानते हैं — किसी एक के बिना पूर्णता असंभव है। शंकर बल देते हैं कि आत्म-ज्ञान की दृष्टि से चारों वर्णों में समान अधिकार है, केवल बाह्य कर्तव्य भिन्न हैं।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> भक्ति-मार्ग में वर्ण-भेद को गौण मानते हैं — भगवद्-भक्ति के अधिकार में सभी वर्ण समान हैं। हर वर्ण अपने कर्म को ईश्वर-अर्पण भाव से करते हुए समान रूप से मोक्ष का अधिकारी है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को सामाजिक श्रम-विभाजन की व्यावहारिक आवश्यकता से जोड़ते हैं — किसी भी समाज को कृषि, व्यापार, और सेवा तीनों की आवश्यकता होती है। तिलक इसे आधुनिक श्रम-गरिमा (dignity of labor) की भावना से भी जोड़ते हैं।</p>
+        <div class="callout"><b>साझा सूत्र व आधुनिक विमर्श:</b> तीनों आचार्य वर्णों की परस्पर-पूरकता पर सहमत हैं। महात्मा गांधी ने भी "सर्वोदय" के सिद्धांत में सभी प्रकार के श्रम की समान गरिमा पर बल दिया — जबकि ऐतिहासिक जाति-आधारित भेदभाव, विशेषकर शूद्र-वर्ग के साथ, डॉ. आंबेडकर सहित अनेक विचारकों की गहन आलोचना का विषय रहा है। यह भेद — शास्त्र का मूल आशय बनाम ऐतिहासिक व्यवहार — आज भी सक्रिय विमर्श का विषय है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कृषि</span></div>
+            <div class="flashcard-face flashcard-back"><b>खेती</b>भूमि से उत्पादन, वैश्य-कर्म का प्रथम अंग</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">गौरक्ष्य</span></div>
+            <div class="flashcard-face flashcard-back"><b>पशुपालन</b>पशुधन का प्रबंधन व देखभाल</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">वाणिज्य</span></div>
+            <div class="flashcard-face flashcard-back"><b>व्यापार</b>विनिमय व संसाधन-संवर्धन</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">परिचर्यात्मक</span></div>
+            <div class="flashcard-face flashcard-back"><b>सेवा-रूप</b>व्यापक सहयोग-प्रधान कर्म</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">शूद्रस्यापि</span></div>
+            <div class="flashcard-face flashcard-back"><b>शूद्र का भी</b>समान स्वाभाविकता का संकेत</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल धातु/शब्द</th><th>रूप</th><th>अर्थ</th></tr>
+          <tr><td class="sa">कृषिः</td><td>कृष् (जोतना)</td><td>प्रथमा स्त्रीलिंग एकवचन</td><td>खेती</td></tr>
+          <tr><td class="sa">गौरक्ष्यम्</td><td>गो+रक्ष</td><td>प्रथमा नपुंसक एकवचन</td><td>पशुपालन</td></tr>
+          <tr><td class="sa">वाणिज्यम्</td><td>वणिज्</td><td>प्रथमा नपुंसक एकवचन</td><td>व्यापार</td></tr>
+          <tr><td class="sa">परिचर्यात्मकम्</td><td>परि+चर्</td><td>प्रथमा नपुंसक एकवचन</td><td>सेवा-स्वरूप</td></tr>
+          <tr><td class="sa">शूद्रस्य</td><td>शूद्र</td><td>षष्ठी एकवचन</td><td>शूद्र का</td></tr>
+          <tr><td class="sa">अपि</td><td>अपि (अव्यय)</td><td>—</td><td>भी, समान रूप से</td></tr>
+          <tr><td class="sa">स्वभावजम्</td><td>स्व+भाव+ज</td><td>प्रथमा नपुंसक एकवचन</td><td>स्वभाव से उत्पन्न</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">कृषिगौरक्ष्यवाणिज्यं वैश्यकर्म स्वभावजम्।<br>परिचर्यात्मकं कर्म शूद्रस्यापि स्वभावजम्।।</div>
+          <div class="cheat-translit">kṛṣi-gaurakṣya-vāṇijyaṃ vaiśya-karma svabhāva-jam, paricaryātmakaṃ karma śūdrasyāpi svabhāva-jam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>कृषि-गोरक्ष्य-वाणिज्य</b> वैश्य-कर्म</span>
+            <span class="cheat-chip"><b>परिचर्या</b> शूद्र-कर्म</span>
+            <span class="cheat-chip"><b>अपि</b> समान स्वाभाविकता</span>
+            <span class="cheat-chip"><b>चार वर्ण पूर्ण</b> 18.42-44</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: कृषि, पशुपालन, व्यापार वैश्य का, और सेवा-कर्म शूद्र का स्वभावज कर्म है — दोनों समान रूप से स्वाभाविक, न कि हीन। चातुर्वर्ण्य-विवरण यहाँ पूर्ण होता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('कृषिगौरक्ष्यवाणिज्यं वैश्यकर्म स्वभावजम्। परिचर्यात्मकं कर्म शूद्रस्यापि स्वभावजम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('कृषिगौरक्ष्यवाणिज्यं वैश्यकर्म स्वभावजम्। परिचर्यात्मकं कर्म शूद्रस्यापि स्वभावजम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('कृषि, पशुपालन और व्यापार वैश्य का स्वाभाविक कर्म है। सेवा-रूप कर्म शूद्र का भी स्वाभाविक कर्म है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">कृ</span><span class="syll">षि</span><span class="syll">गौ</span><span class="syll">र</span><span class="syll">क्ष्य</span><span class="syll">वा</span><span class="syll">णि</span><span class="syll">ज्यं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">वै</span><span class="syll">श्य</span><span class="syll">क</span><span class="syll">र्म</span><span class="syll">स्व</span><span class="syll">भा</span><span class="syll">व</span><span class="syll">जम्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">प</span><span class="syll">रि</span><span class="syll">च</span><span class="syll">र्या</span><span class="syll">त्म</span><span class="syll">कं</span><span class="syll">क</span><span class="syll">र्म</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">शू</span><span class="syll">द्र</span><span class="syll">स्या</span><span class="syll">पि</span><span class="syll">स्व</span><span class="syll">भा</span><span class="syll">व</span><span class="syll">जम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('कृषिगौरक्ष्यवाणिज्यं वैश्यकर्म स्वभावजम् परिचर्यात्मकं कर्म शूद्रस्यापि स्वभावजम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout"><b>ध्यान-बिंदु:</b> "शूद्रस्यापि" पर विशेष रूप से रुकें। जप करते समय याद करें: "अपि" शब्द समानता का संकेत है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">चार वर्ण — पूर्ण चित्र</button>
+      <button class="tab-btn" data-tab="e2">वैश्य vs शूद्र</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 चार वर्ण — अब पूर्ण चित्र</h3>
+        <p class="subnote">18.42-44 में सम्पूर्ण चातुर्वर्ण्य वर्णित हो चुका है</p>
+        <div class="varna-row">
+          <div class="varna-card done">
+            <div class="varna-label">ब्राह्मण ✓</div>
+            <div class="varna-guna">सात्त्विक-प्रधान</div>
+            <div class="varna-desc">नौ गुण — 18.42</div>
+          </div>
+          <div class="varna-card done2">
+            <div class="varna-label">क्षत्रिय ✓</div>
+            <div class="varna-guna">राजस-सात्त्विक</div>
+            <div class="varna-desc">सात गुण — 18.43</div>
+          </div>
+          <div class="varna-card active">
+            <div class="varna-label">वैश्य ✓ ← यहाँ</div>
+            <div class="varna-guna">राजस-प्रधान</div>
+            <div class="varna-desc">तीन कर्म — 18.44</div>
+          </div>
+          <div class="varna-card active2">
+            <div class="varna-label">शूद्र ✓ ← यहाँ</div>
+            <div class="varna-guna">तामस-सम्मिश्रित</div>
+            <div class="varna-desc">सेवा-कर्म — 18.44</div>
+          </div>
+        </div>
+        <div class="callout"><b>चातुर्वर्ण्य पूर्ण!</b> सभी चार वर्णों के स्वभावज कर्म अब वर्णित हो चुके हैं। अगला भाग (18.45-48) इस ज्ञान का व्यावहारिक निष्कर्ष प्रस्तुत करेगा।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 वैश्य बनाम शूद्र — एक तुलना</h3>
+        <div class="contrast-row">
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 वैश्य</div>
+            <div class="contrast-sa">कृषि-गोरक्ष्य-वाणिज्य</div>
+            <p><b>तीन विशिष्ट गतिविधियाँ।</b><br>राजस-प्रधान — सक्रिय उत्पादन व विनिमय।<br>संसाधन-सृजन व प्रबंधन की भूमिका।</p>
+          </div>
+          <div class="contrast-card tam">
+            <div class="contrast-label">🌑 शूद्र</div>
+            <div class="contrast-sa">परिचर्यात्मक कर्म</div>
+            <p><b>एक व्यापक सेवा-अवधारणा।</b><br>तामस-सम्मिश्रित — सहयोग व समर्थन।<br>"अपि" शब्द से समान स्वाभाविकता की पुष्टि।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> विवरण की लंबाई में अंतर के बावजूद, श्लोक स्वयं दोनों को समान रूप से "स्वभावजम्" घोषित करता है — यह भेद वर्णन-शैली का है, मूल्य का नहीं।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४१<br>वर्ण-धर्म प्रारंभ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४२<br>ब्राह्मण</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४३<br>क्षत्रिय</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ४४<br>वैश्य-शूद्र ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४५-४८<br>स्वधर्म व सिद्धि</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.45):</b> स्व-कर्म में निष्ठा से लगे रहने पर सिद्धि (पूर्णता) कैसे प्राप्त होती है — चातुर्वर्ण्य-ज्ञान का पहला व्यावहारिक निष्कर्ष।</div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.४५) — ☰ नेविगेशन — स्व-कर्म से सिद्धि</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.44 के अनुसार वैश्य के स्वभावज कर्म कौन-कौन से हैं?",options:["शौर्य, तेज, धृति","कृषि, गोरक्ष्य, वाणिज्य","शम, दम, तप","ज्ञान, विज्ञान, आस्तिक्य"],correct:1},
+    {q:"शूद्र के स्वभावज कर्म को किस शब्द से वर्णित किया गया है?",options:["वाणिज्यम्","परिचर्यात्मकं कर्म","दानम्","आस्तिक्यम्"],correct:1},
+    {q:"'शूद्रस्यापि' में 'अपि' शब्द क्या दर्शाता है?",options:["भेद-भाव","शूद्र-कर्म की समान स्वाभाविकता","निषेध","संदेह"],correct:1},
+    {q:"18.44 के बाद (18.45-48) में गीता किस विषय पर आगे बढ़ेगी?",options:["गुणों की पुनरावृत्ति","स्व-कर्म से सिद्धि व स्वधर्म का महत्व","सुख के प्रकार","बुद्धि के भेद"],correct:1},
+    {q:"18.42-44 में वर्णित चार वर्णों में से कौन-सा राजस-प्रधान माना गया है?",options:["ब्राह्मण","क्षत्रिय","वैश्य","शूद्र"],correct:2}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.42-43 ने ब्राह्मण व क्षत्रिय के गुण विस्तार से बताए। अब 18.44 शेष दो वर्णों — वैश्य और शूद्र — को एक ही श्लोक में वर्णित करता है।",
+    "'कृषिगौरक्ष्यवाणिज्यम्' — कृषि, पशुपालन, और व्यापार। ये तीन गतिविधियाँ वैश्य के स्वभावज कर्म हैं — संसाधन-सृजन व प्रबंधन।",
+    "'परिचर्यात्मकं कर्म' — सेवा-रूप कर्म, यह शूद्र का स्वभावज कर्म है। एक व्यापक शब्द जो सहयोग व सहायता-प्रधान कार्यों को समाहित करता है।",
+    "'शूद्रस्यापि स्वभावजम्' — 'अपि' (भी) शब्द पर ध्यान दें। यह स्पष्ट करता है कि शूद्र-कर्म भी समान रूप से स्वाभाविक है, किसी हीन स्रोत से नहीं।",
+    "विवरण की लंबाई में अंतर (ब्राह्मण-नौ गुण, क्षत्रिय-सात गुण, वैश्य-तीन कर्म, शूद्र-एक शब्द) एक ऐतिहासिक चर्चा का विषय रहा है — पर श्लोक का मूल आशय समानता का है।",
+    "चातुर्वर्ण्य-विवरण अब पूर्ण होता है (18.41-44)। अगला श्लोक (18.45) स्व-कर्म में निष्ठा से लगे रहने पर सिद्धि कैसे प्राप्त होती है, यह बताएगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

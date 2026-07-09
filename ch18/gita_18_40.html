@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.40 — त्रिगुण-सार्वभौमिकता: कोई भी प्राणी मुक्त नहीं</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:51.3%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(201,162,39,0.18);border:1px solid rgba(201,162,39,0.5);color:var(--gold-light);}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+  .trayi-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:10px;}
+  .trayi-table th,.trayi-table td{border:1px solid var(--line);padding:8px 9px;text-align:right;}
+  .trayi-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .trayi-table td{color:var(--cream-dim);}
+  .trayi-table td.done{color:var(--gold-light);font-weight:600;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 40 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.४०</div>
+    </div>
+    <div class="guna-badge">🔱 त्रिगुण-सार्वभौमिकता — षड्-त्रयी का निष्कर्ष</div>
+    <div class="shloka">
+      न तदस्ति पृथिव्यां वा दिवि देवेषु वा पुनः।<br>
+      सत्त्वं प्रकृतिजैर्मुक्तं यदेभिः स्यात्त्रिभिर्गुणैः।।
+    </div>
+    <div class="translit">
+      na tad asti pṛthivyāṃ vā divi deveṣu vā punaḥ,<br>
+      sattvaṃ prakṛti-jair muktaṃ yad ebhiḥ syāt tribhir guṇaiḥ
+    </div>
+    <div class="gist">
+      न तो पृथ्वी पर, न स्वर्ग में देवताओं के बीच भी, ऐसा <b>कोई प्राणी</b> है, जो प्रकृति से उत्पन्न इन <b>तीन गुणों</b> (सत्त्व, रजस्, तमस्) से <b>मुक्त</b> हो।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — छह त्रयियों का समापन-वाक्य</h3>
+      <p>18.19 से लेकर 18.39 तक, गीता ने छह विषयों को क्रमशः तीन-तीन गुणों में विभाजित करके समझाया — <b>ज्ञान (20-22), कर्म (23-25), कर्ता (26-28), बुद्धि (30-32), धृति (33-35), और सुख (37-39)</b>। हर त्रयी के बीच एक "घोषणा-श्लोक" भी था (18.19, 18.29, 18.36)।</p>
+      <p>अब 18.39 पर सुख-त्रयी पूर्ण होने के बाद, 18.40 एक व्यापक, सार्वभौमिक निष्कर्ष प्रस्तुत करता है — यह बताता है कि यह पूरा गुण-वर्गीकरण केवल कुछ चुनिंदा प्राणियों पर लागू नहीं होता, बल्कि <b>सृष्टि के हर प्राणी</b> पर — पृथ्वी से लेकर स्वर्ग के देवताओं तक — बिना अपवाद के लागू होता है।</p>
+      <div class="callout"><b>संरचनात्मक भूमिका:</b> यह श्लोक छह त्रयियों (18.19-39) का "मुहर" (seal) है और साथ ही अगले विषय — स्वभावज कर्म-विभाग अर्थात् वर्ण-धर्म (18.41 से आगे) — की भूमिका भी तैयार करता है। यदि सभी प्राणी गुणों से बंधे हैं, तो हर किसी का स्वभाव और कर्तव्य भी उन्हीं गुणों से निर्धारित होगा — यही अगले श्लोकों का विषय है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">न तदस्ति</span><span class="word-tr">na tad asti</span></div>
+          <div class="word-meaning">ऐसा (कुछ भी/कोई) नहीं है</div>
+          <div class="word-eng"><b>EN:</b> there is not that / no such thing exists</div>
+          <div class="word-deep">न + तत् + अस्ति (अस् धातु, "होना") — पूर्ण निषेध। यह वाक्य-रचना अपवाद की कोई गुंजाइश नहीं छोड़ती — "बिल्कुल कुछ भी नहीं" जैसा दृढ़ कथन।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">पृथिव्यां वा</span><span class="word-tr">pṛthivyāṃ vā</span></div>
+          <div class="word-meaning">पृथ्वी पर या (भी)</div>
+          <div class="word-eng"><b>EN:</b> on earth, or</div>
+          <div class="word-deep">पृथिवी (भूमि) + सप्तमी + वा (विकल्प-सूचक)। "वा" यहाँ केवल विकल्प नहीं, बल्कि दो क्षेत्रों (पृथ्वी व स्वर्ग) को एक साथ जोड़ने के लिए भी प्रयुक्त — "चाहे यहाँ, चाहे वहाँ।"</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">दिवि देवेषु वा पुनः</span><span class="word-tr">divi deveṣu vā punaḥ</span></div>
+          <div class="word-meaning">स्वर्ग में देवताओं के बीच भी, या पुनः</div>
+          <div class="word-eng"><b>EN:</b> or again, in heaven among the gods</div>
+          <div class="word-deep">दिव् (स्वर्ग/आकाश) + देव (सप्तमी बहुवचन) + पुनः (फिर से, इसके अतिरिक्त)। यह पद कथन के दायरे को अधिकतम तक विस्तृत करता है — केवल मनुष्य ही नहीं, दिव्य लोक के देवता भी इसमें शामिल हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सत्त्वम्</span><span class="word-tr">sattvam</span></div>
+          <div class="word-meaning">प्राणी, सत्ता, अस्तित्व (यहाँ गुण "सत्त्व" नहीं!)</div>
+          <div class="word-eng"><b>EN:</b> a being / an entity (NOT the "sattva guna" here)</div>
+          <div class="word-deep"><b>महत्वपूर्ण भेद:</b> "सत्त्वम्" शब्द यहाँ अस् (होना) धातु से बना है, जिसका अर्थ है "जो है" अर्थात् "प्राणी/सत्ता।" यह वही शब्द है जो गुण-नाम "सत्त्व" (शुद्धता, प्रकाश) के रूप में भी प्रयुक्त होता है, पर यहाँ प्रसंग स्पष्ट करता है कि अर्थ भिन्न है — "कोई भी सत्ता/प्राणी।" संस्कृत में यह एक सामान्य द्वि-अर्थी (homonym) उदाहरण है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">प्रकृतिजैः मुक्तम्</span><span class="word-tr">prakṛti-jaiḥ muktam</span></div>
+          <div class="word-meaning">प्रकृति से उत्पन्न (गुणों) से मुक्त</div>
+          <div class="word-eng"><b>EN:</b> free from those born of prakṛti (nature)</div>
+          <div class="word-deep">प्रकृति (मूल-तत्त्व) + ज (से उत्पन्न) + मुक्त (स्वतंत्र)। गुण मनुष्य की रचना नहीं, प्रकृति (सृष्टि के मूल तत्त्व) की उपज हैं — इसलिए कोई भी सृष्टि के भीतर रहते हुए इनसे बच नहीं सकता।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यदेभिः स्यात्त्रिभिर्गुणैः</span><span class="word-tr">yad ebhiḥ syāt tribhir guṇaiḥ</span></div>
+          <div class="word-meaning">जो इन तीन गुणों से (मुक्त) हो सके</div>
+          <div class="word-eng"><b>EN:</b> which might be (free) from these three guṇas</div>
+          <div class="word-deep">यत् (जो) + एभिः (इनसे, सर्वनाम) + स्यात् (हो सके, विधिलिङ्ग) + त्रिभिः गुणैः (तीन गुणों से)। पूरे श्लोक की मूल संरचना यहाँ पूर्ण होती है: "ऐसा कोई प्राणी नहीं जो इन तीन गुणों से मुक्त हो सके" — सत्त्व, रजस्, तमस् तीनों एक साथ, समग्र रूप में उल्लिखित।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        There is no being, either on earth or again among the gods in heaven, that is free from these three guṇas born of nature (prakṛti).
+      </div>
+      <p>18.40 एक साहसिक, सर्वव्यापी घोषणा है। गीता यहाँ किसी अपवाद की गुंजाइश नहीं छोड़ती — <b>न पृथ्वी के प्राणी, न स्वर्ग के देवता</b> — कोई भी प्रकृति के तीन गुणों (सत्त्व, रजस्, तमस्) के प्रभाव से परे नहीं है। यह इसलिए महत्वपूर्ण है क्योंकि कई परंपराओं में देवताओं को द्वंद्वातीत, पूर्ण माना जाता है — गीता स्पष्ट करती है कि जब तक कोई प्रकृति (सृष्टि) के भीतर है, वह गुणों से बंधा है।</p>
+      <p>यह कथन 18.19-39 की पूरी छह-त्रयी शिक्षा को एक वाक्य में समेट देता है — ज्ञान, कर्म, कर्ता, बुद्धि, धृति, सुख — इन सभी में गुण-आधारित विभाजन इसलिए संभव था क्योंकि <b>हर प्राणी अनिवार्य रूप से किसी न किसी गुण-मिश्रण के अंतर्गत कार्य करता है।</b></p>
+      <div class="callout"><b>तो फिर मुक्ति कैसे संभव है?</b> गीता अन्यत्र (14.19-26) "गुणातीत" अवस्था का वर्णन करती है — जहाँ साधक गुणों के प्रभाव को पहचानकर उनसे ऊपर उठ जाता है, गुणों को नष्ट करके नहीं, बल्कि उनसे तादात्म्य (identification) तोड़कर। 18.40 का कथन प्रकृति के भीतर के हर प्राणी पर लागू है — जो प्रकृति से परे (परमात्मा/मुक्त पुरुष) है, वह इस नियम से बाहर है।</p>
+      </div>
+      <p>यह श्लोक अध्याय 18 के अगले भाग — वर्ण-धर्म (18.41 से आगे) — की नींव रखता है: चूँकि हर प्राणी किसी गुण-मिश्रण से बंधा है, इसलिए हर व्यक्ति का स्वाभाविक कर्तव्य (स्वभावज कर्म) भी उसके प्रधान गुण के अनुसार निर्धारित होता है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — महान साधक भी गुण-मुक्त नहीं, गुणातीत तक:</b> कठोर तपस्वी और अत्यंत अनुशासित व्यक्ति में भी सत्त्व की प्रधानता होती है, रजस्-तमस् पूर्ण रूप से समाप्त नहीं — जब तक वह गुणातीत अवस्था (14.19-26) तक न पहुँच जाए। यहाँ तक कि सबसे संयमी व्यक्ति भी कभी-कभी आलस्य (तमस्) या उतावलापन (रजस्) अनुभव करता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — पौराणिक देवगण भी गुणाधीन:</b> भारतीय पुराणों में इन्द्र, चंद्र आदि देवताओं को भी कभी-कभी काम (इच्छा), क्रोध, या ईर्ष्या से प्रभावित दिखाया गया है — यह ठीक 18.40 के कथन की पुष्टि करता है: दिव्य पद पाकर भी गुणों से मुक्ति स्वतः नहीं मिलती।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — सामान्य जीवन में गुण-मिश्रण:</b> कोई भी व्यक्ति पूर्णतः "सात्त्विक" या पूर्णतः "तामसिक" नहीं होता — बल्कि हर किसी में तीनों गुण अलग-अलग अनुपात में मिश्रित रहते हैं, समय, परिस्थिति और मनोदशा के अनुसार बदलते हुए। यह मिश्रण ही व्यक्तित्व की जटिलता का आधार है।
+      </div>
+      <div class="callout"><b>साझा सूत्र:</b> तीनों उदाहरण दिखाते हैं कि गुणों से मुक्ति कोई पद, शक्ति, या स्थिति से स्वतः नहीं मिलती — यह केवल सजग आंतरिक साधना (गुणातीत होने के मार्ग) से ही संभव है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">यदि देवता भी गुणों से मुक्त नहीं हैं, तो क्या कोई भी वास्तव में मुक्त हो सकता है?</div>
+        <div class="a">हाँ — पर वह मुक्ति गुणों को "समाप्त" करके नहीं, बल्कि उनसे ऊपर उठकर (गुणातीत होकर) मिलती है। गीता 14.19-26 में इसका विस्तार से वर्णन करती है: जब साधक गुणों की क्रीड़ा को केवल द्रष्टा भाव से देखने लगे, उनसे तादात्म्य न रखे, तब वह गुणातीत कहलाता है। यह प्रकृति के भीतर रहते हुए भी संभव है, प्रकृति को त्यागकर नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"सत्त्वम्" शब्द को लेकर भ्रम क्यों होता है — क्या यह गुण "सत्त्व" की बात कर रहा है?</div>
+        <div class="a">नहीं। यहाँ "सत्त्वम्" का अर्थ है "प्राणी/सत्ता" (अस् धातु से) — यह पूरी तरह भिन्न शब्द-प्रयोग है, हालाँकि वर्तनी समान है। श्लोक तीनों गुणों (सत्त्व, रजस्, तमस्) की बात कर रहा है, केवल "सत्त्व" गुण की नहीं — इसलिए "सत्त्वम्" यहाँ अवश्य ही "प्राणी" के अर्थ में है, अन्यथा वाक्य का अर्थ ही टूट जाएगा।</div>
+      </div>
+      <div class="faq">
+        <div class="q">यह श्लोक अगले भाग (वर्ण-धर्म, 18.41+) से कैसे जुड़ता है?</div>
+        <div class="a">18.40 यह स्थापित करता है कि हर प्राणी गुण-मिश्रण के अंतर्गत है। इसका सीधा निष्कर्ष यह है कि हर व्यक्ति में कोई एक गुण (सत्त्व/रजस्/तमस्) प्रधान होता है, और इसी प्रधानता के आधार पर उसका स्वाभाविक कर्तव्य (स्वभावज कर्म — ब्राह्मण, क्षत्रिय, वैश्य, शूद्र के कर्म) निर्धारित होता है। 18.41 से यही विषय शुरू होता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या इस श्लोक का कोई दार्शनिक निहितार्थ है कि "स्वतंत्र इच्छा" (free will) सीमित है?</div>
+        <div class="a">यह एक गहन दार्शनिक प्रश्न है। गीता यह नहीं कहती कि चयन असंभव है — बल्कि यह कहती है कि हर चयन किसी न किसी गुण-प्रभाव के अंतर्गत होता है। स्वतंत्रता इस बात में है कि व्यक्ति अपने गुण-मिश्रण को पहचाने, उसे स्वीकार करे, और धीरे-धीरे तमस से रजस, रजस से सत्त्व, और अंततः सत्त्व से गुणातीत की ओर बढ़े — यही गीता का साधना-मार्ग है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.40 अध्याय 14 (गुणत्रयविभागयोग) की केंद्रीय शिक्षा को अध्याय 18 के संदर्भ में पुनः स्थापित करता है — गुण प्रकृति के सार्वभौमिक तत्त्व हैं, किसी विशेष प्राणी या वर्ग तक सीमित नहीं। यह श्लोक गीता की समग्र दृष्टि को स्पष्ट करता है: <b>आध्यात्मिक पदानुक्रम में भी कोई "गुण-मुक्त क्षेत्र" नहीं है</b> — केवल परब्रह्म और गुणातीत अवस्था ही इसका अपवाद है।</p>
+        <p>यह श्लोक विनम्रता की शिक्षा भी देता है — चाहे कोई कितना भी ऊँचा पद पाए (यहाँ तक कि देवत्व भी), गुणों से जूझना जीवन की सतत प्रक्रिया बनी रहती है। कोई "पहुँच चुका, अब सुरक्षित" वाली स्थिति नहीं है, जब तक गुणातीत न हो जाए।</p>
+        <div class="callout"><b>षड्-त्रयी की समाप्ति:</b> 18.19 से 18.39 तक चली गुण-आधारित विश्लेषण-यात्रा यहाँ अपने तार्किक निष्कर्ष पर पहुँचती है — यह विश्लेषण इसलिए सम्भव था क्योंकि यह सार्वभौमिक सत्य पर आधारित है, अपवाद-सहित सिद्धांत पर नहीं।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — त्रिगुण-व्यापकता की संरचना</h3>
+        <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <circle cx="300" cy="180" r="90" fill="rgba(42,106,90,0.13)" stroke="rgba(42,106,90,0.45)" stroke-width="1.3"/>
+          <circle cx="400" cy="180" r="90" fill="rgba(140,74,32,0.13)" stroke="rgba(140,74,32,0.45)" stroke-width="1.3"/>
+          <circle cx="350" cy="255" r="90" fill="rgba(106,61,122,0.13)" stroke="rgba(106,61,122,0.45)" stroke-width="1.3"/>
+          <text x="270" y="150" fill="#6ecfb8" font-size="12" font-family="Tiro Devanagari Hindi, serif">सत्त्व</text>
+          <text x="425" y="150" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">रजस्</text>
+          <text x="350" y="310" fill="#c0a0d8" font-size="12" font-family="Tiro Devanagari Hindi, serif">तमस्</text>
+          <text x="350" y="205" text-anchor="middle" fill="var(--cream)" font-size="13" font-family="Tiro Devanagari Hindi, serif">सभी प्राणी</text>
+          <text x="350" y="222" text-anchor="middle" fill="var(--cream-dim)" font-size="10">(इसी क्षेत्र के भीतर)</text>
+
+          <line x1="200" y1="140" x2="120" y2="70" stroke="rgba(201,162,39,0.35)" stroke-width="1.1"/>
+          <ellipse cx="90" cy="50" rx="70" ry="30" fill="rgba(201,162,39,0.06)" stroke="rgba(201,162,39,0.3)" stroke-width="1"/>
+          <text x="90" y="45" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">पृथ्वी के प्राणी</text>
+          <text x="90" y="62" text-anchor="middle" fill="var(--cream-dim)" font-size="10">मनुष्य, जीव-जंतु</text>
+
+          <line x1="470" y1="140" x2="580" y2="70" stroke="rgba(201,162,39,0.35)" stroke-width="1.1"/>
+          <ellipse cx="610" cy="50" rx="80" ry="30" fill="rgba(201,162,39,0.06)" stroke="rgba(201,162,39,0.3)" stroke-width="1"/>
+          <text x="610" y="45" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">स्वर्ग के देवगण</text>
+          <text x="610" y="62" text-anchor="middle" fill="var(--cream-dim)" font-size="10">भी गुणाधीन</text>
+
+          <ellipse cx="350" cy="390" rx="140" ry="24" fill="rgba(255,255,255,0.03)" stroke="rgba(201,162,39,0.5)" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="350" y="386" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">अपवाद — गुणातीत / परब्रह्म</text>
+          <text x="350" y="401" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">प्रकृति से परे, इस वृत्त के बाहर</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — सार्वभौमिक वर्गीकरण-सिद्धांत</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>त्रिगुण से समानता</th><th>अंतर</th></tr>
+          <tr><td>आयुर्वेद — त्रिदोष (वात-पित्त-कफ)</td><td>तीन मूल तत्त्वों से हर शरीर का संचालन</td><td>त्रिदोष शारीरिक है, त्रिगुण मानसिक-आध्यात्मिक है</td></tr>
+          <tr><td>Jungian Archetypes / Big Five Personality</td><td>सार्वभौमिक व्यक्तित्व-वर्गीकरण, हर मनुष्य में उपस्थित</td><td>आधुनिक मनोविज्ञान वर्णनात्मक है, गीता मुक्ति-उन्मुख (normative) है</td></tr>
+          <tr><td>Greek Four Humors (चार द्रव)</td><td>मूल तत्त्वों से स्वभाव-निर्धारण की प्राचीन अवधारणा</td><td>यूनानी सिद्धांत चिकित्सा-केंद्रित था, त्रिगुण आध्यात्मिक-मुक्ति केंद्रित</td></tr>
+          <tr><td>Yin-Yang (चीनी दर्शन)</td><td>सार्वभौमिक द्वैत-शक्तियाँ जो सब कुछ नियंत्रित करती हैं</td><td>यिन-यांग द्विध्रुवीय है, त्रिगुण त्रिध्रुवीय संतुलन प्रस्तुत करता है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशिष्टता:</b> अधिकांश परंपराएँ वर्गीकरण को अंतिम सत्य मानती हैं। गीता वर्गीकरण को एक <b>सीढ़ी</b> मानती है — जिसका उद्देश्य पहचान के बाद उससे ऊपर उठना (गुणातीत होना) है, न कि उसी में स्थिर रह जाना।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout"><b>"मैं गुण-मुक्त हूँ" के भ्रम से बचें:</b> कोई भी साधक चाहे कितना भी आगे बढ़ जाए, यह सोचना कि "अब मैं गुणों से पूर्णतः परे हूँ" स्वयं एक सूक्ष्म अहंकार (रजस् या तामसिक आत्म-धोखा) हो सकता है। 18.40 विनम्रता की याद दिलाता है — निरंतर सजगता आवश्यक है।</p>
+        <p><b>अभ्यास — दैनिक गुण-निरीक्षण:</b> दिन के अंत में कुछ क्षण निकालकर पूछें: "आज मुझमें किस गुण की प्रधानता रही — सत्त्व (स्पष्टता), रजस् (गतिविधि/इच्छा), या तमस् (जड़ता/आलस्य)?" यह निरंतर आत्म-निरीक्षण ही गुणातीत होने की दिशा में पहला कदम है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> इस श्लोक को अद्वैत दृष्टि से समझाते हैं — जब तक जीव प्रकृति (माया) से जुड़ा है, चाहे वह किसी भी लोक में हो, गुणों का बंधन अनिवार्य है। केवल आत्म-साक्षात्कार (ब्रह्म से एकत्व का ज्ञान) ही इस बंधन से पार ले जाता है, कोई लौकिक या दिव्य स्थिति नहीं।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> देवताओं के गुणाधीन होने को भगवान की लीला-व्यवस्था का भाग मानते हैं — सम्पूर्ण सृष्टि (देव, मनुष्य, सभी) भगवान के अधीन प्रकृति द्वारा संचालित है। मुक्ति केवल शरणागति और भक्ति द्वारा भगवत्-कृपा से संभव है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को कर्मयोग की व्यावहारिकता से जोड़ते हैं — चूँकि कोई भी गुण-मुक्त नहीं, इसलिए पलायन (सन्यास लेकर समाज से दूर होना) व्यर्थ है। बेहतर मार्ग है अपने स्वाभाविक गुण को पहचानकर, उसके अनुरूप कर्तव्य निभाते हुए क्रमशः उन्नति करना।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं — यह श्लोक पलायन नहीं, बल्कि स्वीकृति और क्रमिक उन्नति का संदेश देता है। गुणों से मुक्ति भागने से नहीं, समझने और पार करने से मिलती है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">न तदस्ति</span></div>
+            <div class="flashcard-face flashcard-back"><b>ऐसा कुछ नहीं है</b>पूर्ण, अपवाद-रहित निषेध</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">दिवि देवेषु</span></div>
+            <div class="flashcard-face flashcard-back"><b>स्वर्ग में देवताओं के बीच</b>दायरे को अधिकतम विस्तार</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सत्त्वम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>प्राणी/सत्ता</b>यहाँ गुण "सत्त्व" नहीं — homonym!</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">प्रकृतिजैः</span></div>
+            <div class="flashcard-face flashcard-back"><b>प्रकृति से उत्पन्न</b>गुण मनुष्य-निर्मित नहीं, प्रकृति-जन्य</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">त्रिभिर्गुणैः</span></div>
+            <div class="flashcard-face flashcard-back"><b>तीन गुणों से</b>सत्त्व-रजस्-तमस्, एक साथ उल्लिखित</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">न तदस्ति</td><td>न+तद्+अस्</td><td>प्रथमा + लट्लकार</td><td>ऐसा नहीं है</td></tr>
+          <tr><td class="sa">पृथिव्यां</td><td>पृथिवी</td><td>सप्तमी एकवचन</td><td>पृथ्वी पर — अधिकरण</td></tr>
+          <tr><td class="sa">दिवि देवेषु</td><td>दिव्+देव</td><td>सप्तमी एकवचन/बहुवचन</td><td>स्वर्ग में देवताओं में</td></tr>
+          <tr><td class="sa">सत्त्वं</td><td>अस् (सत्+त्व)</td><td>प्रथमा नपुंसक एकवचन</td><td>प्राणी/सत्ता (गुण नहीं)</td></tr>
+          <tr><td class="sa">प्रकृतिजैः</td><td>प्रकृति+ज</td><td>तृतीया बहुवचन</td><td>प्रकृति से उत्पन्न (गुणों) से</td></tr>
+          <tr><td class="sa">मुक्तं</td><td>मुच्</td><td>भूतकृदन्त, प्रथमा नपुंसक</td><td>मुक्त, स्वतंत्र</td></tr>
+          <tr><td class="sa">त्रिभिर्गुणैः</td><td>त्रि+गुण</td><td>तृतीया बहुवचन</td><td>तीन गुणों के द्वारा/से</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">न तदस्ति पृथिव्यां वा दिवि देवेषु वा पुनः।<br>सत्त्वं प्रकृतिजैर्मुक्तं यदेभिः स्यात्त्रिभिर्गुणैः।।</div>
+          <div class="cheat-translit">na tad asti pṛthivyāṃ vā divi deveṣu vā punaḥ, sattvaṃ prakṛti-jair muktaṃ yad ebhiḥ syāt tribhir guṇaiḥ</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>न तदस्ति</b> कोई अपवाद नहीं</span>
+            <span class="cheat-chip"><b>पृथ्वी+स्वर्ग</b> दायरा असीमित</span>
+            <span class="cheat-chip"><b>सत्त्वम्</b> = प्राणी (गुण नहीं)</span>
+            <span class="cheat-chip"><b>त्रिभिर्गुणैः</b> तीनों गुण एकसाथ</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: कोई भी प्राणी — पृथ्वी पर या देवलोक में — प्रकृति-जनित तीन गुणों से मुक्त नहीं। छह त्रयियों (18.19-39) का सार्वभौमिक निष्कर्ष, वर्ण-धर्म की भूमिका।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('न तदस्ति पृथिव्यां वा दिवि देवेषु वा पुनः। सत्त्वं प्रकृतिजैर्मुक्तं यदेभिः स्यात्त्रिभिर्गुणैः।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('न तदस्ति पृथिव्यां वा दिवि देवेषु वा पुनः। सत्त्वं प्रकृतिजैर्मुक्तं यदेभिः स्यात्त्रिभिर्गुणैः।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('न पृथ्वी पर, न स्वर्ग में देवताओं के बीच, ऐसा कोई प्राणी है, जो प्रकृति से उत्पन्न इन तीन गुणों से मुक्त हो।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">न</span><span class="syll">त</span><span class="syll">द</span><span class="syll">स्ति</span><span class="syll">पृ</span><span class="syll">थि</span><span class="syll">व्यां</span><span class="syll">वा</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">दि</span><span class="syll">वि</span><span class="syll">दे</span><span class="syll">वे</span><span class="syll">षु</span><span class="syll">वा</span><span class="syll">पु</span><span class="syll">नः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">सत्</span><span class="syll">त्वं</span><span class="syll">प्र</span><span class="syll">कृ</span><span class="syll">ति</span><span class="syll">जैर्</span><span class="syll">मु</span><span class="syll">क्तं</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">य</span><span class="syll">दे</span><span class="syll">भिः</span><span class="syll">स्यात्</span><span class="syll">त्रि</span><span class="syll">भिर्</span><span class="syll">गु</span><span class="syll">णैः</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('न तदस्ति पृथिव्यां वा दिवि देवेषु वा पुनः सत्त्वं प्रकृतिजैर्मुक्तं यदेभिः स्यात्त्रिभिर्गुणैः', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout"><b>ध्यान-बिंदु:</b> "त्रिभिर्गुणैः" पर विशेष रूप से रुकें। जप करते समय याद करें: सत्त्व, रजस्, तमस् — तीनों एक साथ, सभी प्राणियों में विद्यमान।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">षड्-त्रयी सारांश</button>
+      <button class="tab-btn" data-tab="e2">गुण-व्यापकता मानचित्र</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 छह त्रयियाँ — पूर्ण सारांश (18.19-39)</h3>
+        <p class="subnote">18.40 इन सभी का सार्वभौमिक निष्कर्ष प्रस्तुत करता है</p>
+        <table class="trayi-table">
+          <tr><th>विषय</th><th>श्लोक</th><th>घोषणा</th><th>स्थिति</th></tr>
+          <tr><td>ज्ञान त्रयी</td><td>18.20-22</td><td>—</td><td class="done">✓ पूर्ण</td></tr>
+          <tr><td>कर्म त्रयी</td><td>18.23-25</td><td>—</td><td class="done">✓ पूर्ण</td></tr>
+          <tr><td>कर्ता त्रयी</td><td>18.26-28</td><td>18.29</td><td class="done">✓ पूर्ण</td></tr>
+          <tr><td>बुद्धि त्रयी</td><td>18.30-32</td><td>18.29</td><td class="done">✓ पूर्ण</td></tr>
+          <tr><td>धृति त्रयी</td><td>18.33-35</td><td>—</td><td class="done">✓ पूर्ण</td></tr>
+          <tr><td>सुख त्रयी</td><td>18.37-39</td><td>18.36</td><td class="done">✓ पूर्ण</td></tr>
+          <tr><td><b>त्रिगुण-निष्कर्ष</b></td><td><b>18.40</b></td><td>—</td><td class="done">← यहाँ</td></tr>
+        </table>
+        <div class="callout"><b>Key insight:</b> छह त्रयियाँ = 18 श्लोक (20-39, घोषणाओं सहित)। 18.40 इन सभी की सार्वभौमिकता की मुहर लगाता है — यह वर्गीकरण किसी परिकल्पना पर नहीं, बल्कि "सभी प्राणी गुणाधीन हैं" के ठोस सत्य पर आधारित है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 गुण-व्यापकता — कौन-कौन गुणाधीन?</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🌍 पृथ्वी के प्राणी</div>
+            <div class="guna-sa">मनुष्य, पशु-पक्षी</div>
+            <div class="guna-char">तीनों गुणों के मिश्रण से प्रभावित — प्रत्यक्ष अनुभव का विषय।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">☀️ स्वर्ग के देवगण</div>
+            <div class="guna-sa">इन्द्रादि देवता</div>
+            <div class="guna-char">दिव्य पद होते हुए भी गुणों से मुक्त नहीं — पौराणिक उदाहरण प्रमाण।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">✨ अपवाद — गुणातीत</div>
+            <div class="guna-sa">मुक्त पुरुष / परब्रह्म</div>
+            <div class="guna-char">प्रकृति से परे — गुणों का साक्षी मात्र, तादात्म्य-रहित। 14.19-26 में वर्णित।</div>
+          </div>
+        </div>
+        <div class="callout"><b>निष्कर्ष:</b> "पृथ्वी + स्वर्ग" मिलकर सम्पूर्ण सृष्टि के प्राणियों को दर्शाते हैं — इस श्लोक का दायरा इसलिए वस्तुतः असीमित है। केवल प्रकृति से परे अवस्था ही अपवाद है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३७-३९<br>सुख त्रयी</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ४०<br>त्रिगुण-निष्कर्ष ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४१+<br>स्वभावज कर्म-विभाग</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४५-४८<br>स्व-कर्म व मोक्ष</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ७८<br>अध्याय-समापन</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.41):</b> यहाँ से गीता वर्ण-धर्म की चर्चा प्रारंभ करती है — ब्राह्मण, क्षत्रिय, वैश्य, शूद्र के स्वभावज कर्म, जो सीधे 18.40 के इस सिद्धांत पर आधारित हैं कि हर प्राणी किसी गुण-प्रधानता से युक्त है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.४१) — ☰ नेविगेशन — स्वभावज कर्म-विभाग का प्रारंभ</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.40 के अनुसार गुणों से मुक्त प्राणी कहाँ पाया जा सकता है?",options:["केवल पृथ्वी पर","केवल स्वर्ग में","न पृथ्वी पर, न स्वर्ग में — कहीं नहीं","केवल ऋषियों में"],correct:2},
+    {q:"इस श्लोक में 'सत्त्वम्' शब्द का सही अर्थ क्या है?",options:["गुण 'सत्त्व'","प्राणी/सत्ता","शुद्धता","ज्ञान"],correct:1},
+    {q:"गुण किससे उत्पन्न होते हैं, इस श्लोक के अनुसार?",options:["कर्म से","प्रकृति से","इन्द्रियों से","बुद्धि से"],correct:1},
+    {q:"18.40 अध्याय 18 की किस बड़ी शिक्षा का निष्कर्ष है?",options:["केवल सुख-त्रयी का","छह त्रयियों (18.19-39) का सार्वभौमिक निष्कर्ष","केवल ज्ञान-त्रयी का","अध्याय के आरंभ का"],correct:1},
+    {q:"18.40 के अनुसार गुण-बंधन से पूर्णतः परे कौन है?",options:["सभी देवता","सभी मनुष्य","केवल गुणातीत/परब्रह्म","कोई नहीं"],correct:2}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.19 से 18.39 तक गीता ने छह विषयों को गुण-आधार पर समझाया — ज्ञान, कर्म, कर्ता, बुद्धि, धृति, सुख। अब 18.40 इन सभी का सार्वभौमिक निष्कर्ष प्रस्तुत करता है।",
+    "'न तदस्ति पृथिव्यां वा दिवि देवेषु वा' — न पृथ्वी पर, न स्वर्ग में देवताओं के बीच भी, ऐसा कोई प्राणी नहीं जो गुण-मुक्त हो। दायरा असीमित है।",
+    "'सत्त्वम्' शब्द पर ध्यान दें — यहाँ इसका अर्थ 'प्राणी/सत्ता' है, गुण 'सत्त्व' नहीं। यह संस्कृत का एक सुंदर द्वि-अर्थी उदाहरण है।",
+    "'प्रकृतिजैः त्रिभिर्गुणैः' — गुण प्रकृति से उत्पन्न हैं, मनुष्य-निर्मित नहीं। इसलिए सृष्टि के भीतर रहते हुए इनसे बचना असंभव है।",
+    "तो मुक्ति कैसे संभव है? गुणातीत होकर — गुणों को नष्ट करके नहीं, बल्कि उनसे तादात्म्य तोड़कर, द्रष्टा-भाव से देखकर। यह 14.19-26 में विस्तार से वर्णित है।",
+    "यह श्लोक अगले विषय — वर्ण-धर्म (18.41 से आगे) — की नींव रखता है। चूँकि हर प्राणी किसी गुण-प्रधानता से युक्त है, इसलिए हर किसी का स्वाभाविक कर्तव्य भी उसी गुण के अनुसार निर्धारित होगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
