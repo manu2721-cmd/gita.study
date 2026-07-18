@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.49 — नैष्कर्म्य सिद्धि: कर्म-बंधन से परम मुक्ति</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:62.8%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(201,162,39,0.18);border:1px solid rgba(201,162,39,0.5);color:var(--gold-light);}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  .quality-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:16px 0;}
+  .quality-card{border-radius:10px;padding:14px 10px;border:1px solid var(--line);background:rgba(255,255,255,0.02);text-align:center;}
+  .quality-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--gold-light);margin-bottom:4px;}
+  .quality-desc{font-size:11.5px;color:var(--cream-dim);line-height:1.5;}
+  @media(max-width:560px){.quality-grid{grid-template-columns:1fr;}}
+  .pair-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+  .pair-card{border-radius:12px;padding:18px 14px;border:1px solid var(--line);background:rgba(255,255,255,0.02);}
+  .pair-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px;}
+  .pair-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:6px;line-height:1.6;}
+  .pair-card p{font-size:13px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.pair-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 49 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.४९</div>
+    </div>
+    <div class="guna-badge">🕊️ ज्ञान-निष्ठा का प्रारंभ — नैष्कर्म्य सिद्धि</div>
+    <div class="shloka">
+      असक्तबुद्धिः सर्वत्र जितात्मा विगतस्पृहः।<br>
+      नैष्कर्म्यसिद्धिं परमां संन्यासेनाधिगच्छति।।
+    </div>
+    <div class="translit">
+      asakta-buddhiḥ sarvatra jitātmā vigata-spṛhaḥ,<br>
+      naiṣkarmya-siddhiṃ paramāṃ sannyāsenādhigacchati
+    </div>
+    <div class="gist">
+      जिसकी बुद्धि <b>सर्वत्र अनासक्त</b> है, जिसने अपने <b>मन को जीत लिया</b> है, जिसमें <b>इच्छा शेष नहीं</b> — ऐसा व्यक्ति <b>संन्यास द्वारा</b> कर्म-बंधन से परे <b>परम नैष्कर्म्य-सिद्धि</b> प्राप्त करता है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — कर्मयोग से ज्ञान-निष्ठा की ओर</h3>
+      <p>18.41-48 ने कर्मयोग का व्यावहारिक पक्ष पूर्ण किया — अपने स्वभावज कर्म में निष्ठा से लगे रहना, दोष होते हुए भी न त्यागना। अब 18.49 एक नए अनुभाग की शुरुआत करता है — <b>ज्ञान-निष्ठा (18.49-53)</b> — जो कर्म के भीतर की गहनतम स्वतंत्रता का वर्णन करता है।</p>
+      <p>यह श्लोक बताता है कि कर्म करते हुए भी, यदि बुद्धि पूर्णतः अनासक्त हो, मन जीता हुआ हो, और इच्छा शेष न रहे — तो व्यक्ति "नैष्कर्म्य सिद्धि" (कर्म-बंधन से मुक्ति की परम सिद्धि) प्राप्त कर लेता है। यह 18.47-48 (कर्म न त्यागें) का विरोधाभास नहीं, बल्कि उसका गहनतम आयाम है।</p>
+      <div class="callout"><b>कड़ी:</b> 3.4 में भी "नैष्कर्म्य" शब्द आया था — "न कर्मणामनारम्भात्...नैष्कर्म्यं पुरुषोऽश्नुते" (कर्म न करने मात्र से नैष्कर्म्य नहीं मिलता)। 18.49 उसी सिद्धांत को गहराई से पुनः स्थापित करता है — नैष्कर्म्य कर्म-त्याग से नहीं, आंतरिक अनासक्ति से मिलता है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">असक्तबुद्धिः सर्वत्र</span><span class="word-tr">asakta-buddhiḥ sarvatra</span></div>
+          <div class="word-meaning">जिसकी बुद्धि सब जगह अनासक्त है</div>
+          <div class="word-eng"><b>EN:</b> one whose intellect is unattached everywhere</div>
+          <div class="word-deep">असक्त (अ+सक्त, "आसक्ति-रहित") + बुद्धि + सर्वत्र (सब जगह)। "सर्वत्र" शब्द महत्वपूर्ण है — यह किसी विशेष विषय या परिस्थिति तक सीमित अनासक्ति नहीं, बल्कि सर्वव्यापी, निरंतर अनासक्ति की बात करता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">जितात्मा</span><span class="word-tr">jitātmā</span></div>
+          <div class="word-meaning">जिसने अपने मन/आत्मा को जीत लिया है</div>
+          <div class="word-eng"><b>EN:</b> one who has conquered the self/mind</div>
+          <div class="word-deep">जित (जीता हुआ) + आत्मा (यहाँ मन/अंतःकरण के अर्थ में)। यह 6.6 ("आत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः") की भावना दोहराता है — मन ही आत्मा का सबसे बड़ा मित्र या शत्रु है, और उसे जीतना आवश्यक है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">विगतस्पृहः</span><span class="word-tr">vigata-spṛhaḥ</span></div>
+          <div class="word-meaning">जिससे इच्छा/लालसा चली गई है</div>
+          <div class="word-eng"><b>EN:</b> one from whom desire/craving has departed</div>
+          <div class="word-deep">विगत (चला गया) + स्पृहा (तीव्र इच्छा, लालसा)। स्पृहा साधारण इच्छा से अधिक तीव्र, लालसा-युक्त चाह को दर्शाती है — इसका पूर्ण अभाव गहन आंतरिक तृप्ति का सूचक है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">नैष्कर्म्यसिद्धिं परमाम्</span><span class="word-tr">naiṣkarmya-siddhiṃ paramām</span></div>
+          <div class="word-meaning">कर्म-बंधन से मुक्ति की परम सिद्धि</div>
+          <div class="word-eng"><b>EN:</b> the supreme perfection of freedom from the bondage of action</div>
+          <div class="word-deep">निष्कर्म (कर्म-रहित, कर्म के बंधनकारी प्रभाव से मुक्त) + सिद्धि + परमा (सर्वोच्च)। महत्वपूर्ण है — इसका अर्थ शारीरिक निष्क्रियता नहीं, बल्कि कर्म करते हुए भी उसके कर्मबंधनकारी प्रभाव से पूर्ण मुक्ति है (3.4 से तुलना करें)।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">संन्यासेन अधिगच्छति</span><span class="word-tr">sannyāsena adhigacchati</span></div>
+          <div class="word-meaning">संन्यास द्वारा प्राप्त करता है</div>
+          <div class="word-eng"><b>EN:</b> attains through renunciation</div>
+          <div class="word-deep">संन्यास (यहाँ त्याग/आंतरिक-वैराग्य के अर्थ में, कर्म-परित्याग नहीं) + अधिगच्छति (अधि+गम्, "पूर्ण रूप से प्राप्त करना")। 18.2 में गीता स्वयं स्पष्ट कर चुकी है कि सच्चा संन्यास "कामनाओं का त्याग" है, कर्मों का शारीरिक त्याग नहीं — यह पद उसी परिभाषा पर आधारित है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        One whose intellect is unattached everywhere, who has mastered the self, from whom desire has departed — such a person attains, through renunciation, the supreme perfection of freedom from the bondage of action.
+      </div>
+      <p>18.49 गीता के सबसे गहन आध्यात्मिक सिद्धांतों में से एक प्रस्तुत करता है — <b>"नैष्कर्म्य सिद्धि"</b> — कर्म के बंधनकारी प्रभाव से पूर्ण मुक्ति। यह शारीरिक निष्क्रियता नहीं है (गीता पहले ही 3.4-8 में इसे स्पष्ट कर चुकी है) — बल्कि यह वह अवस्था है जब व्यक्ति कर्म करता रहता है, पर उससे बिल्कुल अनासक्त, अस्पर्शित रहता है।</p>
+      <p>तीन गुण इस अवस्था के लक्षण बताए गए हैं — <b>असक्त बुद्धि</b> (सर्वत्र अनासक्ति), <b>जितात्मा</b> (मन पर पूर्ण नियंत्रण), और <b>विगतस्पृह</b> (इच्छा का पूर्ण अभाव)। ये तीनों एक-दूसरे से जुड़े हैं — इच्छा के बिना आसक्ति नहीं बनती, और आसक्ति के बिना मन स्वतः वश में रहता है।</p>
+      <div class="callout"><b>18.47-48 के साथ स्पष्ट सामंजस्य:</b> 18.47-48 ने कहा — अपना स्वाभाविक कर्म कभी न त्यागें, भले ही दोषपूर्ण हो। 18.49 यह नहीं कहता कि कर्म त्यागें — यह कहता है कि कर्म करते हुए भी, भीतर से पूर्णतः अनासक्त रहें। "संन्यास" यहाँ कर्म का त्याग नहीं, कर्म के प्रति आसक्ति व इच्छा का त्याग है — जो 18.2 में गीता स्वयं परिभाषित कर चुकी है।</div>
+      <p>यह श्लोक अध्याय 18 के अंतिम भाग (18.49-55) की शुरुआत करता है, जो कर्मयोग की व्यावहारिक शिक्षा से आगे बढ़कर, ज्ञान-निष्ठा और अंततः भक्ति के माध्यम से परम सिद्धि की ओर मार्ग दिखाता है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — कुशल व्यवसायी की अनासक्ति:</b> एक सफल व्यवसायी जो अपने कार्य में पूर्ण कुशलता व मेहनत लगाता है, पर लाभ-हानि, प्रशंसा-आलोचना से समान रूप से अप्रभावित रहता है — यह "असक्तबुद्धिः सर्वत्र" का जीवंत उदाहरण है। कार्य जारी है, आसक्ति नहीं।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — माता-पिता का निःस्वार्थ प्रेम:</b> कोई माता-पिता जो अपने बच्चों की पूर्ण देखभाल करते हैं, गहरा प्रेम रखते हैं, पर स्वामित्व-भाव या नियंत्रण की इच्छा (स्पृहा) से मुक्त रहते हैं, बच्चों को स्वतंत्र रूप से बढ़ने देते हैं — यह "विगतस्पृहः" का सुंदर उदाहरण है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — मानसिक शांति के साथ सक्रिय जीवन:</b> कोई व्यक्ति जो चुनौतीपूर्ण परिस्थितियों में भी मानसिक संतुलन नहीं खोता, प्रलोभनों व भावनात्मक उतार-चढ़ावों के बीच स्थिर रहता है — यह "जितात्मा" का व्यावहारिक रूप है, जो किसी भी क्षेत्र में सक्रिय व्यक्ति में देखा जा सकता है।
+      </div>
+      <div class="callout"><b>साझा सूत्र:</b> तीनों उदाहरण दिखाते हैं कि "नैष्कर्म्य सिद्धि" सक्रिय जीवन के भीतर ही सम्भव है — यह जीवन से पलायन नहीं, बल्कि जीवन के भीतर गहन आंतरिक स्वतंत्रता है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">क्या "संन्यास" का अर्थ यहाँ सांसारिक जीवन त्यागकर सन्यासी बनना है?</div>
+        <div class="a">नहीं। गीता 18.2 में स्वयं स्पष्ट करती है — "काम्यानां कर्मणां न्यासं संन्यासं कवयो विदुः" (काम्य कर्मों के त्याग को ज्ञानीजन संन्यास कहते हैं)। यहाँ "संन्यास" का अर्थ है इच्छा व आसक्ति का आंतरिक त्याग, कर्मों का शारीरिक परित्याग नहीं। यह 18.47-48 (कर्म न त्यागें) के पूर्णतः अनुकूल है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"नैष्कर्म्य सिद्धि" का ठीक-ठीक क्या अर्थ है?</div>
+        <div class="a">यह कर्म से शारीरिक मुक्ति नहीं, बल्कि कर्म के <b>बंधनकारी प्रभाव</b> से मुक्ति है। सामान्यतः कर्म कर्ता को उसके फल से बाँधता है (राग-द्वेष उत्पन्न करता है), पर जब कर्म पूर्ण अनासक्ति से किया जाए, तो वह बंधन उत्पन्न नहीं करता — यही नैष्कर्म्य है। व्यक्ति सक्रिय रहता है, पर मुक्त भी।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या यह अवस्था केवल विशेष साधकों के लिए सुलभ है, या सभी के लिए?</div>
+        <div class="a">श्लोक कोई वर्ण, आयु, या स्थिति-विशेष का उल्लेख नहीं करता — यह एक सार्वभौमिक आध्यात्मिक अवस्था का वर्णन है, जो निरंतर साधना (असक्ति का त्याग, मन-नियंत्रण, इच्छा का शमन) द्वारा किसी भी व्यक्ति के लिए सुलभ है, चाहे उसका कर्म-क्षेत्र या वर्ण कुछ भी हो।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.50-53 में इस विषय का क्या विस्तार होगा?</div>
+        <div class="a">अगले श्लोक (18.50) संक्षेप में बताएगा कि यह ज्ञान-निष्ठा ब्रह्म-प्राप्ति की ओर कैसे ले जाती है। 18.51-53 में उन विशिष्ट गुणों व अभ्यासों का विस्तृत वर्णन होगा जो साधक को ब्रह्म-भाव (आत्म-साक्षात्कार) तक पहुँचाते हैं — शुद्ध बुद्धि, संयम, त्याग आदि।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.49 गीता के तीन प्रमुख योग-मार्गों — कर्मयोग, ज्ञानयोग, भक्तियोग — के बीच का सेतु है। यह अध्याय 18 की संरचना में एक महत्वपूर्ण मोड़ है: 18.41-48 (कर्मयोग की व्यावहारिकता) से 18.49-53 (ज्ञान-निष्ठा) की ओर, जो अंततः 18.54+ (भक्ति व परम सिद्धि) में परिणत होगी।</p>
+        <p>यह श्लोक 3.4 के "नैष्कर्म्य" सिद्धांत को अध्याय 18 के समापन-भाग में पुनः स्थापित करता है — गीता की संपूर्ण शिक्षा-यात्रा एक सुसंगत, चक्रीय संरचना में बुनी गई है।</p>
+        <div class="callout"><b>त्रिविध मार्ग का संगम:</b> 18.49 दिखाता है कि कर्मयोग (सक्रिय कर्म) और ज्ञानयोग (आंतरिक अनासक्ति) परस्पर विरोधी नहीं — बल्कि एक ही सिक्के के दो पहलू हैं। सच्चा कर्मयोगी स्वतः ज्ञानी होता है, जब उसकी आसक्ति पूर्णतः विलीन हो जाए।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — नैष्कर्म्य सिद्धि के तीन आधार</h3>
+        <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="180" rx="90" ry="42" fill="rgba(201,162,39,0.15)" stroke="rgba(201,162,39,0.55)" stroke-width="1.4"/>
+          <text x="350" y="174" text-anchor="middle" fill="var(--gold-light)" font-size="12" font-family="Tiro Devanagari Hindi, serif">नैष्कर्म्य सिद्धि</text>
+          <text x="350" y="192" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">कर्म-बंधन से परम मुक्ति</text>
+
+          <line x1="285" y1="152" x2="160" y2="80" stroke="rgba(201,162,39,0.4)" stroke-width="1.1"/>
+          <ellipse cx="125" cy="60" rx="90" ry="32" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="125" y="55" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">असक्तबुद्धिः सर्वत्र</text>
+          <text x="125" y="72" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">सर्वव्यापी अनासक्ति</text>
+
+          <line x1="350" y1="138" x2="350" y2="60" stroke="rgba(201,162,39,0.4)" stroke-width="1.1"/>
+          <ellipse cx="350" cy="42" rx="70" ry="28" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="350" y="37" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">जितात्मा</text>
+          <text x="350" y="54" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">मन पर पूर्ण नियंत्रण</text>
+
+          <line x1="415" y1="152" x2="540" y2="80" stroke="rgba(201,162,39,0.4)" stroke-width="1.1"/>
+          <ellipse cx="575" cy="60" rx="90" ry="32" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="575" y="55" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">विगतस्पृहः</text>
+          <text x="575" y="72" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">इच्छा का पूर्ण अभाव</text>
+
+          <line x1="350" y1="222" x2="350" y2="290" stroke="rgba(201,162,39,0.4)" stroke-width="1.1"/>
+          <ellipse cx="350" cy="310" rx="130" ry="26" fill="rgba(255,255,255,0.03)" stroke="rgba(201,162,39,0.4)" stroke-width="1"/>
+          <text x="350" y="315" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">संन्यासेन अधिगच्छति (आंतरिक त्याग द्वारा)</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — "कर्म में रहते हुए मुक्ति" के विश्व-विचार</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>18.49 से समानता</th><th>अंतर</th></tr>
+          <tr><td>Stoic Apatheia (अविचलता)</td><td>बाहरी परिणामों से भावनात्मक रूप से अप्रभावित रहना</td><td>स्टोइक दर्शन तर्क-आधारित है, गीता आत्म-साक्षात्कार आधारित</td></tr>
+          <tr><td>बौद्ध "उपेक्षा" (समता-भाव)</td><td>सुख-दुःख, लाभ-हानि में समान भाव रखना</td><td>बौद्ध धर्म शून्यता-दर्शन पर आधारित है, गीता आत्मा-ब्रह्म एकत्व पर</td></tr>
+          <tr><td>Taoist Wu Wei (अकर्म में कर्म)</td><td>प्रयास करते हुए भी सहज, अनाग्रही रहना</td><td>ताओवाद प्रकृति-सामंजस्य पर बल देता है, गीता कर्तव्य-निष्ठा पर</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशिष्टता:</b> "नैष्कर्म्य सिद्धि" इन सभी परंपराओं से इस मायने में विशिष्ट है कि यह सक्रिय कर्तव्य-पालन को अनासक्ति के साथ जोड़ती है — न पलायन, न अनियंत्रित संलिप्तता, बल्कि दोनों का संतुलित समन्वय।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout"><b>त्रिविध आत्म-जाँच:</b> दिन के अंत में तीन प्रश्न पूछें — 1) "क्या मैं आज अपने कार्यों के परिणामों से भावनात्मक रूप से बहुत जुड़ा रहा?" 2) "क्या मेरा मन स्थिर रहा, या भावनाओं के अधीन हो गया?" 3) "क्या कोई तीव्र इच्छा/लालसा मुझे प्रभावित कर रही थी?" यह आत्म-निरीक्षण नैष्कर्म्य की दिशा में कदम है।</div>
+        <p><b>अभ्यास — "करते हुए छोड़ना":</b> किसी भी कार्य को पूर्ण मेहनत व ध्यान से करें, पर उसके तुरंत बाद मानसिक रूप से "छोड़ने" का अभ्यास करें — परिणाम की चिंता में उलझे रहने की बजाय, अगले कार्य की ओर बढ़ें। यह क्रमिक अभ्यास आसक्ति को कम करता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "नैष्कर्म्य सिद्धि" को ज्ञान-निष्ठा की पूर्णता मानते हैं — जब कर्म पूर्णतः अनासक्ति से किया जाए, वह आत्म-साक्षात्कार में कोई बाधा नहीं डालता। शंकर के लिए, यह अवस्था कर्मयोग और ज्ञानयोग के अभिसरण-बिंदु पर स्थित है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> इसे भगवद्-शरणागति की एक अवस्था मानते हैं — जब भक्त अपनी समस्त इच्छाओं व आसक्तियों को भगवान को समर्पित कर देता है, वह स्वतः "विगतस्पृह" हो जाता है, और उसका कर्म बंधनकारी नहीं रह जाता।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को कर्मयोग के उच्चतम आदर्श के रूप में उद्धृत करते हैं — सक्रिय, समर्पित कर्म करते हुए भी आंतरिक स्वतंत्रता बनाए रखना ही सच्चे कर्मयोगी की पहचान है। तिलक इसे राष्ट्र-सेवा के आदर्श व्यक्तित्व के रूप में भी प्रस्तुत करते हैं।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं — नैष्कर्म्य सिद्धि कर्म-त्याग से नहीं, आंतरिक अनासक्ति व समर्पण से प्राप्त होती है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">असक्तबुद्धिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>अनासक्त बुद्धि</b>सर्वत्र, हर परिस्थिति में</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">जितात्मा</span></div>
+            <div class="flashcard-face flashcard-back"><b>मन-विजेता</b>6.6 की भावना दोहराता है</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">विगतस्पृहः</span></div>
+            <div class="flashcard-face flashcard-back"><b>इच्छा-रहित</b>तीव्र लालसा का पूर्ण अभाव</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">नैष्कर्म्यसिद्धिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>कर्म-बंधन से मुक्ति</b>निष्क्रियता नहीं, बंधन-मुक्ति</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">संन्यासेन</span></div>
+            <div class="flashcard-face flashcard-back"><b>आंतरिक त्याग द्वारा</b>इच्छा-त्याग, कर्म-त्याग नहीं</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल धातु/शब्द</th><th>रूप</th><th>अर्थ</th></tr>
+          <tr><td class="sa">असक्तबुद्धिः</td><td>अ+सक्त+बुद्धि</td><td>प्रथमा स्त्रीलिंग एकवचन</td><td>अनासक्त बुद्धि वाला</td></tr>
+          <tr><td class="sa">जितात्मा</td><td>जित+आत्मन्</td><td>प्रथमा पुल्लिंग एकवचन</td><td>मन-विजेता</td></tr>
+          <tr><td class="sa">विगतस्पृहः</td><td>विगत+स्पृहा</td><td>प्रथमा पुल्लिंग एकवचन</td><td>इच्छा-रहित</td></tr>
+          <tr><td class="sa">नैष्कर्म्यसिद्धिम्</td><td>निष्कर्मन्+सिद्धि</td><td>द्वितीया स्त्रीलिंग एकवचन</td><td>कर्म-बंधन-मुक्ति की सिद्धि</td></tr>
+          <tr><td class="sa">परमाम्</td><td>परम</td><td>द्वितीया स्त्रीलिंग एकवचन</td><td>सर्वोच्च</td></tr>
+          <tr><td class="sa">संन्यासेन</td><td>सम्+नि+अस्</td><td>तृतीया पुल्लिंग एकवचन</td><td>त्याग द्वारा</td></tr>
+          <tr><td class="sa">अधिगच्छति</td><td>अधि+गम्</td><td>लट्लकार, परस्मैपद</td><td>पूर्ण रूप से प्राप्त करता है</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">असक्तबुद्धिः सर्वत्र जितात्मा विगतस्पृहः।<br>नैष्कर्म्यसिद्धिं परमां संन्यासेनाधिगच्छति।।</div>
+          <div class="cheat-translit">asakta-buddhiḥ sarvatra jitātmā vigata-spṛhaḥ, naiṣkarmya-siddhiṃ paramāṃ sannyāsenādhigacchati</div>
+          <div class="quality-grid">
+            <div class="quality-card"><div class="quality-sa">असक्तबुद्धिः</div><div class="quality-desc">सर्वव्यापी अनासक्ति</div></div>
+            <div class="quality-card"><div class="quality-sa">जितात्मा</div><div class="quality-desc">मन पर नियंत्रण</div></div>
+            <div class="quality-card"><div class="quality-sa">विगतस्पृहः</div><div class="quality-desc">इच्छा-शून्यता</div></div>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: कर्म करते हुए भी पूर्ण अनासक्ति से, मन-विजय व इच्छा-शून्यता के साथ, व्यक्ति नैष्कर्म्य सिद्धि (कर्म-बंधन से परम मुक्ति) पाता है। यह कर्म-त्याग नहीं, आंतरिक स्वतंत्रता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('असक्तबुद्धिः सर्वत्र जितात्मा विगतस्पृहः। नैष्कर्म्यसिद्धिं परमां संन्यासेनाधिगच्छति।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('असक्तबुद्धिः सर्वत्र जितात्मा विगतस्पृहः। नैष्कर्म्यसिद्धिं परमां संन्यासेनाधिगच्छति।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जिसकी बुद्धि सर्वत्र अनासक्त है, जिसने मन को जीत लिया है, जिसमें इच्छा शेष नहीं, वह संन्यास द्वारा कर्म-बंधन से परम मुक्ति प्राप्त करता है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">स</span><span class="syll">क्त</span><span class="syll">बु</span><span class="syll">द्धिः</span><span class="syll">स</span><span class="syll">र्व</span><span class="syll">त्र</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">जि</span><span class="syll">ता</span><span class="syll">त्मा</span><span class="syll">वि</span><span class="syll">ग</span><span class="syll">त</span><span class="syll">स्पृ</span><span class="syll">हः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">नै</span><span class="syll">ष्क</span><span class="syll">र्म्य</span><span class="syll">सि</span><span class="syll">द्धिं</span><span class="syll">प</span><span class="syll">र</span><span class="syll">मां</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">सं</span><span class="syll">न्या</span><span class="syll">से</span><span class="syll">ना</span><span class="syll">धि</span><span class="syll">ग</span><span class="syll">च्छ</span><span class="syll">ति</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('असक्तबुद्धिः सर्वत्र जितात्मा विगतस्पृहः नैष्कर्म्यसिद्धिं परमां संन्यासेनाधिगच्छति', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout"><b>ध्यान-बिंदु:</b> "नैष्कर्म्यसिद्धिं परमां" पर विशेष रूप से रुकें। जप करते समय अपने भीतर आसक्ति के धागों को धीरे-धीरे ढीला होते हुए महसूस करने का प्रयास करें।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">तीन आधार-स्तंभ</button>
+      <button class="tab-btn" data-tab="e2">18.47-49 सामंजस्य</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 नैष्कर्म्य सिद्धि के तीन आधार-स्तंभ</h3>
+        <p class="subnote">तीनों मिलकर पूर्ण आंतरिक स्वतंत्रता की अवस्था बनाते हैं</p>
+        <div class="quality-grid">
+          <div class="quality-card"><div class="quality-sa">असक्तबुद्धिः सर्वत्र</div><div class="quality-desc">बुद्धि — किसी भी परिणाम, विषय, स्थिति से अप्रभावित</div></div>
+          <div class="quality-card"><div class="quality-sa">जितात्मा</div><div class="quality-desc">मन — भावनाओं व प्रलोभनों पर पूर्ण नियंत्रण</div></div>
+          <div class="quality-card"><div class="quality-sa">विगतस्पृहः</div><div class="quality-desc">इच्छा — तीव्र लालसा का पूर्ण अभाव</div></div>
+        </div>
+        <div class="callout"><b>Key insight:</b> ये तीनों परस्पर सम्बद्ध हैं — इच्छा के बिना आसक्ति नहीं बनती, आसक्ति के बिना मन स्वतः स्थिर रहता है। यह एक समग्र, एकीकृत आंतरिक अवस्था है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 18.47-48 और 18.49 — पूर्ण सामंजस्य</h3>
+        <div class="pair-row">
+          <div class="pair-card">
+            <div class="pair-label">18.47-48 — बाह्य आयाम</div>
+            <div class="pair-sa">कर्म को कभी न त्यागें</div>
+            <p>अपना स्वभावज कर्म, दोषयुक्त होते हुए भी, निरंतर करते रहें — यह कर्मयोग का बाह्य पक्ष है।</p>
+          </div>
+          <div class="pair-card">
+            <div class="pair-label">18.49 — आंतरिक आयाम</div>
+            <div class="pair-sa">इच्छा व आसक्ति को त्यागें</div>
+            <p>कर्म करते हुए, भीतर से पूर्ण अनासक्त, इच्छा-रहित रहें — यह ज्ञान-निष्ठा का आंतरिक पक्ष है।</p>
+          </div>
+        </div>
+        <div class="callout"><b>पूर्ण सूत्र:</b> "बाहर से सक्रिय, भीतर से मुक्त" — यही गीता के कर्मयोग-ज्ञानयोग समन्वय का सार है। दोनों श्लोक मिलकर एक सम्पूर्ण जीवन-दृष्टि प्रस्तुत करते हैं।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४७<br>स्वधर्म-श्रेष्ठता</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४८<br>अग्नि-धूम्र उपमा</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ४९<br>नैष्कर्म्य सिद्धि ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५०-५३<br>ब्रह्म-प्राप्ति के चरण</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५४+<br>भक्ति व परम सिद्धि</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.50):</b> "सिद्धिं प्राप्तो यथा ब्रह्म तथाप्नोति निबोध मे" — सिद्धि प्राप्त करने वाला किस प्रकार ब्रह्म को प्राप्त करता है, वह संक्षेप में सुनो। ज्ञान-निष्ठा के विस्तृत वर्णन का प्रारंभ।</div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.५०) — ☰ नेविगेशन — सिद्धि से ब्रह्म-प्राप्ति तक</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.49 के अनुसार नैष्कर्म्य सिद्धि किससे प्राप्त होती है?",options:["कर्म त्यागकर","आंतरिक संन्यास (इच्छा-त्याग) द्वारा","धन-त्याग से","मौन व्रत से"],correct:1},
+    {q:"'विगतस्पृहः' का क्या अर्थ है?",options:["इच्छा-युक्त","इच्छा-रहित","ज्ञान-युक्त","भय-युक्त"],correct:1},
+    {q:"18.49 में प्रयुक्त 'संन्यास' शब्द का सही अर्थ क्या है (18.2 के अनुसार)?",options:["सांसारिक जीवन त्यागना","काम्य कर्मों/इच्छाओं का त्याग","धन त्यागना","परिवार त्यागना"],correct:1},
+    {q:"'नैष्कर्म्य सिद्धि' का क्या अर्थ है?",options:["शारीरिक निष्क्रियता","कर्म के बंधनकारी प्रभाव से मुक्ति","कर्म करना बंद करना","आलस्य"],correct:1},
+    {q:"18.49 गीता के किस श्लोक के सिद्धांत को पुनः स्थापित करता है?",options:["2.47","3.4","9.27","14.5"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.41-48 ने कर्मयोग का व्यावहारिक पक्ष पूर्ण किया — अपना स्वभावज कर्म कभी न त्यागें। अब 18.49 ज्ञान-निष्ठा के नए अनुभाग की शुरुआत करता है।",
+    "'असक्तबुद्धिः सर्वत्र' — बुद्धि सब जगह अनासक्त। यह किसी विशेष विषय तक सीमित नहीं, सर्वव्यापी अनासक्ति की बात है।",
+    "'जितात्मा' — जिसने मन को जीत लिया है। यह 6.6 की भावना को दोहराता है — मन ही सबसे बड़ा मित्र या शत्रु है।",
+    "'विगतस्पृहः' — जिससे इच्छा चली गई है। तीनों गुण (असक्ति, मन-विजय, इच्छा-शून्यता) परस्पर जुड़े हैं।",
+    "'नैष्कर्म्यसिद्धिं परमाम्' — कर्म-बंधन से परम मुक्ति। यह शारीरिक निष्क्रियता नहीं, बल्कि कर्म के बंधनकारी प्रभाव से मुक्ति है — 3.4 की पुनरावृत्ति।",
+    "'संन्यासेन' — यहाँ संन्यास का अर्थ इच्छा-त्याग है, कर्म-त्याग नहीं (18.2 के अनुसार)। यह 18.47-48 (कर्म न त्यागें) से पूर्णतः सामंजस्यपूर्ण है — बाहर से सक्रिय, भीतर से मुक्त।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

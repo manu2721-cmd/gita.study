@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.47 — श्रेयान्स्वधर्मो विगुणः: अपना धर्म, अपूर्ण होते हुए भी श्रेष्ठ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:60.3%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(201,162,39,0.18);border:1px solid rgba(201,162,39,0.5);color:var(--gold-light);}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  .echo-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+  .echo-card{border-radius:12px;padding:18px 14px;border:1px solid var(--line);background:rgba(255,255,255,0.02);}
+  .echo-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px;}
+  .echo-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:6px;line-height:1.6;}
+  .echo-card p{font-size:13px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.echo-row{grid-template-columns:1fr;}}
+  .echo-shared{background:rgba(201,162,39,0.1);border:1px solid rgba(201,162,39,0.4);border-radius:10px;padding:12px 16px;text-align:center;margin:14px 0;font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--gold-light);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 47 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.४७</div>
+    </div>
+    <div class="guna-badge">⭐ स्वधर्म की सर्वोच्चता — 3.35 की पुनरावृत्ति व विस्तार</div>
+    <div class="shloka">
+      श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।<br>
+      स्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम्।।
+    </div>
+    <div class="translit">
+      śreyān sva-dharmo viguṇaḥ para-dharmāt sv-anuṣṭhitāt,<br>
+      svabhāva-niyataṃ karma kurvan nāpnoti kilbiṣam
+    </div>
+    <div class="gist">
+      अपना धर्म, भले ही <b>दोषपूर्ण</b> हो, दूसरे के <b>भली-भाँति निभाए</b> धर्म से <b>श्रेष्ठ</b> है। अपने <b>स्वभाव-निर्धारित कर्म</b> को करते हुए मनुष्य <b>पाप को प्राप्त नहीं होता</b>।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — 18.46 का व्यावहारिक निष्कर्ष, और 3.35 की वापसी</h3>
+      <p>18.46 ने बताया कि अपना स्वाभाविक कर्म ही ईश्वर-पूजा का माध्यम व सिद्धि का मार्ग है। 18.47 अब इसका तार्किक निष्कर्ष प्रस्तुत करता है — इसीलिए <b>अपना धर्म, चाहे अपूर्ण हो, दूसरे के धर्म से श्रेष्ठ है।</b></p>
+      <p>यह श्लोक विशेष रूप से उल्लेखनीय है क्योंकि इसकी पहली पंक्ति — "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्" — <b>शब्दशः वही है जो अध्याय 3, श्लोक 35 में आई थी।</b> गीता के अंत में, कृष्ण अपनी शिक्षा के आरंभिक बिंदु पर वापस लौटते हैं — पर दूसरी पंक्ति में नया, अधिक विस्तृत निष्कर्ष जोड़ते हैं।</p>
+      <div class="callout"><b>कड़ी:</b> 3.35 में दूसरी पंक्ति थी "स्वधर्मे निधनं श्रेयः परधर्मो भयावहः" (अपने धर्म में मृत्यु श्रेष्ठ है, दूसरे का धर्म भयावह है) — एक तीव्र, चेतावनी-स्वर वाला कथन। 18.47 में दूसरी पंक्ति है "स्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम्" (स्वभाव-निर्धारित कर्म करते हुए पाप नहीं लगता) — एक शांत, आश्वासन-स्वर वाला कथन। यह अंतर स्वयं अर्थपूर्ण है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">श्रेयान् स्वधर्मः विगुणः</span><span class="word-tr">śreyān sva-dharmaḥ viguṇaḥ</span></div>
+          <div class="word-meaning">अपना धर्म, भले ही दोषपूर्ण/गुणहीन हो, श्रेष्ठ है</div>
+          <div class="word-eng"><b>EN:</b> one's own duty, though flawed, is better</div>
+          <div class="word-deep">श्रेयान् (श्रेष्ठतर) + स्वधर्म (अपना कर्तव्य) + विगुणः (वि+गुण, "गुण-रहित," अर्थात् दोषपूर्ण/अपूर्ण)। यह पद स्वीकार करता है कि अपने स्वधर्म में भी कमियाँ हो सकती हैं — गीता आदर्शीकरण नहीं करती, यथार्थवादी है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">परधर्मात् स्वनुष्ठितात्</span><span class="word-tr">para-dharmāt su-anuṣṭhitāt</span></div>
+          <div class="word-meaning">दूसरे के भली-भाँति निभाए गए धर्म से (श्रेष्ठ है)</div>
+          <div class="word-eng"><b>EN:</b> than another's duty, well-performed</div>
+          <div class="word-deep">परधर्म (दूसरे का कर्तव्य) + सु+अनुष्ठित (भली-भाँति सम्पन्न किया गया)। ध्यान दें — यह तुलना निष्पक्ष है: अपना <b>अपूर्ण</b> धर्म बनाम दूसरे का <b>पूर्ण/उत्कृष्ट</b> धर्म — फिर भी अपना धर्म श्रेष्ठ बताया गया है। यह तुलना को और भी बलवान बनाता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">स्वभावनियतं कर्म</span><span class="word-tr">svabhāva-niyataṃ karma</span></div>
+          <div class="word-meaning">अपने स्वभाव द्वारा नियत/निर्धारित कर्म</div>
+          <div class="word-eng"><b>EN:</b> action determined/prescribed by one's own nature</div>
+          <div class="word-deep">स्वभाव (अपनी प्रकृति) + नियत (निर्धारित, बंधा हुआ) + कर्म। यह 18.41-45 के "स्वभावज कर्म" सिद्धांत की सीधी पुनरावृत्ति है — गीता अध्याय के अंत तक इस केंद्रीय विचार को बार-बार दोहराती है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कुर्वन्</span><span class="word-tr">kurvan</span></div>
+          <div class="word-meaning">करते हुए — वर्तमानकालिक कृदन्त</div>
+          <div class="word-eng"><b>EN:</b> while doing/performing</div>
+          <div class="word-deep">कृ (करना) धातु से वर्तमान कृदन्त। यह निरंतरता दर्शाता है — यह एकल घटना नहीं, बल्कि सतत प्रक्रिया की बात कर रहा है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">न आप्नोति किल्बिषम्</span><span class="word-tr">na āpnoti kilbiṣam</span></div>
+          <div class="word-meaning">पाप/दोष को प्राप्त नहीं होता</div>
+          <div class="word-eng"><b>EN:</b> does not incur sin/fault</div>
+          <div class="word-deep">आप् (प्राप्त करना) + किल्बिष (पाप, दोष)। यह एक आश्वासन-वाक्य है — भले ही स्वधर्म में तकनीकी अपूर्णताएँ हों, उसका सच्चे मन से पालन करने वाला व्यक्ति पाप का भागी नहीं बनता। यह 3.35 के तीव्र स्वर से अधिक कोमल, प्रोत्साहक कथन है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Better is one's own duty, though imperfect, than the duty of another well-performed. Performing action determined by one's own nature, one does not incur sin.
+      </div>
+      <p>18.47 गीता के सबसे व्यावहारिक व मनोवैज्ञानिक रूप से गहरे सिद्धांतों में से एक प्रस्तुत करता है — <b>"grass is greener" (दूसरे की घास अधिक हरी दिखने)</b> की मानवीय प्रवृत्ति के विरुद्ध एक शक्तिशाली शिक्षा। हम अक्सर दूसरों के मार्ग, पेशे, या जीवन-शैली की तुलना अपने से करते हैं, और अपने ही स्वाभाविक पथ को कमतर आँकते हैं — गीता कहती है कि यह तुलना ही मूल भ्रम है।</p>
+      <p>श्लोक की तुलना विशेष रूप से न्यायपूर्ण है — यह अपने <b>दोषपूर्ण</b> धर्म की तुलना दूसरे के <b>श्रेष्ठतम रूप से निभाए गए</b> धर्म से करता है, और फिर भी कहता है कि अपना धर्म ही बेहतर है। यह "अपने पक्ष में झुका हुआ" तर्क नहीं — यह सबसे कठिन तुलना में भी सत्य को स्थापित करता है।</p>
+      <div class="callout"><b>3.35 से 18.47 तक की यात्रा — स्वर में बदलाव:</b> 3.35 गीता के आरंभिक भाग में आता है, जब अर्जुन गहरे संकट में हैं — वहाँ भाषा तीव्र है ("मृत्यु श्रेष्ठ है," "भयावह")। 18.47 गीता के समापन-भाग में आता है, जब शिक्षा पूर्ण हो चुकी है — यहाँ भाषा शांत, आश्वासनदायक है ("पाप नहीं लगता")। यह दर्शाता है कि गीता की संपूर्ण यात्रा भय से शांति की ओर एक क्रमिक परिवर्तन है।</div>
+      <p>यह श्लोक 18.48 (अगला श्लोक) के लिए भूमिका भी तैयार करता है, जो कहेगा कि सहज कर्म — दोषयुक्त होते हुए भी — त्यागा नहीं जाना चाहिए, ठीक वैसे ही जैसे अग्नि धुएँ से ढकी होती है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — करियर-तुलना का जाल:</b> कोई व्यक्ति जो अपने स्वाभाविक कार्य-क्षेत्र में अच्छा कर रहा है, पर बार-बार दूसरों के "अधिक प्रतिष्ठित" या "अधिक लाभदायक" दिखने वाले क्षेत्र से स्वयं की तुलना करता है — यह तुलना अक्सर असंतोष व भ्रम पैदा करती है, जबकि अपने ही क्षेत्र में गहराई से जुड़ना अधिक फलदायी होता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — कलाकार की अपनी शैली:</b> कोई कलाकार जो अपनी स्वाभाविक, अपूर्ण पर प्रामाणिक शैली को त्यागकर किसी अन्य प्रसिद्ध कलाकार की "उत्कृष्ट" शैली की नकल करने का प्रयास करता है — प्रायः अपनी वास्तविक रचनात्मक आवाज़ खो देता है। अपनी अधूरी पर सच्ची शैली में निरंतर काम करना बेहतर मार्ग है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — पारिवारिक व्यवसाय बनाम "बेहतर" विकल्प:</b> कोई व्यक्ति जो अपने पारिवारिक/स्वाभाविक व्यवसाय (भले ही उसमें चुनौतियाँ हों) को त्यागकर, सामाजिक दबाव में किसी "बेहतर दिखने वाले" पर पूर्णतः अपरिचित क्षेत्र में जाने का प्रयास करता है — अक्सर वह संघर्ष व असंतुष्टि में उलझ जाता है, जबकि अपने ही क्षेत्र में गहराई पाना अधिक स्वाभाविक होता।
+      </div>
+      <div class="callout"><b>साझा सूत्र:</b> तीनों उदाहरण एक ही सत्य दिखाते हैं — अपने अपूर्ण, पर स्वाभाविक मार्ग पर दृढ़ रहना, दूसरे के "बेहतर दिखने वाले" पर पराए मार्ग की नकल करने से अधिक फलदायी है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">18.47 की पहली पंक्ति 3.35 से शब्दशः समान क्यों है — क्या यह दोहराव है?</div>
+        <div class="a">यह गीता की एक जानबूझकर काव्य-तकनीक है। किसी महत्वपूर्ण सिद्धांत को शुरुआत में स्थापित करना, और फिर अंत में उसी को दोहराते हुए नया आयाम जोड़ना — यह शिक्षा को याद रखने योग्य बनाता है, साथ ही यह भी दिखाता है कि गीता की पूरी यात्रा एक सुसंगत, चक्रीय संरचना में है। पहली पंक्ति समान होने से दूसरी पंक्ति का अंतर और भी स्पष्ट रूप से उभरता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या इसका मतलब है कि व्यक्ति को कभी अपना पेशा/मार्ग नहीं बदलना चाहिए?</div>
+        <div class="a">नहीं। यह श्लोक बाहरी तुलना और भीतरी सत्य के बीच के भ्रम के विरुद्ध चेतावनी देता है — यह नहीं कहता कि परिवर्तन कभी उचित नहीं। यदि कोई सच में अपने वास्तविक स्वभाव को पहचानकर किसी नए मार्ग की ओर बढ़ता है (न कि केवल दूसरे को "बेहतर दिखने" के कारण), तो यह स्वयं उसका नया "स्वधर्म" बन जाता है। कुंजी है — प्रामाणिकता, बाहरी तुलना नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">अगर किसी का स्वधर्म वास्तव में हानिकारक या अनैतिक लगे, तो क्या करें?</div>
+        <div class="a">गीता का "स्वधर्म" सिद्धांत नैतिक कर्तव्य के व्यापक ढाँचे के भीतर काम करता है — यह अनैतिक कार्यों को उचित नहीं ठहराता। "स्वभाव-नियत कर्म" का तात्पर्य उन वैध, स्वाभाविक कर्तव्यों से है जो व्यक्ति की प्रकृति के अनुरूप हों, किसी भी कीमत पर "अपना काम" चुनने से नहीं। यह विवेकपूर्ण समझ आवश्यक है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.48 (अगला श्लोक) इस विचार को कैसे आगे बढ़ाएगा?</div>
+        <div class="a">18.48 कहेगा कि सहज कर्म (जिसके साथ व्यक्ति जन्मा है) — भले ही दोषयुक्त हो — त्यागा नहीं जाना चाहिए, ठीक वैसे ही जैसे अग्नि धुएँ से ढकी होने पर भी त्यागी नहीं जाती। यह 18.47 के विचार को एक सुंदर उपमा के माध्यम से और गहरा करेगा।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.47 गीता के सबसे उद्धृत श्लोकों में से एक है — यह अध्याय 2-3 के आरंभिक कर्मयोग-सिद्धांत को अध्याय 18 के अंतिम, परिपक्व निष्कर्ष के रूप में पुनः स्थापित करता है। यह गीता की "बुक-एंड" (bookend) संरचना का प्रमाण है — जो शिक्षा शुरुआत में दी गई, वही अंत में गहरे, शांत रूप में लौटती है।</p>
+        <p>यह श्लोक आत्म-स्वीकृति और प्रामाणिकता की एक कालजयी शिक्षा भी है, जो आज के तुलना-प्रधान, सोशल-मीडिया युग में विशेष रूप से प्रासंगिक है।</p>
+        <div class="callout"><b>चक्रीय संरचना:</b> गीता की शिक्षा अध्याय 2-3 में शुरू होकर अध्याय 18 में वापस उसी बिंदु पर लौटती है, पर एक पूर्ण परिपक्वता के साथ — भय से शुरू होकर शांति पर समाप्त होना, यही गीता की संपूर्ण यात्रा का सार है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — श्लोक की तर्क-संरचना</h3>
+        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="160" rx="90" ry="42" fill="rgba(201,162,39,0.13)" stroke="rgba(201,162,39,0.5)" stroke-width="1.3"/>
+          <text x="350" y="154" text-anchor="middle" fill="var(--gold-light)" font-size="12" font-family="Tiro Devanagari Hindi, serif">स्वधर्म की श्रेष्ठता</text>
+          <text x="350" y="172" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">अपूर्ण स्व बनाम पूर्ण पर</text>
+
+          <line x1="290" y1="135" x2="150" y2="70" stroke="rgba(201,162,39,0.4)" stroke-width="1.1"/>
+          <ellipse cx="115" cy="52" rx="90" ry="32" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="115" y="47" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">स्वधर्मः विगुणः</text>
+          <text x="115" y="64" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">अपना, भले ही अपूर्ण</text>
+
+          <line x1="420" y1="135" x2="560" y2="70" stroke="rgba(201,162,39,0.4)" stroke-width="1.1"/>
+          <ellipse cx="595" cy="52" rx="90" ry="32" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="595" y="47" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">परधर्मः स्वनुष्ठितः</text>
+          <text x="595" y="64" text-anchor="middle" fill="var(--cream-dim)" font-size="9.5">पराया, भले ही पूर्ण</text>
+
+          <line x1="350" y1="202" x2="350" y2="270" stroke="rgba(201,162,39,0.4)" stroke-width="1.1"/>
+          <ellipse cx="350" cy="290" rx="140" ry="26" fill="rgba(255,255,255,0.03)" stroke="rgba(201,162,39,0.4)" stroke-width="1"/>
+          <text x="350" y="295" text-anchor="middle" fill="var(--gold-light)" font-size="11" font-family="Tiro Devanagari Hindi, serif">स्वभावनियतं कर्म → न किल्बिषम्</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — प्रामाणिकता व स्व-स्वीकृति के आधुनिक विचार</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>18.47 से समानता</th><th>अंतर</th></tr>
+          <tr><td>Existentialist Authenticity (सार्त्र, कीर्कगार्द)</td><td>सामाजिक तुलना छोड़कर अपने सच्चे स्वरूप के अनुसार जीना</td><td>अस्तित्ववाद व्यक्तिगत चयन पर बल देता है, गीता स्वभाव (जन्मजात प्रकृति) पर</td></tr>
+          <tr><td>"Lane Discipline" / "Stay in your lane" (आधुनिक करियर-सलाह)</td><td>अपने क्षेत्र में गहराई से काम करने की सलाह</td><td>आधुनिक सलाह व्यावसायिक रणनीति है, गीता आध्यात्मिक सिद्धांत है</td></tr>
+          <tr><td>Social Comparison Theory (मनोविज्ञान — Leon Festinger)</td><td>तुलना से उपजे असंतोष की पहचान समान</td><td>मनोविज्ञान केवल वर्णन करता है, गीता समाधान (स्वधर्म-निष्ठा) भी देती है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की गहराई:</b> जहाँ आधुनिक विचार मुख्यतः मनोवैज्ञानिक या व्यावसायिक स्तर पर काम करते हैं, गीता इसे आध्यात्मिक सत्य (पाप/किल्बिष से मुक्ति) से जोड़ती है — प्रामाणिकता केवल व्यावहारिक बुद्धिमत्ता नहीं, आत्मिक शुद्धि का मार्ग भी है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout"><b>तुलना-प्रवृत्ति को पहचानें:</b> जब भी मन में "दूसरे का मार्ग बेहतर है" का विचार उठे, एक क्षण रुककर पूछें: "क्या यह तुलना मेरे वास्तविक स्वभाव से उपजी है, या केवल बाहरी दिखावे से प्रभावित है?" यह प्रश्न तुलना के भ्रम को स्पष्ट करता है।</div>
+        <p><b>अभ्यास — अपने मार्ग की सराहना:</b> सप्ताह में एक बार लिखें: "मेरे अपने कार्य/मार्ग में क्या विशिष्ट, अपूरणीय मूल्य है, जो किसी और के मार्ग में नहीं मिल सकता?" यह अभ्यास तुलना की जगह आत्म-स्वीकृति व कृतज्ञता विकसित करता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> स्वधर्म-पालन को चित्त-शुद्धि की प्रक्रिया मानते हैं — अपने स्वाभाविक कर्तव्य में निष्ठा से चित्त की अशुद्धियाँ (राग-द्वेष) क्रमशः कम होती हैं, जो अंततः आत्म-ज्ञान की योग्यता देती हैं। दूसरे का धर्म अपनाना इस स्वाभाविक प्रक्रिया में बाधा डालता है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> स्वधर्म को भगवद्-इच्छा के अनुरूप जीवन जीने का मार्ग मानते हैं — प्रत्येक व्यक्ति को अपने स्वभाव के अनुसार भगवान द्वारा एक विशेष भूमिका दी गई है, उसी में निष्ठा रखना भक्ति का प्रत्यक्ष रूप है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को कर्मयोग की व्यावहारिक बुद्धिमत्ता का प्रमाण मानते हैं — समाज और व्यक्ति दोनों के लिए, अपने प्राकृतिक कार्यक्षेत्र में गहराई से योगदान देना, दूसरे के क्षेत्र में अपूर्ण रूप से प्रयास करने से कहीं अधिक उत्पादक और सार्थक है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं — स्वधर्म-निष्ठा केवल सामाजिक व्यवस्था का पालन नहीं, बल्कि आत्म-विकास और मुक्ति का प्रत्यक्ष मार्ग है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">स्वधर्मो विगुणः</span></div>
+            <div class="flashcard-face flashcard-back"><b>अपना धर्म, भले ही अपूर्ण</b>यथार्थवादी स्वीकृति</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">परधर्मात् स्वनुष्ठितात्</span></div>
+            <div class="flashcard-face flashcard-back"><b>दूसरे के पूर्ण धर्म से</b>न्यायपूर्ण, कठिन तुलना</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">स्वभावनियतं कर्म</span></div>
+            <div class="flashcard-face flashcard-back"><b>स्वभाव-निर्धारित कर्म</b>18.41-45 सिद्धांत की पुनरावृत्ति</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">न आप्नोति किल्बिषम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>पाप नहीं लगता</b>3.35 से कोमल, आश्वासक स्वर</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल धातु/शब्द</th><th>रूप</th><th>अर्थ</th></tr>
+          <tr><td class="sa">श्रेयान्</td><td>प्रशस्य (श्रेष्ठ) — तुलनात्मक</td><td>प्रथमा पुल्लिंग एकवचन</td><td>अधिक श्रेष्ठ</td></tr>
+          <tr><td class="sa">स्वधर्मः</td><td>स्व+धर्म</td><td>प्रथमा पुल्लिंग एकवचन</td><td>अपना कर्तव्य</td></tr>
+          <tr><td class="sa">विगुणः</td><td>वि+गुण</td><td>प्रथमा पुल्लिंग एकवचन</td><td>दोषपूर्ण, गुणहीन</td></tr>
+          <tr><td class="sa">परधर्मात्</td><td>पर+धर्म</td><td>पंचमी पुल्लिंग एकवचन</td><td>दूसरे के धर्म से</td></tr>
+          <tr><td class="sa">स्वनुष्ठितात्</td><td>सु+अनु+स्था</td><td>पंचमी, भूतकृदन्त</td><td>भली-भाँति सम्पन्न किए गए से</td></tr>
+          <tr><td class="sa">स्वभावनियतम्</td><td>स्वभाव+नियम्</td><td>द्वितीया नपुंसक एकवचन</td><td>स्वभाव द्वारा निर्धारित</td></tr>
+          <tr><td class="sa">किल्बिषम्</td><td>किल्बिष</td><td>द्वितीया नपुंसक एकवचन</td><td>पाप, दोष</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।<br>स्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम्।।</div>
+          <div class="cheat-translit">śreyān sva-dharmo viguṇaḥ para-dharmāt sv-anuṣṭhitāt, svabhāva-niyataṃ karma kurvan nāpnoti kilbiṣam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>स्वधर्मो विगुणः</b> अपना, अपूर्ण</span>
+            <span class="cheat-chip"><b>परधर्मः स्वनुष्ठितः</b> पराया, पूर्ण</span>
+            <span class="cheat-chip"><b>स्वभावनियतम्</b> स्वभाव-आधारित</span>
+            <span class="cheat-chip"><b>न किल्बिषम्</b> पाप-रहित</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: अपना अपूर्ण धर्म, दूसरे के पूर्ण धर्म से श्रेष्ठ है। स्वभाव-निर्धारित कर्म करने वाला पाप का भागी नहीं बनता। 3.35 की गहरी, शांत पुनरावृत्ति।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्। स्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्। स्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('अपना धर्म, भले ही दोषपूर्ण हो, दूसरे के भली-भाँति निभाए धर्म से श्रेष्ठ है। अपने स्वभाव-निर्धारित कर्म को करते हुए मनुष्य पाप को प्राप्त नहीं होता।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">श्रे</span><span class="syll">यान्</span><span class="syll">स्व</span><span class="syll">ध</span><span class="syll">र्मो</span><span class="syll">वि</span><span class="syll">गु</span><span class="syll">णः</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">प</span><span class="syll">र</span><span class="syll">ध</span><span class="syll">र्मा</span><span class="syll">त्स्व</span><span class="syll">नु</span><span class="syll">ष्ठि</span><span class="syll">तात्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">स्व</span><span class="syll">भा</span><span class="syll">व</span><span class="syll">नि</span><span class="syll">य</span><span class="syll">तं</span><span class="syll">क</span><span class="syll">र्म</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">कु</span><span class="syll">र्व</span><span class="syll">न्ना</span><span class="syll">प्नो</span><span class="syll">ति</span><span class="syll">कि</span><span class="syll">ल्बि</span><span class="syll">षम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात् स्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout"><b>ध्यान-बिंदु:</b> "स्वभावनियतं कर्म" पर विशेष रूप से रुकें। जप करते समय अपने ही स्वाभाविक कार्य के प्रति श्रद्धा-भाव जगाएँ, तुलना के विचार को शांत करें।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">3.35 vs 18.47</button>
+      <button class="tab-btn" data-tab="e2">तुलना का भ्रम</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 3.35 और 18.47 — एक पंक्ति समान, दूसरी भिन्न</h3>
+        <p class="subnote">गीता की चक्रीय संरचना का सुंदर उदाहरण</p>
+        <div class="echo-shared">श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात् — (दोनों श्लोकों में समान)</div>
+        <div class="echo-row">
+          <div class="echo-card">
+            <div class="echo-label">3.35 — दूसरी पंक्ति</div>
+            <div class="echo-sa">स्वधर्मे निधनं श्रेयः परधर्मो भयावहः</div>
+            <p>अपने धर्म में मृत्यु श्रेष्ठ है, पराया धर्म भयावह है। — तीव्र, चेतावनी-स्वर, अध्याय 3 में संकट के समय।</p>
+          </div>
+          <div class="echo-card">
+            <div class="echo-label">18.47 — दूसरी पंक्ति</div>
+            <div class="echo-sa">स्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम्</div>
+            <p>स्वभाव-निर्धारित कर्म करते हुए पाप नहीं लगता। — शांत, आश्वासक स्वर, अध्याय 18 में समापन पर।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> गीता की पूरी यात्रा भय (3.35) से शांति (18.47) की ओर एक क्रमिक परिवर्तन है — यही परिवर्तन इन दो लगभग-समान श्लोकों के स्वर-भेद में झलकता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 "दूसरे की घास अधिक हरी" — तुलना का भ्रम</h3>
+        <table class="cmp-table">
+          <tr><th>स्थिति</th><th>सामान्य प्रतिक्रिया</th><th>18.47 की शिक्षा</th></tr>
+          <tr><td>अपना अपूर्ण कार्य देखना</td><td>निराशा, आत्म-संदेह</td><td>यह स्वाभाविक व मूल्यवान है, फिर भी श्रेष्ठ</td></tr>
+          <tr><td>दूसरे का उत्कृष्ट कार्य देखना</td><td>तुलना, ईर्ष्या, अपने मार्ग को त्यागने की इच्छा</td><td>यह पराया है — भले ही उत्कृष्ट दिखे, अपने योग्य नहीं</td></tr>
+          <tr><td>निर्णय-बिंदु</td><td>दूसरे की नकल करना</td><td>अपने स्वभाव-निर्धारित मार्ग में दृढ़ रहना</td></tr>
+        </table>
+        <div class="callout"><b>निष्कर्ष:</b> यह तालिका दिखाती है कि 18.47 की शिक्षा आधुनिक "तुलना-चिंता" (comparison anxiety) का एक कालजयी समाधान प्रस्तुत करती है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४५<br>स्व-कर्म सिद्धि</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४६<br>ईश्वर-आराधना</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ४७<br>स्वधर्म-श्रेष्ठता ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४८<br>सहज कर्म त्याज्य नहीं</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४९+<br>ज्ञान-निष्ठा व मोक्ष</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.48):</b> "सहजं कर्म कौन्तेय सदोषमपि न त्यजेत्" — दोषयुक्त सहज कर्म भी त्यागा नहीं जाना चाहिए, ठीक वैसे ही जैसे अग्नि धुएँ से ढकी होती है। 18.47 का सुंदर विस्तार, एक स्मरणीय उपमा के साथ।</div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.४८) — ☰ नेविगेशन — अग्नि धुएँ से ढकी होती है, फिर भी त्यागी नहीं जाती</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.47 के अनुसार अपना अपूर्ण धर्म किससे श्रेष्ठ है?",options:["दूसरे के अपूर्ण धर्म से","दूसरे के भली-भाँति निभाए धर्म से","किसी से नहीं, दोनों समान हैं","अपने ही पुराने कर्म से"],correct:1},
+    {q:"18.47 की पहली पंक्ति किस पूर्व श्लोक से शब्दशः मेल खाती है?",options:["2.47","3.35","9.27","14.5"],correct:1},
+    {q:"3.35 और 18.47 की दूसरी पंक्तियों में मुख्य अंतर क्या है?",options:["कोई अंतर नहीं","3.35 तीव्र/चेतावनी-स्वर है, 18.47 शांत/आश्वासक है","18.47 अधिक कठोर है","दोनों एक ही बात कहते हैं"],correct:1},
+    {q:"'विगुणः' शब्द का क्या अर्थ है?",options:["गुणवान","दोषपूर्ण, गुणरहित","पवित्र","शक्तिशाली"],correct:1},
+    {q:"18.47 के अनुसार स्वभाव-निर्धारित कर्म करने वाले को क्या प्राप्त नहीं होता?",options:["सुख","धन","पाप (किल्बिष)","ज्ञान"],correct:2}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.46 ने बताया कि अपना कर्म ही ईश्वर-पूजा है। 18.47 अब इसका निष्कर्ष देता है — इसीलिए अपना धर्म, भले ही अपूर्ण हो, दूसरे के धर्म से श्रेष्ठ है।",
+    "यह श्लोक विशेष है क्योंकि इसकी पहली पंक्ति अध्याय 3, श्लोक 35 से शब्दशः मेल खाती है — गीता के अंत में, कृष्ण अपनी शुरुआती शिक्षा पर वापस लौटते हैं।",
+    "'परधर्मात् स्वनुष्ठितात्' — दूसरे के भली-भाँति निभाए धर्म से। यह तुलना विशेष रूप से निष्पक्ष है — अपना अपूर्ण बनाम पराया उत्कृष्ट, फिर भी अपना श्रेष्ठ।",
+    "'स्वभावनियतं कर्म' — स्वभाव-निर्धारित कर्म। यह 18.41-45 के केंद्रीय सिद्धांत को अध्याय के अंत तक दोहराता है।",
+    "'न आप्नोति किल्बिषम्' — पाप को प्राप्त नहीं होता। 3.35 के तीव्र स्वर की तुलना में, यह एक शांत, आश्वासक कथन है।",
+    "अगला श्लोक (18.48) इसी विचार को एक सुंदर उपमा से गहरा करेगा — सहज कर्म, दोषयुक्त होते हुए भी, त्यागा नहीं जाना चाहिए, ठीक वैसे ही जैसे अग्नि धुएँ से ढकी होती है।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

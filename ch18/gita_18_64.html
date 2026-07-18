@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.64 — सर्वगुह्यतम वचन: इष्टोऽसि मे दृढम्</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 64 / 78</span>
+    <div class="progress-track"><div class="progress-fill" style="width:82.1%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.६४</div>
+    </div>
+    <div class="guna-badge">🕉️ गीता का सर्वाधिक अंतरंग क्षण — पहली बार प्रत्यक्ष प्रेम-घोषणा</div>
+    <div class="shloka">
+      सर्वगुह्यतमं भूयः शृणु मे परमं वचः।<br>
+      इष्टोऽसि मे दृढमिति ततो वक्ष्यामि ते हितम्।।
+    </div>
+    <div class="translit">
+      sarva-guhyatamaṁ bhūyaḥ śhṛiṇu me paramaṁ vachaḥ,<br>
+      iṣhṭo 'si me dṛiḍham iti tato vakṣhyāmi te hitam
+    </div>
+    <div class="gist">
+      सबसे गुह्य, सर्वगुह्यतम वचन एक बार फिर सुनो। तुम मुझे <b>दृढ़तापूर्वक प्रिय</b> हो — इसलिए मैं तुम्हारा <b>हित</b> कहूँगा। 18.63 के "समापन" के तुरंत बाद, भगवान एक बार फिर बोलते हैं — इस बार पहली बार, पूर्णतः प्रत्यक्ष, व्यक्तिगत स्नेह के साथ।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — "समापन" के बाद, एक और वचन</h3>
+      <p>18.63 "इति ते ज्ञानमाख्यातम्" (इस प्रकार ज्ञान कहा गया) कहकर एक औपचारिक समापन-भाव देता प्रतीत हुआ था। पर 18.64 में भगवान चौंकाते हुए फिर से बोलते हैं — "भूयः शृणु" (फिर से सुनो)। यह दिखाता है कि गीता का ज्ञान-भाग भले ही पूर्ण हो चुका हो, प्रेम और हृदय का संवाद अभी शेष है।</p>
+      <p>ध्यान देने योग्य बात — 18.63 में गीता का ज्ञान "गुह्याद्गुह्यतरम्" (गुह्य से भी अधिक गुह्य, तुलनात्मक रूप) कहा गया था। अब 18.64 में यह "सर्वगुह्यतमम्" (सबसे गुह्य, सर्वोच्च तुलनात्मक/उत्तमावस्था रूप) हो जाता है — गुह्यता का यह क्रम स्पष्ट संकेत करता है कि जो आगे आने वाला है, वह गीता का परम सार है।</p>
+      <div class="callout"><b>संकेत:</b> इस श्लोक में पहली बार भगवान पूर्णतः प्रत्यक्ष, व्यक्तिगत भाषा में कहते हैं — "इष्टोऽसि मे दृढम्" (तुम मुझे दृढ़तापूर्वक प्रिय हो)। पूरी गीता में यह अपने आप में एक असाधारण, हृदय-स्पर्शी क्षण है — दार्शनिक तर्क और आध्यात्मिक शिक्षा के बीच, शुद्ध प्रेम का एक सीधा वचन।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सर्वगुह्यतमं</span><span class="word-tr">sarva-guhyatamaṁ</span></div>
+          <div class="word-meaning">सबसे गुह्य/सर्वोच्च रहस्य — उत्तमावस्था विशेषण</div>
+          <div class="word-eng"><b>EN:</b> the most secret of all</div>
+          <div class="word-deep">सर्व (सब) + गुह्यतमम् (गुह्य का उत्तमावस्था रूप, "सर्वाधिक गुह्य")। यह गुह्यता की शृंखला की चरम अवस्था है — 9।1 में "गुह्यतमम्," 9।2 में "राजगुह्यम्," 18.63 में "गुह्यतरम्" (तुलनात्मक), और अब यहाँ "सर्वगुह्यतमम्" (परम उत्तमावस्था) — गीता क्रमशः अपने सबसे गहन रहस्य की ओर बढ़ रही है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">भूयः शृणु मे परमं वचः</span><span class="word-tr">bhūyaḥ śhṛiṇu me paramaṁ vachaḥ</span></div>
+          <div class="word-meaning">एक बार फिर मेरा परम वचन सुनो — आज्ञार्थक + विशेषण</div>
+          <div class="word-eng"><b>EN:</b> hear once more My supreme word</div>
+          <div class="word-deep">भूयः = फिर से/एक बार और। शृणु = सुनो (श्रु धातु का आज्ञार्थक)। परमं वचः = सर्वोच्च/अंतिम वचन। यह पद 18.63 के औपचारिक "समापन" के तुरंत बाद आता है, जो पाठक को चौंकाता है — गीता अभी समाप्त नहीं हुई, इसका सबसे गहरा भाग अभी शेष है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">इष्टोऽसि मे दृढम्</span><span class="word-tr">iṣhṭo 'si me dṛiḍham</span></div>
+          <div class="word-meaning">तुम मुझे दृढ़तापूर्वक/निश्चित रूप से प्रिय हो — प्रथमा एकवचन कथन</div>
+          <div class="word-eng"><b>EN:</b> you are firmly/exceedingly dear to Me</div>
+          <div class="word-deep">इष्टः = प्रिय, चाहा हुआ (इष् धातु से)। असि = हो (अस् धातु)। मे = मुझे/मेरा। दृढम् = दृढ़ता से, निश्चित रूप से — यह क्रियाविशेषण प्रेम की गहराई और स्थिरता पर बल देता है। यह पूरी गीता में भगवान का सबसे प्रत्यक्ष, सबसे व्यक्तिगत स्नेह-कथन है — कोई दार्शनिक तर्क नहीं, केवल शुद्ध, हार्दिक घोषणा।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">इति ततो वक्ष्यामि ते हितम्</span><span class="word-tr">iti tato vakṣhyāmi te hitam</span></div>
+          <div class="word-meaning">इसलिए मैं तुम्हारा हित कहूँगा — भविष्यत् क्रिया, कारण-सूचक</div>
+          <div class="word-eng"><b>EN:</b> therefore, I shall speak for your welfare</div>
+          <div class="word-deep">इति = इस प्रकार (कारण-सूचक)। ततः = इसलिए/तब। वक्ष्यामि = मैं कहूँगा (भविष्यत्, वच् धातु)। ते हितम् = तुम्हारा हित/कल्याण। यह पद स्पष्ट करता है कि आगामी शिक्षा (18.65-66) का स्रोत केवल दार्शनिक कर्तव्य नहीं, बल्कि गहरा, व्यक्तिगत प्रेम और चिंता है — "क्योंकि तुम मुझे प्रिय हो, इसलिए मैं तुम्हें बताऊँगा।"</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Hear once more My supreme word, the most secret of all; because you are exceedingly dear to Me, I shall speak for your welfare.
+      </div>
+      <p>18.64 गीता के भावनात्मक शिखर की शुरुआत है। 18 अध्यायों की दीर्घ, गहन, कभी-कभी कठोर शिक्षा (जैसे 18.58 की चेतावनी) के बाद, यहाँ पहली बार शुद्ध, अशर्त प्रेम का सीधा वचन आता है — "इष्टोऽसि मे दृढम्।"</p>
+      <p>यह "पुनः-आरंभ" (भूयः शृणु) संरचनात्मक रूप से अत्यंत सार्थक है। 18.63 का "समापन" तर्क और ज्ञान के स्तर पर था — भगवान ने अपनी दार्शनिक शिक्षा पूर्ण कर दी थी। पर 18.64 दिखाता है कि प्रेम कभी "पूर्ण" या "समाप्त" नहीं होता — यह हमेशा एक और शब्द, एक और वचन खोजता रहता है।</p>
+      <div class="callout-rajas"><b>"हितम्" — प्रेम से उपजा कल्याण-वचन:</b> ध्यान दें, भगवान यह नहीं कहते कि वे आगे "आदेश" देंगे या "सत्य" कहेंगे — वे कहते हैं वे "हित" (कल्याण) कहेंगे। यह शब्द-चयन अत्यंत कोमल है — आगामी शिक्षा (18.65-66) प्रेम और चिंता से प्रेरित है, कर्तव्य या दायित्व से नहीं। यह एक मित्र की सलाह है, किसी अधिकारी का आदेश नहीं।</div>
+      <p>यह श्लोक गीता के संपूर्ण चरित्र पर एक नई रोशनी डालता है — यह केवल एक दार्शनिक ग्रंथ नहीं, बल्कि दो हृदयों के बीच का एक गहरा, प्रेमपूर्ण संवाद भी है। अगले श्लोक (18.65) में यह प्रेम अपने सर्वाधिक स्पष्ट, संक्षिप्त, सूत्रात्मक रूप में प्रकट होगा।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — गुरु का अंतिम, हार्दिक वचन:</b> एक गुरु जो शिष्य को वर्षों तक तकनीकी और दार्शनिक शिक्षा देने के बाद, विदाई के क्षण में कहता है — "जो कुछ मैंने सिखाया वह मेरा कर्तव्य था, पर अब जो कहूँगा वह मेरे हृदय से है, क्योंकि तुम मुझे प्रिय हो" — यह क्षण शिक्षा से आगे, संबंध की गहराई को प्रकट करता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — माता-पिता की अंतिम सलाह:</b> जीवन के किसी बड़े मोड़ पर, जब माता-पिता ने सभी व्यावहारिक सलाह दे दी हो, वे अंत में कहते हैं — "यह सब तो मैंने कर्तव्यवश कहा, पर एक बात याद रखना — तुम मुझे कितने प्रिय हो" — यह वाक्य किसी भी तकनीकी सलाह से अधिक गहरा असर छोड़ता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — प्रेम से उपजी अंतिम सीख:</b> एक करीबी मित्र जो व्यावसायिक सलाह देने के बाद कहता है — "यह सलाह इसलिए नहीं कि मुझे कुछ चाहिए, बल्कि इसलिए कि मैं तुम्हारा भला चाहता हूँ" — यह प्रेरणा का स्रोत स्पष्ट कर देता है, और सलाह को नया अर्थ देता है।
+      </div>
+      <div class="callout"><b>दैनिक जीवन में:</b> यह श्लोक हमें याद दिलाता है कि सबसे प्रभावी सलाह वह है जो प्रेम से उपजी हो, दायित्व या श्रेष्ठता के भाव से नहीं। जब हम दूसरों को सलाह दें, याद रखें — "मैं यह इसलिए कह रहा हूँ क्योंकि मुझे तुम्हारी परवाह है," न कि "क्योंकि मैं सही हूँ।"</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">18.63 "समापन" जैसा लगने के बाद, 18.64 में भगवान फिर से क्यों बोलते हैं?</div>
+        <div class="a">यह गीता की एक गहरी संरचनात्मक-भावनात्मक चाल है। 18.63 दार्शनिक/ज्ञान-स्तर का समापन है — शिक्षा पूर्ण हो चुकी है। पर 18.64 दिखाता है कि प्रेम ज्ञान से परे है — यह "अतिरिक्त" वचन दर्शाता है कि भगवान अर्जुन को केवल एक शिष्य के रूप में नहीं, बल्कि एक अत्यंत प्रिय व्यक्ति के रूप में देखते हैं, जिसके लिए वे "अतिरिक्त मील" चलने को तैयार हैं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">'सर्वगुह्यतमम्' और 18.63 के 'गुह्यतरम्' में क्या व्याकरणिक और भावनात्मक अंतर है?</div>
+        <div class="a">व्याकरणिक रूप से, "गुह्यतरम्" तुलनात्मक (comparative — "अधिक गुह्य") है, जबकि "गुह्यतमम्" उत्तमावस्था (superlative — "सर्वाधिक गुह्य") है। यह स्पष्ट, जानबूझकर बनाई गई शृंखला है — गीता क्रमशः अपने सबसे गहन सत्य की ओर बढ़ रही है, और यह भाषिक क्रम स्वयं उस आरोहण को दर्शाता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"इष्टोऽसि मे दृढम्" जैसा प्रत्यक्ष प्रेम-कथन गीता में और कहाँ मिलता है?</div>
+        <div class="a">यह अपनी प्रत्यक्षता में अद्वितीय है, पर भाव में यह 12।13-20 (भक्त के लक्षण, जहाँ "प्रियो मे" बार-बार दोहराया गया है) से जुड़ता है, और आगे 18.65 के "प्रियोऽसि मे" में फिर से प्रतिध्वनित होगा। यह गीता में भगवद्-प्रेम की अभिव्यक्ति की परिणति है, जो अध्याय 18 के अंत में अपने सर्वाधिक व्यक्तिगत रूप में प्रकट होती है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या यह श्लोक दिखाता है कि भगवान केवल अर्जुन से ही इतना प्रेम करते हैं, या यह सार्वभौमिक भाव है?</div>
+        <div class="a">परंपरागत रूप से, अर्जुन को गीता में "हर साधक का प्रतिनिधि" माना जाता है — इसलिए यह प्रेम-वचन प्रतीकात्मक रूप से हर सच्चे, समर्पित साधक के लिए है। गीता अन्यत्र भी (जैसे 9।29 "समोऽहं सर्वभूतेषु") स्पष्ट करती है कि भगवान सबमें समान हैं, पर भक्ति और समर्पण की गहराई ही निकटता का अनुभव कराती है — अर्जुन का प्रेम-अनुभव किसी भी सच्चे भक्त के लिए सुलभ है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.64 गीता के भावनात्मक शिखर की शुरुआत है — यह अध्याय 18 के अंतिम, सबसे प्रसिद्ध श्लोकों (18.65-66) के लिए हृदय-स्पर्शी भूमिका तैयार करता है। यह श्लोक गीता को केवल एक दार्शनिक ग्रंथ नहीं, बल्कि एक गहरे प्रेम-संबंध का दस्तावेज़ भी बनाता है।</p>
+        <p>यह "पुनः-आरंभ" गीता की रचना-कला का प्रमाण है — 18.63 में औपचारिक समापन, फिर 18.64 में हृदय से एक और वचन। यह दिखाता है कि सच्चा ज्ञान और सच्चा प्रेम, दोनों साथ-साथ चल सकते हैं, एक-दूसरे को कम किए बिना।</p>
+        <div class="callout"><b>ध्यान दें:</b> यह श्लोक 18.65 के प्रसिद्ध "मन्मना भव मद्भक्तो...प्रियोऽसि मे" के लिए सीधा प्रस्तावना है — 18.64 में स्नेह की घोषणा होती है, 18.65 में उसी स्नेह से उपजी संक्षिप्त, सूत्रात्मक साधना-विधि प्रस्तुत होगी।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — पुनः-आरंभ से हित-वचन तक</h3>
+        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="175" cy="65" rx="130" ry="40" fill="rgba(201,162,39,0.14)" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <text x="175" y="58" text-anchor="middle" fill="#e6c863" font-size="11.5" font-family="Tiro Devanagari Hindi, serif">सर्वगुह्यतमं भूयः शृणु</text>
+          <text x="175" y="75" text-anchor="middle" fill="#cfc3a8" font-size="10">18.63 के बाद पुनः-आरंभ</text>
+
+          <line x1="230" y1="97" x2="300" y2="150" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <ellipse cx="350" cy="180" rx="130" ry="44" fill="rgba(140,44,59,0.14)" stroke="rgba(140,44,59,0.5)" stroke-width="1.5"/>
+          <text x="350" y="172" text-anchor="middle" fill="#e8a4ad" font-size="12" font-family="Tiro Devanagari Hindi, serif">इष्टोऽसि मे दृढम् ★</text>
+          <text x="350" y="190" text-anchor="middle" fill="#cfc3a8" font-size="10">पहली बार प्रत्यक्ष प्रेम-घोषणा</text>
+
+          <line x1="350" y1="224" x2="350" y2="255" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <rect x="215" y="257" width="270" height="34" rx="9" fill="rgba(42,106,90,0.12)" stroke="rgba(42,106,90,0.45)" stroke-width="1.3"/>
+          <text x="350" y="279" text-anchor="middle" fill="#6ecfb8" font-size="12" font-family="Tiro Devanagari Hindi, serif">वक्ष्यामि ते हितम् — प्रेम से हित</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — गीता के अन्य गुह्यता व स्नेह-सूत्रों से</h3>
+        <table class="cmp-table">
+          <tr><th>स्थान</th><th>18.64 से समानता</th><th>अंतर</th></tr>
+          <tr><td>9।1-2 — गुह्यतमं...राजगुह्यम्</td><td>गुह्यता का क्रम दोनों में केंद्रीय</td><td>9।1-2 अध्याय के प्रारंभ में गुह्यता स्थापित करता है; 18.64 उसकी चरम-अवस्था (सर्वगुह्यतमम्) है</td></tr>
+          <tr><td>12।13-20 — प्रियो मे (भक्त के लक्षण)</td><td>"प्रिय" शब्द का भाव-गहराई से प्रयोग समान</td><td>12।13-20 सामान्य भक्त-लक्षणों की सूची है; 18.64 सीधे अर्जुन को संबोधित, तात्कालिक घोषणा है</td></tr>
+          <tr><td>18.65 — प्रियोऽसि मे</td><td>यही स्नेह-भाव तुरंत अगले श्लोक में दोहराया जाता है</td><td>18.64 स्नेह की घोषणा करता है ("इष्टोऽसि"); 18.65 उससे उपजी साधना-विधि देता है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की सुसंगति:</b> 18.64 गीता के गुह्यता-सिद्धांत (9।1-2) और स्नेह-सिद्धांत (12।13-20) — दोनों को एक साथ, अपने चरम रूप में प्रस्तुत करता है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>आत्म-परीक्षण के प्रश्न:</b> "क्या मैं भगवान/उच्चतर सत्ता के साथ अपने संबंध को केवल कर्तव्य या भय से देखता हूँ, या प्रेम और अंतरंगता से भी?" (इष्टोऽसि मे दृढम्) / "जब मैं किसी को सलाह देता हूँ, क्या वह प्रेम से आती है, या श्रेष्ठता या दायित्व से?" (वक्ष्यामि ते हितम्)</div>
+        <p><b>अभ्यास — प्रेम-आधारित संवाद:</b> आज किसी से बात करते समय, विशेषकर यदि आप उन्हें सलाह दे रहे हों, एक क्षण रुककर पूछें — "क्या मैं यह प्रेम से कह रहा हूँ?" यदि उत्तर हाँ हो, तो वह शब्द कहें; यदि नहीं, तो रुकें और अपने भाव को शुद्ध करें।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "सर्वगुह्यतमम्" पर बल देते हुए वे इसे आत्म-ज्ञान के परमोच्च रहस्य की ओर संकेत मानते हैं — यह वही गुह्यतम सत्य है जिसकी ओर पूरी गीता क्रमशः अग्रसर हुई है, अंततः आगामी श्लोकों में प्रकट होने वाला।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "इष्टोऽसि मे दृढम्" को वे भक्ति-सिद्धांत के हृदय के रूप में देखते हैं — भगवान का भक्त के प्रति प्रेम कोई अमूर्त सिद्धांत नहीं, बल्कि वास्तविक, गहरा, व्यक्तिगत स्नेह है, जो भक्ति-मार्ग की संपूर्ण नींव है।</p>
+        <p><b style="color:var(--gold-light)">स्वामी विवेकानंद:</b> इस श्लोक में वे गीता के सर्वाधिक मानवीय, हृदय-स्पर्शी क्षण को देखते हैं — यह दिखाता है कि परम सत्य केवल शुष्क दर्शन नहीं, बल्कि गहन प्रेम भी है; ज्ञान और भक्ति यहाँ अविभाज्य रूप से एक हो जाते हैं।</p>
+        <div class="callout"><b>साझा सूत्र:</b> सभी परंपराएँ सहमत हैं कि यह श्लोक गीता के सबसे हृदयस्पर्शी क्षणों में से एक है, जहाँ दर्शन और प्रेम पूर्णतः एकाकार हो जाते हैं।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सर्वगुह्यतमं</span></div>
+            <div class="flashcard-face flashcard-back"><b>सबसे गुह्य</b>उत्तमावस्था — 18.63 के "गुह्यतरम्" से आगे</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">भूयः शृणु</span></div>
+            <div class="flashcard-face flashcard-back"><b>फिर से सुनो</b>18.63 के "समापन" के बाद अप्रत्याशित पुनः-आरंभ</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">इष्टोऽसि मे दृढम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>तुम मुझे दृढ़ प्रिय हो</b>गीता का सबसे प्रत्यक्ष प्रेम-कथन</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">वक्ष्यामि</span></div>
+            <div class="flashcard-face flashcard-back"><b>मैं कहूँगा</b>भविष्यत् — 18.65 के वचन की प्रतिज्ञा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">ते हितम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>तुम्हारा हित/कल्याण</b>प्रेम से उपजा, आदेश नहीं</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">दृढम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>दृढ़तापूर्वक/निश्चित रूप से</b>प्रेम की स्थिरता पर बल</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">सर्वगुह्यतमम्</td><td>सर्व+गुह्य+तमप्</td><td>द्वितीया एकवचन</td><td>सबसे गुह्य — उत्तमावस्था विशेषण</td></tr>
+          <tr><td class="sa">भूयः</td><td>भूयस्</td><td>अव्यय</td><td>फिर से, एक बार और</td></tr>
+          <tr><td class="sa">शृणु</td><td>श्रु</td><td>आज्ञार्थक म.पु. एकवचन</td><td>सुनो — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">परमं वचः</td><td>परम+वचस्</td><td>द्वितीया एकवचन</td><td>सर्वोच्च वचन — कर्म</td></tr>
+          <tr><td class="sa">इष्टः</td><td>इष्+क्त</td><td>प्रथमा पुं. एकवचन</td><td>प्रिय — भूतकृदन्त विशेषण</td></tr>
+          <tr><td class="sa">असि</td><td>अस्</td><td>वर्तमान म.पु. एकवचन</td><td>हो</td></tr>
+          <tr><td class="sa">दृढम्</td><td>दृढ</td><td>क्रियाविशेषण</td><td>दृढ़ता से, निश्चित रूप से</td></tr>
+          <tr><td class="sa">वक्ष्यामि</td><td>वच्</td><td>भविष्यत् उ.पु. एकवचन</td><td>मैं कहूँगा — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">ते हितम्</td><td>युष्मद्+हित</td><td>द्वितीया एकवचन</td><td>तुम्हारा कल्याण — कर्म</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">सर्वगुह्यतमं भूयः शृणु मे परमं वचः।<br>इष्टोऽसि मे दृढमिति ततो वक्ष्यामि ते हितम्।।</div>
+          <div class="cheat-translit">sarva-guhyatamaṁ bhūyaḥ śhṛiṇu me paramaṁ vachaḥ, iṣhṭo 'si me dṛiḍham iti tato vakṣhyāmi te hitam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>सर्वगुह्यतमं</b> गुह्यता की चरम अवस्था</span>
+            <span class="cheat-chip"><b>भूयः शृणु</b> अप्रत्याशित पुनः-आरंभ</span>
+            <span class="cheat-chip"><b>इष्टोऽसि मे दृढम्</b> प्रत्यक्ष प्रेम-घोषणा</span>
+            <span class="cheat-chip"><b>वक्ष्यामि ते हितम्</b> प्रेम से उपजा हित-वचन</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: सबसे गुह्य वचन एक बार फिर सुनो — तुम मुझे दृढ़तापूर्वक प्रिय हो, इसलिए मैं तुम्हारा हित कहूँगा। 18.63 के औपचारिक ज्ञान-समापन के बाद, गीता का सबसे हृदय-स्पर्शी, अंतरंग क्षण यहाँ से शुरू होता है — प्रेम, ज्ञान से भी गहरा वचन खोजता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('सर्वगुह्यतमं भूयः शृणु मे परमं वचः। इष्टोऽसि मे दृढमिति ततो वक्ष्यामि ते हितम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('सर्वगुह्यतमं भूयः शृणु मे परमं वचः। इष्टोऽसि मे दृढमिति ततो वक्ष्यामि ते हितम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('सबसे गुह्य वचन एक बार फिर सुनो। तुम मुझे दृढ़तापूर्वक प्रिय हो, इसलिए मैं तुम्हारा हित कहूँगा।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">सर्</span><span class="syll">व</span><span class="syll">गु</span><span class="syll">ह्य</span><span class="syll">त</span><span class="syll">मं</span><span class="syll">भू</span><span class="syll">यः</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">शृ</span><span class="syll">णु</span><span class="syll">मे</span><span class="syll">प</span><span class="syll">र</span><span class="syll">मं</span><span class="syll">व</span><span class="syll">चः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">इ</span><span class="syll">ष्टो</span><span class="syll">ऽसि</span><span class="syll">मे</span><span class="syll">दृ</span><span class="syll">ढ</span><span class="syll">मि</span><span class="syll">ति</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">त</span><span class="syll">तो</span><span class="syll">वक्</span><span class="syll">ष्या</span><span class="syll">मि</span><span class="syll">ते</span><span class="syll">हि</span><span class="syll">तम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('सर्वगुह्यतमं भूयः शृणु मे परमं वचः इष्टोऽसि मे दृढमिति ततो वक्ष्यामि ते हितम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "इष्टोऽसि मे दृढम्" पर विशेष रूप से रुकें और हृदय में इस प्रेम-वचन को अनुभव करने का प्रयास करें — यह गीता का सबसे कोमल, सबसे व्यक्तिगत क्षण है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">18.63 → 18.64 मोड़</button>
+      <button class="tab-btn" data-tab="e2">गुह्यता की बढ़ती शृंखला</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 18.63 → 18.64 — समापन से पुनः-आरंभ तक</h3>
+        <p class="subnote">ज्ञान का अंत, प्रेम की शुरुआत</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 18.63 — ज्ञान का समापन</div>
+            <div class="contrast-sa">इति ते ज्ञानमाख्यातम्</div>
+            <p><b>औपचारिक अंत।</b><br>दार्शनिक शिक्षा पूर्ण।<br>तर्क और विवेक का स्तर।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 18.64 — प्रेम का आरंभ</div>
+            <div class="contrast-sa">भूयः शृणु...इष्टोऽसि मे</div>
+            <p><b>अप्रत्याशित पुनः-आरंभ।</b><br>हार्दिक, व्यक्तिगत वचन।<br>प्रेम और स्नेह का स्तर।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> गीता दिखाती है कि ज्ञान "पूर्ण" हो सकता है, पर प्रेम कभी पूर्णतः "समाप्त" नहीं होता — यह हमेशा एक शब्द अधिक कहना चाहता है। यही 18.64 का अद्भुत, मानवीय सौंदर्य है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 गुह्यता की बढ़ती शृंखला — गीता भर में</h3>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 9।1-2 — प्रारंभिक गुह्यता</div>
+            <div class="contrast-sa">गुह्यतमम्, राजगुह्यम्</div>
+            <p>अध्याय 9 में गुह्य ज्ञान की पहली घोषणा।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 18.63-64 — चरम गुह्यता</div>
+            <div class="contrast-sa">गुह्यतरम् → सर्वगुह्यतमम्</div>
+            <p>तुलनात्मक से उत्तमावस्था तक — अंतिम, सर्वोच्च रहस्य।</p>
+          </div>
+        </div>
+        <div class="callout-rajas"><b>Pattern:</b> गीता जानबूझकर गुह्यता के इस बढ़ते क्रम को बनाए रखती है — पाठक को क्रमशः और गहरे, और अंतरंग सत्य की ओर तैयार करते हुए, अंततः 18.65-66 के परम वचन तक पहुँचाती है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६२<br>शरणागति-आह्वान</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६३<br>अंतिम स्वतंत्रता</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ६४<br>इष्टोऽसि मे ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६५<br>मन्मना भव, प्रियोऽसि मे</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६६<br>चरम-श्लोक</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.65):</b> "मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु। मामेवैष्यसि सत्यं ते प्रतिजाने प्रियोऽसि मे॥" — 18.64 की प्रेम-घोषणा अब एक संक्षिप्त, सूत्रात्मक साधना-विधि में बदल जाएगी, और भगवान अपनी प्रतिज्ञा ("सत्यं ते प्रतिजाने") के साथ अर्जुन को अपने पास आने का वचन देंगे।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.६५) — ☰ नेविगेशन — मन्मना भव: भगवान की प्रतिज्ञा और प्रेम</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.64 में गीता का ज्ञान किस विशेषण से वर्णित है?",options:["सामान्य","सर्वगुह्यतमं — सबसे गुह्य","अस्पष्ट","अनावश्यक"],correct:1},
+    {q:"18.64 में भगवान अर्जुन के लिए कौन-सा प्रत्यक्ष कथन कहते हैं?",options:["तुम मेरे शत्रु हो","इष्टोऽसि मे दृढम् — तुम मुझे दृढ़ प्रिय हो","तुम्हें और सीखना चाहिए","तुम्हारा निर्णय गलत है"],correct:1},
+    {q:"'गुह्यतरम्' (18.63) और 'गुह्यतमम्' (18.64) में क्या व्याकरणिक अंतर है?",options:["कोई अंतर नहीं","तुलनात्मक बनाम उत्तमावस्था","दोनों उत्तमावस्था हैं","दोनों तुलनात्मक हैं"],correct:1},
+    {q:"18.64 के अनुसार भगवान आगामी वचन क्यों कहेंगे?",options:["क्योंकि यह उनका कर्तव्य है","क्योंकि अर्जुन उन्हें दृढ़ता से प्रिय है","क्योंकि युद्ध निकट है","कोई विशेष कारण नहीं बताया गया"],correct:1},
+    {q:"18.64 के बाद अगला श्लोक (18.65) किस भाव को आगे बढ़ाएगा?",options:["पुनः चेतावनी","इसी स्नेह-भाव को — 'प्रियोऽसि मे' के साथ साधना-विधि","विषय पूर्णतः बदल जाएगा","गीता यहीं समाप्त हो जाएगी"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.63 ने एक औपचारिक समापन-भाव दिया था — 'इति ते ज्ञानमाख्यातम्।' पर 18.64 में भगवान चौंकाते हुए फिर से बोलते हैं।",
+    "'सर्वगुह्यतमं भूयः शृणु' — सबसे गुह्य वचन एक बार फिर सुनो। गुह्यता अपनी चरम अवस्था — उत्तमावस्था रूप — तक पहुँचती है।",
+    "और फिर आता है गीता का सबसे हृदय-स्पर्शी वाक्य — 'इष्टोऽसि मे दृढम्'! तुम मुझे दृढ़तापूर्वक प्रिय हो। पहली बार, पूर्णतः प्रत्यक्ष प्रेम-घोषणा।",
+    "'इति ततो वक्ष्यामि ते हितम्' — इसलिए मैं तुम्हारा हित कहूँगा। आगामी शिक्षा का स्रोत प्रेम है, कर्तव्य नहीं।",
+    "यह श्लोक दिखाता है कि ज्ञान भले ही 'पूर्ण' हो सकता है, प्रेम कभी समाप्त नहीं होता — यह हमेशा एक शब्द और खोजता है।",
+    "अगला (18.65) इसी स्नेह से एक संक्षिप्त, सूत्रात्मक साधना-विधि देगा — 'मन्मना भव मद्भक्तः' — और भगवान अपनी प्रतिज्ञा के साथ अर्जुन को अपने पास आने का वचन देंगे।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

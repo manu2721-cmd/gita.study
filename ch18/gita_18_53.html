@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.53 — महावाक्य पूर्ण: अहंकार-त्याग से ब्रह्मभूयाय कल्पते तक</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 53 / 78</span>
+    <div class="progress-track"><div class="progress-fill" style="width:67.9%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.५३</div>
+    </div>
+    <div class="guna-badge">🕉️ ब्रह्म-प्राप्ति गुण-सूची — श्लोक ३/३ · महावाक्य पूर्ण</div>
+    <div class="shloka">
+      अहङ्कारं बलं दर्पं कामं क्रोधं परिग्रहम्।<br>
+      विमुच्य निर्ममः शान्तो ब्रह्मभूयाय कल्पते।।
+    </div>
+    <div class="translit">
+      ahaṅkāraṁ balaṁ darpaṁ kāmaṁ krodhaṁ parigraham,<br>
+      vimuchya nirmamaḥ śhānto brahma-bhūyāya kalpate
+    </div>
+    <div class="gist">
+      अहंकार, बल-मद, दर्प, काम, क्रोध और परिग्रह से <b>मुक्त होकर</b>, ममता-रहित और <b>शांत</b> — साधक <b>ब्रह्म-भाव के योग्य</b> हो जाता है। यहीं 18.51 से चला आ रहा महावाक्य अपनी मुख्य क्रिया <b>"कल्पते"</b> तक पहुँचता है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — महावाक्य का समापन</h3>
+      <p>18.51 ने चार आंतरिक गुण दिए (बुद्धि-शुद्धि, धृति, विषय-त्याग, राग-द्वेष-त्याग), 18.52 ने पाँच बाह्य जीवन-शैली गुण जोड़े (एकांत, अल्पाहार, त्रिविध संयम, सतत ध्यान, स्थायी वैराग्य)। अब 18.53 में छह अंतिम दोष गिनाए जाते हैं जिनसे मुक्त होना शेष है — और तब, अंततः, महावाक्य की <b>प्रतीक्षित मुख्य क्रिया</b> आती है: <b>"कल्पते"</b> (योग्य हो जाता है)।</p>
+      <p>यह तीन श्लोकों में फैला एक ही वाक्य है — 18.51 से शुरू होकर नौ पूर्वकालिक/विशेषण-पदों (युक्तः, नियम्य, त्यक्त्वा, व्युदस्य, सेवी, आशी, मानसः, परः, आश्रितः) से गुज़रता हुआ, अब दसवें व अंतिम पूर्वकालिक पद "विमुच्य" से मिलकर <b>कल्पते</b> पर विराम पाता है। यह गीता की सबसे लंबी और सुसंगठित वाक्य-रचनाओं में से एक है।</p>
+      <div class="callout"><b>संकेत:</b> ध्यान दें कि "कल्पते" वर्तमान काल में है, भविष्य में नहीं — गीता कहती है यह "योग्यता" तत्काल घटती है, किसी दूर के भविष्य में नहीं, जैसे ही उपर्युक्त सभी गुण पूर्ण होते हैं।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अहङ्कारं बलं दर्पं</span><span class="word-tr">ahaṅkāraṁ balaṁ darpaṁ</span></div>
+          <div class="word-meaning">अहंकार, बल-मद और दर्प — द्वितीया एकवचन (त्रय)</div>
+          <div class="word-eng"><b>EN:</b> ego, (false) strength/power, and arrogance</div>
+          <div class="word-deep">अहंकार = "मैं-पन" का भाव, कर्तापन का मूल भ्रम। बलं = शारीरिक/सामर्थ्य का घमंड, "मैं बलवान हूँ" का दंभ। दर्पं = अहंकार और बल से उपजा प्रकट अभिमान। ये तीनों एक-दूसरे को जन्म देते हैं — अहंकार से बल का मद, बल के मद से दर्प।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कामं क्रोधं परिग्रहम्</span><span class="word-tr">kāmaṁ krodhaṁ parigraham</span></div>
+          <div class="word-meaning">काम, क्रोध और परिग्रह — द्वितीया एकवचन (त्रय)</div>
+          <div class="word-eng"><b>EN:</b> desire, anger, and possessiveness/acquisitiveness</div>
+          <div class="word-deep">काम = इच्छा-वासना। क्रोध = इच्छा-पूर्ति में बाधा से उपजा आवेश (गीता 2।62-63 का प्रसिद्ध क्रम — काम से क्रोध)। परिग्रहम् = संग्रह-वृत्ति, वस्तुओं को अपना बनाकर रखने की लालसा। यह षट्-दोष सूची अहंकार-त्रय (अहंकार-बल-दर्प) और वासना-त्रय (काम-क्रोध-परिग्रह) — दो त्रिक में बँटी है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">विमुच्य</span><span class="word-tr">vimuchya</span></div>
+          <div class="word-meaning">पूर्णतः मुक्त होकर/त्यागकर — पूर्वकालिक क्रिया</div>
+          <div class="word-eng"><b>EN:</b> having completely released/relinquished</div>
+          <div class="word-deep">वि+मुच् धातु से — "मुच्" का अर्थ ही "छोड़ना/मुक्त करना" है, "वि" उपसर्ग इसे और सम्पूर्ण बना देता है। यह 18.51-53 की शृंखला का <b>अंतिम पूर्वकालिक पद</b> है — इससे पहले नियम्य, त्यक्त्वा, व्युदस्य आए, अब विमुच्य के साथ यह शृंखला पूर्ण होती है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">निर्ममः शान्तः</span><span class="word-tr">nirmamaḥ śhāntaḥ</span></div>
+          <div class="word-meaning">ममता-रहित और शांत — प्रथमा एकवचन (द्वय)</div>
+          <div class="word-eng"><b>EN:</b> free from the sense of "mine", and at peace</div>
+          <div class="word-deep">निर्ममः = निर्+मम — "मेरा-पन" (ममता) से पूर्णतः रहित। शांतः = सब वासनाओं के शमन से उपजी स्थिर शांति। ये दोनों षड्-दोष-त्याग के <b>स्वाभाविक फल</b> हैं — जब अहंकार-बल-दर्प-काम-क्रोध-परिग्रह छूटते हैं, तभी वास्तविक ममता-रहितता और शांति संभव होती है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">ब्रह्मभूयाय कल्पते</span><span class="word-tr">brahma-bhūyāya kalpate</span></div>
+          <div class="word-meaning">ब्रह्म-भाव के योग्य हो जाता है — मुख्य क्रिया, वर्तमान काल</div>
+          <div class="word-eng"><b>EN:</b> becomes fit for the state of oneness with Brahman</div>
+          <div class="word-deep">ब्रह्मभूयाय = ब्रह्म + भूय (चतुर्थी, "के लिए") — "ब्रह्म बनने के लिए/ब्रह्म-भाव के लिए।" कल्पते = कृप् धातु से, "योग्य होना/समर्थ होना।" यह <b>पूरे 18.51-53 महावाक्य की मुख्य क्रिया</b> है — तीन श्लोकों के सभी विशेषण-पद इसी एक क्रिया के कर्ता का वर्णन करते हैं।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Having completely relinquished ego, (false) strength, arrogance, desire, anger, and possessiveness, free from the sense of "mine" and at peace — one becomes fit for the state of oneness with Brahman.
+      </div>
+      <p>18.53 महावाक्य का <b>समापन</b> है। यहाँ छह दोषों की अंतिम सूची दी गई है — इन्हें दो त्रिकों में देखा जा सकता है: <b>अहंकार-त्रय</b> (अहंकार, बल, दर्प — "मैं" के फूलने की प्रक्रिया) और <b>वासना-त्रय</b> (काम, क्रोध, परिग्रह — इच्छा से आसक्ति तक की शृंखला)।</p>
+      <p>ध्यान देने योग्य क्रम — पहले "मैं" का दोष (अहंकार-बल-दर्प), फिर "मेरी इच्छा" का दोष (काम-क्रोध-परिग्रह)। मानो गीता कह रही हो: पहले "मैं-भाव" जाना चाहिए, तभी "मेरा-भाव" (ममता) टिक नहीं सकता।</p>
+      <div class="callout-rajas"><b>"निर्ममः शान्तः" — दोहरा फल:</b> छह दोषों से मुक्ति का सीधा परिणाम है — ममता का अभाव (निर्ममः) और शांति (शान्तः)। ये कोई अतिरिक्त प्रयास से प्राप्त गुण नहीं, बल्कि दोष-त्याग की स्वाभाविक छाया हैं — जैसे बादल हटने पर सूर्य अपने आप प्रकट होता है।</div>
+      <p>और अंत में — <b>"ब्रह्मभूयाय कल्पते"</b>। तीन पूरे श्लोकों (51-53) से चली आ रही यात्रा यहाँ अपने गंतव्य पर पहुँचती है। ध्यान दें, गीता यह नहीं कहती "ब्रह्म बन जाता है" या "ब्रह्म को प्राप्त करता है" — वह कहती है "ब्रह्म-भाव के <b>योग्य</b> हो जाता है" (कल्पते)। यह सूक्ष्म पर गहरा अंतर है — योग्यता की यह अवस्था द्वार खोलती है, आगे 18.54 में इसका फल वर्णित होगा।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — अहंकार-त्रय की पहचान:</b> "मेरी वजह से यह टीम सफल हुई" (अहंकार), "मैं किसी की नहीं सुनता, क्योंकि मैं सबसे सक्षम हूँ" (बल-मद), और सफलता के बाद दूसरों को नीचा दिखाना (दर्प) — यह त्रिक अक्सर एक साथ बढ़ता है, कार्यक्षेत्र में सबसे सामान्य रूप में दिखता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — वासना-त्रय की शृंखला:</b> किसी वस्तु की तीव्र इच्छा (काम), न मिलने पर या बाधा आने पर क्रोध, और मिल जाने पर उसे जमा करते रहने की लालसा (परिग्रह) — यह गीता 2।62-63 की काम-क्रोध शृंखला का ही विस्तार है, जिसमें परिग्रह अंतिम कड़ी जुड़ती है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — निर्ममता और शांति:</b> एक वयोवृद्ध शिक्षक जो अपने बनाए संस्थान को अगली पीढ़ी को सौंपते समय बिना किसी खिंचाव के, प्रसन्नता से विदा लेता है — "यह मेरा नहीं था, मैं केवल माध्यम था" — यही निर्ममता है, और इससे उपजी शांति ही ब्रह्म-भाव की दहलीज़ है।
+      </div>
+      <div class="callout"><b>दैनिक जीवन में:</b> इन छह दोषों को एक साथ पहचानने का सरल तरीका — जब भी "मैं," "मेरा," "मुझे चाहिए," या "मुझे गुस्सा आ रहा है" जैसे विचार बार-बार आएँ, वहीं इस श्लोक की सूची को याद करें।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">अहंकार, बल और दर्प में क्या भेद है — ये तीनों अलग क्यों गिनाए गए?</div>
+        <div class="a">तीनों एक ही मूल भ्रम ("मैं कर्ता हूँ") के तीन बढ़ते हुए रूप हैं। अहंकार = मूल "मैं-पन।" बल = उस "मैं" का सामर्थ्य पर गर्व। दर्प = उस गर्व का बाहरी, दूसरों के सामने प्रकट प्रदर्शन। यह क्रम अंदर से बाहर की ओर बढ़ने का दिखाता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"कल्पते" का अर्थ "बन जाता है" क्यों नहीं है?</div>
+        <div class="a">क्योंकि गीता यहाँ अत्यंत सूक्ष्म भेद रखती है। "कल्पते" (√कृप् से) का अर्थ है "योग्य/समर्थ होना।" ब्रह्म-भाव कोई नई प्राप्ति नहीं (क्योंकि आत्मा सदा ब्रह्म-स्वरूप ही है), बल्कि आवरण हटने पर उस स्वरूप के प्रति "योग्यता" या "उपयुक्तता" प्रकट होती है। अगले श्लोक (18.54) में इस योग्यता का फल — परा भक्ति — वर्णित होगा।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.51-53 का पूरा महावाक्य किस क्रम में समझें?</div>
+        <div class="a">क्रम इस प्रकार है: (कर्ता, अव्यक्त) — बुद्ध्या विशुद्धया युक्तः, धृत्या आत्मानं नियम्य, शब्दादीन् विषयान् त्यक्त्वा, रागद्वेषौ व्युदस्य (18.51) — विविक्तसेवी, लघ्वाशी, यतवाक्कायमानसः, ध्यानयोगपरो नित्यं वैराग्यं समुपाश्रितः (18.52) — अहंकारं बलं दर्पं कामं क्रोधं परिग्रहं विमुच्य, निर्ममः शान्तः (18.53) — <b>ब्रह्मभूयाय कल्पते</b> (मुख्य क्रिया)। दस विशेषण-पद, एक मुख्य क्रिया।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या यह षट्-दोष सूची अन्य गीता-सूचियों (जैसे दैवी-आसुरी सम्पद्, 16वाँ अध्याय) से जुड़ी है?</div>
+        <div class="a">हाँ, गहराई से। अध्याय 16 में काम, क्रोध और लोभ (परिग्रह का ही रूप) को "नरक के तीन द्वार" (16।21) कहा गया है, और अहंकार-दर्प को आसुरी सम्पदा के लक्षणों में गिना गया है (16।4)। 18.53 उन्हीं दोषों को यहाँ साधना-मार्ग के अंतिम अवरोधक के रूप में पुनः प्रस्तुत करता है — जिन्हें पार करना ही ब्रह्म-भाव की योग्यता है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.53 केवल एक और श्लोक नहीं — यह <b>तीन श्लोकों के महावाक्य का व्याकरणिक और आध्यात्मिक शिखर</b> है। "कल्पते" क्रिया के आने तक पाठक को दस विशेषण-पदों से होकर गुज़रना पड़ता है — यह रचना-शैली स्वयं एक साधना-अनुभव है: जैसे साधक कई चरणों से गुज़रकर लक्ष्य तक पहुँचता है, वैसे ही पाठक इस वाक्य से गुज़रकर "कल्पते" तक पहुँचता है।</p>
+        <p>यह श्लोक अध्याय 18 के व्यापक उद्देश्य को भी पूरा करता है — गीता के सभी योग-मार्गों (कर्म, ज्ञान, भक्ति) का संश्लेषण यहीं समाप्त होता है, और आगे 18.54 से भक्ति-केंद्रित परिणति शुरू होगी।</p>
+        <div class="callout"><b>ध्यान दें:</b> 18.53 के बाद 18.54 में "ब्रह्मभूतः प्रसन्नात्मा" से शुरू होने वाला नया वाक्य आएगा — जो इस श्लोक के परिणाम को आगे भक्ति की ओर ले जाएगा।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — षट्-दोष-त्याग से कल्पते तक</h3>
+        <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="180" cy="90" rx="95" ry="40" fill="rgba(140,44,59,0.12)" stroke="rgba(140,44,59,0.45)" stroke-width="1.3"/>
+          <text x="180" y="84" text-anchor="middle" fill="#e8a4ad" font-size="11.5" font-family="Tiro Devanagari Hindi, serif">अहंकार-त्रय</text>
+          <text x="180" y="101" text-anchor="middle" fill="#cfc3a8" font-size="10">अहंकार · बल · दर्प</text>
+
+          <ellipse cx="520" cy="90" rx="95" ry="40" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.45)" stroke-width="1.3"/>
+          <text x="520" y="84" text-anchor="middle" fill="#e0a060" font-size="11.5" font-family="Tiro Devanagari Hindi, serif">वासना-त्रय</text>
+          <text x="520" y="101" text-anchor="middle" fill="#cfc3a8" font-size="10">काम · क्रोध · परिग्रह</text>
+
+          <line x1="230" y1="122" x2="310" y2="185" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <line x1="470" y1="122" x2="390" y2="185" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+
+          <ellipse cx="350" cy="215" rx="100" ry="42" fill="rgba(201,162,39,0.14)" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <text x="350" y="208" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">विमुच्य</text>
+          <text x="350" y="225" text-anchor="middle" fill="#cfc3a8" font-size="10">पूर्ण मुक्ति</text>
+
+          <line x1="350" y1="257" x2="350" y2="300" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <ellipse cx="350" cy="325" rx="110" ry="36" fill="rgba(42,106,90,0.12)" stroke="rgba(42,106,90,0.45)" stroke-width="1.3"/>
+          <text x="350" y="318" text-anchor="middle" fill="#6ecfb8" font-size="11.5" font-family="Tiro Devanagari Hindi, serif">निर्ममः शान्तः</text>
+          <text x="350" y="335" text-anchor="middle" fill="#cfc3a8" font-size="10">दोहरा स्वाभाविक फल</text>
+
+          <line x1="350" y1="361" x2="350" y2="385" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <rect x="230" y="386" width="240" height="30" rx="8" fill="rgba(201,162,39,0.1)" stroke="rgba(201,162,39,0.5)" stroke-width="1.3"/>
+          <text x="350" y="406" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">ब्रह्मभूयाय कल्पते ★</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — गीता के अन्य दोष-सूचियों से</h3>
+        <table class="cmp-table">
+          <tr><th>स्थान</th><th>18.53 से समानता</th><th>अंतर</th></tr>
+          <tr><td>16।21 — नरक के तीन द्वार</td><td>काम, क्रोध — दोनों सूचियों में केंद्रीय</td><td>16।21 में लोभ है, 18.53 में परिग्रह — निकट-सम्बद्ध पर भिन्न शब्द</td></tr>
+          <tr><td>2।62-63 — काम से नाश तक शृंखला</td><td>काम→क्रोध का क्रम समान</td><td>2।62-63 पतन की शृंखला दिखाता है; 18.53 उत्थान की पूर्णता दिखाता है</td></tr>
+          <tr><td>16।4 — आसुरी सम्पदा के लक्षण</td><td>दर्प, अहंकार दोनों में सूचीबद्ध</td><td>16।4 आसुरी स्वभाव वर्णन करता है; 18.53 उनसे मुक्ति का मार्ग बताता है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की संरचना:</b> गीता बार-बार इन्हीं दोषों (अहंकार, काम, क्रोध, परिग्रह) को अलग-अलग अध्यायों में अलग कोण से उठाती है — 18.53 उन सबका समाहार-बिंदु है, जहाँ इनसे मुक्ति सीधे ब्रह्म-भाव से जुड़ती है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>आत्म-परीक्षण के प्रश्न:</b> "क्या मैं अपनी उपलब्धियों का श्रेय अकेले लेना चाहता हूँ?" (अहंकार) / "क्या मैं अपनी क्षमता पर अनावश्यक गर्व करता हूँ?" (बल-दर्प) / "मेरी सबसे प्रबल अतृप्त इच्छा क्या है?" (काम) / "किन परिस्थितियों में मुझे तुरंत क्रोध आता है?" (क्रोध) / "मैं किन वस्तुओं/संबंधों को अत्यधिक अपना मानकर पकड़े हूँ?" (परिग्रह)</div>
+        <p><b>अभ्यास — विमुच्य का क्रमिक अभ्यास:</b> इन छह दोषों को एक साथ त्यागने की कोशिश निराशा ला सकती है। इसके बजाय, हर सप्ताह एक दोष चुनें — जब वह प्रकट हो, केवल पहचानें और नाम दें ("यह अहंकार है," "यह क्रोध है") — पहचान ही पहला, सबसे शक्तिशाली कदम है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "अहंकार" का अर्थ है कर्तृत्व-भाव का मूल भ्रम। इसके त्याग के बिना "निर्ममः" संभव नहीं — क्योंकि ममता (मेरा-पन) सदैव अहंकार (मैं-पन) के बाद ही आती है। "कल्पते" यहाँ ज्ञान-निष्ठा की चरम सीमा को इंगित करता है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> यह षट्-दोष-त्याग भक्ति-मार्ग में भी अनिवार्य है — जब तक अहंकार और परिग्रह शेष हैं, ईश्वर के प्रति पूर्ण शरणागति संभव नहीं। "निर्ममः" वस्तुतः "सब कुछ ईश्वर का है, मेरा कुछ नहीं" की भावना है।</p>
+        <p><b style="color:var(--gold-light)">स्वामी रामसुखदास जी:</b> "कल्पते" शब्द चुनकर गीता ने बड़ी सावधानी बरती है — यह "बनना" नहीं, "योग्य होना" कहती है, क्योंकि ब्रह्म-भाव कोई नई उपलब्धि नहीं, स्वरूप की पहचान मात्र है, जो दोष हटने पर स्वतः प्रकट होती है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> सभी आचार्य सहमत हैं कि यह श्लोक साधना-पथ की अंतिम बाधाओं (अहंकार-केंद्रित दोष) की सम्पूर्ण सूची है — इनसे मुक्ति ही अंतिम द्वार है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अहंकार-बल-दर्प</span></div>
+            <div class="flashcard-face flashcard-back"><b>"मैं" के फूलने का त्रिक</b>मैं-पन → सामर्थ्य-मद → प्रकट अभिमान</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">काम-क्रोध-परिग्रह</span></div>
+            <div class="flashcard-face flashcard-back"><b>वासना का त्रिक</b>इच्छा → बाधा से आवेश → संग्रह-वृत्ति</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">विमुच्य</span></div>
+            <div class="flashcard-face flashcard-back"><b>पूर्णतः मुक्त होकर</b>18.51-53 शृंखला का अंतिम पूर्वकालिक पद</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">निर्ममः शान्तः</span></div>
+            <div class="flashcard-face flashcard-back"><b>ममता-रहित, शांत</b>दोष-त्याग का स्वाभाविक दोहरा फल</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">ब्रह्मभूयाय</span></div>
+            <div class="flashcard-face flashcard-back"><b>ब्रह्म-भाव के लिए</b>चतुर्थी — लक्ष्य का सूचक</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कल्पते</span></div>
+            <div class="flashcard-face flashcard-back"><b>योग्य/समर्थ होता है</b>18.51-53 महावाक्य की मुख्य क्रिया!</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">अहङ्कारम्</td><td>अहम्+कार</td><td>द्वितीया एकवचन</td><td>अहंकार को — कर्म</td></tr>
+          <tr><td class="sa">बलम्</td><td>बल</td><td>द्वितीया एकवचन</td><td>बल-मद को — कर्म</td></tr>
+          <tr><td class="sa">दर्पम्</td><td>दृप्+अ</td><td>द्वितीया एकवचन</td><td>दर्प/अभिमान को — कर्म</td></tr>
+          <tr><td class="sa">कामम्, क्रोधम्, परिग्रहम्</td><td>काम, क्रुध्, परि+ग्रह</td><td>द्वितीया एकवचन (त्रय)</td><td>इच्छा, क्रोध, संग्रह-वृत्ति को — कर्म</td></tr>
+          <tr><td class="sa">विमुच्य</td><td>वि+मुच्+ल्यप्</td><td>पूर्वकालिक क्रिया</td><td>पूर्णतः मुक्त/त्यागकर — gerund</td></tr>
+          <tr><td class="sa">निर्ममः</td><td>निर्+मम</td><td>प्रथमा पुं. एकवचन</td><td>ममता-रहित — विशेषण</td></tr>
+          <tr><td class="sa">शान्तः</td><td>शम्+क्त</td><td>प्रथमा पुं. एकवचन</td><td>शांत — भूतकृदन्त</td></tr>
+          <tr><td class="sa">ब्रह्मभूयाय</td><td>ब्रह्मन्+भूय</td><td>चतुर्थी एकवचन</td><td>ब्रह्म-भाव के लिए — सम्प्रदान</td></tr>
+          <tr><td class="sa">कल्पते</td><td>√कृप्</td><td>वर्तमान प्र.पु. एकवचन</td><td>योग्य होता है — मुख्य क्रिया</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">अहङ्कारं बलं दर्पं कामं क्रोधं परिग्रहम्।<br>विमुच्य निर्ममः शान्तो ब्रह्मभूयाय कल्पते।।</div>
+          <div class="cheat-translit">ahaṅkāraṁ balaṁ darpaṁ kāmaṁ krodhaṁ parigraham, vimuchya nirmamaḥ śhānto brahma-bhūyāya kalpate</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अहंकार-बल-दर्प</b> "मैं" का त्रिक</span>
+            <span class="cheat-chip"><b>काम-क्रोध-परिग्रह</b> वासना का त्रिक</span>
+            <span class="cheat-chip"><b>विमुच्य</b> पूर्ण मुक्ति</span>
+            <span class="cheat-chip"><b>निर्ममः शान्तः</b> स्वाभाविक फल</span>
+            <span class="cheat-chip"><b>ब्रह्मभूयाय कल्पते</b> मुख्य क्रिया — योग्य होता है</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: छह अंतिम दोषों (अहंकार, बल, दर्प, काम, क्रोध, परिग्रह) से मुक्त होकर, ममता-रहित और शांत साधक ब्रह्म-भाव के योग्य होता है। यहीं 18.51 से चला महावाक्य अपनी मुख्य क्रिया "कल्पते" पर पूर्ण होता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('अहङ्कारं बलं दर्पं कामं क्रोधं परिग्रहम्। विमुच्य निर्ममः शान्तो ब्रह्मभूयाय कल्पते।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('अहङ्कारं बलं दर्पं कामं क्रोधं परिग्रहम्। विमुच्य निर्ममः शान्तो ब्रह्मभूयाय कल्पते।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('अहंकार, बल-मद, दर्प, काम, क्रोध और परिग्रह से मुक्त होकर, ममता-रहित और शांत — साधक ब्रह्म-भाव के योग्य हो जाता है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">हं</span><span class="syll">का</span><span class="syll">रं</span><span class="syll">ब</span><span class="syll">लं</span><span class="syll">दर्</span><span class="syll">पं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">का</span><span class="syll">मं</span><span class="syll">क्रो</span><span class="syll">धं</span><span class="syll">प</span><span class="syll">रि</span><span class="syll">ग्र</span><span class="syll">हम्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">वि</span><span class="syll">मुच्</span><span class="syll">य</span><span class="syll">निर्</span><span class="syll">म</span><span class="syll">मः</span><span class="syll">शान्</span><span class="syll">तो</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">ब्र</span><span class="syll">ह्म</span><span class="syll">भू</span><span class="syll">या</span><span class="syll">य</span><span class="syll">कल्</span><span class="syll">प</span><span class="syll">ते</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('अहङ्कारं बलं दर्पं कामं क्रोधं परिग्रहम् विमुच्य निर्ममः शान्तो ब्रह्मभूयाय कल्पते', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> अंतिम पाद "ब्रह्मभूयाय कल्पते" पर सबसे अधिक रुकें — यह तीन पूरे श्लोकों की यात्रा का समापन-बिंदु है। जप करते समय इस क्षण को विशेष महत्त्व दें।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">महावाक्य 18.51-53</button>
+      <button class="tab-btn" data-tab="e2">षट्-दोष अवलोकन</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 पूरा महावाक्य — 18.51 से 18.53 तक</h3>
+        <p class="subnote">तीन श्लोक, एक वाक्य, एक क्रिया</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 18.51-52 — दस विशेषण-पद</div>
+            <div class="contrast-sa">युक्तः, नियम्य, त्यक्त्वा, व्युदस्य...</div>
+            <p><b>साधक का सम्पूर्ण वर्णन।</b><br>आंतरिक चार + बाह्य पाँच गुण।<br>अभी क्रिया की प्रतीक्षा है।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 18.53 — मुख्य क्रिया</div>
+            <div class="contrast-sa">विमुच्य...कल्पते</div>
+            <p><b>यात्रा का समापन।</b><br>अंतिम छह दोषों का त्याग।<br>"कल्पते" — मुख्य क्रिया प्रकट।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> संस्कृत काव्य-शास्त्र में इतना लंबा, तीन-श्लोकीय वाक्य अत्यंत दुर्लभ है। यह रचना-कौशल स्वयं यह सिखाता है कि ब्रह्म-प्राप्ति कोई त्वरित घटना नहीं — एक समग्र, बहु-आयामी प्रक्रिया है जिसका फल अंत में ही प्रकट होता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 षट्-दोष — दो त्रिकों में</h3>
+        <div class="contrast-row">
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 अहंकार-त्रय (मैं-पन)</div>
+            <div class="contrast-sa">अहंकार · बल · दर्प</div>
+            <p>कर्तृत्व-भ्रम से शुरू होकर बाहरी अभिमान तक बढ़ता क्रम।</p>
+          </div>
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 वासना-त्रय (मेरा-पन)</div>
+            <div class="contrast-sa">काम · क्रोध · परिग्रह</div>
+            <p>इच्छा से बाधा-आवेश होते हुए संग्रह-वृत्ति तक बढ़ता क्रम।</p>
+          </div>
+        </div>
+        <div class="callout-rajas"><b>Pattern:</b> दोनों त्रिक मिलकर मानव-मन के दो मूल आग्रहों को दिखाते हैं — "मैं विशेष हूँ" (अहंकार-त्रय) और "यह मेरा है/होना चाहिए" (वासना-त्रय)। इन दोनों से मुक्ति ही "निर्ममः शान्तः" की अवस्था है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५१<br>चार आंतरिक गुण</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५२<br>पाँच बाह्य गुण</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ५३<br>कल्पते ← महावाक्य पूर्ण</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५४<br>ब्रह्मभूतः प्रसन्नात्मा</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५५<br>परा भक्ति से तत्त्वज्ञान</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.54):</b> "ब्रह्मभूतः प्रसन्नात्मा न शोचति न काङ्क्षति। समः सर्वेषु भूतेषु मद्भक्तिं लभते पराम्॥" — 18.53 का "कल्पते" अब 18.54 में फलित होकर "ब्रह्मभूतः" (ब्रह्म हो चुका) बन जाता है, और वहाँ से परा भक्ति की ओर एक नया, गहरा द्वार खुलता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.५४) — ☰ नेविगेशन — नया महावाक्य आरंभ: ब्रह्मभूत से परा भक्ति तक</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.53 में गिनाए गए छह दोष किन दो त्रिकों में बँटते हैं?",options:["ज्ञान-त्रय और भक्ति-त्रय","अहंकार-त्रय और वासना-त्रय","सत्व-रज-तम त्रय","काल-त्रय"],correct:1},
+    {q:"18.51-53 महावाक्य की मुख्य क्रिया (main verb) कौन-सी है?",options:["नियम्य","त्यक्त्वा","विमुच्य","कल्पते"],correct:3},
+    {q:"'निर्ममः शान्तः' किसका स्वाभाविक फल है?",options:["केवल ध्यान अभ्यास का","षट्-दोष-त्याग (विमुच्य) का","केवल एकांतवास का","केवल बुद्धि-शुद्धि का"],correct:1},
+    {q:"'कल्पते' शब्द का सटीक अर्थ क्या है, केवल 'बन जाना' क्यों नहीं?",options:["बन जाता है","योग्य/समर्थ हो जाता है","जन्म लेता है","नष्ट हो जाता है"],correct:1},
+    {q:"18.53 के बाद अगला श्लोक (18.54) किस विषय की ओर मुड़ता है?",options:["पुनः ज्ञान-चर्चा","कर्मयोग की पुनरावृत्ति","परा भक्ति की ओर","युद्ध-वर्णन की ओर"],correct:2}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.51 और 18.52 ने साधक के नौ गुणों का वर्णन किया — बुद्धि-शुद्धि से लेकर वैराग्य तक। पर मुख्य क्रिया अभी नहीं आई थी।",
+    "18.53 अब छह अंतिम दोष गिनाता है — अहंकार, बल, दर्प (मैं-पन का त्रिक), और काम, क्रोध, परिग्रह (वासना का त्रिक)।",
+    "'विमुच्य' — इन सबसे पूर्णतः मुक्त होकर। यह शृंखला का अंतिम पूर्वकालिक पद है, नियम्य-त्यक्त्वा-व्युदस्य के बाद।",
+    "इसका स्वाभाविक फल — 'निर्ममः शान्तः'। ममता-रहित और शांत। यह कोई अतिरिक्त प्रयास नहीं, दोष-त्याग की सीधी छाया है।",
+    "और अंततः — 'ब्रह्मभूयाय कल्पते'! तीन श्लोकों से प्रतीक्षित मुख्य क्रिया। साधक ब्रह्म-भाव के योग्य हो जाता है — 'बनता' नहीं, 'योग्य होता' है।",
+    "अगला (18.54) इस योग्यता का फल दिखाएगा — 'ब्रह्मभूतः प्रसन्नात्मा' से एक नया महावाक्य शुरू होगा जो परा भक्ति की ओर ले जाएगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

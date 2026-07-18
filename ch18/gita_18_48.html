@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.48 — सहज कर्म का त्याग नहीं: अग्नि-धूम्र उपमा</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:61.5%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(201,162,39,0.18);border:1px solid rgba(201,162,39,0.5);color:var(--gold-light);}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(201,162,39,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:var(--gold-light);font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  .analogy-box{display:flex;align-items:center;justify-content:center;gap:24px;margin:20px 0;flex-wrap:wrap;}
+  .analogy-item{text-align:center;}
+  .analogy-icon{font-size:40px;margin-bottom:8px;}
+  .analogy-label{font-size:13px;color:var(--cream-dim);}
+  .analogy-eq{font-size:22px;color:var(--gold-light);}
+  .pair-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0;}
+  .pair-card{border-radius:12px;padding:18px 14px;border:1px solid var(--line);background:rgba(255,255,255,0.02);}
+  .pair-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px;}
+  .pair-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:6px;line-height:1.6;}
+  .pair-card p{font-size:13px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.pair-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 48 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.४८</div>
+    </div>
+    <div class="guna-badge">🔥 सहज कर्म का त्याग नहीं — अग्नि-धूम्र उपमा</div>
+    <div class="shloka">
+      सहजं कर्म कौन्तेय सदोषमपि न त्यजेत्।<br>
+      सर्वारम्भा हि दोषेण धूमेनाग्निरिवावृताः।।
+    </div>
+    <div class="translit">
+      sahajaṃ karma kaunteya sa-doṣam api na tyajet,<br>
+      sarvārambhā hi doṣeṇa dhūmenāgnir ivāvṛtāḥ
+    </div>
+    <div class="gist">
+      हे कौन्तेय (अर्जुन)! <b>सहज कर्म</b> को, दोषयुक्त होते हुए भी, <b>त्यागना नहीं चाहिए</b>। क्योंकि <b>सभी उपक्रम दोष से घिरे</b> होते हैं, जैसे <b>अग्नि धुएँ से</b> ढकी रहती है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — 18.47 का "क्यों," एक उपमा में</h3>
+      <p>18.47 ने कहा — अपना अपूर्ण धर्म दूसरे के पूर्ण धर्म से श्रेष्ठ है। पर स्वाभाविक प्रश्न उठता है — <b>क्यों?</b> यदि अपने कर्म में दोष है, तो उसे त्यागकर कुछ बेहतर क्यों न खोजा जाए? 18.48 इसका गहन उत्तर एक अविस्मरणीय उपमा में देता है — <b>क्योंकि दोष किसी एक कर्म विशेष की समस्या नहीं, बल्कि हर कर्म का अनिवार्य साथी है</b>, ठीक वैसे ही जैसे अग्नि के साथ धुआँ अनिवार्य रूप से जुड़ा रहता है।</p>
+      <p>इसका तात्पर्य है — कोई "दोष-रहित" विकल्प कहीं उपलब्ध नहीं है जिसकी ओर पलायन किया जा सके। समस्या "कौन सा कर्म चुनें" नहीं, बल्कि "किसी भी कर्म के साथ अनिवार्य रूप से जुड़े दोष को कैसे स्वीकारें और आगे बढ़ें" है।</p>
+      <div class="callout"><b>कड़ी:</b> 18.47-48 एक जोड़ी बनाते हैं — 18.47 सिद्धांत देता है ("अपना धर्म श्रेष्ठ है"), 18.48 उसका तर्क/कारण देता है ("क्योंकि दोष सार्वभौमिक है, टाला नहीं जा सकता")। दोनों मिलकर स्वधर्म-निष्ठा का सम्पूर्ण तर्क प्रस्तुत करते हैं।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सहजं कर्म</span><span class="word-tr">sahajaṃ karma</span></div>
+          <div class="word-meaning">सहज कर्म — जिसके साथ व्यक्ति जन्मा हो, जन्मजात कर्म</div>
+          <div class="word-eng"><b>EN:</b> innate/inborn work, that which one is born with</div>
+          <div class="word-deep">सह (साथ) + ज (जन्मा हुआ) — शब्दशः "जिसके साथ जन्म हुआ हो।" यह 18.41-47 के "स्वभावज कर्म" से सूक्ष्म रूप से भिन्न शब्द है — "सहज" जन्म-सम्बद्धता पर अधिक बल देता है, जबकि "स्वभावज" स्वभाव (प्रकृति) पर। दोनों एक ही तत्त्व के दो पहलू हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कौन्तेय</span><span class="word-tr">kaunteya</span></div>
+          <div class="word-meaning">हे कुन्ती-पुत्र (अर्जुन का संबोधन)</div>
+          <div class="word-eng"><b>EN:</b> O son of Kunti (address to Arjuna)</div>
+          <div class="word-deep">कुन्ती (अर्जुन की माता) + एय (पुत्र-वाचक प्रत्यय)। गीता में अर्जुन के लिए विविध संबोधन (परन्तप, कौन्तेय, पार्थ आदि) प्रयुक्त होते हैं — यह वैयक्तिक आत्मीयता व्यक्त करता है, विशेषकर जब कोई महत्वपूर्ण, व्यावहारिक शिक्षा दी जा रही हो।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सदोषम् अपि न त्यजेत्</span><span class="word-tr">sa-doṣam api na tyajet</span></div>
+          <div class="word-meaning">दोषयुक्त होते हुए भी त्यागे नहीं</div>
+          <div class="word-eng"><b>EN:</b> should not abandon, even though flawed</div>
+          <div class="word-deep">सदोष (स+दोष, दोष-सहित) + अपि (भी) + न त्यजेत् (विधिलिङ्ग निषेध, "न त्यागे")। "अपि" (भी) यहाँ बल देता है — दोष का होना त्याग का पर्याप्त कारण नहीं है, यह श्लोक स्पष्ट रूप से कहता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सर्वारम्भाः हि दोषेण</span><span class="word-tr">sarva-ārambhāḥ hi doṣeṇa</span></div>
+          <div class="word-meaning">सभी उपक्रम/कार्य निश्चय ही दोष से (युक्त होते हैं)</div>
+          <div class="word-eng"><b>EN:</b> all undertakings, indeed, are (accompanied) by fault</div>
+          <div class="word-deep">सर्व (सभी) + आरम्भ (उपक्रम, शुरुआत किया गया कार्य) + हि (निश्चय ही, बल-सूचक) + दोषेण (दोष से, तृतीया)। यह एक सार्वभौमिक कथन है — कोई अपवाद नहीं छोड़ता। हर कर्म, चाहे वह कोई भी हो, किसी न किसी दोष से जुड़ा रहता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">धूमेन अग्निः इव आवृताः</span><span class="word-tr">dhūmena agniḥ iva āvṛtāḥ</span></div>
+          <div class="word-meaning">जैसे अग्नि धुएँ से ढकी होती है</div>
+          <div class="word-eng"><b>EN:</b> as fire is enveloped by smoke</div>
+          <div class="word-deep">धूम (धुआँ) + अग्नि (आग) + इव (जैसे, उपमा-सूचक) + आवृत (ढका हुआ, आ+वृ धातु से)। यह गीता की सबसे प्रसिद्ध व स्मरणीय उपमाओं में से एक — दैनिक अनुभव से लिया गया दृष्टांत, जो तुरंत समझ में आता है: बिना धुएँ के अग्नि प्रज्वलित नहीं होती, वैसे ही बिना किसी दोष के कोई कर्म सम्पन्न नहीं होता।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        One should not abandon the work born of one's own nature, O Kaunteya, even though it may be flawed. For all undertakings are covered by some flaw, as fire is enveloped by smoke.
+      </div>
+      <p>18.48 गीता की सबसे व्यावहारिक व यथार्थवादी शिक्षाओं में से एक प्रस्तुत करती है। यह किसी काल्पनिक "दोष-रहित कर्म" के भ्रम को तोड़ता है — <b>हर कर्म, बिना अपवाद, कुछ न कुछ दोष के साथ आता है</b>, ठीक वैसे ही जैसे हर अग्नि कुछ न कुछ धुआँ पैदा करती है। यह न तो निराशावाद है, न ही उदासीनता का आह्वान — यह केवल एक अपरिहार्य सत्य की स्वीकृति है।</p>
+      <p>इस उपमा की सुंदरता इसकी सरलता में है — कोई भी व्यक्ति जिसने आग जलती देखी है, वह तुरंत समझ जाता है: आग जितनी उपयोगी व आवश्यक हो, धुआँ उसका अभिन्न साथी है। आग को धुएँ के डर से त्यागना मूर्खता होगी — उसी तरह, कर्म को उसकी अपरिहार्य त्रुटियों के डर से त्यागना भी अविवेकपूर्ण है।</p>
+      <div class="callout"><b>पहले की शिक्षाओं से जुड़ाव:</b> यह श्लोक अध्याय 3 के "न हि कश्चित्क्षणमपि जातु तिष्ठत्यकर्मकृत्" (3.5 — कोई भी क्षणभर भी कर्म किए बिना नहीं रह सकता) और "नियतं कुरु कर्म त्वम्" (3.8) की भावना को आगे बढ़ाता है — कर्म से पूर्ण मुक्ति असंभव है, इसलिए विकल्प "कर्म करें या न करें" नहीं, बल्कि "कैसे करें" है।</div>
+      <p>यह श्लोक 18.47 को पूर्ण करता है — अपने अपूर्ण स्वधर्म को त्यागकर किसी "बेहतर" विकल्प की तलाश करना एक भ्रम है, क्योंकि हर विकल्प अपने ही दोषों के साथ आएगा। सच्ची बुद्धिमत्ता है — अपने ही कर्म में, उसकी अपरिहार्य अपूर्णताओं को स्वीकार करते हुए, दृढ़ता से आगे बढ़ना।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — चिकित्सक का कर्म:</b> एक डॉक्टर जो रोगी को ठीक करने के लिए कभी-कभी दर्दनाक प्रक्रिया (सर्जरी, इंजेक्शन) करता है — यह कष्ट पहुँचाना ही उसके उपचार-कर्म का अनिवार्य "धुआँ" है। इस अस्थायी दोष के भय से चिकित्सा-कर्म त्याग देना अनुचित होगा।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — किसान का कर्म:</b> खेती करते समय अनिवार्य रूप से कुछ कीट-पतंगों की हानि होती है, भूमि पर कुछ प्रभाव पड़ता है — यह कृषि-कर्म का अनिवार्य "धुआँ" है। पूर्ण रूप से दोष-रहित खेती खोजने का प्रयास व्यर्थ है — बेहतर है इन दोषों को न्यूनतम करते हुए कर्म जारी रखना।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — किसी भी व्यवसाय या पेशे में:</b> प्रत्येक कार्यक्षेत्र में कुछ न कुछ अंतर्निहित समझौते, सीमाएँ, या अपूर्णताएँ होती हैं — कोई भी पेशा "पूर्ण रूप से निर्दोष" नहीं। बार-बार "पूर्ण" पेशे की तलाश में एक क्षेत्र से दूसरे में भटकना, हर जगह नए "धुएँ" का सामना कराएगा — बेहतर है अपने चुने मार्ग में गहराई व निपुणता विकसित करना।
+      </div>
+      <div class="callout"><b>साझा सूत्र:</b> तीनों उदाहरण दिखाते हैं कि दोष किसी विशेष कर्म का लक्षण नहीं, बल्कि हर कर्म का अनिवार्य स्वभाव है — इसे स्वीकार कर आगे बढ़ना ही यथार्थवादी बुद्धिमत्ता है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">क्या यह शिक्षा लापरवाही या "जो भी हो जाए, चलेगा" वाली उदासीनता को बढ़ावा देती है?</div>
+        <div class="a">नहीं। यह श्लोक दोष को स्वीकारने की बात करता है, दोष को बढ़ावा देने या उसकी उपेक्षा करने की नहीं। सच्चा अर्थ है — कर्म में अंतर्निहित अपूर्णताओं को पहचानकर, उन्हें यथासंभव कम करने का प्रयास करते हुए भी, केवल दोष की उपस्थिति के कारण कर्म को त्यागना नहीं। उत्कृष्टता की खोज जारी रहनी चाहिए, पर पूर्णता की अवास्तविक अपेक्षा में कर्म रोकना नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"दोष" (धुआँ) से यहाँ ठीक-ठीक क्या तात्पर्य है?</div>
+        <div class="a">परंपरागत व्याख्याओं में यह किसी भी सांसारिक कर्म में अंतर्निहित अपूर्णता का संकेत है — जैसे किसी भी क्रिया में कुछ न कुछ अनजाने प्रभाव, सीमाएँ, या अनपेक्षित परिणाम होते हैं (उदाहरणस्वरूप, यज्ञ में अग्नि जलाने पर कुछ सूक्ष्म जीवों को अनिवार्य क्षति)। व्यापक अर्थ में, यह किसी भी मानवीय प्रयास की अंतर्निहित अपूर्णता को दर्शाता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या यह कर्मयोग-सिद्धांत उत्कृष्टता की खोज को हतोत्साहित करता है?</div>
+        <div class="a">नहीं, इसके विपरीत। यह श्लोक "पूर्णता न मिलने तक शुरू ही न करें" वाली पंगुता (paralysis) को रोकता है। उत्कृष्टता की सतत खोज एक स्वस्थ लक्ष्य है, पर "पूर्ण दोष-रहित विकल्प" की खोज में वर्तमान कर्म को त्यागना अवास्तविक और अनुत्पादक है — क्योंकि ऐसा कोई विकल्प अस्तित्व में ही नहीं है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.47-48 के बाद अध्याय 18 में आगे क्या शिक्षा दी जाएगी?</div>
+        <div class="a">इसके बाद गीता 18.49-53 में असंगता (अनासक्ति), आत्म-संयम, और ज्ञान-निष्ठा द्वारा ब्रह्म-प्राप्ति की चर्चा करेगी, और 18.54 से आगे भक्ति के माध्यम से परम सिद्धि का वर्णन होगा — कर्मयोग की शिक्षा से आरंभ होकर, अध्याय क्रमशः ज्ञान व भक्ति के समन्वित मार्ग की ओर बढ़ेगा।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.48 गीता की सबसे यादगार उपमाओं में से एक प्रस्तुत करती है — अग्नि व धुएँ का दृष्टांत सरल, सार्वभौमिक अनुभव पर आधारित है, जो इसे शताब्दियों से स्मरणीय बनाए हुए है। यह श्लोक 3.5 व 3.8 (कर्म से पूर्ण मुक्ति असंभव है) की शिक्षा को 18.47 (स्वधर्म-श्रेष्ठता) के साथ जोड़कर एक सम्पूर्ण, व्यावहारिक तर्क प्रस्तुत करता है।</p>
+        <p>यह श्लोक "पूर्णतावाद" (perfectionism) के विरुद्ध एक प्राचीन, पर आज भी अत्यंत प्रासंगिक चेतावनी है — अक्सर लोग "सही समय," "सही परिस्थिति," या "दोष-रहित मार्ग" की प्रतीक्षा में कर्म को टालते रहते हैं, जबकि गीता कहती है कि ऐसी प्रतीक्षा व्यर्थ है।</p>
+        <div class="callout"><b>18.47-48 की जोड़ी:</b> दोनों श्लोक मिलकर स्वधर्म-निष्ठा का सम्पूर्ण तर्क बनाते हैं — "यह श्रेष्ठ है" (47) + "क्योंकि विकल्प भी दोष-रहित नहीं" (48) = ठोस, तर्कसंगत निष्कर्ष कि अपने ही मार्ग पर दृढ़ रहना बुद्धिमत्तापूर्ण है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — अग्नि-धूम्र उपमा</h3>
+        <div class="analogy-box">
+          <div class="analogy-item"><div class="analogy-icon">🔥</div><div class="analogy-label">अग्नि (कर्म)</div></div>
+          <div class="analogy-eq">+</div>
+          <div class="analogy-item"><div class="analogy-icon">💨</div><div class="analogy-label">धुआँ (दोष)</div></div>
+          <div class="analogy-eq">=</div>
+          <div class="analogy-item"><div class="analogy-icon">🔗</div><div class="analogy-label">अविभाज्य युग्म</div></div>
+        </div>
+        <svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="200" cy="130" rx="150" ry="60" fill="rgba(201,162,39,0.1)" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <text x="200" y="120" text-anchor="middle" fill="var(--gold-light)" font-size="13" font-family="Tiro Devanagari Hindi, serif">हर कर्म में दोष अंतर्निहित</text>
+          <text x="200" y="140" text-anchor="middle" fill="var(--cream-dim)" font-size="10">(सार्वभौमिक नियम)</text>
+          <line x1="350" y1="130" x2="450" y2="130" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <ellipse cx="550" cy="130" rx="130" ry="55" fill="rgba(201,162,39,0.13)" stroke="rgba(201,162,39,0.5)" stroke-width="1.3"/>
+          <text x="550" y="120" text-anchor="middle" fill="var(--gold-light)" font-size="13" font-family="Tiro Devanagari Hindi, serif">इसलिए त्याग व्यर्थ है</text>
+          <text x="550" y="140" text-anchor="middle" fill="var(--cream-dim)" font-size="10">कोई विकल्प दोष-रहित नहीं</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — अपूर्णता की सार्वभौमिकता पर विश्व-विचार</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>18.48 से समानता</th><th>अंतर</th></tr>
+          <tr><td>"Dirty Hands" नैतिकता (Michael Walzer)</td><td>हर सार्थक कार्य/निर्णय में कुछ नैतिक समझौता अनिवार्य है</td><td>पश्चिमी नैतिक-दर्शन राजनैतिक निर्णयों पर केंद्रित है, गीता सभी कर्म पर</td></tr>
+          <tr><td>"Perfect is the enemy of good" (Voltaire)</td><td>पूर्णता की खोज में अच्छे कार्य को न रोकना</td><td>यह व्यावहारिक कहावत है, गीता का आधार गहन तत्त्व-दर्शन है</td></tr>
+          <tr><td>Taoist "Wu Wei" व स्वाभाविकता का सिद्धांत</td><td>स्वाभाविक कर्म को अस्वाभाविक "पूर्णता" से न बदलना</td><td>ताओवाद निष्क्रियता की ओर झुकता है, गीता सक्रिय कर्म-निष्ठा सिखाती है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की गहराई:</b> यह उपमा (अग्नि-धुआँ) अपनी सरलता व सार्वभौमिकता में अद्वितीय है — यह किसी जटिल दार्शनिक तर्क की नहीं, बल्कि दैनिक अनुभव की सहज समझ पर आधारित है, जो इसे तुरंत ग्रहणीय बनाती है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout"><b>"पूर्णता-पक्षाघात" (perfectionism paralysis) से बचें:</b> जब भी अपने कार्य में कोई कमी दिखे और मन में "इसे छोड़कर कुछ बेहतर खोजूँ" का विचार उठे, स्वयं से पूछें: "क्या मैं वास्तव में दोष-रहित विकल्प की तलाश में हूँ, या केवल अपने ही कार्य के अपरिहार्य दोष से भाग रहा हूँ?" यह प्रश्न स्पष्टता लाता है।</div>
+        <p><b>अभ्यास — "धुआँ स्वीकृति" अभ्यास:</b> अपने कार्य की एक सीमा/दोष को लिखें जिसे आप बदल नहीं सकते। फिर पूछें: "क्या यह दोष इतना गंभीर है कि पूरे कार्य को त्यागना उचित हो, या यह केवल 'धुआँ' है जो हर अग्नि के साथ आता है?" यह अभ्यास अनावश्यक त्याग-प्रवृत्ति को रोकता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> इस श्लोक को कर्म की अनिवार्य अपूर्णता के यथार्थवादी स्वीकार के रूप में व्याख्यायित करते हैं — यहाँ तक कि यज्ञ जैसे पवित्र कर्म में भी कुछ हिंसा (अग्नि-प्रज्वलन में सूक्ष्म जीव-हानि) अंतर्निहित है। शंकर बल देते हैं कि सच्ची मुक्ति कर्म-त्याग से नहीं, कर्म-फल के प्रति अनासक्ति से आती है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> इसे भक्ति-मार्ग के प्रोत्साहन के रूप में देखते हैं — अपूर्ण कर्म भी, यदि भगवद्-समर्पण भाव से किया जाए, स्वीकार्य व फलदायी है। दोष की चिंता में कर्म रोकना भक्ति-मार्ग में बाधा है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को कर्मयोग की व्यावहारिक बुद्धिमत्ता का प्रमाण मानते हैं — समाज व राष्ट्र-निर्माण जैसे बड़े कार्यों में भी पूर्णता की प्रतीक्षा में निष्क्रियता घातक है। तिलक इसे सक्रिय, अपूर्ण पर निरंतर कर्म के पक्ष में तर्क के रूप में उद्धृत करते हैं।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं — यह श्लोक कर्म की अपूर्णता को स्वीकारते हुए भी निरंतर, निष्ठापूर्ण कर्म करने की शिक्षा देता है, पूर्णतावाद के जाल में फँसने से बचाता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सहजं कर्म</span></div>
+            <div class="flashcard-face flashcard-back"><b>सहज/जन्मजात कर्म</b>स्वभावज का समानार्थी नया शब्द</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सदोषमपि न त्यजेत्</span></div>
+            <div class="flashcard-face flashcard-back"><b>दोषयुक्त होते हुए भी न त्यागे</b>दृढ़ निषेध</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सर्वारम्भाः</span></div>
+            <div class="flashcard-face flashcard-back"><b>सभी उपक्रम</b>कोई अपवाद नहीं — सार्वभौमिक नियम</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">धूमेनाग्निरिवावृताः</span></div>
+            <div class="flashcard-face flashcard-back"><b>जैसे अग्नि धुएँ से ढकी</b>गीता की सर्वाधिक स्मरणीय उपमा</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल धातु/शब्द</th><th>रूप</th><th>अर्थ</th></tr>
+          <tr><td class="sa">सहजम्</td><td>सह+ज</td><td>द्वितीया नपुंसक एकवचन</td><td>जन्मजात, सहज</td></tr>
+          <tr><td class="sa">कौन्तेय</td><td>कुन्ती+एय</td><td>संबोधन एकवचन</td><td>हे कुन्ती-पुत्र</td></tr>
+          <tr><td class="sa">सदोषम्</td><td>स+दोष</td><td>द्वितीया नपुंसक एकवचन</td><td>दोष-सहित</td></tr>
+          <tr><td class="sa">त्यजेत्</td><td>त्यज् (त्यागना)</td><td>विधिलिङ्ग, निषेधार्थक</td><td>त्यागे (नहीं)</td></tr>
+          <tr><td class="sa">सर्वारम्भाः</td><td>सर्व+आरम्भ</td><td>प्रथमा पुल्लिंग बहुवचन</td><td>सभी उपक्रम</td></tr>
+          <tr><td class="sa">दोषेण</td><td>दोष</td><td>तृतीया पुल्लिंग एकवचन</td><td>दोष से</td></tr>
+          <tr><td class="sa">आवृताः</td><td>आ+वृ (ढकना)</td><td>भूतकृदन्त, प्रथमा बहुवचन</td><td>ढके हुए</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">सहजं कर्म कौन्तेय सदोषमपि न त्यजेत्।<br>सर्वारम्भा हि दोषेण धूमेनाग्निरिवावृताः।।</div>
+          <div class="cheat-translit">sahajaṃ karma kaunteya sa-doṣam api na tyajet, sarvārambhā hi doṣeṇa dhūmenāgnir ivāvṛtāḥ</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>सहजं कर्म</b> जन्मजात कर्म</span>
+            <span class="cheat-chip"><b>न त्यजेत्</b> त्यागे नहीं</span>
+            <span class="cheat-chip"><b>सर्वारम्भाः दोषेण</b> सार्वभौमिक अपूर्णता</span>
+            <span class="cheat-chip"><b>अग्नि-धूम्र</b> स्मरणीय उपमा</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: सहज कर्म को दोष के कारण न त्यागें, क्योंकि हर कर्म दोष-सहित है, जैसे अग्नि धुएँ से ढकी होती है। कोई दोष-रहित विकल्प नहीं — स्वीकृति व दृढ़ता ही मार्ग है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('सहजं कर्म कौन्तेय सदोषमपि न त्यजेत्। सर्वारम्भा हि दोषेण धूमेनाग्निरिवावृताः।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('सहजं कर्म कौन्तेय सदोषमपि न त्यजेत्। सर्वारम्भा हि दोषेण धूमेनाग्निरिवावृताः।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('हे अर्जुन, सहज कर्म को, दोषयुक्त होते हुए भी, त्यागना नहीं चाहिए। क्योंकि सभी उपक्रम दोष से घिरे होते हैं, जैसे अग्नि धुएँ से ढकी रहती है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">स</span><span class="syll">ह</span><span class="syll">जं</span><span class="syll">क</span><span class="syll">र्म</span><span class="syll">कौं</span><span class="syll">ते</span><span class="syll">य</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">स</span><span class="syll">दो</span><span class="syll">ष</span><span class="syll">म</span><span class="syll">पि</span><span class="syll">न</span><span class="syll">त्य</span><span class="syll">जेत्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">स</span><span class="syll">र्वा</span><span class="syll">र</span><span class="syll">म्भा</span><span class="syll">हि</span><span class="syll">दो</span><span class="syll">षे</span><span class="syll">ण</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">धू</span><span class="syll">मे</span><span class="syll">ना</span><span class="syll">ग्नि</span><span class="syll">रि</span><span class="syll">वा</span><span class="syll">वृ</span><span class="syll">ताः</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('सहजं कर्म कौन्तेय सदोषमपि न त्यजेत् सर्वारम्भा हि दोषेण धूमेनाग्निरिवावृताः', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout"><b>ध्यान-बिंदु:</b> "धूमेनाग्निरिवावृताः" पर विशेष रूप से रुकें। जप करते समय अग्नि व धुएँ की छवि मन में लाएँ — यह उपमा दोष की अनिवार्यता को गहराई से समझाती है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">अग्नि-धूम्र उपमा</button>
+      <button class="tab-btn" data-tab="e2">18.47+48 सम्पूर्ण तर्क</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 अग्नि-धूम्र उपमा — गहराई से समझें</h3>
+        <p class="subnote">दैनिक अनुभव से लिया गया, पर गहन दार्शनिक निहितार्थ वाला दृष्टांत</p>
+        <div class="pair-row">
+          <div class="pair-card">
+            <div class="pair-label">🔥 अग्नि</div>
+            <div class="pair-sa">कर्म — उपयोगी, आवश्यक, जीवनदायी</div>
+            <p>प्रकाश देती है, गर्मी देती है, भोजन पकाती है — जीवन के लिए अनिवार्य।</p>
+          </div>
+          <div class="pair-card">
+            <div class="pair-label">💨 धुआँ</div>
+            <div class="pair-sa">दोष — अपरिहार्य, पर द्वितीयक</div>
+            <p>अग्नि का अनिवार्य उपोत्पाद, पर अग्नि का मुख्य उद्देश्य नहीं — केवल साथ आता है।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> धुएँ के डर से अग्नि जलाना छोड़ना कोई नहीं करता — यही तर्क कर्म पर भी लागू होता है। दोष कर्म की उपस्थिति का प्रमाण है, अनुपस्थिति की माँग का आधार नहीं।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 18.47 + 18.48 — सम्पूर्ण तर्क-श्रृंखला</h3>
+        <div class="pair-row">
+          <div class="pair-card">
+            <div class="pair-label">18.47 — सिद्धांत</div>
+            <div class="pair-sa">श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्</div>
+            <p>अपना अपूर्ण धर्म, दूसरे के पूर्ण धर्म से श्रेष्ठ है।</p>
+          </div>
+          <div class="pair-card">
+            <div class="pair-label">18.48 — कारण</div>
+            <div class="pair-sa">सर्वारम्भा हि दोषेण धूमेनाग्निरिवावृताः</div>
+            <p>क्योंकि हर कर्म दोष-सहित है — कोई दोष-रहित विकल्प नहीं।</p>
+          </div>
+        </div>
+        <div class="callout"><b>पूर्ण तर्क:</b> "अपना कर्म श्रेष्ठ है" (47) + "क्योंकि विकल्प भी दोष-मुक्त नहीं" (48) = "इसलिए अपने ही मार्ग पर दृढ़ता से चलना बुद्धिमत्ता है।" यह गीता के कर्मयोग-सिद्धांत का व्यावहारिक चरम-बिंदु है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४६<br>ईश्वर-आराधना</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४७<br>स्वधर्म-श्रेष्ठता</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ४८<br>अग्नि-धूम्र उपमा ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४९-५३<br>ज्ञान-निष्ठा व ब्रह्म-प्राप्ति</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५४+<br>भक्ति व परम सिद्धि</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.49):</b> यहाँ से गीता असंगता (अनासक्ति), आत्म-संयम व ज्ञान-निष्ठा की चर्चा शुरू करेगी — कर्मयोग की व्यावहारिक शिक्षा (18.41-48) से आगे बढ़कर ज्ञान व भक्ति के समन्वित मार्ग की ओर।</div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.४९) — ☰ नेविगेशन — असंगता व ज्ञान-निष्ठा की ओर</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.48 के अनुसार सहज कर्म को कब त्यागना चाहिए?",options:["जब भी दोष दिखे","कभी नहीं, दोष के कारण त्यागना उचित नहीं","केवल गंभीर दोष होने पर","हमेशा त्यागना चाहिए"],correct:1},
+    {q:"अग्नि-धूम्र उपमा में 'धुआँ' किसका प्रतीक है?",options:["सिद्धि","दोष/अपूर्णता","ज्ञान","सुख"],correct:1},
+    {q:"'सहजं कर्म' का 18.41-47 के किस शब्द से गहरा सम्बन्ध है?",options:["परधर्म","स्वभावज कर्म","विगुणः","किल्बिषम्"],correct:1},
+    {q:"18.48 के अनुसार कौन-से कार्य दोष-रहित होते हैं?",options:["केवल धार्मिक कार्य","कोई भी नहीं — सभी उपक्रम दोष-सहित हैं","केवल सफल कार्य","केवल स्वधर्म के कार्य"],correct:1},
+    {q:"18.47 और 18.48 का संबंध कैसा है?",options:["असंबंधित श्लोक","18.48, 18.47 के सिद्धांत का कारण/तर्क देता है","18.47, 18.48 का खंडन करता है","दोनों एक ही बात दोहराते हैं"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.47 ने कहा — अपना अपूर्ण धर्म श्रेष्ठ है। स्वाभाविक प्रश्न उठता है — क्यों? 18.48 इसका उत्तर एक अविस्मरणीय उपमा में देता है।",
+    "'सहजं कर्म' — जन्मजात कर्म, जिसके साथ व्यक्ति जन्मा हो। यह 18.41-47 के 'स्वभावज कर्म' का ही एक और नाम है।",
+    "'सदोषमपि न त्यजेत्' — दोषयुक्त होते हुए भी त्यागे नहीं। गीता स्पष्ट रूप से कहती है कि दोष का होना त्याग का पर्याप्त कारण नहीं है।",
+    "'सर्वारम्भा हि दोषेण' — सभी उपक्रम निश्चय ही दोष से युक्त हैं। यह एक सार्वभौमिक नियम है, कोई अपवाद नहीं।",
+    "'धूमेनाग्निरिवावृताः' — जैसे अग्नि धुएँ से ढकी होती है। यह गीता की सबसे स्मरणीय, सरल पर गहरी उपमाओं में से एक है।",
+    "18.47 और 18.48 मिलकर स्वधर्म-निष्ठा का पूर्ण तर्क बनाते हैं — 'अपना कर्म श्रेष्ठ है, क्योंकि कोई भी विकल्प दोष-रहित नहीं।' अगला भाग ज्ञान-निष्ठा की ओर बढ़ेगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

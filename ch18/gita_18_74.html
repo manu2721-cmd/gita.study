@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.74 — सञ्जय उवाच: फ्रेम-नैरेटिव की वापसी</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style><body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 74 / 78</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.७४</div>
+    </div>
+    <div class="guna-badge">🪔 उपसंहार — संजय की वाणी लौटती है, फ्रेम-नैरेटिव पुनः खुलता है</div>
+    <div class="shloka">
+      <b>सञ्जय उवाच</b><br>
+      इत्यहं वासुदेवस्य पार्थस्य च महात्मनः।<br>
+      संवादमिममश्रौषमद्भुतं रोमहर्षणम्।।
+    </div>
+    <div class="translit">
+      sañjaya uvāca — ity ahaṃ vāsudevasya pārthasya ca mahātmanaḥ,<br>
+      saṃvādam imam aśrauṣam adbhutaṃ romaharṣaṇam
+    </div>
+    <div class="gist">
+      संजय कहते हैं — इस प्रकार मैंने <b>वासुदेव (कृष्ण)</b> और <b>महात्मा पार्थ (अर्जुन)</b> के इस <b>अद्भुत</b> और <b>रोमांचकारी</b> संवाद को सुना।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — भीतरी संवाद का बंद होना, बाहरी फ्रेम का खुलना</h3>
+      <p>18.73 पर अर्जुन का अंतिम वचन समाप्त हुआ — "करिष्ये वचनं तव।" कृष्ण-अर्जुन का <b>भीतरी संवाद</b> (जो 1.1 से चल रहा था) यहीं पूर्ण होता है। अब 18.74 में <b>"सञ्जय उवाच"</b> — संजय की आवाज़ अचानक लौट आती है।</p>
+      <p>याद करें — गीता की मूल संरचना एक <b>कहानी के भीतर कहानी</b> है। युद्धभूमि से दूर बैठे अंधे राजा धृतराष्ट्र को संजय, वेदव्यास से प्राप्त दिव्य-दृष्टि से, महाभारत का युद्ध और उसमें घटित कृष्ण-अर्जुन संवाद सुना रहे हैं। अध्याय 1.1 में यह फ्रेम खुला था ("धर्मक्षेत्रे कुरुक्षेत्रे...") — 17 अध्यायों तक यह पृष्ठभूमि में रहा, और अब 18.74-78 में यह फ्रेम फिर से सामने आता है।</p>
+      <div class="callout-rajas"><b>ध्यान दें — कथा-कुशलता:</b> गीता कभी नहीं भूलती कि यह एक "सुनाई गई कहानी" है, स्वयं में एक स्वतंत्र प्रवचन नहीं। 18.74 यह याद दिलाता है कि हम अब तक जो पढ़ रहे थे, वह संजय के कानों से होकर हम तक पहुँचा है — यह गीता की "साक्षी-परंपरा" (witness tradition) को स्पष्ट करता है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सञ्जय उवाच</span><span class="word-tr">sañjaya uvāca</span></div>
+          <div class="word-meaning">संजय ने कहा — वक्ता-सूचक वाक्यांश</div>
+          <div class="word-eng"><b>EN:</b> Sanjaya said</div>
+          <div class="word-deep">यह वाक्यांश गीता में वक्ता-परिवर्तन का संकेत है। पूरी गीता में "सञ्जय उवाच", "अर्जुन उवाच", "श्रीभगवानुवाच" जैसे वाक्यांश बार-बार आते हैं — यह पाठक को स्पष्ट बताते हैं कि अब कौन बोल रहा है। यहाँ यह विशेष रूप से महत्वपूर्ण है — 18 अध्यायों के बाद पहली बार फ्रेम-नैरेटर की आवाज़ इतने विस्तार से लौटती है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">इति अहम्</span><span class="word-tr">ity aham</span></div>
+          <div class="word-meaning">इस प्रकार मैंने — उद्धरण-समापन सूचक</div>
+          <div class="word-eng"><b>EN:</b> thus I (have heard)</div>
+          <div class="word-deep">"इति" संस्कृत में उद्धरण-चिह्न (quotation marker) की तरह काम करता है — यह संकेत करता है कि पहले जो कहा गया, वह अब समाप्त हो गया। यहाँ "इति" पूरे कृष्ण-अर्जुन संवाद (अध्याय 1-18) के अंत को चिह्नित करता है। "अहम्" (मैं) संजय का आत्म-निर्देश है — वह अब स्वयं की भूमिका, श्रोता के रूप में, सामने लाता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">वासुदेवस्य पार्थस्य च महात्मनः</span><span class="word-tr">vāsudevasya pārthasya ca mahātmanaḥ</span></div>
+          <div class="word-meaning">वासुदेव (कृष्ण) और महात्मा पार्थ (अर्जुन) के — षष्ठी</div>
+          <div class="word-eng"><b>EN:</b> of Vāsudeva and the great-souled Pārtha</div>
+          <div class="word-deep">वासुदेव = वसुदेव-पुत्र, कृष्ण का एक प्रसिद्ध नाम। पार्थ = पृथा (कुन्ती)-पुत्र, अर्जुन। "महात्मनः" (महान् आत्मा वाला) विशेषण विशेष रूप से अर्जुन के लिए यहाँ प्रयुक्त — यह दर्शाता है कि संजय स्वयं, एक बाहरी दर्शक के रूप में, अर्जुन की महानता को स्वीकार करता है, विशेषतः उसके मोह-नाश के बाद।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">संवादम् इमम्</span><span class="word-tr">saṃvādam imam</span></div>
+          <div class="word-meaning">इस संवाद को — द्वितीया, कर्म</div>
+          <div class="word-eng"><b>EN:</b> this dialogue</div>
+          <div class="word-deep">संवाद = सम् (साथ) + वाद (कथन) — दो पक्षों के बीच बातचीत। "इमम्" (यह) निकटता सूचित करता है — मानो संजय अभी-अभी सुने संवाद की ताज़गी को व्यक्त कर रहा हो। यह शब्द पूरी गीता को "उपदेश" के बजाय "संवाद" के रूप में परिभाषित करता है — यह एक-तरफा प्रवचन नहीं, बल्कि दो जनों के बीच जीवंत बातचीत थी।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अश्रौषम्</span><span class="word-tr">aśrauṣam</span></div>
+          <div class="word-meaning">मैंने सुना — लुङ् लकार (सामान्य भूतकाल)</div>
+          <div class="word-eng"><b>EN:</b> I heard</div>
+          <div class="word-deep">√श्रु (सुनना) का लुङ् (aorist) प्रथम पुरुष एकवचन रूप। संस्कृत व्याकरण में लुङ् लकार सामान्यतः दूरस्थ या अनिश्चित-काल की पूर्ण घटना के लिए प्रयुक्त होता है — यहाँ यह इस बात पर बल देता है कि संजय ने इस पूरे संवाद को <b>प्रत्यक्ष रूप से, अपने कानों से</b> सुना, न कि किसी और स्रोत से।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अद्भुतम् रोमहर्षणम्</span><span class="word-tr">adbhutaṃ romaharṣaṇam</span></div>
+          <div class="word-meaning">अद्भुत और रोमांचकारी — द्वितीया विशेषण</div>
+          <div class="word-eng"><b>EN:</b> wonderful and hair-raising</div>
+          <div class="word-deep">अद्भुतम् = विस्मयकारी, अलौकिक। रोमहर्षणम् = रोम (शरीर के रोम) + हर्षण (जिससे रोमांच हो, रोंगटे खड़े हो जाएँ)। यह शारीरिक प्रतिक्रिया भारतीय काव्यशास्त्र में "अद्भुत रस" और गहरी भक्ति दोनों का लक्षण मानी जाती है — संजय की यह प्रतिक्रिया दर्शाती है कि उसने जो सुना वह केवल बौद्धिक उपदेश नहीं, बल्कि एक गहरा अनुभव था।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Sanjaya said: Thus have I heard this wonderful and hair-raising dialogue between Vāsudeva (Kṛṣṇa) and the great-souled Pārtha (Arjuna).
+      </div>
+      <p>18.74 में गीता <b>अपनी ही कथा-संरचना पर लौटती है।</b> अध्याय 1-18 तक हमने कृष्ण-अर्जुन का सीधा संवाद पढ़ा — मानो हम स्वयं युद्धभूमि पर उपस्थित हों। अब अचानक याद आता है कि यह सब वास्तव में <b>संजय की रिपोर्ट</b> है, जो धृतराष्ट्र को (और पाठक के रूप में हमें भी) सुनाई जा रही है।</p>
+      <p>यह क्षण गीता के <b>बहु-स्तरीय कथा-ढांचे</b> को उजागर करता है: वेदव्यास ने महाभारत रचा, जिसके भीतर संजय धृतराष्ट्र को सुना रहे हैं, जिसके भीतर कृष्ण-अर्जुन का संवाद है, जिसके भीतर स्वयं कृष्ण गीता का उपदेश दे रहे हैं। यह "कहानी के भीतर कहानी" (nested narrative) संरचना भारतीय महाकाव्य-परंपरा की विशेषता है।</p>
+      <div class="callout-rajas"><b>"अद्भुतम् रोमहर्षणम्" — संजय की अपनी प्रतिक्रिया क्यों महत्वपूर्ण है?</b> संजय स्वयं युद्ध में भाग नहीं ले रहा — वह केवल एक दिव्य-दृष्टि-प्राप्त श्रोता/दर्शक है। फिर भी उसकी प्रतिक्रिया — रोमांच, विस्मय — दिखाती है कि गीता का प्रभाव केवल प्रत्यक्ष भागीदार (अर्जुन) तक सीमित नहीं, बल्कि हर सच्चे श्रोता तक पहुँचता है। यह हमें, आज के पाठकों को भी, यही अनुभव करने का निमंत्रण है।</div>
+      <p>यह श्लोक 18.75-78 के लिए मंच तैयार करता है, जहाँ संजय आगे बताएगा — उसने यह संवाद कैसे सुना (व्यास की कृपा से दिव्य-दृष्टि द्वारा), और अंततः अपना प्रसिद्ध निष्कर्ष देगा — "यत्र योगेश्वरः कृष्णः..."</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — कहानी सुनाने वाले की भूमिका:</b> जब कोई हमें किसी गहरे, प्रेरणादायक अनुभव के बारे में बताता है जिसे उसने स्वयं देखा या सुना था — जैसे कोई पत्रकार किसी ऐतिहासिक घटना का प्रत्यक्षदर्शी विवरण देता है — उसकी आवाज़ में स्वयं भी वही विस्मय झलकता है। संजय भी ठीक ऐसे ही एक गवाह हैं, जो अपने अनुभव को साझा कर रहे हैं।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — किसी महान भाषण के बाद श्रोता की प्रतिक्रिया:</b> जब कोई किसी प्रेरणादायक वक्ता का भाषण सुनकर बाद में कहता है "मुझे रोमांच हो आया, मैं यह कभी नहीं भूलूँगा" — यह ठीक "रोमहर्षणम्" का भाव है। यह दिखाता है कि गहरा उपदेश केवल शब्द नहीं, अनुभव होता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — फिल्म या किताब में "framing device":</b> कई महान कहानियाँ किसी वृद्ध व्यक्ति द्वारा युवा को सुनाई जाती दिखाई जाती हैं (जैसे कोई दादा अपने पोते को कहानी सुना रहा हो)। यह framing कहानी को और अधिक विश्वसनीय और आत्मीय बनाता है — गीता की संजय-धृतराष्ट्र संरचना भी यही काम करती है।
+      </div>
+      <div class="callout"><b>महत्त्वपूर्ण बात:</b> संजय की भूमिका हमें याद दिलाती है कि सत्य को केवल प्रत्यक्ष भागीदार से ही नहीं, बल्कि सच्चे, ध्यानपूर्ण श्रोता से भी अनुभव किया जा सकता है। हम पाठक भी, संजय की तरह, इस संवाद के "श्रोता" हैं — और यह श्लोक हमें अपनी उसी भूमिका की याद दिलाता है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">संजय कौन हैं, और वे यह संवाद कैसे सुन पाए?</div>
+        <div class="a">संजय धृतराष्ट्र के मंत्री/सारथी हैं। महर्षि वेदव्यास ने उन्हें <b>दिव्य-दृष्टि</b> (divyacakṣus) प्रदान की, जिससे वे दूर बैठे हुए भी युद्धभूमि की हर घटना और संवाद को प्रत्यक्ष देख-सुन सकते थे, और यह सब अंधे राजा धृतराष्ट्र को सुना रहे थे। इसका विस्तृत वर्णन अगले श्लोक (18.75) में आएगा।</div>
+      </div>
+      <div class="faq">
+        <div class="q">यह श्लोक अचानक क्यों आता है — क्या यह गीता के प्रवाह को तोड़ता नहीं?</div>
+        <div class="a">यह प्रवाह को तोड़ता नहीं, बल्कि गीता की मूल संरचना को <b>पूर्ण</b> करता है। अध्याय 1.1 में जो फ्रेम खुला था (धृतराष्ट्र-संजय संवाद), वह 18 अध्यायों तक पृष्ठभूमि में रहा और अब उचित समय पर फिर सामने आता है — यह गोलाकार (circular) कथा-संरचना है, आकस्मिक व्यवधान नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"महात्मनः" विशेषण केवल अर्जुन के लिए क्यों, कृष्ण के लिए नहीं?</div>
+        <div class="a">व्याकरणिक रूप से "महात्मनः" पार्थस्य (अर्जुन) से जुड़ता है। कृष्ण को यहाँ केवल "वासुदेवस्य" कहा गया — क्योंकि कृष्ण की महानता तो स्वयंसिद्ध है, पर अर्जुन ने 18 अध्यायों की यात्रा में मोह से मुक्ति पाकर अपनी महानता <b>अर्जित</b> की। "महात्मा" विशेषण उसी उपलब्धि की स्वीकृति है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.74 के बाद क्या आता है?</div>
+        <div class="a">18.75-76 में संजय बताएंगे कि उन्होंने यह गुह्य योग-संवाद व्यास की कृपा से, स्वयं योगेश्वर कृष्ण से साक्षात् सुना, और इसे बार-बार याद करके आनंदित होते हैं। 18.77-78 में गीता का प्रसिद्ध समापन आता है — "यत्र योगेश्वरः कृष्णो यत्र पार्थो धनुर्धरः..."</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.74 गीता की <b>बहु-स्तरीय कथा-वास्तुकला</b> को पुनः स्थापित करता है। यह पाठक को याद दिलाता है कि गीता स्वतंत्र ग्रंथ नहीं, बल्कि महाभारत के भीतर स्थित एक संवाद है — जिसे एक विशेष श्रोता (संजय), एक विशेष उद्देश्य (धृतराष्ट्र को सूचित करना) के लिए सुना रहा है।</p>
+        <p>यह "साक्षी-भाव" (witness-perspective) गीता के अंतिम पाँच श्लोकों (74-78) की केंद्रीय विशेषता है — यहाँ ज्ञान नहीं, बल्कि <b>ज्ञान के प्रति श्रद्धा और विस्मय</b> केंद्र में आता है।</p>
+        <div class="callout"><b>गोलाकार संरचना (Circular Structure):</b> 1.1 "धर्मक्षेत्रे कुरुक्षेत्रे... किमकुर्वत सञ्जय" (धृतराष्ट्र का प्रश्न) से 18.74 "सञ्जय उवाच" (संजय का उत्तर शुरू) तक — गीता एक पूर्ण वृत्त बनाती है। जो प्रश्न से शुरू हुआ, वह अब उत्तर की समाप्ति पर लौट आया है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — गीता की कथा-स्तर संरचना</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="90" rx="140" ry="40" fill="rgba(140,74,32,0.10)" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <text x="350" y="84" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">स्तर १ — वेदव्यास रचित महाभारत</text>
+          <text x="350" y="102" text-anchor="middle" fill="#cfc3a8" font-size="10">बाहरी काव्य-ढांचा</text>
+
+          <line x1="350" y1="130" x2="350" y2="175" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="350" cy="205" rx="150" ry="40" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.45)" stroke-width="1.3"/>
+          <text x="350" y="199" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">स्तर २ — संजय-धृतराष्ट्र संवाद</text>
+          <text x="350" y="217" text-anchor="middle" fill="#cfc3a8" font-size="10">दिव्य-दृष्टि से रिपोर्ट (1.1, 18.74 ←यहाँ)</text>
+
+          <line x1="350" y1="245" x2="350" y2="285" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <ellipse cx="350" cy="315" rx="155" ry="42" fill="rgba(140,74,32,0.15)" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <text x="350" y="309" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">स्तर ३ — कृष्ण-अर्जुन संवाद</text>
+          <text x="350" y="327" text-anchor="middle" fill="#cfc3a8" font-size="10">स्वयं गीता का उपदेश (1.2 – 18.73)</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — फ्रेम-नैरेटिव अन्य महाकाव्यों में</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/ग्रंथ</th><th>18.74 से समानता</th><th>अंतर</th></tr>
+          <tr><td>महाभारत — वैशम्पायन-जनमेजय संवाद</td><td>पूरा महाकाव्य भी एक श्रोता को सुनाई गई कथा के रूप में है</td><td>वहाँ मुनि सुनाते हैं, यहाँ राजमंत्री संजय दिव्य-दृष्टि से</td></tr>
+          <tr><td>पुराण-साहित्य की सूत-शौनक संवाद शैली</td><td>ज्ञान का हस्तांतरण श्रोता-वक्ता संबंध से</td><td>पुराणों में यह स्थायी रूपरेखा, गीता में केवल आवरण</td></tr>
+          <tr><td>Arabian Nights का "story within story"</td><td>बहु-स्तरीय narrative framing</td><td>वहाँ मनोरंजन केंद्रीय उद्देश्य, गीता में आध्यात्मिक सत्य</td></tr>
+          <tr><td>बाइबिल के सुसमाचार (Gospels) में साक्षी-विवरण</td><td>प्रत्यक्षदर्शी द्वारा घटना का वर्णन</td><td>सुसमाचार तीसरे पुरुष में, संजय प्रथम पुरुष में ("अश्रौषम्")</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशेषता:</b> संजय की दिव्य-दृष्टि इसे केवल एक साधारण रिपोर्टिंग से ऊपर उठाती है — यह अलौकिक साक्ष्य है, न कि सामान्य मानवीय स्मृति पर आधारित कथा।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>स्वयं को "संजय" के स्थान पर रखें:</b> जब भी गीता पढ़ें या सुनें, स्वयं से पूछें — "क्या मैं भी संजय की तरह पूर्ण एकाग्रता और श्रद्धा से सुन रहा हूँ? क्या मुझे भी वही अद्भुत-रोमहर्षण अनुभव हो रहा है, या मैं केवल शब्द पढ़ रहा हूँ?" यह प्रश्न अध्ययन को गहरा बना सकता है।</div>
+        <p><b>अभ्यास — कृतज्ञता का भाव:</b> संजय की तरह यह स्वीकार करें कि यह ज्ञान हम तक किसी परंपरा, किसी गुरु, या किसी ग्रंथ के माध्यम से पहुँचा है। यह "receive" करने की विनम्रता — कि सत्य हमारे पास किसी और के माध्यम से आया है — गीता के अध्ययन को अहंकार-रहित बनाती है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> इस श्लोक को गीता-शास्त्र की प्रामाणिकता (authenticity) स्थापित करने वाला मानते हैं — संजय एक विश्वसनीय, दिव्य-दृष्टि-संपन्न साक्षी है, इसलिए उसके द्वारा सुनाया गया संवाद प्रामाणिक और श्रद्धेय है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "अद्भुतम् रोमहर्षणम्" पर बल देते हुए कहते हैं कि यह भक्ति-रस की चरम अभिव्यक्ति है — भगवान की लीला और उपदेश सुनकर रोमांच होना, भक्त की सच्ची स्थिति का लक्षण है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को गीता की साहित्यिक और ऐतिहासिक संरचना के प्रमाण के रूप में देखते हैं — यह दिखाता है कि गीता महाभारत का अभिन्न अंग है, स्वतंत्र रूप से जोड़ा गया प्रकरण नहीं।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य इस बात पर सहमत हैं कि 18.74 गीता की प्रामाणिकता, गहराई, और महाभारत के साथ उसके अभिन्न संबंध को स्थापित करता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सञ्जय उवाच</span></div>
+            <div class="flashcard-face flashcard-back"><b>संजय ने कहा</b>वक्ता-परिवर्तन — फ्रेम-नैरेटर की वापसी</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">इति</span></div>
+            <div class="flashcard-face flashcard-back"><b>इस प्रकार</b>उद्धरण-समापन — 1-18 अध्याय के संवाद का अंत चिह्नित</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">महात्मनः</span></div>
+            <div class="flashcard-face flashcard-back"><b>महान् आत्मा वाले</b>अर्जुन के लिए — मोह-नाश के बाद अर्जित उपाधि</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">संवादम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>संवाद को</b>गीता एक जीवंत बातचीत, एकतरफा प्रवचन नहीं</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अश्रौषम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>मैंने सुना</b>लुङ् लकार — प्रत्यक्ष, पूर्ण अनुभव</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">रोमहर्षणम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>रोंगटे खड़े कर देने वाला</b>अद्भुत रस — गहरे अनुभव का शारीरिक लक्षण</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">सञ्जय उवाच</td><td>सञ्जय+वच्</td><td>प्रथमा, लिट् लकार</td><td>संजय ने कहा — वक्ता-सूचक</td></tr>
+          <tr><td class="sa">इति</td><td>अव्यय</td><td>—</td><td>इस प्रकार — उद्धरण-समापन</td></tr>
+          <tr><td class="sa">अहम्</td><td>अस्मद्</td><td>प्रथमा एकवचन</td><td>मैं — कर्ता</td></tr>
+          <tr><td class="sa">वासुदेवस्य, पार्थस्य, महात्मनः</td><td>वासुदेव, पार्थ, महात्मन्</td><td>षष्ठी एकवचन (×३)</td><td>वासुदेव और महात्मा पार्थ के — सम्बन्ध</td></tr>
+          <tr><td class="sa">संवादम् इमम्</td><td>सं+वद्, इदम्</td><td>द्वितीया एकवचन</td><td>इस संवाद को — कर्म</td></tr>
+          <tr><td class="sa">अश्रौषम्</td><td>√श्रु</td><td>लुङ् लकार, उ.पु. एकवचन</td><td>मैंने सुना — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">अद्भुतम्, रोमहर्षणम्</td><td>अद्भुत, रोमन्+हर्षण</td><td>द्वितीया एकवचन (विशेषण)</td><td>अद्भुत, रोमांचकारी</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">सञ्जय उवाच।<br>इत्यहं वासुदेवस्य पार्थस्य च महात्मनः।<br>संवादमिममश्रौषमद्भुतं रोमहर्षणम्।।</div>
+          <div class="cheat-translit">sañjaya uvāca — ity ahaṃ vāsudevasya pārthasya ca mahātmanaḥ, saṃvādam imam aśrauṣam adbhutaṃ romaharṣaṇam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>सञ्जय उवाच</b> संजय की वाणी लौटती है</span>
+            <span class="cheat-chip"><b>महात्मनः</b> महान् आत्मा अर्जुन</span>
+            <span class="cheat-chip"><b>संवादम्</b> जीवंत बातचीत</span>
+            <span class="cheat-chip"><b>अश्रौषम्</b> प्रत्यक्ष सुना</span>
+            <span class="cheat-chip"><b>अद्भुतम् रोमहर्षणम्</b> विस्मयकारी, रोमांचकारी</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: कृष्ण-अर्जुन संवाद (1.2-18.73) समाप्त होते ही फ्रेम-नैरेटर संजय की आवाज़ लौटती है। यह गीता की बहु-स्तरीय कथा-संरचना को पूर्ण करता है और गीता के अंतिम पाँच श्लोकों (74-78) की शुरुआत है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('इत्यहं वासुदेवस्य पार्थस्य च महात्मनः। संवादमिममश्रौषमद्भुतं रोमहर्षणम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('इत्यहं वासुदेवस्य पार्थस्य च महात्मनः। संवादमिममश्रौषमद्भुतं रोमहर्षणम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('संजय कहते हैं, इस प्रकार मैंने वासुदेव और महात्मा पार्थ के इस अद्भुत और रोमांचकारी संवाद को सुना।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">इ</span><span class="syll">त्य</span><span class="syll">हं</span><span class="syll">वा</span><span class="syll">सु</span><span class="syll">दे</span><span class="syll">व</span><span class="syll">स्य</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">पार्</span><span class="syll">थ</span><span class="syll">स्य</span><span class="syll">च</span><span class="syll">म</span><span class="syll">हा</span><span class="syll">त्म</span><span class="syll">नः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">सं</span><span class="syll">वा</span><span class="syll">द</span><span class="syll">मि</span><span class="syll">म</span><span class="syll">म</span><span class="syll">श्रौ</span><span class="syll">षम्</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">द्भु</span><span class="syll">तं</span><span class="syll">रो</span><span class="syll">म</span><span class="syll">ह</span><span class="syll">र्ष</span><span class="syll">णम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('इत्यहं वासुदेवस्य पार्थस्य च महात्मनः संवादमिममश्रौषमद्भुतं रोमहर्षणम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> जप करते समय "अद्भुतं रोमहर्षणम्" पर रुकें — क्या गीता के इस संपूर्ण अध्ययन ने आपके भीतर भी वैसा ही विस्मय जगाया है?</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">18.73 vs 18.74</button>
+      <button class="tab-btn" data-tab="e2">उपसंहार के पाँच श्लोक</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 18.73 vs 18.74 — भीतरी आवाज़ से बाहरी आवाज़ की ओर</h3>
+        <p class="subnote">दो अलग वक्ता, दो अलग कथा-स्तर</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🗣️ 18.73 — अर्जुन उवाच</div>
+            <div class="contrast-sa">नष्टो मोहः स्मृतिर्लब्धा</div>
+            <p><b>भीतरी संवाद — प्रत्यक्ष भागीदार की आवाज़।</b><br>युद्धभूमि पर, प्रथम पुरुष अनुभव।<br>कृष्ण-अर्जुन संवाद का अंत।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">📜 18.74 — सञ्जय उवाच</div>
+            <div class="contrast-sa">इत्यहं ... संवादमिमम् अश्रौषम्</div>
+            <p><b>बाहरी फ्रेम — साक्षी/श्रोता की आवाज़।</b><br>दूर से, दिव्य-दृष्टि से रिपोर्ट।<br>फ्रेम-नैरेटिव की पुनःशुरुआत।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> गीता जानबूझकर हमें भीतरी अनुभव (अर्जुन का) और बाहरी साक्ष्य (संजय का) दोनों देती है — पहला परिवर्तन का प्रत्यक्ष प्रमाण, दूसरा उसकी विश्वसनीय, श्रद्धापूर्ण रिपोर्टिंग।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 उपसंहार के अंतिम पाँच श्लोक (74-78) — एक झलक</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">📜 18.74 ← यहाँ</div>
+            <div class="guna-sa">संजय की वाणी लौटती है</div>
+            <div class="guna-char">फ्रेम-नैरेटिव पुनः खुलता है, "अद्भुतम् रोमहर्षणम्"।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🕉️ 18.75-76</div>
+            <div class="guna-sa">दिव्य-दृष्टि का विवरण</div>
+            <div class="guna-char">व्यास-कृपा से प्राप्त दृष्टि, बार-बार स्मरण का आनंद।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🏆 18.77-78</div>
+            <div class="guna-sa">गीता का प्रसिद्ध समापन</div>
+            <div class="guna-char">"यत्र योगेश्वरः कृष्णः..." — विजय, श्री, नीति का निश्चय।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> इन पाँच श्लोकों में उपदेश समाप्त हो चुका है — अब केवल श्रद्धा, विस्मय, और अंतिम आशीर्वाद-सूत्र शेष है। यह किसी भी महान ग्रंथ के समापन की शास्त्रीय शैली है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६७-७१<br>गीता-माहात्म्य त्रय</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ७२<br>कृष्ण का प्रश्न</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ७३<br>अर्जुन का उत्तर</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ७४<br>संजय की वाणी ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ७५-७८<br>दिव्य-दृष्टि व समापन</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.75):</b> "व्यासप्रसादाच्छ्रुतवानेतद्गुह्यमहं परम्। योगं योगेश्वरात्कृष्णात्साक्षात्कथयतः स्वयम्।।" — संजय बताते हैं कि उन्होंने यह परम गुह्य योग व्यास की कृपा से, स्वयं योगेश्वर कृष्ण से साक्षात् सुना।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.७५) — ☰ नेविगेशन — संजय की दिव्य-दृष्टि: व्यासप्रसादाच्छ्रुतवान्</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.74 में गीता के किस कथा-स्तर की वापसी होती है?",options:["कृष्ण-अर्जुन संवाद","संजय-धृतराष्ट्र फ्रेम-नैरेटिव","वेदव्यास की रचना-प्रक्रिया","अर्जुन का आंतरिक विचार"],correct:1},
+    {q:"'महात्मनः' विशेषण किसके लिए प्रयुक्त हुआ है?",options:["कृष्ण के लिए","संजय के लिए","अर्जुन (पार्थ) के लिए","धृतराष्ट्र के लिए"],correct:2},
+    {q:"'रोमहर्षणम्' शब्द का क्या अर्थ है?",options:["शांतिदायक","रोंगटे खड़े कर देने वाला, रोमांचकारी","भयभीत करने वाला","उबाऊ"],correct:1},
+    {q:"संजय ने यह संवाद कैसे सुना (जिसका विवरण अगले श्लोकों में आएगा)?",options:["स्वयं युद्ध में भाग लेकर","दूर से सामान्य कानों से","व्यास-प्रदत्त दिव्य-दृष्टि से","अर्जुन के पत्र से"],correct:2},
+    {q:"18.74 का 1.1 से क्या संबंध है?",options:["कोई संबंध नहीं","1.1 में जो फ्रेम खुला था, वह यहाँ फिर सक्रिय होता है","1.1 इस श्लोक का खंडन करता है","दोनों एक ही घटना हैं"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.73 पर अर्जुन का 'करिष्ये वचनं तव' के साथ भीतरी संवाद समाप्त होता है। 18.74 में अचानक 'सञ्जय उवाच' — फ्रेम-नैरेटर की आवाज़ लौटती है।",
+    "याद करें — गीता एक कहानी के भीतर कहानी है। संजय, वेदव्यास से प्राप्त दिव्य-दृष्टि से, युद्धभूमि का पूरा दृश्य अंधे राजा धृतराष्ट्र को सुना रहे हैं।",
+    "'इत्यहं ... संवादमिमम् अश्रौषम्' — 'इस प्रकार मैंने यह संवाद सुना।' यह पूरे कृष्ण-अर्जुन संवाद (1.2-18.73) के अंत को चिह्नित करता है।",
+    "'महात्मनः पार्थस्य' — 'महान् आत्मा वाले पार्थ का।' संजय स्वयं, एक बाहरी साक्षी के रूप में, अर्जुन की अर्जित महानता को स्वीकार करता है।",
+    "'अद्भुतम् रोमहर्षणम्' — अद्भुत और रोमांचकारी। संजय की यह प्रतिक्रिया दिखाती है कि गीता का प्रभाव प्रत्यक्ष भागीदार तक सीमित नहीं, हर सच्चे श्रोता तक पहुँचता है।",
+    "यह 1.1 के 'धर्मक्षेत्रे कुरुक्षेत्रे... सञ्जय' फ्रेम की वापसी है — गोलाकार कथा-संरचना पूर्ण होती है। अगला (18.75) संजय की दिव्य-दृष्टि का विवरण देगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 18.65 — मन्मना भव: भगवान की प्रतिज्ञा और प्रेम</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 18 · श्लोक 65 / 78</span>
+    <div class="progress-track"><div class="progress-fill" style="width:83.3%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय अठारह</div>
+    <div class="chapter-title">अध्याय १८ — मोक्षसंन्यासयोग (मुक्ति का विज्ञान)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १८.६५</div>
+    </div>
+    <div class="guna-badge">🕉️ 9।34 की वापसी, नए अंत के साथ — भगवान की प्रत्यक्ष प्रतिज्ञा</div>
+    <div class="shloka">
+      मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु।<br>
+      मामेवैष्यसि सत्यं ते प्रतिजाने प्रियोऽसि मे।।
+    </div>
+    <div class="translit">
+      man-manā bhava mad-bhakto mad-yājī māṁ namaskuru,<br>
+      mām evaiṣhyasi satyaṁ te pratijāne priyo 'si me
+    </div>
+    <div class="gist">
+      मुझमें मन लगाओ, मेरे <b>भक्त</b> बनो, मेरे <b>पूजक</b> बनो, मुझे <b>नमस्कार</b> करो — मुझे ही प्राप्त होगे, यह मैं तुमसे <b>सत्य प्रतिज्ञा</b> करता हूँ, क्योंकि तुम मुझे <b>प्रिय</b> हो। 18.64 के प्रेम-वचन का साकार, संक्षिप्त साधना-सूत्र, और गीता की विरल, प्रत्यक्ष दैवी-प्रतिज्ञाओं में से एक।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — प्रेम-घोषणा अब साधना-सूत्र में</h3>
+      <p>18.64 में भगवान ने कहा — "इष्टोऽसि मे दृढम्" (तुम मुझे दृढ़ प्रिय हो), और वचन दिया कि वे आगे "हित" कहेंगे। 18.65 वही वचन है — भगवान का सर्वाधिक संक्षिप्त, स्पष्ट, चार-चरणीय साधना-सूत्र, जो सीधे हृदय से हृदय तक बोला गया है।</p>
+      <p>यह श्लोक गीता की सबसे उल्लेखनीय आंतरिक-संरचनात्मक विशेषताओं में से एक प्रदर्शित करता है — इसका <b>प्रथम अर्ध पूर्णतः 9।34 की पुनरावृत्ति है</b> ("मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु" — शब्दशः समान)। पर द्वितीय अर्ध पूर्णतः बदल जाता है — 9।34 में तकनीकी निर्देश था ("युक्त्वैवमात्मानं मत्परायणः" — इस प्रकार आत्मा को युक्त करके, मत्परायण होकर), जबकि 18.65 में यह एक व्यक्तिगत, भावुक प्रतिज्ञा बन जाता है ("सत्यं ते प्रतिजाने प्रियोऽसि मे" — मैं तुमसे सत्य प्रतिज्ञा करता हूँ, तुम मुझे प्रिय हो)।</p>
+      <div class="callout"><b>संकेत:</b> यह जानबूझकर की गई पुनरावृत्ति गीता की रचना-कला का अद्भुत उदाहरण है — वही निर्देश, अध्याय 9 में एक सामान्य साधना-सिद्धांत के रूप में दिया गया, अब अध्याय 18 के अंत में, अत्यंत व्यक्तिगत, भावुक, प्रतिज्ञा-सहित रूप में लौटता है — मानो भगवान कह रहे हों, "यह वही मार्ग है, पर अब मैं इसे व्यक्तिगत रूप से, तुम्हारे लिए, वचनबद्ध होकर कह रहा हूँ।"</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">मन्मना भव</span><span class="word-tr">man-manā bhava</span></div>
+          <div class="word-meaning">मुझमें मन लगाने वाले हो जाओ — बहुव्रीहि + आज्ञार्थक</div>
+          <div class="word-eng"><b>EN:</b> fix your mind on Me</div>
+          <div class="word-deep">मत् (मेरे में) + मनाः (मन वाला) = मन्मनाः। भव = होओ (18.57 के "मच्चित्तः सततं भव" की भी सीधी याद दिलाता है)। यह चार-चरणीय सूत्र का पहला, आंतरिकतम चरण है — मन की दिशा।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">मद्भक्तो मद्याजी</span><span class="word-tr">mad-bhakto mad-yājī</span></div>
+          <div class="word-meaning">मेरा भक्त, मेरा पूजक — प्रथमा विशेषण-द्वय</div>
+          <div class="word-eng"><b>EN:</b> My devotee, My worshipper</div>
+          <div class="word-deep">मद्भक्तः = भक्ति-भाव (हृदय का समर्पण)। मद्याजी = यज् धातु से, "पूजा/यज्ञ करने वाला" (बाह्य आराधना-क्रिया)। ये दोनों साथ-साथ आते हैं — आंतरिक भक्ति और बाह्य पूजा-क्रिया, दोनों मिलकर पूर्ण साधना बनाते हैं, केवल भावना या केवल कर्मकांड अकेला नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">मां नमस्कुरु</span><span class="word-tr">māṁ namaskuru</span></div>
+          <div class="word-meaning">मुझे नमस्कार करो — आज्ञार्थक मुख्य क्रिया (अर्ध १)</div>
+          <div class="word-eng"><b>EN:</b> bow down to Me</div>
+          <div class="word-deep">नमस्कुरु = नमस् (नमन) + कुरु (करो)। यह चौथा और अंतिम चरण है — विनम्रता, समर्पण की शारीरिक अभिव्यक्ति। मन (मन्मना), हृदय (मद्भक्तः), क्रिया (मद्याजी), और शरीर (नमस्कुरु) — चारों स्तरों पर समर्पण की पूर्णता यहाँ समाहित है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">मामेवैष्यसि</span><span class="word-tr">mām evaiṣhyasi</span></div>
+          <div class="word-meaning">मुझे ही प्राप्त होगे — भविष्यत् काल, मुख्य क्रिया (अर्ध २)</div>
+          <div class="word-eng"><b>EN:</b> you shall come to Me alone</div>
+          <div class="word-deep">माम् (मुझे) + एव (ही, बल-सूचक) + एष्यसि (प्राप्त होगे, इ धातु का भविष्यत्)। यह ठीक 9।34 का भी अंश है, अपरिवर्तित। "एव" (ही) पर बल — केवल भगवान तक, कोई अन्य गंतव्य नहीं। यह चार-चरणीय सूत्र का प्रत्यक्ष, निश्चित फल है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सत्यं ते प्रतिजाने प्रियोऽसि मे</span><span class="word-tr">satyaṁ te pratijāne priyo 'si me</span></div>
+          <div class="word-meaning">मैं तुमसे सत्य प्रतिज्ञा करता हूँ, तुम मुझे प्रिय हो — यहीं 9।34 से भिन्नता</div>
+          <div class="word-eng"><b>EN:</b> I promise you truly — you are dear to Me</div>
+          <div class="word-deep">सत्यम् = सत्य/निश्चित रूप से। ते = तुमसे। प्रतिजाने = प्रति+ज्ञा धातु से, "प्रतिज्ञा करता हूँ" — गीता में भगवान द्वारा प्रत्यक्ष प्रतिज्ञा का यह अत्यंत विरल क्षण है। प्रियोऽसि मे = तुम मुझे प्रिय हो (18.64 के "इष्टोऽसि मे दृढम्" की पुनरावृत्ति)। यह 9।34 के तकनीकी अंत ("युक्त्वैवमात्मानं मत्परायणः") को पूर्णतः व्यक्तिगत, भावुक वचन में बदल देता है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Fix your mind on Me, be My devotee, be My worshipper, bow down to Me; you shall come to Me alone. This I promise you truly, for you are dear to Me.
+      </div>
+      <p>18.65 गीता के सबसे प्रसिद्ध, सबसे बार-बार उद्धृत श्लोकों में से एक है — इसकी संरचनात्मक विशेषता ही इसे असाधारण बनाती है। यह प्रथम अर्ध में 9।34 को शब्दशः दोहराता है, पर द्वितीय अर्ध में पूर्णतः नया, अधिक व्यक्तिगत मोड़ लेता है।</p>
+      <p>चार-चरणीय सूत्र — मन्मना (मन), मद्भक्तः (हृदय), मद्याजी (क्रिया), नमस्कुरु (शरीर) — मानव-अस्तित्व के चारों स्तरों को समेटता है। यह कोई जटिल, बहु-चरणीय साधना-पद्धति नहीं, बल्कि अत्यंत सरल, प्रत्यक्ष, सुगम मार्ग है — गीता के "गुह्यतम" ज्ञान का यह सरलतम रूप होना ही इसे विशेष बनाता है।</p>
+      <div class="callout-rajas"><b>"सत्यं ते प्रतिजाने" — भगवान की दुर्लभ प्रतिज्ञा:</b> पूरी गीता में यह भगवान का सबसे प्रत्यक्ष प्रतिज्ञा-वचन है। "प्रतिजाने" (प्रतिज्ञा करता हूँ) शब्द अपने आप में असाधारण है — यह कोई सामान्य कथन या भविष्यवाणी नहीं, बल्कि एक निश्चित, वचनबद्ध आश्वासन है। यह गीता 9।30-31 ("अपि चेत्सुदुराचारो...क्षिप्रं भवति धर्मात्मा") के "शीघ्र फल" के वादों की परिणति है — यहाँ वादा सबसे स्पष्ट, सबसे व्यक्तिगत रूप में आता है।</div>
+      <p>और अंत में — "प्रियोऽसि मे," 18.64 के "इष्टोऽसि मे दृढम्" की पुनरावृत्ति। यह दोहराव आकस्मिक नहीं — गीता जानबूझकर इस प्रेम-भाव को दो बार, लगातार दो श्लोकों में दोहराती है, यह सुनिश्चित करते हुए कि यह संदेश साधक के हृदय में गहराई से बैठ जाए, इससे पहले कि गीता अपने अंतिम, सबसे प्रसिद्ध श्लोक (18.66) की ओर बढ़े।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — चार-स्तरीय समर्पण का व्यावहारिक अभ्यास:</b> एक साधक जो सुबह उठते ही मन को ईश्वर-स्मरण में लगाता है (मन्मना), दिनभर हृदय में भक्ति-भाव बनाए रखता है (मद्भक्तः), नियमित पूजा या सेवा-कर्म करता है (मद्याजी), और सोने से पहले नमन करता है (नमस्कुरु) — यह चार-चरणीय सूत्र का पूर्ण, संतुलित जीवन-अभ्यास है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — प्रतिज्ञा का महत्त्व:</b> जब कोई विश्वसनीय, प्रिय व्यक्ति (जैसे माता-पिता या गुरु) हमें एक स्पष्ट, प्रत्यक्ष वादा करता है — "मैं तुम्हारे साथ रहूँगा, यह मेरा वचन है" — वह वादा हमें असाधारण शक्ति और शांति देता है, चाहे परिस्थितियाँ कितनी भी कठिन क्यों न हों। "सत्यं ते प्रतिजाने" वैसा ही, पर अनंत गहरा, वादा है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — प्रेम की पुनरावृत्ति का प्रभाव:</b> जब कोई महत्त्वपूर्ण व्यक्ति हमें बार-बार अपने प्रेम की याद दिलाता है (जैसे 18.64 और 18.65 दोनों में "प्रिय" शब्द का दोहराव), वह प्रेम अधिक गहराई से, अधिक स्थायी रूप से हृदय में बैठता है — दोहराव यहाँ कमज़ोरी नहीं, बल्कि गहराई का प्रमाण है।
+      </div>
+      <div class="callout"><b>दैनिक जीवन में:</b> यह श्लोक हमें एक सरल, चार-चरणीय दैनिक अभ्यास देता है — मन (क्या सोचता हूँ), हृदय (क्या अनुभव करता हूँ), कर्म (क्या करता हूँ), शरीर (कैसे व्यवहार करता हूँ) — इन चारों को एक ही दिशा में संरेखित करना ही पूर्ण साधना है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">18.65 और 9।34 में जानबूझकर पुनरावृत्ति क्यों की गई है?</div>
+        <div class="a">यह गीता की एक सुसंगत, अर्थपूर्ण रचना-तकनीक है। 9।34 में यह निर्देश एक सामान्य, तकनीकी साधना-सिद्धांत के रूप में दिया गया था। 18.65 में, समस्त गीता की यात्रा (ज्ञान, कर्म, भक्ति, शरणागति) के अंत में, वही निर्देश लौटता है, पर अब एक व्यक्तिगत प्रतिज्ञा और प्रेम-वचन के साथ। यह दिखाता है कि साधना-मार्ग वही रहता है, पर उसका अनुभव समय और गहराई के साथ अधिक अंतरंग होता जाता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">चार चरण (मन्मना, मद्भक्तः, मद्याजी, नमस्कुरु) क्या क्रमबद्ध हैं, या साथ-साथ अभ्यास किए जाने चाहिए?</div>
+        <div class="a">दोनों संभव हैं। तार्किक क्रम में मन (आंतरिकतम) से शुरू होकर शरीर (सबसे बाह्य) तक जाता प्रतीत होता है, पर व्यवहार में ये चारों परस्पर-पोषक हैं — मन की दिशा से भक्ति बढ़ती है, भक्ति से पूजा-कर्म में तल्लीनता आती है, और नियमित नमन मन को पुनः स्थिर करता है। यह एक चक्रीय, सुदृढ़ होता हुआ अभ्यास है, कठोर रैखिक क्रम नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"सत्यं ते प्रतिजाने" जैसा प्रत्यक्ष प्रतिज्ञा-वचन गीता में और कहाँ मिलता है?</div>
+        <div class="a">यह अपनी प्रत्यक्षता में लगभग अद्वितीय है। निकटतम समानांतर 9।31 ("कौन्तेय प्रतिजानीहि न मे भक्तः प्रणश्यति" — हे कौन्तेय, प्रतिज्ञा करके कहो, मेरा भक्त कभी नष्ट नहीं होता) में मिलता है, जहाँ भी "प्रतिजा" मूल का प्रयोग है। दोनों स्थान भक्ति के अटूट, वचनबद्ध फल पर बल देते हैं — 18.65 में यह वचन विशेष रूप से अर्जुन को, अत्यंत व्यक्तिगत रूप में दिया गया है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">18.64 और 18.65 में "प्रिय/इष्ट" शब्द की पुनरावृत्ति का क्या भावनात्मक प्रभाव है?</div>
+        <div class="a">यह दोहराव गीता के सबसे भावनात्मक रूप से सघन क्षणों में से एक बनाता है। लगातार दो श्लोकों में भगवान अर्जुन को अपना प्रिय बताते हैं — पहले "इष्टोऽसि मे दृढम्" (18.64), फिर "प्रियोऽसि मे" (18.65)। यह दोहराव किसी भूल का परिणाम नहीं — यह गीता की जानबूझकर की गई काव्य-शैली है, जो इस भाव को साधक के हृदय में गहराई से अंकित करना चाहती है, ठीक इससे पहले कि गीता अपने चरम, सबसे प्रसिद्ध वचन (18.66) की ओर बढ़े।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>18.65 गीता के सर्वाधिक याद किए जाने वाले, जपे जाने वाले श्लोकों में से एक है — इसकी सरलता, संक्षिप्तता और भावनात्मक गहराई इसे गीता-अध्ययन का एक केंद्र-बिंदु बनाती है। कई परंपराओं में यह श्लोक दैनिक पाठ और स्मरण का हिस्सा है।</p>
+        <p>यह श्लोक 18.64-66 के त्रय का मध्य-बिंदु है — 18.64 प्रेम की घोषणा करता है, 18.65 उस प्रेम से उपजी साधना-विधि और प्रतिज्ञा देता है, और 18.66 (गीता का चरम-श्लोक) अंतिम, सर्वाधिक प्रसिद्ध शरणागति-आह्वान प्रस्तुत करेगा।</p>
+        <div class="callout"><b>ध्यान दें:</b> इस श्लोक की 9।34 से निकटता विद्वानों के बीच एक रोचक चर्चा का विषय रही है — कुछ इसे गीता की आंतरिक एकता और सुसंगति के प्रमाण के रूप में देखते हैं, तो कुछ इसे भावनात्मक-चरम पर पहुँचने के लिए जानबूझकर की गई पुनरावृत्ति मानते हैं।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — चार-चरणीय सूत्र से प्रतिज्ञा तक</h3>
+        <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="120" cy="60" rx="95" ry="36" fill="rgba(42,106,90,0.12)" stroke="rgba(42,106,90,0.45)" stroke-width="1.3"/>
+          <text x="120" y="65" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">मन्मना — मन</text>
+
+          <ellipse cx="330" cy="60" rx="95" ry="36" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.45)" stroke-width="1.3"/>
+          <text x="330" y="65" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">मद्भक्तः — हृदय</text>
+
+          <ellipse cx="540" cy="60" rx="95" ry="36" fill="rgba(106,61,122,0.12)" stroke="rgba(106,61,122,0.45)" stroke-width="1.3"/>
+          <text x="540" y="65" text-anchor="middle" fill="#c0a0d8" font-size="11" font-family="Tiro Devanagari Hindi, serif">मद्याजी — क्रिया</text>
+
+          <line x1="120" y1="96" x2="250" y2="150" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <line x1="330" y1="96" x2="320" y2="150" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <line x1="540" y1="96" x2="390" y2="150" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+
+          <ellipse cx="330" cy="180" rx="100" ry="36" fill="rgba(140,44,59,0.12)" stroke="rgba(140,44,59,0.45)" stroke-width="1.3"/>
+          <text x="330" y="185" text-anchor="middle" fill="#e8a4ad" font-size="11" font-family="Tiro Devanagari Hindi, serif">नमस्कुरु — शरीर</text>
+
+          <line x1="330" y1="216" x2="330" y2="250" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <ellipse cx="330" cy="278" rx="110" ry="36" fill="rgba(201,162,39,0.14)" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <text x="330" y="283" text-anchor="middle" fill="#e6c863" font-size="11.5" font-family="Tiro Devanagari Hindi, serif">मामेवैष्यसि</text>
+
+          <line x1="330" y1="314" x2="330" y2="335" stroke="rgba(201,162,39,0.5)" stroke-width="1.5"/>
+          <rect x="180" y="337" width="300" height="20" rx="8" fill="rgba(201,162,39,0.1)" stroke="rgba(201,162,39,0.4)" stroke-width="1"/>
+          <text x="330" y="352" text-anchor="middle" fill="#e6c863" font-size="11" font-family="Tiro Devanagari Hindi, serif">सत्यं ते प्रतिजाने प्रियोऽसि मे ★</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — 9।34 और 18.65 का शब्दशः विश्लेषण</h3>
+        <table class="cmp-table">
+          <tr><th>अंश</th><th>9।34</th><th>18.65</th></tr>
+          <tr><td>प्रथम अर्ध</td><td>मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु (समान)</td><td>मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु (समान)</td></tr>
+          <tr><td>द्वितीय अर्ध — प्रथम पद</td><td>मामेवैष्यसि (समान)</td><td>मामेवैष्यसि (समान)</td></tr>
+          <tr><td>द्वितीय अर्ध — शेष</td><td>युक्त्वैवमात्मानं मत्परायणः (तकनीकी निर्देश)</td><td>सत्यं ते प्रतिजाने प्रियोऽसि मे (व्यक्तिगत प्रतिज्ञा व प्रेम)</td></tr>
+        </table>
+        <div class="callout"><b>गीता की सुसंगति:</b> यह शब्दशः तुलना दिखाती है कि गीता एक ही निर्देश को दो अलग भावनात्मक रजिस्टरों में प्रस्तुत कर सकती है — एक सैद्धांतिक (अध्याय 9), दूसरा पूर्णतः व्यक्तिगत, वचनबद्ध (अध्याय 18)।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>आत्म-परीक्षण के प्रश्न:</b> "मेरा मन आज किस दिशा में सबसे अधिक समय बिताता है?" (मन्मना) / "क्या मेरी भक्ति/श्रद्धा केवल विचार में है, या हृदय में गहराई से बसी है?" (मद्भक्तः) / "क्या मैं नियमित रूप से कोई पूजा/सेवा-कर्म करता हूँ?" (मद्याजी) / "क्या मेरे जीवन में विनम्रता और नमन का कोई नियमित स्थान है?" (नमस्कुरु)</div>
+        <p><b>अभ्यास — चार-चरणीय दैनिक जप:</b> प्रतिदिन एक बार, इन चार शब्दों — मन्मना, मद्भक्तः, मद्याजी, नमस्कुरु — को धीरे-धीरे दोहराएँ, प्रत्येक शब्द पर रुककर उसका अर्थ अपने जीवन में खोजें। यह सरल अभ्यास ही 18.65 के सूत्र को जीवंत बनाता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> वे इस पुनरावृत्ति को गीता की उपदेश-शैली की पूर्णता के रूप में देखते हैं — 9।34 सिद्धांत स्थापित करता है, 18.65 उसे भावनात्मक निश्चितता (प्रतिज्ञा) प्रदान करके पूर्ण करता है, जिससे साधक को कोई संदेह न रहे।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "सत्यं ते प्रतिजाने" पर विशेष बल देते हुए, वे इसे भक्ति-सिद्धांत का सर्वोच्च आश्वासन मानते हैं — भगवान स्वयं अपनी वाणी से वचनबद्ध होते हैं, जो भक्त के लिए असीम सुरक्षा और विश्वास का स्रोत है।</p>
+        <p><b style="color:var(--gold-light)">स्वामी रामसुखदास जी:</b> चार चरणों की सरलता पर बल देते हुए वे कहते हैं — यह श्लोक दिखाता है कि भगवत्-प्राप्ति किसी जटिल, दुर्गम विधि से नहीं, बल्कि अत्यंत सरल, प्रेमपूर्ण समर्पण से संभव है — "गुह्यतम" होते हुए भी यह सरलतम है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> सभी आचार्य सहमत हैं कि यह श्लोक भक्ति-मार्ग की सुगमता और भगवद्-वचन की अटूट विश्वसनीयता का सर्वोच्च प्रमाण प्रस्तुत करता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">मन्मना भव</span></div>
+            <div class="flashcard-face flashcard-back"><b>मुझमें मन लगाओ</b>चरण १ — 9।34 से समान</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">मद्भक्तो मद्याजी</span></div>
+            <div class="flashcard-face flashcard-back"><b>मेरा भक्त, मेरा पूजक</b>चरण २-३ — हृदय व क्रिया</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">मां नमस्कुरु</span></div>
+            <div class="flashcard-face flashcard-back"><b>मुझे नमस्कार करो</b>चरण ४ — शरीर से समर्पण</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">मामेवैष्यसि</span></div>
+            <div class="flashcard-face flashcard-back"><b>मुझे ही प्राप्त होगे</b>9।34 से भी समान अंश</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सत्यं ते प्रतिजाने</span></div>
+            <div class="flashcard-face flashcard-back"><b>मैं तुमसे सत्य प्रतिज्ञा करता हूँ</b>गीता की विरल, प्रत्यक्ष दैवी प्रतिज्ञा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">प्रियोऽसि मे</span></div>
+            <div class="flashcard-face flashcard-back"><b>तुम मुझे प्रिय हो</b>18.64 के "इष्टोऽसि मे" की पुनरावृत्ति</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">मन्मनाः</td><td>मत्+मनस्</td><td>प्रथमा पुं. एकवचन</td><td>मुझमें मन वाला — बहुव्रीहि</td></tr>
+          <tr><td class="sa">भव</td><td>भू</td><td>आज्ञार्थक म.पु. एकवचन</td><td>हो जाओ</td></tr>
+          <tr><td class="sa">मद्भक्तः</td><td>मत्+भक्त</td><td>प्रथमा पुं. एकवचन</td><td>मेरा भक्त</td></tr>
+          <tr><td class="sa">मद्याजी</td><td>मत्+यज्+णिनि</td><td>प्रथमा पुं. एकवचन</td><td>मेरा पूजक/यजनकर्ता</td></tr>
+          <tr><td class="sa">नमस्कुरु</td><td>नमस्+कृ</td><td>आज्ञार्थक म.पु. एकवचन</td><td>नमस्कार करो — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">एष्यसि</td><td>इ</td><td>भविष्यत् म.पु. एकवचन</td><td>प्राप्त होगे — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">प्रतिजाने</td><td>प्रति+ज्ञा</td><td>वर्तमान उ.पु. एकवचन (आत्मनेपद)</td><td>प्रतिज्ञा करता हूँ</td></tr>
+          <tr><td class="sa">प्रियः</td><td>प्री</td><td>प्रथमा पुं. एकवचन</td><td>प्रिय — विशेषण</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु।<br>मामेवैष्यसि सत्यं ते प्रतिजाने प्रियोऽसि मे।।</div>
+          <div class="cheat-translit">man-manā bhava mad-bhakto mad-yājī māṁ namaskuru, mām evaiṣhyasi satyaṁ te pratijāne priyo 'si me</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>मन्मना-मद्भक्तः-मद्याजी-नमस्कुरु</b> चार-चरणीय सूत्र</span>
+            <span class="cheat-chip"><b>मामेवैष्यसि</b> निश्चित फल — 9।34 से समान</span>
+            <span class="cheat-chip"><b>सत्यं ते प्रतिजाने</b> प्रत्यक्ष दैवी प्रतिज्ञा</span>
+            <span class="cheat-chip"><b>प्रियोऽसि मे</b> 18.64 की पुनरावृत्ति</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: मन, हृदय, क्रिया, शरीर — चारों से मुझमें समर्पित हो जाओ, मुझे ही प्राप्त होगे — यह मैं सत्य प्रतिज्ञा करता हूँ, क्योंकि तुम मुझे प्रिय हो। यह श्लोक 9।34 का शब्दशः प्रथम अर्ध दोहराता है, पर द्वितीय अर्ध में तकनीकी निर्देश को व्यक्तिगत, वचनबद्ध प्रेम-वचन में बदल देता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु। मामेवैष्यसि सत्यं ते प्रतिजाने प्रियोऽसि मे।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु। मामेवैष्यसि सत्यं ते प्रतिजाने प्रियोऽसि मे।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('मुझमें मन लगाओ, मेरे भक्त बनो, मेरे पूजक बनो, मुझे नमस्कार करो — मुझे ही प्राप्त होगे, यह मैं तुमसे सत्य प्रतिज्ञा करता हूँ, क्योंकि तुम मुझे प्रिय हो।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">म</span><span class="syll">न्म</span><span class="syll">ना</span><span class="syll">भ</span><span class="syll">व</span><span class="syll">मद्</span><span class="syll">भ</span><span class="syll">क्तो</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">म</span><span class="syll">द्या</span><span class="syll">जी</span><span class="syll">मां</span><span class="syll">न</span><span class="syll">म</span><span class="syll">स्कु</span><span class="syll">रु</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">मा</span><span class="syll">मे</span><span class="syll">वै</span><span class="syll">ष्य</span><span class="syll">सि</span><span class="syll">स</span><span class="syll">त्यं</span><span class="syll">ते</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">प्र</span><span class="syll">ति</span><span class="syll">जा</span><span class="syll">ने</span><span class="syll">प्रि</span><span class="syll">यो</span><span class="syll">ऽसि</span><span class="syll">मे</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु मामेवैष्यसि सत्यं ते प्रतिजाने प्रियोऽसि मे', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "सत्यं ते प्रतिजाने" पर विशेष रूप से रुकें — भगवान की अपनी वाणी से दिया गया, दुर्लभ, वचनबद्ध आश्वासन। इसे हृदय में गहराई से उतरने दें।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">9।34 → 18.65 पुनरावृत्ति</button>
+      <button class="tab-btn" data-tab="e2">चार-स्तरीय समर्पण</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 9।34 → 18.65 — सिद्धांत से प्रतिज्ञा तक</h3>
+        <p class="subnote">वही सूत्र, नया हृदय</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 9।34 — प्रथम प्रस्तुति</div>
+            <div class="contrast-sa">...युक्त्वैवमात्मानं मत्परायणः</div>
+            <p><b>तकनीकी साधना-निर्देश।</b><br>अध्याय के मध्य में दिया गया।<br>सैद्धांतिक स्वर।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 18.65 — अंतिम पुनरावृत्ति</div>
+            <div class="contrast-sa">...सत्यं ते प्रतिजाने प्रियोऽसि मे</div>
+            <p><b>व्यक्तिगत प्रतिज्ञा व प्रेम।</b><br>गीता के अंतिम भाग में दिया गया।<br>भावनात्मक, वचनबद्ध स्वर।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> गीता एक ही सूत्र को दो बार, दो अलग भावनात्मक गहराइयों में प्रस्तुत करती है — यह दिखाता है कि साधना-मार्ग स्थिर रहता है, पर उसका अनुभव यात्रा के साथ अधिक अंतरंग, अधिक व्यक्तिगत होता जाता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 चार-स्तरीय समर्पण — मन से शरीर तक</h3>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 मन्मना — मन</div>
+            <div class="contrast-sa">आंतरिकतम स्तर</div>
+            <p>विचारों की दिशा, ध्यान का केंद्र।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 मद्भक्तः — हृदय</div>
+            <div class="contrast-sa">भावनात्मक स्तर</div>
+            <p>प्रेम, श्रद्धा, आंतरिक समर्पण।</p>
+          </div>
+        </div>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 मद्याजी — क्रिया</div>
+            <div class="contrast-sa">कर्म-स्तर</div>
+            <p>नियमित पूजा, सेवा, अभ्यास।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 नमस्कुरु — शरीर</div>
+            <div class="contrast-sa">बाह्यतम स्तर</div>
+            <p>विनम्रता की शारीरिक अभिव्यक्ति।</p>
+          </div>
+        </div>
+        <div class="callout-rajas"><b>Pattern:</b> यह चार-स्तरीय संरचना मानव-अस्तित्व की संपूर्णता को समेटती है — कोई भी स्तर अकेला पर्याप्त नहीं; पूर्ण समर्पण मन, हृदय, क्रिया और शरीर — चारों के संरेखण से ही सध्य है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 18 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६३<br>अंतिम स्वतंत्रता</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६४<br>इष्टोऽसि मे दृढम्</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ६५<br>प्रतिज्ञा ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६६<br>चरम-श्लोक</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ६७+<br>उपसंहार</div></div>
+        </div>
+        <div class="callout"><b>अगला (18.66):</b> "सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज। अहं त्वा सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः॥" — गीता का सबसे प्रसिद्ध, सर्वाधिक उद्धृत श्लोक। 18.62 के "तमेव शरणं गच्छ" (सामान्य) से यात्रा अब अपने पूर्णतम, सर्वाधिक व्यक्तिगत रूप — "मामेकं शरणं व्रज" — तक पहुँचेगी, साथ में सर्वपाप-मुक्ति और "मा शुचः" (शोक मत करो) का अंतिम आश्वासन।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.६६) — ☰ नेविगेशन — गीता का चरम-श्लोक: सर्वधर्मान् परित्यज्य मामेकं शरणं व्रज</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"18.65 का प्रथम अर्ध गीता के किस अन्य श्लोक से शब्दशः समान है?",options:["2।47","3।30","9।34","6।35"],correct:2},
+    {q:"9।34 और 18.65 के द्वितीय अर्ध में क्या मुख्य अंतर है?",options:["कोई अंतर नहीं","9।34 तकनीकी है, 18.65 व्यक्तिगत प्रतिज्ञा व प्रेम-वचन है","18.65 तकनीकी है, 9।34 व्यक्तिगत है","दोनों पूर्णतः समान हैं"],correct:1},
+    {q:"18.65 का चार-चरणीय सूत्र किन चार स्तरों को समेटता है?",options:["समय, स्थान, कारण, कार्य","मन, हृदय, क्रिया, शरीर","अतीत, वर्तमान, भविष्य, शाश्वत","सत्व, रज, तम, शुद्ध"],correct:1},
+    {q:"'सत्यं ते प्रतिजाने' का क्या तात्पर्य है?",options:["एक सामान्य कथन","भगवान द्वारा दिया गया प्रत्यक्ष, वचनबद्ध आश्वासन","एक प्रश्न","एक चेतावनी"],correct:1},
+    {q:"18.65 में 'प्रियोऽसि मे' किस अन्य श्लोक की पुनरावृत्ति है?",options:["18.53","18.64 — इष्टोऽसि मे दृढम्","18.58","18.60"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "18.64 में भगवान ने प्रेम की घोषणा की थी — 'इष्टोऽसि मे दृढम्।' 18.65 अब उसी प्रेम से उपजा साधना-सूत्र देता है।",
+    "'मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु' — यह ठीक 9।34 का प्रथम अर्ध है, शब्दशः दोहराया गया। मन, हृदय, क्रिया, शरीर — चार चरण।",
+    "'मामेवैष्यसि' — मुझे ही प्राप्त होगे। यह भी 9।34 से समान है — पर अब आगे जो आता है, वह पूर्णतः नया है।",
+    "'सत्यं ते प्रतिजाने' — मैं तुमसे सत्य प्रतिज्ञा करता हूँ! गीता में भगवान की सबसे प्रत्यक्ष, दुर्लभ प्रतिज्ञा।",
+    "और अंत में, फिर से — 'प्रियोऽसि मे'। तुम मुझे प्रिय हो। 18.64 के प्रेम-वचन की पुनरावृत्ति, हृदय में गहराई से बैठाने के लिए।",
+    "अगला (18.66) गीता का सबसे प्रसिद्ध श्लोक लाएगा — 'सर्वधर्मान् परित्यज्य मामेकं शरणं व्रज' — 18.62 की सामान्य शरणागति अब अपने पूर्णतम, सर्वाधिक व्यक्तिगत रूप में प्रकट होगी।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
