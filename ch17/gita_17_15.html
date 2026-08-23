@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 17.15 — वाचिक तप: अनुद्वेगकरं वाक्यं सत्यं</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style><body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 17 · श्लोक 15 / 28</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सत्रह</div>
+    <div class="chapter-title">अध्याय १७ — श्रद्धात्रयविभागयोग (श्रद्धा के तीन प्रकार)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १७.१५</div>
+    </div>
+    <div class="guna-badge">🪔 वाचिक तप — सत्य, प्रिय, हितकारी, और उद्वेग-रहित वाणी</div>
+    <div class="shloka">
+      अनुद्वेगकरं वाक्यं सत्यं प्रियहितं च यत्।<br>
+      स्वाध्यायाभ्यसनं चैव वाङ्मयं तप उच्यते।।
+    </div>
+    <div class="translit">
+      anudvegakaraṃ vākyaṃ satyaṃ priya-hitaṃ ca yat,<br>
+      svādhyāyābhyasanaṃ caiva vāṅmayaṃ tapa ucyate
+    </div>
+    <div class="gist">
+      जो वाणी <b>उद्वेग-रहित, सत्य, प्रिय, और हितकारी</b> हो, और <b>स्वाध्याय का अभ्यास</b> — यह <b>वाचिक तप</b> कहा जाता है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — शरीर से वाणी की ओर</h3>
+      <p>17.14 ने शारीरिक तप को परिभाषित किया — सम्मान, शुद्धता, सरलता, संयम, अहिंसा। अब 17.15 उसी संरचना को <b>वाणी</b> पर लागू करता है — वाचिक तप। यह तप-त्रय (शारीरिक-वाचिक-मानसिक, 17.14-16) का दूसरा चरण है, जो शरीर से एक स्तर आगे, वाणी के अनुशासन की ओर बढ़ता है।</p>
+      <p>यह श्लोक भारतीय नैतिक परंपरा के एक प्रसिद्ध सिद्धांत को प्रतिध्वनित करता है — वाणी को <b>सत्य, प्रिय, और हितकारी</b> होना चाहिए (यह विचार मनुस्मृति सहित अन्य धर्मशास्त्रों में भी मिलता है)। गीता यहाँ एक चौथा तत्व भी जोड़ती है — "अनुद्वेगकरम्" (उद्वेग/चिंता उत्पन्न न करने वाला)।</p>
+      <div class="callout-rajas"><b>ध्यान दें — सत्य और प्रियता का सूक्ष्म संतुलन:</b> यह श्लोक केवल "सत्य बोलो" नहीं कहता — यह "सत्यं प्रियहितं च" (सत्य, और प्रिय-हितकारी भी) कहता है। यह भारतीय नैतिक-चिंतन की एक गहरी अंतर्दृष्टि है — केवल सत्य होना पर्याप्त नहीं, यदि वह क्रूर या अहितकारी ढंग से कहा जाए। सच्ची वाणी वह है जो सत्य भी हो, कोमल भी, और लाभदायक भी — तीनों एक साथ।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अनुद्वेगकरम् वाक्यम्</span><span class="word-tr">anudvegakaram vākyam</span></div>
+          <div class="word-meaning">उद्वेग/चिंता उत्पन्न न करने वाली वाणी</div>
+          <div class="word-eng"><b>EN:</b> speech that causes no distress</div>
+          <div class="word-deep">अन् (नहीं) + उद्वेग (चिंता, बेचैनी, आघात) + कर (करने वाला)। यह पहला, और शायद सबसे व्यावहारिक गुण है — वाणी को दूसरों में अनावश्यक चिंता, भय, या मानसिक अशांति नहीं पैदा करनी चाहिए। यह विशेष रूप से महत्वपूर्ण है जब हम कठोर सत्य या आलोचना व्यक्त करते हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सत्यम्</span><span class="word-tr">satyam</span></div>
+          <div class="word-meaning">सत्य, वास्तविकता के अनुरूप</div>
+          <div class="word-eng"><b>EN:</b> truthful</div>
+          <div class="word-deep">सत्य भारतीय नैतिकता में एक केंद्रीय मूल्य है। पर ध्यान दें — यह अकेले नहीं आता, बल्कि "प्रियहितम्" के साथ जुड़ा है, यह दर्शाते हुए कि सत्य को भी संदर्भ और करुणा के साथ व्यक्त किया जाना चाहिए।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">प्रियहितम्</span><span class="word-tr">priya-hitam</span></div>
+          <div class="word-meaning">प्रिय और हितकारी</div>
+          <div class="word-eng"><b>EN:</b> pleasant and beneficial</div>
+          <div class="word-deep">प्रिय = सुनने में मधुर, आनंददायक। हित = लाभदायक, कल्याणकारी। यह वाक्यांश दो अलग गुणों को जोड़ता है — वाणी सुनने में अच्छी भी हो, और वास्तव में लाभदायक भी। ये दोनों हमेशा साथ नहीं होते (कभी-कभी अप्रिय बात हितकारी होती है) — गीता आदर्श रूप से दोनों की खोज करने के लिए कहती है, यथासंभव।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">स्वाध्यायाभ्यसनम्</span><span class="word-tr">svādhyāyābhyasanam</span></div>
+          <div class="word-meaning">स्वाध्याय का अभ्यास</div>
+          <div class="word-eng"><b>EN:</b> the regular practice of self-study/scripture-recitation</div>
+          <div class="word-deep">स्वाध्याय = स्व (अपना) + अधि+आय (अध्ययन) — शास्त्रों का नियमित अध्ययन/पाठ, या आत्म-अध्ययन (आत्म-निरीक्षण)। यह एकमात्र तत्व है जो केवल "दूसरों के प्रति वाणी" नहीं, बल्कि <b>स्वयं के लिए किया गया वाचिक अभ्यास</b> है — मौन पाठ, मंत्र-जप, या शास्त्र-अध्ययन। यह वाणी के अनुशासन का आंतरिक, व्यक्तिगत आयाम है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">वाङ्मयम् तपः उच्यते</span><span class="word-tr">vāṅmayaṃ tapa ucyate</span></div>
+          <div class="word-meaning">वाणी-संबंधी तप कहा जाता है</div>
+          <div class="word-eng"><b>EN:</b> this is called verbal austerity</div>
+          <div class="word-deep">वाङ्मय = वाच् (वाणी) + मय (से बना/संबंधित) — "वाणी से संबंधित।" यह 17.14 के "शारीरम्... उच्यते" के समानांतर संरचना दोहराता है, जो तप-त्रय की सुसंगत, व्यवस्थित शैली को दर्शाता है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Speech that causes no distress, that is truthful, pleasant, and beneficial, along with the regular practice of scripture-recitation — this is called verbal austerity.
+      </div>
+      <p>17.15 वाणी को एक <b>अनुशासन-क्षेत्र (tapas)</b> के रूप में प्रस्तुत करता है — यह विचार कि हम क्या और कैसे बोलते हैं, यह भी उतना ही गंभीर आध्यात्मिक अभ्यास है जितना शारीरिक अनुशासन। चार गुण मिलकर वाणी की एक समग्र नैतिकता बनाते हैं — <b>क्षति न पहुँचाना (अनुद्वेगकर), सत्यनिष्ठा (सत्य), कल्याणकारिता (प्रियहित)</b>, और <b>नियमित आत्म-अध्ययन (स्वाध्याय)।</b></p>
+      <p>पहले तीन गुण — अनुद्वेगकर, सत्य, प्रियहित — मिलकर एक प्रसिद्ध सिद्धांत बनाते हैं जो अन्य भारतीय ग्रंथों में भी पाया जाता है: <b>"सत्यं ब्रूयात् प्रियं ब्रूयात्, न ब्रूयात् सत्यमप्रियम्"</b> (सत्य बोलो, प्रिय बोलो; अप्रिय सत्य मत बोलो) — यह वाणी की एक त्रि-आयामी कसौटी है, जो केवल सत्य को पर्याप्त नहीं मानती, बल्कि उसे करुणा और लाभ की दृष्टि से भी तौलती है।</p>
+      <div class="callout-rajas"><b>स्वाध्याय — वाणी का आंतरिक आयाम:</b> ध्यान दें कि चौथा तत्व (स्वाध्याय) पिछले तीन से भिन्न है — पहले तीन "दूसरों के प्रति वाणी" के बारे में हैं, जबकि स्वाध्याय "स्वयं के लिए वाणी" (शास्त्र-पाठ, मंत्र-जप, आत्म-अध्ययन) है। यह दिखाता है कि वाचिक तप केवल सामाजिक-नैतिक व्यवहार तक सीमित नहीं, बल्कि व्यक्तिगत, आध्यात्मिक अभ्यास (नियमित अध्ययन-पाठ) को भी शामिल करता है।</div>
+      <p>यह श्लोक हमें अपनी दैनिक वाणी की गुणवत्ता जाँचने का एक व्यावहारिक ढांचा देता है — क्या मैं जो कह रहा हूँ, वह सत्य है? क्या यह अनावश्यक चिंता/पीड़ा पैदा करता है? क्या यह वास्तव में हितकारी है? और क्या मैं नियमित रूप से अपने ज्ञान और आत्म-समझ को गहरा करने के लिए समय निकालता हूँ?</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — कठिन सत्य को करुणा से कहना:</b> जब किसी को कठिन फीडबैक या बुरी खबर देनी हो, "अनुद्वेगकरं... सत्यं प्रियहितम्" का सिद्धांत लागू होता है — सत्य को छिपाना नहीं, पर उसे इस तरह प्रस्तुत करना कि सुनने वाले को अनावश्यक चोट न पहुँचे, और संदेश वास्तव में सहायक हो, न कि केवल आलोचनात्मक।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — "सफेद झूठ" बनाम कठोर सत्य का द्वंद्व:</b> यह श्लोक इस आम दुविधा को संबोधित करता है — क्या हमें सुखद झूठ बोलना चाहिए, या कठोर सत्य? गीता का उत्तर है — दोनों में से कोई भी आदर्श नहीं; लक्ष्य ऐसी वाणी खोजना है जो सत्य, दयालु, और सहायक — तीनों एक साथ हो, भले ही यह कठिन हो।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — नियमित अध्ययन/पाठ का अभ्यास:</b> प्रतिदिन कुछ समय शास्त्र, आध्यात्मिक ग्रंथ, या गहन साहित्य के अध्ययन के लिए निकालना — यह "स्वाध्यायाभ्यसनम्" का व्यावहारिक अभ्यास है, जो वाणी और मन दोनों को समृद्ध करता है।
+      </div>
+      <div class="callout"><b>महत्त्वपूर्ण बात:</b> यह श्लोक हमें याद दिलाता है कि वाणी एक शक्तिशाली उपकरण है, जो चिकित्सा और चोट दोनों कर सकती है — सचेत, अनुशासित वाणी एक वास्तविक आध्यात्मिक अभ्यास है, न कि केवल एक सामाजिक कौशल।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">यदि सत्य और प्रियता में टकराव हो, तो क्या करना चाहिए?</div>
+        <div class="a">गीता यहाँ स्पष्ट पदानुक्रम नहीं देती, पर "सत्यं ब्रूयात् प्रियं ब्रूयात्, न ब्रूयात् सत्यमप्रियम्" के व्यापक सिद्धांत के अनुसार — सत्य को कभी नहीं छोड़ना चाहिए, पर उसे प्रस्तुत करने का ढंग (समय, शब्द-चयन, करुणा) बदला जा सकता है ताकि वह कम कष्टदायक और अधिक हितकारी बने। सत्य से समझौता नहीं, पर उसकी प्रस्तुति में कौशल और दया आवश्यक है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"स्वाध्याय" को वाचिक तप में क्यों रखा गया है, मानसिक तप में क्यों नहीं?</div>
+        <div class="a">स्वाध्याय में प्रायः शास्त्रों का <b>मौखिक पाठ/उच्चारण</b> (या कम से कम आंतरिक वाचन) शामिल होता है — यह वाणी की क्रिया से जुड़ा है, भले ही श्रोता स्वयं हो। यह इसे "वाचिक" श्रेणी में रखने का तार्किक आधार है, भले ही इसका उद्देश्य आंतरिक/मानसिक विकास हो।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"अनुद्वेगकरम्" का क्या अर्थ यह है कि हमें कभी कठिन बातें नहीं कहनी चाहिए?</div>
+        <div class="a">नहीं, इसका अर्थ है कि वाणी को <b>अनावश्यक</b> चिंता/पीड़ा नहीं पहुँचानी चाहिए — जरूरी, रचनात्मक, या सहायक कठिन बातचीत (जैसे स्वास्थ्य-संबंधी सच्चाई, या रचनात्मक आलोचना) से बचना नहीं। बल्कि यह वाणी में अनावश्यक क्रूरता, आक्रामकता, या उकसावे से बचने पर बल देता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">17.15 के बाद क्या आता है?</div>
+        <div class="a">17.16 में मानसिक तप का वर्णन आएगा — "मनःप्रसादः सौम्यत्वं मौनमात्मविनिग्रहः। भावसंशुद्धिरित्येतत्तपो मानसमुच्यते।।" — मन की प्रसन्नता, सौम्यता, मौन, आत्म-संयम, और भाव-शुद्धि — यह मानसिक तप कहा जाता है। यह तप-त्रय (शारीरिक-वाचिक-मानसिक) को पूर्ण करेगा।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>17.15 तप-त्रय (17.14-16) का मध्य-बिंदु है — शरीर से मन की ओर बढ़ते हुए, यह वाणी को एक ऐसे माध्यम के रूप में प्रस्तुत करता है जो दोनों को जोड़ता है (वाणी शरीर से उत्पन्न होती है, पर मन/विचार को व्यक्त करती है)।</p>
+        <p>यह श्लोक भारतीय नैतिक-दार्शनिक परंपरा के एक व्यापक सिद्धांत — सत्य, प्रिय, और हितकारी वाणी — को गीता के त्रिगुण-ढांचे में पिरोता है, जो दिखाता है कि गीता पूर्व-स्थापित नैतिक ज्ञान को अपने व्यापक दर्शन में एकीकृत करती है।</p>
+        <div class="callout"><b>वाणी की शक्ति पर गीता का दृष्टिकोण:</b> यह श्लोक निहित रूप से स्वीकार करता है कि वाणी एक शक्तिशाली शक्ति है — यह उपचार, शिक्षा, और कल्याण भी कर सकती है, और चोट, भ्रम, और हानि भी। इसलिए इसे "तप" (गंभीर अनुशासन) का दर्जा दिया गया है, न कि एक सामान्य, महत्वहीन गतिविधि।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — वाचिक तप के चार तत्व</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="55" rx="140" ry="32" fill="rgba(140,74,32,0.14)" stroke="rgba(140,74,32,0.5)" stroke-width="1.4"/>
+          <text x="350" y="49" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">वाङ्मयं तप — चार तत्व</text>
+          <text x="350" y="67" text-anchor="middle" fill="#cfc3a8" font-size="10">बाह्य वाणी + आंतरिक अभ्यास</text>
+
+          <line x1="230" y1="80" x2="150" y2="130" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <rect x="60" y="135" width="230" height="90" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="175" y="157" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">दूसरों के प्रति वाणी</text>
+          <text x="175" y="175" text-anchor="middle" fill="#cfc3a8" font-size="9">अनुद्वेगकर — क्षति-रहित</text>
+          <text x="175" y="191" text-anchor="middle" fill="#cfc3a8" font-size="9">सत्य — सच्चाई</text>
+          <text x="175" y="207" text-anchor="middle" fill="#cfc3a8" font-size="9">प्रियहित — मधुर व लाभदायक</text>
+
+          <line x1="470" y1="80" x2="550" y2="130" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <rect x="410" y="135" width="230" height="90" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="525" y="157" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">स्वयं के प्रति वाणी</text>
+          <text x="525" y="175" text-anchor="middle" fill="#cfc3a8" font-size="9">स्वाध्यायाभ्यसनम्</text>
+          <text x="525" y="191" text-anchor="middle" fill="#cfc3a8" font-size="9">नियमित शास्त्र-पाठ</text>
+          <text x="525" y="207" text-anchor="middle" fill="#cfc3a8" font-size="9">आंतरिक, व्यक्तिगत अभ्यास</text>
+
+          <line x1="350" y1="240" x2="350" y2="280" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <rect x="180" y="280" width="340" height="46" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="350" y="308" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">वाङ्मयं तप उच्यते</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — "सही वाणी" अन्य परंपराओं में</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/संदर्भ</th><th>17.15 से समानता</th><th>अंतर</th></tr>
+          <tr><td>बौद्ध अष्टांगिक मार्ग में "सम्यक् वाक्" (सही वाणी)</td><td>सत्य, हानि-रहित, और लाभकारी वाणी पर बल</td><td>बौद्ध सिद्धांत में झूठ, कठोर वचन, चुगली, व्यर्थ बकवास — चार निषेध सूचीबद्ध हैं</td></tr>
+          <tr><td>मनुस्मृति और अन्य धर्मशास्त्रों का "सत्यं ब्रूयात् प्रियं ब्रूयात्" सिद्धांत</td><td>लगभग समान शब्दावली और सिद्धांत — सत्य-प्रिय-हित का संतुलन</td><td>गीता इसे त्रिगुण-ढांचे में समाहित करती है, धर्मशास्त्र स्वतंत्र नैतिक सूत्र के रूप में</td></tr>
+          <tr><td>प्राचीन यूनानी दर्शन में "parrhesia" (निर्भीक, सच्ची वाणी) की अवधारणा</td><td>सच्चाई से बोलने के साहस पर बल</td><td>यूनानी अवधारणा साहस-केंद्रित, गीता करुणा-संतुलन पर भी बल देती है</td></tr>
+          <tr><td>आधुनिक अहिंसक संचार (Nonviolent Communication) सिद्धांत</td><td>ईमानदार, पर करुणामय और गैर-आघातकारी संवाद पर बल</td><td>आधुनिक सिद्धांत मनोवैज्ञानिक तकनीकों पर, गीता आध्यात्मिक अनुशासन पर</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशेषता:</b> "अनुद्वेगकरम्" और "स्वाध्यायाभ्यसनम्" का संयोजन — बाह्य संचार-नैतिकता और आंतरिक आत्म-अध्ययन दोनों — इसे एक असामान्य रूप से समग्र वाणी-सिद्धांत बनाता है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>बोलने से पहले तीन-प्रश्न जाँच:</b> कुछ भी महत्वपूर्ण कहने से पहले पूछें — क्या यह सत्य है? क्या यह हितकारी है? क्या इसे कहने का यह ढंग/समय अनावश्यक चिंता या चोट से बचाता है? यह त्रि-प्रश्न फ़िल्टर वाणी को अधिक सचेत, संतुलित बनाता है।</div>
+        <p><b>अभ्यास — नियमित स्वाध्याय की आदत:</b> प्रतिदिन कुछ मिनट किसी अर्थपूर्ण ग्रंथ (चाहे धार्मिक हो या केवल गहन, विचारोत्तेजक साहित्य) के पाठ/अध्ययन के लिए निकालें। यह छोटा, नियमित अभ्यास स्वयं में एक शक्तिशाली "वाचिक तप" है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "स्वाध्यायाभ्यसनम्" पर विशेष बल देते हैं — नियमित शास्त्र-पाठ ज्ञान-मार्ग की आधारशिला है; बिना निरंतर अध्ययन के आत्म-ज्ञान की गहराई तक पहुँचना कठिन है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> इस श्लोक को भक्ति-अभ्यास में वाणी के उचित उपयोग के रूप में देखते हैं — भगवद्-नाम-कीर्तन, स्तुति, और सत्य-प्रिय-हितकारी वार्तालाप — सभी भक्ति-साधना के अभिन्न अंग हैं।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को गीता की व्यावहारिक नैतिकता का उत्कृष्ट उदाहरण मानते हैं — यह दिखाता है कि दैनिक संवाद, जो प्रायः तुच्छ माना जाता है, गीता की दृष्टि में एक गंभीर आध्यात्मिक अनुशासन है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं कि यह श्लोक वाणी को केवल संचार का साधन नहीं, बल्कि आध्यात्मिक साधना का एक महत्वपूर्ण, गंभीर क्षेत्र मानता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अनुद्वेगकरम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>उद्वेग/चिंता न पैदा करने वाला</b>वाणी की क्षति-रहितता</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सत्यं प्रियहितम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>सत्य, प्रिय, हितकारी</b>"सत्यं ब्रूयात् प्रियं ब्रूयात्" सिद्धांत से जुड़ा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">स्वाध्यायाभ्यसनम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>स्वाध्याय का अभ्यास</b>वाणी का आंतरिक, व्यक्तिगत आयाम</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">वाङ्मयं तप</span></div>
+            <div class="flashcard-face flashcard-back"><b>वाणी-संबंधी तप</b>17.14 की समानांतर संरचना</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">अनुद्वेगकरम्</td><td>अन्+उद्+√विज्+कर</td><td>प्रथमा एकवचन (विशेषण)</td><td>चिंता न पैदा करने वाली — वाक्यम् का विशेषण</td></tr>
+          <tr><td class="sa">वाक्यम्</td><td>√वच्</td><td>प्रथमा एकवचन</td><td>वाणी — कर्ता</td></tr>
+          <tr><td class="sa">सत्यम्, प्रियहितम्</td><td>सत्+यत्, प्रिय+हित</td><td>प्रथमा एकवचन (×२)</td><td>सत्य, प्रिय-हितकारी</td></tr>
+          <tr><td class="sa">स्वाध्यायाभ्यसनम्</td><td>स्व+अधि+इ, अभि+अस्</td><td>प्रथमा एकवचन</td><td>स्वाध्याय का अभ्यास</td></tr>
+          <tr><td class="sa">वाङ्मयम् तपः</td><td>वाच्+मयट्, तपस्</td><td>प्रथमा एकवचन (×२)</td><td>वाणी-संबंधी तप — कर्ता</td></tr>
+          <tr><td class="sa">उच्यते</td><td>√वच्</td><td>कर्मणि वर्तमान</td><td>कहा जाता है — मुख्य क्रिया</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">अनुद्वेगकरं वाक्यं सत्यं प्रियहितं च यत्।<br>स्वाध्यायाभ्यसनं चैव वाङ्मयं तप उच्यते।।</div>
+          <div class="cheat-translit">anudvegakaraṃ vākyaṃ satyaṃ priya-hitaṃ ca yat, svādhyāyābhyasanaṃ caiva vāṅmayaṃ tapa ucyate</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अनुद्वेगकरम्</b> क्षति-रहित</span>
+            <span class="cheat-chip"><b>सत्यं प्रियहितम्</b> सत्य-प्रिय-हितकारी</span>
+            <span class="cheat-chip"><b>स्वाध्यायाभ्यसनम्</b> नियमित शास्त्र-पाठ</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: वाचिक तप का अर्थ है ऐसी वाणी जो सत्य, प्रिय, हितकारी, और उद्वेग-रहित हो, साथ ही नियमित स्वाध्याय का अभ्यास। यह 17.14 की समानांतर संरचना में तप-त्रय का दूसरा चरण है, जो शरीर से वाणी की ओर बढ़ता है, और भारतीय नैतिक परंपरा के "सत्यं ब्रूयात् प्रियं ब्रूयात्" सिद्धांत को गीता के त्रिगुण-ढांचे में पिरोता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('अनुद्वेगकरं वाक्यं सत्यं प्रियहितं च यत्। स्वाध्यायाभ्यसनं चैव वाङ्मयं तप उच्यते।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('अनुद्वेगकरं वाक्यं सत्यं प्रियहितं च यत्। स्वाध्यायाभ्यसनं चैव वाङ्मयं तप उच्यते।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जो वाणी उद्वेग-रहित, सत्य, प्रिय, और हितकारी हो, और स्वाध्याय का अभ्यास — यह वाचिक तप कहा जाता है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द (शुद्ध ४×८)</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">नु</span><span class="syll">द्वे</span><span class="syll">ग</span><span class="syll">क</span><span class="syll">रं</span><span class="syll">वाक्</span><span class="syll">यं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">सत्</span><span class="syll">यं</span><span class="syll">प्रि</span><span class="syll">य</span><span class="syll">हि</span><span class="syll">तं</span><span class="syll">च</span><span class="syll">यत्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">स्वा</span><span class="syll">ध्या</span><span class="syll">या</span><span class="syll">भ्य</span><span class="syll">स</span><span class="syll">नं</span><span class="syll">चै</span><span class="syll">व</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">वाङ्</span><span class="syll">म</span><span class="syll">यं</span><span class="syll">त</span><span class="syll">प</span><span class="syll">उच्</span><span class="syll">य</span><span class="syll">ते</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('अनुद्वेगकरं वाक्यं सत्यं प्रियहितं च यत् स्वाध्यायाभ्यसनं चैव वाङ्मयं तप उच्यते', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> शुद्ध ४×८ अनुष्टुप्, ३२ अक्षर। जप करते समय "सत्यं प्रियहितं च" पर रुकें — क्या मेरी आज की वाणी इस त्रि-मानदंड पर खरी उतरी?</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">17.14 vs 17.15</button>
+      <button class="tab-btn" data-tab="e2">चार तत्व</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 17.14 vs 17.15 — शरीर से वाणी तक</h3>
+        <p class="subnote">तप-त्रय का पहला से दूसरा चरण</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🙏 17.14 — शारीरिक तप</div>
+            <div class="contrast-sa">देवद्विजगुरुप्राज्ञपूजनम्... अहिंसा</div>
+            <p><b>सम्मान, शुद्धता, सरलता, संयम, अहिंसा — कर्म के स्तर पर।</b></p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">💬 17.15 — वाचिक तप</div>
+            <div class="contrast-sa">अनुद्वेगकरं... सत्यं प्रियहितम्...स्वाध्याय</div>
+            <p><b>सत्य, प्रिय, हितकारी वाणी और स्वाध्याय — वचन के स्तर पर।</b></p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> दोनों श्लोक एक ही "उच्यते" संरचना दोहराते हैं (शारीरम्/वाङ्मयम् तप उच्यते), जो तप-त्रय की सुसंगत, समानांतर काव्य-रचना को दर्शाता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 वाचिक तप के चार तत्व — विस्तार से</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🕊️ अनुद्वेगकर</div>
+            <div class="guna-sa">क्षति-रहित</div>
+            <div class="guna-char">अनावश्यक चिंता/पीड़ा से बचना।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">⚖️ सत्य + प्रियहित</div>
+            <div class="guna-sa">त्रि-आयामी संतुलन</div>
+            <div class="guna-char">सच्चाई, मधुरता, और लाभदायकता एक साथ।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">📖 स्वाध्याय</div>
+            <div class="guna-sa">आंतरिक अभ्यास</div>
+            <div class="guna-char">नियमित शास्त्र-पाठ, आत्म-अध्ययन।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> बाह्य वाणी-नैतिकता (पहले तीन) + आंतरिक वाचिक अभ्यास (चौथा) — यह वाचिक तप को सामाजिक और व्यक्तिगत दोनों आयामों में पूर्ण बनाता है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 17 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १३<br>तामसिक यज्ञ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १४<br>शारीरिक तप</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. १५<br>वाचिक तप ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १६<br>मानसिक तप</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १७-२८<br>तप का त्रिगुण-भेद, दान, समापन</div></div>
+        </div>
+        <div class="callout"><b>अगला (17.16):</b> "मनःप्रसादः सौम्यत्वं मौनमात्मविनिग्रहः। भावसंशुद्धिरित्येतत्तपो मानसमुच्यते।।" — मन की प्रसन्नता, सौम्यता, मौन, आत्म-संयम, और भाव-शुद्धि — यह मानसिक तप कहा जाता है। तप-त्रय का अंतिम, सबसे आंतरिक चरण।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.१६) — ☰ नेविगेशन — मानसिक तप: मनःप्रसादः सौम्यत्वं</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"17.15 में वाचिक तप के कितने प्रमुख तत्व गिनाए गए हैं?",options:["दो","तीन","चार","छह"],correct:2},
+    {q:"'सत्यं प्रियहितं च' किस प्रसिद्ध भारतीय नैतिक सिद्धांत से मेल खाता है?",options:["अष्टांगिक मार्ग से","'सत्यं ब्रूयात् प्रियं ब्रूयात्' सिद्धांत से","पंचशील से","चार पुरुषार्थ से"],correct:1},
+    {q:"'स्वाध्यायाभ्यसनम्' किस प्रकार की वाणी है, अन्य तीन तत्वों से कैसे अलग है?",options:["दूसरों के प्रति वाणी, अन्य तीन जैसी ही","स्वयं के लिए वाणी (शास्त्र-पाठ), आंतरिक अभ्यास","केवल मानसिक, वाणी से असंबद्ध","पूजा-संबंधी वाणी, धार्मिक अनुष्ठान"],correct:1},
+    {q:"'अनुद्वेगकरम्' का क्या अर्थ है, और इसका क्या निहितार्थ नहीं है?",options:["उद्वेग न पैदा करने वाला; इसका अर्थ यह नहीं कि कठिन बातें कभी न कहें","बहुत तेज़ बोलना; चुप रहना चाहिए","धीमी वाणी; ऊँची आवाज़ में न बोलें","विदेशी भाषा; मातृभाषा में न बोलें"],correct:0},
+    {q:"तप-त्रय (17.14-16) में 17.15 का क्रम क्या है?",options:["पहला — शारीरिक","दूसरा — वाचिक, शरीर और मन के बीच","तीसरा — मानसिक","इसका तप-त्रय से कोई संबंध नहीं"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "17.14 ने शारीरिक तप को परिभाषित किया — सम्मान, शुद्धता, सरलता, संयम, अहिंसा। 17.15 अब उसी संरचना को वाणी पर लागू करता है।",
+    "'अनुद्वेगकरं वाक्यं' — उद्वेग/चिंता न पैदा करने वाली वाणी। यह वाणी की क्षति-रहितता पर पहला बल है।",
+    "'सत्यं प्रियहितं च' — सत्य, प्रिय, हितकारी। यह भारतीय नैतिक परंपरा के 'सत्यं ब्रूयात् प्रियं ब्रूयात्' सिद्धांत को प्रतिध्वनित करता है — सत्य को करुणा और लाभ के साथ संतुलित करना।",
+    "'स्वाध्यायाभ्यसनम्' — स्वाध्याय का अभ्यास। यह चौथा तत्व अलग है — यह दूसरों के प्रति नहीं, बल्कि स्वयं के लिए किया जाने वाला वाचिक अभ्यास है, जैसे शास्त्र-पाठ।",
+    "यह चारों तत्व मिलकर वाणी को एक गंभीर आध्यात्मिक अनुशासन के रूप में स्थापित करते हैं — जो बाह्य संवाद-नैतिकता और आंतरिक अध्ययन दोनों को समाहित करता है।",
+    "अगला (17.16) मानसिक तप की ओर बढ़ेगा — तप-त्रय का अंतिम, सबसे आंतरिक चरण, जो मन की प्रसन्नता, सौम्यता, मौन, और भाव-शुद्धि पर केंद्रित होगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

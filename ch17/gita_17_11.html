@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 17.11 — सात्त्विक यज्ञ: अफलाकाङ्क्षिभिर्यज्ञः</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style><body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 17 · श्लोक 11 / 28</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सत्रह</div>
+    <div class="chapter-title">अध्याय १७ — श्रद्धात्रयविभागयोग (श्रद्धा के तीन प्रकार)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १७.११ — यज्ञ-विश्लेषण का प्रारंभ</div>
+    </div>
+    <div class="guna-badge">🪔 सात्त्विक यज्ञ — निष्काम कर्म, शास्त्र-विधि, और कर्तव्य-भाव का संगम</div>
+    <div class="shloka">
+      अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते।<br>
+      यष्टव्यमेवेति मनः समाधाय स सात्त्विकः।।
+    </div>
+    <div class="translit">
+      aphalākāṅkṣibhir yajño vidhi-dṛṣṭo ya ijyate,<br>
+      yaṣṭavyam eveti manaḥ samādhāya sa sāttvikaḥ
+    </div>
+    <div class="gist">
+      जो यज्ञ <b>फल की इच्छा के बिना</b>, <b>शास्त्र-विधि के अनुसार</b>, "यह करना ही चाहिए" — ऐसा <b>मन को स्थिर</b> करके किया जाता है, वह <b>सात्त्विक</b> है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — आहार से यज्ञ की ओर</h3>
+      <p>17.8-10 ने आहार का त्रिविध विश्लेषण पूर्ण किया। अब 17.11 से, 17.7 की घोषणा के अनुसार, <b>यज्ञ</b> (अनुष्ठान/त्याग) का त्रिविध विश्लेषण शुरू होता है। यह श्लोक सात्त्विक यज्ञ को परिभाषित करता है — और यह गीता के कई पूर्व-सिद्धांतों का एक सुंदर संगम प्रस्तुत करता है।</p>
+      <p>ध्यान दें कि यह श्लोक तीन अलग-अलग गीता-सिद्धांतों को एक साथ लाता है — <b>(1) निष्काम कर्म</b> (अफलाकाङ्क्षिभिः — फल की इच्छा के बिना, अध्याय 2 का केंद्रीय सिद्धांत), <b>(2) शास्त्र-प्रामाण्य</b> (विधिदृष्टः — शास्त्र-सम्मत, 16.24 और 17.1 से जुड़ा विषय), और <b>(3) कर्तव्य-भावना</b> (यष्टव्यमेव इति — "यह करना ही चाहिए")।</p>
+      <div class="callout-rajas"><b>ध्यान दें — गीता के तीन धागे एक साथ बुने गए:</b> यह श्लोक दिखाता है कि गीता के अलग-अलग अध्यायों में सिखाए गए सिद्धांत अंततः एक-दूसरे से पूरी तरह जुड़े हैं। "निष्काम कर्म" (2.47), "शास्त्र प्रमाण है" (16.24), और अब "यह करना ही चाहिए" का कर्तव्य-भाव — ये तीनों मिलकर सात्त्विक यज्ञ की परिभाषा बनाते हैं। यह गीता की वैचारिक एकता का प्रमाण है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अफलाकाङ्क्षिभिः</span><span class="word-tr">aphalākāṅkṣibhiḥ</span></div>
+          <div class="word-meaning">फल की इच्छा न रखने वालों द्वारा — तृतीया बहुवचन</div>
+          <div class="word-eng"><b>EN:</b> by those who desire no fruit/reward</div>
+          <div class="word-deep">अ (नहीं) + फल (परिणाम) + आकाङ्क्षिन् (इच्छा रखने वाला)। यह शब्द सीधे 2.47 के "मा फलेषु कदाचन" (फल में कभी आसक्त मत हो) की याद दिलाता है — निष्काम कर्म का सिद्धांत यहाँ यज्ञ पर लागू होता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यज्ञः विधिदृष्टः</span><span class="word-tr">yajñaḥ vidhi-dṛṣṭaḥ</span></div>
+          <div class="word-meaning">यज्ञ जो शास्त्र-विधि द्वारा निर्दिष्ट है</div>
+          <div class="word-eng"><b>EN:</b> sacrifice seen/prescribed by scriptural rule</div>
+          <div class="word-deep">विधि = नियम, आदेश (शास्त्र-सम्मत विधान)। दृष्टः = देखा गया, निर्दिष्ट। यह वाक्यांश सीधे 16.24 ("तस्माच्छास्त्रं प्रमाणं ते") और 17.1 (अर्जुन का "शास्त्रविधिम् उत्सृज्य" प्रश्न) से जुड़ता है — यहाँ स्पष्ट किया गया है कि सात्त्विक यज्ञ शास्त्र-सम्मत ढांचे के भीतर ही होता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यः इज्यते</span><span class="word-tr">ya ijyate</span></div>
+          <div class="word-meaning">जो किया/अर्पित किया जाता है — कर्मणि वर्तमानकाल</div>
+          <div class="word-eng"><b>EN:</b> which is performed/offered</div>
+          <div class="word-deep">√यज् (यज्ञ करना, अर्पित करना) का कर्मणि वर्तमानकाल रूप। यह क्रिया-रूप यज्ञ को एक सक्रिय, केंद्रित कर्म के रूप में प्रस्तुत करता है, न कि निष्क्रिय घटना के रूप में।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यष्टव्यम् एव इति</span><span class="word-tr">yaṣṭavyam eva iti</span></div>
+          <div class="word-meaning">"यह करना ही चाहिए" — ऐसा (सोचकर)</div>
+          <div class="word-eng"><b>EN:</b> "this ought to be performed" — thinking thus</div>
+          <div class="word-deep">यष्टव्यम् = यज् धातु से बना विध्यर्थक कृदन्त (कर्तव्य-सूचक, "करना चाहिए")। एव = ही (बल-सूचक)। यह वाक्यांश शुद्ध <b>कर्तव्य-भावना</b> को दर्शाता है — यज्ञ न तो फल की इच्छा से, न ही सामाजिक दबाव से, बल्कि इस आंतरिक निश्चय से किया जाता है कि "यह मेरा कर्तव्य है, इसे करना ही चाहिए।"</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">मनः समाधाय सः सात्त्विकः</span><span class="word-tr">manaḥ samādhāya sa sāttvikaḥ</span></div>
+          <div class="word-meaning">मन को स्थिर करके, वह सात्त्विक है</div>
+          <div class="word-eng"><b>EN:</b> having composed the mind, that (yajna) is sāttvic</div>
+          <div class="word-deep">समाधाय = सम्+आ+√धा का गेरुण्ड — "स्थिर/एकाग्र करके" (यहीं से "समाधि" शब्द भी आता है)। यह मानसिक अनुशासन, एकाग्रता, और आंतरिक स्थिरता की माँग करता है — केवल बाह्य कर्म-विधि नहीं, बल्कि सही <b>मानसिक अवस्था</b> भी सात्त्विक यज्ञ के लिए आवश्यक है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        The sacrifice that is offered according to scriptural injunction, by those who desire no fruit, with the mind fixed on "this ought to be done" — that is sāttvic.
+      </div>
+      <p>17.11 गीता के केंद्रीय कर्म-सिद्धांत — निष्काम कर्म — को यज्ञ के विशिष्ट संदर्भ में पुनः प्रस्तुत करता है। अध्याय 2 में कृष्ण ने कहा था "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन" (2.47) — कर्म करने का अधिकार है, फल में नहीं। यहाँ 17.11 उसी सिद्धांत को यज्ञ पर लागू करता है — सात्त्विक यज्ञ वह है जो <b>बिना किसी फल की अपेक्षा के, केवल कर्तव्य-भावना से</b> किया जाए।</p>
+      <p>तीन शर्तें एक साथ पूरी होनी चाहिए — (1) फल की इच्छा का अभाव (अफलाकाङ्क्षा), (2) शास्त्र-सम्मत विधि का पालन (विधिदृष्टः), और (3) "करना ही चाहिए" का दृढ़, स्थिर मनोभाव (यष्टव्यमेव इति मनः समाधाय)। यह तीनों मिलकर एक <b>पूर्ण, संतुलित कर्म</b> की परिभाषा बनाते हैं — न अंधानुकरण (केवल विधि, बिना समझ), न स्वेच्छाचार (बिना विधि के मनमाना कर्म), बल्कि दोनों का सुंदर संतुलन।</p>
+      <div class="callout-rajas"><b>"यष्टव्यमेव" — कांट के कर्तव्य-सिद्धांत से एक रोचक समानांतर:</b> "यह करना ही चाहिए, चाहे परिणाम कुछ भी हो" का यह भाव पश्चिमी दर्शन में इमैनुएल कांट के "कर्तव्य के लिए कर्तव्य" (duty for duty's sake) सिद्धांत से आश्चर्यजनक रूप से मेल खाता है — दोनों ही परिणाम की परवाह किए बिना, शुद्ध कर्तव्य-भावना से किए गए कर्म को नैतिक रूप से श्रेष्ठ मानते हैं, यद्यपि गीता का संदर्भ आध्यात्मिक है, कांट का तर्क-आधारित।</div>
+      <p>यह श्लोक हमें एक गहरा प्रश्न देता है — क्या हमारे कर्म (चाहे धार्मिक अनुष्ठान हों या दैनिक जिम्मेदारियाँ) फल की आशा से प्रेरित हैं, या शुद्ध कर्तव्य-भावना से? यह अंतर ही किसी कर्म की आध्यात्मिक गुणवत्ता निर्धारित करता है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — बिना पहचान की आशा के सेवा:</b> कोई व्यक्ति नियमित रूप से किसी सामाजिक कार्य में योगदान देता है, बिना यह अपेक्षा किए कि उसे श्रेय, प्रशंसा, या कोई प्रतिफल मिलेगा — केवल इसलिए क्योंकि वह इसे सही, आवश्यक मानता है। यह ठीक "यष्टव्यमेव इति" का आधुनिक उदाहरण है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — पेशेवर कर्तव्य-निष्ठा:</b> एक डॉक्टर या शिक्षक जो अपना कार्य पूरी निष्ठा और कौशल से करता है, चाहे तत्काल मान्यता मिले या न मिले, केवल इसलिए क्योंकि यह उसका कर्तव्य है और वह इसमें विश्वास रखता है — यह सात्त्विक यज्ञ की भावना का व्यावसायिक-जीवन में प्रयोग है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — पारंपरिक अनुष्ठान बनाम यांत्रिक क्रिया:</b> जब कोई व्यक्ति किसी पारिवारिक/धार्मिक परंपरा का पालन पूरी समझ, श्रद्धा, और एकाग्रता से करता है (न कि यंत्रवत् या दिखावे के लिए), वह "मनः समाधाय" (मन को स्थिर करके) की भावना का उदाहरण है।
+      </div>
+      <div class="callout"><b>महत्त्वपूर्ण बात:</b> यह श्लोक हमें याद दिलाता है कि सच्चा, उच्च-गुणवत्ता वाला कर्म केवल "सही विधि" जानने से नहीं आता — इसके लिए फल-आसक्ति का त्याग और एक स्थिर, केंद्रित मन दोनों आवश्यक हैं। यह गीता के कर्मयोग-सिद्धांत का एक व्यावहारिक, संक्षिप्त सूत्र है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">17.11 का 2.47 (कर्मण्येवाधिकारस्ते) से क्या संबंध है?</div>
+        <div class="a">17.11 वास्तव में 2.47 के निष्काम कर्म-सिद्धांत का ही एक विशिष्ट प्रयोग है — जहाँ 2.47 सामान्य रूप से सभी कर्मों पर लागू होता है, वहाँ 17.11 विशेष रूप से यज्ञ (धार्मिक अनुष्ठान) पर इसे लागू करता है। यह दिखाता है कि गीता का केंद्रीय सिद्धांत — फल-आसक्ति के बिना कर्म — जीवन के हर क्षेत्र में सुसंगत रूप से लागू होता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"विधिदृष्टः" (शास्त्र-सम्मत) पर इतना बल क्यों दिया गया है?</div>
+        <div class="a">यह अध्याय 16 (16.23-24) और अध्याय 17 के प्रारंभ (17.1) में उठाए गए विषय की निरंतरता है — गीता मानती है कि केवल आंतरिक प्रेरणा (निष्काम भाव) पर्याप्त नहीं; कर्म को उचित, परंपरा-सम्मत ढांचे (शास्त्र-विधि) के भीतर भी होना चाहिए। यह "आंतरिक शुद्धता + बाह्य संरचना" दोनों के महत्व को दर्शाता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या "मनः समाधाय" (मन को स्थिर करना) ध्यान/समाधि से संबंधित है?</div>
+        <div class="a">हाँ, "समाधाय" शब्द उसी मूल (सम्+आ+धा) से आता है जिससे "समाधि" शब्द बना है। यह दर्शाता है कि सात्त्विक यज्ञ केवल बाहरी क्रिया नहीं, बल्कि एक आंतरिक, ध्यान-सदृश एकाग्रता की अवस्था भी माँगता है — यज्ञ करते समय मन को विचलित नहीं, बल्कि स्थिर, केंद्रित रहना चाहिए।</div>
+      </div>
+      <div class="faq">
+        <div class="q">17.11 के बाद क्या आता है?</div>
+        <div class="a">17.12 में राजसिक यज्ञ का वर्णन आएगा — "अभिसंधाय तु फलं दम्भार्थमपि चैव यत्। इज्यते भरतश्रेष्ठ तं यज्ञं विद्धि राजसम्।।" — जो यज्ञ फल की स्पष्ट अपेक्षा से, या केवल दिखावे के लिए किया जाता है, हे भरतश्रेष्ठ, उसे राजसिक जानो। यह 17.11 के निःस्वार्थ, शास्त्र-सम्मत यज्ञ के ठीक विपरीत चित्र प्रस्तुत करेगा।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>17.11 गीता के विभिन्न अध्यायों में बिखरे सिद्धांतों — निष्काम कर्म (अध्याय 2-3), शास्त्र-प्रामाण्य (अध्याय 16), और कर्तव्य-भावना — को एक ही श्लोक में समेटने वाला, एक संश्लेषणात्मक (synthesizing) श्लोक है। यह गीता की वैचारिक एकता का सुंदर प्रमाण है।</p>
+        <p>यह श्लोक यज्ञ-विश्लेषण (17.11-13) की शुरुआत भी करता है, जो अध्याय 17 के आहार-विश्लेषण (17.8-10) के पैटर्न को दोहराता है — पहले सात्त्विक, फिर राजसिक, फिर तामसिक उदाहरण।</p>
+        <div class="callout"><b>यज्ञ का व्यापक अर्थ:</b> "यज्ञ" शब्द गीता में केवल औपचारिक अग्नि-अनुष्ठान तक सीमित नहीं — अध्याय 3 (3.9-16) में इसे व्यापक रूप से "निःस्वार्थ कर्म, समाज के प्रति योगदान" के रूप में भी समझाया गया है। 17.11 का सिद्धांत — बिना फल-आकांक्षा, कर्तव्य-भाव से किया गया कर्म — इस व्यापक अर्थ में भी लागू होता है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — सात्त्विक यज्ञ के तीन आधार-स्तंभ</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="70" rx="130" ry="34" fill="rgba(140,74,32,0.14)" stroke="rgba(140,74,32,0.5)" stroke-width="1.4"/>
+          <text x="350" y="64" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">सात्त्विक यज्ञ</text>
+          <text x="350" y="82" text-anchor="middle" fill="#cfc3a8" font-size="10">तीन स्तंभों का संगम</text>
+
+          <line x1="250" y1="95" x2="150" y2="150" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <rect x="60" y="155" width="180" height="60" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="150" y="177" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">अफलाकाङ्क्षा</text>
+          <text x="150" y="194" text-anchor="middle" fill="#cfc3a8" font-size="9">निष्काम कर्म (2.47)</text>
+
+          <line x1="350" y1="104" x2="350" y2="150" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <rect x="260" y="155" width="180" height="60" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="350" y="177" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">विधिदृष्टः</text>
+          <text x="350" y="194" text-anchor="middle" fill="#cfc3a8" font-size="9">शास्त्र-प्रामाण्य (16.24)</text>
+
+          <line x1="450" y1="95" x2="550" y2="150" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <rect x="460" y="155" width="180" height="60" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="550" y="177" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">यष्टव्यमेव इति</text>
+          <text x="550" y="194" text-anchor="middle" fill="#cfc3a8" font-size="9">कर्तव्य-भावना</text>
+
+          <line x1="350" y1="230" x2="350" y2="270" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <rect x="180" y="270" width="340" height="52" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="350" y="291" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">मनः समाधाय</text>
+          <text x="350" y="309" text-anchor="middle" fill="#cfc3a8" font-size="10">स्थिर, एकाग्र मन — तीनों को एकत्रित करने वाली अवस्था</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — "कर्तव्य के लिए कर्तव्य" अन्य परंपराओं में</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/संदर्भ</th><th>17.11 से समानता</th><th>अंतर</th></tr>
+          <tr><td>इमैनुएल कांट का "duty for duty's sake" (कर्तव्य-नीतिशास्त्र)</td><td>परिणाम की परवाह किए बिना शुद्ध कर्तव्य-भावना से कर्म करना</td><td>कांट तर्क-आधारित सार्वभौमिक नियम पर, गीता शास्त्र-सम्मत विधि और भक्ति दोनों पर</td></tr>
+          <tr><td>बौद्ध धर्म में "सम्यक् कर्म" (सही आजीविका/कर्म)</td><td>फल-आसक्ति के बिना, सही सिद्धांतों के अनुसार कर्म करना</td><td>बौद्ध सिद्धांत अष्टांगिक मार्ग के भीतर, गीता यज्ञ-विशिष्ट संदर्भ में</td></tr>
+          <tr><td>यहूदी-ईसाई परंपरा में "मिट्ज़्वा" (धार्मिक कर्तव्य पूरा करना)</td><td>धार्मिक अनुष्ठान को आज्ञा-पालन और श्रद्धा से करना</td><td>यहूदी परंपरा आज्ञा-केंद्रित, गीता आंतरिक निष्कामता पर भी बल देती है</td></tr>
+          <tr><td>स्टोइक दर्शन में "अपने नियंत्रण में जो है उस पर ध्यान देना"</td><td>परिणाम (जो नियंत्रण में नहीं) की चिंता छोड़कर कर्तव्य पर केंद्रित रहना</td><td>स्टोइक दर्शन तर्क-आधारित आत्म-नियंत्रण पर, गीता समर्पण और शास्त्र-सम्मति पर भी</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशेषता:</b> 17.11 फल-त्याग, शास्त्र-सम्मति, और मानसिक स्थिरता — तीनों को एक साथ माँगता है, जो इसे कई अन्य कर्तव्य-केंद्रित नीतिशास्त्रों से अधिक समग्र बनाता है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>अपने कर्मों की प्रेरणा जाँचें:</b> किसी भी महत्वपूर्ण कार्य से पहले पूछें — "क्या मैं यह फल की आशा से कर रहा हूँ, या क्योंकि मैं वास्तव में मानता हूँ कि यह करना सही/आवश्यक है?" यह प्रश्न 17.11 की भावना को दैनिक जीवन में लागू करने का प्रत्यक्ष तरीका है।</div>
+        <p><b>अभ्यास — "यष्टव्यमेव" की भावना विकसित करना:</b> किसी नियमित कर्तव्य (चाहे पारिवारिक, व्यावसायिक, या सामुदायिक) को इस भाव से करने का अभ्यास करें — "यह करना ही चाहिए," बिना यह सोचे कि इससे मुझे क्या मिलेगा। धीरे-धीरे यह अभ्यास फल-आसक्ति को कम करता है और कर्म की गुणवत्ता को बढ़ाता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> इस श्लोक को कर्मयोग और ज्ञानयोग के बीच का सेतु मानते हैं — फल-त्याग सहित शास्त्र-सम्मत यज्ञ, चित्त-शुद्धि की ओर ले जाता है, जो अंततः ज्ञान-प्राप्ति के लिए आवश्यक आधार तैयार करता है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "यष्टव्यमेवेति" को भक्ति की शुद्ध भावना के रूप में देखते हैं — भगवद्-अर्पण का कर्म बिना किसी सांसारिक अपेक्षा के, केवल भगवान् के प्रति कर्तव्य और प्रेम से किया जाना चाहिए।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को कर्मयोग के सर्वोत्तम, संक्षिप्त सूत्र-वाक्य के रूप में देखते हैं — यह गीता के संपूर्ण कर्म-सिद्धांत (2.47 से लेकर) को यज्ञ-विशिष्ट संदर्भ में पुनः स्थापित करता है, जो गीता की आंतरिक सुसंगति को दर्शाता है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं कि यह श्लोक निष्काम कर्म के सिद्धांत का एक व्यावहारिक, संक्षिप्त, और शक्तिशाली प्रयोग है, जो ज्ञान, भक्ति, और कर्म — तीनों मार्गों को छूता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अफलाकाङ्क्षिभिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>फल की इच्छा न रखने वालों द्वारा</b>2.47 के निष्काम कर्म से सीधा संबंध</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">विधिदृष्टः</span></div>
+            <div class="flashcard-face flashcard-back"><b>शास्त्र-विधि द्वारा निर्दिष्ट</b>16.24 और 17.1 से जुड़ा विषय</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">यष्टव्यमेव इति</span></div>
+            <div class="flashcard-face flashcard-back"><b>"यह करना ही चाहिए"</b>शुद्ध कर्तव्य-भावना</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">मनः समाधाय</span></div>
+            <div class="flashcard-face flashcard-back"><b>मन को स्थिर करके</b>"समाधि" शब्द का मूल — एकाग्रता</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सः सात्त्विकः</span></div>
+            <div class="flashcard-face flashcard-back"><b>वह सात्त्विक है</b>तीन शर्तों का समग्र परिणाम</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">अफलाकाङ्क्षिभिः</td><td>अ+फल+आ+काङ्क्ष्</td><td>तृतीया बहुवचन</td><td>फल न चाहने वालों द्वारा — करण</td></tr>
+          <tr><td class="sa">यज्ञः विधिदृष्टः</td><td>यज्ञ, विधि+√दृश्</td><td>प्रथमा एकवचन (×२)</td><td>शास्त्र-विहित यज्ञ — कर्ता</td></tr>
+          <tr><td class="sa">यः इज्यते</td><td>यद्, √यज्</td><td>प्रथमा, कर्मणि वर्तमान</td><td>जो किया जाता है</td></tr>
+          <tr><td class="sa">यष्टव्यम्</td><td>√यज्+तव्यत्</td><td>विध्यर्थक कृदन्त, प्रथमा</td><td>करना चाहिए</td></tr>
+          <tr><td class="sa">मनः समाधाय</td><td>मनस्, सम्+आ+√धा</td><td>द्वितीया, ल्यबन्त</td><td>मन को स्थिर करके</td></tr>
+          <tr><td class="sa">सः सात्त्विकः</td><td>तद्, सत्त्व+ठक्</td><td>प्रथमा एकवचन (×२)</td><td>वह सात्त्विक है — विधेय</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते।<br>यष्टव्यमेवेति मनः समाधाय स सात्त्विकः।।</div>
+          <div class="cheat-translit">aphalākāṅkṣibhir yajño vidhi-dṛṣṭo ya ijyate, yaṣṭavyam eveti manaḥ samādhāya sa sāttvikaḥ</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अफलाकाङ्क्षिभिः</b> फल की इच्छा बिना</span>
+            <span class="cheat-chip"><b>विधिदृष्टः</b> शास्त्र-सम्मत</span>
+            <span class="cheat-chip"><b>यष्टव्यमेव इति</b> कर्तव्य-भावना</span>
+            <span class="cheat-chip"><b>मनः समाधाय</b> स्थिर मन से</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: सात्त्विक यज्ञ तीन शर्तों को एक साथ पूरा करता है — फल-त्याग (निष्काम कर्म), शास्त्र-सम्मति, और स्थिर मन से किया गया कर्तव्य-भाव। यह श्लोक गीता के कई पूर्व-सिद्धांतों (2.47, 16.24) को यज्ञ के विशिष्ट संदर्भ में संश्लेषित करता है, और अध्याय 17 के यज्ञ-विश्लेषण (17.11-13) की शुरुआत करता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते। यष्टव्यमेवेति मनः समाधाय स सात्त्विकः।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते। यष्टव्यमेवेति मनः समाधाय स सात्त्विकः।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जो यज्ञ फल की इच्छा के बिना, शास्त्र-विधि के अनुसार, यह करना ही चाहिए ऐसा मन को स्थिर करके किया जाता है, वह सात्त्विक है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द (शुद्ध ४×८)</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">फ</span><span class="syll">ला</span><span class="syll">का</span><span class="syll">ङ्क्षि</span><span class="syll">भिर्</span><span class="syll">यज्</span><span class="syll">ञो</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">वि</span><span class="syll">धि</span><span class="syll">दृष्</span><span class="syll">टो</span><span class="syll">य</span><span class="syll">इज्</span><span class="syll">य</span><span class="syll">ते</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">यष्</span><span class="syll">टव्</span><span class="syll">य</span><span class="syll">मे</span><span class="syll">वे</span><span class="syll">ति</span><span class="syll">म</span><span class="syll">नः</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">स</span><span class="syll">मा</span><span class="syll">धा</span><span class="syll">य</span><span class="syll">स</span><span class="syll">सात्</span><span class="syll">त्वि</span><span class="syll">कः</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते यष्टव्यमेवेति मनः समाधाय स सात्त्विकः', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> शुद्ध ४×८ अनुष्टुप्, ३२ अक्षर। जप करते समय "यष्टव्यमेवेति" पर रुकें — क्या मेरे जीवन में कोई कर्तव्य है जिसे मैं शुद्ध भाव से, बिना फल-अपेक्षा के, निभा रहा हूँ?</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">17.10 vs 17.11</button>
+      <button class="tab-btn" data-tab="e2">तीन गीता-सिद्धांतों का संगम</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 17.10 vs 17.11 — आहार-समापन से यज्ञ-प्रारंभ तक</h3>
+        <p class="subnote">एक अध्याय-खंड का अंत, दूसरे का प्रारंभ</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🍽️ 17.10 — आहार-विश्लेषण का समापन</div>
+            <div class="contrast-sa">भोजनं तामसप्रियम्</div>
+            <p><b>तामसिक भोजन के साथ त्रिविध आहार-विश्लेषण पूर्ण।</b></p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 17.11 — यज्ञ-विश्लेषण का प्रारंभ</div>
+            <div class="contrast-sa">अफलाकाङ्क्षिभिर्यज्ञः... सात्त्विकः</div>
+            <p><b>सात्त्विक यज्ञ के साथ नए विषय की शुरुआत।</b></p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> दोनों श्लोक-समूह (17.8-10 आहार, 17.11-13 यज्ञ) एक ही त्रिविध पैटर्न (सात्त्विक-राजसिक-तामसिक) दोहराते हैं, जो अध्याय 17 की व्यवस्थित संरचना को दर्शाता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 तीन गीता-सिद्धांतों का संगम — 17.11 में</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🎯 निष्काम कर्म</div>
+            <div class="guna-sa">अफलाकाङ्क्षा (2.47 से)</div>
+            <div class="guna-char">फल की इच्छा के बिना कर्म — अध्याय 2 का केंद्रीय सिद्धांत।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">📜 शास्त्र-प्रामाण्य</div>
+            <div class="guna-sa">विधिदृष्टः (16.24 से)</div>
+            <div class="guna-char">शास्त्र-सम्मत आचरण — अध्याय 16 का विषय।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">💪 कर्तव्य-भावना</div>
+            <div class="guna-sa">यष्टव्यमेव इति</div>
+            <div class="guna-char">"यह करना ही चाहिए" — स्थिर, दृढ़ मनोभाव।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> यह श्लोक गीता के तीन अलग-अलग अध्यायों के सिद्धांतों को एक ही परिभाषा में समेटता है — यह गीता की गहरी आंतरिक एकता और सुसंगति का प्रमाण है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 17 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ९<br>राजसिक आहार</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १०<br>तामसिक आहार — समापन</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ११<br>सात्त्विक यज्ञ ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १२<br>राजसिक यज्ञ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १३-२८<br>तामसिक यज्ञ, तप, दान, समापन</div></div>
+        </div>
+        <div class="callout"><b>अगला (17.12):</b> "अभिसंधाय तु फलं दम्भार्थमपि चैव यत्। इज्यते भरतश्रेष्ठ तं यज्ञं विद्धि राजसम्।।" — जो यज्ञ फल की स्पष्ट अपेक्षा से, या केवल दिखावे के लिए किया जाता है, उसे राजसिक जानो। 17.11 के निःस्वार्थ यज्ञ के ठीक विपरीत।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.१२) — ☰ नेविगेशन — राजसिक यज्ञ: अभिसंधाय तु फलं</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"17.11 में सात्त्विक यज्ञ की कितनी शर्तें बताई गई हैं?",options:["एक","दो","तीन","पाँच"],correct:2},
+    {q:"'अफलाकाङ्क्षिभिः' किस पूर्व-सिद्धांत से सीधा जुड़ा है?",options:["1.1 की भूमिका से","2.47 के निष्काम कर्म से","11.14 के विस्मय से","18.78 के योगेश्वर से"],correct:1},
+    {q:"'विधिदृष्टः' का क्या अर्थ है, और यह किस विषय से जुड़ा है?",options:["स्वेच्छा से किया गया, कोई संबंध नहीं","शास्त्र-सम्मत, 16.24 और 17.1 से जुड़ा", "गुप्त रूप से किया गया, कोई संबंध नहीं","धन-अर्जन के लिए, आर्थिक सिद्धांत से"],correct:1},
+    {q:"'समाधाय' शब्द किस अन्य महत्वपूर्ण शब्द से मूल-संबंध रखता है?",options:["संन्यास से","समाधि से","संस्कार से","संयोग से"],correct:1},
+    {q:"17.11 के बाद (17.12 में) किस प्रकार के यज्ञ का वर्णन आएगा?",options:["सात्त्विक यज्ञ का और विस्तार","राजसिक यज्ञ — फल-अपेक्षा और दिखावे से युक्त","तामसिक यज्ञ","यज्ञ का पूर्ण निषेध"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "17.8-10 ने आहार का त्रिविध विश्लेषण पूर्ण किया। 17.11 अब यज्ञ (अनुष्ठान/त्याग) के त्रिविध विश्लेषण की शुरुआत करता है।",
+    "'अफलाकाङ्क्षिभिः' — फल की इच्छा के बिना। यह सीधे अध्याय 2 के 'कर्मण्येवाधिकारस्ते मा फलेषु कदाचन' (2.47) से जुड़ता है।",
+    "'विधिदृष्टः' — शास्त्र-विधि के अनुसार। यह अध्याय 16 (16.24) और 17.1 में उठाए गए शास्त्र-प्रामाण्य के विषय की निरंतरता है।",
+    "'यष्टव्यमेव इति मनः समाधाय' — 'यह करना ही चाहिए' ऐसा मन को स्थिर करके। यह शुद्ध कर्तव्य-भावना और मानसिक एकाग्रता दोनों की माँग करता है।",
+    "यह श्लोक गीता के तीन अलग-अलग सिद्धांतों — निष्काम कर्म, शास्त्र-प्रामाण्य, और कर्तव्य-भावना — को एक साथ लाकर सात्त्विक यज्ञ को परिभाषित करता है।",
+    "अगला (17.12) इसका ठीक विपरीत दिखाएगा — राजसिक यज्ञ, जो फल की स्पष्ट अपेक्षा या दिखावे के लिए किया जाता है।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 17.6 — तान्विद्धि आसुरनिश्चयान्: वाक्य का समापन</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style><body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 17 · श्लोक 6 / 28</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सत्रह</div>
+    <div class="chapter-title">अध्याय १७ — श्रद्धात्रयविभागयोग (श्रद्धा के तीन प्रकार)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १७.६ (17.5 के वाक्य का समापन)</div>
+    </div>
+    <div class="guna-badge">🪔 वाक्य का समापन — तान्विद्धि आसुरनिश्चयान्</div>
+    <div class="shloka">
+      कर्शयन्तः शरीरस्थं भूतग्राममचेतसः।<br>
+      मां चैवान्तःशरीरस्थं तान्विद्धयासुरनिश्चयान्।।
+    </div>
+    <div class="translit">
+      karśayantaḥ śarīra-sthaṃ bhūta-grāmam acetasaḥ,<br>
+      māṃ caivāntaḥ-śarīra-sthaṃ tān viddhy āsura-niścayān
+    </div>
+    <div class="gist">
+      <span style="opacity:0.7;font-style:italic;">(17.5 से जारी —)</span> ...जो अविवेकतापूर्वक शरीरस्थ <b>भूत-समूह</b> को, और शरीर के भीतर स्थित <b>मुझे भी</b> कष्ट देते हैं — जान लो, <b>उनका निश्चय आसुरी है।</b>
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — वाक्य पूर्ण होता है</h3>
+      <p>17.5 ने एक अपूर्ण वाक्य से हमें रोमांचित/उत्सुक छोड़ा था — "जो लोग शास्त्र-विरुद्ध, घोर तप करते हैं, दंभ-अहंकार से युक्त, काम-राग-बल से प्रेरित हैं..." — और अब 17.6 में यह वाक्य अपने पूर्ण, गंभीर निष्कर्ष तक पहुँचता है।</p>
+      <p>यह श्लोक दो महत्वपूर्ण बातें जोड़ता है — <b>(1)</b> ऐसे लोग किसे कष्ट पहुँचाते हैं (शरीरस्थ भूत-समूह को, और स्वयं शरीर में स्थित कृष्ण को भी), और <b>(2)</b> अंतिम निर्णय — "तान्विद्धि आसुरनिश्चयान्" — जान लो, ऐसे लोगों का निश्चय आसुरी है। पूरा 17.5-6 का संयुक्त वाक्य अब अपने संपूर्ण, तीव्र अर्थ में स्पष्ट होता है।</p>
+      <div class="callout-rajas"><b>पूर्ण वाक्य — एक साथ पढ़ें (17.5 + 17.6):</b> "जो लोग शास्त्र-विरुद्ध, घोर तप करते हैं, जो दंभ और अहंकार से युक्त हैं, काम, राग, और बल से प्रेरित हैं, और जो अविवेकतापूर्वक शरीरस्थ भूत-समूह को और शरीर के भीतर स्थित मुझे भी कष्ट देते हैं — जान लो, ऐसे लोगों का निश्चय आसुरी है।" यह गीता की काव्य-रचना की एक विशेषता है — दो श्लोकों का मिलकर एक सशक्त, संपूर्ण नैतिक निर्णय बनना।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कर्शयन्तः</span><span class="word-tr">karśayantaḥ</span></div>
+          <div class="word-meaning">क्षीण/दुर्बल करने वाले — वर्तमान कृदन्त</div>
+          <div class="word-eng"><b>EN:</b> emaciating, tormenting</div>
+          <div class="word-deep">√कृश् (क्षीण होना) का प्रयोजक (causative) रूप, वर्तमान कृदन्त बहुवचन — "क्षीण/दुर्बल करने वाले।" यह शब्द अत्यधिक कठोर, शरीर-पीड़ादायक तप की क्रिया को सीधे इंगित करता है — वे लोग जो जानबूझकर, अत्यधिक रूप से, अपने शरीर को कष्ट/क्षीण कर रहे हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">शरीरस्थम् भूतग्रामम्</span><span class="word-tr">śarīra-sthaṃ bhūta-grāmam</span></div>
+          <div class="word-meaning">शरीर में स्थित भूत-समूह को</div>
+          <div class="word-eng"><b>EN:</b> the aggregate of elements dwelling in the body</div>
+          <div class="word-deep">भूतग्राम = भूत (पंच महाभूत — पृथ्वी, जल, अग्नि, वायु, आकाश) + ग्राम (समूह/संग्रह)। यह शरीर की भौतिक संरचना को इंगित करता है, जो इन्हीं पंच तत्वों से बनी है। गीता यहाँ शरीर को केवल "मेरा" स्वामित्व नहीं, बल्कि एक <b>पवित्र, तत्व-निर्मित संरचना</b> के रूप में प्रस्तुत करती है, जिसे अनावश्यक कष्ट नहीं दिया जाना चाहिए।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अचेतसः</span><span class="word-tr">acetasaḥ</span></div>
+          <div class="word-meaning">अविवेकी, बुद्धिहीन — बहुवचन विशेषण</div>
+          <div class="word-eng"><b>EN:</b> senseless, lacking discernment</div>
+          <div class="word-deep">अ (नकारात्मक) + चेतस् (चेतना, विवेक-बुद्धि)। यह शब्द इन तप करने वालों को "अविवेकी" घोषित करता है — उनकी समस्या केवल गलत कर्म नहीं, बल्कि <b>गलत समझ/विवेक की कमी</b> है। वे यह नहीं समझते कि वे किसे हानि पहुँचा रहे हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">माम् च एव अन्तःशरीरस्थम्</span><span class="word-tr">māṃ ca eva antaḥ-śarīra-stham</span></div>
+          <div class="word-meaning">और मुझे भी, जो शरीर के भीतर स्थित हूँ</div>
+          <div class="word-eng"><b>EN:</b> and Me too, who dwells within the body</div>
+          <div class="word-deep">यह श्लोक का धार्मिक-दार्शनिक चरम-बिंदु है। कृष्ण घोषणा करते हैं कि वे स्वयं <b>प्रत्येक शरीर के भीतर, अंतर्यामी (आंतरिक साक्षी/नियंता) के रूप में निवास करते हैं</b> — यह अध्याय 13 (13.22 — "उपद्रष्टानुमन्ता...") और अध्याय 15 (15.7 — "ममैवांशो जीवलोके") के सिद्धांतों से सीधा जुड़ा है। अतः शरीर को अनावश्यक कष्ट देना केवल स्वयं को हानि नहीं, बल्कि <b>भीतर निवास करने वाले परमात्मा का भी अनादर</b> है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">तान् विद्धि आसुरनिश्चयान्</span><span class="word-tr">tān viddhy āsura-niścayān</span></div>
+          <div class="word-meaning">उन्हें आसुरी निश्चय वाला जानो</div>
+          <div class="word-eng"><b>EN:</b> know them to be of demonic resolve</div>
+          <div class="word-deep">तान् = उन्हें। विद्धि = √विद् (जानना) का आज्ञार्थ — "जानो/समझो।" आसुरनिश्चयान् = आसुर (राक्षसी/असुर-तुल्य) + निश्चयान् (दृढ़ संकल्प/निर्णय वाले)। यह अंतिम, निर्णायक शब्द इस पूरे 17.5-6 के वाक्य को अध्याय 16 (दैवासुरसम्पद्विभागयोग) से सीधे जोड़ता है — यह तप त्रिगुण की सामान्य श्रेणी (सात्त्विक-राजसिक-तामसिक) से भी आगे, एक चौथी, अधिक गंभीर "आसुरी" श्रेणी में आता है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        (Continuing from 17.5) — ...senselessly tormenting the aggregate of elements that constitute the body, and Me too, who dwells within the body — know them to be of demonic resolve.
+      </div>
+      <p>17.6, 17.5 के साथ मिलकर, गीता के सबसे स्पष्ट और तीव्र नैतिक निर्णयों में से एक प्रस्तुत करता है। यह वर्णन करता है कि शास्त्र-विरुद्ध, अहंकार-प्रेरित, अत्यधिक कठोर तप <b>दो स्तरों पर हानि पहुँचाता है</b> — भौतिक शरीर (भूत-समूह) को, और शरीर के भीतर वास करने वाले परमात्मा (कृष्ण स्वयं) को।</p>
+      <p>यह दूसरा बिंदु विशेष रूप से गहन है — गीता यहाँ स्पष्ट करती है कि <b>ईश्वर बाहर, दूर, किसी स्वर्ग में नहीं, बल्कि प्रत्येक व्यक्ति के अपने शरीर के भीतर, अंतर्यामी रूप में निवास करते हैं।</b> यह सिद्धांत गीता में बार-बार आता है (13.22, 15.7, 10.20 "अहमात्मा गुडाकेश सर्वभूताशयस्थितः") — और यहाँ इसका एक व्यावहारिक, नैतिक निहितार्थ प्रस्तुत होता है: शरीर के प्रति अत्यधिक क्रूरता स्वयं भगवान् के प्रति अनादर है।</p>
+      <div class="callout-rajas"><b>"आसुरनिश्चयान्" — अध्याय 16 से सीधा सेतु:</b> यह शब्द अध्याय 16 के संपूर्ण "दैवासुरसम्पद्विभागयोग" (दैवी और आसुरी संपदाओं का विभाजन) को याद दिलाता है, जहाँ आसुरी लक्षणों (दंभ, दर्प, अभिमान, क्रोध, अज्ञान — 16.4) का विस्तृत वर्णन हुआ था। 17.5-6 दिखाता है कि ये आसुरी लक्षण केवल सामाजिक व्यवहार में नहीं, बल्कि "आध्यात्मिक" प्रतीत होने वाले कृत्यों (जैसे तप) में भी प्रकट हो सकते हैं — बाहरी रूप धार्मिक हो सकता है, जबकि भीतरी प्रेरणा आसुरी।</div>
+      <p>यह श्लोक-युग्म (17.5-6) एक महत्वपूर्ण सिद्धांत स्थापित करता है: <b>तप का मूल्य उसकी कठोरता में नहीं, बल्कि उसके संतुलन, प्रेरणा, और शरीर-आत्मा दोनों के प्रति सम्मान में है।</b> यह आगामी श्लोकों (17.14-19) के लिए भी मंच तैयार करता है, जहाँ सात्त्विक, राजसिक, और तामसिक तप का विस्तृत, संतुलित वर्णन आएगा।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — शरीर को "शत्रु" मानने की भूल:</b> कुछ आध्यात्मिक परंपराओं में कभी-कभी शरीर को नियंत्रित करने के अतिरेक में उसे "शत्रु" या "बाधा" मान लिया जाता है, जिसे कठोरता से वश में करना है। गीता का यह श्लोक इस दृष्टिकोण के प्रति सावधान करता है — शरीर स्वयं पवित्र (भूत-निर्मित, परमात्मा-निवासित) है, शत्रु नहीं।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — "मंदिर" के रूप में शरीर की अवधारणा:</b> कई परंपराओं में शरीर को "आत्मा का मंदिर" कहा जाता है — इसका सम्मान करना, इसकी उचित देखभाल करना आध्यात्मिक कर्तव्य है, न कि इसे अकारण कष्ट देना। यह अवधारणा 17.6 के "मां चैवान्तःशरीरस्थम्" (मैं भी शरीर के भीतर स्थित हूँ) के भाव से गहराई से मेल खाती है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — संतुलित बनाम अतिरेकी अनुशासन:</b> एक धावक जो अपने शरीर को प्रशिक्षित करता है, संतुलन और सम्मान के साथ, बनाम एक व्यक्ति जो अपने शरीर को चोट पहुँचाने की हद तक धकेलता है, केवल यह साबित करने के लिए कि वह "कठोर" है — यह अंतर ठीक "सात्त्विक अनुशासन" और "अचेतस, आसुरी कठोरता" के बीच के अंतर को दर्शाता है।
+      </div>
+      <div class="callout"><b>महत्त्वपूर्ण बात:</b> यह श्लोक शरीर और आत्मा को अलग-अलग, विरोधी नहीं, बल्कि <b>एक-दूसरे से जुड़े, दोनों सम्मान के योग्य</b> मानता है। सच्ची आध्यात्मिक साधना शरीर को नष्ट करके नहीं, बल्कि उसका सम्मानपूर्वक, संतुलित उपयोग करके आत्म-उन्नति की ओर ले जाती है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">"भूतग्राम" (भूत-समूह) का शरीर से क्या संबंध है?</div>
+        <div class="a">भारतीय दर्शन में मानव शरीर पंच महाभूतों — पृथ्वी, जल, अग्नि, वायु, आकाश — से निर्मित माना जाता है। "भूतग्राम" इन्हीं तत्वों के समूह को इंगित करता है, जो मिलकर भौतिक शरीर बनाते हैं। अत्यधिक कठोर तप इन तत्वों को असंतुलित, क्षीण करता है — यह केवल "इच्छा-शक्ति की परीक्षा" नहीं, बल्कि वास्तविक भौतिक क्षति है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">कृष्ण स्वयं को "शरीर के भीतर स्थित" क्यों कहते हैं?</div>
+        <div class="a">गीता में यह एक केंद्रीय सिद्धांत है — परमात्मा प्रत्येक जीव के हृदय/शरीर में अंतर्यामी (आंतरिक साक्षी) के रूप में निवास करते हैं (देखें 13.22, 15.7, 10.20)। यह सर्वव्यापकता को व्यक्तिगत, आंतरिक अनुभव बनाता है — ईश्वर दूर नहीं, हर व्यक्ति के भीतर उपस्थित है। इसलिए शरीर के प्रति क्रूरता, परमात्मा के प्रति भी अनादर मानी जाती है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"आसुरनिश्चयान्" कहना क्या अत्यधिक कठोर निर्णय नहीं है?</div>
+        <div class="a">गीता सामान्यतः वर्णनात्मक, समझ-आधारित दृष्टिकोण अपनाती है (जैसे 17.4 में), पर जब कोई कृत्य वास्तव में हानिकारक — स्वयं के शरीर और परोक्ष रूप से परमात्मा के प्रति अनादर — हो, तब गीता स्पष्ट, निर्णायक भाषा का प्रयोग करने से नहीं हिचकती। यह अध्याय 16 की "आसुरी संपदा" की चर्चा की सीधी निरंतरता है, जहाँ भी स्पष्ट नैतिक वर्गीकरण किया गया था।</div>
+      </div>
+      <div class="faq">
+        <div class="q">17.6 के बाद क्या आता है?</div>
+        <div class="a">17.7 से अध्याय 17 का अगला बड़ा खंड शुरू होगा — "आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः। यज्ञस्तपस्तथा दानं तेषां भेदमिमं श्रृणु।।" — भोजन भी सबकी पसंद के अनुसार तीन प्रकार का होता है; यज्ञ, तप, और दान का भी यही भेद सुनो। यह श्लोक तप की चेतावनी से आगे बढ़कर आहार, यज्ञ, तप, और दान — चारों के विस्तृत त्रिविध विश्लेषण की भूमिका बाँधता है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>17.6, 17.5 के साथ मिलकर, गीता के शरीर-सम्मान संबंधी सिद्धांत को स्पष्ट करता है। यह श्लोक-युग्म गीता की एक गहरी अंतर्दृष्टि प्रस्तुत करता है — <b>आध्यात्मिक साधना शरीर के विरुद्ध नहीं, शरीर और आत्मा दोनों के सम्मान के साथ होनी चाहिए।</b></p>
+        <p>यह अध्याय 16 के आसुरी-लक्षणों की चर्चा और अध्याय 13-15 के अंतर्यामी-सिद्धांत — दोनों को एक साथ जोड़ता है, जो गीता की सुसंगत, अंतर्संबद्ध दार्शनिक संरचना को दर्शाता है।</p>
+        <div class="callout"><b>दो श्लोकों का एक पूर्ण नैतिक तर्क:</b> 17.5 अपराध का विवरण देता है (शास्त्र-विरुद्ध, दंभ-अहंकार-युक्त, कामरागबल-प्रेरित घोर तप), और 17.6 उसके दो शिकार (भूत-समूह, अंतर्यामी परमात्मा) और अंतिम निर्णय (आसुरनिश्चयान्) देता है — यह एक संपूर्ण, तर्कसंगत नैतिक तर्क-संरचना है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — घोर तप के दो शिकार, एक निष्कर्ष</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="70" rx="140" ry="38" fill="rgba(140,74,32,0.14)" stroke="rgba(140,74,32,0.5)" stroke-width="1.4"/>
+          <text x="350" y="64" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">कर्शयन्तः (क्षीण करने वाले)</text>
+          <text x="350" y="82" text-anchor="middle" fill="#cfc3a8" font-size="10">अविवेकी, घोर तप करने वाले</text>
+
+          <line x1="280" y1="100" x2="180" y2="165" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <rect x="90" y="170" width="180" height="52" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="180" y="192" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">शरीरस्थं भूतग्रामम्</text>
+          <text x="180" y="210" text-anchor="middle" fill="#cfc3a8" font-size="9">पंच महाभूत-निर्मित शरीर</text>
+
+          <line x1="420" y1="100" x2="520" y2="165" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <rect x="430" y="170" width="180" height="52" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="520" y="192" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">मां अन्तःशरीरस्थम्</text>
+          <text x="520" y="210" text-anchor="middle" fill="#cfc3a8" font-size="9">अंतर्यामी परमात्मा</text>
+
+          <line x1="180" y1="222" x2="330" y2="280" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="520" y1="222" x2="370" y2="280" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+
+          <ellipse cx="350" cy="315" rx="150" ry="44" fill="rgba(140,74,32,0.17)" stroke="rgba(140,74,32,0.55)" stroke-width="1.6"/>
+          <text x="350" y="308" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">तान्विद्धि आसुरनिश्चयान्</text>
+          <text x="350" y="326" text-anchor="middle" fill="#cfc3a8" font-size="10">अंतिम, निर्णायक निष्कर्ष</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — "शरीर के प्रति सम्मान" अन्य परंपराओं में</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/संदर्भ</th><th>17.6 से समानता</th><th>अंतर</th></tr>
+          <tr><td>बौद्ध धर्म का मध्यम-मार्ग (अति-तप और अति-भोग दोनों की अस्वीकृति)</td><td>अत्यधिक शारीरिक कष्ट को आध्यात्मिक प्रगति के लिए अनुपयुक्त मानना</td><td>बौद्ध मध्यम-मार्ग संतुलन पर केंद्रित, गीता शरीर में अंतर्यामी-सिद्धांत जोड़ती है</td></tr>
+          <tr><td>ईसाई परंपरा में "शरीर पवित्र आत्मा का मंदिर है" (1 कुरिन्थियों 6:19)</td><td>शरीर के भीतर दिव्य उपस्थिति, इसलिए शरीर का सम्मान आवश्यक</td><td>ईसाई अवधारणा पवित्र आत्मा पर केंद्रित, गीता अंतर्यामी कृष्ण पर</td></tr>
+          <tr><td>योग-परंपरा में शरीर को साधना का "पात्र" मानना</td><td>शरीर साधना का साधन है, विनाश का लक्ष्य नहीं</td><td>योग-परंपरा शारीरिक अनुशासन (आसन आदि) पर बल देती है, गीता संतुलन पर</td></tr>
+          <tr><td>आधुनिक शरीर-सकारात्मकता (body positivity) आंदोलन</td><td>शरीर के प्रति क्रूरता या घृणा को अस्वीकार करना</td><td>आधुनिक आंदोलन आत्म-स्वीकृति पर केंद्रित, गीता आध्यात्मिक-नैतिक तर्क पर</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशेषता:</b> "मां चैवान्तःशरीरस्थम्" — शरीर के भीतर स्वयं भगवान् की उपस्थिति का दावा — शरीर-सम्मान के तर्क को एक अद्वितीय, गहन धार्मिक आधार देता है, जो अन्य परंपराओं में इतना प्रत्यक्ष रूप से शायद ही मिलता है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>अपने शरीर के प्रति दृष्टिकोण की जाँच करें:</b> क्या मैं अपने शरीर को शत्रु, बाधा, या नियंत्रित करने की वस्तु मानता हूँ, या इसे एक पवित्र, सम्मान-योग्य निवास-स्थान (जहाँ परमात्मा स्वयं वास करते हैं) मानता हूँ? यह दृष्टिकोण-परिवर्तन आत्म-अनुशासन को क्रूरता से संतुलन की ओर ले जा सकता है।</div>
+        <p><b>अभ्यास — संतुलित आत्म-देखभाल:</b> किसी भी उपवास, अनुशासन, या साधना में संलग्न होने से पहले, स्वयं से पूछें — "क्या यह मेरे शरीर और आत्मा दोनों का सम्मान करता है, या यह क्रूरता/अतिरेक की सीमा में प्रवेश कर रहा है?" यह प्रश्न 17.5-6 का सबसे प्रत्यक्ष, व्यावहारिक अनुप्रयोग है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "मां चैवान्तःशरीरस्थम्" को अंतर्यामी ब्रह्म के सिद्धांत के रूप में व्याख्यायित करते हैं — शरीर के भीतर वास करने वाला वही परम चैतन्य है जो सबमें एक समान रूप से विद्यमान है; इसे कष्ट देना अज्ञान की पराकाष्ठा है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> इस श्लोक को भक्ति के लिए एक सुंदर आधार मानते हैं — यदि भगवान् स्वयं मेरे शरीर के भीतर वास करते हैं, तो शरीर की देखभाल करना भी एक प्रकार की भक्ति-सेवा है, न कि उपेक्षा या क्रूरता का विषय।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक-युग्म को अत्यधिक, प्रदर्शनकारी तपस्या के विरुद्ध एक व्यावहारिक, तार्किक चेतावनी मानते हैं — गीता का कर्मयोग संतुलित, विवेकपूर्ण कर्म पर बल देता है, न कि आत्म-पीड़ा को वीरता समझने पर।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं कि यह श्लोक शरीर और आत्मा के बीच एक पवित्र, सम्मानजनक संबंध स्थापित करता है, जो अत्यधिक तपस्या की आसुरी प्रवृत्ति के विरुद्ध एक स्पष्ट सैद्धांतिक आधार प्रदान करता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कर्शयन्तः</span></div>
+            <div class="flashcard-face flashcard-back"><b>क्षीण/दुर्बल करने वाले</b>अत्यधिक कठोर तप की क्रिया</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">भूतग्रामम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>पंच महाभूत-समूह</b>शरीर की भौतिक संरचना</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अचेतसः</span></div>
+            <div class="flashcard-face flashcard-back"><b>अविवेकी</b>समस्या केवल कर्म नहीं, विवेक की कमी</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">मां चैवान्तःशरीरस्थम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>मैं भी शरीर के भीतर स्थित</b>अंतर्यामी सिद्धांत — 13.22, 15.7 से जुड़ा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">तान्विद्धि आसुरनिश्चयान्</span></div>
+            <div class="flashcard-face flashcard-back"><b>जानो, उनका निश्चय आसुरी है</b>अध्याय 16 से सीधा सेतु — अंतिम निर्णय</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">कर्शयन्तः</td><td>√कृश् (प्रयोजक)</td><td>वर्तमान कृदन्त, प्रथमा बहुवचन</td><td>क्षीण करने वाले — कर्ता (17.5 के जनाः से जुड़ा)</td></tr>
+          <tr><td class="sa">शरीरस्थम् भूतग्रामम्</td><td>शरीर+स्थ, भूत+ग्राम</td><td>द्वितीया एकवचन</td><td>शरीरस्थ भूत-समूह को — कर्म</td></tr>
+          <tr><td class="sa">अचेतसः</td><td>अ+चेतस्</td><td>प्रथमा बहुवचन (विशेषण)</td><td>अविवेकी — जनाः का विशेषण</td></tr>
+          <tr><td class="sa">माम् च एव अन्तःशरीरस्थम्</td><td>अस्मद्, अन्तर्+शरीर+स्थ</td><td>द्वितीया एकवचन</td><td>मुझे भी, शरीर के भीतर स्थित — कर्म</td></tr>
+          <tr><td class="sa">तान्</td><td>तद्</td><td>द्वितीया बहुवचन</td><td>उन्हें — कर्म</td></tr>
+          <tr><td class="sa">विद्धि</td><td>√विद्</td><td>आज्ञार्थ, द्वि.पु. एकवचन</td><td>जानो — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">आसुरनिश्चयान्</td><td>असुर+अण्, नि+√चि</td><td>द्वितीया बहुवचन</td><td>आसुरी निश्चय वाले — विधेय-कर्म</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">कर्शयन्तः शरीरस्थं भूतग्राममचेतसः।<br>मां चैवान्तःशरीरस्थं तान्विद्धयासुरनिश्चयान्।।</div>
+          <div class="cheat-translit">karśayantaḥ śarīra-sthaṃ bhūta-grāmam acetasaḥ, māṃ caivāntaḥ-śarīra-sthaṃ tān viddhy āsura-niścayān</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>कर्शयन्तः</b> क्षीण करने वाले</span>
+            <span class="cheat-chip"><b>भूतग्रामम्</b> पंच महाभूत-शरीर</span>
+            <span class="cheat-chip"><b>मां अन्तःशरीरस्थम्</b> अंतर्यामी कृष्ण</span>
+            <span class="cheat-chip"><b>आसुरनिश्चयान्</b> आसुरी निश्चय</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: 17.5 का वाक्य यहाँ पूर्ण होता है — घोर, अहंकार-प्रेरित तप करने वाले अविवेकी लोग शरीर (पंच महाभूत) को और शरीर में अंतर्यामी रूप से स्थित स्वयं कृष्ण को भी कष्ट देते हैं। ऐसे लोगों का निश्चय आसुरी है — यह अध्याय 16 के आसुरी-लक्षणों से सीधा सेतु है, और गीता के शरीर-सम्मान सिद्धांत की स्थापना करता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('कर्शयन्तः शरीरस्थं भूतग्राममचेतसः। मां चैवान्तःशरीरस्थं तान्विद्धयासुरनिश्चयान्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('कर्शयन्तः शरीरस्थं भूतग्राममचेतसः। मां चैवान्तःशरीरस्थं तान्विद्धयासुरनिश्चयान्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('वे अविवेकतापूर्वक शरीरस्थ भूत-समूह को, और शरीर के भीतर स्थित मुझे भी कष्ट देते हैं। जान लो, उनका निश्चय आसुरी है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द (शुद्ध ४×८)</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">क</span><span class="syll">र्श</span><span class="syll">यन्</span><span class="syll">तः</span><span class="syll">श</span><span class="syll">री</span><span class="syll">र</span><span class="syll">स्थं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">भू</span><span class="syll">त</span><span class="syll">ग्रा</span><span class="syll">म</span><span class="syll">म</span><span class="syll">चे</span><span class="syll">त</span><span class="syll">सः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">मां</span><span class="syll">चै</span><span class="syll">वान्</span><span class="syll">तः</span><span class="syll">श</span><span class="syll">री</span><span class="syll">र</span><span class="syll">स्थं</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">तान्</span><span class="syll">विद्</span><span class="syll">ध्या</span><span class="syll">सु</span><span class="syll">र</span><span class="syll">नि</span><span class="syll">श्च</span><span class="syll">यान्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('कर्शयन्तः शरीरस्थं भूतग्राममचेतसः मां चैवान्तःशरीरस्थं तान्विद्धयासुरनिश्चयान्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> शुद्ध ४×८ अनुष्टुप्, ३२ अक्षर। जप करते समय "मां चैवान्तःशरीरस्थं" पर विशेष रूप से रुकें — अपने शरीर के भीतर परमात्मा की उपस्थिति पर चिंतन करें।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">17.5 + 17.6 — पूर्ण वाक्य</button>
+      <button class="tab-btn" data-tab="e2">तर्क-संरचना</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 17.5 + 17.6 — पूर्ण वाक्य एक साथ</h3>
+        <p class="subnote">अपराध का विवरण से अंतिम निष्कर्ष तक</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">📝 17.5 — विवरण (सेट-अप)</div>
+            <div class="contrast-sa">अशास्त्रविहितं घोरं... दम्भाहङ्कारसंयुक्ताः</div>
+            <p><b>कौन, कैसा तप कर रहे हैं — शास्त्र-विरुद्ध, दंभ-अहंकार-युक्त।</b></p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">⚖️ 17.6 — निष्कर्ष (निर्णय)</div>
+            <div class="contrast-sa">तान्विद्धि आसुरनिश्चयान्</div>
+            <p><b>किसे कष्ट देते हैं, और अंतिम निर्णय — आसुरी निश्चय।</b></p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> दो श्लोक मिलकर एक पूर्ण, तार्किक नैतिक निर्णय बनाते हैं — विवरण (कौन, क्या) से निष्कर्ष (क्यों गलत, क्या श्रेणी) तक। यह गीता की काव्यात्मक और तार्किक कुशलता दोनों को दर्शाता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 17.5-6 की तर्क-संरचना</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">1️⃣ कृत्य</div>
+            <div class="guna-sa">घोर, शास्त्र-विरुद्ध तप</div>
+            <div class="guna-char">दंभ-अहंकार-काम-राग-बल से प्रेरित (17.5)।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">2️⃣ परिणाम</div>
+            <div class="guna-sa">दो शिकार</div>
+            <div class="guna-char">शरीरस्थ भूत-समूह + अंतर्यामी कृष्ण, दोनों कष्ट में (17.6)।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">3️⃣ निर्णय</div>
+            <div class="guna-sa">आसुरनिश्चयान्</div>
+            <div class="guna-char">अध्याय 16 से जुड़ा अंतिम, स्पष्ट वर्गीकरण (17.6)।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> कृत्य → परिणाम → निर्णय — यह तार्किक क्रम गीता की नैतिक शिक्षण-पद्धति की स्पष्टता और गहराई दोनों दर्शाता है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 17 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४<br>त्रिविध पूजा-विषय</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५<br>घोर तप की चेतावनी (आरंभ)</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ६<br>निष्कर्ष — आसुरनिश्चयान् ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ७-१०<br>त्रिविध आहार</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ११-२८<br>यज्ञ, तप, दान, समापन</div></div>
+        </div>
+        <div class="callout"><b>अगला (17.7):</b> "आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः। यज्ञस्तपस्तथा दानं तेषां भेदमिमं श्रृणु।।" — चेतावनी के बाद अध्याय अपनी मुख्य विश्लेषण-यात्रा पर लौटता है — भोजन भी तीन प्रकार का होता है; यज्ञ, तप, और दान के भेद भी सुनो।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.७) — ☰ नेविगेशन — आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"'भूतग्रामम्' किसे इंगित करता है?",options:["देवताओं के समूह को","पंच महाभूतों से बने शरीर को","भूत-प्रेतों को","ग्रामवासियों को"],correct:1},
+    {q:"'मां चैवान्तःशरीरस्थम्' किस सिद्धांत से जुड़ा है?",options:["कर्मयोग","अंतर्यामी सिद्धांत (13.22, 15.7 से संबंधित)","भक्तियोग","अष्टांगयोग"],correct:1},
+    {q:"17.6 का अंतिम, निर्णायक शब्द क्या है, और इसका क्या अर्थ है?",options:["सात्त्विकाः — सात्त्विक","आसुरनिश्चयान् — आसुरी निश्चय वाले","राजसाः — राजसिक","ब्रह्मभूताः — ब्रह्म-स्वरूप"],correct:1},
+    {q:"'आसुरनिश्चयान्' शब्द गीता के किस अध्याय से सीधा सेतु बनाता है?",options:["अध्याय 11 — विश्वरूप-दर्शन","अध्याय 16 — दैवासुरसम्पद्विभागयोग","अध्याय 6 — आत्मसंयमयोग","अध्याय 9 — राजविद्याराजगुह्ययोग"],correct:1},
+    {q:"17.5-6 के अनुसार, घोर तप के कितने 'शिकार' बताए गए हैं?",options:["एक — केवल शरीर","दो — शरीरस्थ भूत-समूह और अंतर्यामी कृष्ण","तीन — शरीर, मन, और आत्मा","कोई नहीं, यह केवल आत्म-लाभ है"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "17.5 ने एक अपूर्ण वाक्य छोड़ा था — शास्त्र-विरुद्ध, दंभ-अहंकार-युक्त, घोर तप करने वालों का वर्णन। 17.6 अब इसे पूर्ण करता है।",
+    "'कर्शयन्तः शरीरस्थं भूतग्राममचेतसः' — वे अविवेकतापूर्वक शरीर में स्थित पंच-भूत-समूह को क्षीण/कष्ट देते हैं।",
+    "'मां चैवान्तःशरीरस्थम्' — और मुझे भी, जो शरीर के भीतर अंतर्यामी रूप से स्थित हूँ। यह गीता के गहनतम धार्मिक सिद्धांतों में से एक है।",
+    "यह अध्याय 13 (13.22) और अध्याय 15 (15.7) के अंतर्यामी-सिद्धांत को याद दिलाता है — भगवान् दूर नहीं, हर शरीर के भीतर उपस्थित हैं।",
+    "'तान्विद्धि आसुरनिश्चयान्' — जान लो, उनका निश्चय आसुरी है। यह शब्द अध्याय 16 के दैवासुरसम्पद्विभागयोग को सीधे याद दिलाता है।",
+    "17.5-6 मिलकर एक पूर्ण नैतिक तर्क बनाते हैं — कृत्य, परिणाम, और निर्णय। अगला (17.7) अध्याय अपनी मुख्य यात्रा — आहार, यज्ञ, तप, दान के त्रिविध विश्लेषण — की ओर लौटेगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

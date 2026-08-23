@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 17.7 — आहार, यज्ञ, तप, दान — चारों का त्रिविध भेद</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style><body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 17 · श्लोक 7 / 28</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सत्रह</div>
+    <div class="chapter-title">अध्याय १७ — श्रद्धात्रयविभागयोग (श्रद्धा के तीन प्रकार)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १७.७ — नई घोषणा</div>
+    </div>
+    <div class="guna-badge">🪔 संरचनात्मक मोड़ — आहार, यज्ञ, तप, दान का त्रिविध भेद</div>
+    <div class="shloka">
+      आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः।<br>
+      यज्ञस्तपस्तथा दानं तेषां भेदमिमं श्रृणु।।
+    </div>
+    <div class="translit">
+      āhāras tv api sarvasya trividho bhavati priyaḥ,<br>
+      yajñas tapas tathā dānaṃ teṣāṃ bhedam imaṃ śṛṇu
+    </div>
+    <div class="gist">
+      <b>आहार</b> भी सबको प्रिय, <b>तीन प्रकार</b> का होता है। <b>यज्ञ, तप, तथा दान</b> — इनका भी यह भेद सुनो।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — चेतावनी से संरचना की ओर वापसी</h3>
+      <p>17.5-6 ने एक तीव्र, गंभीर चेतावनी दी — शास्त्र-विरुद्ध, दंभ-अहंकार-प्रेरित घोर तप को "आसुरी निश्चय" कहा गया। यह एक भावनात्मक, नैतिक चरम-बिंदु था। 17.7 में स्वर फिर बदलता है — कृष्ण अब <b>व्यवस्थित, संरचित विश्लेषण</b> की ओर लौटते हैं, जो अध्याय 17 का मूल ढांचा है।</p>
+      <p>यह श्लोक एक <b>"विषय-सूची" (table of contents) श्लोक</b> की तरह काम करता है — यह घोषणा करता है कि आगे क्या-क्या विषय आने वाले हैं: आहार (भोजन), यज्ञ, तप, और दान — इन चारों को भी श्रद्धा की तरह त्रिविध (सात्त्विक-राजसिक-तामसिक) रूप से समझाया जाएगा।</p>
+      <div class="callout-rajas"><b>ध्यान दें — 17.2 से संरचनात्मक समानता:</b> 17.2 में कृष्ण ने कहा था "त्रिविधा भवति श्रद्धा... सर्वस्य" (श्रद्धा तीन प्रकार की, सबकी)। अब 17.7 में वही वाक्य-रचना दोहराई जाती है — "त्रिविधः भवति... सर्वस्य... प्रियः" (आहार तीन प्रकार का, सबको प्रिय)। यह जानबूझकर की गई काव्यात्मक-संरचनात्मक समानता दिखाती है कि श्रद्धा और आहार दोनों — एक आंतरिक, एक बाह्य — समान त्रिगुण-सिद्धांत के अधीन हैं।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">आहारः तु अपि</span><span class="word-tr">āhāraḥ tu api</span></div>
+          <div class="word-meaning">आहार भी — बल-सूचक</div>
+          <div class="word-eng"><b>EN:</b> food too, indeed</div>
+          <div class="word-deep">आहारः = भोजन, आहार (जो ग्रहण किया जाता है)। तु और अपि दोनों बल-सूचक अव्यय हैं, जो एक साथ प्रयुक्त होकर "और यह भी," "इसके अतिरिक्त" का भाव देते हैं — यह संकेत करता है कि श्रद्धा के बाद, अब एक नया, पर संबंधित विषय (आहार) उठाया जा रहा है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सर्वस्य त्रिविधः प्रियः</span><span class="word-tr">sarvasya trividhaḥ priyaḥ</span></div>
+          <div class="word-meaning">सबको प्रिय, तीन प्रकार का</div>
+          <div class="word-eng"><b>EN:</b> dear to everyone, of three kinds</div>
+          <div class="word-deep">सर्वस्य = सबका/सबके लिए। प्रियः = प्रिय, पसंदीदा। यह वाक्यांश एक सार्वभौमिक अनुभव — भोजन का आनंद — को इंगित करता है, जो प्रत्येक व्यक्ति साझा करता है, फिर भी जिसकी प्रकृति गुण के अनुसार भिन्न होती है। यह 17.2 के "सर्वस्य श्रद्धा" के समानांतर वाक्य-रचना है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यज्ञः तपः तथा दानम्</span><span class="word-tr">yajñaḥ tapaḥ tathā dānam</span></div>
+          <div class="word-meaning">यज्ञ, तप, तथा दान</div>
+          <div class="word-eng"><b>EN:</b> sacrifice, austerity, and charity</div>
+          <div class="word-deep">यज्ञ = देवताओं/उच्च शक्तियों को समर्पित अनुष्ठान/त्याग। तप = आत्म-अनुशासन, तपस्या (17.5-6 में जिसकी विकृत रूप की चेतावनी दी गई, अब इसका संतुलित, सम्पूर्ण विश्लेषण आएगा)। दान = उदारतापूर्वक देना। ये तीनों गीता के केंद्रीय कर्म-योग-संबंधी अवधारणाएँ हैं, जो अध्याय 17 के शेष भाग में विस्तार से विश्लेषित होंगी।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">तेषाम् भेदम् इमम्</span><span class="word-tr">teṣāṃ bhedam imam</span></div>
+          <div class="word-meaning">उनका यह भेद — षष्ठी + द्वितीया</div>
+          <div class="word-eng"><b>EN:</b> this distinction of them</div>
+          <div class="word-deep">तेषाम् = उनका (यज्ञ, तप, दान — तीनों के लिए)। भेदम् = भेद, अंतर, विभाजन। इमम् = यह। यह वाक्यांश स्पष्ट करता है कि आगे यज्ञ, तप, और दान — तीनों को उनके त्रिविध (गुण-आधारित) भेद के अनुसार समझाया जाएगा, ठीक जैसे श्रद्धा और आहार को समझाया गया/जाएगा।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">श्रृणु</span><span class="word-tr">śṛṇu</span></div>
+          <div class="word-meaning">सुनो — आज्ञार्थ</div>
+          <div class="word-eng"><b>EN:</b> hear (this)</div>
+          <div class="word-deep">√श्रु (सुनना) का आज्ञार्थ द्वितीय पुरुष रूप। यह वही आदेश है जो 17.2 में भी आया था ("तां श्रृणु")। इसकी पुनरावृत्ति दिखाती है कि कृष्ण अर्जुन को बार-बार, एक नई शिक्षण-इकाई की शुरुआत में, सावधानीपूर्वक ध्यान देने के लिए आमंत्रित करते हैं।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Food too, dear to everyone, is of three kinds. So also are sacrifice, austerity, and charity. Hear now this distinction of them.
+      </div>
+      <p>17.7 एक महत्वपूर्ण संरचनात्मक कार्य करता है — यह अध्याय 17 के शेष भाग के लिए एक <b>विषय-सूची</b> स्थापित करता है। श्रद्धा (17.2-4) और तप की चेतावनी (17.5-6) के बाद, अब कृष्ण चार नए विषयों की घोषणा करते हैं जिन्हें त्रिगुण-दृष्टि से समझाया जाएगा — आहार, यज्ञ, तप (इस बार संतुलित रूप में), और दान।</p>
+      <p>यह चयन स्वयं में सार्थक है — <b>आहार (जो हम ग्रहण करते हैं), यज्ञ (जो हम अर्पित करते हैं), तप (जो हम स्वयं पर अनुशासन के रूप में लागू करते हैं), और दान (जो हम दूसरों को देते हैं)</b> — ये चारों मिलकर मानव-जीवन के प्रमुख "आदान-प्रदान" (input-output) क्षेत्रों को कवर करते हैं। यह गीता के त्रिगुण-सिद्धांत को जीवन के लगभग हर व्यावहारिक पहलू पर लागू करने का एक व्यवस्थित प्रयास है।</p>
+      <div class="callout-rajas"><b>"सर्वस्य प्रियः" — आहार की सार्वभौमिकता:</b> ध्यान दें कि आहार को "सबको प्रिय" कहा गया है — यह श्रद्धा की तरह ही एक सार्वभौमिक मानवीय अनुभव है, जिससे कोई बच नहीं सकता। यह वाक्यांश आगामी श्लोकों (17.8-10) के लिए मंच तैयार करता है, जहाँ दिखाया जाएगा कि यह सार्वभौमिक "पसंद" भी व्यक्ति के गुण-संयोजन के अनुसार भिन्न रूप लेती है — कोई सात्त्विक भोजन पसंद करता है, कोई राजसिक, कोई तामसिक।</div>
+      <p>यह श्लोक अध्याय 17 की व्यवस्थित, विश्वकोशीय (encyclopedic) प्रकृति को उजागर करता है — यह केवल दार्शनिक सिद्धांत नहीं, बल्कि दैनिक जीवन के व्यावहारिक पहलुओं (क्या खाना है, कैसे पूजा करनी है, कैसे अनुशासन रखना है, कैसे दान देना है) को भी आध्यात्मिक विश्लेषण के दायरे में लाता है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — भोजन की पसंद, व्यक्तित्व का प्रतिबिंब:</b> जिस प्रकार हमने 17.4 में देखा कि पूजा-विषय व्यक्ति के गुण को दर्शाता है, उसी प्रकार भोजन की पसंद भी — कोई ताज़ा, हल्का, संतुलित भोजन पसंद करता है (सात्त्विक-प्रवृत्ति), कोई तीखा, उत्तेजक भोजन (राजसिक-प्रवृत्ति), कोई बासी, अस्वास्थ्यकर भोजन के प्रति उदासीन (तामसिक-प्रवृत्ति)। 17.7 इसी विश्लेषण की भूमिका बाँधता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — जीवन के चार आयाम एक साथ:</b> एक संतुलित जीवन में क्या हम खाते हैं (आहार), किसकी पूजा/सम्मान करते हैं (यज्ञ का व्यापक अर्थ), स्वयं पर कैसा अनुशासन रखते हैं (तप), और दूसरों के साथ कैसे उदार हैं (दान) — ये चारों मिलकर हमारे समग्र चरित्र को आकार देते हैं। गीता इन्हें अलग-अलग न देखकर एक साझा त्रिगुण-ढांचे में जोड़ती है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — "पाठ्यक्रम की घोषणा" जैसी संरचना:</b> जैसे एक अच्छा शिक्षक कक्षा शुरू करने से पहले पाठ्यक्रम की रूपरेखा बताता है, ताकि छात्र तैयार हो सकें, वैसे ही 17.7 अध्याय के शेष भाग के लिए एक स्पष्ट "रोडमैप" देता है — यह शिक्षण-पद्धति की स्पष्टता और व्यवस्थितता को दर्शाता है।
+      </div>
+      <div class="callout"><b>महत्त्वपूर्ण बात:</b> यह श्लोक हमें याद दिलाता है कि आध्यात्मिक विकास केवल औपचारिक पूजा या ध्यान तक सीमित नहीं — यह हमारे दैनिक विकल्पों (क्या खाना है) में भी उतना ही प्रकट होता है। गीता जीवन के हर पहलू को आध्यात्मिक दृष्टि से देखने का निमंत्रण देती है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">17.7 में आहार, यज्ञ, तप, दान — इसी क्रम में क्यों उल्लेखित हैं?</div>
+        <div class="a">यह क्रम स्वाभाविक जीवन-प्राथमिकता को दर्शाता प्रतीत होता है — आहार सबसे बुनियादी, दैनिक आवश्यकता है; यज्ञ सामूहिक/धार्मिक अभ्यास है; तप व्यक्तिगत अनुशासन है; दान सामाजिक/परोपकारी कर्म है। यह क्रम व्यक्तिगत-आवश्यकता से सामाजिक-उदारता तक की एक स्वाभाविक प्रगति दिखाता है। यही क्रम आगामी श्लोकों (17.8-22) में भी अनुसरण किया जाएगा।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या "तप" यहाँ वही है जिसकी 17.5-6 में चेतावनी दी गई थी?</div>
+        <div class="a">विषय वही है (तप), पर दृष्टिकोण भिन्न है। 17.5-6 ने तप के एक विशिष्ट, विकृत, आसुरी रूप की चेतावनी दी। 17.14-19 (जो अब आ रहा है) तप का एक संतुलित, विस्तृत, त्रिगुण-आधारित विश्लेषण देगा — जिसमें सात्त्विक तप को सकारात्मक रूप में भी दिखाया जाएगा। यह गीता की संतुलित शिक्षण-पद्धति का उदाहरण है — चेतावनी भी, और सकारात्मक मार्गदर्शन भी।</div>
+      </div>
+      <div class="faq">
+        <div class="q">17.7 की वाक्य-रचना 17.2 से इतनी मिलती-जुलती क्यों है?</div>
+        <div class="a">यह जानबूझकर किया गया काव्यात्मक-संरचनात्मक चयन है। "त्रिविधा/त्रिविधः... सर्वस्य... भवति" जैसी समानांतर वाक्य-रचना पाठक को यह याद दिलाती है कि श्रद्धा और आहार — दोनों अलग-अलग विषय होते हुए भी — एक ही अंतर्निहित सिद्धांत (त्रिगुण) से शासित हैं। यह गीता की काव्यात्मक कुशलता और वैचारिक सुसंगति दोनों को दर्शाता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">17.7 के बाद क्या आता है?</div>
+        <div class="a">17.8 से आहार का विस्तृत त्रिविध विवरण शुरू होगा — "आयुःसत्त्वबलारोग्यसुखप्रीतिविवर्धनाः। रस्याः स्निग्धाः स्थिरा हृद्या आहाराः सात्त्विकप्रियाः।।" — सात्त्विक लोगों को प्रिय भोजन का वर्णन: आयु, बल, स्वास्थ्य, सुख, और प्रसन्नता बढ़ाने वाला, रसयुक्त, स्निग्ध, स्थिर, और हृदय को प्रिय भोजन।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>17.7 अध्याय 17 का संरचनात्मक हृदय-स्थल है — यह श्रद्धा (17.2-4) और तप-चेतावनी (17.5-6) के बाद, शेष अध्याय (17.8-22) के लिए स्पष्ट रूपरेखा प्रस्तुत करता है। इसके बिना पाठक को आगामी विश्लेषण की व्यवस्थित प्रकृति समझ में नहीं आती।</p>
+        <p>यह श्लोक गीता की एक गहरी अंतर्दृष्टि को भी उजागर करता है — <b>त्रिगुण-सिद्धांत किसी एक क्षेत्र तक सीमित नहीं, यह मानव-जीवन के हर पहलू (श्रद्धा से लेकर भोजन, अनुष्ठान, अनुशासन, और उदारता तक) में व्याप्त है।</b></p>
+        <div class="callout"><b>"विश्वकोशीय" दृष्टिकोण:</b> अध्याय 17 (और आगे 18 का प्रारंभिक भाग) गीता के सबसे "व्यवस्थित-विश्लेषणात्मक" खंडों में से एक है, जहाँ एक ही सैद्धांतिक ढांचा (त्रिगुण) क्रमबद्ध रूप से कई अलग-अलग जीवन-क्षेत्रों पर लागू किया जाता है — यह गीता की दार्शनिक व्यवस्थितता और व्यावहारिक व्यापकता दोनों का प्रमाण है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — अध्याय 17 का शेष रोडमैप</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="60" rx="130" ry="34" fill="rgba(140,74,32,0.14)" stroke="rgba(140,74,32,0.5)" stroke-width="1.4"/>
+          <text x="350" y="54" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">17.7 — घोषणा</text>
+          <text x="350" y="72" text-anchor="middle" fill="#cfc3a8" font-size="10">आहार, यज्ञ, तप, दान</text>
+
+          <line x1="350" y1="94" x2="350" y2="125" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+
+          <rect x="50" y="135" width="140" height="50" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="120" y="157" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">आहार</text>
+          <text x="120" y="174" text-anchor="middle" fill="#cfc3a8" font-size="9">17.8-10</text>
+
+          <rect x="205" y="135" width="140" height="50" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="275" y="157" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">यज्ञ</text>
+          <text x="275" y="174" text-anchor="middle" fill="#cfc3a8" font-size="9">17.11-13</text>
+
+          <rect x="360" y="135" width="140" height="50" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="430" y="157" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">तप</text>
+          <text x="430" y="174" text-anchor="middle" fill="#cfc3a8" font-size="9">17.14-19</text>
+
+          <rect x="515" y="135" width="140" height="50" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="585" y="157" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">दान</text>
+          <text x="585" y="174" text-anchor="middle" fill="#cfc3a8" font-size="9">17.20-22</text>
+
+          <line x1="350" y1="200" x2="350" y2="240" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <rect x="200" y="240" width="300" height="52" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="350" y="261" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">ॐ तत्सत् — त्रिविध ब्रह्म-निर्देश</text>
+          <text x="350" y="279" text-anchor="middle" fill="#cfc3a8" font-size="10">17.23-28 — अध्याय-समापन</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — "जीवन के चार आदान-प्रदान" अन्य परंपराओं में</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/संदर्भ</th><th>17.7 से समानता</th><th>अंतर</th></tr>
+          <tr><td>इस्लामी पंचस्तंभ (नमाज़, ज़कात/दान, रोज़ा/उपवास आदि)</td><td>भोजन-नियंत्रण, दान, और अनुष्ठान का संगठित ढांचा</td><td>इस्लामी पंचस्तंभ निश्चित नियमों पर आधारित, गीता गुण-विश्लेषण पर</td></tr>
+          <tr><td>यहूदी परंपरा में कोशर आहार-नियम और त्ज़ेदाका (दान)</td><td>भोजन और उदारता दोनों को धार्मिक अनुशासन का हिस्सा मानना</td><td>यहूदी परंपरा विशिष्ट नियमों पर, गीता आंतरिक प्रेरणा पर बल देती है</td></tr>
+          <tr><td>बौद्ध धर्म में दान (दाना), शील (नैतिक आचरण), और भावना (ध्यान)</td><td>दान और आत्म-अनुशासन को साधना के अभिन्न अंग मानना</td><td>बौद्ध त्रिविध मार्ग नैतिकता-ध्यान पर केंद्रित, गीता चार क्षेत्रों को कवर करती है</td></tr>
+          <tr><td>आधुनिक "holistic wellness" दृष्टिकोण (आहार, अनुशासन, उदारता, अनुष्ठान)</td><td>जीवन के कई आयामों को एक साथ, समग्र रूप से देखना</td><td>आधुनिक दृष्टिकोण स्वास्थ्य-केंद्रित, गीता आध्यात्मिक-गुणात्मक ढांचे पर</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशेषता:</b> 17.7 का चार-आयामी ढांचा (आहार-यज्ञ-तप-दान) व्यक्तिगत (आहार, तप) और सामाजिक/अलौकिक (यज्ञ, दान) दोनों आयामों को समान त्रिगुण-दृष्टि से जोड़ता है — यह समग्रता अन्य परंपराओं की तुलना में विशिष्ट रूप से व्यवस्थित है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>अपने जीवन के चारों क्षेत्रों की समीक्षा की तैयारी करें:</b> आगामी श्लोकों को पढ़ने से पहले, अपने जीवन में इन चार क्षेत्रों पर विचार करें — मेरा भोजन कैसा है? मेरी पूजा/सम्मान-भावना (यज्ञ का व्यापक अर्थ) कैसी है? मेरा आत्म-अनुशासन (तप) कैसा है? मेरी उदारता (दान) कैसी है? यह प्रारंभिक आत्म-चिंतन आगामी श्लोकों को अधिक व्यक्तिगत, प्रासंगिक बनाएगा।</div>
+        <p><b>अभ्यास — चार-क्षेत्र डायरी:</b> अगले कुछ दिनों तक, अपने भोजन, अनुष्ठान/सम्मान-प्रथाओं, आत्म-अनुशासन, और उदारता के कार्यों को नोट करें। जैसे-जैसे आप अध्याय 17 के आगामी श्लोक पढ़ें, अपने नोट्स की तुलना सात्त्विक-राजसिक-तामसिक विवरणों से करें।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> इस श्लोक को गीता की व्यवस्थित शिक्षण-पद्धति के प्रमाण के रूप में देखते हैं — एक सिद्धांत (त्रिगुण) को क्रमबद्ध रूप से विभिन्न जीवन-क्षेत्रों पर लागू करना, ताकि साधक अपने संपूर्ण जीवन का गुणात्मक मूल्यांकन कर सके।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> आहार, यज्ञ, तप, दान — इन चारों को भक्ति-जीवन के व्यावहारिक स्तंभ मानते हैं। शुद्ध भोजन, समर्पित यज्ञ, अनुशासित तप, और उदार दान — सभी मिलकर भक्त के जीवन को भगवद्-उन्मुख बनाते हैं।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को गीता के व्यावहारिक, कर्मयोग-उन्मुख स्वभाव के प्रमाण के रूप में देखते हैं — गीता केवल अमूर्त दर्शन नहीं देती, बल्कि दैनिक जीवन के ठोस पहलुओं (क्या खाना, कैसे यज्ञ करना, कैसे अनुशासन रखना, कैसे दान देना) पर विस्तृत मार्गदर्शन देती है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं कि यह श्लोक गीता की व्यावहारिक, जीवन-स्पर्शी प्रकृति का प्रमाण है — दर्शन को दैनिक जीवन के हर पहलू से जोड़ने का प्रयास।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">आहारः सर्वस्य प्रियः</span></div>
+            <div class="flashcard-face flashcard-back"><b>आहार सबको प्रिय</b>17.2 के "सर्वस्य श्रद्धा" से समानांतर</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">त्रिविधः</span></div>
+            <div class="flashcard-face flashcard-back"><b>तीन प्रकार का</b>त्रिगुण-सिद्धांत आहार पर भी लागू</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">यज्ञः तपः दानम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>यज्ञ, तप, दान</b>अध्याय के शेष भाग का विषय-सूची</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">तेषां भेदम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>उनका भेद</b>त्रिविध वर्गीकरण की घोषणा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">श्रृणु</span></div>
+            <div class="flashcard-face flashcard-back"><b>सुनो</b>17.2 के "तां श्रृणु" की पुनरावृत्ति</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">आहारः</td><td>आ+√हृ</td><td>प्रथमा एकवचन</td><td>आहार, भोजन — कर्ता</td></tr>
+          <tr><td class="sa">सर्वस्य</td><td>सर्व</td><td>षष्ठी एकवचन</td><td>सबका</td></tr>
+          <tr><td class="sa">त्रिविधः भवति प्रियः</td><td>त्रि+विधा, √भू, प्रिय</td><td>प्रथमा, वर्तमान, प्रथमा</td><td>तीन प्रकार का, प्रिय है</td></tr>
+          <tr><td class="sa">यज्ञः तपः दानम्</td><td>यज्ञ, तपस्, दान</td><td>प्रथमा एकवचन (×३)</td><td>यज्ञ, तप, दान — कर्ता</td></tr>
+          <tr><td class="sa">तेषाम् भेदम् इमम्</td><td>तद्, भेद, इदम्</td><td>षष्ठी, द्वितीया (×२)</td><td>उनका यह भेद — कर्म</td></tr>
+          <tr><td class="sa">श्रृणु</td><td>√श्रु</td><td>आज्ञार्थ, द्वि.पु. एकवचन</td><td>सुनो — आदेश</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः।<br>यज्ञस्तपस्तथा दानं तेषां भेदमिमं श्रृणु।।</div>
+          <div class="cheat-translit">āhāras tv api sarvasya trividho bhavati priyaḥ, yajñas tapas tathā dānaṃ teṣāṃ bhedam imaṃ śṛṇu</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>आहारः त्रिविधः</b> भोजन भी तीन प्रकार का</span>
+            <span class="cheat-chip"><b>यज्ञः तपः दानम्</b> तीन आगामी विषय</span>
+            <span class="cheat-chip"><b>तेषां भेदम् श्रृणु</b> इनका भेद सुनो</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: 17.5-6 की तीव्र चेतावनी के बाद, कृष्ण व्यवस्थित विश्लेषण की ओर लौटते हैं — आहार भी, श्रद्धा की तरह, सबको प्रिय और त्रिविध है। यज्ञ, तप, और दान का भी यही भेद आगे समझाया जाएगा। यह श्लोक अध्याय 17 के शेष भाग (17.8-22) के लिए एक स्पष्ट विषय-सूची स्थापित करता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः। यज्ञस्तपस्तथा दानं तेषां भेदमिमं श्रृणु।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः। यज्ञस्तपस्तथा दानं तेषां भेदमिमं श्रृणु।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('आहार भी सबको प्रिय, तीन प्रकार का होता है। यज्ञ, तप, तथा दान — इनका भी यह भेद सुनो।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द (शुद्ध ४×८)</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">आ</span><span class="syll">हा</span><span class="syll">रस्</span><span class="syll">त्व</span><span class="syll">पि</span><span class="syll">सर्</span><span class="syll">व</span><span class="syll">स्य</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">त्रि</span><span class="syll">वि</span><span class="syll">धो</span><span class="syll">भ</span><span class="syll">व</span><span class="syll">ति</span><span class="syll">प्रि</span><span class="syll">यः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">यज्</span><span class="syll">ञस्</span><span class="syll">त</span><span class="syll">पस्</span><span class="syll">त</span><span class="syll">था</span><span class="syll">दा</span><span class="syll">नं</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">ते</span><span class="syll">षां</span><span class="syll">भे</span><span class="syll">द</span><span class="syll">मि</span><span class="syll">मं</span><span class="syll">श्रृ</span><span class="syll">णु</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः यज्ञस्तपस्तथा दानं तेषां भेदमिमं श्रृणु', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> शुद्ध ४×८ अनुष्टुप्, ३२ अक्षर। जप करते समय ध्यान रखें — यह एक "घोषणा-श्लोक" है, जो आगामी विस्तृत विश्लेषण की भूमिका बाँधता है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">17.6 vs 17.7</button>
+      <button class="tab-btn" data-tab="e2">चार विषयों की भूमिका</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 17.6 vs 17.7 — चेतावनी के समापन से नई शुरुआत तक</h3>
+        <p class="subnote">भावनात्मक चरम से व्यवस्थित संरचना की ओर</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">⚠️ 17.6 — चेतावनी का समापन</div>
+            <div class="contrast-sa">तान्विद्धि आसुरनिश्चयान्</div>
+            <p><b>तीव्र, नैतिक निर्णय — भावनात्मक चरम-बिंदु।</b><br>अध्याय 16 से सीधा सेतु।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">📋 17.7 — नई घोषणा</div>
+            <div class="contrast-sa">आहारस्त्वपि... तेषां भेदमिमं श्रृणु</div>
+            <p><b>शांत, व्यवस्थित संरचना — विषय-सूची।</b><br>17.2 की वाक्य-रचना की वापसी।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> गीता तीव्र भावनात्मक चेतावनी और शांत, व्यवस्थित विश्लेषण के बीच सहज रूप से आगे-पीछे जा सकती है — यह इसकी शिक्षण-शैली की लचीलापन और गहराई दोनों को दर्शाता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 चार विषयों की भूमिका — आहार, यज्ञ, तप, दान</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🍽️ आहार + यज्ञ</div>
+            <div class="guna-sa">17.8-13</div>
+            <div class="guna-char">जो हम ग्रहण करते हैं, जो हम अर्पित करते हैं — व्यक्तिगत व सामूहिक।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🔥 तप</div>
+            <div class="guna-sa">17.14-19</div>
+            <div class="guna-char">शारीरिक, वाचिक, मानसिक अनुशासन — आत्म-निर्माण।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🤲 दान</div>
+            <div class="guna-sa">17.20-22</div>
+            <div class="guna-char">जो हम दूसरों को देते हैं — सामाजिक उदारता।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> ग्रहण करना (आहार) → अर्पित करना (यज्ञ) → स्वयं पर लागू करना (तप) → देना (दान) — यह क्रम जीवन के आदान-प्रदान चक्र को पूर्ण करता है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 17 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४<br>त्रिविध पूजा-विषय</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ५-६<br>घोर तप की चेतावनी</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ७<br>नई घोषणा ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ८-१०<br>त्रिविध आहार</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ११-२८<br>यज्ञ, तप, दान, समापन</div></div>
+        </div>
+        <div class="callout"><b>अगला (17.8):</b> "आयुःसत्त्वबलारोग्यसुखप्रीतिविवर्धनाः। रस्याः स्निग्धाः स्थिरा हृद्या आहाराः सात्त्विकप्रियाः।।" — सात्त्विक लोगों को प्रिय भोजन का विस्तृत वर्णन — आयु, बल, स्वास्थ्य, सुख, प्रसन्नता बढ़ाने वाला।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.८) — ☰ नेविगेशन — सात्त्विक आहार: आयुःसत्त्वबलारोग्य...</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"17.7 किस प्रकार का श्लोक है?",options:["एक शाप","एक घोषणा/विषय-सूची श्लोक","एक प्रश्न","एक अंतिम निष्कर्ष"],correct:1},
+    {q:"17.7 के अनुसार, आगे कौन-कौन से विषय त्रिविध रूप से समझाए जाएँगे?",options:["केवल श्रद्धा","आहार, यज्ञ, तप, दान","केवल तप","युद्ध की रणनीति"],correct:1},
+    {q:"17.7 की वाक्य-रचना किस पहले के श्लोक से मिलती-जुलती है?",options:["17.1 — अर्जुन का प्रश्न","17.2 — त्रिविधा भवति श्रद्धा","16.24 — शास्त्र प्रमाण है","18.78 — योगेश्वर कृष्ण"],correct:1},
+    {q:"'सर्वस्य प्रियः' किसके संदर्भ में कहा गया है?",options:["श्रद्धा के संदर्भ में","आहार के संदर्भ में","तप के संदर्भ में","दान के संदर्भ में"],correct:1},
+    {q:"17.7 अध्याय 17 की समग्र संरचना में क्या भूमिका निभाता है?",options:["यह अध्याय को समाप्त करता है","यह शेष अध्याय (17.8-22) के लिए एक स्पष्ट रूपरेखा/विषय-सूची स्थापित करता है","इसका कोई संरचनात्मक महत्व नहीं","यह पिछले सभी श्लोकों को खारिज करता है"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "17.5-6 ने एक तीव्र चेतावनी दी — आसुरी निश्चय वाले घोर तप के विरुद्ध। 17.7 में स्वर फिर बदलता है — व्यवस्थित, संरचित विश्लेषण की ओर।",
+    "'आहारस्त्वपि सर्वस्य त्रिविधो भवति प्रियः' — आहार भी, श्रद्धा की तरह, सबको प्रिय और तीन प्रकार का होता है। यह 17.2 की वाक्य-रचना को दोहराता है।",
+    "'यज्ञस्तपस्तथा दानं' — यज्ञ, तप, और दान — तीन और विषय जिन्हें त्रिविध रूप से समझाया जाएगा।",
+    "'तेषां भेदमिमं श्रृणु' — उनका यह भेद सुनो। यह श्लोक एक विषय-सूची की तरह काम करता है, आगामी विश्लेषण की रूपरेखा देते हुए।",
+    "यह श्लोक दिखाता है कि त्रिगुण-सिद्धांत केवल श्रद्धा तक सीमित नहीं — यह भोजन, अनुष्ठान, अनुशासन, और उदारता — जीवन के हर पहलू पर लागू होता है।",
+    "अगला (17.8) सात्त्विक आहार के विस्तृत, सकारात्मक वर्णन से शुरू होगा — आयु, बल, स्वास्थ्य, सुख, और प्रसन्नता बढ़ाने वाला भोजन।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

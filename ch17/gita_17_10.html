@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 17.10 — तामसिक आहार: भोजनं तामसप्रियम्</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style><body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 17 · श्लोक 10 / 28</span>
+    <div class="progress-track"><div class="progress-fill"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सत्रह</div>
+    <div class="chapter-title">अध्याय १७ — श्रद्धात्रयविभागयोग (श्रद्धा के तीन प्रकार)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १७.१० — त्रिविध आहार का समापन</div>
+    </div>
+    <div class="guna-badge">🪔 तामसिक आहार — उपेक्षा, क्षय, और अशुद्धता</div>
+    <div class="shloka">
+      यातयामं गतरसं पूति पर्युषितं च यत्।<br>
+      उच्छिष्टमपि चामेध्यं भोजनं तामसप्रियम्।।
+    </div>
+    <div class="translit">
+      yātayāmaṃ gatarasaṃ pūti paryuṣitaṃ ca yat,<br>
+      ucchiṣṭam api cāmedhyaṃ bhojanaṃ tāmasa-priyam
+    </div>
+    <div class="gist">
+      <b>बासी, रस-रहित, दुर्गंधयुक्त, बासा (रात भर रखा हुआ)</b>, और जो <b>जूठा तथा अपवित्र</b> भी है — ऐसा भोजन <b>तामसिक को प्रिय</b> है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — त्रिविध आहार-विश्लेषण का समापन</h3>
+      <p>17.8 (सात्त्विक) और 17.9 (राजसिक) के बाद, 17.10 त्रिविध आहार-विश्लेषण को पूर्ण करता है — तामसिक भोजन का वर्णन। इसके साथ ही, 17.7 में की गई घोषणा ("आहारस्त्वपि... त्रिविधो भवति") पूर्ण रूप से संतुष्ट होती है, और अध्याय अगले विषय — यज्ञ (17.11-13) — की ओर बढ़ने के लिए तैयार होता है।</p>
+      <p>ध्यान दें — यह श्लोक 17.8 और 17.9 की तुलना में <b>सबसे संक्षिप्त, सबसे सीधा</b> है। जहाँ 17.8 ने छह सकारात्मक लाभ गिनाए, और 17.9 ने तीन नकारात्मक परिणाम बताए, 17.10 <b>कोई स्पष्ट परिणाम नहीं बताता</b> — यह केवल भोजन की अवस्था (बासी, रस-रहित, अशुद्ध) का वर्णन करता है और सीधे "तामसप्रियम्" (तामसिक को प्रिय) कहकर समाप्त हो जाता है।</p>
+      <div class="callout-rajas"><b>ध्यान दें — यह संक्षिप्तता स्वयं अर्थपूर्ण है:</b> तामस गुण की मूल प्रकृति ही निष्क्रियता, उपेक्षा, और ऊर्जा-हीनता है (देखें 14.8 — "तमस्त्वज्ञानजं विद्धि मोहनं सर्वदेहिनाम्... प्रमादालस्यनिद्राभिः")। यह उचित है कि तामसिक भोजन के वर्णन में भी कोई विस्तृत "परिणाम-विश्लेषण" नहीं है — तामस में स्वयं ऊर्जा और गति का अभाव है, इसलिए उसका वर्णन भी संक्षिप्त, ऊर्जाहीन शैली में आता है। शैली स्वयं विषय-वस्तु को प्रतिबिंबित करती है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यातयामम्</span><span class="word-tr">yātayāmam</span></div>
+          <div class="word-meaning">बासी, जिसका उचित समय बीत चुका</div>
+          <div class="word-eng"><b>EN:</b> stale, past its proper time</div>
+          <div class="word-deep">याम (एक कालखंड, प्रहर) से व्युत्पन्न — शाब्दिक अर्थ "जिसने याम (समय-सीमा) पार कर लिया हो।" यह भोजन के <b>ताज़गी-रहित होने</b> को इंगित करता है — जो अपने उपयुक्त, स्वास्थ्यकर समय-सीमा के बाद तक रखा गया हो।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">गतरसम्</span><span class="word-tr">gatarasam</span></div>
+          <div class="word-meaning">रस-रहित, जिसका सार/स्वाद जा चुका</div>
+          <div class="word-eng"><b>EN:</b> flavorless, having lost its essence</div>
+          <div class="word-deep">गत (गया हुआ) + रस (स्वाद/सार/जीवन-रस)। यह 17.8 के "रस्याः" (रसयुक्त, सात्त्विक भोजन का गुण) का सीधा विपरीत है — जीवन्तता और पोषण-सार दोनों खो चुका भोजन।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">पूति, पर्युषितम्</span><span class="word-tr">pūti, paryuṣitam</span></div>
+          <div class="word-meaning">दुर्गंधयुक्त, और बासा (रात भर रखा हुआ)</div>
+          <div class="word-eng"><b>EN:</b> putrid/foul, and stale (kept overnight)</div>
+          <div class="word-deep">पूति = सड़ा हुआ, दुर्गंधयुक्त। पर्युषित = परि+उषित (रात भर पड़ा रहना) से — विशेष रूप से पकाने के बाद अनुचित रूप से देर तक रखा गया भोजन। दोनों शब्द भोजन के <b>क्षय और अनुचित संरक्षण</b> की ओर इशारा करते हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">उच्छिष्टम्</span><span class="word-tr">ucchiṣṭam</span></div>
+          <div class="word-meaning">जूठा, किसी और का खाया-बचा हुआ</div>
+          <div class="word-eng"><b>EN:</b> leftover, already partaken by another</div>
+          <div class="word-deep">उत्+शिष्ट (जो बच गया हो) से — विशेष रूप से वह भोजन जिसे किसी और ने पहले ही खाना शुरू कर दिया हो। भारतीय परंपरा में इसे प्रायः स्वच्छता और अनुष्ठान-शुद्धता की दृष्टि से अनुपयुक्त माना जाता है (कुछ भक्ति-संदर्भों में भगवान् का "प्रसाद उच्छिष्ट" अपवाद है, पर सामान्य संदर्भ में यह अशुद्धि का सूचक है)।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अमेध्यम् भोजनम् तामसप्रियम्</span><span class="word-tr">amedhyaṃ bhojanaṃ tāmasa-priyam</span></div>
+          <div class="word-meaning">अपवित्र भोजन तामसिक को प्रिय</div>
+          <div class="word-eng"><b>EN:</b> impure food is dear to the tāmasic</div>
+          <div class="word-deep">अमेध्य = अ (नहीं) + मेध्य (यज्ञ-योग्य, पवित्र) — यज्ञ या पवित्र प्रयोजन के लिए अनुपयुक्त, अशुद्ध। यह श्लोक का अंतिम, सबसे व्यापक शब्द है, जो सभी पूर्वोक्त दोषों (बासीपन, रस-हीनता, दुर्गंध, जूठापन) को एक ही श्रेणी — "अशुद्धता" — में समेट देता है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Food that is stale, flavorless, putrid, and kept overnight, as well as that which is leftover and impure — such food is dear to the tāmasic.
+      </div>
+      <p>17.10 तामस गुण की मूल प्रकृति को भोजन के माध्यम से प्रकट करता है। जहाँ 17.8 का सात्त्विक भोजन <b>जीवन्तता और ताज़गी</b> (रस्य, स्निग्ध) का प्रतीक था, और 17.9 का राजसिक भोजन <b>तीव्रता और उत्तेजना</b> का, वहाँ 17.10 का तामसिक भोजन <b>क्षय, उपेक्षा, और अशुद्धता</b> का प्रतीक है।</p>
+      <p>यह वर्णन सीधे अध्याय 14 के तामस-लक्षणों — "अज्ञानजं... प्रमादालस्यनिद्राभिः" (अज्ञान से उत्पन्न, प्रमाद-आलस्य-निद्रा से पहचाना जाने वाला, 14.8) — से मेल खाता है। तामसिक व्यक्ति की भोजन-संबंधी उपेक्षा (भोजन को ठीक से संरक्षित न करना, बासी होने देना, स्वच्छता की परवाह न करना) उसकी सामान्य जीवन-शैली की उपेक्षा और आलस्य का ही एक प्रतिबिंब है।</p>
+      <div class="callout-rajas"><b>तीनों श्लोकों की एक समग्र तस्वीर (17.8-10):</b> सात्त्विक भोजन <b>सक्रिय रूप से बनाया, चुना गया</b> प्रतीत होता है (ताज़ा, संतुलित, प्रेम से तैयार)। राजसिक भोजन <b>सक्रिय रूप से खोजा गया</b> प्रतीत होता है (तीव्र स्वाद की तलाश)। तामसिक भोजन में कोई सक्रियता नहीं — यह वह भोजन है जो <b>उपेक्षा से बचा रह जाता है</b>, जिसे बनाने-चुनने में कोई प्रयास, ध्यान, या देखभाल नहीं लगाई गई। यह तीनों गुणों (सक्रिय-निर्माण, सक्रिय-खोज, निष्क्रिय-उपेक्षा) के मूल स्वभाव को खूबसूरती से दर्शाता है।</div>
+      <p>यह श्लोक अध्याय 17 के आहार-विश्लेषण को स्वच्छता, ताज़गी, और सम्मान के एक सरल पर गहन सिद्धांत के साथ समाप्त करता है — भोजन के प्रति हमारा दृष्टिकोण (चाहे हम इसे कितनी देखभाल और सजगता से तैयार करते, चुनते, और ग्रहण करते हैं) हमारी आंतरिक अवस्था का प्रत्यक्ष प्रतिबिंब है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — उपेक्षा से बना आहार-पैटर्न:</b> जब कोई व्यक्ति गहरी उदासीनता या आलस्य की अवस्था में होता है, वह अक्सर जो भी उपलब्ध हो, बिना ध्यान दिए खा लेता है — चाहे वह बासी हो, ठीक से संग्रहीत न हो, या पौष्टिकता से रहित हो। यह भोजन-चयन में सक्रियता के अभाव को दर्शाता है, जो तामस की पहचान है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — आधुनिक खाद्य-सुरक्षा और स्वच्छता की चिंता:</b> आधुनिक खाद्य-विज्ञान भी बासी, दूषित, या अनुचित रूप से संग्रहीत भोजन के स्वास्थ्य-जोखिमों पर बल देता है — 17.10 का यह प्राचीन अवलोकन आज के खाद्य-सुरक्षा मानकों से आश्चर्यजनक रूप से मेल खाता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — जागरूक बनाम अचेतन भोजन-चयन:</b> ताज़ा, सचेत रूप से तैयार भोजन बनाम जो कुछ भी सुविधाजनक, बिना सोचे-समझे उपलब्ध हो उसे खा लेना — यह अंतर केवल स्वास्थ्य का नहीं, बल्कि जीवन के प्रति समग्र दृष्टिकोण (सक्रिय बनाम उपेक्षापूर्ण) का भी सूचक है।
+      </div>
+      <div class="callout"><b>महत्त्वपूर्ण बात:</b> यह श्लोक हमें भोजन की तैयारी और चयन में <b>सजगता और देखभाल</b> लाने के लिए प्रेरित करता है — यह केवल "क्या खाना है" का प्रश्न नहीं, बल्कि "कितनी सजगता और सम्मान के साथ मैं अपने भोजन को संभालता हूँ" का भी प्रश्न है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">17.10 में स्पष्ट "परिणाम" (जैसे 17.9 के दुःख-शोक-आमय) क्यों नहीं बताए गए?</div>
+        <div class="a">यह शैलीगत रूप से सार्थक है — तामस गुण की मूल प्रकृति ही निष्क्रियता और ऊर्जा-हीनता है। जहाँ 17.8 (सक्रिय निर्माण) और 17.9 (सक्रिय, तीव्र खोज) दोनों में गतिशीलता है, वहाँ तामस में मूलभूत जड़ता है — इसलिए इसका वर्णन भी परिणाम-विश्लेषण के बिना, केवल एक सीधे तथ्य-कथन ("तामसप्रियम्") पर समाप्त होता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"उच्छिष्ट" (जूठा) को अशुद्ध क्यों माना जाता है, जबकि भक्ति-परंपरा में "प्रसाद" को पवित्र माना जाता है?</div>
+        <div class="a">यह एक सूक्ष्म परंपरागत भेद है। सामान्य संदर्भ में, किसी और का खाया-बचा भोजन (विशेषतः बिना घनिष्ठता के) स्वच्छता और सम्मान की दृष्टि से अनुपयुक्त माना जाता है। पर भक्ति-परंपरा में, भगवान् को अर्पित और फिर वितरित "प्रसाद" (भले ही तकनीकी रूप से "उच्छिष्ट" कहा जाए) को दिव्य-कृपा के रूप में पवित्र माना जाता है — यह भक्ति और भाव की शक्ति को दर्शाता है, जो सामान्य नियमों से ऊपर उठ जाती है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">17.8-9-10 — तीनों श्लोक मिलकर क्या सिखाते हैं?</div>
+        <div class="a">तीनों मिलकर भोजन को एक संपूर्ण, त्रिआयामी दर्पण के रूप में प्रस्तुत करते हैं — सात्त्विक (ताज़ा, संतुलित, प्रेम से तैयार — सक्रिय देखभाल), राजसिक (तीव्र, उत्तेजक — सक्रिय लालसा), तामसिक (बासी, उपेक्षित, अशुद्ध — निष्क्रिय लापरवाही)। यह त्रय दिखाता है कि भोजन का चयन केवल स्वाद की बात नहीं, बल्कि हमारी संपूर्ण आंतरिक अवस्था — देखभाल, इच्छा, या उपेक्षा — का प्रतिबिंब है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">17.10 के बाद क्या आता है?</div>
+        <div class="a">17.11 से यज्ञ (अनुष्ठान/त्याग) का त्रिविध विश्लेषण शुरू होगा — "अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते। यष्टव्यमेवेति मनः समाधाय स सात्त्विकः।।" — जो यज्ञ फल की इच्छा के बिना, विधि-सम्मत ढंग से, केवल "यह करना ही चाहिए" के भाव से किया जाता है, वह सात्त्विक है। यह आहार-विश्लेषण से आगे बढ़कर अनुष्ठान-विश्लेषण की ओर एक नया अध्याय-खंड खोलेगा।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>17.10 अध्याय 17 के आहार-विश्लेषण (17.7-10) को पूर्ण करता है — यह त्रिविध-वर्गीकरण-पद्धति (सात्त्विक-राजसिक-तामसिक) का एक संपूर्ण, स्वतंत्र उदाहरण प्रस्तुत करता है, जिसे आगे यज्ञ, तप, और दान पर भी लागू किया जाएगा।</p>
+        <p>यह श्लोक विशेष रूप से महत्वपूर्ण है क्योंकि यह <b>स्वच्छता और देखभाल</b> को एक आध्यात्मिक गुणवत्ता के रूप में स्थापित करता है — यह केवल "क्या खाना है" का प्रश्न नहीं, बल्कि "भोजन के प्रति हमारा समग्र दृष्टिकोण कैसा है" का प्रश्न है।</p>
+        <div class="callout"><b>त्रिविध आहार-विश्लेषण का समापन:</b> 17.8-10 मिलकर एक पूर्ण, संतुलित चित्र प्रस्तुत करते हैं — देखभाल-पूर्ण निर्माण (सात्त्विक) → तीव्र लालसा (राजसिक) → उपेक्षापूर्ण लापरवाही (तामसिक)। यह त्रय गीता के त्रिगुण-सिद्धांत की व्यावहारिक, दैनिक जीवन में गहरी पैठ को दर्शाता है।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — तामसिक आहार के छह लक्षण</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="60" rx="140" ry="34" fill="rgba(140,74,32,0.14)" stroke="rgba(140,74,32,0.5)" stroke-width="1.4"/>
+          <text x="350" y="54" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">तामसिक आहार — छह लक्षण</text>
+          <text x="350" y="72" text-anchor="middle" fill="#cfc3a8" font-size="10">क्षय + अशुद्धता</text>
+
+          <line x1="250" y1="94" x2="180" y2="145" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <rect x="60" y="150" width="240" height="70" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="180" y="172" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">क्षय (चार लक्षण)</text>
+          <text x="180" y="190" text-anchor="middle" fill="#cfc3a8" font-size="9">यातयाम, गतरस,</text>
+          <text x="180" y="206" text-anchor="middle" fill="#cfc3a8" font-size="9">पूति, पर्युषित</text>
+
+          <line x1="450" y1="94" x2="520" y2="145" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <rect x="400" y="150" width="240" height="70" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="520" y="172" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">अशुद्धता (दो लक्षण)</text>
+          <text x="520" y="190" text-anchor="middle" fill="#cfc3a8" font-size="9">उच्छिष्ट, अमेध्य</text>
+
+          <line x1="350" y1="230" x2="350" y2="275" stroke="rgba(140,74,32,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+          <rect x="200" y="275" width="300" height="50" rx="8" fill="rgba(140,74,32,0.06)" stroke="rgba(140,74,32,0.25)" stroke-width="1"/>
+          <text x="350" y="296" text-anchor="middle" fill="#cfc3a8" font-size="11" font-family="Tiro Devanagari Hindi, serif">तामसप्रियम्</text>
+          <text x="350" y="314" text-anchor="middle" fill="#cfc3a8" font-size="10">कोई स्पष्ट परिणाम नहीं — तामस की जड़ता की शैलीगत प्रतिध्वनि</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — "भोजन-स्वच्छता और शुद्धता" अन्य परंपराओं में</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/संदर्भ</th><th>17.10 से समानता</th><th>अंतर</th></tr>
+          <tr><td>यहूदी कोशर और इस्लामी हलाल भोजन-नियम</td><td>भोजन की शुद्धता और उचित तैयारी पर बल</td><td>कोशर/हलाल विशिष्ट धार्मिक नियमों पर आधारित, गीता गुण-मनोविज्ञान पर</td></tr>
+          <tr><td>आयुर्वेद में "बासी भोजन" (पर्युषित अन्न) की चेतावनी</td><td>वही मूल शब्द (पर्युषित) और अवधारणा — बासी भोजन हानिकारक</td><td>आयुर्वेद विशिष्ट शारीरिक प्रभावों का विस्तृत विवरण भी देता है</td></tr>
+          <tr><td>आधुनिक खाद्य-सुरक्षा मानक (food safety standards)</td><td>बासी, दूषित भोजन के स्वास्थ्य-जोखिमों की पहचान</td><td>आधुनिक मानक सूक्ष्मजीव-विज्ञान पर आधारित, गीता समग्र गुण-दृष्टि पर</td></tr>
+          <tr><td>बौद्ध भिक्षु-परंपरा में भिक्षा-भोजन ग्रहण के समय-नियम</td><td>भोजन की ताज़गी और उचित समय पर ग्रहण करने पर बल</td><td>बौद्ध परंपरा विशेष रूप से मध्याह्न-भोजन नियम पर केंद्रित, गीता व्यापक सिद्धांत पर</td></tr>
+        </table>
+        <div class="callout"><b>गीता की विशेषता:</b> 17.10 भोजन की भौतिक स्वच्छता (बासीपन, दुर्गंध) को सीधे आंतरिक मनोवैज्ञानिक अवस्था (तामस — उपेक्षा, आलस्य) से जोड़ता है, जो इसे केवल स्वास्थ्य-नियम से आगे एक आध्यात्मिक सिद्धांत बनाता है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>अपनी भोजन-देखभाल की जाँच करें:</b> क्या मैं अपने भोजन की ताज़गी, स्वच्छता, और उचित तैयारी पर ध्यान देता हूँ, या मैं उपेक्षा से, जो भी उपलब्ध हो उसे बिना सोचे खा लेता हूँ? यह सरल आत्म-जाँच केवल स्वास्थ्य के लिए नहीं, बल्कि जीवन के प्रति समग्र सजगता के अभ्यास के रूप में भी उपयोगी है।</div>
+        <p><b>अभ्यास — भोजन में देखभाल लाना:</b> भोजन को समय पर तैयार करने, ताज़ा रखने, और स्वच्छता से ग्रहण करने का सचेत प्रयास करें। यह छोटा-सा अभ्यास — भोजन के प्रति सम्मान और देखभाल — तामस से सात्त्विक की ओर एक सूक्ष्म, पर सार्थक कदम हो सकता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> इस श्लोक को तामस गुण के "प्रमाद" (लापरवाही) लक्षण के प्रत्यक्ष उदाहरण के रूप में देखते हैं — भोजन की उपेक्षा, अशुद्धता के प्रति उदासीनता, यह सब गहरे आध्यात्मिक अज्ञान और आलस्य का बाहरी प्रकटीकरण है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "अमेध्यम्" शब्द पर बल देते हुए कहते हैं कि अशुद्ध भोजन भक्ति-साधना के लिए भी अनुपयुक्त है — भगवद्-अर्पण के योग्य भोजन शुद्ध, सम्मानपूर्वक तैयार होना चाहिए, न कि उपेक्षा से बचा हुआ या अशुद्ध।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> इस श्लोक को गीता की व्यावहारिक स्वास्थ्य-शिक्षा की निरंतरता मानते हैं — 17.8-10 मिलकर एक संपूर्ण, वैज्ञानिक रूप से भी सार्थक आहार-दिशा-निर्देश प्रस्तुत करते हैं, जो प्राचीन भारतीय ज्ञान की व्यावहारिक गहराई को दर्शाता है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत हैं कि 17.10 भोजन की उपेक्षा को केवल एक स्वास्थ्य-समस्या नहीं, बल्कि गहरी आध्यात्मिक लापरवाही के लक्षण के रूप में प्रस्तुत करता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">यातयामम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>बासी, समय बीत चुका</b>याम (कालखंड) से व्युत्पन्न</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">गतरसम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>रस-रहित</b>17.8 के "रस्याः" का सीधा विपरीत</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">पूति, पर्युषितम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>दुर्गंधयुक्त, बासा</b>अनुचित संरक्षण के लक्षण</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">उच्छिष्टम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>जूठा</b>किसी और का खाया-बचा भोजन</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अमेध्यम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>अपवित्र, यज्ञ-अयोग्य</b>सभी दोषों को समेटने वाला अंतिम शब्द</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">यातयामम्</td><td>याम+यात (गत)</td><td>प्रथमा एकवचन</td><td>बासी — भोजनम् का विशेषण</td></tr>
+          <tr><td class="sa">गतरसम्</td><td>गत+रस</td><td>प्रथमा एकवचन</td><td>रस-रहित</td></tr>
+          <tr><td class="sa">पूति</td><td>पूय्+क्तिन्</td><td>प्रथमा एकवचन</td><td>दुर्गंधयुक्त</td></tr>
+          <tr><td class="sa">पर्युषितम्</td><td>परि+उष्+क्त</td><td>प्रथमा एकवचन</td><td>रात भर रखा हुआ</td></tr>
+          <tr><td class="sa">उच्छिष्टम्</td><td>उत्+शिष्+क्त</td><td>प्रथमा एकवचन</td><td>जूठा</td></tr>
+          <tr><td class="sa">अमेध्यम्</td><td>अ+मेध्य</td><td>प्रथमा एकवचन</td><td>अपवित्र</td></tr>
+          <tr><td class="sa">भोजनम् तामसप्रियम्</td><td>भोज्+ल्युट्, तमस्+ठक्, प्रिय</td><td>प्रथमा एकवचन (×२)</td><td>भोजन तामसिक को प्रिय — कर्ता+विधेय</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">यातयामं गतरसं पूति पर्युषितं च यत्।<br>उच्छिष्टमपि चामेध्यं भोजनं तामसप्रियम्।।</div>
+          <div class="cheat-translit">yātayāmaṃ gatarasaṃ pūti paryuṣitaṃ ca yat, ucchiṣṭam api cāmedhyaṃ bhojanaṃ tāmasa-priyam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>यातयाम-गतरस</b> बासी, रस-रहित</span>
+            <span class="cheat-chip"><b>पूति-पर्युषित</b> दुर्गंधयुक्त, बासा</span>
+            <span class="cheat-chip"><b>उच्छिष्ट-अमेध्य</b> जूठा, अपवित्र</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: तामसिक व्यक्ति को बासी, रस-रहित, दुर्गंधयुक्त, जूठा, अपवित्र भोजन प्रिय होता है — यह उपेक्षा और लापरवाही का प्रतिबिंब है, न कि सक्रिय निर्माण (सात्त्विक) या सक्रिय लालसा (राजसिक)। यह श्लोक त्रिविध आहार-विश्लेषण (17.8-10) को पूर्ण करता है, जिसके बाद अध्याय यज्ञ की ओर बढ़ेगा।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('यातयामं गतरसं पूति पर्युषितं च यत्। उच्छिष्टमपि चामेध्यं भोजनं तामसप्रियम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('यातयामं गतरसं पूति पर्युषितं च यत्। उच्छिष्टमपि चामेध्यं भोजनं तामसप्रियम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('बासी, रस-रहित, दुर्गंधयुक्त, बासा, और जो जूठा तथा अपवित्र भी है — ऐसा भोजन तामसिक को प्रिय है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द (शुद्ध ४×८)</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">या</span><span class="syll">त</span><span class="syll">या</span><span class="syll">मं</span><span class="syll">ग</span><span class="syll">त</span><span class="syll">र</span><span class="syll">सं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">पू</span><span class="syll">ति</span><span class="syll">प</span><span class="syll">र्यु</span><span class="syll">षि</span><span class="syll">तं</span><span class="syll">च</span><span class="syll">यत्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">उच्</span><span class="syll">छिष्</span><span class="syll">ट</span><span class="syll">म</span><span class="syll">पि</span><span class="syll">चा</span><span class="syll">मेध्</span><span class="syll">यं</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">भो</span><span class="syll">ज</span><span class="syll">नं</span><span class="syll">ता</span><span class="syll">म</span><span class="syll">स</span><span class="syll">प्रि</span><span class="syll">यम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('यातयामं गतरसं पूति पर्युषितं च यत् उच्छिष्टमपि चामेध्यं भोजनं तामसप्रियम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> शुद्ध ४×८ अनुष्टुप्, ३२ अक्षर। यह त्रिविध आहार-विश्लेषण (17.8-10) का अंतिम श्लोक है — जप करते समय तीनों श्लोकों को एक साथ याद करने का प्रयास करें।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">तीनों आहार — एक साथ</button>
+      <button class="tab-btn" data-tab="e2">छह लक्षण</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 17.8-9-10 — त्रिविध आहार एक साथ</h3>
+        <p class="subnote">सक्रिय निर्माण → सक्रिय लालसा → निष्क्रिय उपेक्षा</p>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🍽️ 17.8 — सात्त्विक</div>
+            <div class="guna-sa">रस्य, स्निग्ध, स्थिर, हृद्य</div>
+            <div class="guna-char">छह सकारात्मक फल — देखभाल-पूर्ण निर्माण।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🌶️ 17.9 — राजसिक</div>
+            <div class="guna-sa">कटु, अम्ल, अत्युष्ण, तीक्ष्ण</div>
+            <div class="guna-char">तीन नकारात्मक परिणाम — तीव्र लालसा।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🗑️ 17.10 — तामसिक</div>
+            <div class="guna-sa">यातयाम, गतरस, पूति, अमेध्य</div>
+            <div class="guna-char">कोई परिणाम नहीं बताया — निष्क्रिय उपेक्षा।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> तीनों श्लोकों की संरचना (6 फल, 3 फल, 0 फल) स्वयं तीनों गुणों की ऊर्जा-अवस्था को दर्शाती है — सत्त्व में पूर्णता, रज में आंशिकता, तम में शून्यता।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 तामसिक आहार के छह लक्षण — विस्तार से</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">⏳ यातयाम, पर्युषित</div>
+            <div class="guna-sa">समय-दोष</div>
+            <div class="guna-char">उचित समय-सीमा पार कर चुका भोजन।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">👃 गतरस, पूति</div>
+            <div class="guna-sa">गुणवत्ता-दोष</div>
+            <div class="guna-char">स्वाद और गंध दोनों में क्षय।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🚫 उच्छिष्ट, अमेध्य</div>
+            <div class="guna-sa">शुद्धता-दोष</div>
+            <div class="guna-char">जूठा और अपवित्र — सम्मान का अभाव।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> समय-दोष + गुणवत्ता-दोष + शुद्धता-दोष — यह त्रय दिखाता है कि तामसिक भोजन तीन अलग-अलग स्तरों पर उपेक्षा दर्शाता है, फिर भी इसका मूल कारण एक ही है — देखभाल का अभाव।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 17 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ८<br>सात्त्विक आहार</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ९<br>राजसिक आहार</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. १०<br>तामसिक आहार — समापन ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ११-१३<br>त्रिविध यज्ञ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १४-२८<br>तप, दान, समापन</div></div>
+        </div>
+        <div class="callout"><b>अगला (17.11):</b> "अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते। यष्टव्यमेवेति मनः समाधाय स सात्त्विकः।।" — आहार-विश्लेषण के समापन के बाद, अब अध्याय यज्ञ (अनुष्ठान/त्याग) के त्रिविध विश्लेषण की ओर बढ़ेगा।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.११) — ☰ नेविगेशन — सात्त्विक यज्ञ: अफलाकाङ्क्षिभिर्यज्ञः</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"17.10 में तामसिक भोजन के कितने प्रमुख लक्षण गिनाए गए हैं?",options:["तीन","चार","छह","आठ"],correct:2},
+    {q:"'गतरसम्' किस श्लोक (17.8) के किस शब्द का सीधा विपरीत है?",options:["स्थिर","रस्याः","हृद्या","स्निग्धाः"],correct:1},
+    {q:"'उच्छिष्टम्' का क्या अर्थ है?",options:["ताज़ा भोजन","जूठा, किसी और का खाया-बचा भोजन","मीठा भोजन","पका हुआ भोजन"],correct:1},
+    {q:"17.10 में 17.9 जैसे स्पष्ट नकारात्मक परिणाम (दुःख-शोक-आमय) क्यों नहीं बताए गए?",options:["यह लेखक की भूल है","तामस गुण की मूल प्रकृति ही निष्क्रियता है, इसलिए शैली भी संक्षिप्त है","तामसिक भोजन हानिकारक नहीं होता","इसका कोई विशेष कारण नहीं"],correct:1},
+    {q:"17.8-9-10 तीनों श्लोक मिलकर क्या दिखाते हैं?",options:["केवल भोजन के स्वाद के प्रकार","सक्रिय देखभाल, सक्रिय लालसा, और निष्क्रिय उपेक्षा — तीन आंतरिक अवस्थाएँ","युद्ध की तीन रणनीतियाँ","तीन अलग-अलग ऋतुओं का भोजन"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "17.8 (सात्त्विक) और 17.9 (राजसिक) के बाद, 17.10 त्रिविध आहार-विश्लेषण को पूर्ण करता है — तामसिक भोजन का वर्णन।",
+    "छह लक्षण गिनाए गए हैं — यातयाम (बासी), गतरस (रस-रहित), पूति (दुर्गंधयुक्त), पर्युषित (बासा), उच्छिष्ट (जूठा), अमेध्य (अपवित्र)।",
+    "ध्यान दें — यह श्लोक सबसे संक्षिप्त है। 17.8 में छह सकारात्मक फल थे, 17.9 में तीन नकारात्मक परिणाम, पर 17.10 में कोई परिणाम नहीं बताया गया।",
+    "यह संक्षिप्तता स्वयं अर्थपूर्ण है — तामस गुण की मूल प्रकृति ही निष्क्रियता और ऊर्जा-हीनता है, इसलिए इसका वर्णन भी बिना विस्तार के, सीधे समाप्त होता है।",
+    "तीनों श्लोक मिलकर एक सुंदर पैटर्न दिखाते हैं — सक्रिय देखभाल (सात्त्विक) → सक्रिय लालसा (राजसिक) → निष्क्रिय उपेक्षा (तामसिक)।",
+    "इसके साथ त्रिविध आहार-विश्लेषण पूर्ण होता है। अगला (17.11) यज्ञ के त्रिविध विश्लेषण की ओर बढ़ेगा — एक नया अध्याय-खंड।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
