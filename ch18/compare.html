@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>तुलनात्मक अध्ययन — अध्याय १८ — मोक्षसंन्यासयोग</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%, #2e2153 0%, var(--bg-deep) 55%, #100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:24px 14px 60px;}
+  .wrap{max-width:900px;margin:0 auto;}
+  a{color:inherit;}
+  .top-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-size:13px;}
+  .top-nav a{color:var(--gold-light);text-decoration:none;}
+  .top-nav a:hover{text-decoration:underline;}
+  .hero{text-align:center;background:linear-gradient(160deg, var(--bg-deep-alt), #1b1336);border:1px solid var(--line);border-radius:18px;padding:28px 22px 24px;box-shadow:var(--shadow);margin-bottom:20px;}
+  .eyebrow{font-size:12.5px;letter-spacing:0.1em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .title{font-family:'Tiro Devanagari Hindi',serif;font-size:22px;color:var(--cream);margin-bottom:6px;}
+  .subtitle{font-size:13.5px;color:var(--cream-dim);}
+
+  .filter-bar{position:sticky;top:0;z-index:50;background:rgba(24,15,46,0.96);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:20px;box-shadow:var(--shadow);}
+  .filter-label{font-size:12.5px;color:var(--cream-dim);margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;}
+  .filter-count{color:var(--gold-light);font-weight:600;}
+  .filter-chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .filter-chip{font-family:'Mukta',sans-serif;font-size:13px;padding:8px 14px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,0.03);color:var(--cream-dim);cursor:pointer;transition:all 0.15s ease;user-select:none;}
+  .filter-chip.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a0f04;border-color:var(--gold);font-weight:600;}
+  .filter-chip.disabled{opacity:0.35;cursor:not-allowed;pointer-events:none;}
+  .filter-chip:hover:not(.disabled):not(.active){border-color:var(--gold);color:var(--cream);}
+
+  .verse-card{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:14px;}
+  .verse-card-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+  .verse-num{flex-shrink:0;min-width:40px;height:40px;border-radius:50%;background:rgba(201,162,39,0.12);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Tiro Devanagari Hindi',serif;font-size:14px;color:var(--gold-light);}
+  .verse-head-title{font-size:14px;color:var(--cream-dim);}
+  .verse-head-title a{color:var(--gold-light);text-decoration:none;font-size:12px;margin-left:8px;}
+  .field-block{margin-bottom:12px;}
+  .field-block:last-child{margin-bottom:0;}
+  .field-label{font-size:11.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--sage);font-weight:600;margin-bottom:5px;}
+  .field-content{font-size:14.5px;color:var(--cream);}
+  .field-content.shlok{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--gold-light);line-height:1.9;}
+  .field-content.translit{font-family:'EB Garamond',serif;font-style:italic;font-size:13.5px;color:var(--cream-dim);}
+  .field-content :is(h3){display:none;} /* hide inner h3 headers from source panels */
+  .field-content .word-grid{display:flex;flex-direction:column;gap:8px;}
+  .field-content .word-card{background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;}
+  .field-content .word-sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);margin-right:8px;}
+  .field-content .word-tr{font-style:italic;color:var(--cream-dim);font-size:12px;}
+  .field-content .faq{margin-bottom:8px;}
+  .field-content .q{font-weight:600;color:var(--gold-light);font-size:13.5px;}
+  .field-content .a{font-size:13.5px;color:var(--cream-dim);margin-top:3px;}
+  .field-content .example{background:rgba(92,131,116,0.08);border-left:3px solid var(--sage);padding:8px 12px;border-radius:6px;margin-bottom:8px;font-size:13.5px;}
+  .field-content .eng-box{background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px;font-style:italic;color:var(--cream-dim);margin-bottom:8px;}
+  .field-content .eng-box span{display:block;font-size:10.5px;text-transform:uppercase;color:var(--sage);font-style:normal;margin-bottom:4px;}
+
+  .empty-hint{text-align:center;color:var(--cream-dim);padding:40px 20px;font-size:14px;}
+  .footer-hint{text-align:center;font-size:12.5px;color:var(--cream-dim);margin-top:20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top-nav">
+    <a href="../index.html">← मुख्य सूची</a>
+    <a href="gita_18_1.html">सामान्य श्लोक-दर-श्लोक मोड →</a>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">तुलनात्मक अध्ययन मोड</div>
+    <div class="title" id="chapterTitleDisplay">अध्याय १८ — मोक्षसंन्यासयोग</div>
+    <div class="subtitle">पूरा अध्याय एक ही पृष्ठ पर — केवल चुने गए भाग देखें</div>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-label">
+      <span>देखना चाहते हैं (अधिकतम 3 चुनें):</span>
+      <span class="filter-count"><span id="selCount">0</span> / 3 चयनित</span>
+    </div>
+    <div class="filter-chips" id="filterChips"></div>
+  </div>
+
+  <div id="versesContainer"></div>
+
+  <div class="footer-hint">78 श्लोक — अध्याय १८ — तुलनात्मक दृश्य</div>
+</div>
+
+<script>
+  const FILTERS = [
+    { id: 'shlok',     label: '📜 श्लोक' },
+    { id: 'translit',  label: '🔤 लिप्यंतरण' },
+    { id: 'shabdarth', label: '📖 शब्दार्थ' },
+    { id: 'bhavarth',  label: '💡 भावार्थ' },
+    { id: 'example',   label: '🌱 उदाहरण' },
+    { id: 'qa',        label: '❓ प्रश्नोत्तर' },
+    { id: 'context',   label: '🪔 पृष्ठभूमि' }
+  ];
+  const MAX_SELECT = 3;
+  let selected = new Set(['shlok', 'bhavarth']);
+  let chapterData = null;
+
+  function renderChips() {
+    const wrap = document.getElementById('filterChips');
+    wrap.innerHTML = '';
+    FILTERS.forEach(f => {
+      const chip = document.createElement('button');
+      chip.className = 'filter-chip' + (selected.has(f.id) ? ' active' : '') + ((!selected.has(f.id) && selected.size >= MAX_SELECT) ? ' disabled' : '');
+      chip.textContent = f.label;
+      chip.addEventListener('click', () => toggleFilter(f.id));
+      wrap.appendChild(chip);
+    });
+    document.getElementById('selCount').textContent = selected.size;
+  }
+
+  function toggleFilter(id) {
+    if (selected.has(id)) {
+      selected.delete(id);
+    } else {
+      if (selected.size >= MAX_SELECT) return;
+      selected.add(id);
+    }
+    renderChips();
+    renderVerses();
+  }
+
+  function renderVerses() {
+    const container = document.getElementById('versesContainer');
+    if (!chapterData) return;
+    if (selected.size === 0) {
+      container.innerHTML = '<div class="empty-hint">ऊपर से कम से कम एक विकल्प चुनें, जैसे श्लोक या भावार्थ, ताकि सामग्री यहाँ दिखे।</div>';
+      return;
+    }
+    const orderedFilters = FILTERS.filter(f => selected.has(f.id));
+    let html = '';
+    chapterData.verses.forEach(v => {
+      html += '<div class="verse-card">';
+      html += '<div class="verse-card-head"><div class="verse-num">' + v.verse + '</div><div class="verse-head-title">' + v.verseTag + '<a href="gita_18_' + v.verse + '.html">पूरा पृष्ठ खोलें →</a></div></div>';
+      orderedFilters.forEach(f => {
+        const content = v[f.id];
+        if (!content) return;
+        html += '<div class="field-block"><div class="field-label">' + f.label.replace(/^\S+\s/, '') + '</div><div class="field-content ' + f.id + '">' + content + '</div></div>';
+      });
+      html += '</div>';
+    });
+    container.innerHTML = html;
+  }
+
+  fetch('ch18_compare.json')
+    .then(r => r.json())
+    .then(data => {
+      chapterData = data;
+      if (data.chapterTitle) document.getElementById('chapterTitleDisplay').textContent = data.chapterTitle;
+      renderChips();
+      renderVerses();
+    })
+    .catch(err => {
+      document.getElementById('versesContainer').innerHTML = '<div class="empty-hint">डेटा लोड नहीं हो सका — ch18_compare.json जाँचें।</div>';
+    });
+</script>
+</body>
+</html>
