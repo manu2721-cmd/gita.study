@@ -18,6 +18,11 @@
   .progress-track{flex:1;height:4px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden;}
   .progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
   .progress-label{font-size:12.5px;color:var(--cream-dim);white-space:nowrap;}
+  .continue-banner{display:flex;align-items:center;justify-content:space-between;gap:14px;background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a0f04;text-decoration:none;border-radius:14px;padding:16px 22px;margin-bottom:22px;box-shadow:var(--shadow);font-family:'Mukta',sans-serif;transition:transform 0.15s ease;}
+  .continue-banner:hover{transform:translateY(-2px);}
+  .continue-banner .cb-text{font-size:15px;font-weight:600;}
+  .continue-banner .cb-sub{font-size:12.5px;opacity:0.75;font-weight:400;margin-top:2px;}
+  .continue-banner .cb-arrow{font-size:20px;flex-shrink:0;}
   .chap-grid{display:flex;flex-direction:column;gap:12px;}
   .chap-card{display:flex;align-items:center;gap:16px;background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:14px;padding:16px 20px;text-decoration:none;color:var(--cream);transition:transform 0.15s ease, border-color 0.15s ease;}
   .chap-card:hover{transform:translateY(-2px);border-color:var(--gold);}
@@ -45,6 +50,8 @@
       <div class="progress-track"><div class="progress-fill" id="overallFill" style="width:0%"></div></div>
     </div>
   </div>
+
+  <div id="continueBannerSlot"></div>
 
   <div class="chap-grid" id="chapGrid"></div>
 
@@ -77,6 +84,26 @@
       document.getElementById('overallLabel').textContent = totalPublished + ' / ' + manifest.totalVerses + ' श्लोक';
       document.getElementById('overallFill').style.width = overallPct + '%';
       document.getElementById('footerNote').textContent = '✅ ' + totalPublished + ' श्लोक दर्ज — शेष श्लोक चरणबद्ध रूप से जोड़े जा रहे हैं';
+
+      /* ── "जारी रखें" — resume from last-visited verse, if any ── */
+      try {
+        var last = JSON.parse(localStorage.getItem('gita_last_position'));
+        if (last && last.chapter && last.verse) {
+          var chFound = manifest.chapters.find(function(c){ return c.num === last.chapter; });
+          if (chFound && last.verse <= chFound.published) {
+            var banner = document.createElement('a');
+            banner.className = 'continue-banner';
+            banner.href = 'ch' + last.chapter + '/gita_' + last.chapter + '_' + last.verse + '.html';
+            banner.innerHTML =
+              '<div>' +
+                '<div class="cb-text">🔖 जारी रखें — अध्याय ' + last.chapter + ', श्लोक ' + last.verse + '</div>' +
+                '<div class="cb-sub">' + chFound.title + '</div>' +
+              '</div>' +
+              '<div class="cb-arrow">→</div>';
+            document.getElementById('continueBannerSlot').appendChild(banner);
+          }
+        }
+      } catch (e) {}
     })
     .catch(function(err){
       document.getElementById('chapGrid').innerHTML = '<p style="color:var(--cream-dim);text-align:center;">सूची लोड नहीं हो सकी — manifest.json जाँचें</p>';
