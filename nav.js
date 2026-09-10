@@ -10,6 +10,17 @@
   const currentChapter = pathMatch ? parseInt(pathMatch[1]) : 18;
   const currentVerse   = pathMatch ? parseInt(pathMatch[2]) : 1;
 
+  /* ── Remember last-visited verse (used by index.html "जारी रखें" banner) ── */
+  if (pathMatch) {
+    try {
+      localStorage.setItem('gita_last_position', JSON.stringify({
+        chapter: currentChapter,
+        verse: currentVerse,
+        ts: Date.now()
+      }));
+    } catch (e) {}
+  }
+
   /* ── Theme: apply before paint to avoid flash ── */
   const THEME_KEY  = 'gita_theme';
   const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
