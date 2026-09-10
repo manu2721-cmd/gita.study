@@ -39,6 +39,12 @@
   .field-content{font-size:14.5px;color:var(--cream);}
   .field-content.shlok{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--gold-light);line-height:1.9;}
   .field-content.translit{font-family:'EB Garamond',serif;font-style:italic;font-size:13.5px;color:var(--cream-dim);}
+  .field-content.arth{color:var(--cream);font-size:14.5px;}
+  .field-content.arth b{color:var(--gold-light);}
+  .field-block.collapsible .field-label{display:flex;align-items:center;justify-content:space-between;cursor:pointer;}
+  .field-toggle-btn{background:rgba(255,255,255,0.05);border:1px solid var(--line);color:var(--gold-light);font-size:11px;padding:3px 10px;border-radius:12px;cursor:pointer;font-family:'Mukta',sans-serif;white-space:nowrap;}
+  .field-toggle-btn:hover{border-color:var(--gold);}
+  .field-content.is-collapsed{display:none;}
   .field-content :is(h3){display:none;} /* hide inner h3 headers from source panels */
   .field-content .word-grid{display:flex;flex-direction:column;gap:8px;}
   .field-content .word-card{background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13.5px;}
@@ -86,6 +92,7 @@
   const FILTERS = [
     { id: 'shlok',     label: '📜 श्लोक' },
     { id: 'translit',  label: '🔤 लिप्यंतरण' },
+    { id: 'arth',      label: '✨ अर्थ' },
     { id: 'shabdarth', label: '📖 शब्दार्थ' },
     { id: 'bhavarth',  label: '💡 भावार्थ' },
     { id: 'example',   label: '🌱 उदाहरण' },
@@ -93,7 +100,7 @@
     { id: 'context',   label: '🪔 पृष्ठभूमि' }
   ];
   const MAX_SELECT = 3;
-  let selected = new Set(['shlok', 'bhavarth']);
+  let selected = new Set(['shlok', 'arth']);
   let chapterData = null;
 
   function renderChips() {
@@ -128,19 +135,40 @@
       return;
     }
     const orderedFilters = FILTERS.filter(f => selected.has(f.id));
+    const showCollapseToggle = orderedFilters.length > 1;
     let html = '';
     chapterData.verses.forEach(v => {
       html += '<div class="verse-card">';
       html += '<div class="verse-card-head"><div class="verse-num">' + v.verse + '</div><div class="verse-head-title">' + v.verseTag + '<a href="gita_18_' + v.verse + '.html">पूरा पृष्ठ खोलें →</a></div></div>';
-      orderedFilters.forEach(f => {
+      orderedFilters.forEach((f, idx) => {
         const content = v[f.id];
         if (!content) return;
-        html += '<div class="field-block"><div class="field-label">' + f.label.replace(/^\S+\s/, '') + '</div><div class="field-content ' + f.id + '">' + content + '</div></div>';
+        const cleanLabel = f.label.replace(/^\S+\s/, '');
+        const isFirst = idx === 0;
+        if (isFirst || !showCollapseToggle) {
+          html += '<div class="field-block"><div class="field-label">' + cleanLabel + '</div><div class="field-content ' + f.id + '">' + content + '</div></div>';
+        } else {
+          const targetId = 'fc-' + v.verse + '-' + f.id;
+          html += '<div class="field-block collapsible">' +
+                    '<div class="field-label field-toggle-btn" data-target="' + targetId + '">' + cleanLabel + ' <span class="toggle-arrow">▾ देखें</span></div>' +
+                    '<div class="field-content is-collapsed ' + f.id + '" id="' + targetId + '">' + content + '</div>' +
+                  '</div>';
+        }
       });
       html += '</div>';
     });
     container.innerHTML = html;
   }
+
+  document.getElementById('versesContainer').addEventListener('click', function(e) {
+    const btn = e.target.closest('.field-toggle-btn');
+    if (!btn) return;
+    const target = document.getElementById(btn.dataset.target);
+    if (!target) return;
+    const collapsed = target.classList.toggle('is-collapsed');
+    const arrow = btn.querySelector('.toggle-arrow');
+    if (arrow) arrow.textContent = collapsed ? '▾ देखें' : '▴ छुपाएँ';
+  });
 
   fetch('ch18_compare.json')
     .then(r => r.json())
