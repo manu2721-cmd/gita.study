@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 17.28 — असत् की चेतावनी: अध्याय-समापन</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 17 · श्लोक 28 / 28 — अंतिम श्लोक</span>
+    <div class="progress-track"><div class="progress-fill" style="width:100%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सत्रह — समापन</div>
+    <div class="chapter-title">अध्याय १७ — श्रद्धात्रयविभागयोग (श्रद्धा के त्रिविध रूपों का विभाजन)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १७.२८ — अध्याय का अंतिम श्लोक</div>
+    </div>
+    <div class="guna-badge">⚠️ असत् की चेतावनी — समापन-खंड श्लोक ६/६</div>
+    <div class="shloka">
+      अश्रद्धया हुतं दत्तं तपस्तप्तं कृतं च यत्।<br>
+      असदित्युच्यते पार्थ न च तत्प्रेत्य नो इह।।
+    </div>
+    <div class="translit">
+      aśraddhayā hutaṃ dattaṃ tapas taptaṃ kṛtaṃ ca yat,<br>
+      asad ity ucyate pārtha na ca tat pretya no iha
+    </div>
+    <div class="gist">
+      जो कुछ भी <b>श्रद्धा के बिना</b> हवन किया गया, दान दिया गया, तप तपा गया, या (अन्य) किया गया — हे <b>पार्थ</b>, वह <b>"असत्"</b> कहलाता है — न वह <b>परलोक</b> में काम आता है, न <b>इस लोक</b> में।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — पूरा वृत्त बंद होता है</h3>
+      <p>17.26-27 ने "सत्" के पाँच अर्थ स्थापित किए — सद्भाव, साधुभाव, प्रशस्त कर्म, स्थितिः, और तदर्थीयं कर्म। अब 17.28 — अध्याय का <b>अंतिम श्लोक</b> — इसके ठीक विपरीत, "असत्" को परिभाषित करके पूरे अध्याय को समाप्त करता है। यह गीता की एक शक्तिशाली संरचनात्मक चाल है — सकारात्मक परिभाषा के तुरंत बाद, एक तीक्ष्ण नकारात्मक चेतावनी।</p>
+      <p>सबसे महत्त्वपूर्ण बात — यह श्लोक अध्याय के आरंभ (17.1-3) से सीधा जुड़ता है। अर्जुन ने 17.1 में पूछा था कि जो लोग शास्त्र-विधि छोड़कर, पर श्रद्धा से युक्त होकर पूजा करते हैं, उनकी स्थिति क्या है। कृष्ण ने 17.2-3 में उत्तर दिया कि श्रद्धा तीन प्रकार की होती है — सात्त्विक, राजसिक, तामसिक — और "श्रद्धामयोऽयं पुरुषो यो यच्छ्रद्धः स एव सः" (मनुष्य जैसी श्रद्धा वाला होता है, वैसा ही वह स्वयं होता है)। अब, समस्त गुण-विश्लेषण और ॐ तत्सत् की व्याख्या के बाद, अध्याय ठीक उसी विषय — श्रद्धा — पर वापस लौटकर एक <b>पूर्ण वृत्त (circle)</b> बनाता है।</p>
+      <div class="callout-rajas"><b>अध्याय की केंद्रीय शिक्षा — इस अंतिम श्लोक में संकुचित:</b> पूरे अध्याय 17 में श्रद्धा, आहार, यज्ञ, तप, दान — सभी का त्रिगुण-विश्लेषण हुआ, और फिर ॐ तत्सत् के माध्यम से इनका आध्यात्मिक आधार समझाया गया। पर अंत में, गीता एक सीधी, अनलंकृत सच्चाई कहती है — <b>यदि श्रद्धा नहीं है, तो चाहे यज्ञ, दान, या तप कितनी भी तकनीकी शुद्धता से किया जाए, वह "असत्" ही रहेगा — निष्फल, दोनों लोकों में।</b></div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अश्रद्धया</span><span class="word-tr">aśraddhayā</span></div>
+          <div class="word-meaning">श्रद्धा के बिना — तृतीया (करण)</div>
+          <div class="word-eng"><b>EN:</b> without faith/sincere conviction</div>
+          <div class="word-deep">अ (निषेधात्मक) + श्रद्धया (श्रद्धा से)। यह पूरे श्लोक की कुंजी है — यह शब्द सीधे 17.2-3 में वर्णित त्रिविध श्रद्धा की अनुपस्थिति की ओर इशारा करता है। पूरे अध्याय की मूल अवधारणा (श्रद्धा) अब उसके अभाव के रूप में अंतिम चेतावनी में लौटती है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">हुतं दत्तं तपस्तप्तम्</span><span class="word-tr">hutaṃ dattaṃ tapas taptam</span></div>
+          <div class="word-meaning">जो हवन किया गया, जो दिया गया, जो तप तपा गया</div>
+          <div class="word-eng"><b>EN:</b> whatever is offered (in sacrifice), given (in charity), or undergone (as austerity)</div>
+          <div class="word-deep">हुतम् = यज्ञ की ओर संकेत (17.11-13)। दत्तम् = दान की ओर संकेत (17.20-22)। तपस्तप्तम् = तप की ओर संकेत (17.14-19)। तीनों शब्द मिलकर अध्याय के तीन केंद्रीय कर्म-विषयों को एक साथ समेटते हैं — अब "असत्" के संदर्भ में।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कृतं च यत्</span><span class="word-tr">kṛtaṃ ca yat</span></div>
+          <div class="word-meaning">और जो (अन्य कुछ) किया गया</div>
+          <div class="word-eng"><b>EN:</b> and whatever (else) is done</div>
+          <div class="word-deep">कृतम् = √कृ का सामान्य भूतकृदन्त — "किया गया।" यह एक व्यापक समावेशी पद है, जो यज्ञ-दान-तप तक सीमित न रहकर किसी भी अन्य सत्कर्म को भी इस सिद्धांत के दायरे में लाता है — श्रद्धा-हीनता का प्रभाव सार्वभौमिक है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">असत् इति उच्यते पार्थ</span><span class="word-tr">asad ity ucyate pārtha</span></div>
+          <div class="word-meaning">हे पार्थ, "असत्" ऐसा कहा जाता है</div>
+          <div class="word-eng"><b>EN:</b> O Pārtha, is called "asat" (unreal/worthless)</div>
+          <div class="word-deep">असत् = अ+सत् — "सत्" का सीधा विलोम। यह 17.26-27 में स्थापित सभी पाँच अर्थों (सद्भाव, साधुभाव, प्रशस्त कर्म, स्थितिः, तदर्थीयं कर्म) के अभाव को दर्शाता है। "पार्थ" संबोधन — 17.26 के बाद दूसरी बार — इस अंतिम चेतावनी पर विशेष बल देता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">न च तत् प्रेत्य नो इह</span><span class="word-tr">na ca tat pretya no iha</span></div>
+          <div class="word-meaning">न वह परलोक में, न ही इस लोक में (काम आता है)</div>
+          <div class="word-eng"><b>EN:</b> it avails neither in the next world nor in this one</div>
+          <div class="word-deep">प्रेत्य = मृत्यु के बाद, परलोक में। इह = यहाँ, इस लोक में। यह दोहरा निषेध ("न...नो") असत् कर्म की पूर्ण निष्फलता को रेखांकित करता है — इसका कोई फल न इहलौकिक है, न पारलौकिक। यह अध्याय का सबसे गंभीर, निर्णायक कथन है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या — अध्याय का समापन-सूत्र</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Whatever is offered, given, or undergone as austerity, and whatever else is done, without faith — O Pārtha, that is called "asat." It avails nothing, either in the next world or in this one.
+      </div>
+      <p>17.28 अध्याय 17 की संपूर्ण शिक्षा को एक वाक्य में संकुचित करता है — <b>श्रद्धा के बिना कोई भी कर्म, चाहे वह बाह्य रूप से कितना भी सही क्यों न हो, आध्यात्मिक रूप से रिक्त रहता है।</b> यह अध्याय भर में चर्चित सभी त्रिगुण-वर्गीकरण (सात्त्विक-राजसिक-तामसिक) से भी आगे की बात है — गीता यहाँ कह रही है कि श्रद्धा-हीनता तीनों गुणों से परे, कर्म को पूर्णतः निरर्थक बना देती है।</p>
+      <p>यह याद दिलाने योग्य है कि श्रद्धा (17.2-3 के अनुसार) मनुष्य के स्वभाव का दर्पण है — "श्रद्धामयोऽयं पुरुषः।" इसलिए 17.28 का संदेश केवल अनुष्ठान-संबंधी नहीं, बल्कि अस्तित्वगत है: <b>बिना आंतरिक विश्वास और निष्ठा के किया गया कोई भी बाह्य कर्म, चाहे वह यज्ञ हो, दान हो, या तप, आत्मा को स्पर्श नहीं करता।</b> यह क्रिया-कांड (बाह्य विधि) और श्रद्धा (आंतरिक निष्ठा) के बीच का मूल भेद है, जिसे पूरा अध्याय 17 विस्तार से समझाता रहा है।</p>
+      <div class="callout-rajas"><b>पूरे अध्याय 17 का सार — इस एक श्लोक में:</b> श्रद्धा (17.2-6) → आहार-यज्ञ-तप-दान का त्रिगुण-विश्लेषण (17.7-22) → ॐ तत्सत् का आध्यात्मिक आधार (17.23-27) → और अंत में, 17.28 यह घोषित करता है कि इन सबका मूल आधार <b>श्रद्धा</b> ही है। श्रद्धा के बिना, "सत्" की कोई भी विशेषता (सद्भाव, साधुभाव, प्रशस्त कर्म, स्थिरता, सहायक कर्म) प्राप्त नहीं होती — कर्म "असत्" ही रह जाता है।</div>
+      <p>इस प्रकार अध्याय 17 — श्रद्धात्रयविभागयोग — अपने ही नाम को सार्थक करते हुए समाप्त होता है: श्रद्धा के त्रिविध विभाजन से शुरू होकर, गुण-विश्लेषण और आध्यात्मिक आधार से गुज़रकर, अंततः यह घोषित करते हुए कि श्रद्धा ही वह मूल तत्त्व है जिसके बिना कोई भी कर्म सार्थक नहीं हो सकता।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — यांत्रिक अनुष्ठान:</b> कोई व्यक्ति केवल सामाजिक परंपरा या दिखावे के लिए, बिना किसी आंतरिक विश्वास के, नियमित पूजा या दान करता है — जाते हुए बस "यह करना है" की भावना से। यह "अश्रद्धया" का प्रत्यक्ष उदाहरण है — क्रिया सही, पर भीतर से खाली।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — संदेहपूर्ण साधना:</b> कोई साधक ध्यान या तप का अभ्यास करता है, पर लगातार यह सोचता रहता है कि "इससे कुछ नहीं होगा" — ऐसा संदेह-पूर्ण मन कभी भी पूर्ण समर्पण नहीं कर पाता, और परिणामस्वरूप वह अभ्यास श्रद्धा-रहित रहकर "असत्" की श्रेणी में चला जाता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — श्रद्धायुक्त कर्म का प्रतिफल:</b> इसके विपरीत, कोई साधारण-सा दान भी — यदि पूर्ण हृदय, विश्वास, और श्रद्धा से दिया जाए — गीता के अनुसार सार्थक और फलदायी होता है। यह दिखाता है कि गीता की कसौटी वस्तु या कार्य की भव्यता नहीं, बल्कि उसमें निहित श्रद्धा है।
+      </div>
+      <div class="callout"><b>अध्याय की अंतिम शिक्षा:</b> कोई भी कर्म करने से पहले स्वयं से पूछें — "क्या मैं इसे सच्चे विश्वास और निष्ठा से कर रहा हूँ, या केवल औपचारिकता निभा रहा हूँ?" यही प्रश्न 17.28 का केंद्रीय संदेश है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">17.28 अध्याय के आरंभिक श्लोक (17.1-3) से किस प्रकार जुड़ता है?</div>
+        <div class="a">17.1 में अर्जुन ने पूछा था कि शास्त्र-विधि छोड़कर, पर श्रद्धा से युक्त पूजा करने वालों की स्थिति क्या है। 17.2-3 में कृष्ण ने श्रद्धा के त्रिविध रूप बताए और कहा "मनुष्य जैसी श्रद्धा वाला होता है, वैसा ही वह होता है।" अब 17.28, अध्याय के अंत में, इसी विषय पर वापस लौटकर विपरीत दिशा से जवाब देता है — यदि श्रद्धा ही नहीं है, तो चाहे विधि कितनी भी सही क्यों न हो, कर्म निष्फल है। यह अध्याय को एक पूर्ण, बंद वृत्त में समाप्त करता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"न च तत् प्रेत्य नो इह" — इस दोहरे निषेध का क्या महत्त्व है?</div>
+        <div class="a">यह असत् कर्म की पूर्णतः निष्फलता को रेखांकित करता है। कई बार लोग यह सोच सकते हैं कि भले ही कोई कर्म आध्यात्मिक रूप से खाली हो, वह कम-से-कम सांसारिक स्तर पर कुछ लाभ दे सकता है। गीता इस भ्रम को दूर करती है — श्रद्धा-रहित कर्म का फल न परलोक में है, न इस लोक में। यह एक सम्पूर्ण, अपवाद-रहित कथन है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या इसका अर्थ यह है कि श्रद्धा-रहित व्यक्ति को यज्ञ, दान, तप बिल्कुल नहीं करना चाहिए?</div>
+        <div class="a">गीता यह स्पष्ट नहीं कहती। यह श्लोक अधिक यह चेतावनी देता है कि केवल बाह्य क्रिया पर्याप्त नहीं — श्रद्धा का विकास भी आवश्यक है। शायद इसका व्यावहारिक निहितार्थ यह हो सकता है कि साधक को क्रिया के साथ-साथ अपनी श्रद्धा को भी सजग रूप से विकसित करने का प्रयास करना चाहिए, ताकि कर्म वास्तव में "सत्" बन सके।</div>
+      </div>
+      <div class="faq">
+        <div class="q">अध्याय 17 पूर्ण होने के बाद गीता के अगले अध्याय (18) में क्या है, और अब हम किस दिशा में बढ़ेंगे?</div>
+        <div class="a">अध्याय 18 (मोक्षसंन्यासयोग) — गीता का अंतिम अध्याय — पहले ही इस प्लेटफ़ॉर्म पर पूर्ण रूप से प्रकाशित हो चुका है (78/78 श्लोक), और यह संपूर्ण गीता के उपदेशों का समेकित समापन है। अध्याय 17 अब 28/28 श्लोकों के साथ पूर्ण हो चुका है। अगला कदम अध्याय 16 (दैवासुरसम्पद्विभागयोग) से आरंभ होगा — जो दैवी और आसुरी सम्पदाओं (गुणों) का विस्तृत विवरण देता है, अध्याय 16.1 से शुरू होकर।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व — पूरे अध्याय का समापन-वाक्य</h3>
+        <p>17.28 केवल एक और श्लोक नहीं — यह पूरे अध्याय 17 (श्रद्धात्रयविभागयोग) की केंद्रीय शिक्षा का समापन-कथन है। अध्याय ने श्रद्धा के त्रिविध रूप से आरंभ करके, आहार-यज्ञ-तप-दान के त्रिगुण-विश्लेषण से गुज़रकर, ॐ तत्सत् के आध्यात्मिक आधार तक पहुँचकर, अंत में यह घोषित किया कि इन सबके मूल में <b>श्रद्धा</b> ही है — इसके बिना सब कुछ "असत्" है।</p>
+        <p>यह श्लोक गीता की एक विशिष्ट शैली को भी दर्शाता है — जटिल, बहुआयामी विश्लेषण के बाद एक सरल, स्मरणीय, और शक्तिशाली सार-वाक्य के साथ समापन। यह शैली अध्याय 2 (सांख्ययोग) और अन्य कई अध्यायों में भी देखी जा सकती है।</p>
+        <div class="callout"><b>अध्याय 17 — पूर्ण संरचना (अब 28/28):</b> श्रद्धा (17.2-6) → आहार-त्रयी (17.7-10) → यज्ञ-त्रयी (17.11-13) → तप-त्रयी (17.14-19) → दान-त्रयी (17.20-22) → ॐ तत्सत् (17.23-27) → असत् की चेतावनी व समापन (17.28)।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — अध्याय 17 का पूर्ण चक्र</h3>
+        <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="210" rx="85" ry="46" fill="rgba(201,162,39,0.18)" stroke="rgba(201,162,39,0.55)" stroke-width="1.5"/>
+          <text x="350" y="204" text-anchor="middle" fill="#e6c863" font-size="14" font-family="Tiro Devanagari Hindi, serif">श्रद्धा</text>
+          <text x="350" y="222" text-anchor="middle" fill="#cfc3a8" font-size="10">अध्याय का केंद्र</text>
+
+          <line x1="290" y1="180" x2="160" y2="100" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <ellipse cx="120" cy="76" rx="70" ry="32" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="120" y="71" text-anchor="middle" fill="#e6c863" font-size="10" font-family="Tiro Devanagari Hindi, serif">17.2-3</text>
+          <text x="120" y="86" text-anchor="middle" fill="#cfc3a8" font-size="9">त्रिविध श्रद्धा</text>
+
+          <line x1="350" y1="164" x2="350" y2="65" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <ellipse cx="350" cy="46" rx="80" ry="30" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="350" y="41" text-anchor="middle" fill="#e6c863" font-size="10" font-family="Tiro Devanagari Hindi, serif">17.7-22</text>
+          <text x="350" y="56" text-anchor="middle" fill="#cfc3a8" font-size="9">आहार-यज्ञ-तप-दान</text>
+
+          <line x1="410" y1="180" x2="540" y2="100" stroke="rgba(201,162,39,0.4)" stroke-width="1.2"/>
+          <ellipse cx="580" cy="76" rx="70" ry="32" fill="rgba(201,162,39,0.08)" stroke="rgba(201,162,39,0.35)" stroke-width="1"/>
+          <text x="580" y="71" text-anchor="middle" fill="#e6c863" font-size="10" font-family="Tiro Devanagari Hindi, serif">17.23-27</text>
+          <text x="580" y="86" text-anchor="middle" fill="#cfc3a8" font-size="9">ॐ तत्सत्</text>
+
+          <line x1="350" y1="256" x2="350" y2="330" stroke="rgba(201,162,39,0.4)" stroke-width="1.5"/>
+          <rect x="245" y="330" width="210" height="60" rx="8" fill="rgba(140,44,59,0.12)" stroke="rgba(140,44,59,0.4)" stroke-width="1.2"/>
+          <text x="350" y="353" text-anchor="middle" fill="#e6c863" font-size="12" font-family="Tiro Devanagari Hindi, serif">17.28 — असत् चेतावनी</text>
+          <text x="350" y="372" text-anchor="middle" fill="#cfc3a8" font-size="10">श्रद्धा पर वापसी — वृत्त पूर्ण</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — अध्याय का आरंभ बनाम समापन</h3>
+        <table class="cmp-table">
+          <tr><th>पक्ष</th><th>17.1-3 (आरंभ)</th><th>17.28 (समापन)</th></tr>
+          <tr><td>केंद्रीय प्रश्न/कथन</td><td>श्रद्धा के त्रिविध रूप क्या हैं?</td><td>श्रद्धा के बिना कर्म असत् है</td></tr>
+          <tr><td>दृष्टिकोण</td><td>सकारात्मक (श्रद्धा है तो क्या होता है)</td><td>नकारात्मक (श्रद्धा नहीं तो क्या होता है)</td></tr>
+          <tr><td>प्रमुख उद्धरण</td><td>"श्रद्धामयोऽयं पुरुषः"</td><td>"असदित्युच्यते"</td></tr>
+          <tr><td>संबोधन</td><td>(सामान्य संदर्भ)</td><td>पार्थ (प्रत्यक्ष)</td></tr>
+        </table>
+        <div class="callout"><b>गीता की insight:</b> अध्याय अपने ही विषय पर वापस लौटकर एक दार्शनिक रूप से पूर्ण वृत्त बनाता है — यह गीता की काव्यात्मक और उपदेशात्मक दोनों दृष्टि से एक उत्कृष्ट संरचना है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग — अध्याय की अंतिम शिक्षा</h3>
+        <div class="callout-rajas"><b>श्रद्धा की जाँच करें:</b> कोई भी महत्त्वपूर्ण कर्म — चाहे वह पूजा हो, सेवा हो, या साधना — करने से पहले अपने भीतर झाँकें: "क्या मैं इसे सच्चे विश्वास से कर रहा हूँ, या केवल यांत्रिक रूप से?" 17.28 सिखाता है कि उत्तर ही कर्म की सार्थकता तय करता है।</div>
+        <p><b>अभ्यास — श्रद्धा का सजग विकास:</b> यदि किसी कर्म में श्रद्धा की कमी महसूस हो, तो उसे जबरन दबाने के बजाय, उस कर्म के पीछे के गहरे अर्थ और उद्देश्य पर चिंतन करें। समय के साथ, समझ और अनुभव श्रद्धा को स्वाभाविक रूप से गहरा करते हैं।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "अश्रद्धया" शब्द इंगित करता है कि कर्म की सार्थकता उसके बाह्य स्वरूप में नहीं, बल्कि कर्ता की आंतरिक चेतना और विश्वास में निहित है — यह कर्मकांड और ज्ञान के बीच के सेतु को स्पष्ट करता है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> यह श्लोक भक्ति-मार्ग के लिए अत्यंत प्रासंगिक है — भगवद्-भक्ति में श्रद्धा (विश्वासपूर्ण समर्पण) के बिना कोई भी बाह्य अनुष्ठान सार्थक नहीं हो सकता, चाहे वह कितना भी विधिपूर्वक क्यों न किया गया हो।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> यह अध्याय का सबसे व्यावहारिक और सार्वभौमिक सूत्र है — यह किसी विशेष धर्म, संप्रदाय, या अनुष्ठान तक सीमित नहीं, बल्कि किसी भी मानवीय प्रयास पर लागू होता है: बिना विश्वास और निष्ठा के किया गया कोई भी कार्य अधूरा रहता है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> सभी आचार्य सहमत हैं — 17.28 अध्याय 17 की आत्मा है: <b>श्रद्धा ही वह अदृश्य धागा है जो किसी भी कर्म को "सत्" बनाता है; इसके बिना, सबसे भव्य कर्म भी "असत्" रह जाता है।</b></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अश्रद्धया</span></div>
+            <div class="flashcard-face flashcard-back"><b>श्रद्धा के बिना</b>पूरे श्लोक और अध्याय की कुंजी — 17.2-3 से जुड़ाव</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">हुतं दत्तं तपस्तप्तम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>यज्ञ, दान, तप</b>अध्याय के तीन केंद्रीय विषयों का समावेश</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">कृतं च यत्</span></div>
+            <div class="flashcard-face flashcard-back"><b>और जो अन्य किया गया</b>व्यापक, समावेशी विस्तार</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">असत् इति उच्यते</span></div>
+            <div class="flashcard-face flashcard-back"><b>"असत्" कहा जाता है</b>17.26-27 के "सत्" का सीधा विलोम</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">न प्रेत्य नो इह</span></div>
+            <div class="flashcard-face flashcard-back"><b>न परलोक में, न इस लोक में</b>पूर्ण, अपवाद-रहित निष्फलता</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">पार्थ</span></div>
+            <div class="flashcard-face flashcard-back"><b>अर्जुन का संबोधन</b>अध्याय की अंतिम, सर्वाधिक बलयुक्त चेतावनी</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">अश्रद्धया</td><td>अ+श्रद्धा</td><td>तृतीया एकवचन</td><td>श्रद्धा के बिना — करण</td></tr>
+          <tr><td class="sa">हुतम्</td><td>√हु</td><td>भूतकृदन्त, प्रथमा</td><td>हवन किया गया</td></tr>
+          <tr><td class="sa">दत्तम्</td><td>√दा</td><td>भूतकृदन्त, प्रथमा</td><td>दिया गया</td></tr>
+          <tr><td class="sa">तपस्तप्तम्</td><td>तपस्+√तप्</td><td>भूतकृदन्त, प्रथमा</td><td>तप तपा गया</td></tr>
+          <tr><td class="sa">कृतम्</td><td>√कृ</td><td>भूतकृदन्त, प्रथमा</td><td>किया गया</td></tr>
+          <tr><td class="sa">असत्</td><td>अ+सत्</td><td>प्रथमा एकवचन</td><td>असत्, अवास्तविक — विधेय</td></tr>
+          <tr><td class="sa">उच्यते</td><td>√वच्</td><td>कर्मणि वर्तमान प्र.पु.</td><td>कहा जाता है</td></tr>
+          <tr><td class="sa">प्रेत्य</td><td>प्र+इ</td><td>अव्ययीभाव</td><td>मृत्यु के बाद, परलोक में</td></tr>
+          <tr><td class="sa">इह</td><td>अव्यय</td><td>—</td><td>यहाँ, इस लोक में</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">अश्रद्धया हुतं दत्तं तपस्तप्तं कृतं च यत्।<br>असदित्युच्यते पार्थ न च तत्प्रेत्य नो इह।।</div>
+          <div class="cheat-translit">aśraddhayā hutaṃ dattaṃ tapas taptaṃ kṛtaṃ ca yat, asad ity ucyate pārtha na ca tat pretya no iha</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अश्रद्धया</b> श्रद्धा के बिना — कुंजी-शब्द</span>
+            <span class="cheat-chip"><b>हुतं दत्तं तपस्तप्तम्</b> यज्ञ-दान-तप</span>
+            <span class="cheat-chip"><b>असत्</b> "सत्" का सीधा विलोम</span>
+            <span class="cheat-chip"><b>न प्रेत्य नो इह</b> पूर्ण निष्फलता</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: श्रद्धा के बिना किया गया कोई भी यज्ञ, दान, तप, या अन्य कर्म "असत्" है — न इस लोक में फलदायी, न परलोक में। यह अध्याय 17 (श्रद्धात्रयविभागयोग) का समापन-सूत्र है, जो अध्याय को उसके आरंभिक विषय — श्रद्धा — पर वापस लाकर पूर्ण करता है। 🎉 अध्याय 17 अब 28/28 श्लोकों के साथ सम्पूर्ण!</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('अश्रद्धया हुतं दत्तं तपस्तप्तं कृतं च यत्। असदित्युच्यते पार्थ न च तत्प्रेत्य नो इह।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('अश्रद्धया हुतं दत्तं तपस्तप्तं कृतं च यत्। असदित्युच्यते पार्थ न च तत्प्रेत्य नो इह।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('जो कुछ भी श्रद्धा के बिना हवन किया गया, दान दिया गया, तप तपा गया, या किया गया — वह असत् कहलाता है, न वह परलोक में काम आता है, न इस लोक में।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">श्र</span><span class="syll">द्धा</span><span class="syll">या</span><span class="syll">हु</span><span class="syll">तं</span><span class="syll">द</span><span class="syll">त्तं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">त</span><span class="syll">पस्</span><span class="syll">त</span><span class="syll">प्तं</span><span class="syll">कृ</span><span class="syll">तं</span><span class="syll">च</span><span class="syll">यत्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">स</span><span class="syll">दि</span><span class="syll">त्यु</span><span class="syll">च्य</span><span class="syll">ते</span><span class="syll">पा</span><span class="syll">र्थ</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">न</span><span class="syll">च</span><span class="syll">त</span><span class="syll">त्प्रे</span><span class="syll">त्य</span><span class="syll">नो</span><span class="syll">इ</span><span class="syll">ह</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('अश्रद्धया हुतं दत्तं तपस्तप्तं कृतं च यत् असदित्युच्यते पार्थ न च तत्प्रेत्य नो इह', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "अश्रद्धया" — अध्याय का यह अंतिम, सबसे भारवाही शब्द है। जप के अंत में इस पूरे श्लोक को मन में गहराई से बैठाएँ — यही अध्याय 17 का सार-संदेश है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">अध्याय 17 — पूर्ण सारांश</button>
+      <button class="tab-btn" data-tab="e2">सत् बनाम असत्</button>
+      <button class="tab-btn" data-tab="e3">अगला अध्याय</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🎉 अध्याय 17 सम्पूर्ण — श्रद्धात्रयविभागयोग (28/28)</h3>
+        <p class="subnote">श्रद्धा से आरंभ, त्रिगुण-विश्लेषण से गुज़रकर, श्रद्धा पर ही समापन</p>
+        <table class="cmp-table">
+          <tr><th>खंड</th><th>श्लोक</th><th>सार</th></tr>
+          <tr><td>श्रद्धा-त्रयी</td><td>17.2-6</td><td>श्रद्धा के त्रिविध रूप व चेतावनी</td></tr>
+          <tr><td>आहार-त्रयी</td><td>17.7-10</td><td>भोजन के त्रिगुण-रूप</td></tr>
+          <tr><td>यज्ञ-त्रयी</td><td>17.11-13</td><td>यज्ञ के त्रिगुण-रूप</td></tr>
+          <tr><td>तप-त्रयी</td><td>17.14-19</td><td>तप के त्रिगुण-रूप</td></tr>
+          <tr><td>दान-त्रयी</td><td>17.20-22</td><td>दान के त्रिगुण-रूप</td></tr>
+          <tr><td>ॐ तत्सत्</td><td>17.23-27</td><td>कर्म का आध्यात्मिक आधार</td></tr>
+          <tr><td>समापन</td><td>17.28</td><td>श्रद्धा-हीन कर्म असत् — अंतिम चेतावनी</td></tr>
+        </table>
+        <div class="callout"><b>🎉 उपलब्धि:</b> अध्याय 17 अब पूर्ण रूप से प्रकाशित — 28/28 श्लोक। यह अध्याय 18 (78/78, पहले से पूर्ण) के साथ मिलकर गीता के अंतिम दो अध्यायों को सम्पूर्ण करता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 सत् (17.26-27) बनाम असत् (17.28) — पूर्ण तुलना</h3>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">✅ सत् (17.26-27)</div>
+            <div class="contrast-sa">सद्भाव, साधुभाव, प्रशस्त कर्म, स्थितिः, तदर्थीयं कर्म</div>
+            <p>श्रद्धायुक्त कर्म — यथार्थ, शुभ, श्रेष्ठ, स्थिर, समग्र। परलोक और इहलोक दोनों में फलदायी।</p>
+          </div>
+          <div class="contrast-card tam">
+            <div class="contrast-label">❌ असत् (17.28)</div>
+            <div class="contrast-sa">अश्रद्धया हुतं-दत्तं-तप्तं-कृतम्</div>
+            <p>श्रद्धा-हीन कर्म — चाहे यज्ञ, दान, तप, या कोई भी कार्य हो। न परलोक में फलदायी, न इहलोक में।</p>
+          </div>
+        </div>
+        <div class="callout"><b>निर्णायक भेद-रेखा:</b> सत् और असत् के बीच का अंतर बाह्य क्रिया में नहीं, बल्कि उसके पीछे की <b>श्रद्धा</b> में है — यही अध्याय 17 (श्रद्धात्रयविभागयोग) का केंद्रीय, सारभूत संदेश है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 आगे की यात्रा — अध्याय 16 की ओर</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">अध्याय १७<br>पूर्ण ✓ (28/28)</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">अध्याय १८<br>पूर्ण ✓ (78/78)</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">अध्याय १६<br>आरंभ ← अगला</div></div>
+        </div>
+        <div class="callout"><b>अगला — अध्याय 16.1 (दैवासुरसम्पद्विभागयोग):</b> "अभयं सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः। दानं दमश्च यज्ञश्च स्वाध्यायस्तप आर्जवम्।।" — दैवी सम्पदा के गुणों की सूची का प्रथम श्लोक: अभय, सत्त्व-शुद्धि, ज्ञानयोग में स्थिरता, दान, दम, यज्ञ, स्वाध्याय, तप, और सरलता।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">🎉 अध्याय 17 सम्पूर्ण! — ☰ नेविगेशन — अगला: अध्याय 16.1, दैवासुरसम्पद्विभागयोग</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"17.28 के अनुसार श्रद्धा के बिना किया गया कर्म क्या कहलाता है?",options:["सत्","असत्","प्रशस्त","स्थिर"],correct:1},
+    {q:"'न च तत् प्रेत्य नो इह' का क्या अर्थ है?",options:["वह दोनों लोकों में फलदायी है","वह न परलोक में, न इस लोक में फलदायी है","वह केवल इस लोक में फलदायी है","वह केवल परलोक में फलदायी है"],correct:1},
+    {q:"17.28 अध्याय के किस आरंभिक भाग से सीधा जुड़ता है?",options:["17.11-13 (यज्ञ-त्रयी)","17.2-3 (श्रद्धा का त्रिविध रूप)","17.20-22 (दान-त्रयी)","17.23 (ॐ तत्सत् परिचय)"],correct:1},
+    {q:"17.28 में किन तीन कर्म-विषयों का उल्लेख है?",options:["श्रद्धा, आहार, ज्ञान","यज्ञ (हुतं), दान (दत्तं), तप (तप्तम्)","भक्ति, कर्म, ज्ञान","सत्, चित्, आनंद"],correct:1},
+    {q:"17.28 के साथ अध्याय 17 कितने श्लोकों के साथ पूर्ण होता है?",options:["18/28","24/28","27/28","28/28"],correct:3}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "17.26-27 ने 'सत्' के पाँच अर्थ स्थापित किए। अब 17.28 — अध्याय का अंतिम श्लोक — इसका विलोम, 'असत्', परिभाषित करके पूरे अध्याय को समाप्त करता है।",
+    "'अश्रद्धया' — श्रद्धा के बिना। यह शब्द सीधे 17.2-3 में वर्णित त्रिविध श्रद्धा की ओर वापस लौटता है — अध्याय अपने ही मूल विषय पर एक पूर्ण वृत्त बनाता है।",
+    "'हुतं दत्तं तपस्तप्तम्' — यज्ञ, दान, तप। अध्याय के तीन केंद्रीय कर्म-विषय, अब श्रद्धा-हीनता के संदर्भ में एक साथ समेटे गए हैं।",
+    "'असदित्युच्यते पार्थ' — हे पार्थ, 'असत्' कहा जाता है। यह 17.26-27 में स्थापित सभी सकारात्मक विशेषताओं का सीधा विलोम है।",
+    "'न च तत् प्रेत्य नो इह' — न परलोक में, न इस लोक में। यह असत् कर्म की पूर्ण, अपवाद-रहित निष्फलता को घोषित करता है।",
+    "🎉 इसके साथ अध्याय 17 — श्रद्धात्रयविभागयोग — 28/28 श्लोकों के साथ सम्पूर्ण होता है! अगली यात्रा अब अध्याय 16 की ओर — दैवासुरसम्पद्विभागयोग, श्लोक 16.1 से आरंभ।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
