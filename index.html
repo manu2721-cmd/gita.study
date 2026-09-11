@@ -44,6 +44,9 @@
   .chap-bar-fill{height:100%;background:linear-gradient(90deg,var(--sage),#7fa894);}
   .chap-arrow{flex-shrink:0;font-size:18px;color:var(--gold);}
   .chap-card.empty .chap-arrow{color:var(--cream-dim);}
+  .chap-row{display:flex;flex-direction:column;gap:6px;}
+  .compare-badge{display:inline-flex;align-self:flex-start;align-items:center;gap:4px;margin-left:64px;font-size:12px;color:var(--gold-light);text-decoration:none;border:1px solid var(--line);padding:4px 12px;border-radius:10px;background:rgba(255,255,255,0.03);transition:border-color 0.15s ease;}
+  .compare-badge:hover{border-color:var(--gold);}
   .footer-note{text-align:center;font-size:13px;color:var(--cream-dim);margin-top:26px;}
 </style>
 </head>
@@ -75,6 +78,8 @@
       manifest.chapters.forEach(function(ch){
         totalPublished += ch.published;
         var pct = Math.round((ch.published / ch.totalVerses) * 100);
+        var row = document.createElement('div');
+        row.className = 'chap-row';
         var el = document.createElement(ch.published > 0 ? 'a' : 'div');
         el.className = 'chap-card' + (ch.published === 0 ? ' empty' : '');
         if (ch.published > 0) el.href = ch.folder + '/gita_' + ch.num + '_1.html';
@@ -86,7 +91,15 @@
             '<div class="chap-bar-track"><div class="chap-bar-fill" style="width:' + pct + '%"></div></div>' +
           '</div>' +
           (ch.published > 0 ? '<div class="chap-arrow">→</div>' : '');
-        grid.appendChild(el);
+        row.appendChild(el);
+        if (ch.hasCompare) {
+          var badge = document.createElement('a');
+          badge.className = 'compare-badge';
+          badge.href = ch.folder + '/compare.html';
+          badge.innerHTML = '📊 तुलनात्मक अध्ययन खोलें';
+          row.appendChild(badge);
+        }
+        grid.appendChild(row);
       });
       var overallPct = (totalPublished / manifest.totalVerses * 100).toFixed(1);
       document.getElementById('overallLabel').textContent = totalPublished + ' / ' + manifest.totalVerses + ' श्लोक';
