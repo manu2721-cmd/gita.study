@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 16.22 — त्रिविध द्वार से मुक्ति और परम गति</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 16 · श्लोक 22 / 24</span>
+    <div class="progress-track"><div class="progress-fill" style="width:91.67%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सोलह</div>
+    <div class="chapter-title">अध्याय १६ — दैवासुरसम्पद्विभागयोग (दैवी-आसुरी सम्पदा का विभाजन)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १६.२२</div>
+    </div>
+    <div class="guna-badge">🔑 सार-सूत्र २/४ — त्रिविध द्वार से मुक्ति और परम गति</div>
+    <div class="shloka">
+      एतैर्विमुक्तः कौन्तेय तमोद्वारैस्त्रिभिर्नरः।<br>
+      आचरत्यात्मनः श्रेयस्ततो याति परां गतिम्।।
+    </div>
+    <div class="translit">
+      etair vimuktaḥ kaunteya tamo-dvārais tribhir naraḥ,<br>
+      ācaraty ātmanaḥ śreyas tato yāti parāṁ gatim
+    </div>
+    <div class="gist">
+      हे <b>कौन्तेय</b>! इन <b>तीन तमो-द्वारों</b> से <b>मुक्त</b> मनुष्य अपने <b>कल्याण (श्रेयस्)</b> के लिए आचरण करता है, और तब <b>परम गति</b> को प्राप्त होता है।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — 16.21 से आगे: चेतावनी के बाद आश्वासन</h3>
+      <p>16.21 ने चेतावनी दी — काम, क्रोध, लोभ आत्मा के नाशक तीन नरक-द्वार हैं, इन्हें त्यागना चाहिए। अब 16.22 गीता की संतुलित शैली में <b>सकारात्मक पक्ष</b> दिखाता है — जो इन तीनों से मुक्त हो जाता है, उसका क्या होता है।</p>
+      <p>ध्यान दें — यह श्लोक 16.20 की तरह ही "कौन्तेय" संबोधन से शुरू होता है। तीन श्लोकों (16.20, 16.22) में यह स्नेहपूर्ण संबोधन दोहराया जाना कोई संयोग नहीं — यह दिखाता है कि चेतावनी और आश्वासन, दोनों एक ही प्रेमपूर्ण स्वर में दिए जा रहे हैं।</p>
+      <div class="contrast-row">
+        <div class="contrast-card sat">
+          <div class="contrast-label">🌿 16.20 — बंधन का परिणाम</div>
+          <div class="contrast-sa">अधमां गतिम्</div>
+          <p>मुक्त न होने पर — <b>निम्नतम गति</b>।</p>
+        </div>
+        <div class="contrast-card raj">
+          <div class="contrast-label">🔥 16.22 — मुक्ति का परिणाम</div>
+          <div class="contrast-sa">परां गतिम्</div>
+          <p>तीनों से मुक्त होने पर — <b>परम गति</b>।</p>
+        </div>
+      </div>
+      <div class="callout-rajas"><b>महत्त्वपूर्ण संकेत:</b> ध्यान दें — 16.21 में इन तीनों को "नरकस्य द्वारम्" (नरक के द्वार) कहा गया था; अब 16.22 में इन्हें "तमो-द्वारैः" (तमोगुण के द्वार) कहा गया है। यह सूक्ष्म शब्द-परिवर्तन इस शिक्षा को अध्याय 14 के त्रिगुण-सिद्धांत से जोड़ता है — काम-क्रोध-लोभ तमोगुण की ही प्रमुख अभिव्यक्तियाँ हैं।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">एतैर्विमुक्तः</span><span class="word-tr">etair vimuktaḥ</span></div>
+          <div class="word-meaning">इनसे पूर्णतः मुक्त — प्रथमा एकवचन</div>
+          <div class="word-eng"><b>EN:</b> freed/liberated from these</div>
+          <div class="word-deep">विमुक्त = वि+मुच् (पूर्णतः छोड़ना)। उपसर्ग "वि" पूर्णता जोड़ता है — यह आंशिक नियंत्रण नहीं, बल्कि सम्पूर्ण मुक्ति की बात है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कौन्तेय</span><span class="word-tr">kaunteya</span></div>
+          <div class="word-meaning">हे कुंती-पुत्र — संबोधन</div>
+          <div class="word-eng"><b>EN:</b> O son of Kunti</div>
+          <div class="word-deep">16.20 का वही स्नेहपूर्ण संबोधन यहाँ फिर आता है — पर इस बार कठोर चेतावनी के लिए नहीं, बल्कि आशाजनक वादे के लिए। यह दिखाता है कि कृष्ण का स्वर — चाहे चेतावनी हो या आश्वासन — हमेशा स्नेहपूर्ण बना रहता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">तमोद्वारैस्त्रिभिर्नरः</span><span class="word-tr">tamo-dvārais tribhir naraḥ</span></div>
+          <div class="word-meaning">तमोगुण के इन तीन द्वारों से — मनुष्य — तृतीया बहुवचन</div>
+          <div class="word-eng"><b>EN:</b> by/from these three gates of darkness (tamas)</div>
+          <div class="word-deep">तमस् (अंधकार/जड़ता, त्रिगुणों में से एक) + द्वार। 16.21 के "नरकस्य द्वारम्" से यह भिन्न शब्द-चयन है — अब सीधे तमोगुण से जोड़ा गया है, गीता के व्यापक गुण-सिद्धांत (अध्याय 14) से जुड़ाव बनाते हुए।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">आचरत्यात्मनः श्रेयः</span><span class="word-tr">ācaraty ātmanaḥ śreyaḥ</span></div>
+          <div class="word-meaning">अपने कल्याण के लिए आचरण करता है</div>
+          <div class="word-eng"><b>EN:</b> acts for his own true welfare</div>
+          <div class="word-deep">श्रेयस् — गीता का एक केंद्रीय शब्द, अध्याय 2.7 में स्वयं अर्जुन के प्रश्न ("यच्छ्रेयः स्यात्") से जुड़ा। श्रेयस् = वास्तविक, दीर्घकालिक कल्याण (प्रेयस् — तात्कालिक सुखद के विपरीत)। मुक्ति के बाद व्यक्ति स्वाभाविक रूप से इसी सच्चे कल्याण की ओर आचरण करता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">ततो याति परां गतिम्</span><span class="word-tr">tato yāti parāṁ gatim</span></div>
+          <div class="word-meaning">तब वह परम गति को प्राप्त होता है</div>
+          <div class="word-eng"><b>EN:</b> thereafter attains the supreme destination</div>
+          <div class="word-deep">परा (सर्वोच्च) + गति (गंतव्य)। यह 16.20 के "अधमां गतिम्" (निम्नतम गति) का प्रत्यक्ष, जानबूझकर बनाया गया विलोम है — गीता की काव्य-संरचना यहाँ पूर्ण संतुलन दिखाती है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Freed from these three gates of darkness, O Kaunteya, a person acts for his own true welfare, and thereafter attains the supreme destination.
+      </div>
+      <p>16.22 गीता की एक विशिष्ट शिक्षण-शैली का सुंदर उदाहरण है — <b>नकारात्मक चेतावनी के तुरंत बाद सकारात्मक आश्वासन।</b> 16.21 ने बताया कि क्या त्यागना है; 16.22 दिखाता है कि त्यागने के बाद क्या मिलता है। यह संतुलन गीता को केवल भय-आधारित नहीं, बल्कि आशा और स्पष्ट दिशा से भरपूर बनाता है।</p>
+      <p>श्लोक में तीन-चरणीय प्रक्रिया स्पष्ट है — पहले <b>मुक्ति</b> (एतैर्विमुक्तः, काम-क्रोध-लोभ से पूर्ण छुटकारा), फिर <b>सम्यक् आचरण</b> (आचरति आत्मनः श्रेयः, अपने वास्तविक कल्याण के लिए कर्म), और अंततः <b>परम गति</b> (ततो याति परां गतिम्)। यह क्रम महत्त्वपूर्ण है — मुक्ति पहले आती है, तभी सही आचरण स्वाभाविक हो पाता है।</p>
+      <div class="callout-rajas"><b>श्रेयस् बनाम प्रेयस् — गीता का केंद्रीय भेद:</b> "श्रेयः" शब्द सीधे अर्जुन के अपने प्रारंभिक प्रश्न (2.7) से जुड़ता है, जहाँ उसने पूछा था — "मुझे बताइए, वास्तव में मेरे लिए क्या कल्याणकारी (श्रेयस्) है।" यह श्लोक मानो उस प्रश्न का व्यावहारिक उत्तर है — काम-क्रोध-लोभ से मुक्ति ही श्रेयस् (वास्तविक कल्याण) की ओर पहला ठोस कदम है, केवल प्रेयस् (तात्कालिक सुखद) की तलाश नहीं।</div>
+      <p>व्यावहारिक रूप से, यह श्लोक हमें एक सुखद सत्य दिखाता है — आत्म-सुधार का मार्ग केवल त्याग और संयम नहीं, बल्कि इसका परिणाम सकारात्मक, प्रगतिशील है। जो कुछ भी त्यागा जाता है (काम-क्रोध-लोभ), उसकी जगह कुछ बेहतर (श्रेयस्, परम गति) आता है — यह कोई खालीपन नहीं, बल्कि उन्नति है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — क्रोध पर सचेत कार्य:</b> कोई व्यक्ति जो अपने प्रतिक्रियात्मक क्रोध पर धीरे-धीरे, सचेत रूप से काम करता है — ट्रिगर्स को पहचानना, प्रतिक्रिया देने से पहले रुकना — पाता है कि जैसे-जैसे यह क्रोध कम होता है, उसके रिश्ते और निर्णय-क्षमता दोनों स्वाभाविक रूप से बेहतर होते जाते हैं।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — लोभ से मुक्ति और मानसिक हल्कापन:</b> कोई व्यक्ति जो संतोष का अभ्यास करता है और लगातार और अधिक जमा करने की इच्छा (लोभ) को सचेत रूप से नियंत्रित करता है, पाता है कि इससे बची हुई मानसिक-भावनात्मक ऊर्जा जीवन और रिश्तों में अधिक सच्चे जुड़ाव के लिए उपलब्ध हो जाती है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — श्रेयस् बनाम प्रेयस् का सचेत चुनाव:</b> कोई व्यक्ति जो किसी अनियंत्रित इच्छा (काम) से प्रेरित होकर तुरंत निर्णय लेने की अपनी आदत पहचानता है, और सचेत अभ्यास से पहले यह पूछना शुरू करता है — "क्या यह वास्तव में मेरे लिए अच्छा है (श्रेयस्), या केवल तत्काल सुखद (प्रेयस्)?" — धीरे-धीरे एक ऐसा जीवन बनाता है जो स्थायी संतोष की ओर उन्मुख हो।
+      </div>
+      <div class="callout"><b>ध्यान रखें:</b> तीनों उदाहरण दिखाते हैं कि यह मुक्ति कोई अचानक, पूर्ण घटना नहीं — यह एक क्रमिक, सचेत अभ्यास है, ठीक वैसे ही जैसे 16.7-20 में वर्णित पतन भी क्रमिक था।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">"तमो-द्वारैः" (तमोगुण के द्वार) और 16.21 के "नरकस्य द्वारम्" (नरक के द्वार) में क्या अंतर है — क्या ये अलग चीज़ें हैं?</div>
+        <div class="a">नहीं, ये एक ही तीन गुणों (काम-क्रोध-लोभ) के दो अलग-अलग वर्णन हैं, अलग-अलग दृष्टिकोणों से। "नरकस्य द्वारम्" (16.21) इनके <b>परिणाम</b> पर बल देता है — ये कहाँ ले जाते हैं। "तमो-द्वारैः" (16.22) इनकी <b>प्रकृति</b> पर बल देता है — ये किस मौलिक गुण (तमस्) से उपजते हैं। दोनों मिलकर पूरी तस्वीर देते हैं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">श्रेयस् और प्रेयस् में क्या अंतर है, और गीता में यह कहाँ और चर्चा हुई है?</div>
+        <div class="a">श्रेयस् = वास्तविक, दीर्घकालिक कल्याण, भले ही तत्काल कठिन लगे। प्रेयस् = तात्कालिक रूप से सुखद/आकर्षक, भले ही दीर्घकाल में हानिकारक हो। यह भेद कठोपनिषद में भी प्रसिद्ध है ("श्रेयश्च प्रेयश्च मनुष्यमेतः") और गीता 2.7 में अर्जुन के अपने प्रश्न में परोक्ष रूप से निहित है। 16.22 इसी श्रेयस् की प्राप्ति को काम-क्रोध-लोभ से मुक्ति से जोड़ता है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"परां गतिम्" (परम गति) का क्या अर्थ है — क्या यह सीधे मोक्ष की बात कर रहा है?</div>
+        <div class="a">भाष्यकारों में इस पर कुछ भिन्नता है — कुछ इसे सीधे मोक्ष (अंतिम मुक्ति) मानते हैं, कुछ इसे व्यापक अर्थ में "उच्चतम सम्भव अवस्था/प्रगति" मानते हैं, जो अंततः मोक्ष की ओर ले जाती है। दोनों ही व्याख्याओं में, यह 16.20 के "अधमां गतिम्" के ठीक विपरीत, उच्चतम दिशा का प्रतीक है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">16.22 का 16.23 से क्या संबंध है?</div>
+        <div class="a">16.22 ने सकारात्मक मार्ग (मुक्ति → श्रेयस् → परम गति) दिखाया। 16.23 अब एक और महत्त्वपूर्ण चेतावनी जोड़ेगा — जो व्यक्ति शास्त्र-विधि को छोड़कर केवल अपनी इच्छा से आचरण करता है, वह न सिद्धि पाता है, न सुख, न परम गति। यह 16.22 के "श्रेयस्" मार्ग को शास्त्र-सम्मत आचरण से जोड़कर पूर्ण करता है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>16.22, 16.19-20 (बंधन का परिणाम) और 16.21 (चेतावनी) के ठीक बाद, एक <b>सुविचारित सकारात्मक संतुलन</b> प्रस्तुत करता है। यह दिखाता है कि गीता की शैली केवल चेतावनी देना नहीं, बल्कि हमेशा आशा और स्पष्ट दिशा के साथ समाप्त करना है।</p>
+        <p>"श्रेयः" शब्द इस श्लोक को अध्याय 2.7 से जोड़ता है, जहाँ अर्जुन ने पहली बार अपने वास्तविक कल्याण के बारे में पूछा था — गीता के अंत के निकट, यह श्लोक मानो उस मूल प्रश्न का व्यावहारिक, कार्रवाई-योग्य उत्तर देता है।</p>
+        <div class="callout"><b>Chapter-arc अपडेट:</b> 16.19-20 (बंधन का परिणाम) → 16.21 (चेतावनी: तीन द्वार त्यागें) → 16.22 (आश्वासन: मुक्ति का फल — यहाँ) → 16.23-24 (शास्त्र-प्रमाण व अंतिम निर्देश)।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — मुक्ति से परम गति तक</h3>
+        <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <rect x="30" y="30" width="190" height="52" rx="8" fill="rgba(42,106,90,0.1)" stroke="rgba(42,106,90,0.4)" stroke-width="1.1"/>
+          <text x="125" y="52" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">एतैर्विमुक्तः</text>
+          <text x="125" y="69" text-anchor="middle" fill="#cfc3a8" font-size="9">काम-क्रोध-लोभ से मुक्ति</text>
+
+          <line x1="220" y1="56" x2="260" y2="56" stroke="rgba(42,106,90,0.4)" stroke-width="1.3"/>
+          <rect x="265" y="30" width="190" height="52" rx="8" fill="rgba(42,106,90,0.13)" stroke="rgba(42,106,90,0.45)" stroke-width="1.1"/>
+          <text x="360" y="52" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">आत्मनः श्रेयः</text>
+          <text x="360" y="69" text-anchor="middle" fill="#cfc3a8" font-size="9">वास्तविक कल्याण हेतु आचरण</text>
+
+          <line x1="455" y1="56" x2="495" y2="56" stroke="rgba(42,106,90,0.4)" stroke-width="1.3"/>
+          <rect x="500" y="30" width="170" height="52" rx="8" fill="rgba(42,106,90,0.16)" stroke="rgba(42,106,90,0.5)" stroke-width="1.1"/>
+          <text x="585" y="52" text-anchor="middle" fill="#6ecfb8" font-size="11" font-family="Tiro Devanagari Hindi, serif">परां गतिम्</text>
+          <text x="585" y="69" text-anchor="middle" fill="#cfc3a8" font-size="9">परम, सर्वोच्च गंतव्य</text>
+
+          <line x1="350" y1="90" x2="350" y2="140" stroke="rgba(140,74,32,0.35)" stroke-width="1.2" stroke-dasharray="4,3"/>
+          <text x="420" y="118" fill="#cfc3a8" font-size="9" font-style="italic">तुलना करें ↓</text>
+
+          <rect x="200" y="140" width="300" height="52" rx="8" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.4)" stroke-width="1.1"/>
+          <text x="350" y="162" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">16.19-20 — बंधन में</text>
+          <text x="350" y="179" text-anchor="middle" fill="#cfc3a8" font-size="9">मामप्राप्यैव...अधमां गतिम्</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — मूल प्रवृत्तियों से मुक्ति के अन्य दृष्टिकोण</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>16.22 से समानता</th><th>अंतर</th></tr>
+          <tr><td>स्टोइक दर्शन — Apatheia (अविचलित मनःस्थिति)</td><td>अनियंत्रित भावनाओं/इच्छाओं से मुक्ति को उच्चतम अवस्था मानना</td><td>स्टोइक दर्शन तर्क-आधारित है; गीता आत्म-ज्ञान व भक्ति-आधारित</td></tr>
+          <tr><td>बौद्ध धर्म — त्रिविष से मुक्ति और निर्वाण</td><td>तीन मूल विषों से मुक्ति को परम शांति की ओर मार्ग मानना</td><td>बौद्ध धर्म में निर्वाण अनात्म-केंद्रित है; गीता में "परा गति" आत्मा/परमात्मा-केंद्रित</td></tr>
+          <tr><td>कठोपनिषद — श्रेयस्-प्रेयस् का भेद</td><td>वास्तविक कल्याण (श्रेयस्) को तात्कालिक सुखद (प्रेयस्) से अलग पहचानना</td><td>कठोपनिषद दार्शनिक चर्चा में गहराई से जाता है; गीता इसे व्यावहारिक निर्देश में बदलती है</td></tr>
+          <tr><td>आधुनिक सकारात्मक मनोविज्ञान — Delayed Gratification</td><td>तात्कालिक इच्छा-पूर्ति टालकर दीर्घकालिक कल्याण चुनना</td><td>आधुनिक मनोविज्ञान इसे व्यवहारिक कौशल मानता है; गीता इसे आध्यात्मिक मुक्ति से जोड़ती है</td></tr>
+        </table>
+        <div class="callout"><b>साझा सूत्र:</b> लगभग हर परंपरा में यह अंतर्दृष्टि मिलती है — मूल, अनियंत्रित प्रवृत्तियों से मुक्ति ही उच्चतर, स्थायी कल्याण का द्वार खोलती है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>आत्म-प्रश्न (श्रेयस्-प्रेयस् जाँच):</b> किसी भी महत्त्वपूर्ण निर्णय से पहले पूछें — "क्या यह विकल्प मेरे वास्तविक, दीर्घकालिक कल्याण (श्रेयस्) की ओर ले जाता है, या यह केवल तात्कालिक रूप से सुखद (प्रेयस्) है?"</div>
+        <p><b>अभ्यास — "एक द्वार, एक सप्ताह":</b> काम, क्रोध, लोभ में से जो द्वार आपको सबसे अधिक बाँधता महसूस हो, उस पर एक सप्ताह विशेष ध्यान दें — हर बार जब वह उभरे, बिना निर्णय के नोटिस करें, और धीरे-धीरे एक कदम पीछे हटने का अभ्यास करें।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "आत्मनः श्रेयः" को आत्म-ज्ञान की दिशा में उन्मुख आचरण के रूप में समझाते हैं — जब काम-क्रोध-लोभ हट जाते हैं, तो बुद्धि स्वाभाविक रूप से आत्म-कल्याण (जो अंततः आत्म-ज्ञान है) की ओर मुड़ जाती है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "परां गतिम्" को भगवद्-प्राप्ति के रूप में देखते हैं — जब हृदय काम-क्रोध-लोभ से मुक्त हो, तभी वह भक्ति और अंततः भगवान की प्राप्ति के लिए उपयुक्त बनता है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> गीता रहस्य में इसे कर्मयोग की सफलता के प्रमाण के रूप में देखते हैं — निष्काम कर्म का स्वाभाविक परिणाम ही है कि व्यक्ति काम-क्रोध-लोभ से मुक्त होकर सच्चे कल्याण की ओर बढ़ता है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत — यह मुक्ति कोई नकारात्मक "कुछ न करना" नहीं, बल्कि एक सकारात्मक, सक्रिय आचरण (आचरति) की ओर ले जाती है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">एतैर्विमुक्तः</span></div>
+            <div class="flashcard-face flashcard-back"><b>इनसे पूर्णतः मुक्त</b>काम-क्रोध-लोभ से सम्पूर्ण छुटकारा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">तमोद्वारैः त्रिभिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>तीन तमो-द्वारों से</b>तमोगुण से जोड़ने वाला शब्द-चयन</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">आत्मनः श्रेयः</span></div>
+            <div class="flashcard-face flashcard-back"><b>अपना वास्तविक कल्याण</b>2.7 के अर्जुन के प्रश्न से जुड़ाव</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">परां गतिम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>परम गति</b>16.20 के "अधमां गतिम्" का प्रत्यक्ष विलोम</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">विमुक्तः</td><td>वि+मुच्+क्त</td><td>पुल्लिंग प्रथमा एकवचन</td><td>पूर्णतः मुक्त — कर्मणि भूतकृदन्त</td></tr>
+          <tr><td class="sa">तमोद्वारैः</td><td>तमस्+द्वार</td><td>नपुंसक तृतीया बहुवचन</td><td>तमोगुण के द्वारों से — करण</td></tr>
+          <tr><td class="sa">त्रिभिः</td><td>त्रि</td><td>पुल्लिंग तृतीया बहुवचन</td><td>तीन से — करण</td></tr>
+          <tr><td class="sa">नरः</td><td>नर</td><td>पुल्लिंग प्रथमा एकवचन</td><td>मनुष्य — कर्ता</td></tr>
+          <tr><td class="sa">आचरति</td><td>आ+चर्</td><td>परस्मैपद वर्तमान प्रथम पुरुष एकवचन</td><td>आचरण करता है — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">श्रेयः</td><td>प्रशस्य+ईयसुन्</td><td>नपुंसक प्रथमा एकवचन</td><td>वास्तविक कल्याण — कर्म</td></tr>
+          <tr><td class="sa">परां गतिम्</td><td>पर+गति</td><td>स्त्रीलिंग द्वितीया एकवचन</td><td>सर्वोच्च गंतव्य — कर्म</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">एतैर्विमुक्तः कौन्तेय तमोद्वारैस्त्रिभिर्नरः।<br>आचरत्यात्मनः श्रेयस्ततो याति परां गतिम्।।</div>
+          <div class="cheat-translit">etair vimuktaḥ kaunteya tamo-dvārais tribhir naraḥ, ācaraty ātmanaḥ śreyas tato yāti parāṁ gatim</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>एतैर्विमुक्तः</b> तीनों से पूर्ण मुक्ति</span>
+            <span class="cheat-chip"><b>तमोद्वारैः</b> तमोगुण के द्वार (14 से जुड़ाव)</span>
+            <span class="cheat-chip"><b>आत्मनः श्रेयः</b> वास्तविक कल्याण (2.7 से जुड़ाव)</span>
+            <span class="cheat-chip"><b>परां गतिम्</b> परम गति — 16.20 का विलोम</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: 16.21 की चेतावनी (काम-क्रोध-लोभ त्यागें) का सकारात्मक फल यहाँ दिखता है — इन तीनों से मुक्ति स्वाभाविक रूप से सच्चे कल्याण की ओर आचरण और अंततः परम गति की ओर ले जाती है। यह 16.20 के बंधन-परिणाम का प्रत्यक्ष, आशाजनक विलोम है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('एतैर्विमुक्तः कौन्तेय तमोद्वारैस्त्रिभिर्नरः। आचरत्यात्मनः श्रेयस्ततो याति परां गतिम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('एतैर्विमुक्तः कौन्तेय तमोद्वारैस्त्रिभिर्नरः। आचरत्यात्मनः श्रेयस्ततो याति परां गतिम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('इन तीन तमो-द्वारों से मुक्त मनुष्य अपने कल्याण के लिए आचरण करता है, और तब परम गति को प्राप्त होता है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">ए</span><span class="syll">तै</span><span class="syll">र्वि</span><span class="syll">मु</span><span class="syll">क्तः</span><span class="syll">कौ</span><span class="syll">न्ते</span><span class="syll">य</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">त</span><span class="syll">मो</span><span class="syll">द्वा</span><span class="syll">रै</span><span class="syll">स्त्रि</span><span class="syll">भि</span><span class="syll">र्न</span><span class="syll">रः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">आ</span><span class="syll">च</span><span class="syll">र</span><span class="syll">त्या</span><span class="syll">त्म</span><span class="syll">नः</span><span class="syll">श्रे</span><span class="syll">य</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">स्त</span><span class="syll">तो</span><span class="syll">या</span><span class="syll">ति</span><span class="syll">प</span><span class="syll">रां</span><span class="syll">ग</span><span class="syll">तिम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('एतैर्विमुक्तः कौन्तेय तमोद्वारैस्त्रिभिर्नरः आचरत्यात्मनः श्रेयस्ततो याति परां गतिम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "परां गतिम्" पर रुकें और महसूस करें — 16.21 की चेतावनी और यह आश्वासन साथ मिलकर एक पूर्ण, संतुलित शिक्षा बनाते हैं। भय अकेला नहीं आता, आशा भी साथ आती है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">16.20 बनाम 16.22 — दर्पण-विलोम</button>
+      <button class="tab-btn" data-tab="e2">मुक्ति की त्रि-चरण प्रक्रिया</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 16.20 (बंधन) बनाम 16.22 (मुक्ति) — पूर्ण दर्पण-विलोम</h3>
+        <p class="subnote">गीता की काव्य-संरचना में जानबूझकर बनाया गया संतुलन</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 16.20 — बंधन में</div>
+            <div class="contrast-sa">मामप्राप्यैव...अधमां गतिम्</div>
+            <p><b>परमात्मा को कभी न पाना।</b><br>निम्नतम, अवरोही गति।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 16.22 — मुक्ति में</div>
+            <div class="contrast-sa">आत्मनः श्रेयः...परां गतिम्</div>
+            <p><b>सच्चे कल्याण की ओर आचरण।</b><br>सर्वोच्च, आरोही गति।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> दोनों श्लोकों में "कौन्तेय" संबोधन और "गतिम्" शब्द दोहराए गए हैं — यह गीता की जानबूझकर बनाई गई काव्य-समरूपता है, जो चेतावनी और आश्वासन को एक ही ढांचे में बाँधती है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 मुक्ति की त्रि-चरण प्रक्रिया</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">1️⃣ मुक्ति</div>
+            <div class="guna-sa">एतैर्विमुक्तः</div>
+            <div class="guna-char">काम-क्रोध-लोभ से पूर्ण छुटकारा — पहला, आवश्यक चरण।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">2️⃣ सम्यक् आचरण</div>
+            <div class="guna-sa">आत्मनः श्रेयः</div>
+            <div class="guna-char">मुक्ति के बाद स्वाभाविक रूप से सच्चे कल्याण की ओर कर्म।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">3️⃣ परम गति</div>
+            <div class="guna-sa">परां गतिम्</div>
+            <div class="guna-char">अंतिम, सर्वोच्च परिणाम — 16.20 का पूर्ण विलोम।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> यह क्रम महत्त्वपूर्ण है — मुक्ति पहले, फिर सही आचरण, फिर परिणाम। किसी चरण को छोड़ा नहीं जा सकता।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 16 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १-२०<br>दैवी-आसुरी विस्तृत वर्णन</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २१<br>चेतावनी: तीन द्वार त्यागें</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. २२<br>आश्वासन: परम गति ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २३<br>शास्त्र-त्याग की दुर्गति</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २४<br>अंतिम निर्देश</div></div>
+        </div>
+        <div class="callout"><b>अगला (16.23):</b> जो व्यक्ति शास्त्र-विधि को त्यागकर केवल अपनी इच्छा से आचरण करता है, वह न सिद्धि पाता है, न सुख, न परम गति को।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.२३) — ☰ नेविगेशन — शास्त्र-विधि का त्याग करने वाले की दुर्गति</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"16.22 में काम-क्रोध-लोभ को किस गुण से जोड़ा गया है?",options:["सत्त्वगुण","रजोगुण","तमोगुण","इनमें से कोई नहीं"],correct:2},
+    {q:"'श्रेयः' शब्द गीता के किस पहले प्रसिद्ध श्लोक से जुड़ता है?",options:["2.47 (कर्मण्येवाधिकारस्ते)","2.7 (अर्जुन का यच्छ्रेयः प्रश्न)","18.66 (सर्वधर्मान्)","4.7 (यदा यदा हि)"],correct:1},
+    {q:"'परां गतिम्' किस पहले श्लोक का प्रत्यक्ष विलोम है?",options:["16.1", "16.20 (अधमां गतिम्)", "16.7", "16.10"],correct:1},
+    {q:"16.22 के अनुसार मुक्ति के बाद व्यक्ति किसकी ओर आचरण करता है?",options:["केवल धन की ओर","अपने वास्तविक कल्याण (श्रेयः) की ओर","केवल भोग की ओर","किसी दिशा में नहीं"],correct:1},
+    {q:"16.20 और 16.22 दोनों में कौन-सा संबोधन दोहराया गया है?",options:["पार्थ","अर्जुन","कौन्तेय","पाण्डव"],correct:2}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "16.21 ने चेतावनी दी — काम, क्रोध, लोभ त्यागें। 16.22 अब दिखाता है कि त्यागने के बाद क्या मिलता है।",
+    "'एतैर्विमुक्तः' — इन तीनों से पूर्ण मुक्ति। 'कौन्तेय' — वही स्नेहपूर्ण संबोधन, अब आशाजनक संदर्भ में।",
+    "'तमोद्वारैस्त्रिभिः' — इन्हें अब 'तमोगुण के द्वार' कहा गया है, अध्याय 14 के त्रिगुण-सिद्धांत से जोड़ते हुए।",
+    "'आत्मनः श्रेयः' — अपने वास्तविक कल्याण के लिए आचरण। यह सीधे अर्जुन के 2.7 के प्रश्न से जुड़ता है।",
+    "'परां गतिम्' — परम गति। यह 16.20 के 'अधमां गतिम्' का प्रत्यक्ष, जानबूझकर बनाया गया विलोम है।",
+    "चेतावनी और आश्वासन साथ-साथ — यही गीता की संतुलित शैली है। आगे 16.23 में एक और महत्त्वपूर्ण शर्त जुड़ेगी — शास्त्र-विधि का पालन।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

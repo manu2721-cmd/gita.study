@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 16.1 — दैवी सम्पदा: निर्भयता से आर्जव तक</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 16 · श्लोक 1 / 24 — नया अध्याय आरंभ</span>
+    <div class="progress-track"><div class="progress-fill" style="width:4.2%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सोलह — नया आरंभ</div>
+    <div class="chapter-title">अध्याय १६ — दैवासुरसम्पद्विभागयोग (दैवी और आसुरी सम्पदाओं का विभाजन)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १६.१</div>
+    </div>
+    <div class="guna-badge">🌟 दैवी सम्पदा — सूची श्लोक १/३</div>
+    <div class="shloka">
+      अभयं सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः।<br>
+      दानं दमश्च यज्ञश्च स्वाध्यायस्तप आर्जवम्।।
+    </div>
+    <div class="translit">
+      abhayaṃ sattva-saṃśuddhir jñāna-yoga-vyavasthitiḥ,<br>
+      dānaṃ damaś ca yajñaś ca svādhyāyas tapa ārjavam
+    </div>
+    <div class="gist">
+      <b>निर्भयता</b>, <b>अंतःकरण की शुद्धता</b>, <b>ज्ञानयोग में स्थिरता</b>, <b>दान</b>, <b>इन्द्रिय-संयम</b>, <b>यज्ञ-भावना</b>, <b>स्वाध्याय</b>, <b>तप</b>, और <b>सरलता</b> — ये दैवी सम्पदा के प्रथम गुण हैं।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📼️ इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — एक नए अध्याय का आरंभ</h3>
+      <p>अध्याय 15 (पुरुषोत्तमयोग) पुरुषोत्तम — सर्वोच्च पुरुष — के स्वरूप की व्याख्या के साथ समाप्त हुआ था। अब अध्याय 16 — <b>दैवासुरसम्पद्विभागयोग</b> — एक नया, विशिष्ट विषय लेकर आता है: मनुष्यों के स्वभाव को दो व्यापक श्रेणियों में बाँटना — <b>दैवी सम्पदा</b> (दिव्य गुण-सम्पन्नता) और <b>आसुरी सम्पदा</b> (आसुरी प्रवृत्ति)।</p>
+      <p>इस अध्याय की विशेष शैली यह है कि यह अर्जुन के किसी प्रश्न से नहीं, बल्कि सीधे कृष्ण के कथन से आरंभ होता है। 16.1-3 — तीन श्लोकों की एक सतत सूची — दैवी सम्पदा के 26 गुणों को गिनाती है। 16.1 इसी सूची का प्रथम भाग है, जिसमें 9 गुण सम्मिलित हैं।</p>
+      <div class="callout-rajas"><b>आगे की झलक — यज्ञ, दान, तप का प्रारंभिक उल्लेख:</b> ध्यान दें — इस श्लोक में "दानं...यज्ञश्च...तप" का उल्लेख है। यही तीन विषय आगे अध्याय 17 (श्रद्धात्रयविभागयोग) में विस्तार से त्रिगुण-विश्लेषित होंगे — वहाँ बताया जाएगा कि यज्ञ, तप, दान किस प्रकार सात्त्विक, राजसिक, या तामसिक हो सकते हैं। यहाँ 16.1 में ये केवल <b>दैवी गुणों</b> के रूप में, सामान्य रूप से सूचीबद्ध हैं — मूल आधार के रूप में।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अभयम्</span><span class="word-tr">abhayam</span></div>
+          <div class="word-meaning">निर्भयता, भय का अभाव</div>
+          <div class="word-eng"><b>EN:</b> fearlessness</div>
+          <div class="word-deep">अ (नहीं) + भय (डर)। यह सूची का प्रथम गुण है — गीता इसे दैवी सम्पदा की नींव मानती प्रतीत होती है, क्योंकि भय अक्सर अन्य दुर्गुणों (लोभ, क्रोध, असत्य) का मूल कारण बनता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">सत्त्वसंशुद्धिः</span><span class="word-tr">sattva-saṃśuddhiḥ</span></div>
+          <div class="word-meaning">अंतःकरण/चित्त की शुद्धता</div>
+          <div class="word-eng"><b>EN:</b> purity of being/mind</div>
+          <div class="word-deep">सत्त्व (यहाँ अंतःकरण, चित्त के अर्थ में — गुण-त्रय वाले "सत्त्व" से भिन्न प्रसंग) + संशुद्धि (पूर्ण शुद्धता)। यह मन की निर्मलता और स्वच्छता को दर्शाता है — विचारों और भावनाओं में मलिनता का अभाव।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">ज्ञानयोगव्यवस्थितिः</span><span class="word-tr">jñāna-yoga-vyavasthitiḥ</span></div>
+          <div class="word-meaning">ज्ञानयोग में सुदृढ़ स्थिरता</div>
+          <div class="word-eng"><b>EN:</b> steadfastness in the yoga of knowledge</div>
+          <div class="word-deep">ज्ञानयोग (ज्ञान-साधना का मार्ग) + व्यवस्थिति (सुस्थिर निष्ठा)। यह केवल ज्ञान प्राप्त करना नहीं, बल्कि उस ज्ञान-साधना में दृढ़तापूर्वक टिके रहना दर्शाता है — गीता के अन्य अध्यायों में वर्णित ज्ञानयोग की भावना से सीधा जुड़ाव।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">दानं दमः</span><span class="word-tr">dānaṃ damaḥ</span></div>
+          <div class="word-meaning">दान और इन्द्रिय-संयम</div>
+          <div class="word-eng"><b>EN:</b> charity and self-restraint</div>
+          <div class="word-deep">दानम् = उदारतापूर्वक देना। दमः = √दम् (वश में करना) से — बाह्य इन्द्रियों पर नियंत्रण। दोनों साथ मिलकर बाह्य उदारता और आंतरिक संयम का संतुलन दर्शाते हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">यज्ञः स्वाध्यायः तपः आर्जवम्</span><span class="word-tr">yajñaḥ svādhyāyaḥ tapaḥ ārjavam</span></div>
+          <div class="word-meaning">यज्ञ-भावना, स्वाध्याय, तप, और सरलता</div>
+          <div class="word-eng"><b>EN:</b> sacrifice, self-study, austerity, and uprightness</div>
+          <div class="word-deep">यज्ञः = त्याग व समर्पण की भावना। स्वाध्यायः = स्व+अधि+आय — अपने और शास्त्रों के अध्ययन का अभ्यास। तपः = संयमपूर्ण साधना। आर्जवम् = ऋजु (सीधा, निष्कपट) से — सरलता, कपट-रहित आचरण। ये चार गुण मिलकर व्यक्ति के बाह्य आचरण और आंतरिक साधना दोनों को समेटते हैं।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Fearlessness, purity of mind, steadfastness in the yoga of knowledge, charity, self-restraint, sacrifice, self-study, austerity, and uprightness — (these belong to one born with a divine nature).
+      </div>
+      <p>16.1 दैवी सम्पदा की सूची का प्रारंभिक भाग है, जिसमें कृष्ण नौ गुणों को एक साथ प्रस्तुत करते हैं। ध्यान देने योग्य है कि यह सूची किसी विशेष क्रम या पदानुक्रम का दावा नहीं करती — ये सभी गुण परस्पर पूरक हैं, और एक साथ मिलकर एक सुसंस्कृत, आध्यात्मिक रूप से परिपक्व व्यक्तित्व की नींव रखते हैं।</p>
+      <p>गुणों के क्रम पर भी ध्यान दें — <b>अभय</b> (निर्भयता) सबसे पहले आता है, जो सुझाव देता है कि निर्भयता अन्य सभी गुणों के विकास के लिए एक आवश्यक पूर्व-शर्त हो सकती है। इसके बाद <b>सत्त्वसंशुद्धि</b> (चित्त-शुद्धि) और <b>ज्ञानयोगव्यवस्थिति</b> (ज्ञान में स्थिरता) आंतरिक विकास को दर्शाते हैं, जबकि दान, दम, यज्ञ, स्वाध्याय, तप, आर्जव — शेष छह गुण — व्यावहारिक साधना और आचरण के क्षेत्र में इस आंतरिक शुद्धता की अभिव्यक्ति हैं।</p>
+      <div class="callout-rajas"><b>यह सूची क्यों महत्त्वपूर्ण है — अध्याय की संरचना:</b> 16.1-3 (26 गुणों की पूर्ण सूची) के बाद 16.4 आसुरी सम्पदा के लक्षण गिनाएगा, फिर 16.5 इन दोनों के महत्त्व को समझाएगा। यह अध्याय की व्यापक संरचना है — पहले सकारात्मक (दैवी) मॉडल, फिर नकारात्मक (आसुरी) मॉडल, और फिर उनका तुलनात्मक विश्लेषण। यह अध्याय 17 की त्रिगुण-विश्लेषण शैली से भिन्न, एक द्विआधारी (binary) विभाजन प्रस्तुत करता है।</div>
+      <p>यहाँ यह भी उल्लेखनीय है कि गीता किसी व्यक्ति को स्थायी रूप से "दैवी" या "आसुरी" घोषित नहीं करती — बल्कि यह गुण-सूची एक आत्म-मूल्यांकन का उपकरण प्रस्तुत करती है, जिसके माध्यम से कोई भी साधक अपने विकास की दिशा समझ सकता है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — निर्भयता का व्यावहारिक रूप:</b> कोई व्यक्ति सामाजिक विरोध या आलोचना की परवाह किए बिना सत्य और न्याय के पक्ष में खड़ा होता है — बिना यह डरे कि इससे उसकी प्रतिष्ठा या संबंधों को हानि पहुँचेगी। यह "अभयम्" का प्रत्यक्ष उदाहरण है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — स्वाध्याय की नियमित प्रथा:</b> कोई व्यक्ति प्रतिदिन कुछ समय शास्त्र-अध्ययन, आत्म-चिंतन, या ज्ञानवर्धक पठन के लिए निकालता है — चाहे व्यस्तता कितनी भी हो। यह "स्वाध्यायः" की जीवंत अभिव्यक्ति है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — आर्जव (सरलता) का जीवन में प्रतिबिंब:</b> कोई व्यक्ति बिना दिखावे या कपट के, जैसा भीतर से है वैसा ही बाहर से प्रस्तुत होता है — उसकी बातें और व्यवहार में कोई द्वैत नहीं। यह "आर्जवम्" का सजीव उदाहरण है।
+      </div>
+      <div class="callout"><b>व्यावहारिक जाँच-सूची:</b> इस श्लोक के नौ गुणों को अपने जीवन में परखने के लिए पूछें — क्या मैं निर्भय हूँ? क्या मेरा मन शुद्ध है? क्या मैं ज्ञान-साधना में स्थिर हूँ? क्या मैं उदार, संयमी, समर्पित, अध्ययनशील, तपस्वी, और सरल हूँ?</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">"सत्त्वसंशुद्धिः" में "सत्त्व" शब्द का यहाँ क्या अर्थ है — क्या यह त्रिगुण वाला "सत्त्व" है?</div>
+        <div class="a">यहाँ "सत्त्व" का प्रयोग व्यापक अर्थ में — अंतःकरण, चित्त, या हृदय के अर्थ में — हुआ है, न कि विशेष रूप से त्रिगुण (सत्त्व-रजस्-तमस) के संदर्भ में। "सत्त्वसंशुद्धि" का अर्थ है समग्र मानसिक-भावनात्मक शुद्धता, जो त्रिगुण-विश्लेषण से एक व्यापक अवधारणा है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या 16.1 में सूचीबद्ध यज्ञ, दान, तप का अर्थ अध्याय 17 जैसा ही है?</div>
+        <div class="a">मूल क्रियाएँ वही हैं, पर संदर्भ भिन्न है। यहाँ 16.1 में यज्ञ, दान, तप को केवल <b>दैवी गुणों</b> के रूप में, सामान्य सकारात्मक अर्थ में सूचीबद्ध किया गया है। अध्याय 17 में इन्हीं क्रियाओं का त्रिगुण-आधारित गहन विश्लेषण मिलता है — कि ये सात्त्विक, राजसिक, या तामसिक किस प्रकार हो सकती हैं। दोनों अध्याय एक-दूसरे के पूरक हैं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">दैवी सम्पदा की पूरी सूची कितने गुणों की है, और 16.1 उसमें कहाँ फिट होता है?</div>
+        <div class="a">पूरी सूची (16.1-3) में कुल 26 गुण हैं। 16.1 पहले 9 गुण देता है (अभय से आर्जव तक); 16.2 अगले गुण जोड़ेगा (जैसे अहिंसा, सत्य, अक्रोध); 16.3 शेष गुणों के साथ सूची पूर्ण करेगा।</div>
+      </div>
+      <div class="faq">
+        <div class="q">अध्याय 16 आगे किस दिशा में बढ़ेगा?</div>
+        <div class="a">16.2-3 दैवी सम्पदा की सूची पूरी करेंगे। इसके बाद 16.4 आसुरी सम्पदा के लक्षण (दम्भ, दर्प, अभिमान, क्रोध, कठोरता, अज्ञान) गिनाएगा। फिर 16.5 इन दोनों प्रकृतियों के महत्त्व — मोक्ष और बंधन से उनके संबंध — पर प्रकाश डालेगा।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>16.1 एक नए अध्याय और एक नई शैली का परिचय देता है। जहाँ अध्याय 17 त्रिगुण (सात्त्विक-राजसिक-तामसिक) के आधार पर विश्लेषण करता है, वहीं अध्याय 16 एक सरल, द्विआधारी विभाजन — दैवी बनाम आसुरी — प्रस्तुत करता है। यह गीता की विविध विश्लेषण-पद्धतियों में से एक है।</p>
+        <p>26 गुणों की यह सूची (16.1-3) भारतीय नैतिक-आध्यात्मिक साहित्य में एक महत्त्वपूर्ण संदर्भ-बिंदु मानी जाती है — यह चरित्र-निर्माण और आत्म-मूल्यांकन के लिए एक व्यापक ढाँचा प्रस्तुत करती है।</p>
+        <div class="callout"><b>अध्याय 16 की संरचना (24 श्लोक):</b> 16.1-3 (दैवी सम्पदा — 26 गुण) → 16.4 (आसुरी सम्पदा के लक्षण) → 16.5 (दोनों का महत्त्व) → 16.6-20 (आसुरी स्वभाव का विस्तृत वर्णन) → 16.21-24 (नरक के तीन द्वार व अध्याय-समापन)।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — 16.1 के नौ गुण</h3>
+        <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="210" rx="80" ry="44" fill="rgba(92,131,116,0.15)" stroke="rgba(92,131,116,0.5)" stroke-width="1.5"/>
+          <text x="350" y="204" text-anchor="middle" fill="#8fbfa8" font-size="13" font-family="Tiro Devanagari Hindi, serif">दैवी सम्पदा</text>
+          <text x="350" y="222" text-anchor="middle" fill="#cfc3a8" font-size="10">16.1 — नौ गुण</text>
+
+          <line x1="290" y1="180" x2="150" y2="110" stroke="rgba(92,131,116,0.4)" stroke-width="1.1"/>
+          <ellipse cx="112" cy="90" rx="80" ry="40" fill="rgba(92,131,116,0.08)" stroke="rgba(92,131,116,0.35)" stroke-width="1"/>
+          <text x="112" y="80" text-anchor="middle" fill="#8fbfa8" font-size="10" font-family="Tiro Devanagari Hindi, serif">आंतरिक गुण</text>
+          <text x="112" y="96" text-anchor="middle" fill="#cfc3a8" font-size="9">अभय, सत्त्वशुद्धि,</text>
+          <text x="112" y="110" text-anchor="middle" fill="#cfc3a8" font-size="9">ज्ञानयोगस्थिति</text>
+
+          <line x1="410" y1="180" x2="560" y2="110" stroke="rgba(92,131,116,0.4)" stroke-width="1.1"/>
+          <ellipse cx="590" cy="90" rx="80" ry="40" fill="rgba(92,131,116,0.08)" stroke="rgba(92,131,116,0.35)" stroke-width="1"/>
+          <text x="590" y="80" text-anchor="middle" fill="#8fbfa8" font-size="10" font-family="Tiro Devanagari Hindi, serif">व्यावहारिक गुण</text>
+          <text x="590" y="96" text-anchor="middle" fill="#cfc3a8" font-size="9">दान, दम, यज्ञ,</text>
+          <text x="590" y="110" text-anchor="middle" fill="#cfc3a8" font-size="9">स्वाध्याय, तप</text>
+
+          <line x1="350" y1="254" x2="350" y2="330" stroke="rgba(92,131,116,0.35)" stroke-width="1.1"/>
+          <ellipse cx="350" cy="360" rx="90" ry="34" fill="rgba(92,131,116,0.08)" stroke="rgba(92,131,116,0.35)" stroke-width="1"/>
+          <text x="350" y="354" text-anchor="middle" fill="#8fbfa8" font-size="11" font-family="Tiro Devanagari Hindi, serif">आर्जवम्</text>
+          <text x="350" y="372" text-anchor="middle" fill="#cfc3a8" font-size="10">सरलता — पहली सूची का समापन</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — अध्याय 16 बनाम अध्याय 17 की विश्लेषण-शैली</h3>
+        <table class="cmp-table">
+          <tr><th>पक्ष</th><th>अध्याय 16 (दैवासुरसम्पद्विभाग)</th><th>अध्याय 17 (श्रद्धात्रयविभाग)</th></tr>
+          <tr><td>विभाजन-प्रकार</td><td>द्विआधारी (दैवी/आसुरी)</td><td>त्रिगुणात्मक (सात्त्विक/राजसिक/तामसिक)</td></tr>
+          <tr><td>संरचना</td><td>गुण-सूचियाँ (26 + अन्य)</td><td>प्रत्येक विषय के तीन रूप</td></tr>
+          <tr><td>यज्ञ/दान/तप का उल्लेख</td><td>सामान्य दैवी गुण के रूप में</td><td>विस्तृत त्रिगुण-विश्लेषण</td></tr>
+          <tr><td>प्रश्नकर्ता</td><td>(कृष्ण का स्वतः कथन)</td><td>अर्जुन का प्रश्न (17.1)</td></tr>
+        </table>
+        <div class="callout"><b>गीता की insight:</b> अध्याय 16 और 17 एक-दूसरे के पूरक हैं — 16 चरित्र के व्यापक ढाँचे (दैवी/आसुरी) पर केंद्रित है, 17 विशिष्ट क्रियाओं (यज्ञ-तप-दान-आहार-श्रद्धा) के सूक्ष्म गुण-विश्लेषण पर।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>नौ गुणों की आत्म-जाँच:</b> सप्ताह में एक बार, इन नौ गुणों में से किसी एक पर विशेष ध्यान दें — उदाहरण के लिए, आज "आर्जव" (सरलता) पर — और देखें कि दिनभर के व्यवहार में यह गुण कितनी बार प्रकट या अनुपस्थित रहा।</div>
+        <p><b>अभ्यास — निर्भयता की नींव:</b> चूँकि "अभयम्" सूची का प्रथम गुण है, किसी छोटी-सी स्थिति में (जहाँ सामाजिक अस्वीकृति का भय हो) सत्य और सही निर्णय को प्राथमिकता देने का अभ्यास करें। यह निर्भयता को धीरे-धीरे सुदृढ़ करता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "अभयम्" को सूची में प्रथम स्थान देना दर्शाता है कि भय ही समस्त मानसिक विकारों और अशुद्धियों का मूल है — भय से मुक्ति ही आध्यात्मिक विकास का प्रथम चरण है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "ज्ञानयोगव्यवस्थिति" भक्ति और ज्ञान के समन्वय को इंगित करता है — केवल बौद्धिक ज्ञान नहीं, बल्कि उस ज्ञान में स्थिर, अटल निष्ठा ही सच्ची साधना है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> यह सूची व्यावहारिक नैतिकता और आध्यात्मिक साधना का एक संतुलित मिश्रण प्रस्तुत करती है — यह किसी सन्यासी तक सीमित नहीं, बल्कि हर सामान्य व्यक्ति के जीवन में लागू होने योग्य है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> सभी आचार्य सहमत हैं — 16.1 की सूची किसी विशिष्ट वर्ग या आश्रम तक सीमित नहीं, बल्कि <b>प्रत्येक साधक के लिए एक सार्वभौमिक चरित्र-मानदंड</b> प्रस्तुत करती है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अभयम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>निर्भयता</b>दैवी सम्पदा की सूची का प्रथम गुण</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">सत्त्वसंशुद्धिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>अंतःकरण की शुद्धता</b>त्रिगुण वाले सत्त्व से भिन्न, व्यापक अर्थ में</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">ज्ञानयोगव्यवस्थितिः</span></div>
+            <div class="flashcard-face flashcard-back"><b>ज्ञानयोग में स्थिरता</b>ज्ञान-साधना में दृढ़ निष्ठा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">दानं दमः</span></div>
+            <div class="flashcard-face flashcard-back"><b>दान और इन्द्रिय-संयम</b>बाह्य उदारता और आंतरिक नियंत्रण</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">यज्ञः स्वाध्यायः</span></div>
+            <div class="flashcard-face flashcard-back"><b>यज्ञ-भावना और स्वाध्याय</b>त्याग व अध्ययन का अभ्यास</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">तपः आर्जवम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>तप और सरलता</b>संयम और निष्कपट आचरण — सूची का समापन</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">अभयम्</td><td>अ+भय</td><td>प्रथमा एकवचन</td><td>निर्भयता — कर्ता (सूचीबद्ध)</td></tr>
+          <tr><td class="sa">सत्त्वसंशुद्धिः</td><td>सत्त्व+सम्+√शुध्</td><td>प्रथमा एकवचन</td><td>चित्त-शुद्धता</td></tr>
+          <tr><td class="sa">ज्ञानयोगव्यवस्थितिः</td><td>ज्ञान+योग+वि+अव+√स्था</td><td>प्रथमा एकवचन</td><td>ज्ञानयोग में स्थिरता</td></tr>
+          <tr><td class="sa">दानम्</td><td>√दा</td><td>प्रथमा एकवचन</td><td>दान, उदारता</td></tr>
+          <tr><td class="sa">दमः</td><td>√दम्</td><td>प्रथमा एकवचन</td><td>इन्द्रिय-संयम</td></tr>
+          <tr><td class="sa">यज्ञः</td><td>√यज्</td><td>प्रथमा एकवचन</td><td>यज्ञ-भावना, त्याग</td></tr>
+          <tr><td class="sa">स्वाध्यायः</td><td>स्व+अधि+आय</td><td>प्रथमा एकवचन</td><td>स्व-अध्ययन</td></tr>
+          <tr><td class="sa">तपः</td><td>√तप्</td><td>प्रथमा एकवचन</td><td>तप, संयम-साधना</td></tr>
+          <tr><td class="sa">आर्जवम्</td><td>ऋजु</td><td>प्रथमा एकवचन</td><td>सरलता, निष्कपटता</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">अभयं सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः।<br>दानं दमश्च यज्ञश्च स्वाध्यायस्तप आर्जवम्।।</div>
+          <div class="cheat-translit">abhayaṃ sattva-saṃśuddhir jñāna-yoga-vyavasthitiḥ, dānaṃ damaś ca yajñaś ca svādhyāyas tapa ārjavam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अभयम्</b> निर्भयता — प्रथम गुण</span>
+            <span class="cheat-chip"><b>सत्त्वसंशुद्धिः</b> चित्त-शुद्धता</span>
+            <span class="cheat-chip"><b>ज्ञानयोगव्यवस्थितिः</b> ज्ञान में स्थिरता</span>
+            <span class="cheat-chip"><b>दान-दम-यज्ञ-स्वाध्याय-तप-आर्जव</b> छह व्यावहारिक गुण</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: निर्भयता, चित्त-शुद्धता, ज्ञानयोग में स्थिरता, दान, संयम, यज्ञ-भावना, स्वाध्याय, तप, और सरलता — ये नौ गुण दैवी सम्पदा की सूची (16.1-3, कुल 26 गुण) का प्रारंभिक भाग हैं। यह अध्याय 16 का पहला श्लोक है, जो दैवी और आसुरी प्रकृति के विभाजन की व्यापक चर्चा आरंभ करता है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('अभयं सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः। दानं दमश्च यज्ञश्च स्वाध्यायस्तप आर्जवम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('अभयं सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः। दानं दमश्च यज्ञश्च स्वाध्यायस्तप आर्जवम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('निर्भयता, अंतःकरण की शुद्धता, ज्ञानयोग में स्थिरता, दान, इन्द्रिय-संयम, यज्ञ-भावना, स्वाध्याय, तप, और सरलता — ये दैवी सम्पदा के गुण हैं।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">भ</span><span class="syll">यं</span><span class="syll">स</span><span class="syll">त्त्व</span><span class="syll">सं</span><span class="syll">शु</span><span class="syll">द्धिः</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">ज्ञा</span><span class="syll">न</span><span class="syll">यो</span><span class="syll">ग</span><span class="syll">व्य</span><span class="syll">व</span><span class="syll">स्थि</span><span class="syll">तिः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">दा</span><span class="syll">नं</span><span class="syll">द</span><span class="syll">मश्</span><span class="syll">च</span><span class="syll">यज्</span><span class="syll">ञश्</span><span class="syll">च</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">स्वा</span><span class="syll">ध्या</span><span class="syll">यस्</span><span class="syll">त</span><span class="syll">प</span><span class="syll">आ</span><span class="syll">र्ज</span><span class="syll">वम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('अभयं सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः दानं दमश्च यज्ञश्च स्वाध्यायस्तप आर्जवम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "अभयम्" — इस श्लोक और पूरी सूची का पहला शब्द। जप करते समय इस पर रुकें और मन में निर्भयता की भावना को गहराई से स्थापित करें।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">दैवी सम्पदा — पहले नौ गुण</button>
+      <button class="tab-btn" data-tab="e2">अध्याय 16 — पूर्ण संरचना</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 दैवी सम्पदा सूची — 16.1 के नौ गुण</h3>
+        <p class="subnote">कुल 26 गुणों की सूची (16.1-3) का प्रथम भाग</p>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🛡️ आंतरिक नींव</div>
+            <div class="guna-sa">अभय, सत्त्वसंशुद्धि, ज्ञानयोगव्यवस्थिति</div>
+            <div class="guna-char">निर्भयता, चित्त-शुद्धता, ज्ञान में स्थिरता — भीतर की तैयारी।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🤲 बाह्य साधना</div>
+            <div class="guna-sa">दान, दम, यज्ञ, स्वाध्याय, तप</div>
+            <div class="guna-char">उदारता, संयम, समर्पण, अध्ययन, तपस्या — क्रियात्मक अभ्यास।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">✨ समापन-गुण</div>
+            <div class="guna-sa">आर्जवम्</div>
+            <div class="guna-char">सरलता — भीतर और बाहर की एकरूपता, निष्कपटता।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> यहाँ रंग-भेद गुण-त्रय नहीं दर्शाता — यह केवल 16.1 के नौ गुणों को तीन स्वाभाविक समूहों में व्यवस्थित करता है, ताकि याद रखना सरल हो।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 अध्याय 16 — पूर्ण संरचना (24 श्लोक)</h3>
+        <table class="cmp-table">
+          <tr><th>खंड</th><th>श्लोक-सीमा</th><th>विषय</th></tr>
+          <tr><td>दैवी सम्पदा सूची</td><td>16.1-3</td><td>26 दिव्य गुण (16.1 ← यहाँ)</td></tr>
+          <tr><td>आसुरी सम्पदा के लक्षण</td><td>16.4</td><td>दम्भ, दर्प, अभिमान आदि</td></tr>
+          <tr><td>महत्त्व</td><td>16.5</td><td>दैवी = मोक्ष, आसुरी = बंधन</td></tr>
+          <tr><td>आसुरी स्वभाव का विस्तार</td><td>16.6-20</td><td>आसुरी लोगों की मनोवृत्ति व गति</td></tr>
+          <tr><td>नरक के तीन द्वार</td><td>16.21-24</td><td>काम, क्रोध, लोभ — अध्याय-समापन</td></tr>
+        </table>
+        <div class="callout"><b>Pattern:</b> अध्याय 16 पहले सकारात्मक मॉडल (दैवी) प्रस्तुत करता है, फिर नकारात्मक मॉडल (आसुरी) पर विस्तार से चर्चा करता है — यह द्विआधारी संरचना अध्याय 17 की त्रिगुण-संरचना से भिन्न है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 16 — रोड-मैप (आरंभ)</h3>
+        <div class="road-track">
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. १<br>दैवी सम्पदा — भाग १ ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २<br>दैवी सम्पदा — भाग २</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ३<br>दैवी सम्पदा — भाग ३</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ४<br>आसुरी सम्पदा के लक्षण</div></div>
+        </div>
+        <div class="callout"><b>अगला (16.2):</b> "अहिंसा सत्यमक्रोधस्त्यागः शान्तिरपैशुनम्। दया भूतेष्वलोलुप्त्वं मार्दवं ह्रीरचापलम्।।" — अहिंसा, सत्य, अक्रोध, त्याग, शांति, अपैशुन (चुगली न करना), करुणा, अलोभ, मृदुता, लज्जा, और अचंचलता — दैवी सम्पदा सूची का दूसरा भाग।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.२) — ☰ नेविगेशन — दैवी सम्पदा भाग २: अहिंसा से अचापलता तक</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"16.1 के अनुसार दैवी सम्पदा की सूची का प्रथम गुण क्या है?",options:["सत्य","अभयम् (निर्भयता)","अहिंसा","दान"],correct:1},
+    {q:"'ज्ञानयोगव्यवस्थितिः' का क्या अर्थ है?",options:["ज्ञान का अभाव","ज्ञानयोग में स्थिरता","भय का त्याग","धन का दान"],correct:1},
+    {q:"16.1-3 में दैवी सम्पदा के कुल कितने गुण गिनाए गए हैं?",options:["9","16","26","24"],correct:2},
+    {q:"'आर्जवम्' का क्या अभिप्राय है?",options:["कठोरता","सरलता/निष्कपटता","क्रोध","भय"],correct:1},
+    {q:"अध्याय 16 में यज्ञ, दान, तप का उल्लेख किस रूप में हुआ है (16.1 में)?",options:["त्रिगुण-विश्लेषण सहित","सामान्य दैवी गुण के रूप में","आसुरी गुण के रूप में","इनका उल्लेख नहीं है"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "अध्याय 15 पुरुषोत्तम की व्याख्या के साथ समाप्त हुआ। अब अध्याय 16 — दैवासुरसम्पद्विभागयोग — एक नया विषय लेकर आता है: दैवी और आसुरी सम्पदा का विभाजन।",
+    "16.1-3 एक सतत सूची है — कुल 26 दैवी गुण। 16.1 इस सूची के प्रथम नौ गुण प्रस्तुत करता है, 'अभयम्' (निर्भयता) से आरंभ होकर।",
+    "'अभयम्, सत्त्वसंशुद्धिः, ज्ञानयोगव्यवस्थितिः' — ये तीन आंतरिक गुण हैं: निर्भयता, चित्त-शुद्धता, और ज्ञान-साधना में स्थिरता।",
+    "'दानं दमश्च यज्ञश्च स्वाध्यायस्तप' — पाँच व्यावहारिक गुण: उदारता, संयम, यज्ञ-भावना, स्वाध्याय, और तप।",
+    "'आर्जवम्' — सरलता, इस श्लोक का समापन-गुण। यह भीतर और बाहर की एकरूपता, निष्कपट आचरण को दर्शाता है।",
+    "अगला (16.2) — दैवी सम्पदा सूची जारी रहेगी: अहिंसा, सत्य, अक्रोध, त्याग, शांति, और अन्य गुण जोड़े जाएँगे।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

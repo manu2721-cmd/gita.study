@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 16.21 — त्रिविध नरक-द्वार: काम, क्रोध, लोभ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 16 · श्लोक 21 / 24</span>
+    <div class="progress-track"><div class="progress-fill" style="width:87.5%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सोलह</div>
+    <div class="chapter-title">अध्याय १६ — दैवासुरसम्पद्विभागयोग (दैवी-आसुरी सम्पदा का विभाजन)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १६.२१</div>
+    </div>
+    <div class="guna-badge">🔑 सार-सूत्र १/४ — त्रिविध नरक-द्वार: काम, क्रोध, लोभ</div>
+    <div class="shloka">
+      त्रिविधं नरकस्येदं द्वारं नाशनमात्मनः।<br>
+      कामः क्रोधस्तथा लोभस्तस्मादेतत्त्रयं त्यजेत्।।
+    </div>
+    <div class="translit">
+      tri-vidhaṁ narakasyedaṁ dvāraṁ nāśanam ātmanaḥ,<br>
+      kāmaḥ krodhas tathā lobhas tasmād etat trayaṁ tyajet
+    </div>
+    <div class="gist">
+      यह <b>तीन प्रकार का नरक-द्वार</b>, आत्मा का नाशक है — <b>काम, क्रोध और लोभ</b>। इसलिए इन <b>तीनों को त्याग</b> देना चाहिए।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — 16.7-20 के बाद, एक नया चरण</h3>
+      <p>16.7 से 16.20 तक चौदह श्लोकों में गीता ने आसुरी स्वभाव का अत्यंत विस्तृत चित्रण किया — दर्शन, मनोविज्ञान, अहंकार-एकालाप, पतन, भगवद्-द्वेष, और अंततः परमात्मा से स्थायी वियोग। अब 16.21 के साथ एक नया, संक्षिप्त चरण (16.21-24) शुरू होता है — जहाँ यह पूरा विस्तार एक <b>अविस्मरणीय, व्यावहारिक सूत्र</b> में समेटा जाता है।</p>
+      <p>यह श्लोक गीता के सबसे अधिक उद्धृत श्लोकों में से एक है — क्योंकि यह चौदह श्लोकों के जटिल विवरण को केवल <b>तीन शब्दों</b> (काम, क्रोध, लोभ) में संकुचित कर देता है, जिन्हें कोई भी व्यक्ति आसानी से याद रख और लागू कर सकता है।</p>
+      <div class="contrast-row">
+        <div class="contrast-card sat">
+          <div class="contrast-label">🌿 16.7-20 — विस्तृत वर्णन</div>
+          <div class="contrast-sa">चौदह श्लोक</div>
+          <p>दर्शन, मनोविज्ञान, एकालाप, पतन — <b>पूर्ण विश्लेषण</b>।</p>
+        </div>
+        <div class="contrast-card raj">
+          <div class="contrast-label">🔥 16.21 — संक्षिप्त सूत्र</div>
+          <div class="contrast-sa">काम, क्रोध, लोभ</div>
+          <p>तीन शब्द — <b>व्यावहारिक, याद रखने योग्य सार</b>।</p>
+        </div>
+      </div>
+      <div class="callout-rajas"><b>महत्त्वपूर्ण संकेत:</b> "काम" और "क्रोध" पहले भी साथ आ चुके हैं (16.12 का "काम-क्रोध-परायणाः")। यहाँ 16.21 में तीसरा साथी — "लोभ" (लालच) — जुड़कर पूरी, प्रसिद्ध त्रयी बनाता है। यह अध्याय 3.37 के "काम एष क्रोध एष" (काम ही क्रोध बनकर प्रकट होता है) से भी गहराई से जुड़ता है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">त्रिविधम्</span><span class="word-tr">tri-vidham</span></div>
+          <div class="word-meaning">तीन प्रकार का — नपुंसक प्रथमा एकवचन</div>
+          <div class="word-eng"><b>EN:</b> threefold, of three kinds</div>
+          <div class="word-deep">त्रि (तीन) + विध (प्रकार)। यह संख्या निश्चित और सीमित है — गीता कहती है कि आत्म-विनाश के मूल मार्ग केवल तीन हैं, अनगिनत नहीं। यह स्पष्टता ही इस श्लोक को व्यावहारिक बनाती है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">नरकस्येदं द्वारम्</span><span class="word-tr">narakasyedaṁ dvāram</span></div>
+          <div class="word-meaning">यह नरक का द्वार है — नपुंसक प्रथमा एकवचन</div>
+          <div class="word-eng"><b>EN:</b> this is the gate of hell</div>
+          <div class="word-deep">द्वार (दरवाज़ा/प्रवेश-बिंदु)। यह रूपक महत्त्वपूर्ण है — नरक कोई अनिश्चित, धुंधली अवस्था नहीं, बल्कि विशिष्ट, पहचाने जाने योग्य "प्रवेश-द्वारों" से पहुँचा जाता है, जिन्हें पहचानकर टाला जा सकता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">नाशनमात्मनः</span><span class="word-tr">nāśanam ātmanaḥ</span></div>
+          <div class="word-meaning">आत्मा का नाशक — षष्ठी एकवचन</div>
+          <div class="word-eng"><b>EN:</b> destructive of the self/soul</div>
+          <div class="word-deep">नाशन (नष्ट करने वाला) + आत्मन् (स्व/आत्मा)। यह स्पष्ट करता है कि हानि आंतरिक है — यह कोई बाहरी दंड नहीं, बल्कि स्वयं की उच्चतर प्रकृति (आत्मा) का आत्म-विनाश है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">कामः क्रोधस्तथा लोभः</span><span class="word-tr">kāmaḥ krodhas tathā lobhaḥ</span></div>
+          <div class="word-meaning">काम, क्रोध, और लोभ — प्रथमा एकवचन (तीनों)</div>
+          <div class="word-eng"><b>EN:</b> desire, anger, and greed</div>
+          <div class="word-deep">यह पूरे अध्याय (और गीता) के सबसे प्रसिद्ध तीन शब्द हैं। काम (16.10 का दुष्पूर काम), क्रोध (16.12 से जुड़ा, इच्छा बाधित होने पर), लोभ (16.12 के अनुचित अर्थ-संचय की जड़)। तीनों एक-दूसरे से जुड़े और एक-दूसरे को पुष्ट करते हैं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">तस्मादेतत्त्रयं त्यजेत्</span><span class="word-tr">tasmād etat trayaṁ tyajet</span></div>
+          <div class="word-meaning">इसलिए इन तीनों को त्याग देना चाहिए — विधिलिङ् लकार</div>
+          <div class="word-eng"><b>EN:</b> therefore, one should abandon this triad</div>
+          <div class="word-deep">त्यजेत् = त्यज् (त्यागना) का विधिलिङ् (चाहिए/उचित है)। यह श्लोक का व्यावहारिक निष्कर्ष है — केवल विश्लेषण नहीं, बल्कि सीधा, स्पष्ट कर्तव्य-निर्देश।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        This is the threefold gate of hell, destructive of the self — lust, anger, and greed. Therefore, one should abandon these three.
+      </div>
+      <p>16.21 की सबसे बड़ी शक्ति उसकी <b>संक्षिप्तता</b> में है। चौदह श्लोकों (16.7-20) का पूरा, जटिल विवरण — दर्शन, मनोविज्ञान, एकालाप, पतन — यहाँ केवल तीन शब्दों में संकुचित हो जाता है। यह गीता की शिक्षण-शैली की एक विशेषता है — विस्तृत विश्लेषण के बाद, हमेशा एक स्पष्ट, याद रखने योग्य सार-सूत्र देना।</p>
+      <p>"द्वार" (गेट) का रूपक विशेष रूप से उपयोगी है — यह बताता है कि आत्म-विनाश किसी अस्पष्ट, अनियंत्रित शक्ति से नहीं होता, बल्कि तीन स्पष्ट, पहचाने जाने योग्य प्रवेश-बिंदुओं से होता है। जैसे किसी घर के दरवाज़ों की रखवाली की जा सकती है, वैसे ही इन तीन "द्वारों" पर सचेत निगरानी रखी जा सकती है।</p>
+      <div class="callout-rajas"><b>तीनों का आपसी सम्बन्ध:</b> ये तीन स्वतंत्र नहीं, बल्कि एक-दूसरे को जन्म देने वाली श्रृंखला हैं — अध्याय 2.62-63 में यही बताया गया है: विषय-चिंतन से आसक्ति, आसक्ति से <b>काम</b> (इच्छा), इच्छा बाधित होने पर <b>क्रोध</b>। और <b>लोभ</b> इसी काम का एक विशेष, संचयी रूप है — "जो है वह काफी नहीं, और चाहिए" की स्थायी भावना। तीनों मिलकर एक आत्म-पोषित चक्र बनाते हैं।</div>
+      <p>व्यावहारिक रूप से, यह श्लोक हमें एक सरल, दैनिक जाँच-सूची देता है — "आज मेरे किस निर्णय में काम (अतृप्त इच्छा), क्रोध, या लोभ ने भूमिका निभाई?" यह प्रश्न, चौदह श्लोकों के जटिल विश्लेषण की तुलना में, रोज़मर्रा जीवन में कहीं अधिक व्यावहारिक और तुरंत लागू करने योग्य है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — काम से क्रोध तक:</b> कोई भी व्यक्ति जो किसी चीज़ की तीव्र इच्छा (काम) रखता है, और वह पूरी नहीं होती, तो अक्सर उसी अनुपात में झुंझलाहट या क्रोध महसूस करता है — चाहे वह किसी वस्तु की चाह हो, किसी की प्रशंसा की चाह हो, या किसी परिणाम की चाह। यह जोड़ी लगभग स्वचालित रूप से साथ आती है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — लोभ की पहचान:</b> कोई व्यक्ति जो अपने पास पर्याप्त होने पर भी और अधिक संग्रह करने से खुद को रोक नहीं पाता, या ज़रूरतमंद के साथ भी बाँटने में हिचकिचाता है — यह "लोभ" का रोज़मर्रा, सूक्ष्म रूप है, जो अक्सर स्पष्ट लालच जैसा नहीं दिखता, फिर भी उसी जड़ से आता है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — तीन-प्रश्न आत्म-जाँच:</b> कोई व्यक्ति जो रात को सोने से पहले तीन सरल प्रश्न पूछने की आदत बना ले — "क्या आज किसी निर्णय में अतृप्त इच्छा (काम) हावी थी? क्या मैं क्रोधित हुआ, और क्यों? क्या मैंने किसी चीज़ को ज़रूरत से ज़्यादा पकड़े रखा (लोभ)?" — यह अभ्यास चौदह श्लोकों के पूरे विश्लेषण को एक व्यावहारिक, दैनिक उपकरण में बदल देता है।
+      </div>
+      <div class="callout"><b>ध्यान रखें:</b> इस श्लोक की शक्ति यही है कि यह जटिल नहीं — कोई भी व्यक्ति, चाहे उसने गीता का गहन अध्ययन किया हो या नहीं, इन तीन शब्दों को याद रखकर अपने दैनिक निर्णयों की जाँच कर सकता है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">पहले 16.7-20 में तो कई और गुण (दम्भ, मान, मद आदि) भी बताए गए थे — यहाँ केवल तीन ही क्यों?</div>
+        <div class="a">काम, क्रोध और लोभ को गीता "मूल" या "जड़" गुण मानती है, जिनसे बाकी सभी दोष (दम्भ, मान, मद, ईर्ष्या आदि) किसी न किसी रूप में उपजते हैं। यह श्लोक विस्तृत सूची नहीं, बल्कि उस सूची के <b>तीन सबसे मौलिक स्रोतों</b> को इंगित करता है — एक व्यावहारिक संक्षिप्तीकरण।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"द्वार" (गेट) के रूपक का क्या अर्थ है — क्या इसका मतलब है इन्हें पूरी तरह टालना चाहिए, या संतुलित करना चाहिए?</div>
+        <div class="a">श्लोक स्पष्ट रूप से "त्यजेत्" (त्याग देना चाहिए) कहता है — यानी पूर्ण त्याग की बात हो रही है, संतुलन की नहीं। ध्यान दें, यह उन तीन विशिष्ट रूपों (अनियंत्रित काम, विनाशकारी क्रोध, संचयी लोभ) की बात कर रहा है, सामान्य मानवीय इच्छाओं या भावनाओं की नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"नाशनमात्मनः" (आत्मा का नाशक) — क्या इसका मतलब शाब्दिक आत्मा-विनाश है?</div>
+        <div class="a">आत्मा (शाश्वत चेतन तत्त्व) स्वयं में अविनाशी मानी जाती है (अध्याय 2.20 - "नैनं छिन्दन्ति शस्त्राणि")। यहाँ "नाशन" का अर्थ है — यह व्यक्ति को अपनी उच्चतर प्रकृति, आत्म-ज्ञान और आध्यात्मिक विकास की क्षमता से दूर कर देता है, यानी व्यावहारिक/अनुभवात्मक स्तर पर आत्म-हानि, शाब्दिक आत्मा-विनाश नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">16.21 का 16.22 से क्या संबंध है?</div>
+        <div class="a">16.21 ने बताया कि क्या त्यागना है (काम-क्रोध-लोभ)। 16.22 अब सकारात्मक पक्ष दिखाएगा — जो व्यक्ति इन तीनों अंधकार-द्वारों से मुक्त होकर अपने कल्याण के लिए आचरण करता है, वह श्रेयस् (परम कल्याण/मोक्ष) को प्राप्त होता है। नकारात्मक चेतावनी के बाद सकारात्मक आश्वासन — यही गीता की संतुलित शैली है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>16.21 गीता के सबसे प्रसिद्ध, स्वतंत्र रूप से उद्धृत किए जाने वाले श्लोकों में से एक है — अक्सर यह श्लोक अकेले ही, पूरे अध्याय के संदर्भ के बिना भी, नैतिक शिक्षा के रूप में उद्धृत होता है। इसकी लोकप्रियता का कारण इसकी असाधारण संक्षिप्तता और स्पष्टता है।</p>
+        <p>यह श्लोक अध्याय 3.37 ("काम एष क्रोध एष रजोगुणसमुद्भवः") से गहराई से जुड़ता है, जहाँ काम-क्रोध को रजोगुण से उत्पन्न, ज्ञान का नाश करने वाला "महाशन" (सर्वभक्षी) शत्रु कहा गया है। 16.21 उसी अंतर्दृष्टि को लोभ जोड़कर पूर्ण करता है।</p>
+        <div class="callout"><b>Chapter-arc अपडेट:</b> 16.1-6 (दैवी सूची व विभाजन) → 16.7-20 (आसुरी विस्तृत वर्णन, अब पूर्ण) → 16.21-24 (संक्षिप्त सार-सूत्र, यहाँ से शुरू) → अध्याय का समापन।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — चौदह श्लोकों का तीन शब्दों में संकुचन</h3>
+        <svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <rect x="40" y="30" width="620" height="60" rx="9" fill="rgba(140,74,32,0.09)" stroke="rgba(140,74,32,0.35)" stroke-width="1.1"/>
+          <text x="350" y="55" text-anchor="middle" fill="#e0a060" font-size="11.5" font-family="Tiro Devanagari Hindi, serif">16.7-20 — चौदह श्लोकों का विस्तृत आसुरी-वर्णन</text>
+          <text x="350" y="75" text-anchor="middle" fill="#cfc3a8" font-size="9.5">दर्शन, मनोविज्ञान, एकालाप, पतन, द्वेष, पुनर्जन्म</text>
+
+          <line x1="350" y1="90" x2="350" y2="140" stroke="rgba(140,74,32,0.5)" stroke-width="1.4" stroke-dasharray="4,3"/>
+          <text x="380" y="118" fill="#e0a060" font-size="9" font-style="italic">संकुचन</text>
+
+          <rect x="200" y="140" width="300" height="56" rx="9" fill="rgba(140,74,32,0.18)" stroke="rgba(140,74,32,0.6)" stroke-width="1.4"/>
+          <text x="350" y="164" text-anchor="middle" fill="#f3e9d2" font-size="13" font-family="Tiro Devanagari Hindi, serif">16.21 — तीन शब्द</text>
+          <text x="350" y="184" text-anchor="middle" fill="#cfc3a8" font-size="10">काम, क्रोध, लोभ</text>
+
+          <line x1="270" y1="196" x2="150" y2="250" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <rect x="60" y="250" width="180" height="46" rx="8" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.4)" stroke-width="1"/>
+          <text x="150" y="270" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">काम — 16.10</text>
+          <text x="150" y="285" text-anchor="middle" fill="#cfc3a8" font-size="9">दुष्पूर वासना</text>
+
+          <line x1="350" y1="196" x2="350" y2="250" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <rect x="260" y="250" width="180" height="46" rx="8" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.4)" stroke-width="1"/>
+          <text x="350" y="270" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">क्रोध — 16.12</text>
+          <text x="350" y="285" text-anchor="middle" fill="#cfc3a8" font-size="9">इच्छा बाधित होने पर</text>
+
+          <line x1="430" y1="196" x2="550" y2="250" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <rect x="460" y="250" width="180" height="46" rx="8" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.4)" stroke-width="1"/>
+          <text x="550" y="270" text-anchor="middle" fill="#e0a060" font-size="10" font-family="Tiro Devanagari Hindi, serif">लोभ — 16.12</text>
+          <text x="550" y="285" text-anchor="middle" fill="#cfc3a8" font-size="9">अनुचित अर्थ-संचय</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — काम-क्रोध-लोभ की अन्य परंपराओं में समानता</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>16.21 से समानता</th><th>अंतर</th></tr>
+          <tr><td>बौद्ध धर्म — त्रिविष (Three Poisons: राग, द्वेष, मोह)</td><td>तीन मूल मानसिक विषों की अवधारणा जो दुःख का कारण बनते हैं</td><td>बौद्ध त्रिविष में "मोह" (अज्ञान) तीसरा है; गीता में "लोभ" (लालच) — फोकस थोड़ा भिन्न</td></tr>
+          <tr><td>ईसाई परंपरा — सप्त घातक पाप (Wrath, Greed, Lust सहित)</td><td>क्रोध, लोभ और वासना — तीनों ईसाई परंपरा में भी घातक पाप माने गए हैं</td><td>ईसाई सूची सात है, गीता की सूची केवल तीन मौलिक स्रोतों तक सीमित</td></tr>
+          <tr><td>गीता स्वयं — अध्याय 3.37 (काम-क्रोध महाशन शत्रु)</td><td>काम-क्रोध को ज्ञान-नाशक शत्रु के रूप में पहचानना</td><td>3.37 केवल काम-क्रोध की बात करता है; 16.21 लोभ जोड़कर त्रयी पूर्ण करता है</td></tr>
+          <tr><td>आधुनिक मनोविज्ञान — क्रोध-प्रबंधन व Impulse Control</td><td>अनियंत्रित इच्छा, क्रोध और संचय-प्रवृत्ति को हानिकारक व्यवहार का मूल मानना</td><td>मनोविज्ञान इन्हें व्यवहारिक-तंत्रिका प्रक्रिया मानता है; गीता इन्हें आध्यात्मिक बाधा मानती है</td></tr>
+        </table>
+        <div class="callout"><b>साझा सूत्र:</b> लगभग हर महान नैतिक-आध्यात्मिक परंपरा किसी न किसी रूप में अनियंत्रित इच्छा, क्रोध और लालच को मानव-दुख के मूल स्रोतों में गिनती है — यह गीता का अनोखा योगदान नहीं, बल्कि एक सार्वभौमिक अंतर्दृष्टि है, जिसे गीता विशेष स्पष्टता से प्रस्तुत करती है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग — त्रिविध द्वार की दैनिक जाँच</h3>
+        <div class="callout-rajas"><b>तीन-प्रश्न रात्रि-समीक्षा (16.21 का व्यावहारिक रूप):</b> हर रात सोने से पहले पूछें — (1) आज किस निर्णय में अतृप्त इच्छा (काम) ने मुझे चलाया? (2) आज मैं कब क्रोधित हुआ, और उसका मूल कारण क्या था? (3) क्या मैंने आज कुछ ज़रूरत से ज़्यादा पकड़े रखा या बाँटने में हिचकिचाया (लोभ)?</div>
+        <p><b>अभ्यास — "एक द्वार पर सप्ताह भर ध्यान":</b> तीनों में से जो द्वार आपको सबसे अधिक सक्रिय लगे, उस पर एक पूरा सप्ताह विशेष ध्यान दें — हर बार जब वह उभरे, बस नोटिस करें, बिना निर्णय के। जागरूकता ही परिवर्तन का पहला चरण है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> इन तीनों को अविद्या के प्रत्यक्ष परिणाम मानते हैं — जब तक आत्म-ज्ञान नहीं होता, ये तीनों स्वाभाविक रूप से मन में उठते रहेंगे। इनका त्याग विवेक और वैराग्य के अभ्यास से ही संभव है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> इन्हें भगवद्-भक्ति के सबसे बड़े शत्रु मानते हैं — जहाँ काम, क्रोध और लोभ का वास हो, वहाँ हृदय भगवान के प्रति समर्पित नहीं हो सकता। भक्ति का अभ्यास स्वाभाविक रूप से इन तीनों को कमज़ोर करता है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> गीता रहस्य में इस श्लोक को कर्मयोग के व्यावहारिक आधार-सूत्र के रूप में देखते हैं — निष्काम कर्म का अभ्यास स्वाभाविक रूप से इन तीनों को कमज़ोर करता है, क्योंकि फल की आसक्ति (जिससे ये तीनों उपजते हैं) ही निष्काम भाव से समाप्त हो जाती है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत — यह श्लोक केवल निषेध नहीं, बल्कि एक स्पष्ट, व्यावहारिक साधना-मार्ग की ओर इशारा करता है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">त्रिविधं नरकस्येदं द्वारम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>यह तीन प्रकार का नरक-द्वार</b>तीन विशिष्ट, पहचानने योग्य प्रवेश-बिंदु</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">नाशनमात्मनः</span></div>
+            <div class="flashcard-face flashcard-back"><b>आत्मा का नाशक</b>आंतरिक, आध्यात्मिक हानि — बाहरी दंड नहीं</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">काम</span></div>
+            <div class="flashcard-face flashcard-back"><b>अतृप्त वासना</b>16.10 का दुष्पूर काम — पहला द्वार</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">क्रोध</span></div>
+            <div class="flashcard-face flashcard-back"><b>क्रोध</b>इच्छा बाधित होने पर — दूसरा द्वार</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">लोभ</span></div>
+            <div class="flashcard-face flashcard-back"><b>लोभ/लालच</b>संचयी, कभी न रुकने वाली चाह — तीसरा द्वार</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">तस्मादेतत्त्रयं त्यजेत्</span></div>
+            <div class="flashcard-face flashcard-back"><b>इसलिए इन तीनों को त्यागे</b>स्पष्ट, व्यावहारिक कर्तव्य-निर्देश</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">त्रिविधम्</td><td>त्रि+विध</td><td>नपुंसक प्रथमा एकवचन</td><td>तीन प्रकार का — विशेषण</td></tr>
+          <tr><td class="sa">नरकस्य</td><td>नरक</td><td>पुल्लिंग षष्ठी एकवचन</td><td>नरक का — सम्बन्ध</td></tr>
+          <tr><td class="sa">द्वारम्</td><td>द्वृ+अच्</td><td>नपुंसक प्रथमा एकवचन</td><td>द्वार/दरवाज़ा — कर्ता</td></tr>
+          <tr><td class="sa">नाशनम्</td><td>नश्+णिच्+ल्युट्</td><td>नपुंसक प्रथमा एकवचन</td><td>नाश करने वाला — विशेषण</td></tr>
+          <tr><td class="sa">आत्मनः</td><td>आत्मन्</td><td>पुल्लिंग षष्ठी एकवचन</td><td>आत्मा का — सम्बन्ध</td></tr>
+          <tr><td class="sa">कामः, क्रोधः, लोभः</td><td>काम, क्रोध, लोभ</td><td>पुल्लिंग प्रथमा एकवचन</td><td>इच्छा, क्रोध, लालच — कर्ता (तीनों)</td></tr>
+          <tr><td class="sa">तस्मात्</td><td>तद्</td><td>पञ्चमी एकवचन</td><td>इसलिए — हेतु</td></tr>
+          <tr><td class="sa">त्रयम्</td><td>त्रि</td><td>नपुंसक द्वितीया एकवचन</td><td>तीनों को — कर्म</td></tr>
+          <tr><td class="sa">त्यजेत्</td><td>त्यज्+विधिलिङ्</td><td>प्रथम पुरुष एकवचन</td><td>त्याग देना चाहिए</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">त्रिविधं नरकस्येदं द्वारं नाशनमात्मनः।<br>कामः क्रोधस्तथा लोभस्तस्मादेतत्त्रयं त्यजेत्।।</div>
+          <div class="cheat-translit">tri-vidhaṁ narakasyedaṁ dvāraṁ nāśanam ātmanaḥ, kāmaḥ krodhas tathā lobhas tasmād etat trayaṁ tyajet</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>त्रिविधं नरक-द्वारम्</b> तीन गेट, आत्मा के नाशक</span>
+            <span class="cheat-chip"><b>काम</b> अतृप्त वासना</span>
+            <span class="cheat-chip"><b>क्रोध</b> इच्छा बाधित होने पर</span>
+            <span class="cheat-chip"><b>लोभ</b> संचयी, अंतहीन चाह</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: चौदह श्लोकों (16.7-20) का पूरा आसुरी-वर्णन यहाँ तीन शब्दों में समेटा जाता है — काम, क्रोध, लोभ ही आत्म-विनाश के तीन मूल द्वार हैं। गीता का प्रसिद्धतम, सबसे व्यावहारिक सूत्रों में से एक — इन्हें त्यागना ही समाधान है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('त्रिविधं नरकस्येदं द्वारं नाशनमात्मनः। कामः क्रोधस्तथा लोभस्तस्मादेतत्त्रयं त्यजेत्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('त्रिविधं नरकस्येदं द्वारं नाशनमात्मनः। कामः क्रोधस्तथा लोभस्तस्मादेतत्त्रयं त्यजेत्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('यह तीन प्रकार का नरक-द्वार, आत्मा का नाशक है, काम, क्रोध और लोभ। इसलिए इन तीनों को त्याग देना चाहिए।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">त्रि</span><span class="syll">वि</span><span class="syll">धं</span><span class="syll">न</span><span class="syll">र</span><span class="syll">क</span><span class="syll">स्ये</span><span class="syll">दं</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">द्वा</span><span class="syll">रं</span><span class="syll">ना</span><span class="syll">श</span><span class="syll">न</span><span class="syll">मा</span><span class="syll">त्म</span><span class="syll">नः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">का</span><span class="syll">मः</span><span class="syll">क्रो</span><span class="syll">ध</span><span class="syll">स्त</span><span class="syll">था</span><span class="syll">लो</span><span class="syll">भ</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">स्त</span><span class="syll">स्मा</span><span class="syll">दे</span><span class="syll">त</span><span class="syll">त्त्र</span><span class="syll">यं</span><span class="syll">त्य</span><span class="syll">जेत्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('त्रिविधं नरकस्येदं द्वारं नाशनमात्मनः कामः क्रोधस्तथा लोभस्तस्मादेतत्त्रयं त्यजेत्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "काम, क्रोध, लोभ" — इन तीन शब्दों को कई बार दोहराएँ, जब तक ये सहज याद न हो जाएँ। यह श्लोक जीवनभर के लिए एक साधारण, शक्तिशाली आत्म-जाँच उपकरण है।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">14 श्लोक बनाम 3 शब्द</button>
+      <button class="tab-btn" data-tab="e2">त्रिविध नरक-द्वार</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 16.7-20 (14 श्लोक) बनाम 16.21 (3 शब्द) — महान संकुचन</h3>
+        <p class="subnote">विस्तृत विश्लेषण से व्यावहारिक सार तक</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 16.7-20 — विस्तार</div>
+            <div class="contrast-sa">चौदह श्लोक</div>
+            <p><b>पूर्ण, गहन विश्लेषण।</b><br>याद रखना कठिन, पर समझ गहरी।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 16.21 — सार</div>
+            <div class="contrast-sa">काम, क्रोध, लोभ</div>
+            <p><b>तीन शब्द, तुरंत लागू।</b><br>याद रखना आसान, रोज़ उपयोगी।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> गीता की शिक्षण-शैली गहराई और व्यावहारिकता दोनों देती है — पहले पूरी समझ, फिर एक सरल सूत्र जिसे रोज़मर्रा में लागू किया जा सके।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 त्रिविध नरक-द्वार — तीन गेट</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">🚪 काम</div>
+            <div class="guna-sa">अतृप्त वासना</div>
+            <div class="guna-char">कभी न भरने वाली इच्छा — 16.10 का दुष्पूर काम।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">🚪 क्रोध</div>
+            <div class="guna-sa">इच्छा-बाधा की प्रतिक्रिया</div>
+            <div class="guna-char">काम के अवरुद्ध होते ही स्वाभाविक रूप से उठता है।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">🚪 लोभ</div>
+            <div class="guna-sa">संचयी, अंतहीन चाह</div>
+            <div class="guna-char">जो है, वह काफी नहीं — सदा और चाहिए।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> तीनों द्वार आपस में जुड़े हैं — काम अवरुद्ध हो तो क्रोध बनता है, और लोभ काम का ही एक संचयी, स्थायी रूप है। एक द्वार को पहचानना अक्सर दूसरे दो की पहचान में भी मदद करता है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 16 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १-६<br>दैवी सूची व विभाजन</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ७-२०<br>आसुरी विस्तृत वर्णन (पूर्ण)</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. २१<br>सार-सूत्र ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २२<br>मुक्ति व श्रेयस्</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २३-२४<br>शास्त्र-प्रमाण व निष्कर्ष</div></div>
+        </div>
+        <div class="callout"><b>अगला (16.22):</b> जो व्यक्ति इन तीनों अंधकार-द्वारों से मुक्त होकर अपने कल्याण के लिए आचरण करता है, हे कौन्तेय, वह परम गति (श्रेयस्) को प्राप्त होता है — नकारात्मक चेतावनी के बाद सकारात्मक आश्वासन।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.२२) — ☰ नेविगेशन — इन तीनों से मुक्त व्यक्ति की श्रेयस्-प्राप्ति</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"16.21 के अनुसार नरक के कितने द्वार बताए गए हैं?",options:["एक", "दो", "तीन (काम, क्रोध, लोभ)", "पाँच"],correct:2},
+    {q:"'नाशनमात्मनः' का क्या अर्थ है?",options:["धन का नाशक","आत्मा/स्व का नाशक — आंतरिक हानि","शरीर का नाशक","समाज का नाशक"],correct:1},
+    {q:"16.21 चौदह श्लोकों (16.7-20) के विस्तृत वर्णन को किस रूप में समेटता है?",options:["एक लंबी सूची में","तीन संक्षिप्त, व्यावहारिक शब्दों में","एक कहानी में","इसका कोई संबंध नहीं"],correct:1},
+    {q:"अध्याय 3.37 में गीता किस जोड़ी को 'महाशन' (सर्वभक्षी) शत्रु कहती है, जो 16.21 से जुड़ती है?",options:["दान-यज्ञ","काम-क्रोध","सत्य-असत्य","ज्ञान-अज्ञान"],correct:1},
+    {q:"16.21 का व्यावहारिक निष्कर्ष ('त्यजेत्') क्या सुझाता है?",options:["इन तीनों को संतुलित करना","इन तीनों को पूरी तरह त्याग देना","इन्हें अनदेखा करना","इनके बारे में सोचना बंद करना"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "16.7-20 में चौदह श्लोकों का विस्तृत आसुरी-वर्णन पूरा हुआ। अब 16.21 इसे एक अविस्मरणीय सूत्र में समेटता है।",
+    "'त्रिविधं नरकस्येदं द्वारम्' — यह तीन प्रकार का नरक-द्वार है। नरक कोई अस्पष्ट अवस्था नहीं, तीन स्पष्ट प्रवेश-बिंदु हैं।",
+    "'नाशनमात्मनः' — यह आत्मा का नाशक है। हानि आंतरिक है, बाहरी दंड नहीं।",
+    "'कामः क्रोधस्तथा लोभः' — काम, क्रोध, और लोभ। गीता के तीन सबसे प्रसिद्ध शब्द, जो आपस में एक श्रृंखला बनाते हैं।",
+    "'तस्मादेतत्त्रयं त्यजेत्' — इसलिए इन तीनों को त्याग देना चाहिए। यह स्पष्ट, व्यावहारिक निर्देश है, केवल विश्लेषण नहीं।",
+    "यह गीता के सबसे प्रसिद्ध, स्वतंत्र रूप से उद्धृत श्लोकों में से एक है। आगे 16.22 में इन्हें त्यागने का सकारात्मक फल — श्रेयस्-प्राप्ति — बताया जाएगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
