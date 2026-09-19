@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 16.8 — आसुरी दृष्टिकोण: जगत को अनीश्वर मानना</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 16 · श्लोक 8 / 24</span>
+    <div class="progress-track"><div class="progress-fill" style="width:33.33%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सोलह</div>
+    <div class="chapter-title">अध्याय १६ — दैवासुरसम्पद्विभागयोग (दैवी-आसुरी सम्पदा का विभाजन)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १६.८</div>
+    </div>
+    <div class="guna-badge">🌑 आसुरी वर्णन श्लोक २/१४ — भौतिकवादी दृष्टिकोण</div>
+    <div class="shloka">
+      असत्यमप्रतिष्ठं ते जगदाहुरनीश्वरम्।<br>
+      अपरस्परसम्भूतं किमन्यत्कामहैतुकम्।।
+    </div>
+    <div class="translit">
+      asatyam apratiṣṭhaṁ te jagad āhur anīśvaram,<br>
+      aparaspara-sambhūtaṁ kim anyat kāma-haitukam
+    </div>
+    <div class="gist">
+      आसुरी लोग कहते हैं — यह जगत <b>असत्य</b> (अवास्तविक) है, <b>अप्रतिष्ठ</b> (बिना आधार के) है, <b>अनीश्वर</b> (बिना नियंता के) है, कारण-परंपरा से रहित है — और इसका एकमात्र कारण <b>काम (वासना)</b> है, और कुछ नहीं।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — 16.7 से आगे</h3>
+      <p>16.7 ने आसुरी स्वभाव की <b>जड़</b> बताई — प्रवृत्ति-निवृत्ति का अज्ञान, और शौच-आचार-सत्य का अभाव। अब सवाल उठता है — यह अज्ञान आता कहाँ से है? 16.8 इसका उत्तर देता है: आसुरी लोगों के पास एक पूरा <b>वैकल्पिक विश्व-दृष्टिकोण (worldview)</b> होता है जो इस अज्ञान को "तर्कसंगत" ठहराता है।</p>
+      <p>यह श्लोक चार निषेधों की श्रृंखला है — जगत असत्य, अप्रतिष्ठ, अनीश्वर, और अकारण-परंपरा। अंत में एक ही सकारात्मक दावा — "काम-हैतुकम्" (केवल वासना ही कारण है)। यह 16.7 के व्यावहारिक अभाव (शौच-आचार-सत्य नहीं) का <b>दार्शनिक आधार</b> प्रस्तुत करता है।</p>
+      <div class="contrast-row">
+        <div class="contrast-card sat">
+          <div class="contrast-label">🌿 16.7 — व्यावहारिक लक्षण</div>
+          <div class="contrast-sa">शौच-आचार-सत्य का अभाव</div>
+          <p>आसुरी व्यक्ति <b>क्या करता है</b> — आचरण का वर्णन।</p>
+        </div>
+        <div class="contrast-card raj">
+          <div class="contrast-label">🔥 16.8 — दार्शनिक आधार</div>
+          <div class="contrast-sa">असत्यम् अप्रतिष्ठम् अनीश्वरम्</div>
+          <p>आसुरी व्यक्ति <b>क्या मानता है</b> — विश्वास का वर्णन।</p>
+        </div>
+      </div>
+      <div class="callout-rajas"><b>महत्त्वपूर्ण संकेत:</b> गीता की तर्क-संरचना ध्यान देने योग्य है — पहले लक्षण (16.7), फिर उस लक्षण के पीछे की मान्यता (16.8), और आगे (16.9-20) इस मान्यता से उत्पन्न व्यवहार व परिणाम। यह क्रम — <b>विश्वास → आचरण → परिणाम</b> — दिखाता है कि गलत दर्शन कैसे गलत जीवन में बदलता है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">असत्यम्</span><span class="word-tr">asatyam</span></div>
+          <div class="word-meaning">असत्य/अवास्तविक — नपुंसक द्वितीया एकवचन</div>
+          <div class="word-eng"><b>EN:</b> unreal, untrue</div>
+          <div class="word-deep">अ+सत्य — सत्य का निषेध। यहाँ "जगत" के लिए विशेषण — आसुरी दृष्टि में संसार का कोई वास्तविक/स्थायी अस्तित्व नहीं, केवल संयोगमात्र है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अप्रतिष्ठम्</span><span class="word-tr">apratiṣṭham</span></div>
+          <div class="word-meaning">बिना आधार/नींव के</div>
+          <div class="word-eng"><b>EN:</b> without foundation or support</div>
+          <div class="word-deep">अ+प्रति+स्था (खड़ा होना) — जिसका कोई ठोस आधार न हो। यह "असत्यम्" को और गहरा करता है — न केवल अवास्तविक, बल्कि टिकने लायक भी नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">ते जगत् आहुः</span><span class="word-tr">te jagad āhuḥ</span></div>
+          <div class="word-meaning">वे (आसुरी लोग) जगत को कहते हैं — लिट् लकार</div>
+          <div class="word-eng"><b>EN:</b> they say/declare the world [to be]</div>
+          <div class="word-deep">आहुः = √अह् धातु लिट् लकार — "कहते हैं/घोषित करते हैं।" यह क्रिया इंगित करती है कि यह कोई आकस्मिक विचार नहीं, बल्कि एक घोषित, प्रचारित मान्यता है।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अनीश्वरम्</span><span class="word-tr">anīśvaram</span></div>
+          <div class="word-meaning">बिना नियंता/ईश्वर के</div>
+          <div class="word-eng"><b>EN:</b> without a controller/God</div>
+          <div class="word-deep">अ+ईश्वर — कोई सर्वोच्च नियंता नहीं, कोई जवाबदेही नहीं। यह शब्द आसुरी दर्शन की जड़ है — यदि कोई नियंता नहीं, तो कर्मफल का कोई हिसाब नहीं, इसलिए कोई नैतिक सीमा नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अपरस्परसम्भूतम्</span><span class="word-tr">aparaspara-sambhūtam</span></div>
+          <div class="word-meaning">परस्पर कारण-परंपरा से उत्पन्न नहीं</div>
+          <div class="word-eng"><b>EN:</b> not arising from mutual/orderly causation</div>
+          <div class="word-deep">अ+परस्पर+सम्भूत — भाष्यकारों में दो व्याख्याएँ: (1) कार्य-कारण की व्यवस्थित परंपरा (जैसे कर्म-सिद्धांत) से इनकार, या (2) जगत केवल स्त्री-पुरुष संयोग मात्र से उत्पन्न, इससे अधिक कोई गहरा प्रयोजन नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">किमन्यत्कामहैतुकम्</span><span class="word-tr">kim anyat kāma-haitukam</span></div>
+          <div class="word-meaning">और क्या, केवल काम (वासना) ही कारण है</div>
+          <div class="word-eng"><b>EN:</b> what else, but caused by desire alone</div>
+          <div class="word-deep">किम् अन्यत् = "और क्या (हो सकता है)?" — व्यंग्यात्मक प्रश्न। काम-हैतुकम् = काम (वासना) ही हेतु/कारण। पूरे श्लोक का निष्कर्ष — यदि न सत्य, न आधार, न नियंता, तो बचा केवल वासना — यही सृष्टि और जीवन का इंजन है, इस दृष्टि में।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        They say the world is unreal, without a foundation, without a God, not brought about by orderly causation — what else, then, but caused by desire alone?
+      </div>
+      <p>16.8 एक सम्पूर्ण भौतिकवादी घोषणापत्र (manifesto) है — चार क्रमिक निषेधों में। पहले जगत की <b>वास्तविकता</b> नकारी जाती है (असत्यम्), फिर उसका <b>आधार</b> (अप्रतिष्ठम्), फिर उसका <b>नियंता</b> (अनीश्वरम्), और अंत में उसकी <b>व्यवस्थित उत्पत्ति</b> (अपरस्परसम्भूतम्)। जब चारों नकार दिए जाएँ, तो केवल एक व्याख्या बचती है — सब कुछ केवल वासना (काम) का खेल है।</p>
+      <p>यह तर्क-श्रृंखला ख़तरनाक इसलिए है क्योंकि यह एक बंद वृत्त (closed loop) बनाती है — अगर कोई नियंता नहीं (अनीश्वरम्), तो कोई कर्मफल नहीं; अगर कोई कर्मफल नहीं, तो कोई नैतिक सीमा नहीं; अगर कोई नैतिक सीमा नहीं, तो जो चाहो करो (काम-हैतुकम्)। यह पूरा दर्शन असीमित इच्छा-पूर्ति को "तार्किक" ठहराने के लिए बनाया गया प्रतीत होता है।</p>
+      <div class="callout-rajas"><b>ध्यान देने योग्य बात:</b> गीता यहाँ सामान्य नास्तिकता या दार्शनिक संदेह पर आक्षेप नहीं कर रही — बल्कि उस विशिष्ट मानसिकता पर, जो "कोई जवाबदेही नहीं" को "इसलिए कुछ भी उचित है" में बदल देती है। समस्या अविश्वास नहीं, अविश्वास से निकलने वाली <b>नैतिक शून्यता</b> है।</div>
+      <p>व्यावहारिक रूप से, यह श्लोक हमें सोचने पर मजबूर करता है — "क्या मैं कभी अपने निर्णयों को इसलिए ढीला छोड़ देता हूँ क्योंकि 'कोई देख नहीं रहा' या 'कोई परिणाम नहीं होगा'?" यही 16.8 की मानसिकता का बीज-रूप है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — "कोई देख नहीं रहा" वाली सोच:</b> जब कोई कर्मचारी सोचता है "audit कभी नहीं होगा, इसलिए stock में हेरफेर चलता रहेगा" — यह "अनीश्वरम्" (कोई नियंता नहीं) मानसिकता का व्यावहारिक रूप है। जवाबदेही की अनुपस्थिति की कल्पना ही अनुशासन तोड़ देती है।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — केवल तात्कालिक लाभ (काम-हैतुकम्):</b> "long-term relationship, trust, reputation — यह सब बातें हैं; बस अभी profit होना चाहिए" — यह सोच जगत को "अपरस्परसम्भूतम्" मान लेती है, यानी कारण-परिणाम की कोई श्रृंखला नहीं मानती। पर वास्तव में, एक बार trust टूटने पर उसका असर सालों तक दिखता है — कारण-परंपरा असली है, चाहे कोई माने या न माने।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — रिश्तों को केवल सुविधा मानना:</b> एक व्यापारिक साझेदार जो रिश्तों को कोई गहरा दायित्व (अप्रतिष्ठम् — बिना नींव के) नहीं मानता, बल्कि केवल वर्तमान लाभ तक सीमित रखता है — वह partnership के मुश्किल समय में गायब हो जाता है, क्योंकि उसकी नींव में कोई commitment था ही नहीं।
+      </div>
+      <div class="callout"><b>ध्यान रखें:</b> MY POWER जैसे व्यवसाय में दीर्घकालिक विकास ठीक इसके उलट मान्यता से आता है — "कर्म-परिणाम असली है, आज का ईमानदार व्यवहार कल के भरोसे में बदलता है।" यही 16.8 की मानसिकता का प्रतिकार है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">क्या यह श्लोक सामान्य नास्तिकता या वैज्ञानिक भौतिकवाद की निंदा कर रहा है?</div>
+        <div class="a">भाष्यकार सामान्यतः इसे व्यापक अर्थ में लेते हैं — यह विशेष रूप से उस मानसिकता को लक्षित करता है जो "कोई जवाबदेही नहीं" से "इसलिए कुछ भी उचित है" निकालती है। चिंता का विषय अविश्वास नहीं, बल्कि उससे उपजी नैतिक शून्यता और असीमित वासना-पूर्ति है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">"अपरस्परसम्भूतम्" का सही अर्थ क्या है — कारण-परंपरा से इनकार या स्त्री-पुरुष संयोग?</div>
+        <div class="a">भाष्यकारों में मतभेद है। शंकराचार्य-परंपरा इसे कार्य-कारण नियम (जैसे कर्म-सिद्धांत) के निषेध के रूप में पढ़ती है। कुछ अन्य व्याख्याकार इसे "जगत केवल स्त्री-पुरुष के संयोग मात्र से उत्पन्न, इससे अधिक कोई दिव्य प्रयोजन नहीं" के रूप में पढ़ते हैं। दोनों व्याख्याएँ अंततः एक ही निष्कर्ष तक पहुँचती हैं — जगत में कोई गहरा, सुनियोजित उद्देश्य नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">16.8 का 16.9-10 से क्या संबंध है?</div>
+        <div class="a">16.8 दार्शनिक आधार (विश्वास) बताता है; 16.9 दिखाएगा कि इस विश्वास को पकड़कर आसुरी लोग "क्रूर कर्मों" में लगते हैं, जगत के विनाश के लिए उत्पन्न हुए मानो। 16.10 आगे "दुष्पूर काम" (अतृप्त वासना) का वर्णन करेगा — यानी विश्वास से आचरण की ओर स्पष्ट प्रगति।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या यह भारतीय दर्शन के किसी वास्तविक सम्प्रदाय से मेल खाता है?</div>
+        <div class="a">हाँ, भारतीय दर्शन में चार्वाक/लोकायत सम्प्रदाय (नास्तिक दर्शन) से समानताएँ देखी जा सकती हैं, जो परलोक, अदृष्ट कारण और वेद-प्रामाण्य को नकारता है। पर गीता यहाँ किसी विशिष्ट सम्प्रदाय का नाम नहीं लेती — यह एक सार्वभौमिक मानसिक प्रवृत्ति का वर्णन है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>16.8 अध्याय 16 में पहला श्लोक है जो आसुरी <b>दर्शन</b> (सिद्धांत) प्रस्तुत करता है, न कि केवल लक्षण। यह श्लोक अगले तीन (16.9-11) के लिए आधार बनाता है, जहाँ यह दर्शन ठोस दुष्कर्मों में बदलता दिखाया जाएगा।</p>
+        <p>यह अध्याय 18.20-22 (ज्ञान के तीन प्रकार) से भी परोक्ष रूप से जुड़ा है — वहाँ तामसिक ज्ञान को "एक तुच्छ कार्य को ही सब कुछ मानना, अतत्त्वार्थ, युक्तिहीन" बताया गया। 16.8 की मान्यता भी उसी दिशा में है — बिना ठोस आधार के।</p>
+        <div class="callout"><b>Chapter-arc अपडेट:</b> 16.7 (आचरण-अभाव) → 16.8 (दार्शनिक जड़) → 16.9-20 (इस दर्शन से उपजे व्यवहार और अंत) → 16.21-24 (निष्कर्ष व निर्देश)।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — चार निषेधों की श्रृंखला</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="350" cy="45" rx="120" ry="32" fill="rgba(140,74,32,0.15)" stroke="rgba(140,74,32,0.5)" stroke-width="1.5"/>
+          <text x="350" y="40" text-anchor="middle" fill="#e0a060" font-size="12" font-family="Tiro Devanagari Hindi, serif">आसुरी विश्व-दृष्टिकोण</text>
+          <text x="350" y="57" text-anchor="middle" fill="#cfc3a8" font-size="10">16.8</text>
+
+          <line x1="350" y1="77" x2="150" y2="140" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <rect x="60" y="140" width="180" height="44" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="150" y="160" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">असत्यम् अप्रतिष्ठम्</text>
+          <text x="150" y="176" text-anchor="middle" fill="#cfc3a8" font-size="9.5">जगत अवास्तविक, आधारहीन</text>
+
+          <line x1="350" y1="77" x2="550" y2="140" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <rect x="460" y="140" width="180" height="44" rx="8" fill="rgba(140,74,32,0.08)" stroke="rgba(140,74,32,0.35)" stroke-width="1"/>
+          <text x="550" y="160" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">अनीश्वरम्</text>
+          <text x="550" y="176" text-anchor="middle" fill="#cfc3a8" font-size="9.5">कोई नियंता नहीं</text>
+
+          <line x1="150" y1="184" x2="250" y2="240" stroke="rgba(140,74,32,0.35)" stroke-width="1.1"/>
+          <line x1="550" y1="184" x2="450" y2="240" stroke="rgba(140,74,32,0.35)" stroke-width="1.1"/>
+          <rect x="230" y="240" width="240" height="46" rx="8" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.4)" stroke-width="1.2"/>
+          <text x="350" y="260" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">अपरस्परसम्भूतम्</text>
+          <text x="350" y="277" text-anchor="middle" fill="#cfc3a8" font-size="9.5">कारण-परंपरा से इनकार</text>
+
+          <line x1="350" y1="286" x2="350" y2="330" stroke="rgba(140,74,32,0.4)" stroke-width="1.3" stroke-dasharray="4,3"/>
+          <rect x="240" y="330" width="220" height="52" rx="8" fill="rgba(140,74,32,0.15)" stroke="rgba(140,74,32,0.6)" stroke-width="1.4"/>
+          <text x="350" y="351" text-anchor="middle" fill="#f3e9d2" font-size="12" font-family="Tiro Devanagari Hindi, serif">काम-हैतुकम्</text>
+          <text x="350" y="369" text-anchor="middle" fill="#cfc3a8" font-size="10">एकमात्र शेष कारण: वासना</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — भौतिकवादी दर्शनों में समानता</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>16.8 से समानता</th><th>अंतर</th></tr>
+          <tr><td>चार्वाक/लोकायत (भारतीय नास्तिक दर्शन)</td><td>परलोक, अदृष्ट कारण, वेद-प्रामाण्य का निषेध</td><td>चार्वाक एक व्यवस्थित दार्शनिक तर्क-पद्धति है; गीता इसे नैतिक पतन के लक्षण के रूप में देखती है</td></tr>
+          <tr><td>पश्चिमी नियतिवाद-विरोधी भौतिकवाद (Materialism)</td><td>ब्रह्मांड में उद्देश्य/नियंता न मानना</td><td>आधुनिक भौतिकवाद नैतिकता को विज्ञान/समाज-आधारित मानता है; गीता नैतिकता को ईश्वर-आधारित मानती है</td></tr>
+          <tr><td>Hedonism (सुखवाद)</td><td>तात्कालिक इच्छा-पूर्ति को जीवन का केंद्र मानना</td><td>Epicurus जैसे सुखवादी दार्शनिक संयमित सुख की वकालत करते थे; 16.8 असीमित काम-पूर्ति की बात करता है</td></tr>
+          <tr><td>आधुनिक "नैतिक सापेक्षवाद" (moral relativism) की चरम व्याख्या</td><td>बिना बाह्य नियंता के कोई निरपेक्ष सही-गलत नहीं</td><td>दार्शनिक सापेक्षवाद स्वयं में संतुलित हो सकता है; गीता की चिंता इसके शोषण-मूलक दुरुपयोग से है</td></tr>
+        </table>
+        <div class="callout"><b>गीता की चिंता का केंद्र:</b> दार्शनिक स्थिति स्वयं नहीं, बल्कि उससे निकलने वाला व्यावहारिक निष्कर्ष — "इसलिए असीमित इच्छा-पूर्ति उचित है।" यही 16.9-10 में दिखेगा।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>आत्म-प्रश्न:</b> "क्या मैं कभी अपने निर्णय इसलिए ढीले कर देता हूँ क्योंकि लगता है 'कोई देख नहीं रहा' या 'परिणाम कभी नहीं आएगा'?" — यह 16.8 की मानसिकता की सूक्ष्म झलक हो सकती है, भले ही मैं दार्शनिक रूप से नास्तिक न होऊँ।</div>
+        <p><b>अभ्यास — "अदृश्य नियंता" का स्मरण:</b> दिन में एक बार, किसी निर्णय से पहले, यह मान लें कि परिणाम अनिवार्य रूप से लौटकर आएगा (चाहे तुरंत न दिखे)। यह अभ्यास "अनीश्वरम्" की मानसिकता के विपरीत — जवाबदेही की भावना — को मज़बूत करता है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "अपरस्परसम्भूतम्" को कर्म-सिद्धांत (कार्य-कारण नियम) के निषेध के रूप में पढ़ते हैं। जो व्यक्ति कर्मफल को नहीं मानता, वह किसी भी सीमा को स्वीकार नहीं कर सकता।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "अनीश्वरम्" को केंद्र में रखते हैं — ईश्वर को नियंता न मानना ही समस्त आसुरी विचारधारा की जड़ है, क्योंकि इसी से समर्पण और भक्ति की संभावना समाप्त हो जाती है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> गीता रहस्य में तिलक इसे व्यावहारिक स्तर पर देखते हैं — जो समाज या व्यक्ति उत्तरदायित्व और कारण-परिणाम में विश्वास खो देता है, वह अंततः केवल स्वार्थ-पूर्ति में लग जाता है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत — यह श्लोक दार्शनिक बहस नहीं, बल्कि जवाबदेही के अभाव से उपजने वाले नैतिक पतन की चेतावनी है।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">असत्यम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>अवास्तविक</b>जगत की वास्तविकता का निषेध</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अप्रतिष्ठम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>बिना आधार के</b>कोई ठोस नींव नहीं</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अनीश्वरम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>बिना नियंता के</b>कोई ईश्वर/जवाबदेही नहीं — दर्शन की जड़</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अपरस्परसम्भूतम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>कारण-परंपरा से इनकार</b>कर्म-सिद्धांत या व्यवस्थित उत्पत्ति नहीं मानना</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">काम-हैतुकम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>केवल वासना ही कारण</b>श्लोक का निष्कर्ष — असीमित इच्छा-पूर्ति को न्यायसंगत ठहराना</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">ते आहुः</span></div>
+            <div class="flashcard-face flashcard-back"><b>वे कहते हैं</b>घोषित, प्रचारित मान्यता — आकस्मिक विचार नहीं</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">असत्यम्</td><td>अ+सत्य</td><td>नपुंसक द्वितीया एकवचन</td><td>अवास्तविक — विशेषण (जगत् का)</td></tr>
+          <tr><td class="sa">अप्रतिष्ठम्</td><td>अ+प्रति+स्था</td><td>नपुंसक द्वितीया एकवचन</td><td>बिना आधार के — विशेषण</td></tr>
+          <tr><td class="sa">ते</td><td>तद्</td><td>पुल्लिंग प्रथमा बहुवचन</td><td>वे (आसुरी लोग) — कर्ता</td></tr>
+          <tr><td class="sa">जगत्</td><td>गम्+क्विप्</td><td>नपुंसक द्वितीया एकवचन</td><td>संसार — कर्म</td></tr>
+          <tr><td class="sa">आहुः</td><td>√अह्</td><td>लिट् लकार प्रथम पुरुष बहुवचन</td><td>कहते हैं — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">अनीश्वरम्</td><td>अ+ईश्वर</td><td>नपुंसक द्वितीया एकवचन</td><td>बिना नियंता के — विशेषण</td></tr>
+          <tr><td class="sa">अपरस्परसम्भूतम्</td><td>अ+परस्पर+सम्भू</td><td>नपुंसक द्वितीया एकवचन (समास)</td><td>परस्पर कारण-परंपरा से उत्पन्न नहीं</td></tr>
+          <tr><td class="sa">काम-हैतुकम्</td><td>काम+हेतु+ठक्</td><td>नपुंसक प्रथमा एकवचन</td><td>वासना ही जिसका कारण है</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">असत्यमप्रतिष्ठं ते जगदाहुरनीश्वरम्।<br>अपरस्परसम्भूतं किमन्यत्कामहैतुकम्।।</div>
+          <div class="cheat-translit">asatyam apratiṣṭhaṁ te jagad āhur anīśvaram, aparaspara-sambhūtaṁ kim anyat kāma-haitukam</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>असत्यम् अप्रतिष्ठम्</b> जगत अवास्तविक, आधारहीन</span>
+            <span class="cheat-chip"><b>अनीश्वरम्</b> कोई नियंता नहीं</span>
+            <span class="cheat-chip"><b>अपरस्परसम्भूतम्</b> कारण-परंपरा से इनकार</span>
+            <span class="cheat-chip"><b>काम-हैतुकम्</b> केवल वासना ही कारण</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: आसुरी दर्शन चार निषेधों से बनता है — सत्य, आधार, नियंता, और कारण-परंपरा — इनके अभाव में केवल वासना शेष बचती है, जो असीमित इच्छा-पूर्ति को "न्यायसंगत" ठहराने का आधार बन जाती है।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('असत्यमप्रतिष्ठं ते जगदाहुरनीश्वरम्। अपरस्परसम्भूतं किमन्यत्कामहैतुकम्।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('असत्यमप्रतिष्ठं ते जगदाहुरनीश्वरम्। अपरस्परसम्भूतं किमन्यत्कामहैतुकम्।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('आसुरी लोग कहते हैं कि यह जगत असत्य है, बिना आधार के है, बिना नियंता के है, और इसका कारण केवल वासना है।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">स</span><span class="syll">त्य</span><span class="syll">म</span><span class="syll">प्र</span><span class="syll">ति</span><span class="syll">ष्ठं</span><span class="syll">ते</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">ज</span><span class="syll">ग</span><span class="syll">दा</span><span class="syll">हु</span><span class="syll">र</span><span class="syll">नी</span><span class="syll">श्व</span><span class="syll">रम्</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">अ</span><span class="syll">प</span><span class="syll">र</span><span class="syll">स्प</span><span class="syll">र</span><span class="syll">सं</span><span class="syll">भू</span><span class="syll">तं</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">कि</span><span class="syll">म</span><span class="syll">न्य</span><span class="syll">त्का</span><span class="syll">म</span><span class="syll">है</span><span class="syll">तु</span><span class="syll">कम्</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('असत्यमप्रतिष्ठं ते जगदाहुरनीश्वरम् अपरस्परसम्भूतं किमन्यत्कामहैतुकम्', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "किमन्यत् काम-हैतुकम्" — इस अंतिम पाद पर विशेष रुकें। यह व्यंग्यात्मक प्रश्न है, कथन नहीं — गीता इसे प्रस्तुत करती है ताकि हम इसकी खोखलेपन को स्वयं पहचानें।</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">विश्वास बनाम आचरण</button>
+      <button class="tab-btn" data-tab="e2">चार निषेध — सार चित्र</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 16.7 (आचरण) बनाम 16.8 (विश्वास) — जड़ और तना</h3>
+        <p class="subnote">एक ही आसुरी वृक्ष के दो भाग — मूल (विश्वास) और तना (आचरण)</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 16.7 — आचरण</div>
+            <div class="contrast-sa">न शौचं नापि चाचारो</div>
+            <p><b>क्या करता है</b> — व्यावहारिक लक्षण।<br>दिखाई देने वाला परिणाम।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 16.8 — विश्वास</div>
+            <div class="contrast-sa">असत्यम् अप्रतिष्ठम् अनीश्वरम्</div>
+            <p><b>क्या मानता है</b> — दार्शनिक जड़।<br>छुपा हुआ कारण।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> गीता व्यवहार को सुधारने से पहले विश्वास को समझने की ज़रूरत बताती है — गलत आचरण अक्सर एक गलत मान्यता से जन्म लेता है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 चार निषेध — सार चित्र</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">1️⃣ असत्यम्-अप्रतिष्ठम्</div>
+            <div class="guna-sa">जगत अवास्तविक</div>
+            <div class="guna-char">कोई ठोस वास्तविकता या आधार नहीं माना जाता।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">2️⃣ अनीश्वरम्</div>
+            <div class="guna-sa">कोई नियंता नहीं</div>
+            <div class="guna-char">जवाबदेही की कोई सत्ता स्वीकार नहीं।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">3️⃣ अपरस्परसम्भूतम्</div>
+            <div class="guna-sa">कारण-परंपरा से इनकार</div>
+            <div class="guna-char">कर्म-परिणाम की श्रृंखला नहीं मानी जाती।</div>
+          </div>
+        </div>
+        <div class="callout"><b>निष्कर्ष (4th):</b> इन तीनों निषेधों के बाद बचता है केवल <b>"काम-हैतुकम्"</b> — वासना ही एकमात्र संचालक शक्ति। यही 16.9-10 में विनाशकारी कर्मों की जड़ बनेगी।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 16 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १-६<br>दैवी सूची + विभाजन</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ७<br>आचरण-अभाव</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ८<br>दार्शनिक जड़ ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ९-२०<br>परिणामी व्यवहार व अंत</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २१-२४<br>नरक-द्वार व निष्कर्ष</div></div>
+        </div>
+        <div class="callout"><b>अगला (16.9):</b> इसी दृष्टि को पकड़कर, नष्ट-आत्मा और अल्प-बुद्धि आसुरी लोग जगत के अहित के लिए उग्र-कर्मों में प्रवृत्त होते हैं।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.९) — ☰ नेविगेशन — आसुरी कर्म: विनाशकारी व्यवहार का प्रारंभ</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"16.8 के अनुसार आसुरी लोग जगत को कैसा मानते हैं?",options:["सत्य और सुव्यवस्थित","असत्य, आधारहीन, नियंता-रहित","केवल दैवी","सनातन और अपरिवर्तनशील"],correct:1},
+    {q:"'काम-हैतुकम्' का क्या अर्थ है?",options:["ज्ञान ही कारण है","कर्म-सिद्धांत ही कारण है","केवल वासना ही कारण है","ईश्वर ही कारण है"],correct:2},
+    {q:"'अनीश्वरम्' शब्द किसकी अनुपस्थिति दर्शाता है?",options:["धन की","नियंता/ईश्वर की","ज्ञान की","समय की"],correct:1},
+    {q:"गीता इस श्लोक में मुख्यतः किस पर चिंता व्यक्त करती है?",options:["सामान्य दार्शनिक नास्तिकता पर","जवाबदेही के अभाव से उपजी नैतिक शून्यता पर","विज्ञान पर","धन-संपत्ति पर"],correct:1},
+    {q:"16.8 का 16.7 से क्या संबंध है?",options:["कोई संबंध नहीं","16.8, 16.7 के आचरण का दार्शनिक आधार बताता है","16.8, 16.7 को पूरी तरह नकारता है","दोनों एक ही बात दोहराते हैं"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "16.7 ने आसुरी आचरण का अभाव बताया — शौच, आचार, सत्य नहीं। 16.8 अब इसका दार्शनिक आधार बताता है — यह अभाव आता कहाँ से।",
+    "'असत्यम् अप्रतिष्ठम्' — जगत अवास्तविक और आधारहीन माना जाता है। यह पहला निषेध है।",
+    "'अनीश्वरम्' — कोई नियंता नहीं, इसलिए कोई जवाबदेही नहीं। यह पूरे दर्शन की जड़ है।",
+    "'अपरस्परसम्भूतम्' — कारण-परिणाम की व्यवस्थित श्रृंखला से इनकार। कर्मफल की कोई अवधारणा नहीं बचती।",
+    "जब सत्य, आधार, नियंता और कारण-परंपरा — चारों नकार दिए जाएँ, तो बचता है केवल 'काम-हैतुकम्' — वासना ही एकमात्र चालक शक्ति।",
+    "आगे 16.9 में यही दृष्टि क्रूर कर्मों में बदलती दिखाई जाएगी — विश्वास से आचरण की ओर स्पष्ट यात्रा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>

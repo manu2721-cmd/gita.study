@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>अध्याय 16.9 — आसुरी कर्म: विश्वास से विनाश तक</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Mukta:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#180f2e;--bg-deep-alt:#241a42;--gold:#c9a227;--gold-light:#e6c863;--maroon:#8c2c3b;--cream:#f3e9d2;--cream-dim:#cfc3a8;--sage:#5c8374;--line:rgba(201,162,39,0.25);--shadow:0 18px 50px rgba(0,0,0,0.45);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2e2153 0%,var(--bg-deep) 55%,#100a1f 100%);color:var(--cream);font-family:'Mukta',sans-serif;line-height:1.7;padding:32px 16px 56px;}
+  .wrap{max-width:880px;margin:0 auto;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+  .progress-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;}
+  .progress-fill{height:100%;width:26.9%;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+  .progress-label{font-size:12.5px;color:var(--cream-dim);letter-spacing:0.04em;white-space:nowrap;}
+  .hero{background:linear-gradient(160deg,var(--bg-deep-alt),#1b1336);border:1px solid var(--line);border-radius:18px;padding:38px 30px 34px;box-shadow:var(--shadow);position:relative;overflow:hidden;text-align:center;}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(201,162,39,0.12),transparent 60%);pointer-events:none;}
+  .eyebrow{font-size:13px;letter-spacing:0.12em;color:var(--gold-light);text-transform:uppercase;margin-bottom:6px;}
+  .chapter-title{font-family:'Tiro Devanagari Hindi',serif;font-size:20px;color:var(--cream-dim);margin-bottom:22px;}
+  .verse-tag-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;}
+  .diya{width:30px;height:30px;flex-shrink:0;}
+  .flame{animation:flicker 2.4s ease-in-out infinite;transform-origin:50% 100%;}
+  @keyframes flicker{0%,100%{transform:scale(1) translateY(0);opacity:1;}25%{transform:scale(0.94,1.05) translateY(-0.5px);opacity:0.92;}50%{transform:scale(1.05,0.95) translateY(0.5px);opacity:1;}75%{transform:scale(0.97,1.02) translateY(-0.3px);opacity:0.95;}}
+  .verse-tag{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--gold-light);border:1px solid var(--line);padding:5px 18px;border-radius:30px;background:rgba(201,162,39,0.08);}
+  .shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:clamp(22px,4.2vw,30px);color:var(--cream);line-height:1.95;margin-bottom:18px;}
+  .translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);font-size:16.5px;line-height:1.8;margin-bottom:20px;}
+  .gist{max-width:580px;margin:0 auto;font-size:15.5px;color:var(--cream-dim);border-top:1px solid var(--line);padding-top:16px;}
+  .gist b{color:var(--cream);font-weight:600;}
+  .guna-badge{display:inline-block;font-family:'Mukta',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;background:rgba(140,74,32,0.2);border:1px solid rgba(140,74,32,0.5);color:#e0a060;}
+  .tabbar{display:flex;gap:6px;margin:26px 0 0;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+  .tabbar::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;background:transparent;border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14.5px;font-weight:500;padding:10px 16px;border-radius:10px 10px 0 0;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+  .tab-btn:hover{color:var(--cream);border-color:var(--gold);}
+  .tab-btn.active{background:var(--bg-deep-alt);color:var(--gold-light);border-color:var(--gold);border-bottom-color:var(--bg-deep-alt);}
+  .panel-shell{background:var(--bg-deep-alt);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:30px 28px;box-shadow:var(--shadow);}
+  .panel{display:none;animation:fadeIn 0.35s ease;}
+  .panel.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+  .panel h3{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:19px;margin:0 0 14px;}
+  .panel p{color:var(--cream);font-size:15.5px;margin:0 0 14px;}
+  .panel p:last-child{margin-bottom:0;}
+  .callout{border-left:3px solid var(--gold);background:rgba(201,162,39,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout b{color:var(--gold-light);}
+  .callout-rajas{border-left:3px solid rgba(140,74,32,0.8);background:rgba(140,74,32,0.07);border-radius:8px;padding:14px 18px;margin:18px 0;font-size:14.5px;color:var(--cream-dim);}
+  .callout-rajas b{color:#e0a060;}
+  .word-grid{display:flex;flex-direction:column;gap:12px;}
+  .word-card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,0.02);}
+  .word-top{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px;}
+  .word-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:21px;color:var(--gold-light);}
+  .word-tr{font-family:'EB Garamond',serif;font-style:italic;color:var(--sage);font-size:14.5px;}
+  .word-meaning{font-size:15px;color:var(--cream);margin-bottom:4px;}
+  .word-eng{font-size:13px;font-style:italic;color:var(--sage);margin-bottom:6px;}
+  .word-eng b{font-style:normal;font-weight:600;color:var(--sage);}
+  .word-deep{font-size:13.5px;color:var(--cream-dim);border-top:1px dashed var(--line);padding-top:6px;margin-top:4px;}
+  .eng-box{font-family:'EB Garamond',serif;font-style:italic;font-size:15.5px;color:var(--cream-dim);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:18px;background:rgba(0,0,0,0.15);}
+  .eng-box span{display:block;font-family:'Mukta',sans-serif;font-style:normal;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .example{border-radius:12px;border:1px solid var(--line);padding:16px 18px;margin-bottom:14px;}
+  .example b{color:var(--gold-light);}
+  .faq{border-bottom:1px solid var(--line);padding:16px 0;}
+  .faq:last-child{border-bottom:none;padding-bottom:0;}
+  .faq .q{color:var(--gold-light);font-weight:600;font-size:15.5px;margin-bottom:6px;}
+  .faq .a{color:var(--cream);font-size:14.8px;}
+  .footer-hint{text-align:center;color:var(--cream-dim);font-size:13.5px;margin-top:22px;}
+  @media(max-width:560px){.panel-shell{padding:22px 18px;}.hero{padding:28px 18px 26px;}}
+  .mode-pillbar{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 4px;}
+  .mode-pill{background:rgba(255,255,255,0.03);border:1px solid var(--line);color:var(--cream-dim);font-family:'Mukta',sans-serif;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;cursor:pointer;transition:all 0.2s;}
+  .mode-pill:hover{color:var(--cream);border-color:var(--gold);}
+  .mode-pill.active{background:linear-gradient(120deg,var(--gold),var(--gold-light));color:#1a1330;border-color:transparent;}
+  .mode-section{display:none;}
+  .mode-section.active{display:block;}
+  .subnote{font-size:13px;color:var(--cream-dim);margin-bottom:16px;font-style:italic;}
+  .cmp-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13.5px;}
+  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top;}
+  .cmp-table th{color:var(--gold-light);font-family:'Tiro Devanagari Hindi',serif;background:rgba(201,162,39,0.06);}
+  .cmp-table td{color:var(--cream);}
+  .flash-instructions{font-size:13.5px;color:var(--cream-dim);margin-bottom:16px;}
+  .flashcard-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
+  .flashcard{perspective:1000px;height:130px;cursor:pointer;}
+  .flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.6s;transform-style:preserve-3d;}
+  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
+  .flashcard-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:6px;}
+  .flashcard-front{background:rgba(255,255,255,0.03);}
+  .flashcard-back{background:rgba(140,74,32,0.15);transform:rotateY(180deg);font-size:12.5px;color:var(--cream);line-height:1.5;}
+  .flashcard-back b{color:#e0a060;font-size:13.5px;}
+  .quiz-progress{font-size:13px;color:var(--cream-dim);margin-bottom:10px;}
+  .quiz-question{font-size:16px;color:var(--cream);margin-bottom:14px;font-weight:500;}
+  .quiz-options{display:flex;flex-direction:column;gap:10px;}
+  .quiz-opt{border:1px solid var(--line);background:rgba(255,255,255,0.02);color:var(--cream);text-align:right;padding:12px 16px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14.5px;transition:all 0.2s;}
+  .quiz-opt:hover{border-color:var(--gold);}
+  .quiz-opt.correct{background:rgba(92,131,116,0.3);border-color:var(--sage);}
+  .quiz-opt.wrong{background:rgba(140,44,59,0.3);border-color:var(--maroon);}
+  .quiz-opt.disabled{cursor:default;pointer-events:none;}
+  .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .quiz-btn{background:var(--gold);color:#1a1330;border:none;padding:10px 20px;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;}
+  .quiz-btn:disabled{opacity:0.35;cursor:not-allowed;}
+  .quiz-score{font-size:17px;color:var(--gold-light);text-align:center;padding:24px 0 10px;}
+  .gram-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .gram-table th,.gram-table td{border:1px solid var(--line);padding:9px 10px;text-align:right;}
+  .gram-table th{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);background:rgba(201,162,39,0.06);}
+  .gram-table td{color:var(--cream-dim);}
+  .gram-table td.sa{font-family:'Tiro Devanagari Hindi',serif;color:var(--gold-light);font-size:14.5px;}
+  .cheat-card{border:1px dashed var(--gold);border-radius:14px;padding:22px;background:rgba(255,255,255,0.02);}
+  .cheat-shloka{font-family:'Tiro Devanagari Hindi',serif;font-size:18px;color:var(--cream);text-align:center;margin-bottom:10px;line-height:1.7;}
+  .cheat-translit{font-family:'EB Garamond',serif;font-style:italic;color:var(--gold-light);text-align:center;font-size:13px;margin-bottom:14px;}
+  .cheat-terms{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0;}
+  .cheat-chip{border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:12.5px;color:var(--cream-dim);}
+  .cheat-chip b{color:var(--gold-light);}
+  .cheat-takeaway{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:13.5px;color:var(--cream-dim);text-align:center;}
+  .tts-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+  .tts-btn{background:rgba(201,162,39,0.1);border:1px solid var(--gold);color:var(--gold-light);padding:10px 18px;border-radius:10px;cursor:pointer;font-family:'Mukta',sans-serif;font-size:14px;font-weight:500;}
+  .tts-btn:hover{background:rgba(201,162,39,0.2);}
+  .tts-btn.stop{border-color:var(--maroon);color:#e8a4ad;}
+  .walk-stage{min-height:170px;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,0.02);margin-bottom:14px;}
+  .walk-stage p{font-size:15.5px;color:var(--cream);margin:0;}
+  .walk-controls{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .walk-controls button{background:transparent;border:1px solid var(--line);color:var(--cream-dim);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:15px;}
+  .walk-controls button:hover{border-color:var(--gold);color:var(--gold-light);}
+  .walk-progress-row{display:flex;justify-content:center;gap:6px;margin-top:14px;}
+  .walk-dot{width:7px;height:7px;border-radius:50%;background:var(--line);}
+  .walk-dot.active{background:var(--gold);}
+  .meter-row{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px;justify-content:center;}
+  .syll{font-family:'Tiro Devanagari Hindi',serif;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:15px;color:var(--cream);background:rgba(255,255,255,0.02);}
+  .pada-label{font-size:12px;color:var(--gold-light);margin-bottom:2px;}
+  /* contrast: 18.20 vs 18.21 */
+  .contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;}
+  .contrast-card{border-radius:12px;padding:18px 14px;}
+  .contrast-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .contrast-card.raj{border:1px solid rgba(140,74,32,0.5);background:rgba(140,74,32,0.08);}
+  .contrast-label{font-size:11px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .contrast-card.sat .contrast-label{color:#6ecfb8;}
+  .contrast-card.raj .contrast-label{color:#e0a060;}
+  .contrast-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:16px;color:var(--cream);margin-bottom:6px;}
+  .contrast-card p{font-size:13.5px;color:var(--cream-dim);margin:0;}
+  @media(max-width:480px){.contrast-row{grid-template-columns:1fr;}}
+  .three-guna-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0;}
+  .guna-card{border-radius:12px;padding:16px 10px;text-align:center;}
+  .guna-card.sat{border:1px solid rgba(42,106,90,0.5);background:rgba(42,106,90,0.08);}
+  .guna-card.raj{border:2px solid rgba(140,74,32,0.7);background:rgba(140,74,32,0.1);box-shadow:0 0 16px rgba(140,74,32,0.2);}
+  .guna-card.tam{border:1px solid rgba(106,61,122,0.5);background:rgba(106,61,122,0.08);}
+  .guna-label{font-size:10.5px;letter-spacing:0.1em;font-weight:700;text-transform:uppercase;margin-bottom:8px;}
+  .guna-card.sat .guna-label{color:#6ecfb8;}
+  .guna-card.raj .guna-label{color:#e0a060;}
+  .guna-card.tam .guna-label{color:#c0a0d8;}
+  .guna-sa{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:var(--cream);margin-bottom:5px;}
+  .guna-char{font-size:12px;color:var(--cream-dim);line-height:1.5;}
+  .road-track{display:flex;align-items:flex-start;justify-content:space-between;position:relative;padding-top:10px;margin-top:6px;}
+  .road-track::before{content:"";position:absolute;top:18px;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:0;}
+  .road-stop{flex:1;text-align:center;position:relative;z-index:1;padding:0 3px;}
+  .road-dot{width:16px;height:16px;border-radius:50%;background:var(--bg-deep-alt);border:2px solid var(--line);margin:6px auto 10px;}
+  .road-stop.active .road-dot{background:var(--gold);border-color:var(--gold-light);box-shadow:0 0 10px rgba(201,162,39,0.7);width:20px;height:20px;margin:4px auto 10px;}
+  .road-stop .rlabel{font-size:10.5px;color:var(--cream-dim);line-height:1.4;}
+  .road-stop.active .rlabel{color:var(--gold-light);font-weight:600;}
+  @media(max-width:560px){.three-guna-row{grid-template-columns:1fr;}}
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="progress-row">
+    <span class="progress-label">अध्याय 16 · श्लोक 9 / 24</span>
+    <div class="progress-track"><div class="progress-fill" style="width:37.5%;"></div></div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow">अध्याय सोलह</div>
+    <div class="chapter-title">अध्याय १६ — दैवासुरसम्पद्विभागयोग (दैवी-आसुरी सम्पदा का विभाजन)</div>
+    <div class="verse-tag-row">
+      <svg class="diya" viewBox="0 0 40 40">
+        <ellipse cx="20" cy="30" rx="14" ry="5" fill="#8c2c3b"/>
+        <ellipse cx="20" cy="28" rx="10" ry="3.2" fill="#c9a227"/>
+        <path class="flame" d="M20 24 C 17 20, 17 14, 20 9 C 23 14, 23 20, 20 24 Z" fill="#e6c863"/>
+        <path class="flame" d="M20 21 C 18.5 18.5, 18.5 15, 20 12 C 21.5 15, 21.5 18.5, 20 21 Z" fill="#f3e9d2" opacity="0.85"/>
+      </svg>
+      <div class="verse-tag">श्लोक १६.९</div>
+    </div>
+    <div class="guna-badge">🌑 आसुरी वर्णन श्लोक ३/१४ — विश्वास से विनाश तक</div>
+    <div class="shloka">
+      एतां दृष्टिमवष्टभ्य नष्टात्मानोऽल्पबुद्धयः।<br>
+      प्रभवन्त्युग्रकर्माणः क्षयाय जगतोऽहिताः।।
+    </div>
+    <div class="translit">
+      etāṁ dṛṣṭim avaṣṭabhya naṣṭātmāno 'lpa-buddhayaḥ,<br>
+      prabhavanty ugra-karmāṇaḥ kṣayāya jagato 'hitāḥ
+    </div>
+    <div class="gist">
+      इस <b>दृष्टि को दृढ़ता से पकड़कर</b>, <b>नष्ट-आत्मा</b> (स्वयं को खो चुके) और <b>अल्प-बुद्धि</b> (सीमित विवेक वाले) लोग, <b>उग्र कर्मों</b> में प्रवृत्त होकर, जगत के <b>विनाश के लिए शत्रु</b> बनकर उभरते हैं।
+    </div>
+  </div>
+
+  <div class="mode-pillbar">
+    <button class="mode-pill active" data-mode="mode-core">📖 मुख्य अध्ययन</button>
+    <button class="mode-pill" data-mode="mode-perspectives">🔍 दृष्टिकोण</button>
+    <button class="mode-pill" data-mode="mode-practice">🎯 अभ्यास व रिवीजन</button>
+    <button class="mode-pill" data-mode="mode-media">🎬 मीडिया अनुभव</button>
+    <button class="mode-pill" data-mode="mode-infographics">📊 इन्फोग्राफिक्स</button>
+  </div>
+
+  <!-- CORE -->
+  <div class="mode-section active" id="mode-core">
+  <div class="tabbar">
+    <button class="tab-btn active" data-tab="t1">पूर्ववर्ती-संदर्भ</button>
+    <button class="tab-btn" data-tab="t2">शब्दार्थ</button>
+    <button class="tab-btn" data-tab="t3">भावार्थ</button>
+    <button class="tab-btn" data-tab="t4">उदाहरण</button>
+    <button class="tab-btn" data-tab="t5">प्रश्नोत्तर</button>
+  </div>
+  <div class="panel-shell">
+
+    <div class="panel active" id="t1">
+      <h3>🪔 पूर्ववर्ती-संदर्भ — 16.8 से आगे</h3>
+      <p>16.8 ने आसुरी <b>विश्वास</b> बताया — जगत असत्य, अप्रतिष्ठ, अनीश्वर, कारण-परंपरा रहित, और केवल वासना ही सत्य। 16.9 अब दिखाता है कि जब कोई इस दृष्टि को केवल सोचता नहीं, बल्कि <b>"अवष्टभ्य"</b> (दृढ़ता से पकड़कर, अपनी जीवन-शैली बना कर) जीता है, तो क्या होता है।</p>
+      <p>परिणाम एक स्पष्ट श्रृंखला में आता है — पहले आंतरिक क्षति (नष्टात्मा, अल्पबुद्धि), फिर बाह्य क्रिया (उग्रकर्माणः), और अंततः सामाजिक परिणाम (जगत के लिए विनाशकारी शत्रु)। यह श्लोक 16.8 के दर्शन को ठोस, दृश्यमान परिणाम में बदलता है — <b>विश्वास से विनाश तक</b> की यात्रा।</p>
+      <div class="contrast-row">
+        <div class="contrast-card sat">
+          <div class="contrast-label">🌿 16.8 — आंतरिक विश्वास</div>
+          <div class="contrast-sa">एतां दृष्टिम्</div>
+          <p>केवल एक <b>मानसिक स्थिति/दर्शन</b> — अभी तक बाहर नहीं आया।</p>
+        </div>
+        <div class="contrast-card raj">
+          <div class="contrast-label">🔥 16.9 — बाह्य परिणाम</div>
+          <div class="contrast-sa">प्रभवन्त्युग्रकर्माणः</div>
+          <p>वही दृष्टि अब <b>ठोस, हानिकारक कर्मों</b> में प्रकट होती है।</p>
+        </div>
+      </div>
+      <div class="callout-rajas"><b>महत्त्वपूर्ण संकेत:</b> "अवष्टभ्य" (दृढ़ता से पकड़कर) शब्द महत्त्वपूर्ण है — गीता नहीं कहती कि यह विचार आना ही आसुरी बना देता है, बल्कि उसे <b>दृढ़ता से थामे रखना और उसके अनुसार जीना</b> ही असली समस्या है। एक क्षणिक संदेह और एक जीवन-दर्शन में यही अंतर है।</div>
+    </div>
+
+    <div class="panel" id="t2">
+      <h3>🪔 शब्दार्थ (पदशः विश्लेषण)</h3>
+      <div class="word-grid">
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">एतां दृष्टिम्</span><span class="word-tr">etāṁ dṛṣṭim</span></div>
+          <div class="word-meaning">इस दृष्टि/दर्शन को — स्त्रीलिंग द्वितीया एकवचन</div>
+          <div class="word-eng"><b>EN:</b> this view/outlook</div>
+          <div class="word-deep">"एताम्" (यह) सीधे 16.8 की ओर संकेत करता है — वही असत्य-अप्रतिष्ठ-अनीश्वर वाली दृष्टि। दृष्टि = केवल विचार नहीं, बल्कि देखने का पूरा ढांचा (lens)।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अवष्टभ्य</span><span class="word-tr">avaṣṭabhya</span></div>
+          <div class="word-meaning">दृढ़ता से पकड़कर/आश्रय लेकर — ल्यबन्त (क्त्वा-वत् असमापिका क्रिया)</div>
+          <div class="word-eng"><b>EN:</b> firmly grasping, taking as one's support</div>
+          <div class="word-deep">अव+स्तम्भ् (सहारा लेना/टिकना) — यह केवल "मानना" नहीं, बल्कि इसे अपने जीवन का आधार-स्तंभ बना लेना है। यही शब्द इस श्लोक की कुंजी है — विचार से प्रतिबद्धता (commitment) की ओर यात्रा।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">नष्टात्मानः</span><span class="word-tr">naṣṭātmānaḥ</span></div>
+          <div class="word-meaning">जिनकी आत्म-चेतना नष्ट हो चुकी है — प्रथमा बहुवचन</div>
+          <div class="word-eng"><b>EN:</b> those whose true self is lost</div>
+          <div class="word-deep">नष्ट (खोया हुआ) + आत्मा (स्व-चेतना/पहचान)। यह शारीरिक मृत्यु नहीं — बल्कि अपनी उच्चतर पहचान (आत्मा) से संपर्क खो देना, केवल अहंकार और वासना में सिमट जाना।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">अल्पबुद्धयः</span><span class="word-tr">alpa-buddhayaḥ</span></div>
+          <div class="word-meaning">सीमित/तुच्छ बुद्धि वाले — प्रथमा बहुवचन</div>
+          <div class="word-eng"><b>EN:</b> of small/limited intelligence</div>
+          <div class="word-deep">अल्प (छोटा) + बुद्धि (विवेक-शक्ति)। ध्यान दें — 16.8 में इनका तर्क जटिल लग सकता है, फिर भी गीता इसे "अल्प-बुद्धि" कहती है — क्योंकि सच्ची बुद्धि दीर्घकालिक परिणाम और सामूहिक हित देखती है, केवल चतुराई नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">प्रभवन्त्युग्रकर्माणः</span><span class="word-tr">prabhavanty ugra-karmāṇaḥ</span></div>
+          <div class="word-meaning">उग्र कर्मों में प्रवृत्त होकर उदय होते हैं</div>
+          <div class="word-eng"><b>EN:</b> they rise/come forth, engaged in fierce deeds</div>
+          <div class="word-deep">प्रभवन्ति = प्र+भू (उदय होना, शक्तिशाली बनना)। उग्र-कर्माणः = कठोर, हिंसक, तीव्र कर्म करने वाले। "प्रभवन्ति" में एक विडंबना है — वे "उभरते" तो हैं, पर विनाश के लिए, निर्माण के लिए नहीं।</div>
+        </div>
+
+        <div class="word-card">
+          <div class="word-top"><span class="word-sa">क्षयाय जगतोऽहिताः</span><span class="word-tr">kṣayāya jagato 'hitāḥ</span></div>
+          <div class="word-meaning">जगत के विनाश के लिए, अहितकारी (शत्रु) के रूप में</div>
+          <div class="word-eng"><b>EN:</b> for the destruction of the world, as its enemies</div>
+          <div class="word-deep">क्षय = विनाश/क्षरण। अहिताः = अ+हित — जिनका हित (कल्याण) में कोई रुझान नहीं, बल्कि विपरीत। यह पूरे श्लोक का सबसे तीव्र शब्द है — व्यक्तिगत दोष अब सामूहिक शत्रुता में बदल जाता है।</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel" id="t3">
+      <h3>🪔 भावार्थ एवं व्याख्या</h3>
+      <div class="eng-box">
+        <span>English Translation</span>
+        Holding fast to this view, these lost souls of small intelligence, engaging in fierce deeds, arise as enemies of the world, for its destruction.
+      </div>
+      <p>16.9 गीता की एक स्पष्ट कार्य-कारण श्रृंखला प्रस्तुत करता है — <b>दृष्टि → दृढ़ता → आत्म-क्षति → कर्म → सामूहिक विनाश।</b> यह कोई अचानक घटना नहीं, बल्कि एक क्रमिक पतन है, जो एक गलत मान्यता को दृढ़ता से थामने से शुरू होता है।</p>
+      <p>"नष्टात्मानः" (आत्म-नष्ट) शब्द विशेष ध्यान माँगता है — यह शारीरिक विनाश नहीं, बल्कि आंतरिक पहचान का विलोपन है। जब व्यक्ति अपने उच्चतर स्व (आत्मा) से संपर्क खो देता है, तभी वह "अल्प-बुद्धि" बन पाता है — क्योंकि सच्ची बुद्धि आत्म-ज्ञान से जुड़ी है।</p>
+      <div class="callout-rajas"><b>विरोधाभास — "अल्प-बुद्धि" फिर भी सफल?</b> यह एक गहरी बात है — 16.8 का तर्क बौद्धिक रूप से परिष्कृत लग सकता है, और ऐसे लोग सांसारिक रूप से सफल भी हो सकते हैं (आगे 16.13-15 में दिखेगा — "मैंने यह पा लिया, वह भी पा लूँगा" वाला अहंकार)। पर गीता की कसौटी अलग है — <b>बुद्धि की सच्ची परिभाषा दीर्घकालिक और सामूहिक हित को देखने की क्षमता है,</b> न कि तात्कालिक चतुराई।</div>
+      <p>व्यावहारिक रूप से, यह श्लोक चेतावनी देता है कि गलत मान्यताएँ अकेली नहीं रहतीं — वे धीरे-धीरे कर्मों में बदलती हैं, और कर्म समाज को प्रभावित करते हैं। इसलिए विश्वास की जाँच करना केवल व्यक्तिगत मामला नहीं, सामूहिक जिम्मेदारी भी है।</p>
+    </div>
+
+    <div class="panel" id="t4">
+      <h3>🪔 जीवनी उदाहरण</h3>
+      <div class="example">
+        <b>उदाहरण 1 — "नष्टात्मा" व्यापार में:</b> एक व्यवसायी जो शुरुआत में छोटी बेईमानी से समझौता करता है ("बस एक बार, किसी को पता नहीं चलेगा") — धीरे-धीरे वह अपनी मूल पहचान (ईमानदार व्यक्ति की self-image) खो देता है। कुछ वर्षों बाद, वह पहचान ही नहीं पाता कि उसका असली मूल्य-तंत्र क्या था।
+      </div>
+      <div class="example">
+        <b>उदाहरण 2 — "अल्प-बुद्धि" की चतुराई:</b> MY POWER जैसे बाज़ार में, जो सप्लायर competitor की quality copy करके सस्ते दाम पर बेचता है — तात्कालिक रूप से "चतुर" दिखता है। पर लंबे समय में इससे पूरी market की trust ecosystem टूटती है — customer किसी पर भरोसा नहीं करता। यही "अल्प-बुद्धि" है — तात्कालिक लाभ, सामूहिक क्षति।
+      </div>
+      <div class="example">
+        <b>उदाहरण 3 — "उग्र-कर्म" और "अहित":</b> जो कंपनी लागत घटाने के लिए मज़दूरों का शोषण करती है, environment को नुकसान पहुँचाती है, या ग्राहकों को खुलकर धोखा देती है — यह "उग्र-कर्म" और "जगत के लिए अहित" का आधुनिक रूप है। ऐसी कंपनियाँ अल्पकाल में बढ़ सकती हैं, पर वे उसी system को कमज़ोर करती हैं जिस पर वे स्वयं निर्भर हैं।
+      </div>
+      <div class="callout"><b>ध्यान रखें:</b> तीनों उदाहरण एक ही पैटर्न दिखाते हैं — एक छोटी सी गलत मान्यता, दृढ़ता से पकड़ी जाए तो, आत्म-क्षति से होते हुए सामूहिक क्षति तक पहुँच जाती है। शुरुआत हमेशा छोटी और "समझदार" दिखती है।</div>
+    </div>
+
+    <div class="panel" id="t5">
+      <h3>🪔 प्रश्नोत्तर</h3>
+      <div class="faq">
+        <div class="q">"नष्टात्मानः" का क्या मतलब है — क्या ये लोग चेतना खो देते हैं?</div>
+        <div class="a">नहीं, यह शारीरिक/मानसिक चेतना की हानि नहीं है। "आत्मा" यहाँ उच्चतर स्व, नैतिक पहचान और आत्म-ज्ञान को इंगित करता है। "नष्टात्मा" का अर्थ है — इस उच्चतर पहचान से संपर्क टूट जाना, केवल अहंकार और इच्छा-पूर्ति में सिमट जाना।</div>
+      </div>
+      <div class="faq">
+        <div class="q">16.8 में तो इनका तर्क जटिल लग रहा था, फिर इन्हें "अल्प-बुद्धि" (छोटी बुद्धि) क्यों कहा गया?</div>
+        <div class="a">बौद्धिक चतुराई (cleverness) और सच्चा विवेक (wisdom) अलग चीज़ें हैं। गीता की दृष्टि में सच्ची बुद्धि वह है जो दीर्घकालिक परिणाम और सामूहिक कल्याण को देख सके। जो व्यक्ति तात्कालिक लाभ के लिए तर्क तो गढ़ सके, पर परिणाम न देख सके — वह चाहे कितना भी "clever" लगे, गीता की दृष्टि में अल्प-बुद्धि ही है।</div>
+      </div>
+      <div class="faq">
+        <div class="q">क्या "जगत के शत्रु" (अहिताः) का मतलब शाब्दिक युद्ध या हिंसा है?</div>
+        <div class="a">ज़रूरी नहीं। "अहित" का अर्थ है — जिनकी क्रियाएँ सामूहिक कल्याण के विपरीत जाती हैं। यह शोषण, पर्यावरण-विनाश, समाज में अविश्वास फैलाना, या किसी भी रूप में सामूहिक भलाई को नुकसान पहुँचाना — सभी को शामिल कर सकता है, केवल शस्त्र-हिंसा तक सीमित नहीं।</div>
+      </div>
+      <div class="faq">
+        <div class="q">16.9 का 16.10 से क्या संबंध है?</div>
+        <div class="a">16.9 ने दिखाया कि गलत विश्वास कैसे विनाशकारी कर्मों में बदलता है। 16.10 अब इस कर्म-प्रवृत्ति के भीतर के मनोविज्ञान में गहराई से जाएगा — "दुष्पूरकामाः" (कभी न भरने वाली वासना) कैसे इन कर्मों को निरंतर बनाए रखती है।</div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- PERSPECTIVES -->
+  <div class="mode-section" id="mode-perspectives">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="b1">महत्त्व व संदर्भ</button>
+      <button class="tab-btn" data-tab="b2">माइंड-मैप</button>
+      <button class="tab-btn" data-tab="b3">तुलनात्मक</button>
+      <button class="tab-btn" data-tab="b4">साधना</button>
+      <button class="tab-btn" data-tab="b5">आचार्य-मत</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="b1">
+        <h3>🪔 इस श्लोक का संदर्भ-महत्त्व</h3>
+        <p>16.9 आसुरी-वर्णन श्रृंखला (16.7-20) का मध्य-बिंदु है — विश्वास (16.8) को कर्म में बदलने वाला सेतु। इसके बिना 16.8 का दर्शन केवल एक अकादमिक विचार रह जाता, कोई व्यावहारिक खतरा नहीं दिखता।</p>
+        <p>यह श्लोक अध्याय 3.37 से भी जुड़ता है, जहाँ कृष्ण कहते हैं कि "काम" और "क्रोध" ही रजोगुण से उत्पन्न होकर पाप का कारण बनते हैं। 16.9 का "उग्र-कर्म" उसी काम-क्रोध की अभिव्यक्ति है, अब आसुरी सम्पदा के संदर्भ में।</p>
+        <div class="callout"><b>Chapter-arc अपडेट:</b> 16.7 (आचरण-अभाव) → 16.8 (दार्शनिक जड़) → 16.9 (विश्वास से कर्म तक — यहाँ) → 16.10-20 (विस्तृत मनोविज्ञान व अंत) → 16.21-24 (निष्कर्ष)।</div>
+      </div>
+
+      <div class="panel" id="b2">
+        <h3>🪔 माइंड-मैप — विश्वास से विनाश तक की श्रृंखला</h3>
+        <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          <ellipse cx="90" cy="60" rx="75" ry="34" fill="rgba(201,162,39,0.12)" stroke="rgba(201,162,39,0.4)" stroke-width="1.3"/>
+          <text x="90" y="55" text-anchor="middle" fill="#e6c863" font-size="11" font-family="Tiro Devanagari Hindi, serif">एतां दृष्टिम्</text>
+          <text x="90" y="71" text-anchor="middle" fill="#cfc3a8" font-size="9">16.8 का विश्वास</text>
+
+          <line x1="165" y1="60" x2="250" y2="60" stroke="rgba(140,74,32,0.4)" stroke-width="1.3"/>
+          <text x="207" y="52" text-anchor="middle" fill="#e0a060" font-size="9">अवष्टभ्य</text>
+
+          <ellipse cx="330" cy="60" rx="90" ry="34" fill="rgba(140,74,32,0.1)" stroke="rgba(140,74,32,0.35)" stroke-width="1.3"/>
+          <text x="330" y="52" text-anchor="middle" fill="#e0a060" font-size="10.5" font-family="Tiro Devanagari Hindi, serif">नष्टात्मा + अल्पबुद्धि</text>
+          <text x="330" y="70" text-anchor="middle" fill="#cfc3a8" font-size="9">आंतरिक क्षति</text>
+
+          <line x1="330" y1="94" x2="330" y2="150" stroke="rgba(140,74,32,0.4)" stroke-width="1.3"/>
+          <ellipse cx="330" cy="180" rx="95" ry="34" fill="rgba(140,74,32,0.12)" stroke="rgba(140,74,32,0.4)" stroke-width="1.3"/>
+          <text x="330" y="185" text-anchor="middle" fill="#e0a060" font-size="11" font-family="Tiro Devanagari Hindi, serif">उग्र-कर्माणः</text>
+          <text x="330" y="200" text-anchor="middle" fill="#cfc3a8" font-size="9">बाह्य क्रिया</text>
+
+          <line x1="330" y1="214" x2="330" y2="270" stroke="rgba(140,74,32,0.45)" stroke-width="1.4" stroke-dasharray="4,3"/>
+          <rect x="200" y="270" width="260" height="60" rx="9" fill="rgba(140,74,32,0.18)" stroke="rgba(140,74,32,0.65)" stroke-width="1.5"/>
+          <text x="330" y="294" text-anchor="middle" fill="#f3e9d2" font-size="12" font-family="Tiro Devanagari Hindi, serif">क्षयाय जगतोऽहिताः</text>
+          <text x="330" y="312" text-anchor="middle" fill="#cfc3a8" font-size="9.5">जगत के लिए विनाशकारी शत्रु</text>
+        </svg>
+      </div>
+
+      <div class="panel" id="b3">
+        <h3>🪔 तुलनात्मक — बुद्धि बनाम चतुराई के अन्य दृष्टिकोण</h3>
+        <table class="cmp-table">
+          <tr><th>परंपरा/विचार</th><th>16.9 से समानता</th><th>अंतर</th></tr>
+          <tr><td>अरस्तू — Phronesis (व्यावहारिक विवेक) बनाम cleverness</td><td>तात्कालिक चतुराई और सच्चे विवेक में भेद</td><td>अरस्तू इसे नैतिक-सामाजिक संदर्भ में देखते हैं; गीता आत्मा से जुड़ाव के संदर्भ में</td></tr>
+          <tr><td>वेदांत — विवेक बनाम बुद्धि का दुरुपयोग</td><td>बुद्धि का सही दिशा में प्रयोग न होने पर वह "अल्प" हो जाती है</td><td>वेदांत इसे मोक्ष-केंद्रित रखता है; 16.9 सामाजिक परिणाम पर भी बल देता है</td></tr>
+          <tr><td>आधुनिक मनोविज्ञान — Moral Disengagement</td><td>व्यक्ति धीरे-धीरे अपने नैतिक मापदंड से दूर होकर हानिकारक कर्म करने लगता है</td><td>मनोविज्ञान इसे संज्ञानात्मक प्रक्रिया मानता है; गीता इसे आत्म-हानि (नष्टात्मा) कहती है</td></tr>
+          <tr><td>पर्यावरण-नैतिकता — "Tragedy of the Commons"</td><td>व्यक्तिगत स्वार्थ सामूहिक संसाधन/कल्याण को नष्ट करता है</td><td>आधुनिक सिद्धांत आर्थिक-पारिस्थितिक ढांचे में है; गीता आध्यात्मिक-नैतिक ढांचे में</td></tr>
+        </table>
+        <div class="callout"><b>साझा सूत्र:</b> लगभग हर परंपरा में यह अंतर स्वीकृत है — तात्कालिक चतुराई और दीर्घकालिक/सामूहिक विवेक एक ही चीज़ नहीं। 16.9 इसे स्पष्ट शब्दों में कहता है।</div>
+      </div>
+
+      <div class="panel" id="b4">
+        <h3>🪔 साधना में प्रयोग</h3>
+        <div class="callout-rajas"><b>आत्म-प्रश्न:</b> "जो निर्णय मुझे अभी 'चतुर' लग रहा है — क्या यह वास्तव में बुद्धिमानी है, या केवल तात्कालिक सुविधा? क्या इसका दीर्घकालिक और सामूहिक परिणाम मैंने सोचा है?"</div>
+        <p><b>अभ्यास — "हित-परीक्षण":</b> कोई भी बड़ा निर्णय लेने से पहले पूछें — "क्या यह केवल मेरे लिए अच्छा है, या इसमें दूसरों का भी हित (हित, न कि अहित) है?" यह सरल प्रश्न "अल्प-बुद्धि" से "सम्यक्-बुद्धि" की ओर पहला कदम है।</p>
+      </div>
+
+      <div class="panel" id="b5">
+        <h3>🪔 आचार्य-भाष्यकारों का मत</h3>
+        <p><b style="color:var(--gold-light)">शंकराचार्य:</b> "नष्टात्मा" को आत्म-विस्मृति (आत्म-ज्ञान का पूर्ण अभाव) के रूप में समझाते हैं — व्यक्ति अपने वास्तविक स्वरूप (आत्मा) को पूरी तरह भूल जाता है, केवल देह-अहंकार में जीता है।</p>
+        <p><b style="color:var(--gold-light)">रामानुजाचार्य:</b> "अल्प-बुद्धि" को भगवद्-विमुखता से जोड़ते हैं — जो बुद्धि परमात्मा की ओर उन्मुख नहीं, वह चाहे कितनी भी तीक्ष्ण लगे, वास्तव में सीमित (अल्प) ही है।</p>
+        <p><b style="color:var(--gold-light)">बाल गंगाधर तिलक:</b> गीता रहस्य में तिलक "अहिताः" (जगत के शत्रु) को सामाजिक-ऐतिहासिक दृष्टि से देखते हैं — जो व्यक्ति या समूह समाज के सामूहिक हित के विरुद्ध कार्य करता है, वह चाहे कानूनी रूप से कुछ भी हो, गीता की दृष्टि में आसुरी है।</p>
+        <div class="callout"><b>साझा सूत्र:</b> तीनों आचार्य सहमत — यह पतन आंतरिक (आत्म-विस्मृति) से शुरू होकर बाह्य (सामाजिक हानि) तक फैलता है। एक के बिना दूसरा नहीं होता।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRACTICE -->
+  <div class="mode-section" id="mode-practice">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="c1">फ्लैशकार्ड</button>
+      <button class="tab-btn" data-tab="c2">क्विज़</button>
+      <button class="tab-btn" data-tab="c3">व्याकरण</button>
+      <button class="tab-btn" data-tab="c4">सारांश-सूत्र</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="c1">
+        <h3>🪔 फ्लैशकार्ड</h3>
+        <p class="flash-instructions">क्लिक करें → पद, पीछे अर्थ</p>
+        <div class="flashcard-grid">
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">एतां दृष्टिम्</span></div>
+            <div class="flashcard-face flashcard-back"><b>इस दृष्टि को</b>16.8 की भौतिकवादी मान्यता की ओर संकेत</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अवष्टभ्य</span></div>
+            <div class="flashcard-face flashcard-back"><b>दृढ़ता से पकड़कर</b>विचार से प्रतिबद्धता (जीवन-शैली) की ओर यात्रा</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">नष्टात्मानः</span></div>
+            <div class="flashcard-face flashcard-back"><b>आत्म-नष्ट</b>उच्चतर स्व/पहचान से संपर्क खोना</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">अल्पबुद्धयः</span></div>
+            <div class="flashcard-face flashcard-back"><b>सीमित बुद्धि वाले</b>चतुराई है, पर दीर्घकालिक विवेक नहीं</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">उग्रकर्माणः</span></div>
+            <div class="flashcard-face flashcard-back"><b>कठोर/हिंसक कर्म करने वाले</b>विश्वास अब क्रिया में बदल चुका</div>
+          </div></div>
+          <div class="flashcard"><div class="flashcard-inner">
+            <div class="flashcard-face flashcard-front"><span class="word-sa">क्षयाय जगतोऽहिताः</span></div>
+            <div class="flashcard-face flashcard-back"><b>जगत के विनाश के शत्रु</b>व्यक्तिगत दोष अब सामूहिक हानि में बदलता है</div>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="panel" id="c2">
+        <h3>🪔 स्व-परीक्षण क्विज़</h3>
+        <div id="quizArea"></div>
+      </div>
+
+      <div class="panel" id="c3">
+        <h3>🪔 संस्कृत व्याकरण-विश्लेषण</h3>
+        <table class="gram-table">
+          <tr><th>पद</th><th>मूल</th><th>विभक्ति/प्रत्यय</th><th>अर्थ</th></tr>
+          <tr><td class="sa">एताम्</td><td>एतद्</td><td>स्त्रीलिंग द्वितीया एकवचन</td><td>इस — सर्वनाम विशेषण</td></tr>
+          <tr><td class="sa">दृष्टिम्</td><td>दृश्+क्तिन्</td><td>स्त्रीलिंग द्वितीया एकवचन</td><td>दृष्टि/दर्शन — कर्म</td></tr>
+          <tr><td class="sa">अवष्टभ्य</td><td>अव+स्तम्भ्+ल्यप्</td><td>ल्यबन्त (असमापिका क्रिया)</td><td>दृढ़ता से पकड़कर — पूर्वकालिक क्रिया</td></tr>
+          <tr><td class="sa">नष्टात्मानः</td><td>नष्ट+आत्मन्</td><td>पुल्लिंग प्रथमा बहुवचन</td><td>आत्म-नष्ट — विशेषण</td></tr>
+          <tr><td class="sa">अल्पबुद्धयः</td><td>अल्प+बुद्धि</td><td>पुल्लिंग प्रथमा बहुवचन</td><td>सीमित बुद्धि वाले — विशेषण</td></tr>
+          <tr><td class="sa">प्रभवन्ति</td><td>प्र+√भू</td><td>वर्तमान प्रथम पुरुष बहुवचन</td><td>उदय होते हैं — मुख्य क्रिया</td></tr>
+          <tr><td class="sa">उग्रकर्माणः</td><td>उग्र+कर्मन्</td><td>पुल्लिंग प्रथमा बहुवचन</td><td>कठोर कर्म करने वाले — विशेषण</td></tr>
+          <tr><td class="sa">क्षयाय</td><td>क्षि+अय्</td><td>पुल्लिंग चतुर्थी एकवचन</td><td>विनाश के लिए — सम्प्रदान</td></tr>
+          <tr><td class="sa">अहिताः</td><td>अ+हित</td><td>पुल्लिंग प्रथमा बहुवचन</td><td>अहितकारी/शत्रु — विशेषण</td></tr>
+        </table>
+      </div>
+
+      <div class="panel" id="c4">
+        <h3>🪔 एक-पृष्ठ सारांश</h3>
+        <div class="cheat-card">
+          <div class="cheat-shloka">एतां दृष्टिमवष्टभ्य नष्टात्मानोऽल्पबुद्धयः।<br>प्रभवन्त्युग्रकर्माणः क्षयाय जगतोऽहिताः।।</div>
+          <div class="cheat-translit">etāṁ dṛṣṭim avaṣṭabhya naṣṭātmāno 'lpa-buddhayaḥ, prabhavanty ugra-karmāṇaḥ kṣayāya jagato 'hitāḥ</div>
+          <div class="cheat-terms">
+            <span class="cheat-chip"><b>अवष्टभ्य</b> दृढ़ता से पकड़कर</span>
+            <span class="cheat-chip"><b>नष्टात्मा</b> आत्म-पहचान खोना</span>
+            <span class="cheat-chip"><b>अल्पबुद्धि</b> चतुराई, पर सच्चा विवेक नहीं</span>
+            <span class="cheat-chip"><b>उग्र-कर्म</b> हानिकारक क्रियाएँ</span>
+            <span class="cheat-chip"><b>जगतोऽहिताः</b> सामूहिक विनाश के शत्रु</span>
+          </div>
+          <div class="cheat-takeaway">मूल भाव: 16.8 का गलत विश्वास जब दृढ़ता से थामा जाता है, तो पहले आत्म-पहचान टूटती है, फिर बुद्धि सीमित होती है, फिर कठोर कर्म होते हैं, और अंततः यह जगत के लिए विनाशकारी बन जाता है — विश्वास से विनाश तक की स्पष्ट श्रृंखला।</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <div class="mode-section" id="mode-media">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="d1">श्रवण मोड</button>
+      <button class="tab-btn" data-tab="d2">इंटरएक्टिव वॉकथ्रू</button>
+      <button class="tab-btn" data-tab="d3">जप / अभ्यास</button>
+    </div>
+    <div class="panel-shell">
+      <div class="panel active" id="d1">
+        <h3>🪔 श्रवण मोड</h3>
+        <div class="tts-row">
+          <button class="tts-btn" onclick="speakText('एतां दृष्टिमवष्टभ्य नष्टात्मानोऽल्पबुद्धयः। प्रभवन्त्युग्रकर्माणः क्षयाय जगतोऽहिताः।', 0.85)">🔊 श्लोक सुनें</button>
+          <button class="tts-btn" onclick="speakText('एतां दृष्टिमवष्टभ्य नष्टात्मानोऽल्पबुद्धयः। प्रभवन्त्युग्रकर्माणः क्षयाय जगतोऽहिताः।', 0.55)">🐢 धीरे सुनें</button>
+          <button class="tts-btn" onclick="speakText('इस दृष्टि को दृढ़ता से पकड़कर, आत्म-नष्ट और सीमित बुद्धि वाले लोग, कठोर कर्मों में लगकर, जगत के विनाश के लिए शत्रु बनकर उभरते हैं।', 0.9)">🔊 भावार्थ सुनें</button>
+          <button class="tts-btn stop" onclick="window.speechSynthesis.cancel()">⏹ रोकें</button>
+        </div>
+      </div>
+      <div class="panel" id="d2">
+        <h3>🪔 इंटरएक्टिव वॉकथ्रू</h3>
+        <div class="walk-stage"><p id="walkText"></p></div>
+        <div class="walk-controls">
+          <button onclick="walkPrev()">◃</button>
+          <button onclick="walkToggle()" id="walkPlayBtn">▶</button>
+          <button onclick="walkNext()">▹</button>
+        </div>
+        <div class="walk-progress-row" id="walkDots"></div>
+      </div>
+      <div class="panel" id="d3">
+        <h3>🪔 जप / अभ्यास — अनुष्टुप् छन्द</h3>
+        <div class="pada-label">पाद १</div>
+        <div class="meter-row"><span class="syll">ए</span><span class="syll">तां</span><span class="syll">दृ</span><span class="syll">ष्टि</span><span class="syll">म</span><span class="syll">व</span><span class="syll">ष्ट</span><span class="syll">भ्य</span></div>
+        <div class="pada-label">पाद २</div>
+        <div class="meter-row"><span class="syll">न</span><span class="syll">ष्टा</span><span class="syll">त्मा</span><span class="syll">नो</span><span class="syll">ऽल्प</span><span class="syll">बु</span><span class="syll">द्ध</span><span class="syll">यः</span></div>
+        <div class="pada-label">पाद ३</div>
+        <div class="meter-row"><span class="syll">प्र</span><span class="syll">भ</span><span class="syll">व</span><span class="syll">न्त्यु</span><span class="syll">ग्र</span><span class="syll">क</span><span class="syll">र्मा</span><span class="syll">णः</span></div>
+        <div class="pada-label">पाद ४</div>
+        <div class="meter-row"><span class="syll">क्ष</span><span class="syll">या</span><span class="syll">य</span><span class="syll">ज</span><span class="syll">ग</span><span class="syll">तो</span><span class="syll">ऽहि</span><span class="syll">ताः</span></div>
+        <div class="tts-row"><button class="tts-btn" onclick="speakText('एतां दृष्टिमवष्टभ्य नष्टात्मानोऽल्पबुद्धयः प्रभवन्त्युग्रकर्माणः क्षयाय जगतोऽहिताः', 0.55)">🐢 धीरे जप करें</button></div>
+        <div class="callout-rajas"><b>ध्यान-बिंदु:</b> "नष्टात्मानः" शब्द पर विशेष रुकें। कल्पना करें — क्या मेरी कोई आदत या मान्यता है जिसे मैं इतनी दृढ़ता से पकड़े हूँ कि वह मेरी असली पहचान को धुंधला कर रही है?</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOGRAPHICS -->
+  <div class="mode-section" id="mode-infographics">
+    <div class="tabbar">
+      <button class="tab-btn active" data-tab="e1">विश्वास बनाम कर्म</button>
+      <button class="tab-btn" data-tab="e2">तीन चरण — सार चित्र</button>
+      <button class="tab-btn" data-tab="e3">रोड-मैप</button>
+    </div>
+    <div class="panel-shell">
+
+      <div class="panel active" id="e1">
+        <h3>🪔 16.8 (विश्वास) बनाम 16.9 (कर्म) — दर्शन से परिणाम तक</h3>
+        <p class="subnote">एक ही जड़, दो चरण — मानसिक और व्यावहारिक</p>
+        <div class="contrast-row">
+          <div class="contrast-card sat">
+            <div class="contrast-label">🌿 16.8 — दर्शन</div>
+            <div class="contrast-sa">असत्यम् अनीश्वरम्</div>
+            <p><b>केवल विचार/मान्यता।</b><br>अभी कोई बाह्य क्षति नहीं।</p>
+          </div>
+          <div class="contrast-card raj">
+            <div class="contrast-label">🔥 16.9 — परिणाम</div>
+            <div class="contrast-sa">उग्रकर्माणः क्षयाय</div>
+            <p><b>अब ठोस, हानिकारक कर्म।</b><br>सामूहिक क्षति शुरू।</p>
+          </div>
+        </div>
+        <div class="callout"><b>Key insight:</b> "अवष्टभ्य" (दृढ़ता से पकड़ना) ही वह मोड़ है जहाँ विचार जीवन-शैली बनता है — गीता इसी संक्रमण-बिंदु को चिह्नित करती है।</div>
+      </div>
+
+      <div class="panel" id="e2">
+        <h3>🪔 तीन चरण — पतन की श्रृंखला</h3>
+        <div class="three-guna-row">
+          <div class="guna-card sat">
+            <div class="guna-label">1️⃣ नष्टात्मा</div>
+            <div class="guna-sa">आत्म-पहचान खोना</div>
+            <div class="guna-char">उच्चतर स्व से संपर्क टूटना — पतन का पहला चरण।</div>
+          </div>
+          <div class="guna-card raj">
+            <div class="guna-label">2️⃣ अल्पबुद्धि</div>
+            <div class="guna-sa">विवेक का सिकुड़ना</div>
+            <div class="guna-char">चतुराई तो रहती है, पर दीर्घकालिक/सामूहिक दृष्टि खो जाती है।</div>
+          </div>
+          <div class="guna-card tam">
+            <div class="guna-label">3️⃣ उग्र-कर्म</div>
+            <div class="guna-sa">हानिकारक क्रिया</div>
+            <div class="guna-char">आंतरिक क्षति अब बाह्य, दृश्यमान कर्मों में प्रकट होती है।</div>
+          </div>
+        </div>
+        <div class="callout"><b>Pattern:</b> तीनों चरण क्रमिक हैं — एक के बिना अगला नहीं आता। यह पतन अचानक नहीं, धीरे-धीरे घटित प्रक्रिया है।</div>
+      </div>
+
+      <div class="panel" id="e3">
+        <h3>🪔 अध्याय 16 — रोड-मैप</h3>
+        <div class="road-track">
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १-७<br>दैवी + आचरण-अभाव</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. ८<br>दार्शनिक जड़</div></div>
+          <div class="road-stop active"><div class="road-dot"></div><div class="rlabel">श्लो. ९<br>विश्वास से कर्म ← यहाँ</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. १०-२०<br>मनोविज्ञान व अंत</div></div>
+          <div class="road-stop"><div class="road-dot"></div><div class="rlabel">श्लो. २१-२४<br>नरक-द्वार व निष्कर्ष</div></div>
+        </div>
+        <div class="callout"><b>अगला (16.10):</b> इन उग्र-कर्मी लोगों को "दुष्पूरकामाः" (कभी न भरने वाली वासना), दंभ, मान और मद से युक्त, मोह से मिथ्या आग्रह लेकर, अशुद्ध व्रत धारण करके कार्य करते हुए बताया जाएगा।</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-hint">अगला श्लोक (श्लो.१०) — ☰ नेविगेशन — आसुरी कर्म: दुष्पूर काम का जाल</div>
+</div>
+
+<script>
+  document.querySelectorAll('.mode-pill').forEach(pill=>{pill.addEventListener('click',()=>{document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active'));pill.classList.add('active');document.querySelectorAll('.mode-section').forEach(s=>s.classList.remove('active'));document.getElementById(pill.dataset.mode).classList.add('active');});});
+  document.querySelectorAll('.mode-section').forEach(section=>{const tabs=section.querySelectorAll('.tab-btn');const panels=section.querySelectorAll('.panel');tabs.forEach(btn=>{btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));panels.forEach(p=>p.classList.remove('active'));btn.classList.add('active');section.querySelector('#'+btn.dataset.tab).classList.add('active');});});});
+  document.querySelectorAll('.flashcard').forEach(card=>{card.addEventListener('click',()=>card.classList.toggle('flipped'));});
+  function speakText(text,rate){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='hi-IN';u.rate=rate||0.9;window.speechSynthesis.speak(u);}
+
+  const quizData=[
+    {q:"'अवष्टभ्य' शब्द का क्या महत्त्व है?",options:["केवल सोचना","दृढ़ता से पकड़कर जीवन-शैली बनाना","भूल जाना","अस्वीकार करना"],correct:1},
+    {q:"'नष्टात्मानः' का सही अर्थ क्या है?",options:["शारीरिक मृत्यु","उच्चतर स्व/पहचान से संपर्क खोना","धन की हानि","बुद्धि की तीक्ष्णता"],correct:1},
+    {q:"गीता 'अल्प-बुद्धि' किन्हें कहती है, भले ही उनका तर्क जटिल लगे?",options:["जो दीर्घकालिक/सामूहिक परिणाम नहीं देख पाते","जो पढ़े-लिखे नहीं हैं","जो गरीब हैं","जो चुप रहते हैं"],correct:0},
+    {q:"'क्षयाय जगतोऽहिताः' का क्या अर्थ है?",options:["जगत के मित्र","जगत के विनाश के लिए शत्रु","जगत से अलग","जगत के रक्षक"],correct:1},
+    {q:"16.9 किस बड़े विषय को दर्शाता है?",options:["ज्ञान का महत्त्व","विश्वास से कर्म और सामूहिक परिणाम तक की यात्रा","धन का महत्त्व","केवल व्याकरण"],correct:1}
+  ];
+  let quizIdx=0,quizScore=0,quizAnswered=false;
+  function renderQuiz(){const area=document.getElementById('quizArea');if(!area)return;if(quizIdx>=quizData.length){area.innerHTML='<div class="quiz-score">आपका स्कोर: '+quizScore+' / '+quizData.length+'</div><div class="quiz-nav" style="justify-content:center;"><button class="quiz-btn" onclick="quizIdx=0;quizScore=0;renderQuiz();">फिर से करें</button></div>';return;}const item=quizData[quizIdx];quizAnswered=false;let html='<div class="quiz-progress">प्रश्न '+(quizIdx+1)+' / '+quizData.length+'</div><div class="quiz-question">'+item.q+'</div><div class="quiz-options">';item.options.forEach((opt,i)=>{html+='<button class="quiz-opt" onclick="checkQuizAnswer('+i+')">'+opt+'</button>';});html+='</div><div class="quiz-nav"><span></span><button class="quiz-btn" id="quizNextBtn" disabled onclick="quizIdx++;renderQuiz();">आगे</button></div>';area.innerHTML=html;}
+  function checkQuizAnswer(i){if(quizAnswered)return;quizAnswered=true;const item=quizData[quizIdx];document.querySelectorAll('#quizArea .quiz-opt').forEach((o,idx)=>{o.classList.add('disabled');if(idx===item.correct)o.classList.add('correct');else if(idx===i)o.classList.add('wrong');});if(i===item.correct)quizScore++;document.getElementById('quizNextBtn').disabled=false;}
+  renderQuiz();
+
+  const walkSlides=[
+    "16.8 ने आसुरी विश्वास बताया — जगत असत्य, अनीश्वर, कारण-रहित। 16.9 अब दिखाता है कि जब यह विश्वास दृढ़ता से थामा जाता है, तो क्या होता है।",
+    "'अवष्टभ्य' — केवल सोचना नहीं, बल्कि इसे जीवन का आधार बना लेना। यही विचार से प्रतिबद्धता की ओर मोड़ है।",
+    "पहला परिणाम — 'नष्टात्मा।' आत्म-पहचान, अपने उच्चतर स्व से संपर्क टूट जाता है।",
+    "दूसरा परिणाम — 'अल्प-बुद्धि।' चतुराई रहती है, पर दीर्घकालिक और सामूहिक विवेक खो जाता है।",
+    "तीसरा परिणाम — 'उग्र-कर्म।' आंतरिक क्षति अब बाह्य, हानिकारक कर्मों में प्रकट होती है।",
+    "अंतिम परिणाम — 'जगत के लिए विनाशकारी शत्रु।' व्यक्तिगत पतन अब सामूहिक क्षति में बदल जाता है। आगे 16.10 इसी कर्म-प्रवृत्ति के भीतर का मनोविज्ञान दिखाएगा।"
+  ];
+  let walkIdx=0,walkPlaying=false,walkTimer=null;
+  function renderWalk(){const t=document.getElementById('walkText');if(!t)return;t.textContent=walkSlides[walkIdx];document.getElementById('walkDots').innerHTML=walkSlides.map((_,i)=>'<span class="walk-dot'+(i===walkIdx?' active':'')+'"></span>').join('');}
+  function walkNext(){walkIdx=(walkIdx+1)%walkSlides.length;renderWalk();}
+  function walkPrev(){walkIdx=(walkIdx-1+walkSlides.length)%walkSlides.length;renderWalk();}
+  function walkToggle(){const btn=document.getElementById('walkPlayBtn');walkPlaying=!walkPlaying;if(walkPlaying){btn.textContent='⏸';walkTimer=setInterval(walkNext,3200);}else{btn.textContent='▶';clearInterval(walkTimer);}}
+  renderWalk();
+</script>
+<script src="../nav.js"></script>
+</body>
+</html>
