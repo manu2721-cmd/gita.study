@@ -112,7 +112,8 @@
    "folder": "ch16",
    "totalVerses": 24,
    "published": 24,
-   "last_published": "16.24"
+   "last_published": "16.24",
+   "hasCompare": true
   },
   {
    "num": 17,
@@ -120,7 +121,8 @@
    "folder": "ch17",
    "totalVerses": 28,
    "published": 28,
-   "last_published": "17.28"
+   "last_published": "17.28",
+   "hasCompare": true
   },
   {
    "num": 18,
